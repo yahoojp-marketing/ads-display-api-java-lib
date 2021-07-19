@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceTargetListDeliverType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,22 +13,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedInventoryServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSITE_RETARGETINGの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedInventoryServiceSiteRetargetingTarget object is a container for storing site retargeting settings.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; ∗If targetType is SITE_RETARGETING, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedInventoryServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。<br> ※targetTypeがSITE_RETARGETINGの場合は必須です。 </div> <div lang=\"en\"> GuaranteedInventoryServiceSiteRetargetingTarget object is a container for storing site retargeting settings.<br> This field is optional in ADD operation.<br> ∗If targetType is SITE_RETARGETING, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceSiteRetargetingTarget   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("accountName")
-  private JsonNullable<String> accountName = JsonNullable.undefined();
+  private String accountName = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   @JsonProperty("deliverType")
-  private JsonNullable<GuaranteedInventoryServiceTargetListDeliverType> deliverType = JsonNullable.undefined();
+  private GuaranteedInventoryServiceTargetListDeliverType deliverType = null;
 
   public GuaranteedInventoryServiceSiteRetargetingTarget accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class GuaranteedInventoryServiceSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、ADD時は必須となります。 </div> <div lang=\"en\"> Account ID.<br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedInventoryServiceSiteRetargetingTarget accountName(String accountName) {
-    this.accountName = JsonNullable.of(accountName);
+    this.accountName = accountName;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class GuaranteedInventoryServiceSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウント名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAccountName() {
+  public String getAccountName() {
     return accountName;
   }
 
-  public void setAccountName(JsonNullable<String> accountName) {
+  public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
   public GuaranteedInventoryServiceSiteRetargetingTarget targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -80,16 +79,16 @@ public class GuaranteedInventoryServiceSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Target list name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
   public GuaranteedInventoryServiceSiteRetargetingTarget deliverType(GuaranteedInventoryServiceTargetListDeliverType deliverType) {
-    this.deliverType = JsonNullable.of(deliverType);
+    this.deliverType = deliverType;
     return this;
   }
 
@@ -101,17 +100,17 @@ public class GuaranteedInventoryServiceSiteRetargetingTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceTargetListDeliverType> getDeliverType() {
+  public GuaranteedInventoryServiceTargetListDeliverType getDeliverType() {
     return deliverType;
   }
 
-  public void setDeliverType(JsonNullable<GuaranteedInventoryServiceTargetListDeliverType> deliverType) {
+  public void setDeliverType(GuaranteedInventoryServiceTargetListDeliverType deliverType) {
     this.deliverType = deliverType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -147,7 +146,7 @@ public class GuaranteedInventoryServiceSiteRetargetingTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

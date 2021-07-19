@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceDateRangeオブジェクトは、レポートの集計対象期間を表します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; DateRangeTypeがCUSTOM_DATEの場合、必須項目です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The ReportDefinitionServiceDateRange object serves the report compilation target period. &lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt; This field is required if DateRangeType is set to &amp;#34;CUSTOM DATE&amp;#34;. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceDateRangeオブジェクトは、レポートの集計対象期間を表します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br> DateRangeTypeがCUSTOM_DATEの場合、必須項目です。 </div> <div lang=\"en\"> The ReportDefinitionServiceDateRange object serves the report compilation target period. <br> This field is optional in ADD operation, and will be ignored in REMOVE operation. <br> This field is required if DateRangeType is set to &#34;CUSTOM DATE&#34;. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceDateRange   {
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   public ReportDefinitionServiceDateRange endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class ReportDefinitionServiceDateRange   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 集計終了日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> The compilation end date. <br> ∗ Format: yyyyMMdd<br> This field is required in ADD operation, and will be ignored in REMOVE operation. </div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public ReportDefinitionServiceDateRange startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class ReportDefinitionServiceDateRange   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 集計開始日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> The compilation start date.<br> ∗ Format: yyyyMMdd<br> This field is required in ADD operation, and will be ignored in REMOVE operation. </div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class ReportDefinitionServiceDateRange   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

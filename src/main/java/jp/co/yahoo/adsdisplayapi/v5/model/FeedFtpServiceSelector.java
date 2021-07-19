@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,14 +14,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceSelector object retains search condition of get operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">get操作の検索条件を保持するオブジェクト</div> <div lang=\"en\">FeedFtpServiceSelector object retains search condition of get operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedFtpServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("feedIds")
   @Valid
-  private JsonNullable<List<Long>> feedIds = JsonNullable.undefined();
+  private List<Long> feedIds = null;
 
   public FeedFtpServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -46,15 +45,15 @@ public class FeedFtpServiceSelector   {
   }
 
   public FeedFtpServiceSelector feedIds(List<Long> feedIds) {
-    this.feedIds = JsonNullable.of(feedIds);
+    this.feedIds = feedIds;
     return this;
   }
 
   public FeedFtpServiceSelector addFeedIdsItem(Long feedIdsItem) {
-    if (this.feedIds == null || !this.feedIds.isPresent()) {
-      this.feedIds = JsonNullable.of(new ArrayList<>());
+    if (this.feedIds == null) {
+      this.feedIds = new ArrayList<>();
     }
-    this.feedIds.get().add(feedIdsItem);
+    this.feedIds.add(feedIdsItem);
     return this;
   }
 
@@ -65,17 +64,17 @@ public class FeedFtpServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">FeedID</div> ")
 
 @Size(max=200) 
-  public JsonNullable<List<Long>> getFeedIds() {
+  public List<Long> getFeedIds() {
     return feedIds;
   }
 
-  public void setFeedIds(JsonNullable<List<Long>> feedIds) {
+  public void setFeedIds(List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +106,7 @@ public class FeedFtpServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

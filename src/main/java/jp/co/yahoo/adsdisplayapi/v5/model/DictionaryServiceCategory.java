@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceCategoryChild;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,25 +15,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceCategoryオブジェクトは、カテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceCategory object is a container of category information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceCategoryオブジェクトは、カテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceCategory object is a container of category information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceCategory   {
   @JsonProperty("child")
   @Valid
-  private JsonNullable<List<DictionaryServiceCategoryChild>> child = JsonNullable.undefined();
+  private List<DictionaryServiceCategoryChild> child = null;
 
   @JsonProperty("name")
-  private JsonNullable<String> name = JsonNullable.undefined();
+  private String name = null;
 
   public DictionaryServiceCategory child(List<DictionaryServiceCategoryChild> child) {
-    this.child = JsonNullable.of(child);
+    this.child = child;
     return this;
   }
 
   public DictionaryServiceCategory addChildItem(DictionaryServiceCategoryChild childItem) {
-    if (this.child == null || !this.child.isPresent()) {
-      this.child = JsonNullable.of(new ArrayList<>());
+    if (this.child == null) {
+      this.child = new ArrayList<>();
     }
-    this.child.get().add(childItem);
+    this.child.add(childItem);
     return this;
   }
 
@@ -46,16 +45,16 @@ public class DictionaryServiceCategory   {
 
   @Valid
 
-  public JsonNullable<List<DictionaryServiceCategoryChild>> getChild() {
+  public List<DictionaryServiceCategoryChild> getChild() {
     return child;
   }
 
-  public void setChild(JsonNullable<List<DictionaryServiceCategoryChild>> child) {
+  public void setChild(List<DictionaryServiceCategoryChild> child) {
     this.child = child;
   }
 
   public DictionaryServiceCategory name(String name) {
-    this.name = JsonNullable.of(name);
+    this.name = name;
     return this;
   }
 
@@ -66,17 +65,17 @@ public class DictionaryServiceCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">最上位階層のカテゴリー名です。</div> <div lang=\"en\">DictionaryServiceCategory name in the highest level.</div> ")
 
 
-  public JsonNullable<String> getName() {
+  public String getName() {
     return name;
   }
 
-  public void setName(JsonNullable<String> name) {
+  public void setName(String name) {
     this.name = name;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class DictionaryServiceCategory   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

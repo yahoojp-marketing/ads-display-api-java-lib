@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,22 +12,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaオブジェクトは、コンテンツターゲティング対象キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdea object is keyword for contents targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ContentsKeywordIdeaオブジェクトは、コンテンツターゲティング対象キーワードです。</div> <div lang=\"en\">ContentsKeywordIdea object is keyword for contents targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ContentsKeywordIdea   {
   @JsonProperty("volume")
-  private JsonNullable<Long> volume = JsonNullable.undefined();
+  private Long volume = null;
 
   @JsonProperty("createdDate")
-  private JsonNullable<String> createdDate = JsonNullable.undefined();
+  private String createdDate = null;
 
   @JsonProperty("contentsKeyword")
-  private JsonNullable<String> contentsKeyword = JsonNullable.undefined();
+  private String contentsKeyword = null;
 
   @JsonProperty("contentsKeywordId")
-  private JsonNullable<Long> contentsKeywordId = JsonNullable.undefined();
+  private Long contentsKeywordId = null;
 
   public ContentsKeywordIdea volume(Long volume) {
-    this.volume = JsonNullable.of(volume);
+    this.volume = volume;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class ContentsKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> インプレッション数です。 </div> <div lang=\"en\"> Number of impressions. </div> ")
 
 
-  public JsonNullable<Long> getVolume() {
+  public Long getVolume() {
     return volume;
   }
 
-  public void setVolume(JsonNullable<Long> volume) {
+  public void setVolume(Long volume) {
     this.volume = volume;
   }
 
   public ContentsKeywordIdea createdDate(String createdDate) {
-    this.createdDate = JsonNullable.of(createdDate);
+    this.createdDate = createdDate;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class ContentsKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンテンツキーワード作成日です。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\"> Created date of keyword.<br> * Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(JsonNullable<String> createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
   public ContentsKeywordIdea contentsKeyword(String contentsKeyword) {
-    this.contentsKeyword = JsonNullable.of(contentsKeyword);
+    this.contentsKeyword = contentsKeyword;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class ContentsKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンテンツキーワードです。</div> <div lang=\"en\">Contents keyword.</div> ")
 
 
-  public JsonNullable<String> getContentsKeyword() {
+  public String getContentsKeyword() {
     return contentsKeyword;
   }
 
-  public void setContentsKeyword(JsonNullable<String> contentsKeyword) {
+  public void setContentsKeyword(String contentsKeyword) {
     this.contentsKeyword = contentsKeyword;
   }
 
   public ContentsKeywordIdea contentsKeywordId(Long contentsKeywordId) {
-    this.contentsKeywordId = JsonNullable.of(contentsKeywordId);
+    this.contentsKeywordId = contentsKeywordId;
     return this;
   }
 
@@ -99,17 +98,17 @@ public class ContentsKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンテンツキーワードIDです。</div> <div lang=\"en\">Contents keyword ID.</div> ")
 
 
-  public JsonNullable<Long> getContentsKeywordId() {
+  public Long getContentsKeywordId() {
     return contentsKeywordId;
   }
 
-  public void setContentsKeywordId(JsonNullable<Long> contentsKeywordId) {
+  public void setContentsKeywordId(Long contentsKeywordId) {
     this.contentsKeywordId = contentsKeywordId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,7 +144,7 @@ public class ContentsKeywordIdea   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

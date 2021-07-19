@@ -13,7 +13,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordIdeaServiceKeywordRecency
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordIdeaServiceMatchType;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordIdeaServiceSortField;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordIdeaServiceSortType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -21,42 +20,42 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordIdeaServiceSelectorオブジェクトは、サーチターゲティング対象キーワードのリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordIdeaServiceSelector object displays the list of keyword for search targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchKeywordIdeaServiceSelectorオブジェクトは、サーチターゲティング対象キーワードのリストを表します。</div> <div lang=\"en\">SearchKeywordIdeaServiceSelector object displays the list of keyword for search targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchKeywordIdeaServiceSelector   {
   @JsonProperty("keywordFrequency")
-  private JsonNullable<SearchKeywordIdeaServiceKeywordFrequency> keywordFrequency = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceKeywordFrequency keywordFrequency = null;
 
   @JsonProperty("keywordIds")
   @Valid
-  private JsonNullable<List<Long>> keywordIds = JsonNullable.undefined();
+  private List<Long> keywordIds = null;
 
   @JsonProperty("keywordRecency")
-  private JsonNullable<SearchKeywordIdeaServiceKeywordRecency> keywordRecency = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceKeywordRecency keywordRecency = null;
 
   @JsonProperty("keywords")
   @Valid
-  private JsonNullable<List<String>> keywords = JsonNullable.undefined();
+  private List<String> keywords = null;
 
   @JsonProperty("matchType")
-  private JsonNullable<SearchKeywordIdeaServiceMatchType> matchType = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceMatchType matchType = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("sortField")
-  private JsonNullable<SearchKeywordIdeaServiceSortField> sortField = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceSortField sortField = null;
 
   @JsonProperty("sortType")
-  private JsonNullable<SearchKeywordIdeaServiceSortType> sortType = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceSortType sortType = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("availabilityStatus")
-  private JsonNullable<SearchKeywordIdeaServiceAvailabilityStatus> availabilityStatus = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus = null;
 
   public SearchKeywordIdeaServiceSelector keywordFrequency(SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
-    this.keywordFrequency = JsonNullable.of(keywordFrequency);
+    this.keywordFrequency = keywordFrequency;
     return this;
   }
 
@@ -68,24 +67,24 @@ public class SearchKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceKeywordFrequency> getKeywordFrequency() {
+  public SearchKeywordIdeaServiceKeywordFrequency getKeywordFrequency() {
     return keywordFrequency;
   }
 
-  public void setKeywordFrequency(JsonNullable<SearchKeywordIdeaServiceKeywordFrequency> keywordFrequency) {
+  public void setKeywordFrequency(SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
     this.keywordFrequency = keywordFrequency;
   }
 
   public SearchKeywordIdeaServiceSelector keywordIds(List<Long> keywordIds) {
-    this.keywordIds = JsonNullable.of(keywordIds);
+    this.keywordIds = keywordIds;
     return this;
   }
 
   public SearchKeywordIdeaServiceSelector addKeywordIdsItem(Long keywordIdsItem) {
-    if (this.keywordIds == null || !this.keywordIds.isPresent()) {
-      this.keywordIds = JsonNullable.of(new ArrayList<>());
+    if (this.keywordIds == null) {
+      this.keywordIds = new ArrayList<>();
     }
-    this.keywordIds.get().add(keywordIdsItem);
+    this.keywordIds.add(keywordIdsItem);
     return this;
   }
 
@@ -96,16 +95,16 @@ public class SearchKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：キーワードID<br> ※キーワード検索用<br> ※キーワード、キーワードIDの同時指定はできません。 </div> <div lang=\"en\">Search condition : Keyword ID.<br> *Keyword for searching.<br> *Can not specify Keyword and Keyword ID at the same time. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getKeywordIds() {
+  public List<Long> getKeywordIds() {
     return keywordIds;
   }
 
-  public void setKeywordIds(JsonNullable<List<Long>> keywordIds) {
+  public void setKeywordIds(List<Long> keywordIds) {
     this.keywordIds = keywordIds;
   }
 
   public SearchKeywordIdeaServiceSelector keywordRecency(SearchKeywordIdeaServiceKeywordRecency keywordRecency) {
-    this.keywordRecency = JsonNullable.of(keywordRecency);
+    this.keywordRecency = keywordRecency;
     return this;
   }
 
@@ -117,24 +116,24 @@ public class SearchKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceKeywordRecency> getKeywordRecency() {
+  public SearchKeywordIdeaServiceKeywordRecency getKeywordRecency() {
     return keywordRecency;
   }
 
-  public void setKeywordRecency(JsonNullable<SearchKeywordIdeaServiceKeywordRecency> keywordRecency) {
+  public void setKeywordRecency(SearchKeywordIdeaServiceKeywordRecency keywordRecency) {
     this.keywordRecency = keywordRecency;
   }
 
   public SearchKeywordIdeaServiceSelector keywords(List<String> keywords) {
-    this.keywords = JsonNullable.of(keywords);
+    this.keywords = keywords;
     return this;
   }
 
   public SearchKeywordIdeaServiceSelector addKeywordsItem(String keywordsItem) {
-    if (this.keywords == null || !this.keywords.isPresent()) {
-      this.keywords = JsonNullable.of(new ArrayList<>());
+    if (this.keywords == null) {
+      this.keywords = new ArrayList<>();
     }
-    this.keywords.get().add(keywordsItem);
+    this.keywords.add(keywordsItem);
     return this;
   }
 
@@ -145,16 +144,16 @@ public class SearchKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：キーワード<br> ※キーワード提案用<br> ※キーワード、キーワードIDの同時指定はできません。 </div> <div lang=\"en\"> Search condition : Keyword.<br> *Keyword for suggesting.<br> *Can not specify Keyword and Keyword ID at the same time. </div> ")
 
 @Size(max=200) 
-  public JsonNullable<List<String>> getKeywords() {
+  public List<String> getKeywords() {
     return keywords;
   }
 
-  public void setKeywords(JsonNullable<List<String>> keywords) {
+  public void setKeywords(List<String> keywords) {
     this.keywords = keywords;
   }
 
   public SearchKeywordIdeaServiceSelector matchType(SearchKeywordIdeaServiceMatchType matchType) {
-    this.matchType = JsonNullable.of(matchType);
+    this.matchType = matchType;
     return this;
   }
 
@@ -166,16 +165,16 @@ public class SearchKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceMatchType> getMatchType() {
+  public SearchKeywordIdeaServiceMatchType getMatchType() {
     return matchType;
   }
 
-  public void setMatchType(JsonNullable<SearchKeywordIdeaServiceMatchType> matchType) {
+  public void setMatchType(SearchKeywordIdeaServiceMatchType matchType) {
     this.matchType = matchType;
   }
 
   public SearchKeywordIdeaServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -188,16 +187,16 @@ public class SearchKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public SearchKeywordIdeaServiceSelector sortField(SearchKeywordIdeaServiceSortField sortField) {
-    this.sortField = JsonNullable.of(sortField);
+    this.sortField = sortField;
     return this;
   }
 
@@ -209,16 +208,16 @@ public class SearchKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceSortField> getSortField() {
+  public SearchKeywordIdeaServiceSortField getSortField() {
     return sortField;
   }
 
-  public void setSortField(JsonNullable<SearchKeywordIdeaServiceSortField> sortField) {
+  public void setSortField(SearchKeywordIdeaServiceSortField sortField) {
     this.sortField = sortField;
   }
 
   public SearchKeywordIdeaServiceSelector sortType(SearchKeywordIdeaServiceSortType sortType) {
-    this.sortType = JsonNullable.of(sortType);
+    this.sortType = sortType;
     return this;
   }
 
@@ -230,16 +229,16 @@ public class SearchKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceSortType> getSortType() {
+  public SearchKeywordIdeaServiceSortType getSortType() {
     return sortType;
   }
 
-  public void setSortType(JsonNullable<SearchKeywordIdeaServiceSortType> sortType) {
+  public void setSortType(SearchKeywordIdeaServiceSortType sortType) {
     this.sortType = sortType;
   }
 
   public SearchKeywordIdeaServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -251,16 +250,16 @@ public class SearchKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public SearchKeywordIdeaServiceSelector availabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
-    this.availabilityStatus = JsonNullable.of(availabilityStatus);
+    this.availabilityStatus = availabilityStatus;
     return this;
   }
 
@@ -272,17 +271,17 @@ public class SearchKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceAvailabilityStatus> getAvailabilityStatus() {
+  public SearchKeywordIdeaServiceAvailabilityStatus getAvailabilityStatus() {
     return availabilityStatus;
   }
 
-  public void setAvailabilityStatus(JsonNullable<SearchKeywordIdeaServiceAvailabilityStatus> availabilityStatus) {
+  public void setAvailabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     this.availabilityStatus = availabilityStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -330,7 +329,7 @@ public class SearchKeywordIdeaServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

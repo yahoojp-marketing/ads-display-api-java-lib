@@ -10,7 +10,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceCustomAudienceTa
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceRuleTargetList;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceSimilarityTargetList;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceTargetListType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,25 +17,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceTargetListオブジェクトは、リターゲティングのターゲット種類とターゲットリストの情報を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceTargetList object displays the types of target and target list for site retargeting. &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceTargetListオブジェクトは、リターゲティングのターゲット種類とターゲットリストの情報を表します。<br> このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> RetargetingListServiceTargetList object displays the types of target and target list for site retargeting. <br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceTargetList   {
   @JsonProperty("combinationTargetList")
-  private JsonNullable<RetargetingListServiceCombinationTargetList> combinationTargetList = JsonNullable.undefined();
+  private RetargetingListServiceCombinationTargetList combinationTargetList = null;
 
   @JsonProperty("customAudienceTargetList")
-  private JsonNullable<RetargetingListServiceCustomAudienceTargetList> customAudienceTargetList = JsonNullable.undefined();
+  private RetargetingListServiceCustomAudienceTargetList customAudienceTargetList = null;
 
   @JsonProperty("ruleTargetList")
-  private JsonNullable<RetargetingListServiceRuleTargetList> ruleTargetList = JsonNullable.undefined();
+  private RetargetingListServiceRuleTargetList ruleTargetList = null;
 
   @JsonProperty("similarityTargetList")
-  private JsonNullable<RetargetingListServiceSimilarityTargetList> similarityTargetList = JsonNullable.undefined();
+  private RetargetingListServiceSimilarityTargetList similarityTargetList = null;
 
   @JsonProperty("targetListType")
-  private JsonNullable<RetargetingListServiceTargetListType> targetListType = JsonNullable.undefined();
+  private RetargetingListServiceTargetListType targetListType = null;
 
   public RetargetingListServiceTargetList combinationTargetList(RetargetingListServiceCombinationTargetList combinationTargetList) {
-    this.combinationTargetList = JsonNullable.of(combinationTargetList);
+    this.combinationTargetList = combinationTargetList;
     return this;
   }
 
@@ -48,16 +47,16 @@ public class RetargetingListServiceTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceCombinationTargetList> getCombinationTargetList() {
+  public RetargetingListServiceCombinationTargetList getCombinationTargetList() {
     return combinationTargetList;
   }
 
-  public void setCombinationTargetList(JsonNullable<RetargetingListServiceCombinationTargetList> combinationTargetList) {
+  public void setCombinationTargetList(RetargetingListServiceCombinationTargetList combinationTargetList) {
     this.combinationTargetList = combinationTargetList;
   }
 
   public RetargetingListServiceTargetList customAudienceTargetList(RetargetingListServiceCustomAudienceTargetList customAudienceTargetList) {
-    this.customAudienceTargetList = JsonNullable.of(customAudienceTargetList);
+    this.customAudienceTargetList = customAudienceTargetList;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class RetargetingListServiceTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceCustomAudienceTargetList> getCustomAudienceTargetList() {
+  public RetargetingListServiceCustomAudienceTargetList getCustomAudienceTargetList() {
     return customAudienceTargetList;
   }
 
-  public void setCustomAudienceTargetList(JsonNullable<RetargetingListServiceCustomAudienceTargetList> customAudienceTargetList) {
+  public void setCustomAudienceTargetList(RetargetingListServiceCustomAudienceTargetList customAudienceTargetList) {
     this.customAudienceTargetList = customAudienceTargetList;
   }
 
   public RetargetingListServiceTargetList ruleTargetList(RetargetingListServiceRuleTargetList ruleTargetList) {
-    this.ruleTargetList = JsonNullable.of(ruleTargetList);
+    this.ruleTargetList = ruleTargetList;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class RetargetingListServiceTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceRuleTargetList> getRuleTargetList() {
+  public RetargetingListServiceRuleTargetList getRuleTargetList() {
     return ruleTargetList;
   }
 
-  public void setRuleTargetList(JsonNullable<RetargetingListServiceRuleTargetList> ruleTargetList) {
+  public void setRuleTargetList(RetargetingListServiceRuleTargetList ruleTargetList) {
     this.ruleTargetList = ruleTargetList;
   }
 
   public RetargetingListServiceTargetList similarityTargetList(RetargetingListServiceSimilarityTargetList similarityTargetList) {
-    this.similarityTargetList = JsonNullable.of(similarityTargetList);
+    this.similarityTargetList = similarityTargetList;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class RetargetingListServiceTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceSimilarityTargetList> getSimilarityTargetList() {
+  public RetargetingListServiceSimilarityTargetList getSimilarityTargetList() {
     return similarityTargetList;
   }
 
-  public void setSimilarityTargetList(JsonNullable<RetargetingListServiceSimilarityTargetList> similarityTargetList) {
+  public void setSimilarityTargetList(RetargetingListServiceSimilarityTargetList similarityTargetList) {
     this.similarityTargetList = similarityTargetList;
   }
 
   public RetargetingListServiceTargetList targetListType(RetargetingListServiceTargetListType targetListType) {
-    this.targetListType = JsonNullable.of(targetListType);
+    this.targetListType = targetListType;
     return this;
   }
 
@@ -133,17 +132,17 @@ public class RetargetingListServiceTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetListType> getTargetListType() {
+  public RetargetingListServiceTargetListType getTargetListType() {
     return targetListType;
   }
 
-  public void setTargetListType(JsonNullable<RetargetingListServiceTargetListType> targetListType) {
+  public void setTargetListType(RetargetingListServiceTargetListType targetListType) {
     this.targetListType = targetListType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -181,7 +180,7 @@ public class RetargetingListServiceTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

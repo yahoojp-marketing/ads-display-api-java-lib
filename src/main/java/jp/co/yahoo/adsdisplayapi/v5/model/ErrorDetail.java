@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ErrorDetailオブジェクトは、エラーの詳細な内容を表します。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;Detailed information of error.&lt;/div&gt;
  */
 @ApiModel(description = "<div lang=\"ja\">ErrorDetailオブジェクトは、エラーの詳細な内容を表します。</div><div lang=\"en\">Detailed information of error.</div>")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ErrorDetail   {
   @JsonProperty("requestKey")
-  private JsonNullable<String> requestKey = JsonNullable.undefined();
+  private String requestKey = null;
 
   @JsonProperty("requestValue")
-  private JsonNullable<String> requestValue = JsonNullable.undefined();
+  private String requestValue = null;
 
   public ErrorDetail requestKey(String requestKey) {
-    this.requestKey = JsonNullable.of(requestKey);
+    this.requestKey = requestKey;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class ErrorDetail   {
   @ApiModelProperty(value = "<div lang=\"ja\">エラーが発生したフィールドです。</div><div lang=\"en\">The file that occured the error.</div>")
 
 
-  public JsonNullable<String> getRequestKey() {
+  public String getRequestKey() {
     return requestKey;
   }
 
-  public void setRequestKey(JsonNullable<String> requestKey) {
+  public void setRequestKey(String requestKey) {
     this.requestKey = requestKey;
   }
 
   public ErrorDetail requestValue(String requestValue) {
-    this.requestValue = JsonNullable.of(requestValue);
+    this.requestValue = requestValue;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class ErrorDetail   {
   @ApiModelProperty(value = "<div lang=\"ja\">エラーが発生した値です。</div><div lang=\"en\">The data that caused the error.</div>")
 
 
-  public JsonNullable<String> getRequestValue() {
+  public String getRequestValue() {
     return requestValue;
   }
 
-  public void setRequestValue(JsonNullable<String> requestValue) {
+  public void setRequestValue(String requestValue) {
     this.requestValue = requestValue;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class ErrorDetail   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchLiftServiceKeyword;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,23 +15,23 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchLiftオブジェクトは、サーチリフトの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchLift object describes information about the search lift.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchLiftオブジェクトは、サーチリフトの情報を表します。</div> <div lang=\"en\">SearchLift object describes information about the search lift.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchLift   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("searchLiftId")
-  private JsonNullable<Long> searchLiftId = JsonNullable.undefined();
+  private Long searchLiftId = null;
 
   @JsonProperty("keywords")
   @Valid
-  private JsonNullable<List<SearchLiftServiceKeyword>> keywords = JsonNullable.undefined();
+  private List<SearchLiftServiceKeyword> keywords = null;
 
   public SearchLift accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -43,16 +42,16 @@ public class SearchLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public SearchLift campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class SearchLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public SearchLift searchLiftId(Long searchLiftId) {
-    this.searchLiftId = JsonNullable.of(searchLiftId);
+    this.searchLiftId = searchLiftId;
     return this;
   }
 
@@ -83,24 +82,24 @@ public class SearchLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチリフト調査IDです。</div> <div lang=\"en\">SearchLift ID. </div> ")
 
 
-  public JsonNullable<Long> getSearchLiftId() {
+  public Long getSearchLiftId() {
     return searchLiftId;
   }
 
-  public void setSearchLiftId(JsonNullable<Long> searchLiftId) {
+  public void setSearchLiftId(Long searchLiftId) {
     this.searchLiftId = searchLiftId;
   }
 
   public SearchLift keywords(List<SearchLiftServiceKeyword> keywords) {
-    this.keywords = JsonNullable.of(keywords);
+    this.keywords = keywords;
     return this;
   }
 
   public SearchLift addKeywordsItem(SearchLiftServiceKeyword keywordsItem) {
-    if (this.keywords == null || !this.keywords.isPresent()) {
-      this.keywords = JsonNullable.of(new ArrayList<>());
+    if (this.keywords == null) {
+      this.keywords = new ArrayList<>();
     }
-    this.keywords.get().add(keywordsItem);
+    this.keywords.add(keywordsItem);
     return this;
   }
 
@@ -112,17 +111,17 @@ public class SearchLift   {
 
   @Valid
 
-  public JsonNullable<List<SearchLiftServiceKeyword>> getKeywords() {
+  public List<SearchLiftServiceKeyword> getKeywords() {
     return keywords;
   }
 
-  public void setKeywords(JsonNullable<List<SearchLiftServiceKeyword>> keywords) {
+  public void setKeywords(List<SearchLiftServiceKeyword> keywords) {
     this.keywords = keywords;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -158,7 +157,7 @@ public class SearchLift   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

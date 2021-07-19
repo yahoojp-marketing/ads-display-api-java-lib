@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedServiceControlType;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedServiceSourceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,19 +14,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceUploadLimitオブジェクトは、Feedファイルの制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceUploadLimit object contains feed file restriction information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedServiceUploadLimitオブジェクトは、Feedファイルの制限情報を保持します。</div> <div lang=\"en\">FeedServiceUploadLimit object contains feed file restriction information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedServiceUploadLimit   {
   @JsonProperty("sourceType")
-  private JsonNullable<FeedServiceSourceType> sourceType = JsonNullable.undefined();
+  private FeedServiceSourceType sourceType = null;
 
   @JsonProperty("controlType")
-  private JsonNullable<FeedServiceControlType> controlType = JsonNullable.undefined();
+  private FeedServiceControlType controlType = null;
 
   @JsonProperty("limitValue")
-  private JsonNullable<Integer> limitValue = JsonNullable.undefined();
+  private Integer limitValue = null;
 
   public FeedServiceUploadLimit sourceType(FeedServiceSourceType sourceType) {
-    this.sourceType = JsonNullable.of(sourceType);
+    this.sourceType = sourceType;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class FeedServiceUploadLimit   {
 
   @Valid
 
-  public JsonNullable<FeedServiceSourceType> getSourceType() {
+  public FeedServiceSourceType getSourceType() {
     return sourceType;
   }
 
-  public void setSourceType(JsonNullable<FeedServiceSourceType> sourceType) {
+  public void setSourceType(FeedServiceSourceType sourceType) {
     this.sourceType = sourceType;
   }
 
   public FeedServiceUploadLimit controlType(FeedServiceControlType controlType) {
-    this.controlType = JsonNullable.of(controlType);
+    this.controlType = controlType;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class FeedServiceUploadLimit   {
 
   @Valid
 
-  public JsonNullable<FeedServiceControlType> getControlType() {
+  public FeedServiceControlType getControlType() {
     return controlType;
   }
 
-  public void setControlType(JsonNullable<FeedServiceControlType> controlType) {
+  public void setControlType(FeedServiceControlType controlType) {
     this.controlType = controlType;
   }
 
   public FeedServiceUploadLimit limitValue(Integer limitValue) {
-    this.limitValue = JsonNullable.of(limitValue);
+    this.limitValue = limitValue;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class FeedServiceUploadLimit   {
   @ApiModelProperty(value = "<div lang=\"ja\">上限数です。</div> <div lang=\"en\">Number of limit.</div> ")
 
 
-  public JsonNullable<Integer> getLimitValue() {
+  public Integer getLimitValue() {
     return limitValue;
   }
 
-  public void setLimitValue(JsonNullable<Integer> limitValue) {
+  public void setLimitValue(Integer limitValue) {
     this.limitValue = limitValue;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class FeedServiceUploadLimit   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAudienceCategoryTarget object contains configuration information of Audience Category targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceAudienceCategoryTarget object contains configuration information of Audience Category targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceAudienceCategoryTarget   {
   @JsonProperty("audienceCategoryType")
-  private JsonNullable<String> audienceCategoryType = JsonNullable.undefined();
+  private String audienceCategoryType = null;
 
   @JsonProperty("categoryNameEn")
-  private JsonNullable<String> categoryNameEn = JsonNullable.undefined();
+  private String categoryNameEn = null;
 
   @JsonProperty("categoryNameJa")
-  private JsonNullable<String> categoryNameJa = JsonNullable.undefined();
+  private String categoryNameJa = null;
 
   public StatsServiceAudienceCategoryTarget audienceCategoryType(String audienceCategoryType) {
-    this.audienceCategoryType = JsonNullable.of(audienceCategoryType);
+    this.audienceCategoryType = audienceCategoryType;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class StatsServiceAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 提供されるカテゴリの種別を表します。<br> *返却される値の詳細については、DictionaryServiceで取得されるDictionaryServiceAudienceCategoryオブジェクトのaudienceCategoryTypeフィールドをご参照ください。 </div> <div lang=\"en\"> Audience category information.<br> *For details of the returned value, refer to the audienceCategoryType field of DictionaryServiceAudienceCategory object obtained via DictionaryService. </div> ")
 
 
-  public JsonNullable<String> getAudienceCategoryType() {
+  public String getAudienceCategoryType() {
     return audienceCategoryType;
   }
 
-  public void setAudienceCategoryType(JsonNullable<String> audienceCategoryType) {
+  public void setAudienceCategoryType(String audienceCategoryType) {
     this.audienceCategoryType = audienceCategoryType;
   }
 
   public StatsServiceAudienceCategoryTarget categoryNameEn(String categoryNameEn) {
-    this.categoryNameEn = JsonNullable.of(categoryNameEn);
+    this.categoryNameEn = categoryNameEn;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class StatsServiceAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（英語）です。</div> <div lang=\"en\">Category name (English)</div> ")
 
 
-  public JsonNullable<String> getCategoryNameEn() {
+  public String getCategoryNameEn() {
     return categoryNameEn;
   }
 
-  public void setCategoryNameEn(JsonNullable<String> categoryNameEn) {
+  public void setCategoryNameEn(String categoryNameEn) {
     this.categoryNameEn = categoryNameEn;
   }
 
   public StatsServiceAudienceCategoryTarget categoryNameJa(String categoryNameJa) {
-    this.categoryNameJa = JsonNullable.of(categoryNameJa);
+    this.categoryNameJa = categoryNameJa;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class StatsServiceAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（日本語）です。</div> <div lang=\"en\">Category name (Japanese)</div> ")
 
 
-  public JsonNullable<String> getCategoryNameJa() {
+  public String getCategoryNameJa() {
     return categoryNameJa;
   }
 
-  public void setCategoryNameJa(JsonNullable<String> categoryNameJa) {
+  public void setCategoryNameJa(String categoryNameJa) {
     this.categoryNameJa = categoryNameJa;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class StatsServiceAudienceCategoryTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

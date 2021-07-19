@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordListServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListServicePageオブジェクトは、取得されるサーチキーワードリストに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordListServicePage object displays that relatred to retrieved search keyword list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchKeywordListServicePageオブジェクトは、取得されるサーチキーワードリストに関するエントリーを表します。</div> <div lang=\"en\">SearchKeywordListServicePage object displays that relatred to retrieved search keyword list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchKeywordListServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<SearchKeywordListServiceValue>> values = JsonNullable.undefined();
+  private List<SearchKeywordListServiceValue> values = null;
 
   public SearchKeywordListServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class SearchKeywordListServicePage   {
   }
 
   public SearchKeywordListServicePage values(List<SearchKeywordListServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public SearchKeywordListServicePage addValuesItem(SearchKeywordListServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class SearchKeywordListServicePage   {
 
   @Valid
 
-  public JsonNullable<List<SearchKeywordListServiceValue>> getValues() {
+  public List<SearchKeywordListServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<SearchKeywordListServiceValue>> values) {
+  public void setValues(List<SearchKeywordListServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class SearchKeywordListServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

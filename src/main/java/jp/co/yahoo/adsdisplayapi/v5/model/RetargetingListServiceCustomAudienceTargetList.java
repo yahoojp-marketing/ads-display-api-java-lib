@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceCustomAudienceTargetListオブジェクトは、Yahoo! DMPの行動履歴を利用するターゲットリストを表します。ご利用にはYahoo! DMPのご契約が必要です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※targetListTypeがCUSTOM_AUDIENCEの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceCustomAudienceTargetList object displays Target List using users&#39; visit/activity history from Yahoo! JAPAN DMP. To use the data, it is required to conclude a contract for Yahoo! DMP. &lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If targetListType is CUSTOM_AUDIENCE, this field is required in ADD and SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceCustomAudienceTargetListオブジェクトは、Yahoo! DMPの行動履歴を利用するターゲットリストを表します。ご利用にはYahoo! DMPのご契約が必要です。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※targetListTypeがCUSTOM_AUDIENCEの場合は、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> RetargetingListServiceCustomAudienceTargetList object displays Target List using users' visit/activity history from Yahoo! JAPAN DMP. To use the data, it is required to conclude a contract for Yahoo! DMP. <br> This field is optional in ADD and SET operation. <br> *If targetListType is CUSTOM_AUDIENCE, this field is required in ADD and SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceCustomAudienceTargetList   {
   @JsonProperty("customAudienceId")
-  private JsonNullable<String> customAudienceId = JsonNullable.undefined();
+  private String customAudienceId = null;
 
   @JsonProperty("reachPeriod")
-  private JsonNullable<Integer> reachPeriod = JsonNullable.undefined();
+  private Integer reachPeriod = null;
 
   public RetargetingListServiceCustomAudienceTargetList customAudienceId(String customAudienceId) {
-    this.customAudienceId = JsonNullable.of(customAudienceId);
+    this.customAudienceId = customAudienceId;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class RetargetingListServiceCustomAudienceTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\">Yahoo! DMPに連携するIDです。</div> <div lang=\"en\">ID to configure Yahoo! JAPAN DMP.</div> ")
 
 
-  public JsonNullable<String> getCustomAudienceId() {
+  public String getCustomAudienceId() {
     return customAudienceId;
   }
 
-  public void setCustomAudienceId(JsonNullable<String> customAudienceId) {
+  public void setCustomAudienceId(String customAudienceId) {
     this.customAudienceId = customAudienceId;
   }
 
   public RetargetingListServiceCustomAudienceTargetList reachPeriod(Integer reachPeriod) {
-    this.reachPeriod = JsonNullable.of(reachPeriod);
+    this.reachPeriod = reachPeriod;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class RetargetingListServiceCustomAudienceTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 行動履歴の保持期間です（1日～60日）。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> Duration of user data configured from DMP (1-60days). <br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<Integer> getReachPeriod() {
+  public Integer getReachPeriod() {
     return reachPeriod;
   }
 
-  public void setReachPeriod(JsonNullable<Integer> reachPeriod) {
+  public void setReachPeriod(Integer reachPeriod) {
     this.reachPeriod = reachPeriod;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class RetargetingListServiceCustomAudienceTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

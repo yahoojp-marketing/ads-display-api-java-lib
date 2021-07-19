@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedDataServiceRecord;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedDataServiceValueオブジェクトは、商品情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceValue object is a container for storing item list information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedDataServiceValueオブジェクトは、商品情報を格納するコンテナです。</div> <div lang=\"en\">FeedDataServiceValue object is a container for storing item list information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedDataServiceValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("feedData")
-  private JsonNullable<FeedDataServiceRecord> feedData = JsonNullable.undefined();
+  private FeedDataServiceRecord feedData = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public FeedDataServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public FeedDataServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class FeedDataServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public FeedDataServiceValue feedData(FeedDataServiceRecord feedData) {
-    this.feedData = JsonNullable.of(feedData);
+    this.feedData = feedData;
     return this;
   }
 
@@ -71,16 +70,16 @@ public class FeedDataServiceValue   {
 
   @Valid
 
-  public JsonNullable<FeedDataServiceRecord> getFeedData() {
+  public FeedDataServiceRecord getFeedData() {
     return feedData;
   }
 
-  public void setFeedData(JsonNullable<FeedDataServiceRecord> feedData) {
+  public void setFeedData(FeedDataServiceRecord feedData) {
     this.feedData = feedData;
   }
 
   public FeedDataServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class FeedDataServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class FeedDataServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

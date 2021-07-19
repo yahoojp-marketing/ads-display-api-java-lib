@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceImpsShareBudgetLossOverCampaign;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceImpsShareBudgetLossOverオブジェクトは、インプレッションシェア損失率（予算）が大きいキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceImpsShareBudgetLossOver object describes the Recommendations information of campaigns that have a large lost impression share (budget).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceImpsShareBudgetLossOverオブジェクトは、インプレッションシェア損失率（予算）が大きいキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceImpsShareBudgetLossOver object describes the Recommendations information of campaigns that have a large lost impression share (budget).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceImpsShareBudgetLossOver   {
   @JsonProperty("impsShareBudgetLossOverCampaignList")
   @Valid
-  private JsonNullable<List<RecommendationServiceImpsShareBudgetLossOverCampaign>> impsShareBudgetLossOverCampaignList = JsonNullable.undefined();
+  private List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList = null;
 
   public RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOverCampaignList(List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList) {
-    this.impsShareBudgetLossOverCampaignList = JsonNullable.of(impsShareBudgetLossOverCampaignList);
+    this.impsShareBudgetLossOverCampaignList = impsShareBudgetLossOverCampaignList;
     return this;
   }
 
   public RecommendationServiceImpsShareBudgetLossOver addImpsShareBudgetLossOverCampaignListItem(RecommendationServiceImpsShareBudgetLossOverCampaign impsShareBudgetLossOverCampaignListItem) {
-    if (this.impsShareBudgetLossOverCampaignList == null || !this.impsShareBudgetLossOverCampaignList.isPresent()) {
-      this.impsShareBudgetLossOverCampaignList = JsonNullable.of(new ArrayList<>());
+    if (this.impsShareBudgetLossOverCampaignList == null) {
+      this.impsShareBudgetLossOverCampaignList = new ArrayList<>();
     }
-    this.impsShareBudgetLossOverCampaignList.get().add(impsShareBudgetLossOverCampaignListItem);
+    this.impsShareBudgetLossOverCampaignList.add(impsShareBudgetLossOverCampaignListItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RecommendationServiceImpsShareBudgetLossOver   {
 
   @Valid
 
-  public JsonNullable<List<RecommendationServiceImpsShareBudgetLossOverCampaign>> getImpsShareBudgetLossOverCampaignList() {
+  public List<RecommendationServiceImpsShareBudgetLossOverCampaign> getImpsShareBudgetLossOverCampaignList() {
     return impsShareBudgetLossOverCampaignList;
   }
 
-  public void setImpsShareBudgetLossOverCampaignList(JsonNullable<List<RecommendationServiceImpsShareBudgetLossOverCampaign>> impsShareBudgetLossOverCampaignList) {
+  public void setImpsShareBudgetLossOverCampaignList(List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList) {
     this.impsShareBudgetLossOverCampaignList = impsShareBudgetLossOverCampaignList;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RecommendationServiceImpsShareBudgetLossOver   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

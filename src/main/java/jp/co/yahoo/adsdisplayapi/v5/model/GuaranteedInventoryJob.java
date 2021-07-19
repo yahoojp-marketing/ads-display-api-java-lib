@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceInventory;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceInventoryJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,42 +16,42 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedInventoryJobオブジェクトは、在庫情報のジョブを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedInventoryJob contains the job of inventory information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedInventoryJobオブジェクトは、在庫情報のジョブを格納するコンテナです。</div> <div lang=\"en\">GuaranteedInventoryJob contains the job of inventory information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryJob   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("inventoryJobId")
-  private JsonNullable<Long> inventoryJobId = JsonNullable.undefined();
+  private Long inventoryJobId = null;
 
   @JsonProperty("inventoryJobName")
-  private JsonNullable<String> inventoryJobName = JsonNullable.undefined();
+  private String inventoryJobName = null;
 
   @JsonProperty("notificationBusinessIds")
   @Valid
-  private JsonNullable<List<String>> notificationBusinessIds = JsonNullable.undefined();
+  private List<String> notificationBusinessIds = null;
 
   @JsonProperty("inventoryJobStartDate")
-  private JsonNullable<String> inventoryJobStartDate = JsonNullable.undefined();
+  private String inventoryJobStartDate = null;
 
   @JsonProperty("inventoryJobEndDate")
-  private JsonNullable<String> inventoryJobEndDate = JsonNullable.undefined();
+  private String inventoryJobEndDate = null;
 
   @JsonProperty("createdBusinessId")
-  private JsonNullable<String> createdBusinessId = JsonNullable.undefined();
+  private String createdBusinessId = null;
 
   @JsonProperty("isExpiredPackage")
-  private JsonNullable<Boolean> isExpiredPackage = JsonNullable.undefined();
+  private Boolean isExpiredPackage = null;
 
   @JsonProperty("inventoryJobStatus")
-  private JsonNullable<GuaranteedInventoryServiceInventoryJobStatus> inventoryJobStatus = JsonNullable.undefined();
+  private GuaranteedInventoryServiceInventoryJobStatus inventoryJobStatus = null;
 
   @JsonProperty("inventories")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceInventory>> inventories = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceInventory> inventories = null;
 
   public GuaranteedInventoryJob accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedInventoryJob inventoryJobId(Long inventoryJobId) {
-    this.inventoryJobId = JsonNullable.of(inventoryJobId);
+    this.inventoryJobId = inventoryJobId;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">在庫確認ジョブIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Inventory check job ID.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<Long> getInventoryJobId() {
+  public Long getInventoryJobId() {
     return inventoryJobId;
   }
 
-  public void setInventoryJobId(JsonNullable<Long> inventoryJobId) {
+  public void setInventoryJobId(Long inventoryJobId) {
     this.inventoryJobId = inventoryJobId;
   }
 
   public GuaranteedInventoryJob inventoryJobName(String inventoryJobName) {
-    this.inventoryJobName = JsonNullable.of(inventoryJobName);
+    this.inventoryJobName = inventoryJobName;
     return this;
   }
 
@@ -103,24 +102,24 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">在庫確認ジョブ名です。<br> ADD時、このフィールドは必須となります。</div> <div lang=\"en\">Inventory check job name.<br> This field is required in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getInventoryJobName() {
+  public String getInventoryJobName() {
     return inventoryJobName;
   }
 
-  public void setInventoryJobName(JsonNullable<String> inventoryJobName) {
+  public void setInventoryJobName(String inventoryJobName) {
     this.inventoryJobName = inventoryJobName;
   }
 
   public GuaranteedInventoryJob notificationBusinessIds(List<String> notificationBusinessIds) {
-    this.notificationBusinessIds = JsonNullable.of(notificationBusinessIds);
+    this.notificationBusinessIds = notificationBusinessIds;
     return this;
   }
 
   public GuaranteedInventoryJob addNotificationBusinessIdsItem(String notificationBusinessIdsItem) {
-    if (this.notificationBusinessIds == null || !this.notificationBusinessIds.isPresent()) {
-      this.notificationBusinessIds = JsonNullable.of(new ArrayList<>());
+    if (this.notificationBusinessIds == null) {
+      this.notificationBusinessIds = new ArrayList<>();
     }
-    this.notificationBusinessIds.get().add(notificationBusinessIdsItem);
+    this.notificationBusinessIds.add(notificationBusinessIdsItem);
     return this;
   }
 
@@ -131,16 +130,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">連絡先Yahoo! JAPANビジネスIDです。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">Yahoo! JAPAN Business ID to send notifications.<br> This field is optional in ADD operation.</div> ")
 
 
-  public JsonNullable<List<String>> getNotificationBusinessIds() {
+  public List<String> getNotificationBusinessIds() {
     return notificationBusinessIds;
   }
 
-  public void setNotificationBusinessIds(JsonNullable<List<String>> notificationBusinessIds) {
+  public void setNotificationBusinessIds(List<String> notificationBusinessIds) {
     this.notificationBusinessIds = notificationBusinessIds;
   }
 
   public GuaranteedInventoryJob inventoryJobStartDate(String inventoryJobStartDate) {
-    this.inventoryJobStartDate = JsonNullable.of(inventoryJobStartDate);
+    this.inventoryJobStartDate = inventoryJobStartDate;
     return this;
   }
 
@@ -151,16 +150,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 在庫確認ジョブの開始日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Start date of inventory check job.<br> Although this field will be returned in the response, it will be ignored on input. </div> Format: yyyyMMddHHmmss ")
 
 
-  public JsonNullable<String> getInventoryJobStartDate() {
+  public String getInventoryJobStartDate() {
     return inventoryJobStartDate;
   }
 
-  public void setInventoryJobStartDate(JsonNullable<String> inventoryJobStartDate) {
+  public void setInventoryJobStartDate(String inventoryJobStartDate) {
     this.inventoryJobStartDate = inventoryJobStartDate;
   }
 
   public GuaranteedInventoryJob inventoryJobEndDate(String inventoryJobEndDate) {
-    this.inventoryJobEndDate = JsonNullable.of(inventoryJobEndDate);
+    this.inventoryJobEndDate = inventoryJobEndDate;
     return this;
   }
 
@@ -171,16 +170,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 在庫確認ジョブの完了日時です。<br> 在庫確認ジョブが実行中の場合はnullで返ります。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\"> End date of inventory check job. <br> Null will be returned if the inventory check job is still running. <br> Although this field will be returned in the response, it will be ignored on input. </div> Format: yyyyMMddHHmmss ")
 
 
-  public JsonNullable<String> getInventoryJobEndDate() {
+  public String getInventoryJobEndDate() {
     return inventoryJobEndDate;
   }
 
-  public void setInventoryJobEndDate(JsonNullable<String> inventoryJobEndDate) {
+  public void setInventoryJobEndDate(String inventoryJobEndDate) {
     this.inventoryJobEndDate = inventoryJobEndDate;
   }
 
   public GuaranteedInventoryJob createdBusinessId(String createdBusinessId) {
-    this.createdBusinessId = JsonNullable.of(createdBusinessId);
+    this.createdBusinessId = createdBusinessId;
     return this;
   }
 
@@ -191,16 +190,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">在庫確認ジョブ作成者のYahoo! JAPANビジネスIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Yahoo! JAPAN Business ID of inventory check job creator. <br> Although this field will be returned in the response, it will be ignored on input.</div> ")
 
 
-  public JsonNullable<String> getCreatedBusinessId() {
+  public String getCreatedBusinessId() {
     return createdBusinessId;
   }
 
-  public void setCreatedBusinessId(JsonNullable<String> createdBusinessId) {
+  public void setCreatedBusinessId(String createdBusinessId) {
     this.createdBusinessId = createdBusinessId;
   }
 
   public GuaranteedInventoryJob isExpiredPackage(Boolean isExpiredPackage) {
-    this.isExpiredPackage = JsonNullable.of(isExpiredPackage);
+    this.isExpiredPackage = isExpiredPackage;
     return this;
   }
 
@@ -211,16 +210,16 @@ public class GuaranteedInventoryJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 予約有効終了日が過去日の商品が指定されているかどうかのフラグです。<br> trueの場合、その商品の予約有効終了日を超えていることを示しています。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\"> A flag which indicates if the expired package is specified. <br> If the value is true, it indicates that the package reservation expiration date has already passed. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Boolean> getIsExpiredPackage() {
+  public Boolean getIsExpiredPackage() {
     return isExpiredPackage;
   }
 
-  public void setIsExpiredPackage(JsonNullable<Boolean> isExpiredPackage) {
+  public void setIsExpiredPackage(Boolean isExpiredPackage) {
     this.isExpiredPackage = isExpiredPackage;
   }
 
   public GuaranteedInventoryJob inventoryJobStatus(GuaranteedInventoryServiceInventoryJobStatus inventoryJobStatus) {
-    this.inventoryJobStatus = JsonNullable.of(inventoryJobStatus);
+    this.inventoryJobStatus = inventoryJobStatus;
     return this;
   }
 
@@ -232,24 +231,24 @@ public class GuaranteedInventoryJob   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceInventoryJobStatus> getInventoryJobStatus() {
+  public GuaranteedInventoryServiceInventoryJobStatus getInventoryJobStatus() {
     return inventoryJobStatus;
   }
 
-  public void setInventoryJobStatus(JsonNullable<GuaranteedInventoryServiceInventoryJobStatus> inventoryJobStatus) {
+  public void setInventoryJobStatus(GuaranteedInventoryServiceInventoryJobStatus inventoryJobStatus) {
     this.inventoryJobStatus = inventoryJobStatus;
   }
 
   public GuaranteedInventoryJob inventories(List<GuaranteedInventoryServiceInventory> inventories) {
-    this.inventories = JsonNullable.of(inventories);
+    this.inventories = inventories;
     return this;
   }
 
   public GuaranteedInventoryJob addInventoriesItem(GuaranteedInventoryServiceInventory inventoriesItem) {
-    if (this.inventories == null || !this.inventories.isPresent()) {
-      this.inventories = JsonNullable.of(new ArrayList<>());
+    if (this.inventories == null) {
+      this.inventories = new ArrayList<>();
     }
-    this.inventories.get().add(inventoriesItem);
+    this.inventories.add(inventoriesItem);
     return this;
   }
 
@@ -261,17 +260,17 @@ public class GuaranteedInventoryJob   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceInventory>> getInventories() {
+  public List<GuaranteedInventoryServiceInventory> getInventories() {
     return inventories;
   }
 
-  public void setInventories(JsonNullable<List<GuaranteedInventoryServiceInventory>> inventories) {
+  public void setInventories(List<GuaranteedInventoryServiceInventory> inventories) {
     this.inventories = inventories;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -319,7 +318,7 @@ public class GuaranteedInventoryJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

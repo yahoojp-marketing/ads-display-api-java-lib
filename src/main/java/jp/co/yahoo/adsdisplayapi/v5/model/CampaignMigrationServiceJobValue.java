@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignMigrationServiceJob;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignMigrationServiceJobValueオブジェクトは、マイグレーションジョブの処理状況を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignMigrationServiceJobValue object contains processing status of migration job.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignMigrationServiceJobValueオブジェクトは、マイグレーションジョブの処理状況を格納するコンテナです。</div> <div lang=\"en\">CampaignMigrationServiceJobValue object contains processing status of migration job.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignMigrationServiceJobValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("migrationJob")
-  private JsonNullable<CampaignMigrationServiceJob> migrationJob = JsonNullable.undefined();
+  private CampaignMigrationServiceJob migrationJob = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public CampaignMigrationServiceJobValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public CampaignMigrationServiceJobValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class CampaignMigrationServiceJobValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public CampaignMigrationServiceJobValue migrationJob(CampaignMigrationServiceJob migrationJob) {
-    this.migrationJob = JsonNullable.of(migrationJob);
+    this.migrationJob = migrationJob;
     return this;
   }
 
@@ -71,16 +70,16 @@ public class CampaignMigrationServiceJobValue   {
 
   @Valid
 
-  public JsonNullable<CampaignMigrationServiceJob> getMigrationJob() {
+  public CampaignMigrationServiceJob getMigrationJob() {
     return migrationJob;
   }
 
-  public void setMigrationJob(JsonNullable<CampaignMigrationServiceJob> migrationJob) {
+  public void setMigrationJob(CampaignMigrationServiceJob migrationJob) {
     this.migrationJob = migrationJob;
   }
 
   public CampaignMigrationServiceJobValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class CampaignMigrationServiceJobValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class CampaignMigrationServiceJobValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

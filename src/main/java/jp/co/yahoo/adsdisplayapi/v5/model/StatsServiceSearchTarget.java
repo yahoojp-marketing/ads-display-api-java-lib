@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSearchTargetオブジェクトは、サーチターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSearchTarget object holds configuration information of search targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceSearchTargetオブジェクトは、サーチターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceSearchTarget object holds configuration information of search targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceSearchTarget   {
   @JsonProperty("searchKeywordListName")
-  private JsonNullable<String> searchKeywordListName = JsonNullable.undefined();
+  private String searchKeywordListName = null;
 
   public StatsServiceSearchTarget searchKeywordListName(String searchKeywordListName) {
-    this.searchKeywordListName = JsonNullable.of(searchKeywordListName);
+    this.searchKeywordListName = searchKeywordListName;
     return this;
   }
 
@@ -30,17 +29,17 @@ public class StatsServiceSearchTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードリスト名</div> <div lang=\"en\">Search Keyword List name</div> ")
 
 
-  public JsonNullable<String> getSearchKeywordListName() {
+  public String getSearchKeywordListName() {
     return searchKeywordListName;
   }
 
-  public void setSearchKeywordListName(JsonNullable<String> searchKeywordListName) {
+  public void setSearchKeywordListName(String searchKeywordListName) {
     this.searchKeywordListName = searchKeywordListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +69,7 @@ public class StatsServiceSearchTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

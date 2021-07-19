@@ -9,35 +9,34 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePage;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * GuaranteedSimulationServiceGetPackageResponse
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceGetPackageResponse   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("rid")
   private String rid;
 
   @JsonProperty("rval")
-  private JsonNullable<GuaranteedSimulationServicePackagePage> rval = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePage rval = null;
 
   public GuaranteedSimulationServiceGetPackageResponse errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public GuaranteedSimulationServiceGetPackageResponse addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -49,11 +48,11 @@ public class GuaranteedSimulationServiceGetPackageResponse   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
@@ -78,7 +77,7 @@ public class GuaranteedSimulationServiceGetPackageResponse   {
   }
 
   public GuaranteedSimulationServiceGetPackageResponse rval(GuaranteedSimulationServicePackagePage rval) {
-    this.rval = JsonNullable.of(rval);
+    this.rval = rval;
     return this;
   }
 
@@ -90,17 +89,17 @@ public class GuaranteedSimulationServiceGetPackageResponse   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePage> getRval() {
+  public GuaranteedSimulationServicePackagePage getRval() {
     return rval;
   }
 
-  public void setRval(JsonNullable<GuaranteedSimulationServicePackagePage> rval) {
+  public void setRval(GuaranteedSimulationServicePackagePage rval) {
     this.rval = rval;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -134,7 +133,7 @@ public class GuaranteedSimulationServiceGetPackageResponse   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

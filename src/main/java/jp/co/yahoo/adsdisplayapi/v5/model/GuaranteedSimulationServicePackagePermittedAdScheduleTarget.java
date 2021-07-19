@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePermissionType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePermittedAdScheduleTarget;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePermittedAdScheduleTargetオブジェクトは、時間帯ターゲット設定の制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePermittedAdScheduleTarget object holds the restriction information about the day of week/hours target setting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePermittedAdScheduleTargetオブジェクトは、時間帯ターゲット設定の制限情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePermittedAdScheduleTarget object holds the restriction information about the day of week/hours target setting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePermittedAdScheduleTarget   {
   @JsonProperty("targetPermission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType targetPermission = null;
 
   @JsonProperty("permittedTargets")
   @Valid
   private List<GuaranteedSimulationServicePermittedAdScheduleTarget> permittedTargets = null;
 
   public GuaranteedSimulationServicePackagePermittedAdScheduleTarget targetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
-    this.targetPermission = JsonNullable.of(targetPermission);
+    this.targetPermission = targetPermission;
     return this;
   }
 
@@ -39,11 +38,11 @@ public class GuaranteedSimulationServicePackagePermittedAdScheduleTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getTargetPermission() {
+  public GuaranteedSimulationServicePackagePermissionType getTargetPermission() {
     return targetPermission;
   }
 
-  public void setTargetPermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission) {
+  public void setTargetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
     this.targetPermission = targetPermission;
   }
 
@@ -78,7 +77,7 @@ public class GuaranteedSimulationServicePackagePermittedAdScheduleTarget   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class GuaranteedSimulationServicePackagePermittedAdScheduleTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

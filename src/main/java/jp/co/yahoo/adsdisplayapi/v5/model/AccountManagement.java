@@ -14,7 +14,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServiceIsTestAccount;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServicePayment;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServicePrefectureCode;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServiceStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -22,55 +21,55 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementオブジェクトは、アカウント情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagement objects serve account information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountManagementオブジェクトは、アカウント情報を表します。</div> <div lang=\"en\">AccountManagement objects serve account information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountManagement   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("accountName")
-  private JsonNullable<String> accountName = JsonNullable.undefined();
+  private String accountName = null;
 
   @JsonProperty("accountPayment")
-  private JsonNullable<AccountManagementServicePayment> accountPayment = JsonNullable.undefined();
+  private AccountManagementServicePayment accountPayment = null;
 
   @JsonProperty("agencyPersonName")
-  private JsonNullable<String> agencyPersonName = JsonNullable.undefined();
+  private String agencyPersonName = null;
 
   @JsonProperty("agencyPrefectureCode")
-  private JsonNullable<AccountManagementServicePrefectureCode> agencyPrefectureCode = JsonNullable.undefined();
+  private AccountManagementServicePrefectureCode agencyPrefectureCode = null;
 
   @JsonProperty("authType")
-  private JsonNullable<AccountManagementServiceAuthType> authType = JsonNullable.undefined();
+  private AccountManagementServiceAuthType authType = null;
 
   @JsonProperty("autoTaggingEnabled")
-  private JsonNullable<AccountManagementServiceAutoTaggingEnabled> autoTaggingEnabled = JsonNullable.undefined();
+  private AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled = null;
 
   @JsonProperty("client")
-  private JsonNullable<AccountManagementServiceClient> client = JsonNullable.undefined();
+  private AccountManagementServiceClient client = null;
 
   @JsonProperty("clientType")
-  private JsonNullable<AccountManagementServiceClientType> clientType = JsonNullable.undefined();
+  private AccountManagementServiceClientType clientType = null;
 
   @JsonProperty("contactBizId")
-  private JsonNullable<String> contactBizId = JsonNullable.undefined();
+  private String contactBizId = null;
 
   @JsonProperty("deliveryStatus")
-  private JsonNullable<AccountManagementServiceDeliveryStatus> deliveryStatus = JsonNullable.undefined();
+  private AccountManagementServiceDeliveryStatus deliveryStatus = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("isTestAccount")
-  private JsonNullable<AccountManagementServiceIsTestAccount> isTestAccount = JsonNullable.undefined();
+  private AccountManagementServiceIsTestAccount isTestAccount = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("status")
-  private JsonNullable<AccountManagementServiceStatus> status = JsonNullable.undefined();
+  private AccountManagementServiceStatus status = null;
 
   public AccountManagement accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -81,16 +80,16 @@ public class AccountManagement   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AccountManagement accountName(String accountName) {
-    this.accountName = JsonNullable.of(accountName);
+    this.accountName = accountName;
     return this;
   }
 
@@ -101,16 +100,16 @@ public class AccountManagement   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウント名です。<br>このフィールドは、ADD時は必須となり、SET時は省略可能となります。</div> <div lang=\"en\">Account Name.<br>This field is required in ADD operation, and will be optional in SET operation.</div> ")
 
 
-  public JsonNullable<String> getAccountName() {
+  public String getAccountName() {
     return accountName;
   }
 
-  public void setAccountName(JsonNullable<String> accountName) {
+  public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
   public AccountManagement accountPayment(AccountManagementServicePayment accountPayment) {
-    this.accountPayment = JsonNullable.of(accountPayment);
+    this.accountPayment = accountPayment;
     return this;
   }
 
@@ -122,16 +121,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServicePayment> getAccountPayment() {
+  public AccountManagementServicePayment getAccountPayment() {
     return accountPayment;
   }
 
-  public void setAccountPayment(JsonNullable<AccountManagementServicePayment> accountPayment) {
+  public void setAccountPayment(AccountManagementServicePayment accountPayment) {
     this.accountPayment = accountPayment;
   }
 
   public AccountManagement agencyPersonName(String agencyPersonName) {
-    this.agencyPersonName = JsonNullable.of(agencyPersonName);
+    this.agencyPersonName = agencyPersonName;
     return this;
   }
 
@@ -142,16 +141,16 @@ public class AccountManagement   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 代理店担当者名です。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Agency Person Name.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getAgencyPersonName() {
+  public String getAgencyPersonName() {
     return agencyPersonName;
   }
 
-  public void setAgencyPersonName(JsonNullable<String> agencyPersonName) {
+  public void setAgencyPersonName(String agencyPersonName) {
     this.agencyPersonName = agencyPersonName;
   }
 
   public AccountManagement agencyPrefectureCode(AccountManagementServicePrefectureCode agencyPrefectureCode) {
-    this.agencyPrefectureCode = JsonNullable.of(agencyPrefectureCode);
+    this.agencyPrefectureCode = agencyPrefectureCode;
     return this;
   }
 
@@ -163,16 +162,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServicePrefectureCode> getAgencyPrefectureCode() {
+  public AccountManagementServicePrefectureCode getAgencyPrefectureCode() {
     return agencyPrefectureCode;
   }
 
-  public void setAgencyPrefectureCode(JsonNullable<AccountManagementServicePrefectureCode> agencyPrefectureCode) {
+  public void setAgencyPrefectureCode(AccountManagementServicePrefectureCode agencyPrefectureCode) {
     this.agencyPrefectureCode = agencyPrefectureCode;
   }
 
   public AccountManagement authType(AccountManagementServiceAuthType authType) {
-    this.authType = JsonNullable.of(authType);
+    this.authType = authType;
     return this;
   }
 
@@ -184,16 +183,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceAuthType> getAuthType() {
+  public AccountManagementServiceAuthType getAuthType() {
     return authType;
   }
 
-  public void setAuthType(JsonNullable<AccountManagementServiceAuthType> authType) {
+  public void setAuthType(AccountManagementServiceAuthType authType) {
     this.authType = authType;
   }
 
   public AccountManagement autoTaggingEnabled(AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled) {
-    this.autoTaggingEnabled = JsonNullable.of(autoTaggingEnabled);
+    this.autoTaggingEnabled = autoTaggingEnabled;
     return this;
   }
 
@@ -205,16 +204,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceAutoTaggingEnabled> getAutoTaggingEnabled() {
+  public AccountManagementServiceAutoTaggingEnabled getAutoTaggingEnabled() {
     return autoTaggingEnabled;
   }
 
-  public void setAutoTaggingEnabled(JsonNullable<AccountManagementServiceAutoTaggingEnabled> autoTaggingEnabled) {
+  public void setAutoTaggingEnabled(AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled) {
     this.autoTaggingEnabled = autoTaggingEnabled;
   }
 
   public AccountManagement client(AccountManagementServiceClient client) {
-    this.client = JsonNullable.of(client);
+    this.client = client;
     return this;
   }
 
@@ -226,16 +225,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceClient> getClient() {
+  public AccountManagementServiceClient getClient() {
     return client;
   }
 
-  public void setClient(JsonNullable<AccountManagementServiceClient> client) {
+  public void setClient(AccountManagementServiceClient client) {
     this.client = client;
   }
 
   public AccountManagement clientType(AccountManagementServiceClientType clientType) {
-    this.clientType = JsonNullable.of(clientType);
+    this.clientType = clientType;
     return this;
   }
 
@@ -247,16 +246,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceClientType> getClientType() {
+  public AccountManagementServiceClientType getClientType() {
     return clientType;
   }
 
-  public void setClientType(JsonNullable<AccountManagementServiceClientType> clientType) {
+  public void setClientType(AccountManagementServiceClientType clientType) {
     this.clientType = clientType;
   }
 
   public AccountManagement contactBizId(String contactBizId) {
-    this.contactBizId = JsonNullable.of(contactBizId);
+    this.contactBizId = contactBizId;
     return this;
   }
 
@@ -267,16 +266,16 @@ public class AccountManagement   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウント管理者のYahoo! JAPANビジネスIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Contact Business ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getContactBizId() {
+  public String getContactBizId() {
     return contactBizId;
   }
 
-  public void setContactBizId(JsonNullable<String> contactBizId) {
+  public void setContactBizId(String contactBizId) {
     this.contactBizId = contactBizId;
   }
 
   public AccountManagement deliveryStatus(AccountManagementServiceDeliveryStatus deliveryStatus) {
-    this.deliveryStatus = JsonNullable.of(deliveryStatus);
+    this.deliveryStatus = deliveryStatus;
     return this;
   }
 
@@ -288,16 +287,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceDeliveryStatus> getDeliveryStatus() {
+  public AccountManagementServiceDeliveryStatus getDeliveryStatus() {
     return deliveryStatus;
   }
 
-  public void setDeliveryStatus(JsonNullable<AccountManagementServiceDeliveryStatus> deliveryStatus) {
+  public void setDeliveryStatus(AccountManagementServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
   public AccountManagement endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -308,16 +307,16 @@ public class AccountManagement   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 終了日<br> YYYYMMDD形式で指定 </div> <div lang=\"en\"> End Date<br> YYYYMMDD </div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public AccountManagement isTestAccount(AccountManagementServiceIsTestAccount isTestAccount) {
-    this.isTestAccount = JsonNullable.of(isTestAccount);
+    this.isTestAccount = isTestAccount;
     return this;
   }
 
@@ -329,16 +328,16 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceIsTestAccount> getIsTestAccount() {
+  public AccountManagementServiceIsTestAccount getIsTestAccount() {
     return isTestAccount;
   }
 
-  public void setIsTestAccount(JsonNullable<AccountManagementServiceIsTestAccount> isTestAccount) {
+  public void setIsTestAccount(AccountManagementServiceIsTestAccount isTestAccount) {
     this.isTestAccount = isTestAccount;
   }
 
   public AccountManagement startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -349,16 +348,16 @@ public class AccountManagement   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 開始日（YYYYMMDD形式）<br> 自動でADD時の日付が登録される。 </div> <div lang=\"en\"> Start Date<br> YYYYMMDD<br> This field is automatically regisetered in ADD operation </div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public AccountManagement status(AccountManagementServiceStatus status) {
-    this.status = JsonNullable.of(status);
+    this.status = status;
     return this;
   }
 
@@ -370,17 +369,17 @@ public class AccountManagement   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceStatus> getStatus() {
+  public AccountManagementServiceStatus getStatus() {
     return status;
   }
 
-  public void setStatus(JsonNullable<AccountManagementServiceStatus> status) {
+  public void setStatus(AccountManagementServiceStatus status) {
     this.status = status;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -438,7 +437,7 @@ public class AccountManagement   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

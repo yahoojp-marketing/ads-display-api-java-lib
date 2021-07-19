@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupTargetReturnValueオブジェクトは、mutateメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupTargetReturnValue object contains the results (a list of all entities) for mutate method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupTargetReturnValueオブジェクトは、mutateメソッドの実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">The AdGroupTargetReturnValue object contains the results (a list of all entities) for mutate method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AdGroupTargetServiceValue>> values = JsonNullable.undefined();
+  private List<AdGroupTargetServiceValue> values = null;
 
   public AdGroupTargetReturnValue values(List<AdGroupTargetServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AdGroupTargetReturnValue addValuesItem(AdGroupTargetServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class AdGroupTargetReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupTargetServiceValue>> getValues() {
+  public List<AdGroupTargetServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AdGroupTargetServiceValue>> values) {
+  public void setValues(List<AdGroupTargetServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class AdGroupTargetReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

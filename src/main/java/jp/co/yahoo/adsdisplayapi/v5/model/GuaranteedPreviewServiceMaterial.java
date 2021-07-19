@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedPreviewServiceMaterialAd;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedPreviewServiceMaterialMedia;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedPreviewServiceMaterialType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,19 +15,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedPreviewServiceMaterialオブジェクトは、プレビュー素材に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedPreviewServiceMaterial object describes information about the preview material.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedPreviewServiceMaterialオブジェクトは、プレビュー素材に関する情報を表します。</div> <div lang=\"en\">GuaranteedPreviewServiceMaterial object describes information about the preview material.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedPreviewServiceMaterial   {
   @JsonProperty("materialType")
-  private JsonNullable<GuaranteedPreviewServiceMaterialType> materialType = JsonNullable.undefined();
+  private GuaranteedPreviewServiceMaterialType materialType = null;
 
   @JsonProperty("materialAd")
-  private JsonNullable<GuaranteedPreviewServiceMaterialAd> materialAd = JsonNullable.undefined();
+  private GuaranteedPreviewServiceMaterialAd materialAd = null;
 
   @JsonProperty("materialMedia")
-  private JsonNullable<GuaranteedPreviewServiceMaterialMedia> materialMedia = JsonNullable.undefined();
+  private GuaranteedPreviewServiceMaterialMedia materialMedia = null;
 
   public GuaranteedPreviewServiceMaterial materialType(GuaranteedPreviewServiceMaterialType materialType) {
-    this.materialType = JsonNullable.of(materialType);
+    this.materialType = materialType;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class GuaranteedPreviewServiceMaterial   {
 
   @Valid
 
-  public JsonNullable<GuaranteedPreviewServiceMaterialType> getMaterialType() {
+  public GuaranteedPreviewServiceMaterialType getMaterialType() {
     return materialType;
   }
 
-  public void setMaterialType(JsonNullable<GuaranteedPreviewServiceMaterialType> materialType) {
+  public void setMaterialType(GuaranteedPreviewServiceMaterialType materialType) {
     this.materialType = materialType;
   }
 
   public GuaranteedPreviewServiceMaterial materialAd(GuaranteedPreviewServiceMaterialAd materialAd) {
-    this.materialAd = JsonNullable.of(materialAd);
+    this.materialAd = materialAd;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class GuaranteedPreviewServiceMaterial   {
 
   @Valid
 
-  public JsonNullable<GuaranteedPreviewServiceMaterialAd> getMaterialAd() {
+  public GuaranteedPreviewServiceMaterialAd getMaterialAd() {
     return materialAd;
   }
 
-  public void setMaterialAd(JsonNullable<GuaranteedPreviewServiceMaterialAd> materialAd) {
+  public void setMaterialAd(GuaranteedPreviewServiceMaterialAd materialAd) {
     this.materialAd = materialAd;
   }
 
   public GuaranteedPreviewServiceMaterial materialMedia(GuaranteedPreviewServiceMaterialMedia materialMedia) {
-    this.materialMedia = JsonNullable.of(materialMedia);
+    this.materialMedia = materialMedia;
     return this;
   }
 
@@ -82,17 +81,17 @@ public class GuaranteedPreviewServiceMaterial   {
 
   @Valid
 
-  public JsonNullable<GuaranteedPreviewServiceMaterialMedia> getMaterialMedia() {
+  public GuaranteedPreviewServiceMaterialMedia getMaterialMedia() {
     return materialMedia;
   }
 
-  public void setMaterialMedia(JsonNullable<GuaranteedPreviewServiceMaterialMedia> materialMedia) {
+  public void setMaterialMedia(GuaranteedPreviewServiceMaterialMedia materialMedia) {
     this.materialMedia = materialMedia;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -126,7 +125,7 @@ public class GuaranteedPreviewServiceMaterial   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

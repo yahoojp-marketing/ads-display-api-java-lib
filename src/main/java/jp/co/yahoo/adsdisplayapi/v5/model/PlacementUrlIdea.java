@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlIdeaServiceAdFormat;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,42 +15,42 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;An object that holds the placement Url information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。</div> <div lang=\"en\">An object that holds the placement Url information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlIdea   {
   @JsonProperty("keyword")
-  private JsonNullable<String> keyword = JsonNullable.undefined();
+  private String keyword = null;
 
   @JsonProperty("siteCategory")
   @Valid
-  private JsonNullable<List<String>> siteCategory = JsonNullable.undefined();
+  private List<String> siteCategory = null;
 
   @JsonProperty("searchUrl")
-  private JsonNullable<String> searchUrl = JsonNullable.undefined();
+  private String searchUrl = null;
 
   @JsonProperty("adFormat")
   @Valid
-  private JsonNullable<List<PlacementUrlIdeaServiceAdFormat>> adFormat = JsonNullable.undefined();
+  private List<PlacementUrlIdeaServiceAdFormat> adFormat = null;
 
   @JsonProperty("desktopReaches")
-  private JsonNullable<Long> desktopReaches = JsonNullable.undefined();
+  private Long desktopReaches = null;
 
   @JsonProperty("desktopAdRequests")
-  private JsonNullable<Long> desktopAdRequests = JsonNullable.undefined();
+  private Long desktopAdRequests = null;
 
   @JsonProperty("smartPhoneReaches")
-  private JsonNullable<Long> smartPhoneReaches = JsonNullable.undefined();
+  private Long smartPhoneReaches = null;
 
   @JsonProperty("smartPhoneAdRequests")
-  private JsonNullable<Long> smartPhoneAdRequests = JsonNullable.undefined();
+  private Long smartPhoneAdRequests = null;
 
   @JsonProperty("tabletReaches")
-  private JsonNullable<Long> tabletReaches = JsonNullable.undefined();
+  private Long tabletReaches = null;
 
   @JsonProperty("tabletAdRequests")
-  private JsonNullable<Long> tabletAdRequests = JsonNullable.undefined();
+  private Long tabletAdRequests = null;
 
   public PlacementUrlIdea keyword(String keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -62,24 +61,24 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索キーワードです。</div> <div lang=\"en\">Search Keyword</div> ")
 
 
-  public JsonNullable<String> getKeyword() {
+  public String getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<String> keyword) {
+  public void setKeyword(String keyword) {
     this.keyword = keyword;
   }
 
   public PlacementUrlIdea siteCategory(List<String> siteCategory) {
-    this.siteCategory = JsonNullable.of(siteCategory);
+    this.siteCategory = siteCategory;
     return this;
   }
 
   public PlacementUrlIdea addSiteCategoryItem(String siteCategoryItem) {
-    if (this.siteCategory == null || !this.siteCategory.isPresent()) {
-      this.siteCategory = JsonNullable.of(new ArrayList<>());
+    if (this.siteCategory == null) {
+      this.siteCategory = new ArrayList<>();
     }
-    this.siteCategory.get().add(siteCategoryItem);
+    this.siteCategory.add(siteCategoryItem);
     return this;
   }
 
@@ -90,16 +89,16 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索カテゴリです。</div> <div lang=\"en\">Search Category</div> ")
 
 
-  public JsonNullable<List<String>> getSiteCategory() {
+  public List<String> getSiteCategory() {
     return siteCategory;
   }
 
-  public void setSiteCategory(JsonNullable<List<String>> siteCategory) {
+  public void setSiteCategory(List<String> siteCategory) {
     this.siteCategory = siteCategory;
   }
 
   public PlacementUrlIdea searchUrl(String searchUrl) {
-    this.searchUrl = JsonNullable.of(searchUrl);
+    this.searchUrl = searchUrl;
     return this;
   }
 
@@ -110,24 +109,24 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 取得URLです。<br> 不明なURLの場合　UNKNOWN_URLが入ります。 </div> <div lang=\"en\">URL</div> ")
 
 
-  public JsonNullable<String> getSearchUrl() {
+  public String getSearchUrl() {
     return searchUrl;
   }
 
-  public void setSearchUrl(JsonNullable<String> searchUrl) {
+  public void setSearchUrl(String searchUrl) {
     this.searchUrl = searchUrl;
   }
 
   public PlacementUrlIdea adFormat(List<PlacementUrlIdeaServiceAdFormat> adFormat) {
-    this.adFormat = JsonNullable.of(adFormat);
+    this.adFormat = adFormat;
     return this;
   }
 
   public PlacementUrlIdea addAdFormatItem(PlacementUrlIdeaServiceAdFormat adFormatItem) {
-    if (this.adFormat == null || !this.adFormat.isPresent()) {
-      this.adFormat = JsonNullable.of(new ArrayList<>());
+    if (this.adFormat == null) {
+      this.adFormat = new ArrayList<>();
     }
-    this.adFormat.get().add(adFormatItem);
+    this.adFormat.add(adFormatItem);
     return this;
   }
 
@@ -139,16 +138,16 @@ public class PlacementUrlIdea   {
 
   @Valid
 
-  public JsonNullable<List<PlacementUrlIdeaServiceAdFormat>> getAdFormat() {
+  public List<PlacementUrlIdeaServiceAdFormat> getAdFormat() {
     return adFormat;
   }
 
-  public void setAdFormat(JsonNullable<List<PlacementUrlIdeaServiceAdFormat>> adFormat) {
+  public void setAdFormat(List<PlacementUrlIdeaServiceAdFormat> adFormat) {
     this.adFormat = adFormat;
   }
 
   public PlacementUrlIdea desktopReaches(Long desktopReaches) {
-    this.desktopReaches = JsonNullable.of(desktopReaches);
+    this.desktopReaches = desktopReaches;
     return this;
   }
 
@@ -159,16 +158,16 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> PC でのリーチ数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">Reach Number of PC(1000 In the case of 0)</div> ")
 
 
-  public JsonNullable<Long> getDesktopReaches() {
+  public Long getDesktopReaches() {
     return desktopReaches;
   }
 
-  public void setDesktopReaches(JsonNullable<Long> desktopReaches) {
+  public void setDesktopReaches(Long desktopReaches) {
     this.desktopReaches = desktopReaches;
   }
 
   public PlacementUrlIdea desktopAdRequests(Long desktopAdRequests) {
-    this.desktopAdRequests = JsonNullable.of(desktopAdRequests);
+    this.desktopAdRequests = desktopAdRequests;
     return this;
   }
 
@@ -179,16 +178,16 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> PC でのADリクエスト数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">AD Number of PC(1000 In the case of 0)</div> ")
 
 
-  public JsonNullable<Long> getDesktopAdRequests() {
+  public Long getDesktopAdRequests() {
     return desktopAdRequests;
   }
 
-  public void setDesktopAdRequests(JsonNullable<Long> desktopAdRequests) {
+  public void setDesktopAdRequests(Long desktopAdRequests) {
     this.desktopAdRequests = desktopAdRequests;
   }
 
   public PlacementUrlIdea smartPhoneReaches(Long smartPhoneReaches) {
-    this.smartPhoneReaches = JsonNullable.of(smartPhoneReaches);
+    this.smartPhoneReaches = smartPhoneReaches;
     return this;
   }
 
@@ -199,16 +198,16 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SmartPhone でのリーチ数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">Reach Number of SmartPhone (1000 In the case of 0)</div> ")
 
 
-  public JsonNullable<Long> getSmartPhoneReaches() {
+  public Long getSmartPhoneReaches() {
     return smartPhoneReaches;
   }
 
-  public void setSmartPhoneReaches(JsonNullable<Long> smartPhoneReaches) {
+  public void setSmartPhoneReaches(Long smartPhoneReaches) {
     this.smartPhoneReaches = smartPhoneReaches;
   }
 
   public PlacementUrlIdea smartPhoneAdRequests(Long smartPhoneAdRequests) {
-    this.smartPhoneAdRequests = JsonNullable.of(smartPhoneAdRequests);
+    this.smartPhoneAdRequests = smartPhoneAdRequests;
     return this;
   }
 
@@ -219,16 +218,16 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SmartPhone でのADリクエスト数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">AD Number of SmartPhone(1000 In the case of 0)</div> ")
 
 
-  public JsonNullable<Long> getSmartPhoneAdRequests() {
+  public Long getSmartPhoneAdRequests() {
     return smartPhoneAdRequests;
   }
 
-  public void setSmartPhoneAdRequests(JsonNullable<Long> smartPhoneAdRequests) {
+  public void setSmartPhoneAdRequests(Long smartPhoneAdRequests) {
     this.smartPhoneAdRequests = smartPhoneAdRequests;
   }
 
   public PlacementUrlIdea tabletReaches(Long tabletReaches) {
-    this.tabletReaches = JsonNullable.of(tabletReaches);
+    this.tabletReaches = tabletReaches;
     return this;
   }
 
@@ -239,16 +238,16 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> Tablet でのリーチ数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">Tablet(1000 In the case of 0)</div> ")
 
 
-  public JsonNullable<Long> getTabletReaches() {
+  public Long getTabletReaches() {
     return tabletReaches;
   }
 
-  public void setTabletReaches(JsonNullable<Long> tabletReaches) {
+  public void setTabletReaches(Long tabletReaches) {
     this.tabletReaches = tabletReaches;
   }
 
   public PlacementUrlIdea tabletAdRequests(Long tabletAdRequests) {
-    this.tabletAdRequests = JsonNullable.of(tabletAdRequests);
+    this.tabletAdRequests = tabletAdRequests;
     return this;
   }
 
@@ -259,17 +258,17 @@ public class PlacementUrlIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> TabletでのADリクエスト数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">AD Number of Tablet (1000 In the case of 0)</div> ")
 
 
-  public JsonNullable<Long> getTabletAdRequests() {
+  public Long getTabletAdRequests() {
     return tabletAdRequests;
   }
 
-  public void setTabletAdRequests(JsonNullable<Long> tabletAdRequests) {
+  public void setTabletAdRequests(Long tabletAdRequests) {
     this.tabletAdRequests = tabletAdRequests;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -317,7 +316,7 @@ public class PlacementUrlIdea   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

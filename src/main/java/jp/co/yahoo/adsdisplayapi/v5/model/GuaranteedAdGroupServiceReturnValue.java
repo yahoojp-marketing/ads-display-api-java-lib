@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedAdGroupServiceReturnValueオブジェクトは、予約型の広告グループの情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedAdGroupServiceReturnValue object contains information of guaranteed ad group.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedAdGroupServiceReturnValueオブジェクトは、予約型の広告グループの情報を格納するコンテナです。</div> <div lang=\"en\">GuaranteedAdGroupServiceReturnValue object contains information of guaranteed ad group.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<GuaranteedAdGroupServiceValue>> values = JsonNullable.undefined();
+  private List<GuaranteedAdGroupServiceValue> values = null;
 
   public GuaranteedAdGroupServiceReturnValue values(List<GuaranteedAdGroupServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public GuaranteedAdGroupServiceReturnValue addValuesItem(GuaranteedAdGroupServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class GuaranteedAdGroupServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedAdGroupServiceValue>> getValues() {
+  public List<GuaranteedAdGroupServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<GuaranteedAdGroupServiceValue>> values) {
+  public void setValues(List<GuaranteedAdGroupServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class GuaranteedAdGroupServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

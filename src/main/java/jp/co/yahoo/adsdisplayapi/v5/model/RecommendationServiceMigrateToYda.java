@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceMigrateToYdaCampaign;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMigrateToYdaオブジェクトは、ディスプレイ広告（運用型）形式への変換が必要なキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMigrateToYda object describes the Recommendations information of campaigns that are required to convert to Display Ads (Auction).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceMigrateToYdaオブジェクトは、ディスプレイ広告（運用型）形式への変換が必要なキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceMigrateToYda object describes the Recommendations information of campaigns that are required to convert to Display Ads (Auction).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceMigrateToYda   {
   @JsonProperty("migrateToYdaCampaignList")
   @Valid
-  private JsonNullable<List<RecommendationServiceMigrateToYdaCampaign>> migrateToYdaCampaignList = JsonNullable.undefined();
+  private List<RecommendationServiceMigrateToYdaCampaign> migrateToYdaCampaignList = null;
 
   public RecommendationServiceMigrateToYda migrateToYdaCampaignList(List<RecommendationServiceMigrateToYdaCampaign> migrateToYdaCampaignList) {
-    this.migrateToYdaCampaignList = JsonNullable.of(migrateToYdaCampaignList);
+    this.migrateToYdaCampaignList = migrateToYdaCampaignList;
     return this;
   }
 
   public RecommendationServiceMigrateToYda addMigrateToYdaCampaignListItem(RecommendationServiceMigrateToYdaCampaign migrateToYdaCampaignListItem) {
-    if (this.migrateToYdaCampaignList == null || !this.migrateToYdaCampaignList.isPresent()) {
-      this.migrateToYdaCampaignList = JsonNullable.of(new ArrayList<>());
+    if (this.migrateToYdaCampaignList == null) {
+      this.migrateToYdaCampaignList = new ArrayList<>();
     }
-    this.migrateToYdaCampaignList.get().add(migrateToYdaCampaignListItem);
+    this.migrateToYdaCampaignList.add(migrateToYdaCampaignListItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RecommendationServiceMigrateToYda   {
 
   @Valid
 
-  public JsonNullable<List<RecommendationServiceMigrateToYdaCampaign>> getMigrateToYdaCampaignList() {
+  public List<RecommendationServiceMigrateToYdaCampaign> getMigrateToYdaCampaignList() {
     return migrateToYdaCampaignList;
   }
 
-  public void setMigrateToYdaCampaignList(JsonNullable<List<RecommendationServiceMigrateToYdaCampaign>> migrateToYdaCampaignList) {
+  public void setMigrateToYdaCampaignList(List<RecommendationServiceMigrateToYdaCampaign> migrateToYdaCampaignList) {
     this.migrateToYdaCampaignList = migrateToYdaCampaignList;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RecommendationServiceMigrateToYda   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

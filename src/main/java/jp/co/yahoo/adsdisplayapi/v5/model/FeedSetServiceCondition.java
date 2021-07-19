@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedSetServiceCompareOperator;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedSetServiceConditionオブジェクトは、商品セット情報のOR条件を保持します。&lt;br&gt; ADD時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedSetServiceCondition object contains OR conditional retrieval of feedset information.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> FeedSetServiceConditionオブジェクトは、商品セット情報のOR条件を保持します。<br> ADD時、このフィールドは必須です。 </div> <div lang=\"en\"> FeedSetServiceCondition object contains OR conditional retrieval of feedset information.<br> This field is required in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedSetServiceCondition   {
   @JsonProperty("compareOperator")
-  private JsonNullable<FeedSetServiceCompareOperator> compareOperator = JsonNullable.undefined();
+  private FeedSetServiceCompareOperator compareOperator = null;
 
   @JsonProperty("value")
-  private JsonNullable<String> value = JsonNullable.undefined();
+  private String value = null;
 
   public FeedSetServiceCondition compareOperator(FeedSetServiceCompareOperator compareOperator) {
-    this.compareOperator = JsonNullable.of(compareOperator);
+    this.compareOperator = compareOperator;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class FeedSetServiceCondition   {
 
   @Valid
 
-  public JsonNullable<FeedSetServiceCompareOperator> getCompareOperator() {
+  public FeedSetServiceCompareOperator getCompareOperator() {
     return compareOperator;
   }
 
-  public void setCompareOperator(JsonNullable<FeedSetServiceCompareOperator> compareOperator) {
+  public void setCompareOperator(FeedSetServiceCompareOperator compareOperator) {
     this.compareOperator = compareOperator;
   }
 
   public FeedSetServiceCondition value(String value) {
-    this.value = JsonNullable.of(value);
+    this.value = value;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class FeedSetServiceCondition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 値です。<br> ADD時、このフィールドは必須です。<br> 設定可能な値はFeedSetServiceConditionTypeをご参照ください。<br> </div> <div lang=\"en\"> Value.<br> This field is required in ADD operation.<br> Refer to FeedSetServiceConditionType for possible values. </div> ")
 
 
-  public JsonNullable<String> getValue() {
+  public String getValue() {
     return value;
   }
 
-  public void setValue(JsonNullable<String> value) {
+  public void setValue(String value) {
     this.value = value;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class FeedSetServiceCondition   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAd;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,7 +15,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedAdGroupAdServiceOperationオブジェクトは、操作を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The GuaranteedAdGroupAdServiceOperation object is a container for operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedAdGroupAdServiceOperationオブジェクトは、操作を表します。</div> <div lang=\"en\">The GuaranteedAdGroupAdServiceOperation object is a container for operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupAdServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
@@ -52,6 +51,9 @@ public class GuaranteedAdGroupAdServiceOperation   {
   }
 
   public GuaranteedAdGroupAdServiceOperation addOperandItem(GuaranteedAdGroupAd operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -75,7 +77,7 @@ public class GuaranteedAdGroupAdServiceOperation   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class GuaranteedAdGroupAdServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

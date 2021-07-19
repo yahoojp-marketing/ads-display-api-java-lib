@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedSimulationServiceAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリーターゲティングの設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAUDIENCE_CATEGORY_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedSimulationServiceAudienceCategoryTarget object contains information about audience category targeting settings.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; ∗If targetType is AUDIENCE_CATEGORY_TARGET, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedSimulationServiceAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリーターゲティングの設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。<br> ※targetTypeがAUDIENCE_CATEGORY_TARGETの場合は必須です。 </div> <div lang=\"en\"> GuaranteedSimulationServiceAudienceCategoryTarget object contains information about audience category targeting settings.<br> This field is optional in ADD operation.<br> ∗If targetType is AUDIENCE_CATEGORY_TARGET, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceAudienceCategoryTarget   {
   @JsonProperty("audienceCategoryType")
-  private JsonNullable<String> audienceCategoryType = JsonNullable.undefined();
+  private String audienceCategoryType = null;
 
   @JsonProperty("categoryNameEn")
-  private JsonNullable<String> categoryNameEn = JsonNullable.undefined();
+  private String categoryNameEn = null;
 
   @JsonProperty("categoryNameJa")
-  private JsonNullable<String> categoryNameJa = JsonNullable.undefined();
+  private String categoryNameJa = null;
 
   public GuaranteedSimulationServiceAudienceCategoryTarget audienceCategoryType(String audienceCategoryType) {
-    this.audienceCategoryType = JsonNullable.of(audienceCategoryType);
+    this.audienceCategoryType = audienceCategoryType;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class GuaranteedSimulationServiceAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリ種別です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Category type.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAudienceCategoryType() {
+  public String getAudienceCategoryType() {
     return audienceCategoryType;
   }
 
-  public void setAudienceCategoryType(JsonNullable<String> audienceCategoryType) {
+  public void setAudienceCategoryType(String audienceCategoryType) {
     this.audienceCategoryType = audienceCategoryType;
   }
 
   public GuaranteedSimulationServiceAudienceCategoryTarget categoryNameEn(String categoryNameEn) {
-    this.categoryNameEn = JsonNullable.of(categoryNameEn);
+    this.categoryNameEn = categoryNameEn;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class GuaranteedSimulationServiceAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリ名（英語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Category name (English).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCategoryNameEn() {
+  public String getCategoryNameEn() {
     return categoryNameEn;
   }
 
-  public void setCategoryNameEn(JsonNullable<String> categoryNameEn) {
+  public void setCategoryNameEn(String categoryNameEn) {
     this.categoryNameEn = categoryNameEn;
   }
 
   public GuaranteedSimulationServiceAudienceCategoryTarget categoryNameJa(String categoryNameJa) {
-    this.categoryNameJa = JsonNullable.of(categoryNameJa);
+    this.categoryNameJa = categoryNameJa;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class GuaranteedSimulationServiceAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリ名（日本語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Category name (Japanese).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCategoryNameJa() {
+  public String getCategoryNameJa() {
     return categoryNameJa;
   }
 
-  public void setCategoryNameJa(JsonNullable<String> categoryNameJa) {
+  public void setCategoryNameJa(String categoryNameJa) {
     this.categoryNameJa = categoryNameJa;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class GuaranteedSimulationServiceAudienceCategoryTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

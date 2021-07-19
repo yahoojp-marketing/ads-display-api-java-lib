@@ -14,7 +14,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceBid;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceLabel;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -22,86 +21,86 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdオブジェクトは、広告の情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAd object is a container for storing ad information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdオブジェクトは、広告の情報を格納するコンテナです。</div> <div lang=\"en\">The AdGroupAd object is a container for storing ad information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAd   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("ad")
-  private JsonNullable<AdGroupAdServiceAd> ad = JsonNullable.undefined();
+  private AdGroupAdServiceAd ad = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("adId")
-  private JsonNullable<Long> adId = JsonNullable.undefined();
+  private Long adId = null;
 
   @JsonProperty("adName")
-  private JsonNullable<String> adName = JsonNullable.undefined();
+  private String adName = null;
 
   @JsonProperty("adStyle")
-  private JsonNullable<AdGroupAdServiceAdStyle> adStyle = JsonNullable.undefined();
+  private AdGroupAdServiceAdStyle adStyle = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<AdGroupAdServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private AdGroupAdServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("bid")
-  private JsonNullable<AdGroupAdServiceBid> bid = JsonNullable.undefined();
+  private AdGroupAdServiceBid bid = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("disapprovalReasonDescription")
-  private JsonNullable<String> disapprovalReasonDescription = JsonNullable.undefined();
+  private String disapprovalReasonDescription = null;
 
   @JsonProperty("impressionBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> impressionBeaconUrls = JsonNullable.undefined();
+  private List<String> impressionBeaconUrls = null;
 
   @JsonProperty("viewableImpressionBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> viewableImpressionBeaconUrls = JsonNullable.undefined();
+  private List<String> viewableImpressionBeaconUrls = null;
 
   @JsonProperty("isRemoveImpressionBeaconUrls")
-  private JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveImpressionBeaconUrls = JsonNullable.undefined();
+  private AdGroupAdServiceIsRemoveFlg isRemoveImpressionBeaconUrls = null;
 
   @JsonProperty("isRemoveViewableImpressionBeaconUrls")
-  private JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveViewableImpressionBeaconUrls = JsonNullable.undefined();
+  private AdGroupAdServiceIsRemoveFlg isRemoveViewableImpressionBeaconUrls = null;
 
   @JsonProperty("isRemoveThirdPartyTrackingScriptUrl")
-  private JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveThirdPartyTrackingScriptUrl = JsonNullable.undefined();
+  private AdGroupAdServiceIsRemoveFlg isRemoveThirdPartyTrackingScriptUrl = null;
 
   @JsonProperty("labels")
   @Valid
-  private JsonNullable<List<AdGroupAdServiceLabel>> labels = JsonNullable.undefined();
+  private List<AdGroupAdServiceLabel> labels = null;
 
   @JsonProperty("mediaId")
-  private JsonNullable<Long> mediaId = JsonNullable.undefined();
+  private Long mediaId = null;
 
   @JsonProperty("thirdPartyTrackingScriptUrl")
-  private JsonNullable<String> thirdPartyTrackingScriptUrl = JsonNullable.undefined();
+  private String thirdPartyTrackingScriptUrl = null;
 
   @JsonProperty("thirdPartyTrackingVendor")
-  private JsonNullable<String> thirdPartyTrackingVendor = JsonNullable.undefined();
+  private String thirdPartyTrackingVendor = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<AdGroupAdServiceUserStatus> userStatus = JsonNullable.undefined();
+  private AdGroupAdServiceUserStatus userStatus = null;
 
   @JsonProperty("createdDate")
-  private JsonNullable<String> createdDate = JsonNullable.undefined();
+  private String createdDate = null;
 
   public AdGroupAd accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -112,16 +111,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroupAd ad(AdGroupAdServiceAd ad) {
-    this.ad = JsonNullable.of(ad);
+    this.ad = ad;
     return this;
   }
 
@@ -133,16 +132,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceAd> getAd() {
+  public AdGroupAdServiceAd getAd() {
     return ad;
   }
 
-  public void setAd(JsonNullable<AdGroupAdServiceAd> ad) {
+  public void setAd(AdGroupAdServiceAd ad) {
     this.ad = ad;
   }
 
   public AdGroupAd adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -153,16 +152,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Ad group ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroupAd adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -173,16 +172,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Ad group name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public AdGroupAd adId(Long adId) {
-    this.adId = JsonNullable.of(adId);
+    this.adId = adId;
     return this;
   }
 
@@ -193,16 +192,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告IDです。<br> このフィールドは、ADD時は無視され、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Ad ID.<br> This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getAdId() {
+  public Long getAdId() {
     return adId;
   }
 
-  public void setAdId(JsonNullable<Long> adId) {
+  public void setAdId(Long adId) {
     this.adId = adId;
   }
 
   public AdGroupAd adName(String adName) {
-    this.adName = JsonNullable.of(adName);
+    this.adName = adName;
     return this;
   }
 
@@ -213,16 +212,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Ad name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getAdName() {
+  public String getAdName() {
     return adName;
   }
 
-  public void setAdName(JsonNullable<String> adName) {
+  public void setAdName(String adName) {
     this.adName = adName;
   }
 
   public AdGroupAd adStyle(AdGroupAdServiceAdStyle adStyle) {
-    this.adStyle = JsonNullable.of(adStyle);
+    this.adStyle = adStyle;
     return this;
   }
 
@@ -234,16 +233,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceAdStyle> getAdStyle() {
+  public AdGroupAdServiceAdStyle getAdStyle() {
     return adStyle;
   }
 
-  public void setAdStyle(JsonNullable<AdGroupAdServiceAdStyle> adStyle) {
+  public void setAdStyle(AdGroupAdServiceAdStyle adStyle) {
     this.adStyle = adStyle;
   }
 
   public AdGroupAd approvalStatus(AdGroupAdServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -255,16 +254,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceApprovalStatus> getApprovalStatus() {
+  public AdGroupAdServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<AdGroupAdServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(AdGroupAdServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public AdGroupAd bid(AdGroupAdServiceBid bid) {
-    this.bid = JsonNullable.of(bid);
+    this.bid = bid;
     return this;
   }
 
@@ -276,16 +275,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceBid> getBid() {
+  public AdGroupAdServiceBid getBid() {
     return bid;
   }
 
-  public void setBid(JsonNullable<AdGroupAdServiceBid> bid) {
+  public void setBid(AdGroupAdServiceBid bid) {
     this.bid = bid;
   }
 
   public AdGroupAd campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -296,16 +295,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroupAd campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -316,24 +315,24 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Campaign name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public AdGroupAd disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public AdGroupAd addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -344,16 +343,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 掲載拒否の理由です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reject reason on editorial review.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public AdGroupAd disapprovalReasonDescription(String disapprovalReasonDescription) {
-    this.disapprovalReasonDescription = JsonNullable.of(disapprovalReasonDescription);
+    this.disapprovalReasonDescription = disapprovalReasonDescription;
     return this;
   }
 
@@ -364,24 +363,24 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 掲載拒否の理由詳細です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reject reason details on editorial review.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getDisapprovalReasonDescription() {
+  public String getDisapprovalReasonDescription() {
     return disapprovalReasonDescription;
   }
 
-  public void setDisapprovalReasonDescription(JsonNullable<String> disapprovalReasonDescription) {
+  public void setDisapprovalReasonDescription(String disapprovalReasonDescription) {
     this.disapprovalReasonDescription = disapprovalReasonDescription;
   }
 
   public AdGroupAd impressionBeaconUrls(List<String> impressionBeaconUrls) {
-    this.impressionBeaconUrls = JsonNullable.of(impressionBeaconUrls);
+    this.impressionBeaconUrls = impressionBeaconUrls;
     return this;
   }
 
   public AdGroupAd addImpressionBeaconUrlsItem(String impressionBeaconUrlsItem) {
-    if (this.impressionBeaconUrls == null || !this.impressionBeaconUrls.isPresent()) {
-      this.impressionBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.impressionBeaconUrls == null) {
+      this.impressionBeaconUrls = new ArrayList<>();
     }
-    this.impressionBeaconUrls.get().add(impressionBeaconUrlsItem);
+    this.impressionBeaconUrls.add(impressionBeaconUrlsItem);
     return this;
   }
 
@@ -392,24 +391,24 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> インプレッションビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Impression beacon URL.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<List<String>> getImpressionBeaconUrls() {
+  public List<String> getImpressionBeaconUrls() {
     return impressionBeaconUrls;
   }
 
-  public void setImpressionBeaconUrls(JsonNullable<List<String>> impressionBeaconUrls) {
+  public void setImpressionBeaconUrls(List<String> impressionBeaconUrls) {
     this.impressionBeaconUrls = impressionBeaconUrls;
   }
 
   public AdGroupAd viewableImpressionBeaconUrls(List<String> viewableImpressionBeaconUrls) {
-    this.viewableImpressionBeaconUrls = JsonNullable.of(viewableImpressionBeaconUrls);
+    this.viewableImpressionBeaconUrls = viewableImpressionBeaconUrls;
     return this;
   }
 
   public AdGroupAd addViewableImpressionBeaconUrlsItem(String viewableImpressionBeaconUrlsItem) {
-    if (this.viewableImpressionBeaconUrls == null || !this.viewableImpressionBeaconUrls.isPresent()) {
-      this.viewableImpressionBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.viewableImpressionBeaconUrls == null) {
+      this.viewableImpressionBeaconUrls = new ArrayList<>();
     }
-    this.viewableImpressionBeaconUrls.get().add(viewableImpressionBeaconUrlsItem);
+    this.viewableImpressionBeaconUrls.add(viewableImpressionBeaconUrlsItem);
     return this;
   }
 
@@ -420,16 +419,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ビューアブルインプレッションビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Viewable impression beacon URL.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<List<String>> getViewableImpressionBeaconUrls() {
+  public List<String> getViewableImpressionBeaconUrls() {
     return viewableImpressionBeaconUrls;
   }
 
-  public void setViewableImpressionBeaconUrls(JsonNullable<List<String>> viewableImpressionBeaconUrls) {
+  public void setViewableImpressionBeaconUrls(List<String> viewableImpressionBeaconUrls) {
     this.viewableImpressionBeaconUrls = viewableImpressionBeaconUrls;
   }
 
   public AdGroupAd isRemoveImpressionBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveImpressionBeaconUrls) {
-    this.isRemoveImpressionBeaconUrls = JsonNullable.of(isRemoveImpressionBeaconUrls);
+    this.isRemoveImpressionBeaconUrls = isRemoveImpressionBeaconUrls;
     return this;
   }
 
@@ -441,16 +440,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceIsRemoveFlg> getIsRemoveImpressionBeaconUrls() {
+  public AdGroupAdServiceIsRemoveFlg getIsRemoveImpressionBeaconUrls() {
     return isRemoveImpressionBeaconUrls;
   }
 
-  public void setIsRemoveImpressionBeaconUrls(JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveImpressionBeaconUrls) {
+  public void setIsRemoveImpressionBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveImpressionBeaconUrls) {
     this.isRemoveImpressionBeaconUrls = isRemoveImpressionBeaconUrls;
   }
 
   public AdGroupAd isRemoveViewableImpressionBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveViewableImpressionBeaconUrls) {
-    this.isRemoveViewableImpressionBeaconUrls = JsonNullable.of(isRemoveViewableImpressionBeaconUrls);
+    this.isRemoveViewableImpressionBeaconUrls = isRemoveViewableImpressionBeaconUrls;
     return this;
   }
 
@@ -462,16 +461,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceIsRemoveFlg> getIsRemoveViewableImpressionBeaconUrls() {
+  public AdGroupAdServiceIsRemoveFlg getIsRemoveViewableImpressionBeaconUrls() {
     return isRemoveViewableImpressionBeaconUrls;
   }
 
-  public void setIsRemoveViewableImpressionBeaconUrls(JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveViewableImpressionBeaconUrls) {
+  public void setIsRemoveViewableImpressionBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveViewableImpressionBeaconUrls) {
     this.isRemoveViewableImpressionBeaconUrls = isRemoveViewableImpressionBeaconUrls;
   }
 
   public AdGroupAd isRemoveThirdPartyTrackingScriptUrl(AdGroupAdServiceIsRemoveFlg isRemoveThirdPartyTrackingScriptUrl) {
-    this.isRemoveThirdPartyTrackingScriptUrl = JsonNullable.of(isRemoveThirdPartyTrackingScriptUrl);
+    this.isRemoveThirdPartyTrackingScriptUrl = isRemoveThirdPartyTrackingScriptUrl;
     return this;
   }
 
@@ -483,24 +482,24 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceIsRemoveFlg> getIsRemoveThirdPartyTrackingScriptUrl() {
+  public AdGroupAdServiceIsRemoveFlg getIsRemoveThirdPartyTrackingScriptUrl() {
     return isRemoveThirdPartyTrackingScriptUrl;
   }
 
-  public void setIsRemoveThirdPartyTrackingScriptUrl(JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveThirdPartyTrackingScriptUrl) {
+  public void setIsRemoveThirdPartyTrackingScriptUrl(AdGroupAdServiceIsRemoveFlg isRemoveThirdPartyTrackingScriptUrl) {
     this.isRemoveThirdPartyTrackingScriptUrl = isRemoveThirdPartyTrackingScriptUrl;
   }
 
   public AdGroupAd labels(List<AdGroupAdServiceLabel> labels) {
-    this.labels = JsonNullable.of(labels);
+    this.labels = labels;
     return this;
   }
 
   public AdGroupAd addLabelsItem(AdGroupAdServiceLabel labelsItem) {
-    if (this.labels == null || !this.labels.isPresent()) {
-      this.labels = JsonNullable.of(new ArrayList<>());
+    if (this.labels == null) {
+      this.labels = new ArrayList<>();
     }
-    this.labels.get().add(labelsItem);
+    this.labels.add(labelsItem);
     return this;
   }
 
@@ -512,16 +511,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupAdServiceLabel>> getLabels() {
+  public List<AdGroupAdServiceLabel> getLabels() {
     return labels;
   }
 
-  public void setLabels(JsonNullable<List<AdGroupAdServiceLabel>> labels) {
+  public void setLabels(List<AdGroupAdServiceLabel> labels) {
     this.labels = labels;
   }
 
   public AdGroupAd mediaId(Long mediaId) {
-    this.mediaId = JsonNullable.of(mediaId);
+    this.mediaId = mediaId;
     return this;
   }
 
@@ -532,16 +531,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Media ID.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<Long> getMediaId() {
+  public Long getMediaId() {
     return mediaId;
   }
 
-  public void setMediaId(JsonNullable<Long> mediaId) {
+  public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
 
   public AdGroupAd thirdPartyTrackingScriptUrl(String thirdPartyTrackingScriptUrl) {
-    this.thirdPartyTrackingScriptUrl = JsonNullable.of(thirdPartyTrackingScriptUrl);
+    this.thirdPartyTrackingScriptUrl = thirdPartyTrackingScriptUrl;
     return this;
   }
 
@@ -552,16 +551,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 第三者計測スクリプトURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Third party tracking script URL.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getThirdPartyTrackingScriptUrl() {
+  public String getThirdPartyTrackingScriptUrl() {
     return thirdPartyTrackingScriptUrl;
   }
 
-  public void setThirdPartyTrackingScriptUrl(JsonNullable<String> thirdPartyTrackingScriptUrl) {
+  public void setThirdPartyTrackingScriptUrl(String thirdPartyTrackingScriptUrl) {
     this.thirdPartyTrackingScriptUrl = thirdPartyTrackingScriptUrl;
   }
 
   public AdGroupAd thirdPartyTrackingVendor(String thirdPartyTrackingVendor) {
-    this.thirdPartyTrackingVendor = JsonNullable.of(thirdPartyTrackingVendor);
+    this.thirdPartyTrackingVendor = thirdPartyTrackingVendor;
     return this;
   }
 
@@ -572,16 +571,16 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 第三者計測ベンダー（ReadOnly）です。<br> thirdPartyTrackingScriptUrlのドメインに基づく第三者計測ベンダーが設定されます。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Third party tracking vendor (Read only).<br> Third party tracking vendor based on domain of thirdPartyTrackingScriptUrl is set.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getThirdPartyTrackingVendor() {
+  public String getThirdPartyTrackingVendor() {
     return thirdPartyTrackingVendor;
   }
 
-  public void setThirdPartyTrackingVendor(JsonNullable<String> thirdPartyTrackingVendor) {
+  public void setThirdPartyTrackingVendor(String thirdPartyTrackingVendor) {
     this.thirdPartyTrackingVendor = thirdPartyTrackingVendor;
   }
 
   public AdGroupAd userStatus(AdGroupAdServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -593,16 +592,16 @@ public class AdGroupAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceUserStatus> getUserStatus() {
+  public AdGroupAdServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<AdGroupAdServiceUserStatus> userStatus) {
+  public void setUserStatus(AdGroupAdServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public AdGroupAd createdDate(String createdDate) {
-    this.createdDate = JsonNullable.of(createdDate);
+    this.createdDate = createdDate;
     return this;
   }
 
@@ -613,17 +612,17 @@ public class AdGroupAd   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告が作成された日時です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Ad made.<br>* Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(JsonNullable<String> createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -699,7 +698,7 @@ public class AdGroupAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

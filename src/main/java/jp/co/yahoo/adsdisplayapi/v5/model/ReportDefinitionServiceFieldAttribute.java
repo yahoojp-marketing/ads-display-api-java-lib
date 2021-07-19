@@ -7,39 +7,38 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * ReportDefinitionServiceFieldAttribute
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceFieldAttribute   {
   @JsonProperty("displayFieldNameEN")
-  private JsonNullable<String> displayFieldNameEN = JsonNullable.undefined();
+  private String displayFieldNameEN = null;
 
   @JsonProperty("displayFieldNameJA")
-  private JsonNullable<String> displayFieldNameJA = JsonNullable.undefined();
+  private String displayFieldNameJA = null;
 
   @JsonProperty("fieldName")
-  private JsonNullable<String> fieldName = JsonNullable.undefined();
+  private String fieldName = null;
 
   @JsonProperty("fieldType")
-  private JsonNullable<String> fieldType = JsonNullable.undefined();
+  private String fieldType = null;
 
   @JsonProperty("filterable")
-  private JsonNullable<Boolean> filterable = JsonNullable.undefined();
+  private Boolean filterable = null;
 
   @JsonProperty("impossibleCombinationFields")
   @Valid
-  private JsonNullable<List<String>> impossibleCombinationFields = JsonNullable.undefined();
+  private List<String> impossibleCombinationFields = null;
 
   @JsonProperty("xmlAttributeName")
-  private JsonNullable<String> xmlAttributeName = JsonNullable.undefined();
+  private String xmlAttributeName = null;
 
   public ReportDefinitionServiceFieldAttribute displayFieldNameEN(String displayFieldNameEN) {
-    this.displayFieldNameEN = JsonNullable.of(displayFieldNameEN);
+    this.displayFieldNameEN = displayFieldNameEN;
     return this;
   }
 
@@ -50,16 +49,16 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードされたレポートに表示されるフィールド名（英語）です。</div> <div lang=\"en\">Field Name for the Downloaded Report (EN).</div> ")
 
 
-  public JsonNullable<String> getDisplayFieldNameEN() {
+  public String getDisplayFieldNameEN() {
     return displayFieldNameEN;
   }
 
-  public void setDisplayFieldNameEN(JsonNullable<String> displayFieldNameEN) {
+  public void setDisplayFieldNameEN(String displayFieldNameEN) {
     this.displayFieldNameEN = displayFieldNameEN;
   }
 
   public ReportDefinitionServiceFieldAttribute displayFieldNameJA(String displayFieldNameJA) {
-    this.displayFieldNameJA = JsonNullable.of(displayFieldNameJA);
+    this.displayFieldNameJA = displayFieldNameJA;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードされたレポートに表示されるフィールド名（日本語）です。</div> <div lang=\"en\">Field Name for the Downloaded Report (JA).</div> ")
 
 
-  public JsonNullable<String> getDisplayFieldNameJA() {
+  public String getDisplayFieldNameJA() {
     return displayFieldNameJA;
   }
 
-  public void setDisplayFieldNameJA(JsonNullable<String> displayFieldNameJA) {
+  public void setDisplayFieldNameJA(String displayFieldNameJA) {
     this.displayFieldNameJA = displayFieldNameJA;
   }
 
   public ReportDefinitionServiceFieldAttribute fieldName(String fieldName) {
-    this.fieldName = JsonNullable.of(fieldName);
+    this.fieldName = fieldName;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィールド名です。</div> <div lang=\"en\">Field Name.</div> ")
 
 
-  public JsonNullable<String> getFieldName() {
+  public String getFieldName() {
     return fieldName;
   }
 
-  public void setFieldName(JsonNullable<String> fieldName) {
+  public void setFieldName(String fieldName) {
     this.fieldName = fieldName;
   }
 
   public ReportDefinitionServiceFieldAttribute fieldType(String fieldType) {
-    this.fieldType = JsonNullable.of(fieldType);
+    this.fieldType = fieldType;
     return this;
   }
 
@@ -110,16 +109,16 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィールドタイプ（数字、文字列、ENUM値など）です。</div> <div lang=\"en\">Field type (number, string, ENUM, etc.)</div> ")
 
 
-  public JsonNullable<String> getFieldType() {
+  public String getFieldType() {
     return fieldType;
   }
 
-  public void setFieldType(JsonNullable<String> fieldType) {
+  public void setFieldType(String fieldType) {
     this.fieldType = fieldType;
   }
 
   public ReportDefinitionServiceFieldAttribute filterable(Boolean filterable) {
-    this.filterable = JsonNullable.of(filterable);
+    this.filterable = filterable;
     return this;
   }
 
@@ -130,24 +129,24 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィールドのフィルター指定可否（true：フィルター指定可能なフィールド）です。</div> <div lang=\"en\">Whether the field filter can be specified or not (true: Filter can be specified).</div> ")
 
 
-  public JsonNullable<Boolean> getFilterable() {
+  public Boolean getFilterable() {
     return filterable;
   }
 
-  public void setFilterable(JsonNullable<Boolean> filterable) {
+  public void setFilterable(Boolean filterable) {
     this.filterable = filterable;
   }
 
   public ReportDefinitionServiceFieldAttribute impossibleCombinationFields(List<String> impossibleCombinationFields) {
-    this.impossibleCombinationFields = JsonNullable.of(impossibleCombinationFields);
+    this.impossibleCombinationFields = impossibleCombinationFields;
     return this;
   }
 
   public ReportDefinitionServiceFieldAttribute addImpossibleCombinationFieldsItem(String impossibleCombinationFieldsItem) {
-    if (this.impossibleCombinationFields == null || !this.impossibleCombinationFields.isPresent()) {
-      this.impossibleCombinationFields = JsonNullable.of(new ArrayList<>());
+    if (this.impossibleCombinationFields == null) {
+      this.impossibleCombinationFields = new ArrayList<>();
     }
-    this.impossibleCombinationFields.get().add(impossibleCombinationFieldsItem);
+    this.impossibleCombinationFields.add(impossibleCombinationFieldsItem);
     return this;
   }
 
@@ -158,16 +157,16 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">組み合わせ不可フィールドです。</div> <div lang=\"en\">Invalid field combinations.</div> ")
 
 
-  public JsonNullable<List<String>> getImpossibleCombinationFields() {
+  public List<String> getImpossibleCombinationFields() {
     return impossibleCombinationFields;
   }
 
-  public void setImpossibleCombinationFields(JsonNullable<List<String>> impossibleCombinationFields) {
+  public void setImpossibleCombinationFields(List<String> impossibleCombinationFields) {
     this.impossibleCombinationFields = impossibleCombinationFields;
   }
 
   public ReportDefinitionServiceFieldAttribute xmlAttributeName(String xmlAttributeName) {
-    this.xmlAttributeName = JsonNullable.of(xmlAttributeName);
+    this.xmlAttributeName = xmlAttributeName;
     return this;
   }
 
@@ -178,17 +177,17 @@ public class ReportDefinitionServiceFieldAttribute   {
   @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードしたレポートのXML属性です。</div> <div lang=\"en\">XML attribute for the Downloaded Report.</div> ")
 
 
-  public JsonNullable<String> getXmlAttributeName() {
+  public String getXmlAttributeName() {
     return xmlAttributeName;
   }
 
-  public void setXmlAttributeName(JsonNullable<String> xmlAttributeName) {
+  public void setXmlAttributeName(String xmlAttributeName) {
     this.xmlAttributeName = xmlAttributeName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -230,7 +229,7 @@ public class ReportDefinitionServiceFieldAttribute   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

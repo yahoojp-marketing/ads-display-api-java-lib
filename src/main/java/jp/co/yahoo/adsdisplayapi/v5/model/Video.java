@@ -11,7 +11,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceProcessStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceSetting;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,44 +18,44 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Videoオブジェクトは、動画情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video object is a container for the information of videos.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Videoオブジェクトは、動画情報を保持します。</div> <div lang=\"en\">Video object is a container for the information of videos.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Video   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<VideoServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private VideoServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("creationTime")
-  private JsonNullable<String> creationTime = JsonNullable.undefined();
+  private String creationTime = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("mediaId")
-  private JsonNullable<Long> mediaId = JsonNullable.undefined();
+  private Long mediaId = null;
 
   @JsonProperty("processStatus")
-  private JsonNullable<VideoServiceProcessStatus> processStatus = JsonNullable.undefined();
+  private VideoServiceProcessStatus processStatus = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<VideoServiceUserStatus> userStatus = JsonNullable.undefined();
+  private VideoServiceUserStatus userStatus = null;
 
   @JsonProperty("videoName")
-  private JsonNullable<String> videoName = JsonNullable.undefined();
+  private String videoName = null;
 
   @JsonProperty("videoSetting")
-  private JsonNullable<VideoServiceSetting> videoSetting = JsonNullable.undefined();
+  private VideoServiceSetting videoSetting = null;
 
   @JsonProperty("videoTitle")
-  private JsonNullable<String> videoTitle = JsonNullable.undefined();
+  private String videoTitle = null;
 
   @JsonProperty("createdDate")
-  private JsonNullable<String> createdDate = JsonNullable.undefined();
+  private String createdDate = null;
 
   public Video accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -67,16 +66,16 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Account ID.<br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public Video approvalStatus(VideoServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -88,16 +87,16 @@ public class Video   {
 
   @Valid
 
-  public JsonNullable<VideoServiceApprovalStatus> getApprovalStatus() {
+  public VideoServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<VideoServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(VideoServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public Video creationTime(String creationTime) {
-    this.creationTime = JsonNullable.of(creationTime);
+    this.creationTime = creationTime;
     return this;
   }
 
@@ -108,24 +107,24 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の入稿日時です。</div> <div lang=\"en\">Time and date when the video was submitted.</div> ")
 
 
-  public JsonNullable<String> getCreationTime() {
+  public String getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(JsonNullable<String> creationTime) {
+  public void setCreationTime(String creationTime) {
     this.creationTime = creationTime;
   }
 
   public Video disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public Video addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -136,16 +135,16 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の掲載拒否理由です。</div> <div lang=\"en\">Disapproval reason of the video.</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public Video mediaId(Long mediaId) {
-    this.mediaId = JsonNullable.of(mediaId);
+    this.mediaId = mediaId;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Media ID.<br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getMediaId() {
+  public Long getMediaId() {
     return mediaId;
   }
 
-  public void setMediaId(JsonNullable<Long> mediaId) {
+  public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
 
   public Video processStatus(VideoServiceProcessStatus processStatus) {
-    this.processStatus = JsonNullable.of(processStatus);
+    this.processStatus = processStatus;
     return this;
   }
 
@@ -177,16 +176,16 @@ public class Video   {
 
   @Valid
 
-  public JsonNullable<VideoServiceProcessStatus> getProcessStatus() {
+  public VideoServiceProcessStatus getProcessStatus() {
     return processStatus;
   }
 
-  public void setProcessStatus(JsonNullable<VideoServiceProcessStatus> processStatus) {
+  public void setProcessStatus(VideoServiceProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
 
   public Video userStatus(VideoServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -198,16 +197,16 @@ public class Video   {
 
   @Valid
 
-  public JsonNullable<VideoServiceUserStatus> getUserStatus() {
+  public VideoServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<VideoServiceUserStatus> userStatus) {
+  public void setUserStatus(VideoServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public Video videoName(String videoName) {
-    this.videoName = JsonNullable.of(videoName);
+    this.videoName = videoName;
     return this;
   }
 
@@ -218,16 +217,16 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画のファイル名です。</div> <div lang=\"en\">Video file name.</div> ")
 
 
-  public JsonNullable<String> getVideoName() {
+  public String getVideoName() {
     return videoName;
   }
 
-  public void setVideoName(JsonNullable<String> videoName) {
+  public void setVideoName(String videoName) {
     this.videoName = videoName;
   }
 
   public Video videoSetting(VideoServiceSetting videoSetting) {
-    this.videoSetting = JsonNullable.of(videoSetting);
+    this.videoSetting = videoSetting;
     return this;
   }
 
@@ -239,16 +238,16 @@ public class Video   {
 
   @Valid
 
-  public JsonNullable<VideoServiceSetting> getVideoSetting() {
+  public VideoServiceSetting getVideoSetting() {
     return videoSetting;
   }
 
-  public void setVideoSetting(JsonNullable<VideoServiceSetting> videoSetting) {
+  public void setVideoSetting(VideoServiceSetting videoSetting) {
     this.videoSetting = videoSetting;
   }
 
   public Video videoTitle(String videoTitle) {
-    this.videoTitle = JsonNullable.of(videoTitle);
+    this.videoTitle = videoTitle;
     return this;
   }
 
@@ -259,16 +258,16 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 動画名です。<br> このフィールドは、SET時に省略可能となります。 </div> <div lang=\"en\"> Video name.<br> This field is optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getVideoTitle() {
+  public String getVideoTitle() {
     return videoTitle;
   }
 
-  public void setVideoTitle(JsonNullable<String> videoTitle) {
+  public void setVideoTitle(String videoTitle) {
     this.videoTitle = videoTitle;
   }
 
   public Video createdDate(String createdDate) {
-    this.createdDate = JsonNullable.of(createdDate);
+    this.createdDate = createdDate;
     return this;
   }
 
@@ -279,17 +278,17 @@ public class Video   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の作成日です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date when the video was made.<br>* Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(JsonNullable<String> createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -339,7 +338,7 @@ public class Video   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

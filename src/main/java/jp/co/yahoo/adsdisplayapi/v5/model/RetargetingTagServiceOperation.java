@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,7 +12,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagServiceOperationオブジェクトは、サイトリターゲティングのタグ処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTagServiceOperation object is a detail of tag process of Site retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingTagServiceOperationオブジェクトは、サイトリターゲティングのタグ処理の内容を表します。</div> <div lang=\"en\">RetargetingTagServiceOperation object is a detail of tag process of Site retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingTagServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
@@ -41,7 +40,7 @@ public class RetargetingTagServiceOperation   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -71,7 +70,7 @@ public class RetargetingTagServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

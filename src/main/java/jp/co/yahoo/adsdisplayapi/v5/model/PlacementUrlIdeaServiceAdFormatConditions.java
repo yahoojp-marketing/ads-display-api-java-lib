@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServiceAdFormatConditionsオブジェクトは、広告掲載フォーマットの情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PlacementUrlIdeaServiceAdFormatConditions stores Ad Distribution format information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServiceAdFormatConditionsオブジェクトは、広告掲載フォーマットの情報を保持するオブジェクトです。</div> <div lang=\"en\">PlacementUrlIdeaServiceAdFormatConditions stores Ad Distribution format information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlIdeaServiceAdFormatConditions   {
   @JsonProperty("adStyle")
-  private JsonNullable<String> adStyle = JsonNullable.undefined();
+  private String adStyle = null;
 
   @JsonProperty("mediaAdFormat")
-  private JsonNullable<String> mediaAdFormat = JsonNullable.undefined();
+  private String mediaAdFormat = null;
 
   public PlacementUrlIdeaServiceAdFormatConditions adStyle(String adStyle) {
-    this.adStyle = JsonNullable.of(adStyle);
+    this.adStyle = adStyle;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class PlacementUrlIdeaServiceAdFormatConditions   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告スタイルです。</div> <div lang=\"en\">Ad style.</div> ")
 
 
-  public JsonNullable<String> getAdStyle() {
+  public String getAdStyle() {
     return adStyle;
   }
 
-  public void setAdStyle(JsonNullable<String> adStyle) {
+  public void setAdStyle(String adStyle) {
     this.adStyle = adStyle;
   }
 
   public PlacementUrlIdeaServiceAdFormatConditions mediaAdFormat(String mediaAdFormat) {
-    this.mediaAdFormat = JsonNullable.of(mediaAdFormat);
+    this.mediaAdFormat = mediaAdFormat;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class PlacementUrlIdeaServiceAdFormatConditions   {
   @ApiModelProperty(value = "<div lang=\"ja\">メディアフォーマットです。</div> <div lang=\"en\">Media format.</div> ")
 
 
-  public JsonNullable<String> getMediaAdFormat() {
+  public String getMediaAdFormat() {
     return mediaAdFormat;
   }
 
-  public void setMediaAdFormat(JsonNullable<String> mediaAdFormat) {
+  public void setMediaAdFormat(String mediaAdFormat) {
     this.mediaAdFormat = mediaAdFormat;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class PlacementUrlIdeaServiceAdFormatConditions   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

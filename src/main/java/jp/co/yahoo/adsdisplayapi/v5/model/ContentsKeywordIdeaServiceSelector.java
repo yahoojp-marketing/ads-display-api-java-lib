@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ContentsKeywordIdeaServiceKeyword;
 import jp.co.yahoo.adsdisplayapi.v5.model.ContentsKeywordIdeaServiceSortField;
 import jp.co.yahoo.adsdisplayapi.v5.model.ContentsKeywordIdeaServiceSortType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,37 +17,37 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaServiceSelectorオブジェクトは、コンテンツターゲティング対象キーワードのリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdeaServiceSelector object displays the list of keyword for contents targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ContentsKeywordIdeaServiceSelectorオブジェクトは、コンテンツターゲティング対象キーワードのリストを表します。</div> <div lang=\"en\">ContentsKeywordIdeaServiceSelector object displays the list of keyword for contents targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ContentsKeywordIdeaServiceSelector   {
   @JsonProperty("keywordIds")
   @Valid
-  private JsonNullable<List<Long>> keywordIds = JsonNullable.undefined();
+  private List<Long> keywordIds = null;
 
   @JsonProperty("keyword")
-  private JsonNullable<ContentsKeywordIdeaServiceKeyword> keyword = JsonNullable.undefined();
+  private ContentsKeywordIdeaServiceKeyword keyword = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("sortField")
-  private JsonNullable<ContentsKeywordIdeaServiceSortField> sortField = JsonNullable.undefined();
+  private ContentsKeywordIdeaServiceSortField sortField = null;
 
   @JsonProperty("sortType")
-  private JsonNullable<ContentsKeywordIdeaServiceSortType> sortType = JsonNullable.undefined();
+  private ContentsKeywordIdeaServiceSortType sortType = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public ContentsKeywordIdeaServiceSelector keywordIds(List<Long> keywordIds) {
-    this.keywordIds = JsonNullable.of(keywordIds);
+    this.keywordIds = keywordIds;
     return this;
   }
 
   public ContentsKeywordIdeaServiceSelector addKeywordIdsItem(Long keywordIdsItem) {
-    if (this.keywordIds == null || !this.keywordIds.isPresent()) {
-      this.keywordIds = JsonNullable.of(new ArrayList<>());
+    if (this.keywordIds == null) {
+      this.keywordIds = new ArrayList<>();
     }
-    this.keywordIds.get().add(keywordIdsItem);
+    this.keywordIds.add(keywordIdsItem);
     return this;
   }
 
@@ -59,16 +58,16 @@ public class ContentsKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：キーワードID<br> ※キーワード検索用<br> ※キーワード、キーワードIDの同時指定はできません。 </div> <div lang=\"en\">Search condition : Keyword ID.<br> *Keyword for searching.<br> *Can not specify Keyword and Keyword ID at the same time. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getKeywordIds() {
+  public List<Long> getKeywordIds() {
     return keywordIds;
   }
 
-  public void setKeywordIds(JsonNullable<List<Long>> keywordIds) {
+  public void setKeywordIds(List<Long> keywordIds) {
     this.keywordIds = keywordIds;
   }
 
   public ContentsKeywordIdeaServiceSelector keyword(ContentsKeywordIdeaServiceKeyword keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -80,16 +79,16 @@ public class ContentsKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ContentsKeywordIdeaServiceKeyword> getKeyword() {
+  public ContentsKeywordIdeaServiceKeyword getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<ContentsKeywordIdeaServiceKeyword> keyword) {
+  public void setKeyword(ContentsKeywordIdeaServiceKeyword keyword) {
     this.keyword = keyword;
   }
 
   public ContentsKeywordIdeaServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class ContentsKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public ContentsKeywordIdeaServiceSelector sortField(ContentsKeywordIdeaServiceSortField sortField) {
-    this.sortField = JsonNullable.of(sortField);
+    this.sortField = sortField;
     return this;
   }
 
@@ -123,16 +122,16 @@ public class ContentsKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ContentsKeywordIdeaServiceSortField> getSortField() {
+  public ContentsKeywordIdeaServiceSortField getSortField() {
     return sortField;
   }
 
-  public void setSortField(JsonNullable<ContentsKeywordIdeaServiceSortField> sortField) {
+  public void setSortField(ContentsKeywordIdeaServiceSortField sortField) {
     this.sortField = sortField;
   }
 
   public ContentsKeywordIdeaServiceSelector sortType(ContentsKeywordIdeaServiceSortType sortType) {
-    this.sortType = JsonNullable.of(sortType);
+    this.sortType = sortType;
     return this;
   }
 
@@ -144,16 +143,16 @@ public class ContentsKeywordIdeaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ContentsKeywordIdeaServiceSortType> getSortType() {
+  public ContentsKeywordIdeaServiceSortType getSortType() {
     return sortType;
   }
 
-  public void setSortType(JsonNullable<ContentsKeywordIdeaServiceSortType> sortType) {
+  public void setSortType(ContentsKeywordIdeaServiceSortType sortType) {
     this.sortType = sortType;
   }
 
   public ContentsKeywordIdeaServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -165,17 +164,17 @@ public class ContentsKeywordIdeaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -215,7 +214,7 @@ public class ContentsKeywordIdeaServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

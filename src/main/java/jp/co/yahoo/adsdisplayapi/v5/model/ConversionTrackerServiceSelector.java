@@ -15,7 +15,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceStatsPeriod;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceStatsPeriodCustomDate;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -23,51 +22,51 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServiceSelector object contains a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">ConversionTrackerServiceSelector object contains a set of criteria (parameters) for get method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("appConversionPlatform")
-  private JsonNullable<ConversionTrackerServiceAppConversionPlatform> appConversionPlatform = JsonNullable.undefined();
+  private ConversionTrackerServiceAppConversionPlatform appConversionPlatform = null;
 
   @JsonProperty("appIds")
   @Valid
-  private JsonNullable<List<String>> appIds = JsonNullable.undefined();
+  private List<String> appIds = null;
 
   @JsonProperty("categories")
   @Valid
-  private JsonNullable<List<ConversionTrackerServiceCategory>> categories = JsonNullable.undefined();
+  private List<ConversionTrackerServiceCategory> categories = null;
 
   @JsonProperty("conversionTrackerIds")
   @Valid
-  private JsonNullable<List<Long>> conversionTrackerIds = JsonNullable.undefined();
+  private List<Long> conversionTrackerIds = null;
 
   @JsonProperty("conversionTrackerTypes")
   @Valid
-  private JsonNullable<List<ConversionTrackerServiceType>> conversionTrackerTypes = JsonNullable.undefined();
+  private List<ConversionTrackerServiceType> conversionTrackerTypes = null;
 
   @JsonProperty("countingType")
-  private JsonNullable<ConversionTrackerServiceCountingType> countingType = JsonNullable.undefined();
+  private ConversionTrackerServiceCountingType countingType = null;
 
   @JsonProperty("excludeFromBidding")
-  private JsonNullable<ConversionTrackerServiceExcludeFromBidding> excludeFromBidding = JsonNullable.undefined();
+  private ConversionTrackerServiceExcludeFromBidding excludeFromBidding = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("statsPeriod")
-  private JsonNullable<ConversionTrackerServiceStatsPeriod> statsPeriod = JsonNullable.undefined();
+  private ConversionTrackerServiceStatsPeriod statsPeriod = null;
 
   @JsonProperty("statsPeriodCustomDate")
-  private JsonNullable<ConversionTrackerServiceStatsPeriodCustomDate> statsPeriodCustomDate = JsonNullable.undefined();
+  private ConversionTrackerServiceStatsPeriodCustomDate statsPeriodCustomDate = null;
 
   @JsonProperty("statuses")
   @Valid
-  private JsonNullable<List<ConversionTrackerServiceStatus>> statuses = JsonNullable.undefined();
+  private List<ConversionTrackerServiceStatus> statuses = null;
 
   public ConversionTrackerServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -91,7 +90,7 @@ public class ConversionTrackerServiceSelector   {
   }
 
   public ConversionTrackerServiceSelector appConversionPlatform(ConversionTrackerServiceAppConversionPlatform appConversionPlatform) {
-    this.appConversionPlatform = JsonNullable.of(appConversionPlatform);
+    this.appConversionPlatform = appConversionPlatform;
     return this;
   }
 
@@ -103,24 +102,24 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppConversionPlatform> getAppConversionPlatform() {
+  public ConversionTrackerServiceAppConversionPlatform getAppConversionPlatform() {
     return appConversionPlatform;
   }
 
-  public void setAppConversionPlatform(JsonNullable<ConversionTrackerServiceAppConversionPlatform> appConversionPlatform) {
+  public void setAppConversionPlatform(ConversionTrackerServiceAppConversionPlatform appConversionPlatform) {
     this.appConversionPlatform = appConversionPlatform;
   }
 
   public ConversionTrackerServiceSelector appIds(List<String> appIds) {
-    this.appIds = JsonNullable.of(appIds);
+    this.appIds = appIds;
     return this;
   }
 
   public ConversionTrackerServiceSelector addAppIdsItem(String appIdsItem) {
-    if (this.appIds == null || !this.appIds.isPresent()) {
-      this.appIds = JsonNullable.of(new ArrayList<>());
+    if (this.appIds == null) {
+      this.appIds = new ArrayList<>();
     }
-    this.appIds.get().add(appIdsItem);
+    this.appIds.add(appIdsItem);
     return this;
   }
 
@@ -131,24 +130,24 @@ public class ConversionTrackerServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリID。</div> <div lang=\"en\">App ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<String>> getAppIds() {
+  public List<String> getAppIds() {
     return appIds;
   }
 
-  public void setAppIds(JsonNullable<List<String>> appIds) {
+  public void setAppIds(List<String> appIds) {
     this.appIds = appIds;
   }
 
   public ConversionTrackerServiceSelector categories(List<ConversionTrackerServiceCategory> categories) {
-    this.categories = JsonNullable.of(categories);
+    this.categories = categories;
     return this;
   }
 
   public ConversionTrackerServiceSelector addCategoriesItem(ConversionTrackerServiceCategory categoriesItem) {
-    if (this.categories == null || !this.categories.isPresent()) {
-      this.categories = JsonNullable.of(new ArrayList<>());
+    if (this.categories == null) {
+      this.categories = new ArrayList<>();
     }
-    this.categories.get().add(categoriesItem);
+    this.categories.add(categoriesItem);
     return this;
   }
 
@@ -160,24 +159,24 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 @Size(max=7) 
-  public JsonNullable<List<ConversionTrackerServiceCategory>> getCategories() {
+  public List<ConversionTrackerServiceCategory> getCategories() {
     return categories;
   }
 
-  public void setCategories(JsonNullable<List<ConversionTrackerServiceCategory>> categories) {
+  public void setCategories(List<ConversionTrackerServiceCategory> categories) {
     this.categories = categories;
   }
 
   public ConversionTrackerServiceSelector conversionTrackerIds(List<Long> conversionTrackerIds) {
-    this.conversionTrackerIds = JsonNullable.of(conversionTrackerIds);
+    this.conversionTrackerIds = conversionTrackerIds;
     return this;
   }
 
   public ConversionTrackerServiceSelector addConversionTrackerIdsItem(Long conversionTrackerIdsItem) {
-    if (this.conversionTrackerIds == null || !this.conversionTrackerIds.isPresent()) {
-      this.conversionTrackerIds = JsonNullable.of(new ArrayList<>());
+    if (this.conversionTrackerIds == null) {
+      this.conversionTrackerIds = new ArrayList<>();
     }
-    this.conversionTrackerIds.get().add(conversionTrackerIdsItem);
+    this.conversionTrackerIds.add(conversionTrackerIdsItem);
     return this;
   }
 
@@ -188,24 +187,24 @@ public class ConversionTrackerServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーのID。</div> <div lang=\"en\">Conversion Tracker ID.</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getConversionTrackerIds() {
+  public List<Long> getConversionTrackerIds() {
     return conversionTrackerIds;
   }
 
-  public void setConversionTrackerIds(JsonNullable<List<Long>> conversionTrackerIds) {
+  public void setConversionTrackerIds(List<Long> conversionTrackerIds) {
     this.conversionTrackerIds = conversionTrackerIds;
   }
 
   public ConversionTrackerServiceSelector conversionTrackerTypes(List<ConversionTrackerServiceType> conversionTrackerTypes) {
-    this.conversionTrackerTypes = JsonNullable.of(conversionTrackerTypes);
+    this.conversionTrackerTypes = conversionTrackerTypes;
     return this;
   }
 
   public ConversionTrackerServiceSelector addConversionTrackerTypesItem(ConversionTrackerServiceType conversionTrackerTypesItem) {
-    if (this.conversionTrackerTypes == null || !this.conversionTrackerTypes.isPresent()) {
-      this.conversionTrackerTypes = JsonNullable.of(new ArrayList<>());
+    if (this.conversionTrackerTypes == null) {
+      this.conversionTrackerTypes = new ArrayList<>();
     }
-    this.conversionTrackerTypes.get().add(conversionTrackerTypesItem);
+    this.conversionTrackerTypes.add(conversionTrackerTypesItem);
     return this;
   }
 
@@ -217,16 +216,16 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<ConversionTrackerServiceType>> getConversionTrackerTypes() {
+  public List<ConversionTrackerServiceType> getConversionTrackerTypes() {
     return conversionTrackerTypes;
   }
 
-  public void setConversionTrackerTypes(JsonNullable<List<ConversionTrackerServiceType>> conversionTrackerTypes) {
+  public void setConversionTrackerTypes(List<ConversionTrackerServiceType> conversionTrackerTypes) {
     this.conversionTrackerTypes = conversionTrackerTypes;
   }
 
   public ConversionTrackerServiceSelector countingType(ConversionTrackerServiceCountingType countingType) {
-    this.countingType = JsonNullable.of(countingType);
+    this.countingType = countingType;
     return this;
   }
 
@@ -238,16 +237,16 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceCountingType> getCountingType() {
+  public ConversionTrackerServiceCountingType getCountingType() {
     return countingType;
   }
 
-  public void setCountingType(JsonNullable<ConversionTrackerServiceCountingType> countingType) {
+  public void setCountingType(ConversionTrackerServiceCountingType countingType) {
     this.countingType = countingType;
   }
 
   public ConversionTrackerServiceSelector excludeFromBidding(ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
-    this.excludeFromBidding = JsonNullable.of(excludeFromBidding);
+    this.excludeFromBidding = excludeFromBidding;
     return this;
   }
 
@@ -259,16 +258,16 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceExcludeFromBidding> getExcludeFromBidding() {
+  public ConversionTrackerServiceExcludeFromBidding getExcludeFromBidding() {
     return excludeFromBidding;
   }
 
-  public void setExcludeFromBidding(JsonNullable<ConversionTrackerServiceExcludeFromBidding> excludeFromBidding) {
+  public void setExcludeFromBidding(ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
     this.excludeFromBidding = excludeFromBidding;
   }
 
   public ConversionTrackerServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -281,16 +280,16 @@ public class ConversionTrackerServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public ConversionTrackerServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -302,16 +301,16 @@ public class ConversionTrackerServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public ConversionTrackerServiceSelector statsPeriod(ConversionTrackerServiceStatsPeriod statsPeriod) {
-    this.statsPeriod = JsonNullable.of(statsPeriod);
+    this.statsPeriod = statsPeriod;
     return this;
   }
 
@@ -323,16 +322,16 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceStatsPeriod> getStatsPeriod() {
+  public ConversionTrackerServiceStatsPeriod getStatsPeriod() {
     return statsPeriod;
   }
 
-  public void setStatsPeriod(JsonNullable<ConversionTrackerServiceStatsPeriod> statsPeriod) {
+  public void setStatsPeriod(ConversionTrackerServiceStatsPeriod statsPeriod) {
     this.statsPeriod = statsPeriod;
   }
 
   public ConversionTrackerServiceSelector statsPeriodCustomDate(ConversionTrackerServiceStatsPeriodCustomDate statsPeriodCustomDate) {
-    this.statsPeriodCustomDate = JsonNullable.of(statsPeriodCustomDate);
+    this.statsPeriodCustomDate = statsPeriodCustomDate;
     return this;
   }
 
@@ -344,24 +343,24 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceStatsPeriodCustomDate> getStatsPeriodCustomDate() {
+  public ConversionTrackerServiceStatsPeriodCustomDate getStatsPeriodCustomDate() {
     return statsPeriodCustomDate;
   }
 
-  public void setStatsPeriodCustomDate(JsonNullable<ConversionTrackerServiceStatsPeriodCustomDate> statsPeriodCustomDate) {
+  public void setStatsPeriodCustomDate(ConversionTrackerServiceStatsPeriodCustomDate statsPeriodCustomDate) {
     this.statsPeriodCustomDate = statsPeriodCustomDate;
   }
 
   public ConversionTrackerServiceSelector statuses(List<ConversionTrackerServiceStatus> statuses) {
-    this.statuses = JsonNullable.of(statuses);
+    this.statuses = statuses;
     return this;
   }
 
   public ConversionTrackerServiceSelector addStatusesItem(ConversionTrackerServiceStatus statusesItem) {
-    if (this.statuses == null || !this.statuses.isPresent()) {
-      this.statuses = JsonNullable.of(new ArrayList<>());
+    if (this.statuses == null) {
+      this.statuses = new ArrayList<>();
     }
-    this.statuses.get().add(statusesItem);
+    this.statuses.add(statusesItem);
     return this;
   }
 
@@ -373,17 +372,17 @@ public class ConversionTrackerServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<ConversionTrackerServiceStatus>> getStatuses() {
+  public List<ConversionTrackerServiceStatus> getStatuses() {
     return statuses;
   }
 
-  public void setStatuses(JsonNullable<List<ConversionTrackerServiceStatus>> statuses) {
+  public void setStatuses(List<ConversionTrackerServiceStatus> statuses) {
     this.statuses = statuses;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -437,7 +436,7 @@ public class ConversionTrackerServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

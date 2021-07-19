@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceWebConversionSnippet;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceWebConversionは、ウェブページのコンバージョントラッカー情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ConversionTrackerServiceWebConversionは、ウェブページのコンバージョントラッカー情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceWebConversion   {
   @JsonProperty("snippet")
   @Valid
-  private JsonNullable<List<ConversionTrackerServiceWebConversionSnippet>> snippet = JsonNullable.undefined();
+  private List<ConversionTrackerServiceWebConversionSnippet> snippet = null;
 
   public ConversionTrackerServiceWebConversion snippet(List<ConversionTrackerServiceWebConversionSnippet> snippet) {
-    this.snippet = JsonNullable.of(snippet);
+    this.snippet = snippet;
     return this;
   }
 
   public ConversionTrackerServiceWebConversion addSnippetItem(ConversionTrackerServiceWebConversionSnippet snippetItem) {
-    if (this.snippet == null || !this.snippet.isPresent()) {
-      this.snippet = JsonNullable.of(new ArrayList<>());
+    if (this.snippet == null) {
+      this.snippet = new ArrayList<>();
     }
-    this.snippet.get().add(snippetItem);
+    this.snippet.add(snippetItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class ConversionTrackerServiceWebConversion   {
 
   @Valid
 
-  public JsonNullable<List<ConversionTrackerServiceWebConversionSnippet>> getSnippet() {
+  public List<ConversionTrackerServiceWebConversionSnippet> getSnippet() {
     return snippet;
   }
 
-  public void setSnippet(JsonNullable<List<ConversionTrackerServiceWebConversionSnippet>> snippet) {
+  public void setSnippet(List<ConversionTrackerServiceWebConversionSnippet> snippet) {
     this.snippet = snippet;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class ConversionTrackerServiceWebConversion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

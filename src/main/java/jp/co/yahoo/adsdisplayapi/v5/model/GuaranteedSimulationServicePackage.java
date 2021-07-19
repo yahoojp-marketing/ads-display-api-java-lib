@@ -30,7 +30,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePricingPack
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePromotionalDocument;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceRelatedDocument;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceSalesDocument;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -38,7 +37,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackageオブジェクトは、商品情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackage object contains package information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackageオブジェクトは、商品情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePackage object contains package information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackage   {
   @JsonProperty("packageId")
   private Long packageId;
@@ -50,95 +49,95 @@ public class GuaranteedSimulationServicePackage   {
   private String packageName;
 
   @JsonProperty("sellingStartDate")
-  private JsonNullable<String> sellingStartDate = JsonNullable.undefined();
+  private String sellingStartDate = null;
 
   @JsonProperty("sellingEndDate")
-  private JsonNullable<String> sellingEndDate = JsonNullable.undefined();
+  private String sellingEndDate = null;
 
   @JsonProperty("adDeliveryDurationStartDate")
-  private JsonNullable<String> adDeliveryDurationStartDate = JsonNullable.undefined();
+  private String adDeliveryDurationStartDate = null;
 
   @JsonProperty("reservationStartDate")
-  private JsonNullable<String> reservationStartDate = JsonNullable.undefined();
+  private String reservationStartDate = null;
 
   @JsonProperty("reservationEndDate")
-  private JsonNullable<String> reservationEndDate = JsonNullable.undefined();
+  private String reservationEndDate = null;
 
   @JsonProperty("adDeliveryDurationEndDate")
-  private JsonNullable<String> adDeliveryDurationEndDate = JsonNullable.undefined();
+  private String adDeliveryDurationEndDate = null;
 
   @JsonProperty("buyingTerm")
-  private JsonNullable<GuaranteedSimulationServiceBuyingTerm> buyingTerm = JsonNullable.undefined();
+  private GuaranteedSimulationServiceBuyingTerm buyingTerm = null;
 
   @JsonProperty("pricingPackage")
-  private JsonNullable<GuaranteedSimulationServicePricingPackage> pricingPackage = JsonNullable.undefined();
+  private GuaranteedSimulationServicePricingPackage pricingPackage = null;
 
   @JsonProperty("packagePublicLevel")
-  private JsonNullable<GuaranteedSimulationServicePackagePublicLevel> packagePublicLevel = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePublicLevel packagePublicLevel = null;
 
   @JsonProperty("salesDocument")
-  private JsonNullable<GuaranteedSimulationServiceSalesDocument> salesDocument = JsonNullable.undefined();
+  private GuaranteedSimulationServiceSalesDocument salesDocument = null;
 
   @JsonProperty("promotionalDocument")
-  private JsonNullable<GuaranteedSimulationServicePromotionalDocument> promotionalDocument = JsonNullable.undefined();
+  private GuaranteedSimulationServicePromotionalDocument promotionalDocument = null;
 
   @JsonProperty("relatedDocument")
-  private JsonNullable<GuaranteedSimulationServiceRelatedDocument> relatedDocument = JsonNullable.undefined();
+  private GuaranteedSimulationServiceRelatedDocument relatedDocument = null;
 
   @JsonProperty("adTypePermission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> adTypePermission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType adTypePermission = null;
 
   @JsonProperty("adRequirements")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceAdRequirement>> adRequirements = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceAdRequirement> adRequirements = null;
 
   @JsonProperty("actionAfterVideoAdTap")
-  private JsonNullable<GuaranteedSimulationServiceActionAfterVideoAdTap> actionAfterVideoAdTap = JsonNullable.undefined();
+  private GuaranteedSimulationServiceActionAfterVideoAdTap actionAfterVideoAdTap = null;
 
   @JsonProperty("instreamDurationType")
-  private JsonNullable<GuaranteedSimulationServiceInstreamDurationType> instreamDurationType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceInstreamDurationType instreamDurationType = null;
 
   @JsonProperty("remarks")
   private String remarks;
 
   @JsonProperty("packagePermittedViewableFrequencyCap")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedViewableFrequencyCap> packagePermittedViewableFrequencyCap = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedViewableFrequencyCap packagePermittedViewableFrequencyCap = null;
 
   @JsonProperty("packagePermittedAdPlaceTypes")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedAdPlaceTypes> packagePermittedAdPlaceTypes = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedAdPlaceTypes packagePermittedAdPlaceTypes = null;
 
   @JsonProperty("packagePermittedGenderTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedGenderTarget> packagePermittedGenderTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedGenderTarget packagePermittedGenderTarget = null;
 
   @JsonProperty("packagePermittedAgeTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedAgeTarget> packagePermittedAgeTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedAgeTarget packagePermittedAgeTarget = null;
 
   @JsonProperty("packagePermittedAudienceCategoryTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget> packagePermittedAudienceCategoryTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget packagePermittedAudienceCategoryTarget = null;
 
   @JsonProperty("packagePermittedGeoTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedGeoTarget> packagePermittedGeoTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedGeoTarget packagePermittedGeoTarget = null;
 
   @JsonProperty("packagePermittedAdScheduleTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedAdScheduleTarget> packagePermittedAdScheduleTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedAdScheduleTarget packagePermittedAdScheduleTarget = null;
 
   @JsonProperty("packagePermittedDeviceTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedDeviceTarget> packagePermittedDeviceTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedDeviceTarget packagePermittedDeviceTarget = null;
 
   @JsonProperty("packagePermittedOsTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedOsTarget> packagePermittedOsTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedOsTarget packagePermittedOsTarget = null;
 
   @JsonProperty("packagePermittedAppTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedAppTarget> packagePermittedAppTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedAppTarget packagePermittedAppTarget = null;
 
   @JsonProperty("packagePermittedPlacementCategoryTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget> packagePermittedPlacementCategoryTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget packagePermittedPlacementCategoryTarget = null;
 
   @JsonProperty("packagePermittedPositionTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedPositionTarget> packagePermittedPositionTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedPositionTarget packagePermittedPositionTarget = null;
 
   @JsonProperty("packagePermittedSiteRetargetingTarget")
-  private JsonNullable<GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget> packagePermittedSiteRetargetingTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget packagePermittedSiteRetargetingTarget = null;
 
   public GuaranteedSimulationServicePackage packageId(Long packageId) {
     this.packageId = packageId;
@@ -201,7 +200,7 @@ public class GuaranteedSimulationServicePackage   {
   }
 
   public GuaranteedSimulationServicePackage sellingStartDate(String sellingStartDate) {
-    this.sellingStartDate = JsonNullable.of(sellingStartDate);
+    this.sellingStartDate = sellingStartDate;
     return this;
   }
 
@@ -212,16 +211,16 @@ public class GuaranteedSimulationServicePackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">   商品開始日です。<br>   ※フォーマット：yyyyMMdd </div> <div lang=\"en\">   Start date of the package.<br>   Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getSellingStartDate() {
+  public String getSellingStartDate() {
     return sellingStartDate;
   }
 
-  public void setSellingStartDate(JsonNullable<String> sellingStartDate) {
+  public void setSellingStartDate(String sellingStartDate) {
     this.sellingStartDate = sellingStartDate;
   }
 
   public GuaranteedSimulationServicePackage sellingEndDate(String sellingEndDate) {
-    this.sellingEndDate = JsonNullable.of(sellingEndDate);
+    this.sellingEndDate = sellingEndDate;
     return this;
   }
 
@@ -232,16 +231,16 @@ public class GuaranteedSimulationServicePackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">   商品終了日です。<br>   ※フォーマット：yyyyMMdd </div> <div lang=\"en\">   End date of the package.<br>   Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getSellingEndDate() {
+  public String getSellingEndDate() {
     return sellingEndDate;
   }
 
-  public void setSellingEndDate(JsonNullable<String> sellingEndDate) {
+  public void setSellingEndDate(String sellingEndDate) {
     this.sellingEndDate = sellingEndDate;
   }
 
   public GuaranteedSimulationServicePackage adDeliveryDurationStartDate(String adDeliveryDurationStartDate) {
-    this.adDeliveryDurationStartDate = JsonNullable.of(adDeliveryDurationStartDate);
+    this.adDeliveryDurationStartDate = adDeliveryDurationStartDate;
     return this;
   }
 
@@ -252,16 +251,16 @@ public class GuaranteedSimulationServicePackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">   広告の掲載有効期間の開始日です。<br>   ※フォーマット：yyyyMMdd </div> <div lang=\"en\">   Start date of the ad delivery validity period.<br>   Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getAdDeliveryDurationStartDate() {
+  public String getAdDeliveryDurationStartDate() {
     return adDeliveryDurationStartDate;
   }
 
-  public void setAdDeliveryDurationStartDate(JsonNullable<String> adDeliveryDurationStartDate) {
+  public void setAdDeliveryDurationStartDate(String adDeliveryDurationStartDate) {
     this.adDeliveryDurationStartDate = adDeliveryDurationStartDate;
   }
 
   public GuaranteedSimulationServicePackage reservationStartDate(String reservationStartDate) {
-    this.reservationStartDate = JsonNullable.of(reservationStartDate);
+    this.reservationStartDate = reservationStartDate;
     return this;
   }
 
@@ -272,16 +271,16 @@ public class GuaranteedSimulationServicePackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">   予約期間開始日です。<br>   ※フォーマット：yyyyMMdd </div> <div lang=\"en\">   Start date of reservation period.<br>   Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getReservationStartDate() {
+  public String getReservationStartDate() {
     return reservationStartDate;
   }
 
-  public void setReservationStartDate(JsonNullable<String> reservationStartDate) {
+  public void setReservationStartDate(String reservationStartDate) {
     this.reservationStartDate = reservationStartDate;
   }
 
   public GuaranteedSimulationServicePackage reservationEndDate(String reservationEndDate) {
-    this.reservationEndDate = JsonNullable.of(reservationEndDate);
+    this.reservationEndDate = reservationEndDate;
     return this;
   }
 
@@ -292,16 +291,16 @@ public class GuaranteedSimulationServicePackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">   予約期間終了日です。<br>   ※フォーマット：yyyyMMdd </div> <div lang=\"en\">   End date of reservation period.<br>   Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getReservationEndDate() {
+  public String getReservationEndDate() {
     return reservationEndDate;
   }
 
-  public void setReservationEndDate(JsonNullable<String> reservationEndDate) {
+  public void setReservationEndDate(String reservationEndDate) {
     this.reservationEndDate = reservationEndDate;
   }
 
   public GuaranteedSimulationServicePackage adDeliveryDurationEndDate(String adDeliveryDurationEndDate) {
-    this.adDeliveryDurationEndDate = JsonNullable.of(adDeliveryDurationEndDate);
+    this.adDeliveryDurationEndDate = adDeliveryDurationEndDate;
     return this;
   }
 
@@ -312,16 +311,16 @@ public class GuaranteedSimulationServicePackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">   掲載有効期間の終了日です。<br>   ※フォーマット：yyyyMMdd </div> <div lang=\"en\">   End date of the ad delivery validity period.<br>   Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getAdDeliveryDurationEndDate() {
+  public String getAdDeliveryDurationEndDate() {
     return adDeliveryDurationEndDate;
   }
 
-  public void setAdDeliveryDurationEndDate(JsonNullable<String> adDeliveryDurationEndDate) {
+  public void setAdDeliveryDurationEndDate(String adDeliveryDurationEndDate) {
     this.adDeliveryDurationEndDate = adDeliveryDurationEndDate;
   }
 
   public GuaranteedSimulationServicePackage buyingTerm(GuaranteedSimulationServiceBuyingTerm buyingTerm) {
-    this.buyingTerm = JsonNullable.of(buyingTerm);
+    this.buyingTerm = buyingTerm;
     return this;
   }
 
@@ -333,16 +332,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceBuyingTerm> getBuyingTerm() {
+  public GuaranteedSimulationServiceBuyingTerm getBuyingTerm() {
     return buyingTerm;
   }
 
-  public void setBuyingTerm(JsonNullable<GuaranteedSimulationServiceBuyingTerm> buyingTerm) {
+  public void setBuyingTerm(GuaranteedSimulationServiceBuyingTerm buyingTerm) {
     this.buyingTerm = buyingTerm;
   }
 
   public GuaranteedSimulationServicePackage pricingPackage(GuaranteedSimulationServicePricingPackage pricingPackage) {
-    this.pricingPackage = JsonNullable.of(pricingPackage);
+    this.pricingPackage = pricingPackage;
     return this;
   }
 
@@ -354,16 +353,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePricingPackage> getPricingPackage() {
+  public GuaranteedSimulationServicePricingPackage getPricingPackage() {
     return pricingPackage;
   }
 
-  public void setPricingPackage(JsonNullable<GuaranteedSimulationServicePricingPackage> pricingPackage) {
+  public void setPricingPackage(GuaranteedSimulationServicePricingPackage pricingPackage) {
     this.pricingPackage = pricingPackage;
   }
 
   public GuaranteedSimulationServicePackage packagePublicLevel(GuaranteedSimulationServicePackagePublicLevel packagePublicLevel) {
-    this.packagePublicLevel = JsonNullable.of(packagePublicLevel);
+    this.packagePublicLevel = packagePublicLevel;
     return this;
   }
 
@@ -375,16 +374,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePublicLevel> getPackagePublicLevel() {
+  public GuaranteedSimulationServicePackagePublicLevel getPackagePublicLevel() {
     return packagePublicLevel;
   }
 
-  public void setPackagePublicLevel(JsonNullable<GuaranteedSimulationServicePackagePublicLevel> packagePublicLevel) {
+  public void setPackagePublicLevel(GuaranteedSimulationServicePackagePublicLevel packagePublicLevel) {
     this.packagePublicLevel = packagePublicLevel;
   }
 
   public GuaranteedSimulationServicePackage salesDocument(GuaranteedSimulationServiceSalesDocument salesDocument) {
-    this.salesDocument = JsonNullable.of(salesDocument);
+    this.salesDocument = salesDocument;
     return this;
   }
 
@@ -396,16 +395,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceSalesDocument> getSalesDocument() {
+  public GuaranteedSimulationServiceSalesDocument getSalesDocument() {
     return salesDocument;
   }
 
-  public void setSalesDocument(JsonNullable<GuaranteedSimulationServiceSalesDocument> salesDocument) {
+  public void setSalesDocument(GuaranteedSimulationServiceSalesDocument salesDocument) {
     this.salesDocument = salesDocument;
   }
 
   public GuaranteedSimulationServicePackage promotionalDocument(GuaranteedSimulationServicePromotionalDocument promotionalDocument) {
-    this.promotionalDocument = JsonNullable.of(promotionalDocument);
+    this.promotionalDocument = promotionalDocument;
     return this;
   }
 
@@ -417,16 +416,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePromotionalDocument> getPromotionalDocument() {
+  public GuaranteedSimulationServicePromotionalDocument getPromotionalDocument() {
     return promotionalDocument;
   }
 
-  public void setPromotionalDocument(JsonNullable<GuaranteedSimulationServicePromotionalDocument> promotionalDocument) {
+  public void setPromotionalDocument(GuaranteedSimulationServicePromotionalDocument promotionalDocument) {
     this.promotionalDocument = promotionalDocument;
   }
 
   public GuaranteedSimulationServicePackage relatedDocument(GuaranteedSimulationServiceRelatedDocument relatedDocument) {
-    this.relatedDocument = JsonNullable.of(relatedDocument);
+    this.relatedDocument = relatedDocument;
     return this;
   }
 
@@ -438,16 +437,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceRelatedDocument> getRelatedDocument() {
+  public GuaranteedSimulationServiceRelatedDocument getRelatedDocument() {
     return relatedDocument;
   }
 
-  public void setRelatedDocument(JsonNullable<GuaranteedSimulationServiceRelatedDocument> relatedDocument) {
+  public void setRelatedDocument(GuaranteedSimulationServiceRelatedDocument relatedDocument) {
     this.relatedDocument = relatedDocument;
   }
 
   public GuaranteedSimulationServicePackage adTypePermission(GuaranteedSimulationServicePackagePermissionType adTypePermission) {
-    this.adTypePermission = JsonNullable.of(adTypePermission);
+    this.adTypePermission = adTypePermission;
     return this;
   }
 
@@ -459,24 +458,24 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getAdTypePermission() {
+  public GuaranteedSimulationServicePackagePermissionType getAdTypePermission() {
     return adTypePermission;
   }
 
-  public void setAdTypePermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> adTypePermission) {
+  public void setAdTypePermission(GuaranteedSimulationServicePackagePermissionType adTypePermission) {
     this.adTypePermission = adTypePermission;
   }
 
   public GuaranteedSimulationServicePackage adRequirements(List<GuaranteedSimulationServiceAdRequirement> adRequirements) {
-    this.adRequirements = JsonNullable.of(adRequirements);
+    this.adRequirements = adRequirements;
     return this;
   }
 
   public GuaranteedSimulationServicePackage addAdRequirementsItem(GuaranteedSimulationServiceAdRequirement adRequirementsItem) {
-    if (this.adRequirements == null || !this.adRequirements.isPresent()) {
-      this.adRequirements = JsonNullable.of(new ArrayList<>());
+    if (this.adRequirements == null) {
+      this.adRequirements = new ArrayList<>();
     }
-    this.adRequirements.get().add(adRequirementsItem);
+    this.adRequirements.add(adRequirementsItem);
     return this;
   }
 
@@ -488,16 +487,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceAdRequirement>> getAdRequirements() {
+  public List<GuaranteedSimulationServiceAdRequirement> getAdRequirements() {
     return adRequirements;
   }
 
-  public void setAdRequirements(JsonNullable<List<GuaranteedSimulationServiceAdRequirement>> adRequirements) {
+  public void setAdRequirements(List<GuaranteedSimulationServiceAdRequirement> adRequirements) {
     this.adRequirements = adRequirements;
   }
 
   public GuaranteedSimulationServicePackage actionAfterVideoAdTap(GuaranteedSimulationServiceActionAfterVideoAdTap actionAfterVideoAdTap) {
-    this.actionAfterVideoAdTap = JsonNullable.of(actionAfterVideoAdTap);
+    this.actionAfterVideoAdTap = actionAfterVideoAdTap;
     return this;
   }
 
@@ -509,16 +508,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceActionAfterVideoAdTap> getActionAfterVideoAdTap() {
+  public GuaranteedSimulationServiceActionAfterVideoAdTap getActionAfterVideoAdTap() {
     return actionAfterVideoAdTap;
   }
 
-  public void setActionAfterVideoAdTap(JsonNullable<GuaranteedSimulationServiceActionAfterVideoAdTap> actionAfterVideoAdTap) {
+  public void setActionAfterVideoAdTap(GuaranteedSimulationServiceActionAfterVideoAdTap actionAfterVideoAdTap) {
     this.actionAfterVideoAdTap = actionAfterVideoAdTap;
   }
 
   public GuaranteedSimulationServicePackage instreamDurationType(GuaranteedSimulationServiceInstreamDurationType instreamDurationType) {
-    this.instreamDurationType = JsonNullable.of(instreamDurationType);
+    this.instreamDurationType = instreamDurationType;
     return this;
   }
 
@@ -530,11 +529,11 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceInstreamDurationType> getInstreamDurationType() {
+  public GuaranteedSimulationServiceInstreamDurationType getInstreamDurationType() {
     return instreamDurationType;
   }
 
-  public void setInstreamDurationType(JsonNullable<GuaranteedSimulationServiceInstreamDurationType> instreamDurationType) {
+  public void setInstreamDurationType(GuaranteedSimulationServiceInstreamDurationType instreamDurationType) {
     this.instreamDurationType = instreamDurationType;
   }
 
@@ -559,7 +558,7 @@ public class GuaranteedSimulationServicePackage   {
   }
 
   public GuaranteedSimulationServicePackage packagePermittedViewableFrequencyCap(GuaranteedSimulationServicePackagePermittedViewableFrequencyCap packagePermittedViewableFrequencyCap) {
-    this.packagePermittedViewableFrequencyCap = JsonNullable.of(packagePermittedViewableFrequencyCap);
+    this.packagePermittedViewableFrequencyCap = packagePermittedViewableFrequencyCap;
     return this;
   }
 
@@ -571,16 +570,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedViewableFrequencyCap> getPackagePermittedViewableFrequencyCap() {
+  public GuaranteedSimulationServicePackagePermittedViewableFrequencyCap getPackagePermittedViewableFrequencyCap() {
     return packagePermittedViewableFrequencyCap;
   }
 
-  public void setPackagePermittedViewableFrequencyCap(JsonNullable<GuaranteedSimulationServicePackagePermittedViewableFrequencyCap> packagePermittedViewableFrequencyCap) {
+  public void setPackagePermittedViewableFrequencyCap(GuaranteedSimulationServicePackagePermittedViewableFrequencyCap packagePermittedViewableFrequencyCap) {
     this.packagePermittedViewableFrequencyCap = packagePermittedViewableFrequencyCap;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedAdPlaceTypes(GuaranteedSimulationServicePackagePermittedAdPlaceTypes packagePermittedAdPlaceTypes) {
-    this.packagePermittedAdPlaceTypes = JsonNullable.of(packagePermittedAdPlaceTypes);
+    this.packagePermittedAdPlaceTypes = packagePermittedAdPlaceTypes;
     return this;
   }
 
@@ -592,16 +591,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedAdPlaceTypes> getPackagePermittedAdPlaceTypes() {
+  public GuaranteedSimulationServicePackagePermittedAdPlaceTypes getPackagePermittedAdPlaceTypes() {
     return packagePermittedAdPlaceTypes;
   }
 
-  public void setPackagePermittedAdPlaceTypes(JsonNullable<GuaranteedSimulationServicePackagePermittedAdPlaceTypes> packagePermittedAdPlaceTypes) {
+  public void setPackagePermittedAdPlaceTypes(GuaranteedSimulationServicePackagePermittedAdPlaceTypes packagePermittedAdPlaceTypes) {
     this.packagePermittedAdPlaceTypes = packagePermittedAdPlaceTypes;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedGenderTarget(GuaranteedSimulationServicePackagePermittedGenderTarget packagePermittedGenderTarget) {
-    this.packagePermittedGenderTarget = JsonNullable.of(packagePermittedGenderTarget);
+    this.packagePermittedGenderTarget = packagePermittedGenderTarget;
     return this;
   }
 
@@ -613,16 +612,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedGenderTarget> getPackagePermittedGenderTarget() {
+  public GuaranteedSimulationServicePackagePermittedGenderTarget getPackagePermittedGenderTarget() {
     return packagePermittedGenderTarget;
   }
 
-  public void setPackagePermittedGenderTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedGenderTarget> packagePermittedGenderTarget) {
+  public void setPackagePermittedGenderTarget(GuaranteedSimulationServicePackagePermittedGenderTarget packagePermittedGenderTarget) {
     this.packagePermittedGenderTarget = packagePermittedGenderTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedAgeTarget(GuaranteedSimulationServicePackagePermittedAgeTarget packagePermittedAgeTarget) {
-    this.packagePermittedAgeTarget = JsonNullable.of(packagePermittedAgeTarget);
+    this.packagePermittedAgeTarget = packagePermittedAgeTarget;
     return this;
   }
 
@@ -634,16 +633,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedAgeTarget> getPackagePermittedAgeTarget() {
+  public GuaranteedSimulationServicePackagePermittedAgeTarget getPackagePermittedAgeTarget() {
     return packagePermittedAgeTarget;
   }
 
-  public void setPackagePermittedAgeTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedAgeTarget> packagePermittedAgeTarget) {
+  public void setPackagePermittedAgeTarget(GuaranteedSimulationServicePackagePermittedAgeTarget packagePermittedAgeTarget) {
     this.packagePermittedAgeTarget = packagePermittedAgeTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedAudienceCategoryTarget(GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget packagePermittedAudienceCategoryTarget) {
-    this.packagePermittedAudienceCategoryTarget = JsonNullable.of(packagePermittedAudienceCategoryTarget);
+    this.packagePermittedAudienceCategoryTarget = packagePermittedAudienceCategoryTarget;
     return this;
   }
 
@@ -655,16 +654,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget> getPackagePermittedAudienceCategoryTarget() {
+  public GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget getPackagePermittedAudienceCategoryTarget() {
     return packagePermittedAudienceCategoryTarget;
   }
 
-  public void setPackagePermittedAudienceCategoryTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget> packagePermittedAudienceCategoryTarget) {
+  public void setPackagePermittedAudienceCategoryTarget(GuaranteedSimulationServicePackagePermittedAudienceCategoryTarget packagePermittedAudienceCategoryTarget) {
     this.packagePermittedAudienceCategoryTarget = packagePermittedAudienceCategoryTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedGeoTarget(GuaranteedSimulationServicePackagePermittedGeoTarget packagePermittedGeoTarget) {
-    this.packagePermittedGeoTarget = JsonNullable.of(packagePermittedGeoTarget);
+    this.packagePermittedGeoTarget = packagePermittedGeoTarget;
     return this;
   }
 
@@ -676,16 +675,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedGeoTarget> getPackagePermittedGeoTarget() {
+  public GuaranteedSimulationServicePackagePermittedGeoTarget getPackagePermittedGeoTarget() {
     return packagePermittedGeoTarget;
   }
 
-  public void setPackagePermittedGeoTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedGeoTarget> packagePermittedGeoTarget) {
+  public void setPackagePermittedGeoTarget(GuaranteedSimulationServicePackagePermittedGeoTarget packagePermittedGeoTarget) {
     this.packagePermittedGeoTarget = packagePermittedGeoTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedAdScheduleTarget(GuaranteedSimulationServicePackagePermittedAdScheduleTarget packagePermittedAdScheduleTarget) {
-    this.packagePermittedAdScheduleTarget = JsonNullable.of(packagePermittedAdScheduleTarget);
+    this.packagePermittedAdScheduleTarget = packagePermittedAdScheduleTarget;
     return this;
   }
 
@@ -697,16 +696,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedAdScheduleTarget> getPackagePermittedAdScheduleTarget() {
+  public GuaranteedSimulationServicePackagePermittedAdScheduleTarget getPackagePermittedAdScheduleTarget() {
     return packagePermittedAdScheduleTarget;
   }
 
-  public void setPackagePermittedAdScheduleTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedAdScheduleTarget> packagePermittedAdScheduleTarget) {
+  public void setPackagePermittedAdScheduleTarget(GuaranteedSimulationServicePackagePermittedAdScheduleTarget packagePermittedAdScheduleTarget) {
     this.packagePermittedAdScheduleTarget = packagePermittedAdScheduleTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedDeviceTarget(GuaranteedSimulationServicePackagePermittedDeviceTarget packagePermittedDeviceTarget) {
-    this.packagePermittedDeviceTarget = JsonNullable.of(packagePermittedDeviceTarget);
+    this.packagePermittedDeviceTarget = packagePermittedDeviceTarget;
     return this;
   }
 
@@ -718,16 +717,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedDeviceTarget> getPackagePermittedDeviceTarget() {
+  public GuaranteedSimulationServicePackagePermittedDeviceTarget getPackagePermittedDeviceTarget() {
     return packagePermittedDeviceTarget;
   }
 
-  public void setPackagePermittedDeviceTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedDeviceTarget> packagePermittedDeviceTarget) {
+  public void setPackagePermittedDeviceTarget(GuaranteedSimulationServicePackagePermittedDeviceTarget packagePermittedDeviceTarget) {
     this.packagePermittedDeviceTarget = packagePermittedDeviceTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedOsTarget(GuaranteedSimulationServicePackagePermittedOsTarget packagePermittedOsTarget) {
-    this.packagePermittedOsTarget = JsonNullable.of(packagePermittedOsTarget);
+    this.packagePermittedOsTarget = packagePermittedOsTarget;
     return this;
   }
 
@@ -739,16 +738,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedOsTarget> getPackagePermittedOsTarget() {
+  public GuaranteedSimulationServicePackagePermittedOsTarget getPackagePermittedOsTarget() {
     return packagePermittedOsTarget;
   }
 
-  public void setPackagePermittedOsTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedOsTarget> packagePermittedOsTarget) {
+  public void setPackagePermittedOsTarget(GuaranteedSimulationServicePackagePermittedOsTarget packagePermittedOsTarget) {
     this.packagePermittedOsTarget = packagePermittedOsTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedAppTarget(GuaranteedSimulationServicePackagePermittedAppTarget packagePermittedAppTarget) {
-    this.packagePermittedAppTarget = JsonNullable.of(packagePermittedAppTarget);
+    this.packagePermittedAppTarget = packagePermittedAppTarget;
     return this;
   }
 
@@ -760,16 +759,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedAppTarget> getPackagePermittedAppTarget() {
+  public GuaranteedSimulationServicePackagePermittedAppTarget getPackagePermittedAppTarget() {
     return packagePermittedAppTarget;
   }
 
-  public void setPackagePermittedAppTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedAppTarget> packagePermittedAppTarget) {
+  public void setPackagePermittedAppTarget(GuaranteedSimulationServicePackagePermittedAppTarget packagePermittedAppTarget) {
     this.packagePermittedAppTarget = packagePermittedAppTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedPlacementCategoryTarget(GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget packagePermittedPlacementCategoryTarget) {
-    this.packagePermittedPlacementCategoryTarget = JsonNullable.of(packagePermittedPlacementCategoryTarget);
+    this.packagePermittedPlacementCategoryTarget = packagePermittedPlacementCategoryTarget;
     return this;
   }
 
@@ -781,16 +780,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget> getPackagePermittedPlacementCategoryTarget() {
+  public GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget getPackagePermittedPlacementCategoryTarget() {
     return packagePermittedPlacementCategoryTarget;
   }
 
-  public void setPackagePermittedPlacementCategoryTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget> packagePermittedPlacementCategoryTarget) {
+  public void setPackagePermittedPlacementCategoryTarget(GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget packagePermittedPlacementCategoryTarget) {
     this.packagePermittedPlacementCategoryTarget = packagePermittedPlacementCategoryTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedPositionTarget(GuaranteedSimulationServicePackagePermittedPositionTarget packagePermittedPositionTarget) {
-    this.packagePermittedPositionTarget = JsonNullable.of(packagePermittedPositionTarget);
+    this.packagePermittedPositionTarget = packagePermittedPositionTarget;
     return this;
   }
 
@@ -802,16 +801,16 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedPositionTarget> getPackagePermittedPositionTarget() {
+  public GuaranteedSimulationServicePackagePermittedPositionTarget getPackagePermittedPositionTarget() {
     return packagePermittedPositionTarget;
   }
 
-  public void setPackagePermittedPositionTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedPositionTarget> packagePermittedPositionTarget) {
+  public void setPackagePermittedPositionTarget(GuaranteedSimulationServicePackagePermittedPositionTarget packagePermittedPositionTarget) {
     this.packagePermittedPositionTarget = packagePermittedPositionTarget;
   }
 
   public GuaranteedSimulationServicePackage packagePermittedSiteRetargetingTarget(GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget packagePermittedSiteRetargetingTarget) {
-    this.packagePermittedSiteRetargetingTarget = JsonNullable.of(packagePermittedSiteRetargetingTarget);
+    this.packagePermittedSiteRetargetingTarget = packagePermittedSiteRetargetingTarget;
     return this;
   }
 
@@ -823,17 +822,17 @@ public class GuaranteedSimulationServicePackage   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget> getPackagePermittedSiteRetargetingTarget() {
+  public GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget getPackagePermittedSiteRetargetingTarget() {
     return packagePermittedSiteRetargetingTarget;
   }
 
-  public void setPackagePermittedSiteRetargetingTarget(JsonNullable<GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget> packagePermittedSiteRetargetingTarget) {
+  public void setPackagePermittedSiteRetargetingTarget(GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget packagePermittedSiteRetargetingTarget) {
     this.packagePermittedSiteRetargetingTarget = packagePermittedSiteRetargetingTarget;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -927,7 +926,7 @@ public class GuaranteedSimulationServicePackage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

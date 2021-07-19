@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceAdPlaceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePermissionType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePermittedAdPlaceTypesオブジェクトは、掲載面設定の制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePermittedAdPlaceTypes object holds the restriction information about the ad placement setting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePermittedAdPlaceTypesオブジェクトは、掲載面設定の制限情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePermittedAdPlaceTypes object holds the restriction information about the ad placement setting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePermittedAdPlaceTypes   {
   @JsonProperty("permission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> permission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType permission = null;
 
   @JsonProperty("adPlaceTypes")
   @Valid
   private List<GuaranteedSimulationServiceAdPlaceType> adPlaceTypes = null;
 
   public GuaranteedSimulationServicePackagePermittedAdPlaceTypes permission(GuaranteedSimulationServicePackagePermissionType permission) {
-    this.permission = JsonNullable.of(permission);
+    this.permission = permission;
     return this;
   }
 
@@ -39,11 +38,11 @@ public class GuaranteedSimulationServicePackagePermittedAdPlaceTypes   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getPermission() {
+  public GuaranteedSimulationServicePackagePermissionType getPermission() {
     return permission;
   }
 
-  public void setPermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> permission) {
+  public void setPermission(GuaranteedSimulationServicePackagePermissionType permission) {
     this.permission = permission;
   }
 
@@ -78,7 +77,7 @@ public class GuaranteedSimulationServicePackagePermittedAdPlaceTypes   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class GuaranteedSimulationServicePackagePermittedAdPlaceTypes   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

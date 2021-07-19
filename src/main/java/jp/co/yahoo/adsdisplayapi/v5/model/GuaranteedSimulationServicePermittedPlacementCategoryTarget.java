@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePlacementCategoryType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedPlacementCategoryTargetオブジェクトは、プレイスメントカテゴリターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedPlacementCategoryTarget object holds configuration information of placement category targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedPlacementCategoryTargetオブジェクトは、プレイスメントカテゴリターゲットの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedPlacementCategoryTarget object holds configuration information of placement category targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedPlacementCategoryTarget   {
   @JsonProperty("placementCategoryListId")
-  private JsonNullable<Long> placementCategoryListId = JsonNullable.undefined();
+  private Long placementCategoryListId = null;
 
   @JsonProperty("placementCategoryListName")
-  private JsonNullable<String> placementCategoryListName = JsonNullable.undefined();
+  private String placementCategoryListName = null;
 
   @JsonProperty("placementCategoryType")
-  private JsonNullable<GuaranteedSimulationServicePlacementCategoryType> placementCategoryType = JsonNullable.undefined();
+  private GuaranteedSimulationServicePlacementCategoryType placementCategoryType = null;
 
   public GuaranteedSimulationServicePermittedPlacementCategoryTarget placementCategoryListId(Long placementCategoryListId) {
-    this.placementCategoryListId = JsonNullable.of(placementCategoryListId);
+    this.placementCategoryListId = placementCategoryListId;
     return this;
   }
 
@@ -37,16 +36,16 @@ public class GuaranteedSimulationServicePermittedPlacementCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">プレイスメントカテゴリリストIDです。</div> <div lang=\"en\">Placement category ID.</div> ")
 
 
-  public JsonNullable<Long> getPlacementCategoryListId() {
+  public Long getPlacementCategoryListId() {
     return placementCategoryListId;
   }
 
-  public void setPlacementCategoryListId(JsonNullable<Long> placementCategoryListId) {
+  public void setPlacementCategoryListId(Long placementCategoryListId) {
     this.placementCategoryListId = placementCategoryListId;
   }
 
   public GuaranteedSimulationServicePermittedPlacementCategoryTarget placementCategoryListName(String placementCategoryListName) {
-    this.placementCategoryListName = JsonNullable.of(placementCategoryListName);
+    this.placementCategoryListName = placementCategoryListName;
     return this;
   }
 
@@ -57,16 +56,16 @@ public class GuaranteedSimulationServicePermittedPlacementCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">プレイスメントカテゴリリスト名です。</div> <div lang=\"en\">Placement category name.</div> ")
 
 
-  public JsonNullable<String> getPlacementCategoryListName() {
+  public String getPlacementCategoryListName() {
     return placementCategoryListName;
   }
 
-  public void setPlacementCategoryListName(JsonNullable<String> placementCategoryListName) {
+  public void setPlacementCategoryListName(String placementCategoryListName) {
     this.placementCategoryListName = placementCategoryListName;
   }
 
   public GuaranteedSimulationServicePermittedPlacementCategoryTarget placementCategoryType(GuaranteedSimulationServicePlacementCategoryType placementCategoryType) {
-    this.placementCategoryType = JsonNullable.of(placementCategoryType);
+    this.placementCategoryType = placementCategoryType;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class GuaranteedSimulationServicePermittedPlacementCategoryTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePlacementCategoryType> getPlacementCategoryType() {
+  public GuaranteedSimulationServicePlacementCategoryType getPlacementCategoryType() {
     return placementCategoryType;
   }
 
-  public void setPlacementCategoryType(JsonNullable<GuaranteedSimulationServicePlacementCategoryType> placementCategoryType) {
+  public void setPlacementCategoryType(GuaranteedSimulationServicePlacementCategoryType placementCategoryType) {
     this.placementCategoryType = placementCategoryType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class GuaranteedSimulationServicePermittedPlacementCategoryTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   GuaranteedSimulationServiceVimpsSOVPricingPackageは、vimps購入型（SOV）の購入タイプ設定情報を保持します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   GuaranteedSimulationServiceVimpsSOVPricingPackage holds the purchase type setting information about the vimps purchase type (share of voice).&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input.  &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   GuaranteedSimulationServiceVimpsSOVPricingPackageは、vimps購入型（SOV）の購入タイプ設定情報を保持します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   GuaranteedSimulationServiceVimpsSOVPricingPackage holds the purchase type setting information about the vimps purchase type (share of voice).<br>   Although this field will be returned in the response, it will be ignored on input.  </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceVimpsSOVPricingPackage   {
   @JsonProperty("fixedLifetimeBudget")
-  private JsonNullable<Long> fixedLifetimeBudget = JsonNullable.undefined();
+  private Long fixedLifetimeBudget = null;
 
   @JsonProperty("sovRate")
-  private JsonNullable<Long> sovRate = JsonNullable.undefined();
+  private Long sovRate = null;
 
   public GuaranteedSimulationServiceVimpsSOVPricingPackage fixedLifetimeBudget(Long fixedLifetimeBudget) {
-    this.fixedLifetimeBudget = JsonNullable.of(fixedLifetimeBudget);
+    this.fixedLifetimeBudget = fixedLifetimeBudget;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class GuaranteedSimulationServiceVimpsSOVPricingPackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品価格を表します。</div> <div lang=\"en\">Package price.</div> ")
 
 
-  public JsonNullable<Long> getFixedLifetimeBudget() {
+  public Long getFixedLifetimeBudget() {
     return fixedLifetimeBudget;
   }
 
-  public void setFixedLifetimeBudget(JsonNullable<Long> fixedLifetimeBudget) {
+  public void setFixedLifetimeBudget(Long fixedLifetimeBudget) {
     this.fixedLifetimeBudget = fixedLifetimeBudget;
   }
 
   public GuaranteedSimulationServiceVimpsSOVPricingPackage sovRate(Long sovRate) {
-    this.sovRate = JsonNullable.of(sovRate);
+    this.sovRate = sovRate;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class GuaranteedSimulationServiceVimpsSOVPricingPackage   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SOV（1%〜100%）です。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> SOV (1% to 100%).<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getSovRate() {
+  public Long getSovRate() {
     return sovRate;
   }
 
-  public void setSovRate(JsonNullable<Long> sovRate) {
+  public void setSovRate(Long sovRate) {
     this.sovRate = sovRate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class GuaranteedSimulationServiceVimpsSOVPricingPackage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

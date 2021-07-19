@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePermissionType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePermittedDeviceTarget;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePermittedDeviceTargetオブジェクトは、デバイスターゲット設定の制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePermittedDeviceTarget object holds the restriction information about the setting of the device target.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePermittedDeviceTargetオブジェクトは、デバイスターゲット設定の制限情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePermittedDeviceTarget object holds the restriction information about the setting of the device target.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePermittedDeviceTarget   {
   @JsonProperty("targetPermission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType targetPermission = null;
 
   @JsonProperty("permittedTargets")
   @Valid
   private List<GuaranteedSimulationServicePermittedDeviceTarget> permittedTargets = null;
 
   public GuaranteedSimulationServicePackagePermittedDeviceTarget targetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
-    this.targetPermission = JsonNullable.of(targetPermission);
+    this.targetPermission = targetPermission;
     return this;
   }
 
@@ -39,11 +38,11 @@ public class GuaranteedSimulationServicePackagePermittedDeviceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getTargetPermission() {
+  public GuaranteedSimulationServicePackagePermissionType getTargetPermission() {
     return targetPermission;
   }
 
-  public void setTargetPermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission) {
+  public void setTargetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
     this.targetPermission = targetPermission;
   }
 
@@ -78,7 +77,7 @@ public class GuaranteedSimulationServicePackagePermittedDeviceTarget   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class GuaranteedSimulationServicePackagePermittedDeviceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

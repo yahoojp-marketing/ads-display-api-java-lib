@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServiceFrequencyLevel;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServiceFrequencyTimeUnit;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,19 +14,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedCampaignServiceViewableFrequencyCap   {
   @JsonProperty("frequencyLevel")
-  private JsonNullable<GuaranteedCampaignServiceFrequencyLevel> frequencyLevel = JsonNullable.undefined();
+  private GuaranteedCampaignServiceFrequencyLevel frequencyLevel = null;
 
   @JsonProperty("frequencyTimeUnit")
-  private JsonNullable<GuaranteedCampaignServiceFrequencyTimeUnit> frequencyTimeUnit = JsonNullable.undefined();
+  private GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit = null;
 
   @JsonProperty("vImps")
-  private JsonNullable<Long> vImps = JsonNullable.undefined();
+  private Long vImps = null;
 
   public GuaranteedCampaignServiceViewableFrequencyCap frequencyLevel(GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
-    this.frequencyLevel = JsonNullable.of(frequencyLevel);
+    this.frequencyLevel = frequencyLevel;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class GuaranteedCampaignServiceViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceFrequencyLevel> getFrequencyLevel() {
+  public GuaranteedCampaignServiceFrequencyLevel getFrequencyLevel() {
     return frequencyLevel;
   }
 
-  public void setFrequencyLevel(JsonNullable<GuaranteedCampaignServiceFrequencyLevel> frequencyLevel) {
+  public void setFrequencyLevel(GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
     this.frequencyLevel = frequencyLevel;
   }
 
   public GuaranteedCampaignServiceViewableFrequencyCap frequencyTimeUnit(GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
-    this.frequencyTimeUnit = JsonNullable.of(frequencyTimeUnit);
+    this.frequencyTimeUnit = frequencyTimeUnit;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class GuaranteedCampaignServiceViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceFrequencyTimeUnit> getFrequencyTimeUnit() {
+  public GuaranteedCampaignServiceFrequencyTimeUnit getFrequencyTimeUnit() {
     return frequencyTimeUnit;
   }
 
-  public void setFrequencyTimeUnit(JsonNullable<GuaranteedCampaignServiceFrequencyTimeUnit> frequencyTimeUnit) {
+  public void setFrequencyTimeUnit(GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
     this.frequencyTimeUnit = frequencyTimeUnit;
   }
 
   public GuaranteedCampaignServiceViewableFrequencyCap vImps(Long vImps) {
-    this.vImps = JsonNullable.of(vImps);
+    this.vImps = vImps;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class GuaranteedCampaignServiceViewableFrequencyCap   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 同一ユーザに対する広告の最大ビューアブルインプレッション数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of ad viewable impressions to same user.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getvImps() {
+  public Long getvImps() {
     return vImps;
   }
 
-  public void setvImps(JsonNullable<Long> vImps) {
+  public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class GuaranteedCampaignServiceViewableFrequencyCap   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

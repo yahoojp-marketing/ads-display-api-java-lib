@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceDeviceOsType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceOsTargetオブジェクトは、OSターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceOsTarget object holds configuration information of OS targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceOsTargetオブジェクトは、OSターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceOsTarget object holds configuration information of OS targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceOsTarget   {
   @JsonProperty("deviceOsType")
-  private JsonNullable<StatsServiceDeviceOsType> deviceOsType = JsonNullable.undefined();
+  private StatsServiceDeviceOsType deviceOsType = null;
 
   public StatsServiceOsTarget deviceOsType(StatsServiceDeviceOsType deviceOsType) {
-    this.deviceOsType = JsonNullable.of(deviceOsType);
+    this.deviceOsType = deviceOsType;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class StatsServiceOsTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceDeviceOsType> getDeviceOsType() {
+  public StatsServiceDeviceOsType getDeviceOsType() {
     return deviceOsType;
   }
 
-  public void setDeviceOsType(JsonNullable<StatsServiceDeviceOsType> deviceOsType) {
+  public void setDeviceOsType(StatsServiceDeviceOsType deviceOsType) {
     this.deviceOsType = deviceOsType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class StatsServiceOsTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

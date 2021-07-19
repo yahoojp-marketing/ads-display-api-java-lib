@@ -16,7 +16,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServicePackage;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServiceServingStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServiceUserStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServiceViewableFrequencyCap;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -24,66 +23,66 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedCampaignオブジェクトは、予約型のキャンペーン情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedCampaign object describes guaranteed campaign information. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedCampaignオブジェクトは、予約型のキャンペーン情報を表します。</div> <div lang=\"en\">GuaranteedCampaign object describes guaranteed campaign information. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedCampaign   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("lifetimeBudget")
-  private JsonNullable<GuaranteedCampaignServiceLifetimeBudget> lifetimeBudget = JsonNullable.undefined();
+  private GuaranteedCampaignServiceLifetimeBudget lifetimeBudget = null;
 
   @JsonProperty("campaignBiddingStrategy")
-  private JsonNullable<GuaranteedCampaignServiceCampaignBiddingStrategy> campaignBiddingStrategy = JsonNullable.undefined();
+  private GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy = null;
 
   @JsonProperty("campaignGoal")
-  private JsonNullable<String> campaignGoal = JsonNullable.undefined();
+  private String campaignGoal = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("labels")
   @Valid
-  private JsonNullable<List<GuaranteedCampaignServiceLabel>> labels = JsonNullable.undefined();
+  private List<GuaranteedCampaignServiceLabel> labels = null;
 
   @JsonProperty("servingStatus")
-  private JsonNullable<GuaranteedCampaignServiceServingStatus> servingStatus = JsonNullable.undefined();
+  private GuaranteedCampaignServiceServingStatus servingStatus = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<GuaranteedCampaignServiceUserStatus> userStatus = JsonNullable.undefined();
+  private GuaranteedCampaignServiceUserStatus userStatus = null;
 
   @JsonProperty("viewableFrequencyCap")
-  private JsonNullable<GuaranteedCampaignServiceViewableFrequencyCap> viewableFrequencyCap = JsonNullable.undefined();
+  private GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap = null;
 
   @JsonProperty("guaranteedSimulationId")
-  private JsonNullable<Long> guaranteedSimulationId = JsonNullable.undefined();
+  private Long guaranteedSimulationId = null;
 
   @JsonProperty("notificationEmailAddress")
   @Valid
-  private JsonNullable<List<String>> notificationEmailAddress = JsonNullable.undefined();
+  private List<String> notificationEmailAddress = null;
 
   @JsonProperty("adCategoryStatus")
-  private JsonNullable<GuaranteedCampaignServiceAdCategoryStatus> adCategoryStatus = JsonNullable.undefined();
+  private GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus = null;
 
   @JsonProperty("campaignCanceledDate")
-  private JsonNullable<String> campaignCanceledDate = JsonNullable.undefined();
+  private String campaignCanceledDate = null;
 
   @JsonProperty("package")
-  private JsonNullable<GuaranteedCampaignServicePackage> _package = JsonNullable.undefined();
+  private GuaranteedCampaignServicePackage _package = null;
 
   @JsonProperty("brandTracking")
-  private JsonNullable<GuaranteedCampaignServiceBrandTracking> brandTracking = JsonNullable.undefined();
+  private GuaranteedCampaignServiceBrandTracking brandTracking = null;
 
   public GuaranteedCampaign accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -94,16 +93,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID. <br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedCampaign lifetimeBudget(GuaranteedCampaignServiceLifetimeBudget lifetimeBudget) {
-    this.lifetimeBudget = JsonNullable.of(lifetimeBudget);
+    this.lifetimeBudget = lifetimeBudget;
     return this;
   }
 
@@ -115,16 +114,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceLifetimeBudget> getLifetimeBudget() {
+  public GuaranteedCampaignServiceLifetimeBudget getLifetimeBudget() {
     return lifetimeBudget;
   }
 
-  public void setLifetimeBudget(JsonNullable<GuaranteedCampaignServiceLifetimeBudget> lifetimeBudget) {
+  public void setLifetimeBudget(GuaranteedCampaignServiceLifetimeBudget lifetimeBudget) {
     this.lifetimeBudget = lifetimeBudget;
   }
 
   public GuaranteedCampaign campaignBiddingStrategy(GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy) {
-    this.campaignBiddingStrategy = JsonNullable.of(campaignBiddingStrategy);
+    this.campaignBiddingStrategy = campaignBiddingStrategy;
     return this;
   }
 
@@ -136,16 +135,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceCampaignBiddingStrategy> getCampaignBiddingStrategy() {
+  public GuaranteedCampaignServiceCampaignBiddingStrategy getCampaignBiddingStrategy() {
     return campaignBiddingStrategy;
   }
 
-  public void setCampaignBiddingStrategy(JsonNullable<GuaranteedCampaignServiceCampaignBiddingStrategy> campaignBiddingStrategy) {
+  public void setCampaignBiddingStrategy(GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy) {
     this.campaignBiddingStrategy = campaignBiddingStrategy;
   }
 
   public GuaranteedCampaign campaignGoal(String campaignGoal) {
-    this.campaignGoal = JsonNullable.of(campaignGoal);
+    this.campaignGoal = campaignGoal;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン目的です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Campaign goal.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCampaignGoal() {
+  public String getCampaignGoal() {
     return campaignGoal;
   }
 
-  public void setCampaignGoal(JsonNullable<String> campaignGoal) {
+  public void setCampaignGoal(String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
 
   public GuaranteedCampaign campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -176,16 +175,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドはSET時に必須となります。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public GuaranteedCampaign campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -196,16 +195,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。 </div> <div lang=\"en\"> Campaign Name. </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public GuaranteedCampaign endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -216,24 +215,24 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 終了日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> End date.<br> ∗ Format: yyyyMMdd<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public GuaranteedCampaign labels(List<GuaranteedCampaignServiceLabel> labels) {
-    this.labels = JsonNullable.of(labels);
+    this.labels = labels;
     return this;
   }
 
   public GuaranteedCampaign addLabelsItem(GuaranteedCampaignServiceLabel labelsItem) {
-    if (this.labels == null || !this.labels.isPresent()) {
-      this.labels = JsonNullable.of(new ArrayList<>());
+    if (this.labels == null) {
+      this.labels = new ArrayList<>();
     }
-    this.labels.get().add(labelsItem);
+    this.labels.add(labelsItem);
     return this;
   }
 
@@ -245,16 +244,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedCampaignServiceLabel>> getLabels() {
+  public List<GuaranteedCampaignServiceLabel> getLabels() {
     return labels;
   }
 
-  public void setLabels(JsonNullable<List<GuaranteedCampaignServiceLabel>> labels) {
+  public void setLabels(List<GuaranteedCampaignServiceLabel> labels) {
     this.labels = labels;
   }
 
   public GuaranteedCampaign servingStatus(GuaranteedCampaignServiceServingStatus servingStatus) {
-    this.servingStatus = JsonNullable.of(servingStatus);
+    this.servingStatus = servingStatus;
     return this;
   }
 
@@ -266,16 +265,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceServingStatus> getServingStatus() {
+  public GuaranteedCampaignServiceServingStatus getServingStatus() {
     return servingStatus;
   }
 
-  public void setServingStatus(JsonNullable<GuaranteedCampaignServiceServingStatus> servingStatus) {
+  public void setServingStatus(GuaranteedCampaignServiceServingStatus servingStatus) {
     this.servingStatus = servingStatus;
   }
 
   public GuaranteedCampaign startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -286,16 +285,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 開始日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Start date.<br> ∗ Format: yyyyMMdd<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public GuaranteedCampaign userStatus(GuaranteedCampaignServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -307,16 +306,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceUserStatus> getUserStatus() {
+  public GuaranteedCampaignServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<GuaranteedCampaignServiceUserStatus> userStatus) {
+  public void setUserStatus(GuaranteedCampaignServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public GuaranteedCampaign viewableFrequencyCap(GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap) {
-    this.viewableFrequencyCap = JsonNullable.of(viewableFrequencyCap);
+    this.viewableFrequencyCap = viewableFrequencyCap;
     return this;
   }
 
@@ -328,16 +327,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceViewableFrequencyCap> getViewableFrequencyCap() {
+  public GuaranteedCampaignServiceViewableFrequencyCap getViewableFrequencyCap() {
     return viewableFrequencyCap;
   }
 
-  public void setViewableFrequencyCap(JsonNullable<GuaranteedCampaignServiceViewableFrequencyCap> viewableFrequencyCap) {
+  public void setViewableFrequencyCap(GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap) {
     this.viewableFrequencyCap = viewableFrequencyCap;
   }
 
   public GuaranteedCampaign guaranteedSimulationId(Long guaranteedSimulationId) {
-    this.guaranteedSimulationId = JsonNullable.of(guaranteedSimulationId);
+    this.guaranteedSimulationId = guaranteedSimulationId;
     return this;
   }
 
@@ -348,24 +347,24 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> シミュレーションIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Simulation ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getGuaranteedSimulationId() {
+  public Long getGuaranteedSimulationId() {
     return guaranteedSimulationId;
   }
 
-  public void setGuaranteedSimulationId(JsonNullable<Long> guaranteedSimulationId) {
+  public void setGuaranteedSimulationId(Long guaranteedSimulationId) {
     this.guaranteedSimulationId = guaranteedSimulationId;
   }
 
   public GuaranteedCampaign notificationEmailAddress(List<String> notificationEmailAddress) {
-    this.notificationEmailAddress = JsonNullable.of(notificationEmailAddress);
+    this.notificationEmailAddress = notificationEmailAddress;
     return this;
   }
 
   public GuaranteedCampaign addNotificationEmailAddressItem(String notificationEmailAddressItem) {
-    if (this.notificationEmailAddress == null || !this.notificationEmailAddress.isPresent()) {
-      this.notificationEmailAddress = JsonNullable.of(new ArrayList<>());
+    if (this.notificationEmailAddress == null) {
+      this.notificationEmailAddress = new ArrayList<>();
     }
-    this.notificationEmailAddress.get().add(notificationEmailAddressItem);
+    this.notificationEmailAddress.add(notificationEmailAddressItem);
     return this;
   }
 
@@ -376,16 +375,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 連絡先メールアドレスです。<br> </div> <div lang=\"en\"> Email address to send notifications.<br> </div> ")
 
 
-  public JsonNullable<List<String>> getNotificationEmailAddress() {
+  public List<String> getNotificationEmailAddress() {
     return notificationEmailAddress;
   }
 
-  public void setNotificationEmailAddress(JsonNullable<List<String>> notificationEmailAddress) {
+  public void setNotificationEmailAddress(List<String> notificationEmailAddress) {
     this.notificationEmailAddress = notificationEmailAddress;
   }
 
   public GuaranteedCampaign adCategoryStatus(GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus) {
-    this.adCategoryStatus = JsonNullable.of(adCategoryStatus);
+    this.adCategoryStatus = adCategoryStatus;
     return this;
   }
 
@@ -397,16 +396,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceAdCategoryStatus> getAdCategoryStatus() {
+  public GuaranteedCampaignServiceAdCategoryStatus getAdCategoryStatus() {
     return adCategoryStatus;
   }
 
-  public void setAdCategoryStatus(JsonNullable<GuaranteedCampaignServiceAdCategoryStatus> adCategoryStatus) {
+  public void setAdCategoryStatus(GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus) {
     this.adCategoryStatus = adCategoryStatus;
   }
 
   public GuaranteedCampaign campaignCanceledDate(String campaignCanceledDate) {
-    this.campaignCanceledDate = JsonNullable.of(campaignCanceledDate);
+    this.campaignCanceledDate = campaignCanceledDate;
     return this;
   }
 
@@ -417,16 +416,16 @@ public class GuaranteedCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 予約型のキャンペーンをキャンセルした日時です。<br> ※フォーマット：yyyyMMddHHmmss<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> A date and time which the guaranteed campaign is cancelled.<br> ∗ Format: yyyyMMddHHmmss<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCampaignCanceledDate() {
+  public String getCampaignCanceledDate() {
     return campaignCanceledDate;
   }
 
-  public void setCampaignCanceledDate(JsonNullable<String> campaignCanceledDate) {
+  public void setCampaignCanceledDate(String campaignCanceledDate) {
     this.campaignCanceledDate = campaignCanceledDate;
   }
 
   public GuaranteedCampaign _package(GuaranteedCampaignServicePackage _package) {
-    this._package = JsonNullable.of(_package);
+    this._package = _package;
     return this;
   }
 
@@ -438,16 +437,16 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServicePackage> getPackage() {
+  public GuaranteedCampaignServicePackage getPackage() {
     return _package;
   }
 
-  public void setPackage(JsonNullable<GuaranteedCampaignServicePackage> _package) {
+  public void setPackage(GuaranteedCampaignServicePackage _package) {
     this._package = _package;
   }
 
   public GuaranteedCampaign brandTracking(GuaranteedCampaignServiceBrandTracking brandTracking) {
-    this.brandTracking = JsonNullable.of(brandTracking);
+    this.brandTracking = brandTracking;
     return this;
   }
 
@@ -459,17 +458,17 @@ public class GuaranteedCampaign   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceBrandTracking> getBrandTracking() {
+  public GuaranteedCampaignServiceBrandTracking getBrandTracking() {
     return brandTracking;
   }
 
-  public void setBrandTracking(JsonNullable<GuaranteedCampaignServiceBrandTracking> brandTracking) {
+  public void setBrandTracking(GuaranteedCampaignServiceBrandTracking brandTracking) {
     this.brandTracking = brandTracking;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -533,7 +532,7 @@ public class GuaranteedCampaign   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

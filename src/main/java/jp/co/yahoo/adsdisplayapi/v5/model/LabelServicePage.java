@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.LabelServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;LabelServicePageオブジェクトは、取得されるラベルに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;LabelServicePage object describes the entry on label to be acquired.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">LabelServicePageオブジェクトは、取得されるラベルに関するエントリーを表します。</div> <div lang=\"en\">LabelServicePage object describes the entry on label to be acquired.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class LabelServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<LabelServiceValue>> values = JsonNullable.undefined();
+  private List<LabelServiceValue> values = null;
 
   public LabelServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class LabelServicePage   {
   }
 
   public LabelServicePage values(List<LabelServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public LabelServicePage addValuesItem(LabelServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class LabelServicePage   {
 
   @Valid
 
-  public JsonNullable<List<LabelServiceValue>> getValues() {
+  public List<LabelServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<LabelServiceValue>> values) {
+  public void setValues(List<LabelServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class LabelServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServicePageオブジェクトは、取得されるFeed情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServicePage object contains entry on Feed information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedServicePageオブジェクトは、取得されるFeed情報を保持します。</div> <div lang=\"en\">FeedServicePage object contains entry on Feed information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<FeedServiceValue>> values = JsonNullable.undefined();
+  private List<FeedServiceValue> values = null;
 
   public FeedServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class FeedServicePage   {
   }
 
   public FeedServicePage values(List<FeedServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public FeedServicePage addValuesItem(FeedServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class FeedServicePage   {
 
   @Valid
 
-  public JsonNullable<List<FeedServiceValue>> getValues() {
+  public List<FeedServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<FeedServiceValue>> values) {
+  public void setValues(List<FeedServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class FeedServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

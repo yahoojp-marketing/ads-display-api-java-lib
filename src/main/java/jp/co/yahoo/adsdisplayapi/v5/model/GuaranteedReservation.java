@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,29 +14,29 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedReservationオブジェクトは、シミュレーション結果に基づいた予約情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedReservation object contains a reservation information based on simulation result. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedReservationオブジェクトは、シミュレーション結果に基づいた予約情報を保持します。</div> <div lang=\"en\">GuaranteedReservation object contains a reservation information based on simulation result. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedReservation   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("guaranteedSimulationId")
-  private JsonNullable<Long> guaranteedSimulationId = JsonNullable.undefined();
+  private Long guaranteedSimulationId = null;
 
   @JsonProperty("lifetimeBudget")
-  private JsonNullable<Long> lifetimeBudget = JsonNullable.undefined();
+  private Long lifetimeBudget = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("notificationEmailAddress")
   @Valid
-  private JsonNullable<List<String>> notificationEmailAddress = JsonNullable.undefined();
+  private List<String> notificationEmailAddress = null;
 
   public GuaranteedReservation accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -48,16 +47,16 @@ public class GuaranteedReservation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedReservation guaranteedSimulationId(Long guaranteedSimulationId) {
-    this.guaranteedSimulationId = JsonNullable.of(guaranteedSimulationId);
+    this.guaranteedSimulationId = guaranteedSimulationId;
     return this;
   }
 
@@ -68,16 +67,16 @@ public class GuaranteedReservation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> シミュレーションIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Simulation ID. <br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getGuaranteedSimulationId() {
+  public Long getGuaranteedSimulationId() {
     return guaranteedSimulationId;
   }
 
-  public void setGuaranteedSimulationId(JsonNullable<Long> guaranteedSimulationId) {
+  public void setGuaranteedSimulationId(Long guaranteedSimulationId) {
     this.guaranteedSimulationId = guaranteedSimulationId;
   }
 
   public GuaranteedReservation lifetimeBudget(Long lifetimeBudget) {
-    this.lifetimeBudget = JsonNullable.of(lifetimeBudget);
+    this.lifetimeBudget = lifetimeBudget;
     return this;
   }
 
@@ -88,16 +87,16 @@ public class GuaranteedReservation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの通期予算額です。<br> ※この「通期予算」は、キャンペーンの全期間を通じて消費される予算を意味します。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> An amount of campaign's lifetime budget.<br> * \"lifetime budget\" means the total budget that is spent throughout the entire duration of the campaign.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getLifetimeBudget() {
+  public Long getLifetimeBudget() {
     return lifetimeBudget;
   }
 
-  public void setLifetimeBudget(JsonNullable<Long> lifetimeBudget) {
+  public void setLifetimeBudget(Long lifetimeBudget) {
     this.lifetimeBudget = lifetimeBudget;
   }
 
   public GuaranteedReservation adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -108,16 +107,16 @@ public class GuaranteedReservation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ名です。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Ad group name.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public GuaranteedReservation campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -128,24 +127,24 @@ public class GuaranteedReservation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign name.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public GuaranteedReservation notificationEmailAddress(List<String> notificationEmailAddress) {
-    this.notificationEmailAddress = JsonNullable.of(notificationEmailAddress);
+    this.notificationEmailAddress = notificationEmailAddress;
     return this;
   }
 
   public GuaranteedReservation addNotificationEmailAddressItem(String notificationEmailAddressItem) {
-    if (this.notificationEmailAddress == null || !this.notificationEmailAddress.isPresent()) {
-      this.notificationEmailAddress = JsonNullable.of(new ArrayList<>());
+    if (this.notificationEmailAddress == null) {
+      this.notificationEmailAddress = new ArrayList<>();
     }
-    this.notificationEmailAddress.get().add(notificationEmailAddressItem);
+    this.notificationEmailAddress.add(notificationEmailAddressItem);
     return this;
   }
 
@@ -156,17 +155,17 @@ public class GuaranteedReservation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 連絡先メールアドレスです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Email address to send notifications.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<List<String>> getNotificationEmailAddress() {
+  public List<String> getNotificationEmailAddress() {
     return notificationEmailAddress;
   }
 
-  public void setNotificationEmailAddress(JsonNullable<List<String>> notificationEmailAddress) {
+  public void setNotificationEmailAddress(List<String> notificationEmailAddress) {
     this.notificationEmailAddress = notificationEmailAddress;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -206,7 +205,7 @@ public class GuaranteedReservation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

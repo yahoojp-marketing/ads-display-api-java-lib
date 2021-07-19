@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,22 +12,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServiceAdCategoryオブジェクトは、広告カテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServiceAdCategory object contains ad category information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServiceAdCategoryオブジェクトは、広告カテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">GuaranteedSimulationServiceAdCategory object contains ad category information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceAdCategory   {
   @JsonProperty("adCategoryId")
-  private JsonNullable<String> adCategoryId = JsonNullable.undefined();
+  private String adCategoryId = null;
 
   @JsonProperty("adCategoryName")
-  private JsonNullable<String> adCategoryName = JsonNullable.undefined();
+  private String adCategoryName = null;
 
   @JsonProperty("parentCategoryId")
-  private JsonNullable<String> parentCategoryId = JsonNullable.undefined();
+  private String parentCategoryId = null;
 
   @JsonProperty("parentCategoryName")
-  private JsonNullable<String> parentCategoryName = JsonNullable.undefined();
+  private String parentCategoryName = null;
 
   public GuaranteedSimulationServiceAdCategory adCategoryId(String adCategoryId) {
-    this.adCategoryId = JsonNullable.of(adCategoryId);
+    this.adCategoryId = adCategoryId;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class GuaranteedSimulationServiceAdCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告カテゴリーIDを表します。</div> <div lang=\"en\">Ad category ID.</div> ")
 
 
-  public JsonNullable<String> getAdCategoryId() {
+  public String getAdCategoryId() {
     return adCategoryId;
   }
 
-  public void setAdCategoryId(JsonNullable<String> adCategoryId) {
+  public void setAdCategoryId(String adCategoryId) {
     this.adCategoryId = adCategoryId;
   }
 
   public GuaranteedSimulationServiceAdCategory adCategoryName(String adCategoryName) {
-    this.adCategoryName = JsonNullable.of(adCategoryName);
+    this.adCategoryName = adCategoryName;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class GuaranteedSimulationServiceAdCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告カテゴリー名を表します。</div> <div lang=\"en\">Ad category name.</div> ")
 
 
-  public JsonNullable<String> getAdCategoryName() {
+  public String getAdCategoryName() {
     return adCategoryName;
   }
 
-  public void setAdCategoryName(JsonNullable<String> adCategoryName) {
+  public void setAdCategoryName(String adCategoryName) {
     this.adCategoryName = adCategoryName;
   }
 
   public GuaranteedSimulationServiceAdCategory parentCategoryId(String parentCategoryId) {
-    this.parentCategoryId = JsonNullable.of(parentCategoryId);
+    this.parentCategoryId = parentCategoryId;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class GuaranteedSimulationServiceAdCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">親カテゴリIDを表します。</div> <div lang=\"en\">Parent category ID.</div> ")
 
 
-  public JsonNullable<String> getParentCategoryId() {
+  public String getParentCategoryId() {
     return parentCategoryId;
   }
 
-  public void setParentCategoryId(JsonNullable<String> parentCategoryId) {
+  public void setParentCategoryId(String parentCategoryId) {
     this.parentCategoryId = parentCategoryId;
   }
 
   public GuaranteedSimulationServiceAdCategory parentCategoryName(String parentCategoryName) {
-    this.parentCategoryName = JsonNullable.of(parentCategoryName);
+    this.parentCategoryName = parentCategoryName;
     return this;
   }
 
@@ -99,17 +98,17 @@ public class GuaranteedSimulationServiceAdCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">親カテゴリ名を表します。</div> <div lang=\"en\">Parent category name.</div> ")
 
 
-  public JsonNullable<String> getParentCategoryName() {
+  public String getParentCategoryName() {
     return parentCategoryName;
   }
 
-  public void setParentCategoryName(JsonNullable<String> parentCategoryName) {
+  public void setParentCategoryName(String parentCategoryName) {
     this.parentCategoryName = parentCategoryName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,7 +144,7 @@ public class GuaranteedSimulationServiceAdCategory   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

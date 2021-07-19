@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,22 +12,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDailyBudgetOverCampaignオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDailyBudgetOverCampaign object describes detailed information of recommendation about campaigns that reached the daily budget.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceDailyBudgetOverCampaignオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の詳細情報を表します。</div> <div lang=\"en\">RecommendationServiceDailyBudgetOverCampaign object describes detailed information of recommendation about campaigns that reached the daily budget.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceDailyBudgetOverCampaign   {
   @JsonProperty("recommendationId")
-  private JsonNullable<Long> recommendationId = JsonNullable.undefined();
+  private Long recommendationId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("currentBudget")
-  private JsonNullable<Long> currentBudget = JsonNullable.undefined();
+  private Long currentBudget = null;
 
   public RecommendationServiceDailyBudgetOverCampaign recommendationId(Long recommendationId) {
-    this.recommendationId = JsonNullable.of(recommendationId);
+    this.recommendationId = recommendationId;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class RecommendationServiceDailyBudgetOverCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> </div> <div lang=\"en\"> Recommendation ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getRecommendationId() {
+  public Long getRecommendationId() {
     return recommendationId;
   }
 
-  public void setRecommendationId(JsonNullable<Long> recommendationId) {
+  public void setRecommendationId(Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
   public RecommendationServiceDailyBudgetOverCampaign campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class RecommendationServiceDailyBudgetOverCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> </div> <div lang=\"en\"> Campaign ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public RecommendationServiceDailyBudgetOverCampaign campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class RecommendationServiceDailyBudgetOverCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> </div> <div lang=\"en\"> Campaign Name.<br> </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public RecommendationServiceDailyBudgetOverCampaign currentBudget(Long currentBudget) {
-    this.currentBudget = JsonNullable.of(currentBudget);
+    this.currentBudget = currentBudget;
     return this;
   }
 
@@ -99,17 +98,17 @@ public class RecommendationServiceDailyBudgetOverCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 現在のキャンペーン予算です。 </div> <div lang=\"en\"> Current campaign budget. </div> ")
 
 
-  public JsonNullable<Long> getCurrentBudget() {
+  public Long getCurrentBudget() {
     return currentBudget;
   }
 
-  public void setCurrentBudget(JsonNullable<Long> currentBudget) {
+  public void setCurrentBudget(Long currentBudget) {
     this.currentBudget = currentBudget;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,7 +144,7 @@ public class RecommendationServiceDailyBudgetOverCampaign   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

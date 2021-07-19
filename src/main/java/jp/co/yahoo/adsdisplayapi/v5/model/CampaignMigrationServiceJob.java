@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignMigrationServiceJobStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignMigrationServiceScope;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,40 +14,40 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignMigrationServiceJobオブジェクトは、マイグレーションジョブの処理状況を示すオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignMigrationServiceJob object indicates processing status of migration job.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignMigrationServiceJobオブジェクトは、マイグレーションジョブの処理状況を示すオブジェクトです。</div> <div lang=\"en\">CampaignMigrationServiceJob object indicates processing status of migration job.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignMigrationServiceJob   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("failedCount")
-  private JsonNullable<Long> failedCount = JsonNullable.undefined();
+  private Long failedCount = null;
 
   @JsonProperty("inProgressCount")
-  private JsonNullable<Long> inProgressCount = JsonNullable.undefined();
+  private Long inProgressCount = null;
 
   @JsonProperty("jobStatus")
-  private JsonNullable<CampaignMigrationServiceJobStatus> jobStatus = JsonNullable.undefined();
+  private CampaignMigrationServiceJobStatus jobStatus = null;
 
   @JsonProperty("migrationJobEndDate")
-  private JsonNullable<String> migrationJobEndDate = JsonNullable.undefined();
+  private String migrationJobEndDate = null;
 
   @JsonProperty("migrationJobId")
-  private JsonNullable<Long> migrationJobId = JsonNullable.undefined();
+  private Long migrationJobId = null;
 
   @JsonProperty("migrationJobSubmitDate")
-  private JsonNullable<String> migrationJobSubmitDate = JsonNullable.undefined();
+  private String migrationJobSubmitDate = null;
 
   @JsonProperty("scope")
-  private JsonNullable<CampaignMigrationServiceScope> scope = JsonNullable.undefined();
+  private CampaignMigrationServiceScope scope = null;
 
   @JsonProperty("succeededCount")
-  private JsonNullable<Long> succeededCount = JsonNullable.undefined();
+  private Long succeededCount = null;
 
   @JsonProperty("totalCount")
-  private JsonNullable<Long> totalCount = JsonNullable.undefined();
+  private Long totalCount = null;
 
   public CampaignMigrationServiceJob accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public CampaignMigrationServiceJob failedCount(Long failedCount) {
-    this.failedCount = JsonNullable.of(failedCount);
+    this.failedCount = failedCount;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">失敗キャンペーン数</div> <div lang=\"en\">Number of failed campaigns</div> ")
 
 
-  public JsonNullable<Long> getFailedCount() {
+  public Long getFailedCount() {
     return failedCount;
   }
 
-  public void setFailedCount(JsonNullable<Long> failedCount) {
+  public void setFailedCount(Long failedCount) {
     this.failedCount = failedCount;
   }
 
   public CampaignMigrationServiceJob inProgressCount(Long inProgressCount) {
-    this.inProgressCount = JsonNullable.of(inProgressCount);
+    this.inProgressCount = inProgressCount;
     return this;
   }
 
@@ -99,16 +98,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">進行中キャンペーン数</div> <div lang=\"en\">Number of progressing campaigns</div> ")
 
 
-  public JsonNullable<Long> getInProgressCount() {
+  public Long getInProgressCount() {
     return inProgressCount;
   }
 
-  public void setInProgressCount(JsonNullable<Long> inProgressCount) {
+  public void setInProgressCount(Long inProgressCount) {
     this.inProgressCount = inProgressCount;
   }
 
   public CampaignMigrationServiceJob jobStatus(CampaignMigrationServiceJobStatus jobStatus) {
-    this.jobStatus = JsonNullable.of(jobStatus);
+    this.jobStatus = jobStatus;
     return this;
   }
 
@@ -120,16 +119,16 @@ public class CampaignMigrationServiceJob   {
 
   @Valid
 
-  public JsonNullable<CampaignMigrationServiceJobStatus> getJobStatus() {
+  public CampaignMigrationServiceJobStatus getJobStatus() {
     return jobStatus;
   }
 
-  public void setJobStatus(JsonNullable<CampaignMigrationServiceJobStatus> jobStatus) {
+  public void setJobStatus(CampaignMigrationServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
   public CampaignMigrationServiceJob migrationJobEndDate(String migrationJobEndDate) {
-    this.migrationJobEndDate = JsonNullable.of(migrationJobEndDate);
+    this.migrationJobEndDate = migrationJobEndDate;
     return this;
   }
 
@@ -140,16 +139,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">マイグレーションジョブ終了日時</div> <div lang=\"en\">Migration job end date</div> ")
 
 
-  public JsonNullable<String> getMigrationJobEndDate() {
+  public String getMigrationJobEndDate() {
     return migrationJobEndDate;
   }
 
-  public void setMigrationJobEndDate(JsonNullable<String> migrationJobEndDate) {
+  public void setMigrationJobEndDate(String migrationJobEndDate) {
     this.migrationJobEndDate = migrationJobEndDate;
   }
 
   public CampaignMigrationServiceJob migrationJobId(Long migrationJobId) {
-    this.migrationJobId = JsonNullable.of(migrationJobId);
+    this.migrationJobId = migrationJobId;
     return this;
   }
 
@@ -160,16 +159,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">マイグレーションジョブID</div> <div lang=\"en\">Migration job ID</div> ")
 
 
-  public JsonNullable<Long> getMigrationJobId() {
+  public Long getMigrationJobId() {
     return migrationJobId;
   }
 
-  public void setMigrationJobId(JsonNullable<Long> migrationJobId) {
+  public void setMigrationJobId(Long migrationJobId) {
     this.migrationJobId = migrationJobId;
   }
 
   public CampaignMigrationServiceJob migrationJobSubmitDate(String migrationJobSubmitDate) {
-    this.migrationJobSubmitDate = JsonNullable.of(migrationJobSubmitDate);
+    this.migrationJobSubmitDate = migrationJobSubmitDate;
     return this;
   }
 
@@ -180,16 +179,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">マイグレーションジョブ登録日時</div> <div lang=\"en\">Migration job submit date</div> ")
 
 
-  public JsonNullable<String> getMigrationJobSubmitDate() {
+  public String getMigrationJobSubmitDate() {
     return migrationJobSubmitDate;
   }
 
-  public void setMigrationJobSubmitDate(JsonNullable<String> migrationJobSubmitDate) {
+  public void setMigrationJobSubmitDate(String migrationJobSubmitDate) {
     this.migrationJobSubmitDate = migrationJobSubmitDate;
   }
 
   public CampaignMigrationServiceJob scope(CampaignMigrationServiceScope scope) {
-    this.scope = JsonNullable.of(scope);
+    this.scope = scope;
     return this;
   }
 
@@ -201,16 +200,16 @@ public class CampaignMigrationServiceJob   {
 
   @Valid
 
-  public JsonNullable<CampaignMigrationServiceScope> getScope() {
+  public CampaignMigrationServiceScope getScope() {
     return scope;
   }
 
-  public void setScope(JsonNullable<CampaignMigrationServiceScope> scope) {
+  public void setScope(CampaignMigrationServiceScope scope) {
     this.scope = scope;
   }
 
   public CampaignMigrationServiceJob succeededCount(Long succeededCount) {
-    this.succeededCount = JsonNullable.of(succeededCount);
+    this.succeededCount = succeededCount;
     return this;
   }
 
@@ -221,16 +220,16 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">正常終了キャンペーン数</div> <div lang=\"en\">Number of completed campaigns</div> ")
 
 
-  public JsonNullable<Long> getSucceededCount() {
+  public Long getSucceededCount() {
     return succeededCount;
   }
 
-  public void setSucceededCount(JsonNullable<Long> succeededCount) {
+  public void setSucceededCount(Long succeededCount) {
     this.succeededCount = succeededCount;
   }
 
   public CampaignMigrationServiceJob totalCount(Long totalCount) {
-    this.totalCount = JsonNullable.of(totalCount);
+    this.totalCount = totalCount;
     return this;
   }
 
@@ -241,17 +240,17 @@ public class CampaignMigrationServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">全キャンペーン数</div> <div lang=\"en\">Number of total campaigns</div> ")
 
 
-  public JsonNullable<Long> getTotalCount() {
+  public Long getTotalCount() {
     return totalCount;
   }
 
-  public void setTotalCount(JsonNullable<Long> totalCount) {
+  public void setTotalCount(Long totalCount) {
     this.totalCount = totalCount;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -299,7 +298,7 @@ public class CampaignMigrationServiceJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

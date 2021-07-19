@@ -11,7 +11,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AuditLogServiceDateRange;
 import jp.co.yahoo.adsdisplayapi.v5.model.AuditLogServiceJobStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.AuditLogServiceLang;
 import jp.co.yahoo.adsdisplayapi.v5.model.AuditLogServiceUpdateSource;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,47 +18,47 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AuditLogServiceJobは操作履歴のダウンロードジョブの情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceJob object is a container for storing the download operation history job information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AuditLogServiceJobは操作履歴のダウンロードジョブの情報を保持するオブジェクトです。</div> <div lang=\"en\">AuditLogServiceJob object is a container for storing the download operation history job information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AuditLogServiceJob   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("auditLogJobEndDate")
-  private JsonNullable<String> auditLogJobEndDate = JsonNullable.undefined();
+  private String auditLogJobEndDate = null;
 
   @JsonProperty("auditLogJobId")
-  private JsonNullable<Long> auditLogJobId = JsonNullable.undefined();
+  private Long auditLogJobId = null;
 
   @JsonProperty("auditLogJobName")
-  private JsonNullable<String> auditLogJobName = JsonNullable.undefined();
+  private String auditLogJobName = null;
 
   @JsonProperty("auditLogJobStartDate")
-  private JsonNullable<String> auditLogJobStartDate = JsonNullable.undefined();
+  private String auditLogJobStartDate = null;
 
   @JsonProperty("auditLogJobUserName")
-  private JsonNullable<String> auditLogJobUserName = JsonNullable.undefined();
+  private String auditLogJobUserName = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("dateRange")
-  private JsonNullable<AuditLogServiceDateRange> dateRange = JsonNullable.undefined();
+  private AuditLogServiceDateRange dateRange = null;
 
   @JsonProperty("jobStatus")
-  private JsonNullable<AuditLogServiceJobStatus> jobStatus = JsonNullable.undefined();
+  private AuditLogServiceJobStatus jobStatus = null;
 
   @JsonProperty("lang")
-  private JsonNullable<AuditLogServiceLang> lang = JsonNullable.undefined();
+  private AuditLogServiceLang lang = null;
 
   @JsonProperty("progress")
-  private JsonNullable<Integer> progress = JsonNullable.undefined();
+  private Integer progress = null;
 
   @JsonProperty("updateSource")
-  private JsonNullable<AuditLogServiceUpdateSource> updateSource = JsonNullable.undefined();
+  private AuditLogServiceUpdateSource updateSource = null;
 
   public AuditLogServiceJob accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AuditLogServiceJob auditLogJobEndDate(String auditLogJobEndDate) {
-    this.auditLogJobEndDate = JsonNullable.of(auditLogJobEndDate);
+    this.auditLogJobEndDate = auditLogJobEndDate;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴ダウンロードジョブの終了日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The job end date (YYYY-MM-DDTHH:MI:SS+9:00).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAuditLogJobEndDate() {
+  public String getAuditLogJobEndDate() {
     return auditLogJobEndDate;
   }
 
-  public void setAuditLogJobEndDate(JsonNullable<String> auditLogJobEndDate) {
+  public void setAuditLogJobEndDate(String auditLogJobEndDate) {
     this.auditLogJobEndDate = auditLogJobEndDate;
   }
 
   public AuditLogServiceJob auditLogJobId(Long auditLogJobId) {
-    this.auditLogJobId = JsonNullable.of(auditLogJobId);
+    this.auditLogJobId = auditLogJobId;
     return this;
   }
 
@@ -110,16 +109,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴のダウンロードジョブIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The operation history job ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAuditLogJobId() {
+  public Long getAuditLogJobId() {
     return auditLogJobId;
   }
 
-  public void setAuditLogJobId(JsonNullable<Long> auditLogJobId) {
+  public void setAuditLogJobId(Long auditLogJobId) {
     this.auditLogJobId = auditLogJobId;
   }
 
   public AuditLogServiceJob auditLogJobName(String auditLogJobName) {
-    this.auditLogJobName = JsonNullable.of(auditLogJobName);
+    this.auditLogJobName = auditLogJobName;
     return this;
   }
 
@@ -130,16 +129,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴のダウンロードジョブ名です。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> The operation history job name.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<String> getAuditLogJobName() {
+  public String getAuditLogJobName() {
     return auditLogJobName;
   }
 
-  public void setAuditLogJobName(JsonNullable<String> auditLogJobName) {
+  public void setAuditLogJobName(String auditLogJobName) {
     this.auditLogJobName = auditLogJobName;
   }
 
   public AuditLogServiceJob auditLogJobStartDate(String auditLogJobStartDate) {
-    this.auditLogJobStartDate = JsonNullable.of(auditLogJobStartDate);
+    this.auditLogJobStartDate = auditLogJobStartDate;
     return this;
   }
 
@@ -150,16 +149,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴ダウンロードジョブの開始日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The job start date (YYYY-MM-DDTHH:MI:SS+9:00).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAuditLogJobStartDate() {
+  public String getAuditLogJobStartDate() {
     return auditLogJobStartDate;
   }
 
-  public void setAuditLogJobStartDate(JsonNullable<String> auditLogJobStartDate) {
+  public void setAuditLogJobStartDate(String auditLogJobStartDate) {
     this.auditLogJobStartDate = auditLogJobStartDate;
   }
 
   public AuditLogServiceJob auditLogJobUserName(String auditLogJobUserName) {
-    this.auditLogJobUserName = JsonNullable.of(auditLogJobUserName);
+    this.auditLogJobUserName = auditLogJobUserName;
     return this;
   }
 
@@ -170,24 +169,24 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴ダウンロードジョブの実行ユーザー名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The user name who executes the operation history job.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAuditLogJobUserName() {
+  public String getAuditLogJobUserName() {
     return auditLogJobUserName;
   }
 
-  public void setAuditLogJobUserName(JsonNullable<String> auditLogJobUserName) {
+  public void setAuditLogJobUserName(String auditLogJobUserName) {
     this.auditLogJobUserName = auditLogJobUserName;
   }
 
   public AuditLogServiceJob campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public AuditLogServiceJob addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -198,16 +197,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ダウンロード対象のキャンペーンIDです。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> Campaign ID of the download object.<br> This field is optional in requests. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public AuditLogServiceJob dateRange(AuditLogServiceDateRange dateRange) {
-    this.dateRange = JsonNullable.of(dateRange);
+    this.dateRange = dateRange;
     return this;
   }
 
@@ -219,16 +218,16 @@ public class AuditLogServiceJob   {
 
   @Valid
 
-  public JsonNullable<AuditLogServiceDateRange> getDateRange() {
+  public AuditLogServiceDateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(JsonNullable<AuditLogServiceDateRange> dateRange) {
+  public void setDateRange(AuditLogServiceDateRange dateRange) {
     this.dateRange = dateRange;
   }
 
   public AuditLogServiceJob jobStatus(AuditLogServiceJobStatus jobStatus) {
-    this.jobStatus = JsonNullable.of(jobStatus);
+    this.jobStatus = jobStatus;
     return this;
   }
 
@@ -240,16 +239,16 @@ public class AuditLogServiceJob   {
 
   @Valid
 
-  public JsonNullable<AuditLogServiceJobStatus> getJobStatus() {
+  public AuditLogServiceJobStatus getJobStatus() {
     return jobStatus;
   }
 
-  public void setJobStatus(JsonNullable<AuditLogServiceJobStatus> jobStatus) {
+  public void setJobStatus(AuditLogServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
   public AuditLogServiceJob lang(AuditLogServiceLang lang) {
-    this.lang = JsonNullable.of(lang);
+    this.lang = lang;
     return this;
   }
 
@@ -261,16 +260,16 @@ public class AuditLogServiceJob   {
 
   @Valid
 
-  public JsonNullable<AuditLogServiceLang> getLang() {
+  public AuditLogServiceLang getLang() {
     return lang;
   }
 
-  public void setLang(JsonNullable<AuditLogServiceLang> lang) {
+  public void setLang(AuditLogServiceLang lang) {
     this.lang = lang;
   }
 
   public AuditLogServiceJob progress(Integer progress) {
-    this.progress = JsonNullable.of(progress);
+    this.progress = progress;
     return this;
   }
 
@@ -281,16 +280,16 @@ public class AuditLogServiceJob   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 処理進捗です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Displays progress in integers from 1 to 100.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Integer> getProgress() {
+  public Integer getProgress() {
     return progress;
   }
 
-  public void setProgress(JsonNullable<Integer> progress) {
+  public void setProgress(Integer progress) {
     this.progress = progress;
   }
 
   public AuditLogServiceJob updateSource(AuditLogServiceUpdateSource updateSource) {
-    this.updateSource = JsonNullable.of(updateSource);
+    this.updateSource = updateSource;
     return this;
   }
 
@@ -302,17 +301,17 @@ public class AuditLogServiceJob   {
 
   @Valid
 
-  public JsonNullable<AuditLogServiceUpdateSource> getUpdateSource() {
+  public AuditLogServiceUpdateSource getUpdateSource() {
     return updateSource;
   }
 
-  public void setUpdateSource(JsonNullable<AuditLogServiceUpdateSource> updateSource) {
+  public void setUpdateSource(AuditLogServiceUpdateSource updateSource) {
     this.updateSource = updateSource;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -364,7 +363,7 @@ public class AuditLogServiceJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

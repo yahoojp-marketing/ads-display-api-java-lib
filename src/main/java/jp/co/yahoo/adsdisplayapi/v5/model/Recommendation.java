@@ -12,7 +12,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceImpsShareBudgetLo
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceMigrateToYda;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceSearchKeywordIdea;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -20,31 +19,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Recommendationオブジェクトは、最適化提案を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Recommendation object is a container for storing a recommendation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Recommendationオブジェクトは、最適化提案を格納するコンテナです。</div> <div lang=\"en\">Recommendation object is a container for storing a recommendation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Recommendation   {
   @JsonProperty("type")
-  private JsonNullable<RecommendationServiceType> type = JsonNullable.undefined();
+  private RecommendationServiceType type = null;
 
   @JsonProperty("campaignBiddingStrategyToTargetCpa")
-  private JsonNullable<RecommendationServiceCampaignBiddingStrategyToTargetCpa> campaignBiddingStrategyToTargetCpa = JsonNullable.undefined();
+  private RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa = null;
 
   @JsonProperty("dailyBudgetOver")
-  private JsonNullable<RecommendationServiceDailyBudgetOver> dailyBudgetOver = JsonNullable.undefined();
+  private RecommendationServiceDailyBudgetOver dailyBudgetOver = null;
 
   @JsonProperty("impsShareBudgetLossOver")
-  private JsonNullable<RecommendationServiceImpsShareBudgetLossOver> impsShareBudgetLossOver = JsonNullable.undefined();
+  private RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver = null;
 
   @JsonProperty("migrateToYda")
-  private JsonNullable<RecommendationServiceMigrateToYda> migrateToYda = JsonNullable.undefined();
+  private RecommendationServiceMigrateToYda migrateToYda = null;
 
   @JsonProperty("searchKeywordIdea")
-  private JsonNullable<RecommendationServiceSearchKeywordIdea> searchKeywordIdea = JsonNullable.undefined();
+  private RecommendationServiceSearchKeywordIdea searchKeywordIdea = null;
 
   @JsonProperty("campaignsForAddingAds")
-  private JsonNullable<RecommendationServiceCampaignsForAddingAds> campaignsForAddingAds = JsonNullable.undefined();
+  private RecommendationServiceCampaignsForAddingAds campaignsForAddingAds = null;
 
   public Recommendation type(RecommendationServiceType type) {
-    this.type = JsonNullable.of(type);
+    this.type = type;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceType> getType() {
+  public RecommendationServiceType getType() {
     return type;
   }
 
-  public void setType(JsonNullable<RecommendationServiceType> type) {
+  public void setType(RecommendationServiceType type) {
     this.type = type;
   }
 
   public Recommendation campaignBiddingStrategyToTargetCpa(RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa) {
-    this.campaignBiddingStrategyToTargetCpa = JsonNullable.of(campaignBiddingStrategyToTargetCpa);
+    this.campaignBiddingStrategyToTargetCpa = campaignBiddingStrategyToTargetCpa;
     return this;
   }
 
@@ -77,16 +76,16 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceCampaignBiddingStrategyToTargetCpa> getCampaignBiddingStrategyToTargetCpa() {
+  public RecommendationServiceCampaignBiddingStrategyToTargetCpa getCampaignBiddingStrategyToTargetCpa() {
     return campaignBiddingStrategyToTargetCpa;
   }
 
-  public void setCampaignBiddingStrategyToTargetCpa(JsonNullable<RecommendationServiceCampaignBiddingStrategyToTargetCpa> campaignBiddingStrategyToTargetCpa) {
+  public void setCampaignBiddingStrategyToTargetCpa(RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa) {
     this.campaignBiddingStrategyToTargetCpa = campaignBiddingStrategyToTargetCpa;
   }
 
   public Recommendation dailyBudgetOver(RecommendationServiceDailyBudgetOver dailyBudgetOver) {
-    this.dailyBudgetOver = JsonNullable.of(dailyBudgetOver);
+    this.dailyBudgetOver = dailyBudgetOver;
     return this;
   }
 
@@ -98,16 +97,16 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceDailyBudgetOver> getDailyBudgetOver() {
+  public RecommendationServiceDailyBudgetOver getDailyBudgetOver() {
     return dailyBudgetOver;
   }
 
-  public void setDailyBudgetOver(JsonNullable<RecommendationServiceDailyBudgetOver> dailyBudgetOver) {
+  public void setDailyBudgetOver(RecommendationServiceDailyBudgetOver dailyBudgetOver) {
     this.dailyBudgetOver = dailyBudgetOver;
   }
 
   public Recommendation impsShareBudgetLossOver(RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver) {
-    this.impsShareBudgetLossOver = JsonNullable.of(impsShareBudgetLossOver);
+    this.impsShareBudgetLossOver = impsShareBudgetLossOver;
     return this;
   }
 
@@ -119,16 +118,16 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceImpsShareBudgetLossOver> getImpsShareBudgetLossOver() {
+  public RecommendationServiceImpsShareBudgetLossOver getImpsShareBudgetLossOver() {
     return impsShareBudgetLossOver;
   }
 
-  public void setImpsShareBudgetLossOver(JsonNullable<RecommendationServiceImpsShareBudgetLossOver> impsShareBudgetLossOver) {
+  public void setImpsShareBudgetLossOver(RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver) {
     this.impsShareBudgetLossOver = impsShareBudgetLossOver;
   }
 
   public Recommendation migrateToYda(RecommendationServiceMigrateToYda migrateToYda) {
-    this.migrateToYda = JsonNullable.of(migrateToYda);
+    this.migrateToYda = migrateToYda;
     return this;
   }
 
@@ -140,16 +139,16 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceMigrateToYda> getMigrateToYda() {
+  public RecommendationServiceMigrateToYda getMigrateToYda() {
     return migrateToYda;
   }
 
-  public void setMigrateToYda(JsonNullable<RecommendationServiceMigrateToYda> migrateToYda) {
+  public void setMigrateToYda(RecommendationServiceMigrateToYda migrateToYda) {
     this.migrateToYda = migrateToYda;
   }
 
   public Recommendation searchKeywordIdea(RecommendationServiceSearchKeywordIdea searchKeywordIdea) {
-    this.searchKeywordIdea = JsonNullable.of(searchKeywordIdea);
+    this.searchKeywordIdea = searchKeywordIdea;
     return this;
   }
 
@@ -161,16 +160,16 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceSearchKeywordIdea> getSearchKeywordIdea() {
+  public RecommendationServiceSearchKeywordIdea getSearchKeywordIdea() {
     return searchKeywordIdea;
   }
 
-  public void setSearchKeywordIdea(JsonNullable<RecommendationServiceSearchKeywordIdea> searchKeywordIdea) {
+  public void setSearchKeywordIdea(RecommendationServiceSearchKeywordIdea searchKeywordIdea) {
     this.searchKeywordIdea = searchKeywordIdea;
   }
 
   public Recommendation campaignsForAddingAds(RecommendationServiceCampaignsForAddingAds campaignsForAddingAds) {
-    this.campaignsForAddingAds = JsonNullable.of(campaignsForAddingAds);
+    this.campaignsForAddingAds = campaignsForAddingAds;
     return this;
   }
 
@@ -182,17 +181,17 @@ public class Recommendation   {
 
   @Valid
 
-  public JsonNullable<RecommendationServiceCampaignsForAddingAds> getCampaignsForAddingAds() {
+  public RecommendationServiceCampaignsForAddingAds getCampaignsForAddingAds() {
     return campaignsForAddingAds;
   }
 
-  public void setCampaignsForAddingAds(JsonNullable<RecommendationServiceCampaignsForAddingAds> campaignsForAddingAds) {
+  public void setCampaignsForAddingAds(RecommendationServiceCampaignsForAddingAds campaignsForAddingAds) {
     this.campaignsForAddingAds = campaignsForAddingAds;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -234,7 +233,7 @@ public class Recommendation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

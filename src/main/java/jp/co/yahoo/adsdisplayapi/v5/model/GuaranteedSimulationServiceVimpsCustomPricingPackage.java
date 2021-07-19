@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,22 +12,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   GuaranteedSimulationServiceVimpsCustomPricingPackageは、vimps購入型（変動）の購入タイプ設定情報を保持します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   GuaranteedSimulationServiceVimpsCustomPricingPackage holds the purchase type setting information about the vimps purchase type (variable).&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   GuaranteedSimulationServiceVimpsCustomPricingPackageは、vimps購入型（変動）の購入タイプ設定情報を保持します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   GuaranteedSimulationServiceVimpsCustomPricingPackage holds the purchase type setting information about the vimps purchase type (variable).<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceVimpsCustomPricingPackage   {
   @JsonProperty("fixedLifetimeBudget")
-  private JsonNullable<Long> fixedLifetimeBudget = JsonNullable.undefined();
+  private Long fixedLifetimeBudget = null;
 
   @JsonProperty("minimumPurchaseBudget")
-  private JsonNullable<Long> minimumPurchaseBudget = JsonNullable.undefined();
+  private Long minimumPurchaseBudget = null;
 
   @JsonProperty("minimumPurchaseVImps")
-  private JsonNullable<Long> minimumPurchaseVImps = JsonNullable.undefined();
+  private Long minimumPurchaseVImps = null;
 
   @JsonProperty("maximumPurchaseVImps")
-  private JsonNullable<Long> maximumPurchaseVImps = JsonNullable.undefined();
+  private Long maximumPurchaseVImps = null;
 
   public GuaranteedSimulationServiceVimpsCustomPricingPackage fixedLifetimeBudget(Long fixedLifetimeBudget) {
-    this.fixedLifetimeBudget = JsonNullable.of(fixedLifetimeBudget);
+    this.fixedLifetimeBudget = fixedLifetimeBudget;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class GuaranteedSimulationServiceVimpsCustomPricingPackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品価格を表します。</div> <div lang=\"en\">Package price.</div> ")
 
 
-  public JsonNullable<Long> getFixedLifetimeBudget() {
+  public Long getFixedLifetimeBudget() {
     return fixedLifetimeBudget;
   }
 
-  public void setFixedLifetimeBudget(JsonNullable<Long> fixedLifetimeBudget) {
+  public void setFixedLifetimeBudget(Long fixedLifetimeBudget) {
     this.fixedLifetimeBudget = fixedLifetimeBudget;
   }
 
   public GuaranteedSimulationServiceVimpsCustomPricingPackage minimumPurchaseBudget(Long minimumPurchaseBudget) {
-    this.minimumPurchaseBudget = JsonNullable.of(minimumPurchaseBudget);
+    this.minimumPurchaseBudget = minimumPurchaseBudget;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class GuaranteedSimulationServiceVimpsCustomPricingPackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">最低購入価格を表します。</div> <div lang=\"en\">Minimum Purchase price.</div> ")
 
 
-  public JsonNullable<Long> getMinimumPurchaseBudget() {
+  public Long getMinimumPurchaseBudget() {
     return minimumPurchaseBudget;
   }
 
-  public void setMinimumPurchaseBudget(JsonNullable<Long> minimumPurchaseBudget) {
+  public void setMinimumPurchaseBudget(Long minimumPurchaseBudget) {
     this.minimumPurchaseBudget = minimumPurchaseBudget;
   }
 
   public GuaranteedSimulationServiceVimpsCustomPricingPackage minimumPurchaseVImps(Long minimumPurchaseVImps) {
-    this.minimumPurchaseVImps = JsonNullable.of(minimumPurchaseVImps);
+    this.minimumPurchaseVImps = minimumPurchaseVImps;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class GuaranteedSimulationServiceVimpsCustomPricingPackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">最低購入ビューアブルインプレッション数を表します。</div> <div lang=\"en\">Minimum purchase viewable impression.</div> ")
 
 
-  public JsonNullable<Long> getMinimumPurchaseVImps() {
+  public Long getMinimumPurchaseVImps() {
     return minimumPurchaseVImps;
   }
 
-  public void setMinimumPurchaseVImps(JsonNullable<Long> minimumPurchaseVImps) {
+  public void setMinimumPurchaseVImps(Long minimumPurchaseVImps) {
     this.minimumPurchaseVImps = minimumPurchaseVImps;
   }
 
   public GuaranteedSimulationServiceVimpsCustomPricingPackage maximumPurchaseVImps(Long maximumPurchaseVImps) {
-    this.maximumPurchaseVImps = JsonNullable.of(maximumPurchaseVImps);
+    this.maximumPurchaseVImps = maximumPurchaseVImps;
     return this;
   }
 
@@ -99,17 +98,17 @@ public class GuaranteedSimulationServiceVimpsCustomPricingPackage   {
   @ApiModelProperty(value = "<div lang=\"ja\">最大購入ビューアブルインプレッション数を表します。</div> <div lang=\"en\">Maximum purchase viewable impression.</div> ")
 
 
-  public JsonNullable<Long> getMaximumPurchaseVImps() {
+  public Long getMaximumPurchaseVImps() {
     return maximumPurchaseVImps;
   }
 
-  public void setMaximumPurchaseVImps(JsonNullable<Long> maximumPurchaseVImps) {
+  public void setMaximumPurchaseVImps(Long maximumPurchaseVImps) {
     this.maximumPurchaseVImps = maximumPurchaseVImps;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,7 +144,7 @@ public class GuaranteedSimulationServiceVimpsCustomPricingPackage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

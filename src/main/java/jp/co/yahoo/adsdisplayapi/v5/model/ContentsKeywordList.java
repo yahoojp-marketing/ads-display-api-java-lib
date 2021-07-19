@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ContentsKeywordListServiceContentsKeyword;
 import jp.co.yahoo.adsdisplayapi.v5.model.ContentsKeywordListServiceIsRemoveFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,32 +16,32 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordListオブジェクトは、コンテンツキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordList object displays the contents keyword list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ContentsKeywordListオブジェクトは、コンテンツキーワードリストを表します。</div> <div lang=\"en\">ContentsKeywordList object displays the contents keyword list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ContentsKeywordList   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("contentsKeyword")
   @Valid
-  private JsonNullable<List<ContentsKeywordListServiceContentsKeyword>> contentsKeyword = JsonNullable.undefined();
+  private List<ContentsKeywordListServiceContentsKeyword> contentsKeyword = null;
 
   @JsonProperty("contentsKeywordListDescription")
-  private JsonNullable<String> contentsKeywordListDescription = JsonNullable.undefined();
+  private String contentsKeywordListDescription = null;
 
   @JsonProperty("isRemoveContentsKeywordListDescription")
-  private JsonNullable<ContentsKeywordListServiceIsRemoveFlg> isRemoveContentsKeywordListDescription = JsonNullable.undefined();
+  private ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription = null;
 
   @JsonProperty("contentsKeywordListId")
-  private JsonNullable<Long> contentsKeywordListId = JsonNullable.undefined();
+  private Long contentsKeywordListId = null;
 
   @JsonProperty("contentsKeywordListName")
-  private JsonNullable<String> contentsKeywordListName = JsonNullable.undefined();
+  private String contentsKeywordListName = null;
 
   @JsonProperty("brandSafetyDenyListFlg")
-  private JsonNullable<Boolean> brandSafetyDenyListFlg = JsonNullable.undefined();
+  private Boolean brandSafetyDenyListFlg = null;
 
   public ContentsKeywordList accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -53,24 +52,24 @@ public class ContentsKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public ContentsKeywordList contentsKeyword(List<ContentsKeywordListServiceContentsKeyword> contentsKeyword) {
-    this.contentsKeyword = JsonNullable.of(contentsKeyword);
+    this.contentsKeyword = contentsKeyword;
     return this;
   }
 
   public ContentsKeywordList addContentsKeywordItem(ContentsKeywordListServiceContentsKeyword contentsKeywordItem) {
-    if (this.contentsKeyword == null || !this.contentsKeyword.isPresent()) {
-      this.contentsKeyword = JsonNullable.of(new ArrayList<>());
+    if (this.contentsKeyword == null) {
+      this.contentsKeyword = new ArrayList<>();
     }
-    this.contentsKeyword.get().add(contentsKeywordItem);
+    this.contentsKeyword.add(contentsKeywordItem);
     return this;
   }
 
@@ -82,16 +81,16 @@ public class ContentsKeywordList   {
 
   @Valid
 @Size(min=1,max=500) 
-  public JsonNullable<List<ContentsKeywordListServiceContentsKeyword>> getContentsKeyword() {
+  public List<ContentsKeywordListServiceContentsKeyword> getContentsKeyword() {
     return contentsKeyword;
   }
 
-  public void setContentsKeyword(JsonNullable<List<ContentsKeywordListServiceContentsKeyword>> contentsKeyword) {
+  public void setContentsKeyword(List<ContentsKeywordListServiceContentsKeyword> contentsKeyword) {
     this.contentsKeyword = contentsKeyword;
   }
 
   public ContentsKeywordList contentsKeywordListDescription(String contentsKeywordListDescription) {
-    this.contentsKeywordListDescription = JsonNullable.of(contentsKeywordListDescription);
+    this.contentsKeywordListDescription = contentsKeywordListDescription;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class ContentsKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリストの説明文です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Description of Contents keyword list.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getContentsKeywordListDescription() {
+  public String getContentsKeywordListDescription() {
     return contentsKeywordListDescription;
   }
 
-  public void setContentsKeywordListDescription(JsonNullable<String> contentsKeywordListDescription) {
+  public void setContentsKeywordListDescription(String contentsKeywordListDescription) {
     this.contentsKeywordListDescription = contentsKeywordListDescription;
   }
 
   public ContentsKeywordList isRemoveContentsKeywordListDescription(ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription) {
-    this.isRemoveContentsKeywordListDescription = JsonNullable.of(isRemoveContentsKeywordListDescription);
+    this.isRemoveContentsKeywordListDescription = isRemoveContentsKeywordListDescription;
     return this;
   }
 
@@ -123,16 +122,16 @@ public class ContentsKeywordList   {
 
   @Valid
 
-  public JsonNullable<ContentsKeywordListServiceIsRemoveFlg> getIsRemoveContentsKeywordListDescription() {
+  public ContentsKeywordListServiceIsRemoveFlg getIsRemoveContentsKeywordListDescription() {
     return isRemoveContentsKeywordListDescription;
   }
 
-  public void setIsRemoveContentsKeywordListDescription(JsonNullable<ContentsKeywordListServiceIsRemoveFlg> isRemoveContentsKeywordListDescription) {
+  public void setIsRemoveContentsKeywordListDescription(ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription) {
     this.isRemoveContentsKeywordListDescription = isRemoveContentsKeywordListDescription;
   }
 
   public ContentsKeywordList contentsKeywordListId(Long contentsKeywordListId) {
-    this.contentsKeywordListId = JsonNullable.of(contentsKeywordListId);
+    this.contentsKeywordListId = contentsKeywordListId;
     return this;
   }
 
@@ -143,16 +142,16 @@ public class ContentsKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Contents keyword list ID.<br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getContentsKeywordListId() {
+  public Long getContentsKeywordListId() {
     return contentsKeywordListId;
   }
 
-  public void setContentsKeywordListId(JsonNullable<Long> contentsKeywordListId) {
+  public void setContentsKeywordListId(Long contentsKeywordListId) {
     this.contentsKeywordListId = contentsKeywordListId;
   }
 
   public ContentsKeywordList contentsKeywordListName(String contentsKeywordListName) {
-    this.contentsKeywordListName = JsonNullable.of(contentsKeywordListName);
+    this.contentsKeywordListName = contentsKeywordListName;
     return this;
   }
 
@@ -163,16 +162,16 @@ public class ContentsKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリスト名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Name of Contents keyword list.<br> This field is required in ADD operation, and is optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getContentsKeywordListName() {
+  public String getContentsKeywordListName() {
     return contentsKeywordListName;
   }
 
-  public void setContentsKeywordListName(JsonNullable<String> contentsKeywordListName) {
+  public void setContentsKeywordListName(String contentsKeywordListName) {
     this.contentsKeywordListName = contentsKeywordListName;
   }
 
   public ContentsKeywordList brandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
-    this.brandSafetyDenyListFlg = JsonNullable.of(brandSafetyDenyListFlg);
+    this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
     return this;
   }
 
@@ -183,17 +182,17 @@ public class ContentsKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 除外専用リストかどうかのフラグです。<br> 除外専用リストには下記の制約があります。<br> ・１アカウントにつき1つ作成が可能です。<br> ・除外にのみ紐付け可能です。<br> ・YDNキャンペーンには紐付けできません。<br> このフィールドは、ADD時に省略可能(デフォルトの値はFALSE)、SET時に指定不可となります。 </div> <div lang=\"en\"> A flag that indicates whether it is an exclusion list. <br> Exclusion list includes the following restrictions: <br> *Only one list can be created per account. <br> *Can be linked only to exclusion. <br> *Cannot be linked with YDN campaign. <br> This field is optional in ADD operation (default value will be FALSE), and cannot be specified in SET operation. </div> <dl class=term>   <dt class=\"term__item\">TRUE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">除外専用リストです。</span><span lang=\"en\">Exclusion list.</span></dd>   <dt class=\"term__item\">FALSE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">通常のurlリストです。</span><span lang=\"en\">Standard URL list.</span></dd> </dl> ")
 
 
-  public JsonNullable<Boolean> getBrandSafetyDenyListFlg() {
+  public Boolean getBrandSafetyDenyListFlg() {
     return brandSafetyDenyListFlg;
   }
 
-  public void setBrandSafetyDenyListFlg(JsonNullable<Boolean> brandSafetyDenyListFlg) {
+  public void setBrandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -235,7 +234,7 @@ public class ContentsKeywordList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

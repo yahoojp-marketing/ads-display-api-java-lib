@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAdServiceCarousel;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,26 +15,26 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceCarouselAdオブジェクトはカルーセル広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがCAROUSEL_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceCarouselAd obeject describes information of carousel ad.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is CAROUSEL_AD, this field is required in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceCarouselAdオブジェクトはカルーセル広告の情報を表します。<br> このフィールドは、省略可能となります。<br> ※ADD時、adTypeがCAROUSEL_ADの場合は必須です。 </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceCarouselAd obeject describes information of carousel ad.<br> This field is optional.<br> *If adType is CAROUSEL_AD, this field is required in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupAdServiceCarouselAd   {
   @JsonProperty("displayUrl")
-  private JsonNullable<String> displayUrl = JsonNullable.undefined();
+  private String displayUrl = null;
 
   @JsonProperty("logoMediaId")
-  private JsonNullable<Long> logoMediaId = JsonNullable.undefined();
+  private Long logoMediaId = null;
 
   @JsonProperty("principal")
-  private JsonNullable<String> principal = JsonNullable.undefined();
+  private String principal = null;
 
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   @JsonProperty("carousels")
   @Valid
-  private JsonNullable<List<GuaranteedAdGroupAdServiceCarousel>> carousels = JsonNullable.undefined();
+  private List<GuaranteedAdGroupAdServiceCarousel> carousels = null;
 
   public GuaranteedAdGroupAdServiceCarouselAd displayUrl(String displayUrl) {
-    this.displayUrl = JsonNullable.of(displayUrl);
+    this.displayUrl = displayUrl;
     return this;
   }
 
@@ -46,16 +45,16 @@ public class GuaranteedAdGroupAdServiceCarouselAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 表示URLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ・標準キャンペーンの場合<br> &nbsp;&nbsp;ADDでは入力必須です。SETでの入力は任意です。<br> ・アプリキャンペーンの場合<br> &nbsp;&nbsp;ADD、SETのどちらも指定できません。<br> &nbsp;&nbsp;※アプリキャンペーンで指定したDeviceOsTypeに基づき、以下のいずれかのURLが自動で設定されます。<br> &nbsp;&nbsp;&nbsp;&nbsp;- iOSの場合：itunes.apple.com<br> &nbsp;&nbsp;&nbsp;&nbsp;- Androidの場合：play.google.com </div> <div lang=\"en\"> Display URL.<br> This field is optional in ADD and SET operation.<br> - Standard campaign:<br> &nbsp;&nbsp;Required for ADD, optional for SET.<br> - Mobile app campaign:<br> &nbsp;&nbsp;Not allowed for ADD and SET.<br> &nbsp;&nbsp;*Based on DeviceOsType specified on Mobile app campaign, any of the following URLs will be automatically set.<br> &nbsp;&nbsp;&nbsp;&nbsp;- For iOS : itunes.apple.com<br> &nbsp;&nbsp;&nbsp;&nbsp;- For Android : play.google.com<br> </div> ")
 
 
-  public JsonNullable<String> getDisplayUrl() {
+  public String getDisplayUrl() {
     return displayUrl;
   }
 
-  public void setDisplayUrl(JsonNullable<String> displayUrl) {
+  public void setDisplayUrl(String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
   public GuaranteedAdGroupAdServiceCarouselAd logoMediaId(Long logoMediaId) {
-    this.logoMediaId = JsonNullable.of(logoMediaId);
+    this.logoMediaId = logoMediaId;
     return this;
   }
 
@@ -66,16 +65,16 @@ public class GuaranteedAdGroupAdServiceCarouselAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ロゴの画像IDです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Logo image ID.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<Long> getLogoMediaId() {
+  public Long getLogoMediaId() {
     return logoMediaId;
   }
 
-  public void setLogoMediaId(JsonNullable<Long> logoMediaId) {
+  public void setLogoMediaId(Long logoMediaId) {
     this.logoMediaId = logoMediaId;
   }
 
   public GuaranteedAdGroupAdServiceCarouselAd principal(String principal) {
-    this.principal = JsonNullable.of(principal);
+    this.principal = principal;
     return this;
   }
 
@@ -86,16 +85,16 @@ public class GuaranteedAdGroupAdServiceCarouselAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告の主体者表記です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Advertiser Indication of the ad.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getPrincipal() {
+  public String getPrincipal() {
     return principal;
   }
 
-  public void setPrincipal(JsonNullable<String> principal) {
+  public void setPrincipal(String principal) {
     this.principal = principal;
   }
 
   public GuaranteedAdGroupAdServiceCarouselAd url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -106,24 +105,24 @@ public class GuaranteedAdGroupAdServiceCarouselAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リンク先URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Destination URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
   public GuaranteedAdGroupAdServiceCarouselAd carousels(List<GuaranteedAdGroupAdServiceCarousel> carousels) {
-    this.carousels = JsonNullable.of(carousels);
+    this.carousels = carousels;
     return this;
   }
 
   public GuaranteedAdGroupAdServiceCarouselAd addCarouselsItem(GuaranteedAdGroupAdServiceCarousel carouselsItem) {
-    if (this.carousels == null || !this.carousels.isPresent()) {
-      this.carousels = JsonNullable.of(new ArrayList<>());
+    if (this.carousels == null) {
+      this.carousels = new ArrayList<>();
     }
-    this.carousels.get().add(carouselsItem);
+    this.carousels.add(carouselsItem);
     return this;
   }
 
@@ -135,17 +134,17 @@ public class GuaranteedAdGroupAdServiceCarouselAd   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedAdGroupAdServiceCarousel>> getCarousels() {
+  public List<GuaranteedAdGroupAdServiceCarousel> getCarousels() {
     return carousels;
   }
 
-  public void setCarousels(JsonNullable<List<GuaranteedAdGroupAdServiceCarousel>> carousels) {
+  public void setCarousels(List<GuaranteedAdGroupAdServiceCarousel> carousels) {
     this.carousels = carousels;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -183,7 +182,7 @@ public class GuaranteedAdGroupAdServiceCarouselAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceFilterOperator;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,20 +15,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceFilterオブジェクトは、フィルター定義を表します。&lt;br&gt; フィルタ条件は最大6つまで設定が可能です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceFilter object serves filter definitions. &lt;br&gt; Filter condition can set up to 6.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceFilterオブジェクトは、フィルター定義を表します。<br> フィルタ条件は最大6つまで設定が可能です。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> ReportDefinitionServiceFilter object serves filter definitions. <br> Filter condition can set up to 6.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceFilter   {
   @JsonProperty("field")
-  private JsonNullable<String> field = JsonNullable.undefined();
+  private String field = null;
 
   @JsonProperty("filterOperator")
-  private JsonNullable<ReportDefinitionServiceFilterOperator> filterOperator = JsonNullable.undefined();
+  private ReportDefinitionServiceFilterOperator filterOperator = null;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<String>> values = JsonNullable.undefined();
+  private List<String> values = null;
 
   public ReportDefinitionServiceFilter field(String field) {
-    this.field = JsonNullable.of(field);
+    this.field = field;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class ReportDefinitionServiceFilter   {
   @ApiModelProperty(value = "<div lang=\"ja\"> フィルター対象となるフィールドです。<br> このフィールドは、ADD時に必須となります。<br> ※getReportFieldsのレスポンスで「filterable=true」のフィールドのみ指定可能です。 </div> <div lang=\"en\"> Field to be filtered.<br> This field is required in ADD operation.<br> ※Can be specified for the field with &#34;filterable=true&#34; on the response of getReportFields. </div> ")
 
 
-  public JsonNullable<String> getField() {
+  public String getField() {
     return field;
   }
 
-  public void setField(JsonNullable<String> field) {
+  public void setField(String field) {
     this.field = field;
   }
 
   public ReportDefinitionServiceFilter filterOperator(ReportDefinitionServiceFilterOperator filterOperator) {
-    this.filterOperator = JsonNullable.of(filterOperator);
+    this.filterOperator = filterOperator;
     return this;
   }
 
@@ -61,24 +60,24 @@ public class ReportDefinitionServiceFilter   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceFilterOperator> getFilterOperator() {
+  public ReportDefinitionServiceFilterOperator getFilterOperator() {
     return filterOperator;
   }
 
-  public void setFilterOperator(JsonNullable<ReportDefinitionServiceFilterOperator> filterOperator) {
+  public void setFilterOperator(ReportDefinitionServiceFilterOperator filterOperator) {
     this.filterOperator = filterOperator;
   }
 
   public ReportDefinitionServiceFilter values(List<String> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public ReportDefinitionServiceFilter addValuesItem(String valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -89,17 +88,17 @@ public class ReportDefinitionServiceFilter   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 条件値です。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> Value for condition. <br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<List<String>> getValues() {
+  public List<String> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<String>> values) {
+  public void setValues(List<String> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -133,7 +132,7 @@ public class ReportDefinitionServiceFilter   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

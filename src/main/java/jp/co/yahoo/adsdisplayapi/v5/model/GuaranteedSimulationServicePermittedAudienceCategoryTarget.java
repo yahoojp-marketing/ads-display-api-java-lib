@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリーターゲティングの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedAudienceCategoryTarget object contains information about audience category targeting settings.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリーターゲティングの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedAudienceCategoryTarget object contains information about audience category targeting settings.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedAudienceCategoryTarget   {
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("categoryFullNameEn")
-  private JsonNullable<String> categoryFullNameEn = JsonNullable.undefined();
+  private String categoryFullNameEn = null;
 
   @JsonProperty("categoryFullNameJa")
-  private JsonNullable<String> categoryFullNameJa = JsonNullable.undefined();
+  private String categoryFullNameJa = null;
 
   public GuaranteedSimulationServicePermittedAudienceCategoryTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class GuaranteedSimulationServicePermittedAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットID</div> <div lang=\"en\">Target ID</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServicePermittedAudienceCategoryTarget categoryFullNameEn(String categoryFullNameEn) {
-    this.categoryFullNameEn = JsonNullable.of(categoryFullNameEn);
+    this.categoryFullNameEn = categoryFullNameEn;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class GuaranteedSimulationServicePermittedAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（英語）</div> <div lang=\"en\">Site category name (English)</div> ")
 
 
-  public JsonNullable<String> getCategoryFullNameEn() {
+  public String getCategoryFullNameEn() {
     return categoryFullNameEn;
   }
 
-  public void setCategoryFullNameEn(JsonNullable<String> categoryFullNameEn) {
+  public void setCategoryFullNameEn(String categoryFullNameEn) {
     this.categoryFullNameEn = categoryFullNameEn;
   }
 
   public GuaranteedSimulationServicePermittedAudienceCategoryTarget categoryFullNameJa(String categoryFullNameJa) {
-    this.categoryFullNameJa = JsonNullable.of(categoryFullNameJa);
+    this.categoryFullNameJa = categoryFullNameJa;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class GuaranteedSimulationServicePermittedAudienceCategoryTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（日本語）</div> <div lang=\"en\">Interest category name (Japanese)</div> ")
 
 
-  public JsonNullable<String> getCategoryFullNameJa() {
+  public String getCategoryFullNameJa() {
     return categoryFullNameJa;
   }
 
-  public void setCategoryFullNameJa(JsonNullable<String> categoryFullNameJa) {
+  public void setCategoryFullNameJa(String categoryFullNameJa) {
     this.categoryFullNameJa = categoryFullNameJa;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class GuaranteedSimulationServicePermittedAudienceCategoryTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

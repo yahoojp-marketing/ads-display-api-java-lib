@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountAuthorityServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountAuthorityServicePageオブジェクトは、取得されるアカウント権限情報に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountAuthorityServicePage object is a container for account authority entry.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountAuthorityServicePageオブジェクトは、取得されるアカウント権限情報に関するエントリーを表します。</div> <div lang=\"en\">The AccountAuthorityServicePage object is a container for account authority entry.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountAuthorityServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AccountAuthorityServiceValue>> values = JsonNullable.undefined();
+  private List<AccountAuthorityServiceValue> values = null;
 
   public AccountAuthorityServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class AccountAuthorityServicePage   {
   }
 
   public AccountAuthorityServicePage values(List<AccountAuthorityServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AccountAuthorityServicePage addValuesItem(AccountAuthorityServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class AccountAuthorityServicePage   {
 
   @Valid
 
-  public JsonNullable<List<AccountAuthorityServiceValue>> getValues() {
+  public List<AccountAuthorityServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AccountAuthorityServiceValue>> values) {
+  public void setValues(List<AccountAuthorityServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class AccountAuthorityServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

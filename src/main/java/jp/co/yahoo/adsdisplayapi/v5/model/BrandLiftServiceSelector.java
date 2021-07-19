@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.BrandLiftServiceApprovalStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,28 +15,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BrandLiftServiceSelector object is a container for storing a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BrandLiftServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The BrandLiftServiceSelector object is a container for storing a set of criteria (parameters) for get method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BrandLiftServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("brandLiftIds")
   @Valid
-  private JsonNullable<List<Long>> brandLiftIds = JsonNullable.undefined();
+  private List<Long> brandLiftIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("approvalStatuses")
   @Valid
-  private JsonNullable<List<BrandLiftServiceApprovalStatus>> approvalStatuses = JsonNullable.undefined();
+  private List<BrandLiftServiceApprovalStatus> approvalStatuses = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public BrandLiftServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -61,15 +60,15 @@ public class BrandLiftServiceSelector   {
   }
 
   public BrandLiftServiceSelector brandLiftIds(List<Long> brandLiftIds) {
-    this.brandLiftIds = JsonNullable.of(brandLiftIds);
+    this.brandLiftIds = brandLiftIds;
     return this;
   }
 
   public BrandLiftServiceSelector addBrandLiftIdsItem(Long brandLiftIdsItem) {
-    if (this.brandLiftIds == null || !this.brandLiftIds.isPresent()) {
-      this.brandLiftIds = JsonNullable.of(new ArrayList<>());
+    if (this.brandLiftIds == null) {
+      this.brandLiftIds = new ArrayList<>();
     }
-    this.brandLiftIds.get().add(brandLiftIdsItem);
+    this.brandLiftIds.add(brandLiftIdsItem);
     return this;
   }
 
@@ -80,24 +79,24 @@ public class BrandLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件 : ブランドリフト調査ID</div> <div lang=\"en\">Search Condition: BrandLift ID</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getBrandLiftIds() {
+  public List<Long> getBrandLiftIds() {
     return brandLiftIds;
   }
 
-  public void setBrandLiftIds(JsonNullable<List<Long>> brandLiftIds) {
+  public void setBrandLiftIds(List<Long> brandLiftIds) {
     this.brandLiftIds = brandLiftIds;
   }
 
   public BrandLiftServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public BrandLiftServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -108,24 +107,24 @@ public class BrandLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件 : キャンペーンID</div> <div lang=\"en\">Search Condition: Campaign ID</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public BrandLiftServiceSelector approvalStatuses(List<BrandLiftServiceApprovalStatus> approvalStatuses) {
-    this.approvalStatuses = JsonNullable.of(approvalStatuses);
+    this.approvalStatuses = approvalStatuses;
     return this;
   }
 
   public BrandLiftServiceSelector addApprovalStatusesItem(BrandLiftServiceApprovalStatus approvalStatusesItem) {
-    if (this.approvalStatuses == null || !this.approvalStatuses.isPresent()) {
-      this.approvalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.approvalStatuses == null) {
+      this.approvalStatuses = new ArrayList<>();
     }
-    this.approvalStatuses.get().add(approvalStatusesItem);
+    this.approvalStatuses.add(approvalStatusesItem);
     return this;
   }
 
@@ -137,16 +136,16 @@ public class BrandLiftServiceSelector   {
 
   @Valid
 @Size(max=6) 
-  public JsonNullable<List<BrandLiftServiceApprovalStatus>> getApprovalStatuses() {
+  public List<BrandLiftServiceApprovalStatus> getApprovalStatuses() {
     return approvalStatuses;
   }
 
-  public void setApprovalStatuses(JsonNullable<List<BrandLiftServiceApprovalStatus>> approvalStatuses) {
+  public void setApprovalStatuses(List<BrandLiftServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
   public BrandLiftServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -159,16 +158,16 @@ public class BrandLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public BrandLiftServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -180,17 +179,17 @@ public class BrandLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -230,7 +229,7 @@ public class BrandLiftServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

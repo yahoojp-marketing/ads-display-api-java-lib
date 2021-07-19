@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,28 +12,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feedオブジェクトは、Feed情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed object contains Feed informaton.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Feedオブジェクトは、Feed情報を保持します。</div> <div lang=\"en\">Feed object contains Feed informaton.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Feed   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("feedName")
-  private JsonNullable<String> feedName = JsonNullable.undefined();
+  private String feedName = null;
 
   @JsonProperty("itemCount")
-  private JsonNullable<Integer> itemCount = JsonNullable.undefined();
+  private Integer itemCount = null;
 
   @JsonProperty("approvedItemCount")
-  private JsonNullable<Integer> approvedItemCount = JsonNullable.undefined();
+  private Integer approvedItemCount = null;
 
   @JsonProperty("disApprovedItemCount")
-  private JsonNullable<Integer> disApprovedItemCount = JsonNullable.undefined();
+  private Integer disApprovedItemCount = null;
 
   public Feed accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class Feed   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public Feed feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class Feed   {
   @ApiModelProperty(value = "<div lang=\"ja\"> Feedを識別するIDです。<br> SET時およびREMOVE時、このフィールドは必須です。 </div> <div lang=\"en\"> ID for identifying Feed.<br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public Feed feedName(String feedName) {
-    this.feedName = JsonNullable.of(feedName);
+    this.feedName = feedName;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class Feed   {
   @ApiModelProperty(value = "<div lang=\"ja\"> Feedを識別する名称です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Name for identifying Feed.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getFeedName() {
+  public String getFeedName() {
     return feedName;
   }
 
-  public void setFeedName(JsonNullable<String> feedName) {
+  public void setFeedName(String feedName) {
     this.feedName = feedName;
   }
 
   public Feed itemCount(Integer itemCount) {
-    this.itemCount = JsonNullable.of(itemCount);
+    this.itemCount = itemCount;
     return this;
   }
 
@@ -105,16 +104,16 @@ public class Feed   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アイテム数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of items.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Integer> getItemCount() {
+  public Integer getItemCount() {
     return itemCount;
   }
 
-  public void setItemCount(JsonNullable<Integer> itemCount) {
+  public void setItemCount(Integer itemCount) {
     this.itemCount = itemCount;
   }
 
   public Feed approvedItemCount(Integer approvedItemCount) {
-    this.approvedItemCount = JsonNullable.of(approvedItemCount);
+    this.approvedItemCount = approvedItemCount;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class Feed   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 審査済みアイテム数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of approved items.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Integer> getApprovedItemCount() {
+  public Integer getApprovedItemCount() {
     return approvedItemCount;
   }
 
-  public void setApprovedItemCount(JsonNullable<Integer> approvedItemCount) {
+  public void setApprovedItemCount(Integer approvedItemCount) {
     this.approvedItemCount = approvedItemCount;
   }
 
   public Feed disApprovedItemCount(Integer disApprovedItemCount) {
-    this.disApprovedItemCount = JsonNullable.of(disApprovedItemCount);
+    this.disApprovedItemCount = disApprovedItemCount;
     return this;
   }
 
@@ -145,17 +144,17 @@ public class Feed   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 審査否認アイテム数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of disapproved items.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Integer> getDisApprovedItemCount() {
+  public Integer getDisApprovedItemCount() {
     return disApprovedItemCount;
   }
 
-  public void setDisApprovedItemCount(JsonNullable<Integer> disApprovedItemCount) {
+  public void setDisApprovedItemCount(Integer disApprovedItemCount) {
     this.disApprovedItemCount = disApprovedItemCount;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -195,7 +194,7 @@ public class Feed   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedPreviewServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedPreviewServicePageオブジェクトは、取得される予約型キャンペーンのプレビューに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The GuaranteedPreviewServicePage object serves the preview of guaranteed campaign entry.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedPreviewServicePageオブジェクトは、取得される予約型キャンペーンのプレビューに関するエントリーを表します。</div> <div lang=\"en\">The GuaranteedPreviewServicePage object serves the preview of guaranteed campaign entry.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedPreviewServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<GuaranteedPreviewServiceValue>> values = JsonNullable.undefined();
+  private List<GuaranteedPreviewServiceValue> values = null;
 
   public GuaranteedPreviewServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class GuaranteedPreviewServicePage   {
   }
 
   public GuaranteedPreviewServicePage values(List<GuaranteedPreviewServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public GuaranteedPreviewServicePage addValuesItem(GuaranteedPreviewServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class GuaranteedPreviewServicePage   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedPreviewServiceValue>> getValues() {
+  public List<GuaranteedPreviewServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<GuaranteedPreviewServiceValue>> values) {
+  public void setValues(List<GuaranteedPreviewServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class GuaranteedPreviewServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

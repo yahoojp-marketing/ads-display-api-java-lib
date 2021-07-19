@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ContentsKeywordListServiceContentsKeywordオブジェクトは、コンテンツキーワードを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ContentsKeywordListServiceContentsKeyword is an object to display the contents keyword.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ContentsKeywordListServiceContentsKeywordオブジェクトは、コンテンツキーワードを表します。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> ContentsKeywordListServiceContentsKeyword is an object to display the contents keyword.<br> This field is required in ADD and SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ContentsKeywordListServiceContentsKeyword   {
   @JsonProperty("contentsKeywordId")
-  private JsonNullable<Long> contentsKeywordId = JsonNullable.undefined();
+  private Long contentsKeywordId = null;
 
   public ContentsKeywordListServiceContentsKeyword contentsKeywordId(Long contentsKeywordId) {
-    this.contentsKeywordId = JsonNullable.of(contentsKeywordId);
+    this.contentsKeywordId = contentsKeywordId;
     return this;
   }
 
@@ -30,17 +29,17 @@ public class ContentsKeywordListServiceContentsKeyword   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードIDです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Contents keyword ID.<br> This field is required in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<Long> getContentsKeywordId() {
+  public Long getContentsKeywordId() {
     return contentsKeywordId;
   }
 
-  public void setContentsKeywordId(JsonNullable<Long> contentsKeywordId) {
+  public void setContentsKeywordId(Long contentsKeywordId) {
     this.contentsKeywordId = contentsKeywordId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +69,7 @@ public class ContentsKeywordListServiceContentsKeyword   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

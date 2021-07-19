@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   GuaranteedSimulationServiceDocumentFileは、商品資料情報を保持します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   GuaranteedSimulationServiceDocumentFile holds information about the package document.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input.  &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   GuaranteedSimulationServiceDocumentFileは、商品資料情報を保持します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   GuaranteedSimulationServiceDocumentFile holds information about the package document.<br>   Although this field will be returned in the response, it will be ignored on input.  </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceDocumentFile   {
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   @JsonProperty("fileName")
-  private JsonNullable<String> fileName = JsonNullable.undefined();
+  private String fileName = null;
 
   public GuaranteedSimulationServiceDocumentFile url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class GuaranteedSimulationServiceDocumentFile   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品資料のダウンロードURLです。</div> <div lang=\"en\">Download URL of the package document.</div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
   public GuaranteedSimulationServiceDocumentFile fileName(String fileName) {
-    this.fileName = JsonNullable.of(fileName);
+    this.fileName = fileName;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class GuaranteedSimulationServiceDocumentFile   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品資料のファイル名です。</div> <div lang=\"en\">File name of the package document.</div> ")
 
 
-  public JsonNullable<String> getFileName() {
+  public String getFileName() {
     return fileName;
   }
 
-  public void setFileName(JsonNullable<String> fileName) {
+  public void setFileName(String fileName) {
     this.fileName = fileName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class GuaranteedSimulationServiceDocumentFile   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePermissionType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePermittedSiteRetargetingTarget;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePermittedSiteRetargetingTargetオブジェクトは、サイトリターゲティング設定の制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget object holds limit information about the site retargeting setting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePermittedSiteRetargetingTargetオブジェクトは、サイトリターゲティング設定の制限情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget object holds limit information about the site retargeting setting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget   {
   @JsonProperty("targetPermission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType targetPermission = null;
 
   @JsonProperty("permittedTargets")
   @Valid
   private List<GuaranteedSimulationServicePermittedSiteRetargetingTarget> permittedTargets = null;
 
   public GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget targetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
-    this.targetPermission = JsonNullable.of(targetPermission);
+    this.targetPermission = targetPermission;
     return this;
   }
 
@@ -39,11 +38,11 @@ public class GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget   
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getTargetPermission() {
+  public GuaranteedSimulationServicePackagePermissionType getTargetPermission() {
     return targetPermission;
   }
 
-  public void setTargetPermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission) {
+  public void setTargetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
     this.targetPermission = targetPermission;
   }
 
@@ -78,7 +77,7 @@ public class GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget   
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class GuaranteedSimulationServicePackagePermittedSiteRetargetingTarget   
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

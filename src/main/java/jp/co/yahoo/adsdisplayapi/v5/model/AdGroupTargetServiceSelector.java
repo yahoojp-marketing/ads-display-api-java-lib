@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,28 +15,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupTargetServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupTargetServiceSelector object contains a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupTargetServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The AdGroupTargetServiceSelector object contains a set of criteria (parameters) for get method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("adGroupIds")
   @Valid
-  private JsonNullable<List<Long>> adGroupIds = JsonNullable.undefined();
+  private List<Long> adGroupIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("targetTypes")
   @Valid
-  private JsonNullable<List<AdGroupTargetServiceTargetType>> targetTypes = JsonNullable.undefined();
+  private List<AdGroupTargetServiceTargetType> targetTypes = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AdGroupTargetServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -61,15 +60,15 @@ public class AdGroupTargetServiceSelector   {
   }
 
   public AdGroupTargetServiceSelector adGroupIds(List<Long> adGroupIds) {
-    this.adGroupIds = JsonNullable.of(adGroupIds);
+    this.adGroupIds = adGroupIds;
     return this;
   }
 
   public AdGroupTargetServiceSelector addAdGroupIdsItem(Long adGroupIdsItem) {
-    if (this.adGroupIds == null || !this.adGroupIds.isPresent()) {
-      this.adGroupIds = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupIds == null) {
+      this.adGroupIds = new ArrayList<>();
     }
-    this.adGroupIds.get().add(adGroupIdsItem);
+    this.adGroupIds.add(adGroupIdsItem);
     return this;
   }
 
@@ -80,24 +79,24 @@ public class AdGroupTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループIDです。</div> <div lang=\"en\">Ad group ID</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getAdGroupIds() {
+  public List<Long> getAdGroupIds() {
     return adGroupIds;
   }
 
-  public void setAdGroupIds(JsonNullable<List<Long>> adGroupIds) {
+  public void setAdGroupIds(List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
   public AdGroupTargetServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public AdGroupTargetServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -108,24 +107,24 @@ public class AdGroupTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public AdGroupTargetServiceSelector targetTypes(List<AdGroupTargetServiceTargetType> targetTypes) {
-    this.targetTypes = JsonNullable.of(targetTypes);
+    this.targetTypes = targetTypes;
     return this;
   }
 
   public AdGroupTargetServiceSelector addTargetTypesItem(AdGroupTargetServiceTargetType targetTypesItem) {
-    if (this.targetTypes == null || !this.targetTypes.isPresent()) {
-      this.targetTypes = JsonNullable.of(new ArrayList<>());
+    if (this.targetTypes == null) {
+      this.targetTypes = new ArrayList<>();
     }
-    this.targetTypes.get().add(targetTypesItem);
+    this.targetTypes.add(targetTypesItem);
     return this;
   }
 
@@ -137,16 +136,16 @@ public class AdGroupTargetServiceSelector   {
 
   @Valid
 @Size(max=15) 
-  public JsonNullable<List<AdGroupTargetServiceTargetType>> getTargetTypes() {
+  public List<AdGroupTargetServiceTargetType> getTargetTypes() {
     return targetTypes;
   }
 
-  public void setTargetTypes(JsonNullable<List<AdGroupTargetServiceTargetType>> targetTypes) {
+  public void setTargetTypes(List<AdGroupTargetServiceTargetType> targetTypes) {
     this.targetTypes = targetTypes;
   }
 
   public AdGroupTargetServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -159,16 +158,16 @@ public class AdGroupTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AdGroupTargetServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -180,17 +179,17 @@ public class AdGroupTargetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -230,7 +229,7 @@ public class AdGroupTargetServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

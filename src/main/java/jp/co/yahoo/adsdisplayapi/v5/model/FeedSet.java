@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedSetServiceConditionSet;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,32 +15,32 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedSetオブジェクトは、商品セット情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSet object contains Item Set information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedSetオブジェクトは、商品セット情報を保持します。</div> <div lang=\"en\">FeedSet object contains Item Set information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedSet   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("conditionSets")
   @Valid
-  private JsonNullable<List<FeedSetServiceConditionSet>> conditionSets = JsonNullable.undefined();
+  private List<FeedSetServiceConditionSet> conditionSets = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("feedSetId")
-  private JsonNullable<Long> feedSetId = JsonNullable.undefined();
+  private Long feedSetId = null;
 
   @JsonProperty("feedSetName")
-  private JsonNullable<String> feedSetName = JsonNullable.undefined();
+  private String feedSetName = null;
 
   @JsonProperty("isDefaultSet")
-  private JsonNullable<Boolean> isDefaultSet = JsonNullable.undefined();
+  private Boolean isDefaultSet = null;
 
   @JsonProperty("itemCount")
-  private JsonNullable<Long> itemCount = JsonNullable.undefined();
+  private Long itemCount = null;
 
   public FeedSet accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -52,24 +51,24 @@ public class FeedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public FeedSet conditionSets(List<FeedSetServiceConditionSet> conditionSets) {
-    this.conditionSets = JsonNullable.of(conditionSets);
+    this.conditionSets = conditionSets;
     return this;
   }
 
   public FeedSet addConditionSetsItem(FeedSetServiceConditionSet conditionSetsItem) {
-    if (this.conditionSets == null || !this.conditionSets.isPresent()) {
-      this.conditionSets = JsonNullable.of(new ArrayList<>());
+    if (this.conditionSets == null) {
+      this.conditionSets = new ArrayList<>();
     }
-    this.conditionSets.get().add(conditionSetsItem);
+    this.conditionSets.add(conditionSetsItem);
     return this;
   }
 
@@ -81,16 +80,16 @@ public class FeedSet   {
 
   @Valid
 
-  public JsonNullable<List<FeedSetServiceConditionSet>> getConditionSets() {
+  public List<FeedSetServiceConditionSet> getConditionSets() {
     return conditionSets;
   }
 
-  public void setConditionSets(JsonNullable<List<FeedSetServiceConditionSet>> conditionSets) {
+  public void setConditionSets(List<FeedSetServiceConditionSet> conditionSets) {
     this.conditionSets = conditionSets;
   }
 
   public FeedSet feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -101,16 +100,16 @@ public class FeedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\"> Feedを識別するIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Feed ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public FeedSet feedSetId(Long feedSetId) {
-    this.feedSetId = JsonNullable.of(feedSetId);
+    this.feedSetId = feedSetId;
     return this;
   }
 
@@ -121,16 +120,16 @@ public class FeedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットIDです。<br> REMOVE時、このフィールドは必須です。 </div> <div lang=\"en\"> Item Set ID.<br> This field is required in REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getFeedSetId() {
+  public Long getFeedSetId() {
     return feedSetId;
   }
 
-  public void setFeedSetId(JsonNullable<Long> feedSetId) {
+  public void setFeedSetId(Long feedSetId) {
     this.feedSetId = feedSetId;
   }
 
   public FeedSet feedSetName(String feedSetName) {
-    this.feedSetName = JsonNullable.of(feedSetName);
+    this.feedSetName = feedSetName;
     return this;
   }
 
@@ -141,16 +140,16 @@ public class FeedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品セット名です。<br> ADD時、このフィールドは必須です。 </div> <div lang=\"en\"> Item Set name.<br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<String> getFeedSetName() {
+  public String getFeedSetName() {
     return feedSetName;
   }
 
-  public void setFeedSetName(JsonNullable<String> feedSetName) {
+  public void setFeedSetName(String feedSetName) {
     this.feedSetName = feedSetName;
   }
 
   public FeedSet isDefaultSet(Boolean isDefaultSet) {
-    this.isDefaultSet = JsonNullable.of(isDefaultSet);
+    this.isDefaultSet = isDefaultSet;
     return this;
   }
 
@@ -161,16 +160,16 @@ public class FeedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\"> デフォルトセット判定です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Default setting of Item Set or not.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Boolean> getIsDefaultSet() {
+  public Boolean getIsDefaultSet() {
     return isDefaultSet;
   }
 
-  public void setIsDefaultSet(JsonNullable<Boolean> isDefaultSet) {
+  public void setIsDefaultSet(Boolean isDefaultSet) {
     this.isDefaultSet = isDefaultSet;
   }
 
   public FeedSet itemCount(Long itemCount) {
-    this.itemCount = JsonNullable.of(itemCount);
+    this.itemCount = itemCount;
     return this;
   }
 
@@ -181,17 +180,17 @@ public class FeedSet   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットの条件に含まれるアイテム数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of items included in Item Set conditions.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getItemCount() {
+  public Long getItemCount() {
     return itemCount;
   }
 
-  public void setItemCount(JsonNullable<Long> itemCount) {
+  public void setItemCount(Long itemCount) {
     this.itemCount = itemCount;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -233,7 +232,7 @@ public class FeedSet   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

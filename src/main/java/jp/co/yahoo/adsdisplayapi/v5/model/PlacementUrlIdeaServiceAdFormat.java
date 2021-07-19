@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,22 +12,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServiceAdFormatは、広告のフォーマットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad Format.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServiceAdFormatは、広告のフォーマットを表します。</div> <div lang=\"en\">Ad Format.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlIdeaServiceAdFormat   {
   @JsonProperty("adStyle")
-  private JsonNullable<String> adStyle = JsonNullable.undefined();
+  private String adStyle = null;
 
   @JsonProperty("adType")
-  private JsonNullable<String> adType = JsonNullable.undefined();
+  private String adType = null;
 
   @JsonProperty("width")
-  private JsonNullable<Long> width = JsonNullable.undefined();
+  private Long width = null;
 
   @JsonProperty("height")
-  private JsonNullable<Long> height = JsonNullable.undefined();
+  private Long height = null;
 
   public PlacementUrlIdeaServiceAdFormat adStyle(String adStyle) {
-    this.adStyle = JsonNullable.of(adStyle);
+    this.adStyle = adStyle;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class PlacementUrlIdeaServiceAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告のスタイルです。</div> <div lang=\"en\">Ad Style of image.</div> ")
 
 
-  public JsonNullable<String> getAdStyle() {
+  public String getAdStyle() {
     return adStyle;
   }
 
-  public void setAdStyle(JsonNullable<String> adStyle) {
+  public void setAdStyle(String adStyle) {
     this.adStyle = adStyle;
   }
 
   public PlacementUrlIdeaServiceAdFormat adType(String adType) {
-    this.adType = JsonNullable.of(adType);
+    this.adType = adType;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class PlacementUrlIdeaServiceAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告のタイプです。</div> <div lang=\"en\">Ad Type of image.</div> ")
 
 
-  public JsonNullable<String> getAdType() {
+  public String getAdType() {
     return adType;
   }
 
-  public void setAdType(JsonNullable<String> adType) {
+  public void setAdType(String adType) {
     this.adType = adType;
   }
 
   public PlacementUrlIdeaServiceAdFormat width(Long width) {
-    this.width = JsonNullable.of(width);
+    this.width = width;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class PlacementUrlIdeaServiceAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像の幅です。</div> <div lang=\"en\">Width of the image.</div> ")
 
 
-  public JsonNullable<Long> getWidth() {
+  public Long getWidth() {
     return width;
   }
 
-  public void setWidth(JsonNullable<Long> width) {
+  public void setWidth(Long width) {
     this.width = width;
   }
 
   public PlacementUrlIdeaServiceAdFormat height(Long height) {
-    this.height = JsonNullable.of(height);
+    this.height = height;
     return this;
   }
 
@@ -99,17 +98,17 @@ public class PlacementUrlIdeaServiceAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像の高さです。</div> <div lang=\"en\">Height of the image.</div> ")
 
 
-  public JsonNullable<Long> getHeight() {
+  public Long getHeight() {
     return height;
   }
 
-  public void setHeight(JsonNullable<Long> height) {
+  public void setHeight(Long height) {
     this.height = height;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,7 +144,7 @@ public class PlacementUrlIdeaServiceAdFormat   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

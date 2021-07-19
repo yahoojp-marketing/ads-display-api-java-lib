@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceFrequencyLevel;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceFrequencyTimeUnit;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,19 +14,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;br&gt; ADD時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.&lt;br&gt; This field is optional in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.<br> This field is optional in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceViewableFrequencyCap   {
   @JsonProperty("frequencyLevel")
-  private JsonNullable<GuaranteedSimulationServiceFrequencyLevel> frequencyLevel = JsonNullable.undefined();
+  private GuaranteedSimulationServiceFrequencyLevel frequencyLevel = null;
 
   @JsonProperty("frequencyTimeUnit")
-  private JsonNullable<GuaranteedSimulationServiceFrequencyTimeUnit> frequencyTimeUnit = JsonNullable.undefined();
+  private GuaranteedSimulationServiceFrequencyTimeUnit frequencyTimeUnit = null;
 
   @JsonProperty("vImps")
-  private JsonNullable<Long> vImps = JsonNullable.undefined();
+  private Long vImps = null;
 
   public GuaranteedSimulationServiceViewableFrequencyCap frequencyLevel(GuaranteedSimulationServiceFrequencyLevel frequencyLevel) {
-    this.frequencyLevel = JsonNullable.of(frequencyLevel);
+    this.frequencyLevel = frequencyLevel;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class GuaranteedSimulationServiceViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceFrequencyLevel> getFrequencyLevel() {
+  public GuaranteedSimulationServiceFrequencyLevel getFrequencyLevel() {
     return frequencyLevel;
   }
 
-  public void setFrequencyLevel(JsonNullable<GuaranteedSimulationServiceFrequencyLevel> frequencyLevel) {
+  public void setFrequencyLevel(GuaranteedSimulationServiceFrequencyLevel frequencyLevel) {
     this.frequencyLevel = frequencyLevel;
   }
 
   public GuaranteedSimulationServiceViewableFrequencyCap frequencyTimeUnit(GuaranteedSimulationServiceFrequencyTimeUnit frequencyTimeUnit) {
-    this.frequencyTimeUnit = JsonNullable.of(frequencyTimeUnit);
+    this.frequencyTimeUnit = frequencyTimeUnit;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class GuaranteedSimulationServiceViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceFrequencyTimeUnit> getFrequencyTimeUnit() {
+  public GuaranteedSimulationServiceFrequencyTimeUnit getFrequencyTimeUnit() {
     return frequencyTimeUnit;
   }
 
-  public void setFrequencyTimeUnit(JsonNullable<GuaranteedSimulationServiceFrequencyTimeUnit> frequencyTimeUnit) {
+  public void setFrequencyTimeUnit(GuaranteedSimulationServiceFrequencyTimeUnit frequencyTimeUnit) {
     this.frequencyTimeUnit = frequencyTimeUnit;
   }
 
   public GuaranteedSimulationServiceViewableFrequencyCap vImps(Long vImps) {
-    this.vImps = JsonNullable.of(vImps);
+    this.vImps = vImps;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class GuaranteedSimulationServiceViewableFrequencyCap   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 同一ユーザに対する広告の最大ビューアブルインプレッション数です。<br> ADD時、このフィールドは必須となります。 </div> <div lang=\"en\"> Maximum number of ad viewable impressions to same user.<br> In ADD operation, this field will be required. </div> ")
 
 
-  public JsonNullable<Long> getvImps() {
+  public Long getvImps() {
     return vImps;
   }
 
-  public void setvImps(JsonNullable<Long> vImps) {
+  public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class GuaranteedSimulationServiceViewableFrequencyCap   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

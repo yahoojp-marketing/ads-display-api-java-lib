@@ -9,7 +9,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceAutoConversionOptimizer;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceManualConversionOptimizer;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceNoneConversionOptimizer;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceOptimizerType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,22 +16,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceConversionOptimizerは、コンバージョン最適化制御を保持するオブジェクトです。&lt;br&gt; ADD、SETのどちらも指定できません。ADD時、MANUAL固定となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceConversionOptimizer retains conversion optimization control.&lt;br&gt; Not allowed for ADD and SET. In ADD operation, it is set to \&quot;MANUAL\&quot;. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupServiceConversionOptimizerは、コンバージョン最適化制御を保持するオブジェクトです。<br> ADD、SETのどちらも指定できません。ADD時、MANUAL固定となります。 </div> <div lang=\"en\"> AdGroupServiceConversionOptimizer retains conversion optimization control.<br> Not allowed for ADD and SET. In ADD operation, it is set to \"MANUAL\". </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceConversionOptimizer   {
   @JsonProperty("autoConversionOptimizer")
-  private JsonNullable<AdGroupServiceAutoConversionOptimizer> autoConversionOptimizer = JsonNullable.undefined();
+  private AdGroupServiceAutoConversionOptimizer autoConversionOptimizer = null;
 
   @JsonProperty("manualConversionOptimizer")
-  private JsonNullable<AdGroupServiceManualConversionOptimizer> manualConversionOptimizer = JsonNullable.undefined();
+  private AdGroupServiceManualConversionOptimizer manualConversionOptimizer = null;
 
   @JsonProperty("noneConversionOptimizer")
-  private JsonNullable<AdGroupServiceNoneConversionOptimizer> noneConversionOptimizer = JsonNullable.undefined();
+  private AdGroupServiceNoneConversionOptimizer noneConversionOptimizer = null;
 
   @JsonProperty("optimizerType")
-  private JsonNullable<AdGroupServiceOptimizerType> optimizerType = JsonNullable.undefined();
+  private AdGroupServiceOptimizerType optimizerType = null;
 
   public AdGroupServiceConversionOptimizer autoConversionOptimizer(AdGroupServiceAutoConversionOptimizer autoConversionOptimizer) {
-    this.autoConversionOptimizer = JsonNullable.of(autoConversionOptimizer);
+    this.autoConversionOptimizer = autoConversionOptimizer;
     return this;
   }
 
@@ -44,16 +43,16 @@ public class AdGroupServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceAutoConversionOptimizer> getAutoConversionOptimizer() {
+  public AdGroupServiceAutoConversionOptimizer getAutoConversionOptimizer() {
     return autoConversionOptimizer;
   }
 
-  public void setAutoConversionOptimizer(JsonNullable<AdGroupServiceAutoConversionOptimizer> autoConversionOptimizer) {
+  public void setAutoConversionOptimizer(AdGroupServiceAutoConversionOptimizer autoConversionOptimizer) {
     this.autoConversionOptimizer = autoConversionOptimizer;
   }
 
   public AdGroupServiceConversionOptimizer manualConversionOptimizer(AdGroupServiceManualConversionOptimizer manualConversionOptimizer) {
-    this.manualConversionOptimizer = JsonNullable.of(manualConversionOptimizer);
+    this.manualConversionOptimizer = manualConversionOptimizer;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class AdGroupServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceManualConversionOptimizer> getManualConversionOptimizer() {
+  public AdGroupServiceManualConversionOptimizer getManualConversionOptimizer() {
     return manualConversionOptimizer;
   }
 
-  public void setManualConversionOptimizer(JsonNullable<AdGroupServiceManualConversionOptimizer> manualConversionOptimizer) {
+  public void setManualConversionOptimizer(AdGroupServiceManualConversionOptimizer manualConversionOptimizer) {
     this.manualConversionOptimizer = manualConversionOptimizer;
   }
 
   public AdGroupServiceConversionOptimizer noneConversionOptimizer(AdGroupServiceNoneConversionOptimizer noneConversionOptimizer) {
-    this.noneConversionOptimizer = JsonNullable.of(noneConversionOptimizer);
+    this.noneConversionOptimizer = noneConversionOptimizer;
     return this;
   }
 
@@ -86,16 +85,16 @@ public class AdGroupServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceNoneConversionOptimizer> getNoneConversionOptimizer() {
+  public AdGroupServiceNoneConversionOptimizer getNoneConversionOptimizer() {
     return noneConversionOptimizer;
   }
 
-  public void setNoneConversionOptimizer(JsonNullable<AdGroupServiceNoneConversionOptimizer> noneConversionOptimizer) {
+  public void setNoneConversionOptimizer(AdGroupServiceNoneConversionOptimizer noneConversionOptimizer) {
     this.noneConversionOptimizer = noneConversionOptimizer;
   }
 
   public AdGroupServiceConversionOptimizer optimizerType(AdGroupServiceOptimizerType optimizerType) {
-    this.optimizerType = JsonNullable.of(optimizerType);
+    this.optimizerType = optimizerType;
     return this;
   }
 
@@ -107,17 +106,17 @@ public class AdGroupServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceOptimizerType> getOptimizerType() {
+  public AdGroupServiceOptimizerType getOptimizerType() {
     return optimizerType;
   }
 
-  public void setOptimizerType(JsonNullable<AdGroupServiceOptimizerType> optimizerType) {
+  public void setOptimizerType(AdGroupServiceOptimizerType optimizerType) {
     this.optimizerType = optimizerType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -153,7 +152,7 @@ public class AdGroupServiceConversionOptimizer   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

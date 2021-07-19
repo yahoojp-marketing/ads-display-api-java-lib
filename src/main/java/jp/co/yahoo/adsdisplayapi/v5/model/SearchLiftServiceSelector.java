@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,24 +14,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchLiftServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The SearchLiftServiceSelector object is a container for storing a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchLiftServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The SearchLiftServiceSelector object is a container for storing a set of criteria (parameters) for get method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchLiftServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("searchLiftIds")
   @Valid
-  private JsonNullable<List<Long>> searchLiftIds = JsonNullable.undefined();
+  private List<Long> searchLiftIds = null;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public SearchLiftServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -56,15 +55,15 @@ public class SearchLiftServiceSelector   {
   }
 
   public SearchLiftServiceSelector searchLiftIds(List<Long> searchLiftIds) {
-    this.searchLiftIds = JsonNullable.of(searchLiftIds);
+    this.searchLiftIds = searchLiftIds;
     return this;
   }
 
   public SearchLiftServiceSelector addSearchLiftIdsItem(Long searchLiftIdsItem) {
-    if (this.searchLiftIds == null || !this.searchLiftIds.isPresent()) {
-      this.searchLiftIds = JsonNullable.of(new ArrayList<>());
+    if (this.searchLiftIds == null) {
+      this.searchLiftIds = new ArrayList<>();
     }
-    this.searchLiftIds.get().add(searchLiftIdsItem);
+    this.searchLiftIds.add(searchLiftIdsItem);
     return this;
   }
 
@@ -75,24 +74,24 @@ public class SearchLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件 : サーチリフト調査ID</div> <div lang=\"en\">Search Condition: SearchLift ID</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getSearchLiftIds() {
+  public List<Long> getSearchLiftIds() {
     return searchLiftIds;
   }
 
-  public void setSearchLiftIds(JsonNullable<List<Long>> searchLiftIds) {
+  public void setSearchLiftIds(List<Long> searchLiftIds) {
     this.searchLiftIds = searchLiftIds;
   }
 
   public SearchLiftServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public SearchLiftServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -103,16 +102,16 @@ public class SearchLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件 : キャンペーンID</div> <div lang=\"en\">Search Condition: Campaign ID</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public SearchLiftServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class SearchLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public SearchLiftServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -146,17 +145,17 @@ public class SearchLiftServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -194,7 +193,7 @@ public class SearchLiftServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceAge;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedAgeTargetオブジェクトは、年齢ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedAgeTarget object holds configuration information of age targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedAgeTargetオブジェクトは、年齢ターゲットの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedAgeTarget object holds configuration information of age targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedAgeTarget   {
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("age")
-  private JsonNullable<GuaranteedSimulationServiceAge> age = JsonNullable.undefined();
+  private GuaranteedSimulationServiceAge age = null;
 
   public GuaranteedSimulationServicePermittedAgeTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class GuaranteedSimulationServicePermittedAgeTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットID</div> <div lang=\"en\">Target ID</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServicePermittedAgeTarget age(GuaranteedSimulationServiceAge age) {
-    this.age = JsonNullable.of(age);
+    this.age = age;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class GuaranteedSimulationServicePermittedAgeTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceAge> getAge() {
+  public GuaranteedSimulationServiceAge getAge() {
     return age;
   }
 
-  public void setAge(JsonNullable<GuaranteedSimulationServiceAge> age) {
+  public void setAge(GuaranteedSimulationServiceAge age) {
     this.age = age;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class GuaranteedSimulationServicePermittedAgeTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

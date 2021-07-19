@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,20 +14,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;LabelServiceSelectorオブジェクトは、操作の対象とするラベルの情報およびフィルタ条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;LabelServiceSelector object describes the information of label to be operated and filter conditions.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">LabelServiceSelectorオブジェクトは、操作の対象とするラベルの情報およびフィルタ条件を表します。</div> <div lang=\"en\">LabelServiceSelector object describes the information of label to be operated and filter conditions.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class LabelServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("labelIds")
   @Valid
-  private JsonNullable<List<Long>> labelIds = JsonNullable.undefined();
+  private List<Long> labelIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public LabelServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -52,15 +51,15 @@ public class LabelServiceSelector   {
   }
 
   public LabelServiceSelector labelIds(List<Long> labelIds) {
-    this.labelIds = JsonNullable.of(labelIds);
+    this.labelIds = labelIds;
     return this;
   }
 
   public LabelServiceSelector addLabelIdsItem(Long labelIdsItem) {
-    if (this.labelIds == null || !this.labelIds.isPresent()) {
-      this.labelIds = JsonNullable.of(new ArrayList<>());
+    if (this.labelIds == null) {
+      this.labelIds = new ArrayList<>();
     }
-    this.labelIds.get().add(labelIdsItem);
+    this.labelIds.add(labelIdsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class LabelServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：ラベルID<br> 指定しない場合は、フィルタ条件に すべてのラベルが含まれます。 </div> <div lang=\"en\">Search Condition: Label ID.</div> ")
 
 @Size(max=2000) 
-  public JsonNullable<List<Long>> getLabelIds() {
+  public List<Long> getLabelIds() {
     return labelIds;
   }
 
-  public void setLabelIds(JsonNullable<List<Long>> labelIds) {
+  public void setLabelIds(List<Long> labelIds) {
     this.labelIds = labelIds;
   }
 
   public LabelServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -93,16 +92,16 @@ public class LabelServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(2000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public LabelServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -114,17 +113,17 @@ public class LabelServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -160,7 +159,7 @@ public class LabelServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

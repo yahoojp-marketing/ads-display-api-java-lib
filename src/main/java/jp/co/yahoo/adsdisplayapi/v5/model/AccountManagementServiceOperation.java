@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagement;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,17 +15,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServiceOperationオブジェクトは、操作対象となるアカウント情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagementServiceOperation object describes account information for operation and list of operations.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountManagementServiceOperationオブジェクトは、操作対象となるアカウント情報と処理の内容を表します。</div> <div lang=\"en\">AccountManagementServiceOperation object describes account information for operation and list of operations.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountManagementServiceOperation   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("operand")
   @Valid
   private List<AccountManagement> operand = new ArrayList<>();
 
   public AccountManagementServiceOperation accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -37,11 +36,11 @@ public class AccountManagementServiceOperation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、SET時に必須となり、ADD時に無視されます。 </div> <div lang=\"en\"> Account ID.<br> This field is required in SET operation and ignored in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
@@ -51,6 +50,9 @@ public class AccountManagementServiceOperation   {
   }
 
   public AccountManagementServiceOperation addOperandItem(AccountManagement operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -74,7 +76,7 @@ public class AccountManagementServiceOperation   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -106,7 +108,7 @@ public class AccountManagementServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

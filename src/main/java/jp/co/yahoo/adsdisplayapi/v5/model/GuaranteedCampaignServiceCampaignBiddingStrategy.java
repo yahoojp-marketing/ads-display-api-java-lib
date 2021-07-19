@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedCampaignServiceCampaignBiddingStrategyType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServiceCampaignBiddingStrategyオブジェクトは、キャンペーン入札戦略です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceCampaignBiddingStrategy object describes campaign bidding strategy.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedCampaignServiceCampaignBiddingStrategyオブジェクトは、キャンペーン入札戦略です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> GuaranteedCampaignServiceCampaignBiddingStrategy object describes campaign bidding strategy.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedCampaignServiceCampaignBiddingStrategy   {
   @JsonProperty("campaignBiddingStrategyType")
-  private JsonNullable<GuaranteedCampaignServiceCampaignBiddingStrategyType> campaignBiddingStrategyType = JsonNullable.undefined();
+  private GuaranteedCampaignServiceCampaignBiddingStrategyType campaignBiddingStrategyType = null;
 
   @JsonProperty("maxVcpmBidValue")
-  private JsonNullable<Long> maxVcpmBidValue = JsonNullable.undefined();
+  private Long maxVcpmBidValue = null;
 
   @JsonProperty("sovRate")
-  private JsonNullable<Long> sovRate = JsonNullable.undefined();
+  private Long sovRate = null;
 
   public GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategyType(GuaranteedCampaignServiceCampaignBiddingStrategyType campaignBiddingStrategyType) {
-    this.campaignBiddingStrategyType = JsonNullable.of(campaignBiddingStrategyType);
+    this.campaignBiddingStrategyType = campaignBiddingStrategyType;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class GuaranteedCampaignServiceCampaignBiddingStrategy   {
 
   @Valid
 
-  public JsonNullable<GuaranteedCampaignServiceCampaignBiddingStrategyType> getCampaignBiddingStrategyType() {
+  public GuaranteedCampaignServiceCampaignBiddingStrategyType getCampaignBiddingStrategyType() {
     return campaignBiddingStrategyType;
   }
 
-  public void setCampaignBiddingStrategyType(JsonNullable<GuaranteedCampaignServiceCampaignBiddingStrategyType> campaignBiddingStrategyType) {
+  public void setCampaignBiddingStrategyType(GuaranteedCampaignServiceCampaignBiddingStrategyType campaignBiddingStrategyType) {
     this.campaignBiddingStrategyType = campaignBiddingStrategyType;
   }
 
   public GuaranteedCampaignServiceCampaignBiddingStrategy maxVcpmBidValue(Long maxVcpmBidValue) {
-    this.maxVcpmBidValue = JsonNullable.of(maxVcpmBidValue);
+    this.maxVcpmBidValue = maxVcpmBidValue;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class GuaranteedCampaignServiceCampaignBiddingStrategy   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン最大入札価格(vCPM)です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Max bid of campaign (vCPM).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxVcpmBidValue() {
+  public Long getMaxVcpmBidValue() {
     return maxVcpmBidValue;
   }
 
-  public void setMaxVcpmBidValue(JsonNullable<Long> maxVcpmBidValue) {
+  public void setMaxVcpmBidValue(Long maxVcpmBidValue) {
     this.maxVcpmBidValue = maxVcpmBidValue;
   }
 
   public GuaranteedCampaignServiceCampaignBiddingStrategy sovRate(Long sovRate) {
-    this.sovRate = JsonNullable.of(sovRate);
+    this.sovRate = sovRate;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class GuaranteedCampaignServiceCampaignBiddingStrategy   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SOV割合です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> SOV rate.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getSovRate() {
+  public Long getSovRate() {
     return sovRate;
   }
 
-  public void setSovRate(JsonNullable<Long> sovRate) {
+  public void setSovRate(Long sovRate) {
     this.sovRate = sovRate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class GuaranteedCampaignServiceCampaignBiddingStrategy   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

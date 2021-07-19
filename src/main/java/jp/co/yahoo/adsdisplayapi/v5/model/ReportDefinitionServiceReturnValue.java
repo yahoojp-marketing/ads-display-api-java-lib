@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionServiceReturnValueオブジェクトは、操作結果を含むレポート定義のコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The ReportDefinitionServiceReturnValue object is a container that holds report definitions, including operation results.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ReportDefinitionServiceReturnValueオブジェクトは、操作結果を含むレポート定義のコンテナです。</div> <div lang=\"en\">The ReportDefinitionServiceReturnValue object is a container that holds report definitions, including operation results.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceValue>> values = JsonNullable.undefined();
+  private List<ReportDefinitionServiceValue> values = null;
 
   public ReportDefinitionServiceReturnValue values(List<ReportDefinitionServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public ReportDefinitionServiceReturnValue addValuesItem(ReportDefinitionServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class ReportDefinitionServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceValue>> getValues() {
+  public List<ReportDefinitionServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<ReportDefinitionServiceValue>> values) {
+  public void setValues(List<ReportDefinitionServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class ReportDefinitionServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

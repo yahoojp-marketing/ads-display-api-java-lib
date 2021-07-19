@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceFileType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,31 +13,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServiceSettingオブジェクトは、動画の設定内容を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;VideoServiceSetting object stores the setting information of videos.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">VideoServiceSettingオブジェクトは、動画の設定内容を保持します。</div> <div lang=\"en\">VideoServiceSetting object stores the setting information of videos.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class VideoServiceSetting   {
   @JsonProperty("fileSize")
-  private JsonNullable<Long> fileSize = JsonNullable.undefined();
+  private Long fileSize = null;
 
   @JsonProperty("fileType")
-  private JsonNullable<VideoServiceFileType> fileType = JsonNullable.undefined();
+  private VideoServiceFileType fileType = null;
 
   @JsonProperty("height")
-  private JsonNullable<Long> height = JsonNullable.undefined();
+  private Long height = null;
 
   @JsonProperty("playbackTime")
-  private JsonNullable<Long> playbackTime = JsonNullable.undefined();
+  private Long playbackTime = null;
 
   @JsonProperty("videoAdFormat")
-  private JsonNullable<String> videoAdFormat = JsonNullable.undefined();
+  private String videoAdFormat = null;
 
   @JsonProperty("videoAspectRatio")
-  private JsonNullable<String> videoAspectRatio = JsonNullable.undefined();
+  private String videoAspectRatio = null;
 
   @JsonProperty("width")
-  private JsonNullable<Long> width = JsonNullable.undefined();
+  private Long width = null;
 
   public VideoServiceSetting fileSize(Long fileSize) {
-    this.fileSize = JsonNullable.of(fileSize);
+    this.fileSize = fileSize;
     return this;
   }
 
@@ -49,16 +48,16 @@ public class VideoServiceSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画のファイルサイズです。</div> <div lang=\"en\">File size of the video.</div> ")
 
 
-  public JsonNullable<Long> getFileSize() {
+  public Long getFileSize() {
     return fileSize;
   }
 
-  public void setFileSize(JsonNullable<Long> fileSize) {
+  public void setFileSize(Long fileSize) {
     this.fileSize = fileSize;
   }
 
   public VideoServiceSetting fileType(VideoServiceFileType fileType) {
-    this.fileType = JsonNullable.of(fileType);
+    this.fileType = fileType;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class VideoServiceSetting   {
 
   @Valid
 
-  public JsonNullable<VideoServiceFileType> getFileType() {
+  public VideoServiceFileType getFileType() {
     return fileType;
   }
 
-  public void setFileType(JsonNullable<VideoServiceFileType> fileType) {
+  public void setFileType(VideoServiceFileType fileType) {
     this.fileType = fileType;
   }
 
   public VideoServiceSetting height(Long height) {
-    this.height = JsonNullable.of(height);
+    this.height = height;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class VideoServiceSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の高さ（縦の長さ）です。</div> <div lang=\"en\">Height (vertical length) of the video.</div> ")
 
 
-  public JsonNullable<Long> getHeight() {
+  public Long getHeight() {
     return height;
   }
 
-  public void setHeight(JsonNullable<Long> height) {
+  public void setHeight(Long height) {
     this.height = height;
   }
 
   public VideoServiceSetting playbackTime(Long playbackTime) {
-    this.playbackTime = JsonNullable.of(playbackTime);
+    this.playbackTime = playbackTime;
     return this;
   }
 
@@ -110,16 +109,16 @@ public class VideoServiceSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画再生時間（秒）です。</div> <div lang=\"en\">Play time (sec) of the video.</div> ")
 
 
-  public JsonNullable<Long> getPlaybackTime() {
+  public Long getPlaybackTime() {
     return playbackTime;
   }
 
-  public void setPlaybackTime(JsonNullable<Long> playbackTime) {
+  public void setPlaybackTime(Long playbackTime) {
     this.playbackTime = playbackTime;
   }
 
   public VideoServiceSetting videoAdFormat(String videoAdFormat) {
-    this.videoAdFormat = JsonNullable.of(videoAdFormat);
+    this.videoAdFormat = videoAdFormat;
     return this;
   }
 
@@ -130,16 +129,16 @@ public class VideoServiceSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画広告の種類です。</div> <div lang=\"en\">Ad format type of the video ad.</div> ")
 
 
-  public JsonNullable<String> getVideoAdFormat() {
+  public String getVideoAdFormat() {
     return videoAdFormat;
   }
 
-  public void setVideoAdFormat(JsonNullable<String> videoAdFormat) {
+  public void setVideoAdFormat(String videoAdFormat) {
     this.videoAdFormat = videoAdFormat;
   }
 
   public VideoServiceSetting videoAspectRatio(String videoAspectRatio) {
-    this.videoAspectRatio = JsonNullable.of(videoAspectRatio);
+    this.videoAspectRatio = videoAspectRatio;
     return this;
   }
 
@@ -150,16 +149,16 @@ public class VideoServiceSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 動画アスペクト比の種類です。<br> ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのaspectRatioフィールドをご確認ください。 </div> <div lang=\"en\"> Type of aspect ratio.<br> * Available values can be referred to aspectRatio field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. </div> ")
 
 
-  public JsonNullable<String> getVideoAspectRatio() {
+  public String getVideoAspectRatio() {
     return videoAspectRatio;
   }
 
-  public void setVideoAspectRatio(JsonNullable<String> videoAspectRatio) {
+  public void setVideoAspectRatio(String videoAspectRatio) {
     this.videoAspectRatio = videoAspectRatio;
   }
 
   public VideoServiceSetting width(Long width) {
-    this.width = JsonNullable.of(width);
+    this.width = width;
     return this;
   }
 
@@ -170,17 +169,17 @@ public class VideoServiceSetting   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の横幅です。</div> <div lang=\"en\">Width of the video.</div> ")
 
 
-  public JsonNullable<Long> getWidth() {
+  public Long getWidth() {
     return width;
   }
 
-  public void setWidth(JsonNullable<Long> width) {
+  public void setWidth(Long width) {
     this.width = width;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -222,7 +221,7 @@ public class VideoServiceSetting   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

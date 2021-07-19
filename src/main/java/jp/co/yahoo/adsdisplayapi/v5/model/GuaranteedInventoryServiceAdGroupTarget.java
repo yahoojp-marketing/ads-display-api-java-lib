@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceTarget;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedInventoryServiceAdGroupTargetオブジェクトは、予約型キャンペーンの配信シミュレーションのターゲティング情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedInventoryServiceAdGroupTarget object holds the targeting information about the delivery simulation of the guaranteed campaign.&lt;br&gt; This field is optional in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedInventoryServiceAdGroupTargetオブジェクトは、予約型キャンペーンの配信シミュレーションのターゲティング情報を保持します。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> GuaranteedInventoryServiceAdGroupTarget object holds the targeting information about the delivery simulation of the guaranteed campaign.<br> This field is optional in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceAdGroupTarget   {
   @JsonProperty("target")
-  private JsonNullable<GuaranteedInventoryServiceTarget> target = JsonNullable.undefined();
+  private GuaranteedInventoryServiceTarget target = null;
 
   public GuaranteedInventoryServiceAdGroupTarget target(GuaranteedInventoryServiceTarget target) {
-    this.target = JsonNullable.of(target);
+    this.target = target;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class GuaranteedInventoryServiceAdGroupTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceTarget> getTarget() {
+  public GuaranteedInventoryServiceTarget getTarget() {
     return target;
   }
 
-  public void setTarget(JsonNullable<GuaranteedInventoryServiceTarget> target) {
+  public void setTarget(GuaranteedInventoryServiceTarget target) {
     this.target = target;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class GuaranteedInventoryServiceAdGroupTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

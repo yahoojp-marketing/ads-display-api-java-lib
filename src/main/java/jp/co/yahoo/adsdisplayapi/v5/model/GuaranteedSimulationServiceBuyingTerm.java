@@ -9,7 +9,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceBuyingTermT
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceCustomRangeBuyingTerm;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceSingleDayBuyingTerm;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceSingleTermBuyingTerm;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,22 +16,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedSimulationServiceBuyingTermは、商品購入期間情報を保持します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedSimulationServiceBuyingTerm holds information about the package purchase term.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedSimulationServiceBuyingTermは、商品購入期間情報を保持します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> GuaranteedSimulationServiceBuyingTerm holds information about the package purchase term.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceBuyingTerm   {
   @JsonProperty("buyingTermType")
-  private JsonNullable<GuaranteedSimulationServiceBuyingTermType> buyingTermType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceBuyingTermType buyingTermType = null;
 
   @JsonProperty("singleDayBuyingTerm")
-  private JsonNullable<GuaranteedSimulationServiceSingleDayBuyingTerm> singleDayBuyingTerm = JsonNullable.undefined();
+  private GuaranteedSimulationServiceSingleDayBuyingTerm singleDayBuyingTerm = null;
 
   @JsonProperty("singleTermBuyingTerm")
-  private JsonNullable<GuaranteedSimulationServiceSingleTermBuyingTerm> singleTermBuyingTerm = JsonNullable.undefined();
+  private GuaranteedSimulationServiceSingleTermBuyingTerm singleTermBuyingTerm = null;
 
   @JsonProperty("customRangeBuyingTerm")
-  private JsonNullable<GuaranteedSimulationServiceCustomRangeBuyingTerm> customRangeBuyingTerm = JsonNullable.undefined();
+  private GuaranteedSimulationServiceCustomRangeBuyingTerm customRangeBuyingTerm = null;
 
   public GuaranteedSimulationServiceBuyingTerm buyingTermType(GuaranteedSimulationServiceBuyingTermType buyingTermType) {
-    this.buyingTermType = JsonNullable.of(buyingTermType);
+    this.buyingTermType = buyingTermType;
     return this;
   }
 
@@ -44,16 +43,16 @@ public class GuaranteedSimulationServiceBuyingTerm   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceBuyingTermType> getBuyingTermType() {
+  public GuaranteedSimulationServiceBuyingTermType getBuyingTermType() {
     return buyingTermType;
   }
 
-  public void setBuyingTermType(JsonNullable<GuaranteedSimulationServiceBuyingTermType> buyingTermType) {
+  public void setBuyingTermType(GuaranteedSimulationServiceBuyingTermType buyingTermType) {
     this.buyingTermType = buyingTermType;
   }
 
   public GuaranteedSimulationServiceBuyingTerm singleDayBuyingTerm(GuaranteedSimulationServiceSingleDayBuyingTerm singleDayBuyingTerm) {
-    this.singleDayBuyingTerm = JsonNullable.of(singleDayBuyingTerm);
+    this.singleDayBuyingTerm = singleDayBuyingTerm;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class GuaranteedSimulationServiceBuyingTerm   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceSingleDayBuyingTerm> getSingleDayBuyingTerm() {
+  public GuaranteedSimulationServiceSingleDayBuyingTerm getSingleDayBuyingTerm() {
     return singleDayBuyingTerm;
   }
 
-  public void setSingleDayBuyingTerm(JsonNullable<GuaranteedSimulationServiceSingleDayBuyingTerm> singleDayBuyingTerm) {
+  public void setSingleDayBuyingTerm(GuaranteedSimulationServiceSingleDayBuyingTerm singleDayBuyingTerm) {
     this.singleDayBuyingTerm = singleDayBuyingTerm;
   }
 
   public GuaranteedSimulationServiceBuyingTerm singleTermBuyingTerm(GuaranteedSimulationServiceSingleTermBuyingTerm singleTermBuyingTerm) {
-    this.singleTermBuyingTerm = JsonNullable.of(singleTermBuyingTerm);
+    this.singleTermBuyingTerm = singleTermBuyingTerm;
     return this;
   }
 
@@ -86,16 +85,16 @@ public class GuaranteedSimulationServiceBuyingTerm   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceSingleTermBuyingTerm> getSingleTermBuyingTerm() {
+  public GuaranteedSimulationServiceSingleTermBuyingTerm getSingleTermBuyingTerm() {
     return singleTermBuyingTerm;
   }
 
-  public void setSingleTermBuyingTerm(JsonNullable<GuaranteedSimulationServiceSingleTermBuyingTerm> singleTermBuyingTerm) {
+  public void setSingleTermBuyingTerm(GuaranteedSimulationServiceSingleTermBuyingTerm singleTermBuyingTerm) {
     this.singleTermBuyingTerm = singleTermBuyingTerm;
   }
 
   public GuaranteedSimulationServiceBuyingTerm customRangeBuyingTerm(GuaranteedSimulationServiceCustomRangeBuyingTerm customRangeBuyingTerm) {
-    this.customRangeBuyingTerm = JsonNullable.of(customRangeBuyingTerm);
+    this.customRangeBuyingTerm = customRangeBuyingTerm;
     return this;
   }
 
@@ -107,17 +106,17 @@ public class GuaranteedSimulationServiceBuyingTerm   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceCustomRangeBuyingTerm> getCustomRangeBuyingTerm() {
+  public GuaranteedSimulationServiceCustomRangeBuyingTerm getCustomRangeBuyingTerm() {
     return customRangeBuyingTerm;
   }
 
-  public void setCustomRangeBuyingTerm(JsonNullable<GuaranteedSimulationServiceCustomRangeBuyingTerm> customRangeBuyingTerm) {
+  public void setCustomRangeBuyingTerm(GuaranteedSimulationServiceCustomRangeBuyingTerm customRangeBuyingTerm) {
     this.customRangeBuyingTerm = customRangeBuyingTerm;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -153,7 +152,7 @@ public class GuaranteedSimulationServiceBuyingTerm   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedItemServiceAvailability;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedItemServiceIsRemoveFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,55 +14,55 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemオブジェクトは、商品の情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItem object contain information about the product.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemオブジェクトは、商品の情報を格納するコンテナです。</div> <div lang=\"en\">FeedItem object contain information about the product.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItem   {
   @JsonProperty("availability")
-  private JsonNullable<FeedItemServiceAvailability> availability = JsonNullable.undefined();
+  private FeedItemServiceAvailability availability = null;
 
   @JsonProperty("capacity")
-  private JsonNullable<Long> capacity = JsonNullable.undefined();
+  private Long capacity = null;
 
   @JsonProperty("displaySettings")
-  private JsonNullable<Long> displaySettings = JsonNullable.undefined();
+  private Long displaySettings = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("formattedPrice")
-  private JsonNullable<String> formattedPrice = JsonNullable.undefined();
+  private String formattedPrice = null;
 
   @JsonProperty("formattedSalePrice")
-  private JsonNullable<String> formattedSalePrice = JsonNullable.undefined();
+  private String formattedSalePrice = null;
 
   @JsonProperty("inStock")
-  private JsonNullable<Long> inStock = JsonNullable.undefined();
+  private Long inStock = null;
 
   @JsonProperty("isRemoveCapacity")
-  private JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveCapacity = JsonNullable.undefined();
+  private FeedItemServiceIsRemoveFlg isRemoveCapacity = null;
 
   @JsonProperty("isRemoveFormattedPrice")
-  private JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveFormattedPrice = JsonNullable.undefined();
+  private FeedItemServiceIsRemoveFlg isRemoveFormattedPrice = null;
 
   @JsonProperty("isRemoveFormattedSalePrice")
-  private JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveFormattedSalePrice = JsonNullable.undefined();
+  private FeedItemServiceIsRemoveFlg isRemoveFormattedSalePrice = null;
 
   @JsonProperty("isRemovePrice")
-  private JsonNullable<FeedItemServiceIsRemoveFlg> isRemovePrice = JsonNullable.undefined();
+  private FeedItemServiceIsRemoveFlg isRemovePrice = null;
 
   @JsonProperty("isRemoveSalePrice")
-  private JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveSalePrice = JsonNullable.undefined();
+  private FeedItemServiceIsRemoveFlg isRemoveSalePrice = null;
 
   @JsonProperty("itemId")
-  private JsonNullable<String> itemId = JsonNullable.undefined();
+  private String itemId = null;
 
   @JsonProperty("price")
-  private JsonNullable<Long> price = JsonNullable.undefined();
+  private Long price = null;
 
   @JsonProperty("salePrice")
-  private JsonNullable<Long> salePrice = JsonNullable.undefined();
+  private Long salePrice = null;
 
   public FeedItem availability(FeedItemServiceAvailability availability) {
-    this.availability = JsonNullable.of(availability);
+    this.availability = availability;
     return this;
   }
 
@@ -75,16 +74,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceAvailability> getAvailability() {
+  public FeedItemServiceAvailability getAvailability() {
     return availability;
   }
 
-  public void setAvailability(JsonNullable<FeedItemServiceAvailability> availability) {
+  public void setAvailability(FeedItemServiceAvailability availability) {
     this.availability = availability;
   }
 
   public FeedItem capacity(Long capacity) {
-    this.capacity = JsonNullable.of(capacity);
+    this.capacity = capacity;
     return this;
   }
 
@@ -95,16 +94,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 在庫数です。<br> このフィールドは、リクエストの場合は省略可能です。 </div> <div lang=\"en\"> Stock quantity.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getCapacity() {
+  public Long getCapacity() {
     return capacity;
   }
 
-  public void setCapacity(JsonNullable<Long> capacity) {
+  public void setCapacity(Long capacity) {
     this.capacity = capacity;
   }
 
   public FeedItem displaySettings(Long displaySettings) {
-    this.displaySettings = JsonNullable.of(displaySettings);
+    this.displaySettings = displaySettings;
     return this;
   }
 
@@ -115,16 +114,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 配信設定です。<br> このフィールドは、リクエストの場合は省略可能です。<br> ※「0:配信しない/1:配信する」を表します。 </div> <div lang=\"en\"> Display settings.<br> This field is optional in requests.<br> * 0: Off, 1: On. </div> ")
 
 
-  public JsonNullable<Long> getDisplaySettings() {
+  public Long getDisplaySettings() {
     return displaySettings;
   }
 
-  public void setDisplaySettings(JsonNullable<Long> displaySettings) {
+  public void setDisplaySettings(Long displaySettings) {
     this.displaySettings = displaySettings;
   }
 
   public FeedItem feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -135,16 +134,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> Feedを識別するIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> ID for identifying Feed.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public FeedItem formattedPrice(String formattedPrice) {
-    this.formattedPrice = JsonNullable.of(formattedPrice);
+    this.formattedPrice = formattedPrice;
     return this;
   }
 
@@ -155,16 +154,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 文字列の価格です。<br> このフィールドは、リクエストの場合は省略可能です。 </div> <div lang=\"en\"> Text strings price.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<String> getFormattedPrice() {
+  public String getFormattedPrice() {
     return formattedPrice;
   }
 
-  public void setFormattedPrice(JsonNullable<String> formattedPrice) {
+  public void setFormattedPrice(String formattedPrice) {
     this.formattedPrice = formattedPrice;
   }
 
   public FeedItem formattedSalePrice(String formattedSalePrice) {
-    this.formattedSalePrice = JsonNullable.of(formattedSalePrice);
+    this.formattedSalePrice = formattedSalePrice;
     return this;
   }
 
@@ -175,16 +174,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 文字列のセール価格です。<br> このフィールドは、リクエストの場合は省略可能です。 </div> <div lang=\"en\"> Sale price of text strings.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<String> getFormattedSalePrice() {
+  public String getFormattedSalePrice() {
     return formattedSalePrice;
   }
 
-  public void setFormattedSalePrice(JsonNullable<String> formattedSalePrice) {
+  public void setFormattedSalePrice(String formattedSalePrice) {
     this.formattedSalePrice = formattedSalePrice;
   }
 
   public FeedItem inStock(Long inStock) {
-    this.inStock = JsonNullable.of(inStock);
+    this.inStock = inStock;
     return this;
   }
 
@@ -195,16 +194,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 在庫情報です。<br> このフィールドは、リクエストの場合は省略可能です。<br> ※「0:在庫なし/1:在庫あり」を表します。 </div> <div lang=\"en\"> Inventory information.<br> This field is optional in requests.<br> 0: Out of stock, 1: In stock. </div> ")
 
 
-  public JsonNullable<Long> getInStock() {
+  public Long getInStock() {
     return inStock;
   }
 
-  public void setInStock(JsonNullable<Long> inStock) {
+  public void setInStock(Long inStock) {
     this.inStock = inStock;
   }
 
   public FeedItem isRemoveCapacity(FeedItemServiceIsRemoveFlg isRemoveCapacity) {
-    this.isRemoveCapacity = JsonNullable.of(isRemoveCapacity);
+    this.isRemoveCapacity = isRemoveCapacity;
     return this;
   }
 
@@ -216,16 +215,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceIsRemoveFlg> getIsRemoveCapacity() {
+  public FeedItemServiceIsRemoveFlg getIsRemoveCapacity() {
     return isRemoveCapacity;
   }
 
-  public void setIsRemoveCapacity(JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveCapacity) {
+  public void setIsRemoveCapacity(FeedItemServiceIsRemoveFlg isRemoveCapacity) {
     this.isRemoveCapacity = isRemoveCapacity;
   }
 
   public FeedItem isRemoveFormattedPrice(FeedItemServiceIsRemoveFlg isRemoveFormattedPrice) {
-    this.isRemoveFormattedPrice = JsonNullable.of(isRemoveFormattedPrice);
+    this.isRemoveFormattedPrice = isRemoveFormattedPrice;
     return this;
   }
 
@@ -237,16 +236,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceIsRemoveFlg> getIsRemoveFormattedPrice() {
+  public FeedItemServiceIsRemoveFlg getIsRemoveFormattedPrice() {
     return isRemoveFormattedPrice;
   }
 
-  public void setIsRemoveFormattedPrice(JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveFormattedPrice) {
+  public void setIsRemoveFormattedPrice(FeedItemServiceIsRemoveFlg isRemoveFormattedPrice) {
     this.isRemoveFormattedPrice = isRemoveFormattedPrice;
   }
 
   public FeedItem isRemoveFormattedSalePrice(FeedItemServiceIsRemoveFlg isRemoveFormattedSalePrice) {
-    this.isRemoveFormattedSalePrice = JsonNullable.of(isRemoveFormattedSalePrice);
+    this.isRemoveFormattedSalePrice = isRemoveFormattedSalePrice;
     return this;
   }
 
@@ -258,16 +257,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceIsRemoveFlg> getIsRemoveFormattedSalePrice() {
+  public FeedItemServiceIsRemoveFlg getIsRemoveFormattedSalePrice() {
     return isRemoveFormattedSalePrice;
   }
 
-  public void setIsRemoveFormattedSalePrice(JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveFormattedSalePrice) {
+  public void setIsRemoveFormattedSalePrice(FeedItemServiceIsRemoveFlg isRemoveFormattedSalePrice) {
     this.isRemoveFormattedSalePrice = isRemoveFormattedSalePrice;
   }
 
   public FeedItem isRemovePrice(FeedItemServiceIsRemoveFlg isRemovePrice) {
-    this.isRemovePrice = JsonNullable.of(isRemovePrice);
+    this.isRemovePrice = isRemovePrice;
     return this;
   }
 
@@ -279,16 +278,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceIsRemoveFlg> getIsRemovePrice() {
+  public FeedItemServiceIsRemoveFlg getIsRemovePrice() {
     return isRemovePrice;
   }
 
-  public void setIsRemovePrice(JsonNullable<FeedItemServiceIsRemoveFlg> isRemovePrice) {
+  public void setIsRemovePrice(FeedItemServiceIsRemoveFlg isRemovePrice) {
     this.isRemovePrice = isRemovePrice;
   }
 
   public FeedItem isRemoveSalePrice(FeedItemServiceIsRemoveFlg isRemoveSalePrice) {
-    this.isRemoveSalePrice = JsonNullable.of(isRemoveSalePrice);
+    this.isRemoveSalePrice = isRemoveSalePrice;
     return this;
   }
 
@@ -300,16 +299,16 @@ public class FeedItem   {
 
   @Valid
 
-  public JsonNullable<FeedItemServiceIsRemoveFlg> getIsRemoveSalePrice() {
+  public FeedItemServiceIsRemoveFlg getIsRemoveSalePrice() {
     return isRemoveSalePrice;
   }
 
-  public void setIsRemoveSalePrice(JsonNullable<FeedItemServiceIsRemoveFlg> isRemoveSalePrice) {
+  public void setIsRemoveSalePrice(FeedItemServiceIsRemoveFlg isRemoveSalePrice) {
     this.isRemoveSalePrice = isRemoveSalePrice;
   }
 
   public FeedItem itemId(String itemId) {
-    this.itemId = JsonNullable.of(itemId);
+    this.itemId = itemId;
     return this;
   }
 
@@ -320,16 +319,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品IDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Item ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<String> getItemId() {
+  public String getItemId() {
     return itemId;
   }
 
-  public void setItemId(JsonNullable<String> itemId) {
+  public void setItemId(String itemId) {
     this.itemId = itemId;
   }
 
   public FeedItem price(Long price) {
-    this.price = JsonNullable.of(price);
+    this.price = price;
     return this;
   }
 
@@ -340,16 +339,16 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 価格です。<br> このフィールドは、リクエストの場合は省略可能です。 </div> <div lang=\"en\"> Price.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getPrice() {
+  public Long getPrice() {
     return price;
   }
 
-  public void setPrice(JsonNullable<Long> price) {
+  public void setPrice(Long price) {
     this.price = price;
   }
 
   public FeedItem salePrice(Long salePrice) {
-    this.salePrice = JsonNullable.of(salePrice);
+    this.salePrice = salePrice;
     return this;
   }
 
@@ -360,17 +359,17 @@ public class FeedItem   {
   @ApiModelProperty(value = "<div lang=\"ja\"> セール価格です。<br> このフィールドは、リクエストの場合は省略可能です。 </div> <div lang=\"en\"> Sale price.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getSalePrice() {
+  public Long getSalePrice() {
     return salePrice;
   }
 
-  public void setSalePrice(JsonNullable<Long> salePrice) {
+  public void setSalePrice(Long salePrice) {
     this.salePrice = salePrice;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -428,7 +427,7 @@ public class FeedItem   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

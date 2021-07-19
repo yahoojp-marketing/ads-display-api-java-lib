@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordIdeaServiceAvailabilityStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,34 +13,34 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordIdeaオブジェクトは、サーチターゲティング対象キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordIdea object is keyword for search targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchKeywordIdeaオブジェクトは、サーチターゲティング対象キーワードです。</div> <div lang=\"en\">SearchKeywordIdea object is keyword for search targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchKeywordIdea   {
   @JsonProperty("desktopSearchVolume")
-  private JsonNullable<Long> desktopSearchVolume = JsonNullable.undefined();
+  private Long desktopSearchVolume = null;
 
   @JsonProperty("releaseDate")
-  private JsonNullable<String> releaseDate = JsonNullable.undefined();
+  private String releaseDate = null;
 
   @JsonProperty("searchKeyword")
-  private JsonNullable<String> searchKeyword = JsonNullable.undefined();
+  private String searchKeyword = null;
 
   @JsonProperty("searchKeywordId")
-  private JsonNullable<Long> searchKeywordId = JsonNullable.undefined();
+  private Long searchKeywordId = null;
 
   @JsonProperty("smartPhoneSearchVolume")
-  private JsonNullable<Long> smartPhoneSearchVolume = JsonNullable.undefined();
+  private Long smartPhoneSearchVolume = null;
 
   @JsonProperty("tabletSearchVolume")
-  private JsonNullable<Long> tabletSearchVolume = JsonNullable.undefined();
+  private Long tabletSearchVolume = null;
 
   @JsonProperty("closeDate")
-  private JsonNullable<String> closeDate = JsonNullable.undefined();
+  private String closeDate = null;
 
   @JsonProperty("availabilityStatus")
-  private JsonNullable<SearchKeywordIdeaServiceAvailabilityStatus> availabilityStatus = JsonNullable.undefined();
+  private SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus = null;
 
   public SearchKeywordIdea desktopSearchVolume(Long desktopSearchVolume) {
-    this.desktopSearchVolume = JsonNullable.of(desktopSearchVolume);
+    this.desktopSearchVolume = desktopSearchVolume;
     return this;
   }
 
@@ -52,16 +51,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> PCでのリーチ数です。<br> ※1000件未満の場合は<br> 0が取得されます。<br> ※サーチキーワードの停止日以降はnullが返却されます。 </div> <div lang=\"en\"> Reach numbers on PC.<br> *If it is less than 1000 times, the value &#34;0&#34; will be responded.<br> *After the stop date of search keyword, null will be returned. </div> ")
 
 
-  public JsonNullable<Long> getDesktopSearchVolume() {
+  public Long getDesktopSearchVolume() {
     return desktopSearchVolume;
   }
 
-  public void setDesktopSearchVolume(JsonNullable<Long> desktopSearchVolume) {
+  public void setDesktopSearchVolume(Long desktopSearchVolume) {
     this.desktopSearchVolume = desktopSearchVolume;
   }
 
   public SearchKeywordIdea releaseDate(String releaseDate) {
-    this.releaseDate = JsonNullable.of(releaseDate);
+    this.releaseDate = releaseDate;
     return this;
   }
 
@@ -72,16 +71,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワード追加日です。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\"> Additional date of keyword.<br> * Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getReleaseDate() {
+  public String getReleaseDate() {
     return releaseDate;
   }
 
-  public void setReleaseDate(JsonNullable<String> releaseDate) {
+  public void setReleaseDate(String releaseDate) {
     this.releaseDate = releaseDate;
   }
 
   public SearchKeywordIdea searchKeyword(String searchKeyword) {
-    this.searchKeyword = JsonNullable.of(searchKeyword);
+    this.searchKeyword = searchKeyword;
     return this;
   }
 
@@ -92,16 +91,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードです。</div> <div lang=\"en\">Search keyword.</div> ")
 
 
-  public JsonNullable<String> getSearchKeyword() {
+  public String getSearchKeyword() {
     return searchKeyword;
   }
 
-  public void setSearchKeyword(JsonNullable<String> searchKeyword) {
+  public void setSearchKeyword(String searchKeyword) {
     this.searchKeyword = searchKeyword;
   }
 
   public SearchKeywordIdea searchKeywordId(Long searchKeywordId) {
-    this.searchKeywordId = JsonNullable.of(searchKeywordId);
+    this.searchKeywordId = searchKeywordId;
     return this;
   }
 
@@ -112,16 +111,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードIDです。</div> <div lang=\"en\">Search keyword ID.</div> ")
 
 
-  public JsonNullable<Long> getSearchKeywordId() {
+  public Long getSearchKeywordId() {
     return searchKeywordId;
   }
 
-  public void setSearchKeywordId(JsonNullable<Long> searchKeywordId) {
+  public void setSearchKeywordId(Long searchKeywordId) {
     this.searchKeywordId = searchKeywordId;
   }
 
   public SearchKeywordIdea smartPhoneSearchVolume(Long smartPhoneSearchVolume) {
-    this.smartPhoneSearchVolume = JsonNullable.of(smartPhoneSearchVolume);
+    this.smartPhoneSearchVolume = smartPhoneSearchVolume;
     return this;
   }
 
@@ -132,16 +131,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> スマートフォンでのリーチ数です。<br> ※1000件未満の場合は<br> 0が取得されます。<br> ※サーチキーワードの停止日以降はnullが返却されます。 </div> <div lang=\"en\"> Reach numbers on Smartphone.<br> *If it is less than 1000 times, the value &#34;0&#34; will be responded.<br> *After the stop date of search keyword, null will be returned. </div> ")
 
 
-  public JsonNullable<Long> getSmartPhoneSearchVolume() {
+  public Long getSmartPhoneSearchVolume() {
     return smartPhoneSearchVolume;
   }
 
-  public void setSmartPhoneSearchVolume(JsonNullable<Long> smartPhoneSearchVolume) {
+  public void setSmartPhoneSearchVolume(Long smartPhoneSearchVolume) {
     this.smartPhoneSearchVolume = smartPhoneSearchVolume;
   }
 
   public SearchKeywordIdea tabletSearchVolume(Long tabletSearchVolume) {
-    this.tabletSearchVolume = JsonNullable.of(tabletSearchVolume);
+    this.tabletSearchVolume = tabletSearchVolume;
     return this;
   }
 
@@ -152,16 +151,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\"> タブレットでのリーチ数です。<br> ※1000件未満の場合は<br> 0が取得されます。<br> ※サーチキーワードの停止日以降はnullが返却されます。 </div> <div lang=\"en\"> Reach numbers on Tablet.<br> *If it is less than 1000 times, the value &#34;0&#34; will be responded.<br> *After the stop date of search keyword, null will be returned. </div> ")
 
 
-  public JsonNullable<Long> getTabletSearchVolume() {
+  public Long getTabletSearchVolume() {
     return tabletSearchVolume;
   }
 
-  public void setTabletSearchVolume(JsonNullable<Long> tabletSearchVolume) {
+  public void setTabletSearchVolume(Long tabletSearchVolume) {
     this.tabletSearchVolume = tabletSearchVolume;
   }
 
   public SearchKeywordIdea closeDate(String closeDate) {
-    this.closeDate = JsonNullable.of(closeDate);
+    this.closeDate = closeDate;
     return this;
   }
 
@@ -172,16 +171,16 @@ public class SearchKeywordIdea   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワード停止日です。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\"> Stop date of keyword.<br> * Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCloseDate() {
+  public String getCloseDate() {
     return closeDate;
   }
 
-  public void setCloseDate(JsonNullable<String> closeDate) {
+  public void setCloseDate(String closeDate) {
     this.closeDate = closeDate;
   }
 
   public SearchKeywordIdea availabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
-    this.availabilityStatus = JsonNullable.of(availabilityStatus);
+    this.availabilityStatus = availabilityStatus;
     return this;
   }
 
@@ -193,17 +192,17 @@ public class SearchKeywordIdea   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordIdeaServiceAvailabilityStatus> getAvailabilityStatus() {
+  public SearchKeywordIdeaServiceAvailabilityStatus getAvailabilityStatus() {
     return availabilityStatus;
   }
 
-  public void setAvailabilityStatus(JsonNullable<SearchKeywordIdeaServiceAvailabilityStatus> availabilityStatus) {
+  public void setAvailabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     this.availabilityStatus = availabilityStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -247,7 +246,7 @@ public class SearchKeywordIdea   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

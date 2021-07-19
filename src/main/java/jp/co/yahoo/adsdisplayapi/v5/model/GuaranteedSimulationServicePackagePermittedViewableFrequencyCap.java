@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceFrequencyLevel;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceFrequencyTimeUnit;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePermissionType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,10 +17,10 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePermittedViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePermittedViewableFrequencyCap object describes viewable frequency restriction.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePermittedViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePermittedViewableFrequencyCap object describes viewable frequency restriction.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePermittedViewableFrequencyCap   {
   @JsonProperty("viewableFrequencyCapPermission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> viewableFrequencyCapPermission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType viewableFrequencyCapPermission = null;
 
   @JsonProperty("viewableFrequencyCapLevels")
   @Valid
@@ -38,7 +37,7 @@ public class GuaranteedSimulationServicePackagePermittedViewableFrequencyCap   {
   private Long permittedViewableFrequencyCapImpressionMax;
 
   public GuaranteedSimulationServicePackagePermittedViewableFrequencyCap viewableFrequencyCapPermission(GuaranteedSimulationServicePackagePermissionType viewableFrequencyCapPermission) {
-    this.viewableFrequencyCapPermission = JsonNullable.of(viewableFrequencyCapPermission);
+    this.viewableFrequencyCapPermission = viewableFrequencyCapPermission;
     return this;
   }
 
@@ -50,11 +49,11 @@ public class GuaranteedSimulationServicePackagePermittedViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getViewableFrequencyCapPermission() {
+  public GuaranteedSimulationServicePackagePermissionType getViewableFrequencyCapPermission() {
     return viewableFrequencyCapPermission;
   }
 
-  public void setViewableFrequencyCapPermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> viewableFrequencyCapPermission) {
+  public void setViewableFrequencyCapPermission(GuaranteedSimulationServicePackagePermissionType viewableFrequencyCapPermission) {
     this.viewableFrequencyCapPermission = viewableFrequencyCapPermission;
   }
 
@@ -158,7 +157,7 @@ public class GuaranteedSimulationServicePackagePermittedViewableFrequencyCap   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -196,7 +195,7 @@ public class GuaranteedSimulationServicePackagePermittedViewableFrequencyCap   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

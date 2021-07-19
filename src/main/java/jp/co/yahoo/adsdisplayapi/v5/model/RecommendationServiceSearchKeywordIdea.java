@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceSearchKeywordIdeaSearchKeywordList;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;追加を推奨するサーチキーワードに関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This describes the information of a recommended search keyword to add.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">追加を推奨するサーチキーワードに関する情報を表します。</div> <div lang=\"en\">This describes the information of a recommended search keyword to add.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceSearchKeywordIdea   {
   @JsonProperty("searchKeywordIdeaSearchKeywordList")
   @Valid
-  private JsonNullable<List<RecommendationServiceSearchKeywordIdeaSearchKeywordList>> searchKeywordIdeaSearchKeywordList = JsonNullable.undefined();
+  private List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList = null;
 
   public RecommendationServiceSearchKeywordIdea searchKeywordIdeaSearchKeywordList(List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList) {
-    this.searchKeywordIdeaSearchKeywordList = JsonNullable.of(searchKeywordIdeaSearchKeywordList);
+    this.searchKeywordIdeaSearchKeywordList = searchKeywordIdeaSearchKeywordList;
     return this;
   }
 
   public RecommendationServiceSearchKeywordIdea addSearchKeywordIdeaSearchKeywordListItem(RecommendationServiceSearchKeywordIdeaSearchKeywordList searchKeywordIdeaSearchKeywordListItem) {
-    if (this.searchKeywordIdeaSearchKeywordList == null || !this.searchKeywordIdeaSearchKeywordList.isPresent()) {
-      this.searchKeywordIdeaSearchKeywordList = JsonNullable.of(new ArrayList<>());
+    if (this.searchKeywordIdeaSearchKeywordList == null) {
+      this.searchKeywordIdeaSearchKeywordList = new ArrayList<>();
     }
-    this.searchKeywordIdeaSearchKeywordList.get().add(searchKeywordIdeaSearchKeywordListItem);
+    this.searchKeywordIdeaSearchKeywordList.add(searchKeywordIdeaSearchKeywordListItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RecommendationServiceSearchKeywordIdea   {
 
   @Valid
 
-  public JsonNullable<List<RecommendationServiceSearchKeywordIdeaSearchKeywordList>> getSearchKeywordIdeaSearchKeywordList() {
+  public List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> getSearchKeywordIdeaSearchKeywordList() {
     return searchKeywordIdeaSearchKeywordList;
   }
 
-  public void setSearchKeywordIdeaSearchKeywordList(JsonNullable<List<RecommendationServiceSearchKeywordIdeaSearchKeywordList>> searchKeywordIdeaSearchKeywordList) {
+  public void setSearchKeywordIdeaSearchKeywordList(List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList) {
     this.searchKeywordIdeaSearchKeywordList = searchKeywordIdeaSearchKeywordList;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RecommendationServiceSearchKeywordIdea   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

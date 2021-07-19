@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AuditLogServiceJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,24 +15,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceSelector object is container storing the search conditions of get method (execution parameter).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">AuditLogServiceSelector object is container storing the search conditions of get method (execution parameter).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AuditLogServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("auditLogJobIds")
   @Valid
-  private JsonNullable<List<Long>> auditLogJobIds = JsonNullable.undefined();
+  private List<Long> auditLogJobIds = null;
 
   @JsonProperty("jobStatuses")
   @Valid
-  private JsonNullable<List<AuditLogServiceJobStatus>> jobStatuses = JsonNullable.undefined();
+  private List<AuditLogServiceJobStatus> jobStatuses = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AuditLogServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -57,15 +56,15 @@ public class AuditLogServiceSelector   {
   }
 
   public AuditLogServiceSelector auditLogJobIds(List<Long> auditLogJobIds) {
-    this.auditLogJobIds = JsonNullable.of(auditLogJobIds);
+    this.auditLogJobIds = auditLogJobIds;
     return this;
   }
 
   public AuditLogServiceSelector addAuditLogJobIdsItem(Long auditLogJobIdsItem) {
-    if (this.auditLogJobIds == null || !this.auditLogJobIds.isPresent()) {
-      this.auditLogJobIds = JsonNullable.of(new ArrayList<>());
+    if (this.auditLogJobIds == null) {
+      this.auditLogJobIds = new ArrayList<>();
     }
-    this.auditLogJobIds.get().add(auditLogJobIdsItem);
+    this.auditLogJobIds.add(auditLogJobIdsItem);
     return this;
   }
 
@@ -76,24 +75,24 @@ public class AuditLogServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ジョブIDです。</div> <div lang=\"en\">The job ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAuditLogJobIds() {
+  public List<Long> getAuditLogJobIds() {
     return auditLogJobIds;
   }
 
-  public void setAuditLogJobIds(JsonNullable<List<Long>> auditLogJobIds) {
+  public void setAuditLogJobIds(List<Long> auditLogJobIds) {
     this.auditLogJobIds = auditLogJobIds;
   }
 
   public AuditLogServiceSelector jobStatuses(List<AuditLogServiceJobStatus> jobStatuses) {
-    this.jobStatuses = JsonNullable.of(jobStatuses);
+    this.jobStatuses = jobStatuses;
     return this;
   }
 
   public AuditLogServiceSelector addJobStatusesItem(AuditLogServiceJobStatus jobStatusesItem) {
-    if (this.jobStatuses == null || !this.jobStatuses.isPresent()) {
-      this.jobStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.jobStatuses == null) {
+      this.jobStatuses = new ArrayList<>();
     }
-    this.jobStatuses.get().add(jobStatusesItem);
+    this.jobStatuses.add(jobStatusesItem);
     return this;
   }
 
@@ -105,16 +104,16 @@ public class AuditLogServiceSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<AuditLogServiceJobStatus>> getJobStatuses() {
+  public List<AuditLogServiceJobStatus> getJobStatuses() {
     return jobStatuses;
   }
 
-  public void setJobStatuses(JsonNullable<List<AuditLogServiceJobStatus>> jobStatuses) {
+  public void setJobStatuses(List<AuditLogServiceJobStatus> jobStatuses) {
     this.jobStatuses = jobStatuses;
   }
 
   public AuditLogServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -127,16 +126,16 @@ public class AuditLogServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AuditLogServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -148,17 +147,17 @@ public class AuditLogServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -196,7 +195,7 @@ public class AuditLogServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedDataServiceFileUploadDateRange;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedDataServiceFileUploadStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,31 +16,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceSelector object retains search condition of get operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">get操作の検索条件を保持するオブジェクト</div> <div lang=\"en\">FeedDataServiceSelector object retains search condition of get operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedDataServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("feedIds")
   @Valid
-  private JsonNullable<List<Long>> feedIds = JsonNullable.undefined();
+  private List<Long> feedIds = null;
 
   @JsonProperty("fileUploadDateRange")
-  private JsonNullable<FeedDataServiceFileUploadDateRange> fileUploadDateRange = JsonNullable.undefined();
+  private FeedDataServiceFileUploadDateRange fileUploadDateRange = null;
 
   @JsonProperty("itemListUploadIds")
   @Valid
-  private JsonNullable<List<Long>> itemListUploadIds = JsonNullable.undefined();
+  private List<Long> itemListUploadIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("uploadStatuses")
   @Valid
-  private JsonNullable<List<FeedDataServiceFileUploadStatus>> uploadStatuses = JsonNullable.undefined();
+  private List<FeedDataServiceFileUploadStatus> uploadStatuses = null;
 
   public FeedDataServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -65,15 +64,15 @@ public class FeedDataServiceSelector   {
   }
 
   public FeedDataServiceSelector feedIds(List<Long> feedIds) {
-    this.feedIds = JsonNullable.of(feedIds);
+    this.feedIds = feedIds;
     return this;
   }
 
   public FeedDataServiceSelector addFeedIdsItem(Long feedIdsItem) {
-    if (this.feedIds == null || !this.feedIds.isPresent()) {
-      this.feedIds = JsonNullable.of(new ArrayList<>());
+    if (this.feedIds == null) {
+      this.feedIds = new ArrayList<>();
     }
-    this.feedIds.get().add(feedIdsItem);
+    this.feedIds.add(feedIdsItem);
     return this;
   }
 
@@ -84,16 +83,16 @@ public class FeedDataServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">FeedID</div> ")
 
 @Size(max=200) 
-  public JsonNullable<List<Long>> getFeedIds() {
+  public List<Long> getFeedIds() {
     return feedIds;
   }
 
-  public void setFeedIds(JsonNullable<List<Long>> feedIds) {
+  public void setFeedIds(List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
   public FeedDataServiceSelector fileUploadDateRange(FeedDataServiceFileUploadDateRange fileUploadDateRange) {
-    this.fileUploadDateRange = JsonNullable.of(fileUploadDateRange);
+    this.fileUploadDateRange = fileUploadDateRange;
     return this;
   }
 
@@ -105,24 +104,24 @@ public class FeedDataServiceSelector   {
 
   @Valid
 
-  public JsonNullable<FeedDataServiceFileUploadDateRange> getFileUploadDateRange() {
+  public FeedDataServiceFileUploadDateRange getFileUploadDateRange() {
     return fileUploadDateRange;
   }
 
-  public void setFileUploadDateRange(JsonNullable<FeedDataServiceFileUploadDateRange> fileUploadDateRange) {
+  public void setFileUploadDateRange(FeedDataServiceFileUploadDateRange fileUploadDateRange) {
     this.fileUploadDateRange = fileUploadDateRange;
   }
 
   public FeedDataServiceSelector itemListUploadIds(List<Long> itemListUploadIds) {
-    this.itemListUploadIds = JsonNullable.of(itemListUploadIds);
+    this.itemListUploadIds = itemListUploadIds;
     return this;
   }
 
   public FeedDataServiceSelector addItemListUploadIdsItem(Long itemListUploadIdsItem) {
-    if (this.itemListUploadIds == null || !this.itemListUploadIds.isPresent()) {
-      this.itemListUploadIds = JsonNullable.of(new ArrayList<>());
+    if (this.itemListUploadIds == null) {
+      this.itemListUploadIds = new ArrayList<>();
     }
-    this.itemListUploadIds.get().add(itemListUploadIdsItem);
+    this.itemListUploadIds.add(itemListUploadIdsItem);
     return this;
   }
 
@@ -133,16 +132,16 @@ public class FeedDataServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロードした商品情報ID</div> <div lang=\"en\">Uploaded item list ID.</div> ")
 
 @Size(max=200) 
-  public JsonNullable<List<Long>> getItemListUploadIds() {
+  public List<Long> getItemListUploadIds() {
     return itemListUploadIds;
   }
 
-  public void setItemListUploadIds(JsonNullable<List<Long>> itemListUploadIds) {
+  public void setItemListUploadIds(List<Long> itemListUploadIds) {
     this.itemListUploadIds = itemListUploadIds;
   }
 
   public FeedDataServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -155,16 +154,16 @@ public class FeedDataServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public FeedDataServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -176,24 +175,24 @@ public class FeedDataServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public FeedDataServiceSelector uploadStatuses(List<FeedDataServiceFileUploadStatus> uploadStatuses) {
-    this.uploadStatuses = JsonNullable.of(uploadStatuses);
+    this.uploadStatuses = uploadStatuses;
     return this;
   }
 
   public FeedDataServiceSelector addUploadStatusesItem(FeedDataServiceFileUploadStatus uploadStatusesItem) {
-    if (this.uploadStatuses == null || !this.uploadStatuses.isPresent()) {
-      this.uploadStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.uploadStatuses == null) {
+      this.uploadStatuses = new ArrayList<>();
     }
-    this.uploadStatuses.get().add(uploadStatusesItem);
+    this.uploadStatuses.add(uploadStatusesItem);
     return this;
   }
 
@@ -205,17 +204,17 @@ public class FeedDataServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<FeedDataServiceFileUploadStatus>> getUploadStatuses() {
+  public List<FeedDataServiceFileUploadStatus> getUploadStatuses() {
     return uploadStatuses;
   }
 
-  public void setUploadStatuses(JsonNullable<List<FeedDataServiceFileUploadStatus>> uploadStatuses) {
+  public void setUploadStatuses(List<FeedDataServiceFileUploadStatus> uploadStatuses) {
     this.uploadStatuses = uploadStatuses;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -257,7 +256,7 @@ public class FeedDataServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

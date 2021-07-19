@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlIdeaServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep execution result of get method (All Entity list).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep execution result of get method (All Entity list).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlIdeaServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<PlacementUrlIdeaServiceValue>> values = JsonNullable.undefined();
+  private List<PlacementUrlIdeaServiceValue> values = null;
 
   public PlacementUrlIdeaServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class PlacementUrlIdeaServicePage   {
   }
 
   public PlacementUrlIdeaServicePage values(List<PlacementUrlIdeaServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public PlacementUrlIdeaServicePage addValuesItem(PlacementUrlIdeaServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class PlacementUrlIdeaServicePage   {
 
   @Valid
 
-  public JsonNullable<List<PlacementUrlIdeaServiceValue>> getValues() {
+  public List<PlacementUrlIdeaServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<PlacementUrlIdeaServiceValue>> values) {
+  public void setValues(List<PlacementUrlIdeaServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class PlacementUrlIdeaServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

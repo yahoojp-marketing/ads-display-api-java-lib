@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackageValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePageオブジェクトは、商品情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePage object contains package information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePageオブジェクトは、商品情報を格納するコンテナです。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePage object contains package information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServicePackageValue>> values = JsonNullable.undefined();
+  private List<GuaranteedSimulationServicePackageValue> values = null;
 
   public GuaranteedSimulationServicePackagePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class GuaranteedSimulationServicePackagePage   {
   }
 
   public GuaranteedSimulationServicePackagePage values(List<GuaranteedSimulationServicePackageValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public GuaranteedSimulationServicePackagePage addValuesItem(GuaranteedSimulationServicePackageValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class GuaranteedSimulationServicePackagePage   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServicePackageValue>> getValues() {
+  public List<GuaranteedSimulationServicePackageValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<GuaranteedSimulationServicePackageValue>> values) {
+  public void setValues(List<GuaranteedSimulationServicePackageValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class GuaranteedSimulationServicePackagePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

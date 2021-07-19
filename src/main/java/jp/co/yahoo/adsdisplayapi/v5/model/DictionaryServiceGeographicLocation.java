@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,37 +14,37 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationオブジェクトは、地域情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocation object displays the geographic location.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationオブジェクトは、地域情報を表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocation object displays the geographic location.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceGeographicLocation   {
   @JsonProperty("child")
   @Valid
-  private JsonNullable<List<DictionaryServiceGeographicLocation>> child = JsonNullable.undefined();
+  private List<DictionaryServiceGeographicLocation> child = null;
 
   @JsonProperty("code")
-  private JsonNullable<String> code = JsonNullable.undefined();
+  private String code = null;
 
   @JsonProperty("fullName")
-  private JsonNullable<String> fullName = JsonNullable.undefined();
+  private String fullName = null;
 
   @JsonProperty("name")
-  private JsonNullable<String> name = JsonNullable.undefined();
+  private String name = null;
 
   @JsonProperty("order")
-  private JsonNullable<String> order = JsonNullable.undefined();
+  private String order = null;
 
   @JsonProperty("parent")
-  private JsonNullable<String> parent = JsonNullable.undefined();
+  private String parent = null;
 
   public DictionaryServiceGeographicLocation child(List<DictionaryServiceGeographicLocation> child) {
-    this.child = JsonNullable.of(child);
+    this.child = child;
     return this;
   }
 
   public DictionaryServiceGeographicLocation addChildItem(DictionaryServiceGeographicLocation childItem) {
-    if (this.child == null || !this.child.isPresent()) {
-      this.child = JsonNullable.of(new ArrayList<>());
+    if (this.child == null) {
+      this.child = new ArrayList<>();
     }
-    this.child.get().add(childItem);
+    this.child.add(childItem);
     return this;
   }
 
@@ -57,16 +56,16 @@ public class DictionaryServiceGeographicLocation   {
 
   @Valid
 
-  public JsonNullable<List<DictionaryServiceGeographicLocation>> getChild() {
+  public List<DictionaryServiceGeographicLocation> getChild() {
     return child;
   }
 
-  public void setChild(JsonNullable<List<DictionaryServiceGeographicLocation>> child) {
+  public void setChild(List<DictionaryServiceGeographicLocation> child) {
     this.child = child;
   }
 
   public DictionaryServiceGeographicLocation code(String code) {
-    this.code = JsonNullable.of(code);
+    this.code = code;
     return this;
   }
 
@@ -77,16 +76,16 @@ public class DictionaryServiceGeographicLocation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 地域コードです。<br> 「その他」の地域コード(TC-CI-00000073)は、地域ターゲティングでは利用できません。 </div> <div lang=\"en\"> Geographic code.<br> The \"Other\" geo code (TC-CI-00000073) is not available for geo targeting. </div> ")
 
 
-  public JsonNullable<String> getCode() {
+  public String getCode() {
     return code;
   }
 
-  public void setCode(JsonNullable<String> code) {
+  public void setCode(String code) {
     this.code = code;
   }
 
   public DictionaryServiceGeographicLocation fullName(String fullName) {
-    this.fullName = JsonNullable.of(fullName);
+    this.fullName = fullName;
     return this;
   }
 
@@ -97,16 +96,16 @@ public class DictionaryServiceGeographicLocation   {
   @ApiModelProperty(value = "<div lang=\"ja\">都道府県名を含む地域名です。</div> <div lang=\"en\">Name of places including prefecture name.</div> ")
 
 
-  public JsonNullable<String> getFullName() {
+  public String getFullName() {
     return fullName;
   }
 
-  public void setFullName(JsonNullable<String> fullName) {
+  public void setFullName(String fullName) {
     this.fullName = fullName;
   }
 
   public DictionaryServiceGeographicLocation name(String name) {
-    this.name = JsonNullable.of(name);
+    this.name = name;
     return this;
   }
 
@@ -117,16 +116,16 @@ public class DictionaryServiceGeographicLocation   {
   @ApiModelProperty(value = "<div lang=\"ja\">市区町村名です。</div> <div lang=\"en\">Name of places.</div> ")
 
 
-  public JsonNullable<String> getName() {
+  public String getName() {
     return name;
   }
 
-  public void setName(JsonNullable<String> name) {
+  public void setName(String name) {
     this.name = name;
   }
 
   public DictionaryServiceGeographicLocation order(String order) {
-    this.order = JsonNullable.of(order);
+    this.order = order;
     return this;
   }
 
@@ -137,16 +136,16 @@ public class DictionaryServiceGeographicLocation   {
   @ApiModelProperty(value = "<div lang=\"ja\">並び順を示す番号です。</div> <div lang=\"en\">Number indicating the order of arrangement.</div> ")
 
 
-  public JsonNullable<String> getOrder() {
+  public String getOrder() {
     return order;
   }
 
-  public void setOrder(JsonNullable<String> order) {
+  public void setOrder(String order) {
     this.order = order;
   }
 
   public DictionaryServiceGeographicLocation parent(String parent) {
-    this.parent = JsonNullable.of(parent);
+    this.parent = parent;
     return this;
   }
 
@@ -157,17 +156,17 @@ public class DictionaryServiceGeographicLocation   {
   @ApiModelProperty(value = "<div lang=\"ja\">上位階層の地域コードです。</div> <div lang=\"en\">Parent geographic code.</div> ")
 
 
-  public JsonNullable<String> getParent() {
+  public String getParent() {
     return parent;
   }
 
-  public void setParent(JsonNullable<String> parent) {
+  public void setParent(String parent) {
     this.parent = parent;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -207,7 +206,7 @@ public class DictionaryServiceGeographicLocation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

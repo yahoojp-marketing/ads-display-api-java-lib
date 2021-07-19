@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceUploadUserListJob;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceUploadUserListValueオブジェクトは、取得されたユーザーリストのアップロード情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceUploadUserListValue object describes the upload information of the retrieved user list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceUploadUserListValueオブジェクトは、取得されたユーザーリストのアップロード情報を表します。</div> <div lang=\"en\">RetargetingListServiceUploadUserListValue object describes the upload information of the retrieved user list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceUploadUserListValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   @JsonProperty("uploadJob")
-  private JsonNullable<RetargetingListServiceUploadUserListJob> uploadJob = JsonNullable.undefined();
+  private RetargetingListServiceUploadUserListJob uploadJob = null;
 
   public RetargetingListServiceUploadUserListValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public RetargetingListServiceUploadUserListValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class RetargetingListServiceUploadUserListValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public RetargetingListServiceUploadUserListValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class RetargetingListServiceUploadUserListValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
   public RetargetingListServiceUploadUserListValue uploadJob(RetargetingListServiceUploadUserListJob uploadJob) {
-    this.uploadJob = JsonNullable.of(uploadJob);
+    this.uploadJob = uploadJob;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class RetargetingListServiceUploadUserListValue   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceUploadUserListJob> getUploadJob() {
+  public RetargetingListServiceUploadUserListJob getUploadJob() {
     return uploadJob;
   }
 
-  public void setUploadJob(JsonNullable<RetargetingListServiceUploadUserListJob> uploadJob) {
+  public void setUploadJob(RetargetingListServiceUploadUserListJob uploadJob) {
     this.uploadJob = uploadJob;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class RetargetingListServiceUploadUserListValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

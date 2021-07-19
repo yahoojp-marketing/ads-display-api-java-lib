@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceTargetListSize;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ターゲットリストのサイズの各リーチ数を保持するオブジェクトです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceTargetListSizeReaches object contains each reaches of target list size. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ターゲットリストのサイズの各リーチ数を保持するオブジェクトです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> RetargetingListServiceTargetListSizeReaches object contains each reaches of target list size. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceTargetListSizeReaches   {
   @JsonProperty("reach")
-  private JsonNullable<Long> reach = JsonNullable.undefined();
+  private Long reach = null;
 
   @JsonProperty("targetListSize")
-  private JsonNullable<RetargetingListServiceTargetListSize> targetListSize = JsonNullable.undefined();
+  private RetargetingListServiceTargetListSize targetListSize = null;
 
   public RetargetingListServiceTargetListSizeReaches reach(Long reach) {
-    this.reach = JsonNullable.of(reach);
+    this.reach = reach;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class RetargetingListServiceTargetListSizeReaches   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリストのサイズのリーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reaches of target list size. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getReach() {
+  public Long getReach() {
     return reach;
   }
 
-  public void setReach(JsonNullable<Long> reach) {
+  public void setReach(Long reach) {
     this.reach = reach;
   }
 
   public RetargetingListServiceTargetListSizeReaches targetListSize(RetargetingListServiceTargetListSize targetListSize) {
-    this.targetListSize = JsonNullable.of(targetListSize);
+    this.targetListSize = targetListSize;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class RetargetingListServiceTargetListSizeReaches   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetListSize> getTargetListSize() {
+  public RetargetingListServiceTargetListSize getTargetListSize() {
     return targetListSize;
   }
 
-  public void setTargetListSize(JsonNullable<RetargetingListServiceTargetListSize> targetListSize) {
+  public void setTargetListSize(RetargetingListServiceTargetListSize targetListSize) {
     this.targetListSize = targetListSize;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class RetargetingListServiceTargetListSizeReaches   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

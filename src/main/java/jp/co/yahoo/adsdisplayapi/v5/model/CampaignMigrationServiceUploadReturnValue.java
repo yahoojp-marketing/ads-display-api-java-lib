@@ -8,29 +8,28 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignMigrationServiceJobValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * CampaignMigrationServiceUploadReturnValue
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignMigrationServiceUploadReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<CampaignMigrationServiceJobValue>> values = JsonNullable.undefined();
+  private List<CampaignMigrationServiceJobValue> values = null;
 
   public CampaignMigrationServiceUploadReturnValue values(List<CampaignMigrationServiceJobValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public CampaignMigrationServiceUploadReturnValue addValuesItem(CampaignMigrationServiceJobValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -42,17 +41,17 @@ public class CampaignMigrationServiceUploadReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<CampaignMigrationServiceJobValue>> getValues() {
+  public List<CampaignMigrationServiceJobValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<CampaignMigrationServiceJobValue>> values) {
+  public void setValues(List<CampaignMigrationServiceJobValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -82,7 +81,7 @@ public class CampaignMigrationServiceUploadReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

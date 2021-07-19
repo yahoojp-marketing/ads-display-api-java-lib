@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceGeoTargetオブジェクトは、地域ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceGeoTarget object holds configuration information of Geo targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceGeoTargetオブジェクトは、地域ターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceGeoTarget object holds configuration information of Geo targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceGeoTarget   {
   @JsonProperty("geoNameEn")
-  private JsonNullable<String> geoNameEn = JsonNullable.undefined();
+  private String geoNameEn = null;
 
   @JsonProperty("geoNameJa")
-  private JsonNullable<String> geoNameJa = JsonNullable.undefined();
+  private String geoNameJa = null;
 
   public StatsServiceGeoTarget geoNameEn(String geoNameEn) {
-    this.geoNameEn = JsonNullable.of(geoNameEn);
+    this.geoNameEn = geoNameEn;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class StatsServiceGeoTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">地域名（英語）</div> <div lang=\"en\">Geo name(English)</div> ")
 
 
-  public JsonNullable<String> getGeoNameEn() {
+  public String getGeoNameEn() {
     return geoNameEn;
   }
 
-  public void setGeoNameEn(JsonNullable<String> geoNameEn) {
+  public void setGeoNameEn(String geoNameEn) {
     this.geoNameEn = geoNameEn;
   }
 
   public StatsServiceGeoTarget geoNameJa(String geoNameJa) {
-    this.geoNameJa = JsonNullable.of(geoNameJa);
+    this.geoNameJa = geoNameJa;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class StatsServiceGeoTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">地域名（日本語）</div> <div lang=\"en\">Geo name(Japanese)</div> ")
 
 
-  public JsonNullable<String> getGeoNameJa() {
+  public String getGeoNameJa() {
     return geoNameJa;
   }
 
-  public void setGeoNameJa(JsonNullable<String> geoNameJa) {
+  public void setGeoNameJa(String geoNameJa) {
     this.geoNameJa = geoNameJa;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class StatsServiceGeoTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -11,7 +11,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceCrossCampaignBu
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceCrossCampaignGoal;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceCrossCampaignId;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceCrossCampaignType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,25 +18,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceCrossCampaignReachesReportConditionオブジェクトは、横断リーチレポートの作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、reportTypeが&lt;code&gt;CROSS_CAMPAIGN_REACHES&lt;/code&gt;の場合は必須です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには少なくとも2件の要素が必要です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには最大で3件の要素を指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceCrossCampaignReachesReportCondition describes the condition to create Cross-campaign Reach Report. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;   *If reportType is &lt;code&gt;CROSS_CAMPAIGN_REACHES&lt;/code&gt;, this field is required in ADD operation.   * At least two elements are required for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes.   * Up to 3 elements can be specified for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceCrossCampaignReachesReportConditionオブジェクトは、横断リーチレポートの作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、reportTypeが<code>CROSS_CAMPAIGN_REACHES</code>の場合は必須です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには少なくとも2件の要素が必要です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには最大で3件の要素を指定できます。 </div> <div lang=\"en\">   ReportDefinitionServiceCrossCampaignReachesReportCondition describes the condition to create Cross-campaign Reach Report. <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>   *If reportType is <code>CROSS_CAMPAIGN_REACHES</code>, this field is required in ADD operation.   * At least two elements are required for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes.   * Up to 3 elements can be specified for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceCrossCampaignReachesReportCondition   {
   @JsonProperty("crossCampaignType")
-  private JsonNullable<ReportDefinitionServiceCrossCampaignType> crossCampaignType = JsonNullable.undefined();
+  private ReportDefinitionServiceCrossCampaignType crossCampaignType = null;
 
   @JsonProperty("crossCampaignIds")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceCrossCampaignId>> crossCampaignIds = JsonNullable.undefined();
+  private List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds = null;
 
   @JsonProperty("crossCampaignGoals")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceCrossCampaignGoal>> crossCampaignGoals = JsonNullable.undefined();
+  private List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals = null;
 
   @JsonProperty("crossCampaignBuyingTypes")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceCrossCampaignBuying>> crossCampaignBuyingTypes = JsonNullable.undefined();
+  private List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes = null;
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignType(ReportDefinitionServiceCrossCampaignType crossCampaignType) {
-    this.crossCampaignType = JsonNullable.of(crossCampaignType);
+    this.crossCampaignType = crossCampaignType;
     return this;
   }
 
@@ -49,24 +48,24 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceCrossCampaignType> getCrossCampaignType() {
+  public ReportDefinitionServiceCrossCampaignType getCrossCampaignType() {
     return crossCampaignType;
   }
 
-  public void setCrossCampaignType(JsonNullable<ReportDefinitionServiceCrossCampaignType> crossCampaignType) {
+  public void setCrossCampaignType(ReportDefinitionServiceCrossCampaignType crossCampaignType) {
     this.crossCampaignType = crossCampaignType;
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignIds(List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds) {
-    this.crossCampaignIds = JsonNullable.of(crossCampaignIds);
+    this.crossCampaignIds = crossCampaignIds;
     return this;
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition addCrossCampaignIdsItem(ReportDefinitionServiceCrossCampaignId crossCampaignIdsItem) {
-    if (this.crossCampaignIds == null || !this.crossCampaignIds.isPresent()) {
-      this.crossCampaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.crossCampaignIds == null) {
+      this.crossCampaignIds = new ArrayList<>();
     }
-    this.crossCampaignIds.get().add(crossCampaignIdsItem);
+    this.crossCampaignIds.add(crossCampaignIdsItem);
     return this;
   }
 
@@ -78,24 +77,24 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceCrossCampaignId>> getCrossCampaignIds() {
+  public List<ReportDefinitionServiceCrossCampaignId> getCrossCampaignIds() {
     return crossCampaignIds;
   }
 
-  public void setCrossCampaignIds(JsonNullable<List<ReportDefinitionServiceCrossCampaignId>> crossCampaignIds) {
+  public void setCrossCampaignIds(List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds) {
     this.crossCampaignIds = crossCampaignIds;
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignGoals(List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals) {
-    this.crossCampaignGoals = JsonNullable.of(crossCampaignGoals);
+    this.crossCampaignGoals = crossCampaignGoals;
     return this;
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition addCrossCampaignGoalsItem(ReportDefinitionServiceCrossCampaignGoal crossCampaignGoalsItem) {
-    if (this.crossCampaignGoals == null || !this.crossCampaignGoals.isPresent()) {
-      this.crossCampaignGoals = JsonNullable.of(new ArrayList<>());
+    if (this.crossCampaignGoals == null) {
+      this.crossCampaignGoals = new ArrayList<>();
     }
-    this.crossCampaignGoals.get().add(crossCampaignGoalsItem);
+    this.crossCampaignGoals.add(crossCampaignGoalsItem);
     return this;
   }
 
@@ -107,24 +106,24 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceCrossCampaignGoal>> getCrossCampaignGoals() {
+  public List<ReportDefinitionServiceCrossCampaignGoal> getCrossCampaignGoals() {
     return crossCampaignGoals;
   }
 
-  public void setCrossCampaignGoals(JsonNullable<List<ReportDefinitionServiceCrossCampaignGoal>> crossCampaignGoals) {
+  public void setCrossCampaignGoals(List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals) {
     this.crossCampaignGoals = crossCampaignGoals;
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignBuyingTypes(List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
-    this.crossCampaignBuyingTypes = JsonNullable.of(crossCampaignBuyingTypes);
+    this.crossCampaignBuyingTypes = crossCampaignBuyingTypes;
     return this;
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition addCrossCampaignBuyingTypesItem(ReportDefinitionServiceCrossCampaignBuying crossCampaignBuyingTypesItem) {
-    if (this.crossCampaignBuyingTypes == null || !this.crossCampaignBuyingTypes.isPresent()) {
-      this.crossCampaignBuyingTypes = JsonNullable.of(new ArrayList<>());
+    if (this.crossCampaignBuyingTypes == null) {
+      this.crossCampaignBuyingTypes = new ArrayList<>();
     }
-    this.crossCampaignBuyingTypes.get().add(crossCampaignBuyingTypesItem);
+    this.crossCampaignBuyingTypes.add(crossCampaignBuyingTypesItem);
     return this;
   }
 
@@ -136,17 +135,17 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceCrossCampaignBuying>> getCrossCampaignBuyingTypes() {
+  public List<ReportDefinitionServiceCrossCampaignBuying> getCrossCampaignBuyingTypes() {
     return crossCampaignBuyingTypes;
   }
 
-  public void setCrossCampaignBuyingTypes(JsonNullable<List<ReportDefinitionServiceCrossCampaignBuying>> crossCampaignBuyingTypes) {
+  public void setCrossCampaignBuyingTypes(List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
     this.crossCampaignBuyingTypes = crossCampaignBuyingTypes;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -182,7 +181,7 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

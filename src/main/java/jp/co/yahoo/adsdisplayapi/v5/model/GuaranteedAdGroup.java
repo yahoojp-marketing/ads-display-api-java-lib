@@ -13,7 +13,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupServiceDeviceOsType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupServiceDeviceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupServiceLabel;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -21,51 +20,51 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedAdGroupオブジェクトは、予約型の広告グループ情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The Guaranteed Ad Group object is a container for storing ad group information of guaranteed campaign.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedAdGroupオブジェクトは、予約型の広告グループ情報を保持します。</div> <div lang=\"en\">The Guaranteed Ad Group object is a container for storing ad group information of guaranteed campaign.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroup   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("device")
   @Valid
-  private JsonNullable<List<GuaranteedAdGroupServiceDeviceType>> device = JsonNullable.undefined();
+  private List<GuaranteedAdGroupServiceDeviceType> device = null;
 
   @JsonProperty("deviceApp")
   @Valid
-  private JsonNullable<List<GuaranteedAdGroupServiceDeviceAppType>> deviceApp = JsonNullable.undefined();
+  private List<GuaranteedAdGroupServiceDeviceAppType> deviceApp = null;
 
   @JsonProperty("deviceOs")
   @Valid
-  private JsonNullable<List<GuaranteedAdGroupServiceDeviceOsType>> deviceOs = JsonNullable.undefined();
+  private List<GuaranteedAdGroupServiceDeviceOsType> deviceOs = null;
 
   @JsonProperty("labels")
   @Valid
-  private JsonNullable<List<GuaranteedAdGroupServiceLabel>> labels = JsonNullable.undefined();
+  private List<GuaranteedAdGroupServiceLabel> labels = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<GuaranteedAdGroupServiceUserStatus> userStatus = JsonNullable.undefined();
+  private GuaranteedAdGroupServiceUserStatus userStatus = null;
 
   @JsonProperty("adGroupTargets")
   @Valid
-  private JsonNullable<List<AdGroupTarget>> adGroupTargets = JsonNullable.undefined();
+  private List<AdGroupTarget> adGroupTargets = null;
 
   @JsonProperty("isCreativeProfile")
-  private JsonNullable<Boolean> isCreativeProfile = JsonNullable.undefined();
+  private Boolean isCreativeProfile = null;
 
   public GuaranteedAdGroup accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -76,16 +75,16 @@ public class GuaranteedAdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedAdGroup adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -96,16 +95,16 @@ public class GuaranteedAdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Ad group ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public GuaranteedAdGroup adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -116,16 +115,16 @@ public class GuaranteedAdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Ad group name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public GuaranteedAdGroup campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -136,16 +135,16 @@ public class GuaranteedAdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public GuaranteedAdGroup campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -156,24 +155,24 @@ public class GuaranteedAdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> *ADD時、このフィールドは返却されません。 </div> <div lang=\"en\"> Campaign name.<br> Although this field will be returned in the response, it will be ignored on input.<br> *This field will not be returned in ADD operation. </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public GuaranteedAdGroup device(List<GuaranteedAdGroupServiceDeviceType> device) {
-    this.device = JsonNullable.of(device);
+    this.device = device;
     return this;
   }
 
   public GuaranteedAdGroup addDeviceItem(GuaranteedAdGroupServiceDeviceType deviceItem) {
-    if (this.device == null || !this.device.isPresent()) {
-      this.device = JsonNullable.of(new ArrayList<>());
+    if (this.device == null) {
+      this.device = new ArrayList<>();
     }
-    this.device.get().add(deviceItem);
+    this.device.add(deviceItem);
     return this;
   }
 
@@ -185,24 +184,24 @@ public class GuaranteedAdGroup   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedAdGroupServiceDeviceType>> getDevice() {
+  public List<GuaranteedAdGroupServiceDeviceType> getDevice() {
     return device;
   }
 
-  public void setDevice(JsonNullable<List<GuaranteedAdGroupServiceDeviceType>> device) {
+  public void setDevice(List<GuaranteedAdGroupServiceDeviceType> device) {
     this.device = device;
   }
 
   public GuaranteedAdGroup deviceApp(List<GuaranteedAdGroupServiceDeviceAppType> deviceApp) {
-    this.deviceApp = JsonNullable.of(deviceApp);
+    this.deviceApp = deviceApp;
     return this;
   }
 
   public GuaranteedAdGroup addDeviceAppItem(GuaranteedAdGroupServiceDeviceAppType deviceAppItem) {
-    if (this.deviceApp == null || !this.deviceApp.isPresent()) {
-      this.deviceApp = JsonNullable.of(new ArrayList<>());
+    if (this.deviceApp == null) {
+      this.deviceApp = new ArrayList<>();
     }
-    this.deviceApp.get().add(deviceAppItem);
+    this.deviceApp.add(deviceAppItem);
     return this;
   }
 
@@ -214,24 +213,24 @@ public class GuaranteedAdGroup   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedAdGroupServiceDeviceAppType>> getDeviceApp() {
+  public List<GuaranteedAdGroupServiceDeviceAppType> getDeviceApp() {
     return deviceApp;
   }
 
-  public void setDeviceApp(JsonNullable<List<GuaranteedAdGroupServiceDeviceAppType>> deviceApp) {
+  public void setDeviceApp(List<GuaranteedAdGroupServiceDeviceAppType> deviceApp) {
     this.deviceApp = deviceApp;
   }
 
   public GuaranteedAdGroup deviceOs(List<GuaranteedAdGroupServiceDeviceOsType> deviceOs) {
-    this.deviceOs = JsonNullable.of(deviceOs);
+    this.deviceOs = deviceOs;
     return this;
   }
 
   public GuaranteedAdGroup addDeviceOsItem(GuaranteedAdGroupServiceDeviceOsType deviceOsItem) {
-    if (this.deviceOs == null || !this.deviceOs.isPresent()) {
-      this.deviceOs = JsonNullable.of(new ArrayList<>());
+    if (this.deviceOs == null) {
+      this.deviceOs = new ArrayList<>();
     }
-    this.deviceOs.get().add(deviceOsItem);
+    this.deviceOs.add(deviceOsItem);
     return this;
   }
 
@@ -243,24 +242,24 @@ public class GuaranteedAdGroup   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedAdGroupServiceDeviceOsType>> getDeviceOs() {
+  public List<GuaranteedAdGroupServiceDeviceOsType> getDeviceOs() {
     return deviceOs;
   }
 
-  public void setDeviceOs(JsonNullable<List<GuaranteedAdGroupServiceDeviceOsType>> deviceOs) {
+  public void setDeviceOs(List<GuaranteedAdGroupServiceDeviceOsType> deviceOs) {
     this.deviceOs = deviceOs;
   }
 
   public GuaranteedAdGroup labels(List<GuaranteedAdGroupServiceLabel> labels) {
-    this.labels = JsonNullable.of(labels);
+    this.labels = labels;
     return this;
   }
 
   public GuaranteedAdGroup addLabelsItem(GuaranteedAdGroupServiceLabel labelsItem) {
-    if (this.labels == null || !this.labels.isPresent()) {
-      this.labels = JsonNullable.of(new ArrayList<>());
+    if (this.labels == null) {
+      this.labels = new ArrayList<>();
     }
-    this.labels.get().add(labelsItem);
+    this.labels.add(labelsItem);
     return this;
   }
 
@@ -272,16 +271,16 @@ public class GuaranteedAdGroup   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedAdGroupServiceLabel>> getLabels() {
+  public List<GuaranteedAdGroupServiceLabel> getLabels() {
     return labels;
   }
 
-  public void setLabels(JsonNullable<List<GuaranteedAdGroupServiceLabel>> labels) {
+  public void setLabels(List<GuaranteedAdGroupServiceLabel> labels) {
     this.labels = labels;
   }
 
   public GuaranteedAdGroup userStatus(GuaranteedAdGroupServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -293,24 +292,24 @@ public class GuaranteedAdGroup   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupServiceUserStatus> getUserStatus() {
+  public GuaranteedAdGroupServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<GuaranteedAdGroupServiceUserStatus> userStatus) {
+  public void setUserStatus(GuaranteedAdGroupServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public GuaranteedAdGroup adGroupTargets(List<AdGroupTarget> adGroupTargets) {
-    this.adGroupTargets = JsonNullable.of(adGroupTargets);
+    this.adGroupTargets = adGroupTargets;
     return this;
   }
 
   public GuaranteedAdGroup addAdGroupTargetsItem(AdGroupTarget adGroupTargetsItem) {
-    if (this.adGroupTargets == null || !this.adGroupTargets.isPresent()) {
-      this.adGroupTargets = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupTargets == null) {
+      this.adGroupTargets = new ArrayList<>();
     }
-    this.adGroupTargets.get().add(adGroupTargetsItem);
+    this.adGroupTargets.add(adGroupTargetsItem);
     return this;
   }
 
@@ -322,16 +321,16 @@ public class GuaranteedAdGroup   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupTarget>> getAdGroupTargets() {
+  public List<AdGroupTarget> getAdGroupTargets() {
     return adGroupTargets;
   }
 
-  public void setAdGroupTargets(JsonNullable<List<AdGroupTarget>> adGroupTargets) {
+  public void setAdGroupTargets(List<AdGroupTarget> adGroupTargets) {
     this.adGroupTargets = adGroupTargets;
   }
 
   public GuaranteedAdGroup isCreativeProfile(Boolean isCreativeProfile) {
-    this.isCreativeProfile = JsonNullable.of(isCreativeProfile);
+    this.isCreativeProfile = isCreativeProfile;
     return this;
   }
 
@@ -342,17 +341,17 @@ public class GuaranteedAdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> trueの場合、クリエイティブプロファイルで追加された広告グループであることを示します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> If the value of this field is true, it indicates that the ad group was added using a creative profile.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Boolean> getIsCreativeProfile() {
+  public Boolean getIsCreativeProfile() {
     return isCreativeProfile;
   }
 
-  public void setIsCreativeProfile(JsonNullable<Boolean> isCreativeProfile) {
+  public void setIsCreativeProfile(Boolean isCreativeProfile) {
     this.isCreativeProfile = isCreativeProfile;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -404,7 +403,7 @@ public class GuaranteedAdGroup   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

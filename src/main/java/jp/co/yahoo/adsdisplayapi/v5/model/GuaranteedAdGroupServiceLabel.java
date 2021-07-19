@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,22 +12,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupServiceLabelは、紐づけられているラベル情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupServiceLabel object describes label information to be associated.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupServiceLabelは、紐づけられているラベル情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> GuaranteedAdGroupServiceLabel object describes label information to be associated.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupServiceLabel   {
   @JsonProperty("color")
-  private JsonNullable<String> color = JsonNullable.undefined();
+  private String color = null;
 
   @JsonProperty("description")
-  private JsonNullable<String> description = JsonNullable.undefined();
+  private String description = null;
 
   @JsonProperty("labelId")
-  private JsonNullable<Long> labelId = JsonNullable.undefined();
+  private Long labelId = null;
 
   @JsonProperty("labelName")
-  private JsonNullable<String> labelName = JsonNullable.undefined();
+  private String labelName = null;
 
   public GuaranteedAdGroupServiceLabel color(String color) {
-    this.color = JsonNullable.of(color);
+    this.color = color;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class GuaranteedAdGroupServiceLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> カラーです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Color.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getColor() {
+  public String getColor() {
     return color;
   }
 
-  public void setColor(JsonNullable<String> color) {
+  public void setColor(String color) {
     this.color = color;
   }
 
   public GuaranteedAdGroupServiceLabel description(String description) {
-    this.description = JsonNullable.of(description);
+    this.description = description;
     return this;
   }
 
@@ -59,16 +58,16 @@ public class GuaranteedAdGroupServiceLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 説明文です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Description.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(JsonNullable<String> description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 
   public GuaranteedAdGroupServiceLabel labelId(Long labelId) {
-    this.labelId = JsonNullable.of(labelId);
+    this.labelId = labelId;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class GuaranteedAdGroupServiceLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ラベルIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupServiceLabel ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getLabelId() {
+  public Long getLabelId() {
     return labelId;
   }
 
-  public void setLabelId(JsonNullable<Long> labelId) {
+  public void setLabelId(Long labelId) {
     this.labelId = labelId;
   }
 
   public GuaranteedAdGroupServiceLabel labelName(String labelName) {
-    this.labelName = JsonNullable.of(labelName);
+    this.labelName = labelName;
     return this;
   }
 
@@ -99,17 +98,17 @@ public class GuaranteedAdGroupServiceLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ラベル名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupServiceLabel Name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getLabelName() {
+  public String getLabelName() {
     return labelName;
   }
 
-  public void setLabelName(JsonNullable<String> labelName) {
+  public void setLabelName(String labelName) {
     this.labelName = labelName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -145,7 +144,7 @@ public class GuaranteedAdGroupServiceLabel   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

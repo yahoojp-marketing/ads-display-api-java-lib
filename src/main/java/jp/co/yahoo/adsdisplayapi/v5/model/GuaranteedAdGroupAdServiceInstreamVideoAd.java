@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAdServiceIsRemoveFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,54 +15,54 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceInstreamVideoAdオブジェクトは、動画で構成される広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceInstreamVideoAd object describes information regarding ads composed of videos.&lt;br&gt; This field is optional.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceInstreamVideoAdオブジェクトは、動画で構成される広告の情報を表します。<br> このフィールドは、省略可能となります。<br> </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceInstreamVideoAd object describes information regarding ads composed of videos.<br> This field is optional.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @JsonProperty("displayUrl")
-  private JsonNullable<String> displayUrl = JsonNullable.undefined();
+  private String displayUrl = null;
 
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   @JsonProperty("headline")
-  private JsonNullable<String> headline = JsonNullable.undefined();
+  private String headline = null;
 
   @JsonProperty("isRemoveVideo25PercentBeaconUrls")
-  private JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideo25PercentBeaconUrls = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls = null;
 
   @JsonProperty("isRemoveVideo50PercentBeaconUrls")
-  private JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideo50PercentBeaconUrls = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls = null;
 
   @JsonProperty("isRemoveVideo75PercentBeaconUrls")
-  private JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideo75PercentBeaconUrls = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls = null;
 
   @JsonProperty("isRemoveVideoCompleteBeaconUrls")
-  private JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideoCompleteBeaconUrls = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls = null;
 
   @JsonProperty("isRemoveVideoStartBeaconUrls")
-  private JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideoStartBeaconUrls = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls = null;
 
   @JsonProperty("video25PercentBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> video25PercentBeaconUrls = JsonNullable.undefined();
+  private List<String> video25PercentBeaconUrls = null;
 
   @JsonProperty("video50PercentBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> video50PercentBeaconUrls = JsonNullable.undefined();
+  private List<String> video50PercentBeaconUrls = null;
 
   @JsonProperty("video75PercentBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> video75PercentBeaconUrls = JsonNullable.undefined();
+  private List<String> video75PercentBeaconUrls = null;
 
   @JsonProperty("videoCompleteBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> videoCompleteBeaconUrls = JsonNullable.undefined();
+  private List<String> videoCompleteBeaconUrls = null;
 
   @JsonProperty("videoStartBeaconUrls")
   @Valid
-  private JsonNullable<List<String>> videoStartBeaconUrls = JsonNullable.undefined();
+  private List<String> videoStartBeaconUrls = null;
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd displayUrl(String displayUrl) {
-    this.displayUrl = JsonNullable.of(displayUrl);
+    this.displayUrl = displayUrl;
     return this;
   }
 
@@ -74,16 +73,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 表示URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Display URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getDisplayUrl() {
+  public String getDisplayUrl() {
     return displayUrl;
   }
 
-  public void setDisplayUrl(JsonNullable<String> displayUrl) {
+  public void setDisplayUrl(String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -94,16 +93,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リンク先URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Destination URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd headline(String headline) {
-    this.headline = JsonNullable.of(headline);
+    this.headline = headline;
     return this;
   }
 
@@ -114,16 +113,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ヘッドラインです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Headline.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getHeadline() {
+  public String getHeadline() {
     return headline;
   }
 
-  public void setHeadline(JsonNullable<String> headline) {
+  public void setHeadline(String headline) {
     this.headline = headline;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd isRemoveVideo25PercentBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls) {
-    this.isRemoveVideo25PercentBeaconUrls = JsonNullable.of(isRemoveVideo25PercentBeaconUrls);
+    this.isRemoveVideo25PercentBeaconUrls = isRemoveVideo25PercentBeaconUrls;
     return this;
   }
 
@@ -135,16 +134,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> getIsRemoveVideo25PercentBeaconUrls() {
+  public GuaranteedAdGroupAdServiceIsRemoveFlg getIsRemoveVideo25PercentBeaconUrls() {
     return isRemoveVideo25PercentBeaconUrls;
   }
 
-  public void setIsRemoveVideo25PercentBeaconUrls(JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideo25PercentBeaconUrls) {
+  public void setIsRemoveVideo25PercentBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls) {
     this.isRemoveVideo25PercentBeaconUrls = isRemoveVideo25PercentBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd isRemoveVideo50PercentBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls) {
-    this.isRemoveVideo50PercentBeaconUrls = JsonNullable.of(isRemoveVideo50PercentBeaconUrls);
+    this.isRemoveVideo50PercentBeaconUrls = isRemoveVideo50PercentBeaconUrls;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> getIsRemoveVideo50PercentBeaconUrls() {
+  public GuaranteedAdGroupAdServiceIsRemoveFlg getIsRemoveVideo50PercentBeaconUrls() {
     return isRemoveVideo50PercentBeaconUrls;
   }
 
-  public void setIsRemoveVideo50PercentBeaconUrls(JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideo50PercentBeaconUrls) {
+  public void setIsRemoveVideo50PercentBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls) {
     this.isRemoveVideo50PercentBeaconUrls = isRemoveVideo50PercentBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd isRemoveVideo75PercentBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls) {
-    this.isRemoveVideo75PercentBeaconUrls = JsonNullable.of(isRemoveVideo75PercentBeaconUrls);
+    this.isRemoveVideo75PercentBeaconUrls = isRemoveVideo75PercentBeaconUrls;
     return this;
   }
 
@@ -177,16 +176,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> getIsRemoveVideo75PercentBeaconUrls() {
+  public GuaranteedAdGroupAdServiceIsRemoveFlg getIsRemoveVideo75PercentBeaconUrls() {
     return isRemoveVideo75PercentBeaconUrls;
   }
 
-  public void setIsRemoveVideo75PercentBeaconUrls(JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideo75PercentBeaconUrls) {
+  public void setIsRemoveVideo75PercentBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls) {
     this.isRemoveVideo75PercentBeaconUrls = isRemoveVideo75PercentBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd isRemoveVideoCompleteBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls) {
-    this.isRemoveVideoCompleteBeaconUrls = JsonNullable.of(isRemoveVideoCompleteBeaconUrls);
+    this.isRemoveVideoCompleteBeaconUrls = isRemoveVideoCompleteBeaconUrls;
     return this;
   }
 
@@ -198,16 +197,16 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> getIsRemoveVideoCompleteBeaconUrls() {
+  public GuaranteedAdGroupAdServiceIsRemoveFlg getIsRemoveVideoCompleteBeaconUrls() {
     return isRemoveVideoCompleteBeaconUrls;
   }
 
-  public void setIsRemoveVideoCompleteBeaconUrls(JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideoCompleteBeaconUrls) {
+  public void setIsRemoveVideoCompleteBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls) {
     this.isRemoveVideoCompleteBeaconUrls = isRemoveVideoCompleteBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd isRemoveVideoStartBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls) {
-    this.isRemoveVideoStartBeaconUrls = JsonNullable.of(isRemoveVideoStartBeaconUrls);
+    this.isRemoveVideoStartBeaconUrls = isRemoveVideoStartBeaconUrls;
     return this;
   }
 
@@ -219,24 +218,24 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> getIsRemoveVideoStartBeaconUrls() {
+  public GuaranteedAdGroupAdServiceIsRemoveFlg getIsRemoveVideoStartBeaconUrls() {
     return isRemoveVideoStartBeaconUrls;
   }
 
-  public void setIsRemoveVideoStartBeaconUrls(JsonNullable<GuaranteedAdGroupAdServiceIsRemoveFlg> isRemoveVideoStartBeaconUrls) {
+  public void setIsRemoveVideoStartBeaconUrls(GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls) {
     this.isRemoveVideoStartBeaconUrls = isRemoveVideoStartBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd video25PercentBeaconUrls(List<String> video25PercentBeaconUrls) {
-    this.video25PercentBeaconUrls = JsonNullable.of(video25PercentBeaconUrls);
+    this.video25PercentBeaconUrls = video25PercentBeaconUrls;
     return this;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd addVideo25PercentBeaconUrlsItem(String video25PercentBeaconUrlsItem) {
-    if (this.video25PercentBeaconUrls == null || !this.video25PercentBeaconUrls.isPresent()) {
-      this.video25PercentBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.video25PercentBeaconUrls == null) {
+      this.video25PercentBeaconUrls = new ArrayList<>();
     }
-    this.video25PercentBeaconUrls.get().add(video25PercentBeaconUrlsItem);
+    this.video25PercentBeaconUrls.add(video25PercentBeaconUrlsItem);
     return this;
   }
 
@@ -247,24 +246,24 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 25％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Playback viewing beacon URL (25%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
 
 
-  public JsonNullable<List<String>> getVideo25PercentBeaconUrls() {
+  public List<String> getVideo25PercentBeaconUrls() {
     return video25PercentBeaconUrls;
   }
 
-  public void setVideo25PercentBeaconUrls(JsonNullable<List<String>> video25PercentBeaconUrls) {
+  public void setVideo25PercentBeaconUrls(List<String> video25PercentBeaconUrls) {
     this.video25PercentBeaconUrls = video25PercentBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd video50PercentBeaconUrls(List<String> video50PercentBeaconUrls) {
-    this.video50PercentBeaconUrls = JsonNullable.of(video50PercentBeaconUrls);
+    this.video50PercentBeaconUrls = video50PercentBeaconUrls;
     return this;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd addVideo50PercentBeaconUrlsItem(String video50PercentBeaconUrlsItem) {
-    if (this.video50PercentBeaconUrls == null || !this.video50PercentBeaconUrls.isPresent()) {
-      this.video50PercentBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.video50PercentBeaconUrls == null) {
+      this.video50PercentBeaconUrls = new ArrayList<>();
     }
-    this.video50PercentBeaconUrls.get().add(video50PercentBeaconUrlsItem);
+    this.video50PercentBeaconUrls.add(video50PercentBeaconUrlsItem);
     return this;
   }
 
@@ -275,24 +274,24 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 50％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Playback viewing beacon URL (50%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
 
 
-  public JsonNullable<List<String>> getVideo50PercentBeaconUrls() {
+  public List<String> getVideo50PercentBeaconUrls() {
     return video50PercentBeaconUrls;
   }
 
-  public void setVideo50PercentBeaconUrls(JsonNullable<List<String>> video50PercentBeaconUrls) {
+  public void setVideo50PercentBeaconUrls(List<String> video50PercentBeaconUrls) {
     this.video50PercentBeaconUrls = video50PercentBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd video75PercentBeaconUrls(List<String> video75PercentBeaconUrls) {
-    this.video75PercentBeaconUrls = JsonNullable.of(video75PercentBeaconUrls);
+    this.video75PercentBeaconUrls = video75PercentBeaconUrls;
     return this;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd addVideo75PercentBeaconUrlsItem(String video75PercentBeaconUrlsItem) {
-    if (this.video75PercentBeaconUrls == null || !this.video75PercentBeaconUrls.isPresent()) {
-      this.video75PercentBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.video75PercentBeaconUrls == null) {
+      this.video75PercentBeaconUrls = new ArrayList<>();
     }
-    this.video75PercentBeaconUrls.get().add(video75PercentBeaconUrlsItem);
+    this.video75PercentBeaconUrls.add(video75PercentBeaconUrlsItem);
     return this;
   }
 
@@ -303,24 +302,24 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 75％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Playback viewing beacon URL (75%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
 
 
-  public JsonNullable<List<String>> getVideo75PercentBeaconUrls() {
+  public List<String> getVideo75PercentBeaconUrls() {
     return video75PercentBeaconUrls;
   }
 
-  public void setVideo75PercentBeaconUrls(JsonNullable<List<String>> video75PercentBeaconUrls) {
+  public void setVideo75PercentBeaconUrls(List<String> video75PercentBeaconUrls) {
     this.video75PercentBeaconUrls = video75PercentBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd videoCompleteBeaconUrls(List<String> videoCompleteBeaconUrls) {
-    this.videoCompleteBeaconUrls = JsonNullable.of(videoCompleteBeaconUrls);
+    this.videoCompleteBeaconUrls = videoCompleteBeaconUrls;
     return this;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd addVideoCompleteBeaconUrlsItem(String videoCompleteBeaconUrlsItem) {
-    if (this.videoCompleteBeaconUrls == null || !this.videoCompleteBeaconUrls.isPresent()) {
-      this.videoCompleteBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.videoCompleteBeaconUrls == null) {
+      this.videoCompleteBeaconUrls = new ArrayList<>();
     }
-    this.videoCompleteBeaconUrls.get().add(videoCompleteBeaconUrlsItem);
+    this.videoCompleteBeaconUrls.add(videoCompleteBeaconUrlsItem);
     return this;
   }
 
@@ -331,24 +330,24 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 再生完了ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Viewing beacon URL (complete).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
 
 
-  public JsonNullable<List<String>> getVideoCompleteBeaconUrls() {
+  public List<String> getVideoCompleteBeaconUrls() {
     return videoCompleteBeaconUrls;
   }
 
-  public void setVideoCompleteBeaconUrls(JsonNullable<List<String>> videoCompleteBeaconUrls) {
+  public void setVideoCompleteBeaconUrls(List<String> videoCompleteBeaconUrls) {
     this.videoCompleteBeaconUrls = videoCompleteBeaconUrls;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd videoStartBeaconUrls(List<String> videoStartBeaconUrls) {
-    this.videoStartBeaconUrls = JsonNullable.of(videoStartBeaconUrls);
+    this.videoStartBeaconUrls = videoStartBeaconUrls;
     return this;
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd addVideoStartBeaconUrlsItem(String videoStartBeaconUrlsItem) {
-    if (this.videoStartBeaconUrls == null || !this.videoStartBeaconUrls.isPresent()) {
-      this.videoStartBeaconUrls = JsonNullable.of(new ArrayList<>());
+    if (this.videoStartBeaconUrls == null) {
+      this.videoStartBeaconUrls = new ArrayList<>();
     }
-    this.videoStartBeaconUrls.get().add(videoStartBeaconUrlsItem);
+    this.videoStartBeaconUrls.add(videoStartBeaconUrlsItem);
     return this;
   }
 
@@ -359,17 +358,17 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 再生開始ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Viewing beacon URL (start).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
 
 
-  public JsonNullable<List<String>> getVideoStartBeaconUrls() {
+  public List<String> getVideoStartBeaconUrls() {
     return videoStartBeaconUrls;
   }
 
-  public void setVideoStartBeaconUrls(JsonNullable<List<String>> videoStartBeaconUrls) {
+  public void setVideoStartBeaconUrls(List<String> videoStartBeaconUrls) {
     this.videoStartBeaconUrls = videoStartBeaconUrls;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -423,7 +422,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

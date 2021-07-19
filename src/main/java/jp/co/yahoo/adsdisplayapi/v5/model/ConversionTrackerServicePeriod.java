@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServicePeriodDatetime;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePeriodオブジェクトは、統計情報の更新日を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePeriod object contains the update date of stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerServicePeriodオブジェクトは、統計情報の更新日を保持します。</div> <div lang=\"en\">ConversionTrackerServicePeriod object contains the update date of stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServicePeriod   {
   @JsonProperty("periodEndDate")
-  private JsonNullable<ConversionTrackerServicePeriodDatetime> periodEndDate = JsonNullable.undefined();
+  private ConversionTrackerServicePeriodDatetime periodEndDate = null;
 
   @JsonProperty("periodStartDate")
-  private JsonNullable<ConversionTrackerServicePeriodDatetime> periodStartDate = JsonNullable.undefined();
+  private ConversionTrackerServicePeriodDatetime periodStartDate = null;
 
   public ConversionTrackerServicePeriod periodEndDate(ConversionTrackerServicePeriodDatetime periodEndDate) {
-    this.periodEndDate = JsonNullable.of(periodEndDate);
+    this.periodEndDate = periodEndDate;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class ConversionTrackerServicePeriod   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServicePeriodDatetime> getPeriodEndDate() {
+  public ConversionTrackerServicePeriodDatetime getPeriodEndDate() {
     return periodEndDate;
   }
 
-  public void setPeriodEndDate(JsonNullable<ConversionTrackerServicePeriodDatetime> periodEndDate) {
+  public void setPeriodEndDate(ConversionTrackerServicePeriodDatetime periodEndDate) {
     this.periodEndDate = periodEndDate;
   }
 
   public ConversionTrackerServicePeriod periodStartDate(ConversionTrackerServicePeriodDatetime periodStartDate) {
-    this.periodStartDate = JsonNullable.of(periodStartDate);
+    this.periodStartDate = periodStartDate;
     return this;
   }
 
@@ -56,17 +55,17 @@ public class ConversionTrackerServicePeriod   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServicePeriodDatetime> getPeriodStartDate() {
+  public ConversionTrackerServicePeriodDatetime getPeriodStartDate() {
     return periodStartDate;
   }
 
-  public void setPeriodStartDate(JsonNullable<ConversionTrackerServicePeriodDatetime> periodStartDate) {
+  public void setPeriodStartDate(ConversionTrackerServicePeriodDatetime periodStartDate) {
     this.periodStartDate = periodStartDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -98,7 +97,7 @@ public class ConversionTrackerServicePeriod   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

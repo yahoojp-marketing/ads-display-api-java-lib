@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServicePeriodDatetime;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePeriodオブジェクトは、統計情報の更新日を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePeriod object contains the update date of stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServicePeriodオブジェクトは、統計情報の更新日を保持します。</div> <div lang=\"en\">StatsServicePeriod object contains the update date of stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServicePeriod   {
   @JsonProperty("periodEndDate")
-  private JsonNullable<StatsServicePeriodDatetime> periodEndDate = JsonNullable.undefined();
+  private StatsServicePeriodDatetime periodEndDate = null;
 
   @JsonProperty("periodStartDate")
-  private JsonNullable<StatsServicePeriodDatetime> periodStartDate = JsonNullable.undefined();
+  private StatsServicePeriodDatetime periodStartDate = null;
 
   public StatsServicePeriod periodEndDate(StatsServicePeriodDatetime periodEndDate) {
-    this.periodEndDate = JsonNullable.of(periodEndDate);
+    this.periodEndDate = periodEndDate;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class StatsServicePeriod   {
 
   @Valid
 
-  public JsonNullable<StatsServicePeriodDatetime> getPeriodEndDate() {
+  public StatsServicePeriodDatetime getPeriodEndDate() {
     return periodEndDate;
   }
 
-  public void setPeriodEndDate(JsonNullable<StatsServicePeriodDatetime> periodEndDate) {
+  public void setPeriodEndDate(StatsServicePeriodDatetime periodEndDate) {
     this.periodEndDate = periodEndDate;
   }
 
   public StatsServicePeriod periodStartDate(StatsServicePeriodDatetime periodStartDate) {
-    this.periodStartDate = JsonNullable.of(periodStartDate);
+    this.periodStartDate = periodStartDate;
     return this;
   }
 
@@ -56,17 +55,17 @@ public class StatsServicePeriod   {
 
   @Valid
 
-  public JsonNullable<StatsServicePeriodDatetime> getPeriodStartDate() {
+  public StatsServicePeriodDatetime getPeriodStartDate() {
     return periodStartDate;
   }
 
-  public void setPeriodStartDate(JsonNullable<StatsServicePeriodDatetime> periodStartDate) {
+  public void setPeriodStartDate(StatsServicePeriodDatetime periodStartDate) {
     this.periodStartDate = periodStartDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -98,7 +97,7 @@ public class StatsServicePeriod   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

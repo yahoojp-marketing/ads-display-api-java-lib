@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,25 +12,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdLabelオブジェクトは、広告ラベルの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdLabel object describes Ad group ad label information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupAdLabelオブジェクトは、広告ラベルの情報を表します。</div> <div lang=\"en\">AdGroupAdLabel object describes Ad group ad label information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdLabel   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adId")
-  private JsonNullable<Long> adId = JsonNullable.undefined();
+  private Long adId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("labelId")
-  private JsonNullable<Long> labelId = JsonNullable.undefined();
+  private Long labelId = null;
 
   public AdGroupAdLabel accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class AdGroupAdLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroupAdLabel adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class AdGroupAdLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Ad group ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroupAdLabel adId(Long adId) {
-    this.adId = JsonNullable.of(adId);
+    this.adId = adId;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class AdGroupAdLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告IDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Ad group Ad ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAdId() {
+  public Long getAdId() {
     return adId;
   }
 
-  public void setAdId(JsonNullable<Long> adId) {
+  public void setAdId(Long adId) {
     this.adId = adId;
   }
 
   public AdGroupAdLabel campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class AdGroupAdLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroupAdLabel labelId(Long labelId) {
-    this.labelId = JsonNullable.of(labelId);
+    this.labelId = labelId;
     return this;
   }
 
@@ -122,17 +121,17 @@ public class AdGroupAdLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ラベルIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Label ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getLabelId() {
+  public Long getLabelId() {
     return labelId;
   }
 
-  public void setLabelId(JsonNullable<Long> labelId) {
+  public void setLabelId(Long labelId) {
     this.labelId = labelId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -170,7 +169,7 @@ public class AdGroupAdLabel   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

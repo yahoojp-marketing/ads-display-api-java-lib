@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.Stats;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,22 +13,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceVideoStatsValueオブジェクトは、動画の統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceVideoStatsValue object contains Video stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceVideoStatsValueオブジェクトは、動画の統計情報を保持します。</div> <div lang=\"en\">StatsServiceVideoStatsValue object contains Video stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceVideoStatsValue   {
   @JsonProperty("mediaId")
-  private JsonNullable<Long> mediaId = JsonNullable.undefined();
+  private Long mediaId = null;
 
   @JsonProperty("videoName")
-  private JsonNullable<String> videoName = JsonNullable.undefined();
+  private String videoName = null;
 
   @JsonProperty("videoTitle")
-  private JsonNullable<String> videoTitle = JsonNullable.undefined();
+  private String videoTitle = null;
 
   @JsonProperty("stats")
-  private JsonNullable<Stats> stats = JsonNullable.undefined();
+  private Stats stats = null;
 
   public StatsServiceVideoStatsValue mediaId(Long mediaId) {
-    this.mediaId = JsonNullable.of(mediaId);
+    this.mediaId = mediaId;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class StatsServiceVideoStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">メディアID</div> <div lang=\"en\">Media ID</div> ")
 
 
-  public JsonNullable<Long> getMediaId() {
+  public Long getMediaId() {
     return mediaId;
   }
 
-  public void setMediaId(JsonNullable<Long> mediaId) {
+  public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
 
   public StatsServiceVideoStatsValue videoName(String videoName) {
-    this.videoName = JsonNullable.of(videoName);
+    this.videoName = videoName;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class StatsServiceVideoStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">実ファイル名</div> <div lang=\"en\">File name</div> ")
 
 
-  public JsonNullable<String> getVideoName() {
+  public String getVideoName() {
     return videoName;
   }
 
-  public void setVideoName(JsonNullable<String> videoName) {
+  public void setVideoName(String videoName) {
     this.videoName = videoName;
   }
 
   public StatsServiceVideoStatsValue videoTitle(String videoTitle) {
-    this.videoTitle = JsonNullable.of(videoTitle);
+    this.videoTitle = videoTitle;
     return this;
   }
 
@@ -80,16 +79,16 @@ public class StatsServiceVideoStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビデオ名</div> <div lang=\"en\">Video title</div> ")
 
 
-  public JsonNullable<String> getVideoTitle() {
+  public String getVideoTitle() {
     return videoTitle;
   }
 
-  public void setVideoTitle(JsonNullable<String> videoTitle) {
+  public void setVideoTitle(String videoTitle) {
     this.videoTitle = videoTitle;
   }
 
   public StatsServiceVideoStatsValue stats(Stats stats) {
-    this.stats = JsonNullable.of(stats);
+    this.stats = stats;
     return this;
   }
 
@@ -101,17 +100,17 @@ public class StatsServiceVideoStatsValue   {
 
   @Valid
 
-  public JsonNullable<Stats> getStats() {
+  public Stats getStats() {
     return stats;
   }
 
-  public void setStats(JsonNullable<Stats> stats) {
+  public void setStats(Stats stats) {
     this.stats = stats;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -147,7 +146,7 @@ public class StatsServiceVideoStatsValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

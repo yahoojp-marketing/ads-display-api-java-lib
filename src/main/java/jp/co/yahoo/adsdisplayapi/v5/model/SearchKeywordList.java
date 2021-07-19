@@ -12,7 +12,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordListServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordListServiceKeywordFrequency;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordListServiceKeywordRecency;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchKeywordListServiceSearchKeyword;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -20,38 +19,38 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListオブジェクトは、サーチキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordList object displays the search list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchKeywordListオブジェクトは、サーチキーワードリストを表します。</div> <div lang=\"en\">SearchKeywordList object displays the search list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchKeywordList   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("deliveryStatus")
-  private JsonNullable<SearchKeywordListServiceDeliveryStatus> deliveryStatus = JsonNullable.undefined();
+  private SearchKeywordListServiceDeliveryStatus deliveryStatus = null;
 
   @JsonProperty("keywordFrequency")
-  private JsonNullable<SearchKeywordListServiceKeywordFrequency> keywordFrequency = JsonNullable.undefined();
+  private SearchKeywordListServiceKeywordFrequency keywordFrequency = null;
 
   @JsonProperty("keywordRecency")
-  private JsonNullable<SearchKeywordListServiceKeywordRecency> keywordRecency = JsonNullable.undefined();
+  private SearchKeywordListServiceKeywordRecency keywordRecency = null;
 
   @JsonProperty("searchKeyword")
   @Valid
-  private JsonNullable<List<SearchKeywordListServiceSearchKeyword>> searchKeyword = JsonNullable.undefined();
+  private List<SearchKeywordListServiceSearchKeyword> searchKeyword = null;
 
   @JsonProperty("searchKeywordListDescription")
-  private JsonNullable<String> searchKeywordListDescription = JsonNullable.undefined();
+  private String searchKeywordListDescription = null;
 
   @JsonProperty("isRemoveSearchKeywordListDescription")
-  private JsonNullable<SearchKeywordListServiceIsRemoveFlg> isRemoveSearchKeywordListDescription = JsonNullable.undefined();
+  private SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription = null;
 
   @JsonProperty("searchKeywordListId")
-  private JsonNullable<Long> searchKeywordListId = JsonNullable.undefined();
+  private Long searchKeywordListId = null;
 
   @JsonProperty("searchKeywordListName")
-  private JsonNullable<String> searchKeywordListName = JsonNullable.undefined();
+  private String searchKeywordListName = null;
 
   public SearchKeywordList accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class SearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public SearchKeywordList deliveryStatus(SearchKeywordListServiceDeliveryStatus deliveryStatus) {
-    this.deliveryStatus = JsonNullable.of(deliveryStatus);
+    this.deliveryStatus = deliveryStatus;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class SearchKeywordList   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordListServiceDeliveryStatus> getDeliveryStatus() {
+  public SearchKeywordListServiceDeliveryStatus getDeliveryStatus() {
     return deliveryStatus;
   }
 
-  public void setDeliveryStatus(JsonNullable<SearchKeywordListServiceDeliveryStatus> deliveryStatus) {
+  public void setDeliveryStatus(SearchKeywordListServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
   public SearchKeywordList keywordFrequency(SearchKeywordListServiceKeywordFrequency keywordFrequency) {
-    this.keywordFrequency = JsonNullable.of(keywordFrequency);
+    this.keywordFrequency = keywordFrequency;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class SearchKeywordList   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordListServiceKeywordFrequency> getKeywordFrequency() {
+  public SearchKeywordListServiceKeywordFrequency getKeywordFrequency() {
     return keywordFrequency;
   }
 
-  public void setKeywordFrequency(JsonNullable<SearchKeywordListServiceKeywordFrequency> keywordFrequency) {
+  public void setKeywordFrequency(SearchKeywordListServiceKeywordFrequency keywordFrequency) {
     this.keywordFrequency = keywordFrequency;
   }
 
   public SearchKeywordList keywordRecency(SearchKeywordListServiceKeywordRecency keywordRecency) {
-    this.keywordRecency = JsonNullable.of(keywordRecency);
+    this.keywordRecency = keywordRecency;
     return this;
   }
 
@@ -125,24 +124,24 @@ public class SearchKeywordList   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordListServiceKeywordRecency> getKeywordRecency() {
+  public SearchKeywordListServiceKeywordRecency getKeywordRecency() {
     return keywordRecency;
   }
 
-  public void setKeywordRecency(JsonNullable<SearchKeywordListServiceKeywordRecency> keywordRecency) {
+  public void setKeywordRecency(SearchKeywordListServiceKeywordRecency keywordRecency) {
     this.keywordRecency = keywordRecency;
   }
 
   public SearchKeywordList searchKeyword(List<SearchKeywordListServiceSearchKeyword> searchKeyword) {
-    this.searchKeyword = JsonNullable.of(searchKeyword);
+    this.searchKeyword = searchKeyword;
     return this;
   }
 
   public SearchKeywordList addSearchKeywordItem(SearchKeywordListServiceSearchKeyword searchKeywordItem) {
-    if (this.searchKeyword == null || !this.searchKeyword.isPresent()) {
-      this.searchKeyword = JsonNullable.of(new ArrayList<>());
+    if (this.searchKeyword == null) {
+      this.searchKeyword = new ArrayList<>();
     }
-    this.searchKeyword.get().add(searchKeywordItem);
+    this.searchKeyword.add(searchKeywordItem);
     return this;
   }
 
@@ -154,16 +153,16 @@ public class SearchKeywordList   {
 
   @Valid
 
-  public JsonNullable<List<SearchKeywordListServiceSearchKeyword>> getSearchKeyword() {
+  public List<SearchKeywordListServiceSearchKeyword> getSearchKeyword() {
     return searchKeyword;
   }
 
-  public void setSearchKeyword(JsonNullable<List<SearchKeywordListServiceSearchKeyword>> searchKeyword) {
+  public void setSearchKeyword(List<SearchKeywordListServiceSearchKeyword> searchKeyword) {
     this.searchKeyword = searchKeyword;
   }
 
   public SearchKeywordList searchKeywordListDescription(String searchKeywordListDescription) {
-    this.searchKeywordListDescription = JsonNullable.of(searchKeywordListDescription);
+    this.searchKeywordListDescription = searchKeywordListDescription;
     return this;
   }
 
@@ -174,16 +173,16 @@ public class SearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリストの説明文です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Description of Search keyword list.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getSearchKeywordListDescription() {
+  public String getSearchKeywordListDescription() {
     return searchKeywordListDescription;
   }
 
-  public void setSearchKeywordListDescription(JsonNullable<String> searchKeywordListDescription) {
+  public void setSearchKeywordListDescription(String searchKeywordListDescription) {
     this.searchKeywordListDescription = searchKeywordListDescription;
   }
 
   public SearchKeywordList isRemoveSearchKeywordListDescription(SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription) {
-    this.isRemoveSearchKeywordListDescription = JsonNullable.of(isRemoveSearchKeywordListDescription);
+    this.isRemoveSearchKeywordListDescription = isRemoveSearchKeywordListDescription;
     return this;
   }
 
@@ -195,16 +194,16 @@ public class SearchKeywordList   {
 
   @Valid
 
-  public JsonNullable<SearchKeywordListServiceIsRemoveFlg> getIsRemoveSearchKeywordListDescription() {
+  public SearchKeywordListServiceIsRemoveFlg getIsRemoveSearchKeywordListDescription() {
     return isRemoveSearchKeywordListDescription;
   }
 
-  public void setIsRemoveSearchKeywordListDescription(JsonNullable<SearchKeywordListServiceIsRemoveFlg> isRemoveSearchKeywordListDescription) {
+  public void setIsRemoveSearchKeywordListDescription(SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription) {
     this.isRemoveSearchKeywordListDescription = isRemoveSearchKeywordListDescription;
   }
 
   public SearchKeywordList searchKeywordListId(Long searchKeywordListId) {
-    this.searchKeywordListId = JsonNullable.of(searchKeywordListId);
+    this.searchKeywordListId = searchKeywordListId;
     return this;
   }
 
@@ -215,16 +214,16 @@ public class SearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Search keyword list ID.<br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getSearchKeywordListId() {
+  public Long getSearchKeywordListId() {
     return searchKeywordListId;
   }
 
-  public void setSearchKeywordListId(JsonNullable<Long> searchKeywordListId) {
+  public void setSearchKeywordListId(Long searchKeywordListId) {
     this.searchKeywordListId = searchKeywordListId;
   }
 
   public SearchKeywordList searchKeywordListName(String searchKeywordListName) {
-    this.searchKeywordListName = JsonNullable.of(searchKeywordListName);
+    this.searchKeywordListName = searchKeywordListName;
     return this;
   }
 
@@ -235,17 +234,17 @@ public class SearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリスト名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Name of Search keyword list.<br> This field is required in ADD operation, and is optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getSearchKeywordListName() {
+  public String getSearchKeywordListName() {
     return searchKeywordListName;
   }
 
-  public void setSearchKeywordListName(JsonNullable<String> searchKeywordListName) {
+  public void setSearchKeywordListName(String searchKeywordListName) {
     this.searchKeywordListName = searchKeywordListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -291,7 +290,7 @@ public class SearchKeywordList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

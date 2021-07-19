@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulation;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServiceValueオブジェクトは、操作結果を含む予約型キャンペーンの配信シミュレーション情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServiceValue object describes information about the guaranteed campaign delivery simulation including the operation result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServiceValueオブジェクトは、操作結果を含む予約型キャンペーンの配信シミュレーション情報を表します。</div> <div lang=\"en\">GuaranteedSimulationServiceValue object describes information about the guaranteed campaign delivery simulation including the operation result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceValue   {
   @JsonProperty("guaranteedSimulation")
-  private JsonNullable<GuaranteedSimulation> guaranteedSimulation = JsonNullable.undefined();
+  private GuaranteedSimulation guaranteedSimulation = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public GuaranteedSimulationServiceValue guaranteedSimulation(GuaranteedSimulation guaranteedSimulation) {
-    this.guaranteedSimulation = JsonNullable.of(guaranteedSimulation);
+    this.guaranteedSimulation = guaranteedSimulation;
     return this;
   }
 
@@ -42,24 +41,24 @@ public class GuaranteedSimulationServiceValue   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulation> getGuaranteedSimulation() {
+  public GuaranteedSimulation getGuaranteedSimulation() {
     return guaranteedSimulation;
   }
 
-  public void setGuaranteedSimulation(JsonNullable<GuaranteedSimulation> guaranteedSimulation) {
+  public void setGuaranteedSimulation(GuaranteedSimulation guaranteedSimulation) {
     this.guaranteedSimulation = guaranteedSimulation;
   }
 
   public GuaranteedSimulationServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public GuaranteedSimulationServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class GuaranteedSimulationServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public GuaranteedSimulationServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class GuaranteedSimulationServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class GuaranteedSimulationServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

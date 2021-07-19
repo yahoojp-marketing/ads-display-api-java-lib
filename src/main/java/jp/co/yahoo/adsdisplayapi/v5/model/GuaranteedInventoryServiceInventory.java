@@ -20,7 +20,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServicePriceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceReservationStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceUnreservableReason;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceViewableFrequencyCap;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -28,123 +27,123 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedInventoryオブジェクトは、予約型キャンペーンの配信シミュレーション情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedInventory object holds information about the delivery simulation of the guaranteed campaign.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedInventoryオブジェクトは、予約型キャンペーンの配信シミュレーション情報を保持します。</div> <div lang=\"en\">GuaranteedInventory object holds information about the delivery simulation of the guaranteed campaign.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceInventory   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("lifetimeBudget")
-  private JsonNullable<Long> lifetimeBudget = JsonNullable.undefined();
+  private Long lifetimeBudget = null;
 
   @JsonProperty("reach")
-  private JsonNullable<Long> reach = JsonNullable.undefined();
+  private Long reach = null;
 
   @JsonProperty("vImps")
-  private JsonNullable<Long> vImps = JsonNullable.undefined();
+  private Long vImps = null;
 
   @JsonProperty("sovRate")
-  private JsonNullable<Long> sovRate = JsonNullable.undefined();
+  private Long sovRate = null;
 
   @JsonProperty("slots")
-  private JsonNullable<Long> slots = JsonNullable.undefined();
+  private Long slots = null;
 
   @JsonProperty("campaignGoal")
-  private JsonNullable<String> campaignGoal = JsonNullable.undefined();
+  private String campaignGoal = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("maxSellableVImps")
-  private JsonNullable<Long> maxSellableVImps = JsonNullable.undefined();
+  private Long maxSellableVImps = null;
 
   @JsonProperty("maxSellableReach")
-  private JsonNullable<Long> maxSellableReach = JsonNullable.undefined();
+  private Long maxSellableReach = null;
 
   @JsonProperty("maxReservableVImps")
-  private JsonNullable<Long> maxReservableVImps = JsonNullable.undefined();
+  private Long maxReservableVImps = null;
 
   @JsonProperty("maxReservableSlots")
-  private JsonNullable<Long> maxReservableSlots = JsonNullable.undefined();
+  private Long maxReservableSlots = null;
 
   @JsonProperty("lowerBudgetLimit")
-  private JsonNullable<Long> lowerBudgetLimit = JsonNullable.undefined();
+  private Long lowerBudgetLimit = null;
 
   @JsonProperty("upperBudgetLimit")
-  private JsonNullable<Long> upperBudgetLimit = JsonNullable.undefined();
+  private Long upperBudgetLimit = null;
 
   @JsonProperty("packageId")
-  private JsonNullable<Long> packageId = JsonNullable.undefined();
+  private Long packageId = null;
 
   @JsonProperty("packageName")
-  private JsonNullable<String> packageName = JsonNullable.undefined();
+  private String packageName = null;
 
   @JsonProperty("packageHistoryId")
-  private JsonNullable<Long> packageHistoryId = JsonNullable.undefined();
+  private Long packageHistoryId = null;
 
   @JsonProperty("adCategoryIds")
   @Valid
-  private JsonNullable<List<Long>> adCategoryIds = JsonNullable.undefined();
+  private List<Long> adCategoryIds = null;
 
   @JsonProperty("promotionUrl")
-  private JsonNullable<String> promotionUrl = JsonNullable.undefined();
+  private String promotionUrl = null;
 
   @JsonProperty("minimumPurchaseVImps")
-  private JsonNullable<Long> minimumPurchaseVImps = JsonNullable.undefined();
+  private Long minimumPurchaseVImps = null;
 
   @JsonProperty("maximumPurchaseVImps")
-  private JsonNullable<Long> maximumPurchaseVImps = JsonNullable.undefined();
+  private Long maximumPurchaseVImps = null;
 
   @JsonProperty("inventoryUnit")
-  private JsonNullable<GuaranteedInventoryServiceInventoryUnit> inventoryUnit = JsonNullable.undefined();
+  private GuaranteedInventoryServiceInventoryUnit inventoryUnit = null;
 
   @JsonProperty("campaignBiddingStrategyType")
-  private JsonNullable<GuaranteedInventoryServiceCampaignBiddingStrategyType> campaignBiddingStrategyType = JsonNullable.undefined();
+  private GuaranteedInventoryServiceCampaignBiddingStrategyType campaignBiddingStrategyType = null;
 
   @JsonProperty("viewableFrequencyCap")
-  private JsonNullable<GuaranteedInventoryServiceViewableFrequencyCap> viewableFrequencyCap = JsonNullable.undefined();
+  private GuaranteedInventoryServiceViewableFrequencyCap viewableFrequencyCap = null;
 
   @JsonProperty("reservationStatus")
-  private JsonNullable<GuaranteedInventoryServiceReservationStatus> reservationStatus = JsonNullable.undefined();
+  private GuaranteedInventoryServiceReservationStatus reservationStatus = null;
 
   @JsonProperty("unreservableReason")
-  private JsonNullable<GuaranteedInventoryServiceUnreservableReason> unreservableReason = JsonNullable.undefined();
+  private GuaranteedInventoryServiceUnreservableReason unreservableReason = null;
 
   @JsonProperty("adRequirements")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceAdRequirement>> adRequirements = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceAdRequirement> adRequirements = null;
 
   @JsonProperty("inventoryDetailStatus")
-  private JsonNullable<GuaranteedInventoryServiceInventoryDetailStatus> inventoryDetailStatus = JsonNullable.undefined();
+  private GuaranteedInventoryServiceInventoryDetailStatus inventoryDetailStatus = null;
 
   @JsonProperty("actionAfterVideoAdTap")
-  private JsonNullable<GuaranteedInventoryServiceActionAfterVideoAdTap> actionAfterVideoAdTap = JsonNullable.undefined();
+  private GuaranteedInventoryServiceActionAfterVideoAdTap actionAfterVideoAdTap = null;
 
   @JsonProperty("priceType")
-  private JsonNullable<GuaranteedInventoryServicePriceType> priceType = JsonNullable.undefined();
+  private GuaranteedInventoryServicePriceType priceType = null;
 
   @JsonProperty("placementMonopolyFlg")
-  private JsonNullable<GuaranteedInventoryServicePlacementMonopolyFlg> placementMonopolyFlg = JsonNullable.undefined();
+  private GuaranteedInventoryServicePlacementMonopolyFlg placementMonopolyFlg = null;
 
   @JsonProperty("predictionResults")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServicePredictionResult>> predictionResults = JsonNullable.undefined();
+  private List<GuaranteedInventoryServicePredictionResult> predictionResults = null;
 
   @JsonProperty("requestedConditionPredictionResult")
-  private JsonNullable<GuaranteedInventoryServicePredictionResult> requestedConditionPredictionResult = JsonNullable.undefined();
+  private GuaranteedInventoryServicePredictionResult requestedConditionPredictionResult = null;
 
   @JsonProperty("inventoryResult")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceInventoryResult>> inventoryResult = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceInventoryResult> inventoryResult = null;
 
   @JsonProperty("targets")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceAdGroupTarget>> targets = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceAdGroupTarget> targets = null;
 
   public GuaranteedInventoryServiceInventory accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -155,16 +154,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Account ID.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedInventoryServiceInventory lifetimeBudget(Long lifetimeBudget) {
-    this.lifetimeBudget = JsonNullable.of(lifetimeBudget);
+    this.lifetimeBudget = lifetimeBudget;
     return this;
   }
 
@@ -175,16 +174,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの通期予算額です。<br> ※この「通期予算」は、キャンペーンの全期間を通じて消費される予算を意味します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> An amount of campaign's lifetime budget.<br> * \"lifetime budget\" means the total budget that is spent throughout the entire duration of the campaign.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getLifetimeBudget() {
+  public Long getLifetimeBudget() {
     return lifetimeBudget;
   }
 
-  public void setLifetimeBudget(JsonNullable<Long> lifetimeBudget) {
+  public void setLifetimeBudget(Long lifetimeBudget) {
     this.lifetimeBudget = lifetimeBudget;
   }
 
   public GuaranteedInventoryServiceInventory reach(Long reach) {
-    this.reach = JsonNullable.of(reach);
+    this.reach = reach;
     return this;
   }
 
@@ -195,16 +194,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of reaches.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getReach() {
+  public Long getReach() {
     return reach;
   }
 
-  public void setReach(JsonNullable<Long> reach) {
+  public void setReach(Long reach) {
     this.reach = reach;
   }
 
   public GuaranteedInventoryServiceInventory vImps(Long vImps) {
-    this.vImps = JsonNullable.of(vImps);
+    this.vImps = vImps;
     return this;
   }
 
@@ -215,16 +214,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ビューアブルインプレッションです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Viewable impressions.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getvImps() {
+  public Long getvImps() {
     return vImps;
   }
 
-  public void setvImps(JsonNullable<Long> vImps) {
+  public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
 
   public GuaranteedInventoryServiceInventory sovRate(Long sovRate) {
-    this.sovRate = JsonNullable.of(sovRate);
+    this.sovRate = sovRate;
     return this;
   }
 
@@ -235,16 +234,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SOV（1%〜100%）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> SOV (1% to 100%).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getSovRate() {
+  public Long getSovRate() {
     return sovRate;
   }
 
-  public void setSovRate(JsonNullable<Long> sovRate) {
+  public void setSovRate(Long sovRate) {
     this.sovRate = sovRate;
   }
 
   public GuaranteedInventoryServiceInventory slots(Long slots) {
-    this.slots = JsonNullable.of(slots);
+    this.slots = slots;
     return this;
   }
 
@@ -255,16 +254,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 購入枠数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of buying slots.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getSlots() {
+  public Long getSlots() {
     return slots;
   }
 
-  public void setSlots(JsonNullable<Long> slots) {
+  public void setSlots(Long slots) {
     this.slots = slots;
   }
 
   public GuaranteedInventoryServiceInventory campaignGoal(String campaignGoal) {
-    this.campaignGoal = JsonNullable.of(campaignGoal);
+    this.campaignGoal = campaignGoal;
     return this;
   }
 
@@ -275,16 +274,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン目的です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Campaign goal.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCampaignGoal() {
+  public String getCampaignGoal() {
     return campaignGoal;
   }
 
-  public void setCampaignGoal(JsonNullable<String> campaignGoal) {
+  public void setCampaignGoal(String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
 
   public GuaranteedInventoryServiceInventory startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -295,16 +294,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの開始日です。<br> ADD時、このフィールドは必須となります。 </div> <div lang=\"en\"> Start date of campaign. <br> This field is required in ADD operation. </div> Format: yyyyMMdd ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public GuaranteedInventoryServiceInventory endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -315,16 +314,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの終了日です。<br> ADD時、このフィールドは必須となります。<br> </div> <div lang=\"en\"> End date of campaign. <br> This field is required in ADD operation.<br> </div> Format: yyyyMMdd ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public GuaranteedInventoryServiceInventory maxSellableVImps(Long maxSellableVImps) {
-    this.maxSellableVImps = JsonNullable.of(maxSellableVImps);
+    this.maxSellableVImps = maxSellableVImps;
     return this;
   }
 
@@ -335,16 +334,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 販売可能な最大ビューアブルインプレッション数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of viewable impression available for sale. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxSellableVImps() {
+  public Long getMaxSellableVImps() {
     return maxSellableVImps;
   }
 
-  public void setMaxSellableVImps(JsonNullable<Long> maxSellableVImps) {
+  public void setMaxSellableVImps(Long maxSellableVImps) {
     this.maxSellableVImps = maxSellableVImps;
   }
 
   public GuaranteedInventoryServiceInventory maxSellableReach(Long maxSellableReach) {
-    this.maxSellableReach = JsonNullable.of(maxSellableReach);
+    this.maxSellableReach = maxSellableReach;
     return this;
   }
 
@@ -355,16 +354,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 販売可能な最大リーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of reach available for sale.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxSellableReach() {
+  public Long getMaxSellableReach() {
     return maxSellableReach;
   }
 
-  public void setMaxSellableReach(JsonNullable<Long> maxSellableReach) {
+  public void setMaxSellableReach(Long maxSellableReach) {
     this.maxSellableReach = maxSellableReach;
   }
 
   public GuaranteedInventoryServiceInventory maxReservableVImps(Long maxReservableVImps) {
-    this.maxReservableVImps = JsonNullable.of(maxReservableVImps);
+    this.maxReservableVImps = maxReservableVImps;
     return this;
   }
 
@@ -375,16 +374,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 指定された条件で予約可能な最大配信量です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum ad delivery amount that can be reserved under the specified conditions. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxReservableVImps() {
+  public Long getMaxReservableVImps() {
     return maxReservableVImps;
   }
 
-  public void setMaxReservableVImps(JsonNullable<Long> maxReservableVImps) {
+  public void setMaxReservableVImps(Long maxReservableVImps) {
     this.maxReservableVImps = maxReservableVImps;
   }
 
   public GuaranteedInventoryServiceInventory maxReservableSlots(Long maxReservableSlots) {
-    this.maxReservableSlots = JsonNullable.of(maxReservableSlots);
+    this.maxReservableSlots = maxReservableSlots;
     return this;
   }
 
@@ -395,16 +394,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最大予約可能枠数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of reservable slots. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxReservableSlots() {
+  public Long getMaxReservableSlots() {
     return maxReservableSlots;
   }
 
-  public void setMaxReservableSlots(JsonNullable<Long> maxReservableSlots) {
+  public void setMaxReservableSlots(Long maxReservableSlots) {
     this.maxReservableSlots = maxReservableSlots;
   }
 
   public GuaranteedInventoryServiceInventory lowerBudgetLimit(Long lowerBudgetLimit) {
-    this.lowerBudgetLimit = JsonNullable.of(lowerBudgetLimit);
+    this.lowerBudgetLimit = lowerBudgetLimit;
     return this;
   }
 
@@ -415,16 +414,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 予約可能な下限通期予算です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Minimum reservable lifetime budget.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getLowerBudgetLimit() {
+  public Long getLowerBudgetLimit() {
     return lowerBudgetLimit;
   }
 
-  public void setLowerBudgetLimit(JsonNullable<Long> lowerBudgetLimit) {
+  public void setLowerBudgetLimit(Long lowerBudgetLimit) {
     this.lowerBudgetLimit = lowerBudgetLimit;
   }
 
   public GuaranteedInventoryServiceInventory upperBudgetLimit(Long upperBudgetLimit) {
-    this.upperBudgetLimit = JsonNullable.of(upperBudgetLimit);
+    this.upperBudgetLimit = upperBudgetLimit;
     return this;
   }
 
@@ -435,16 +434,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 予約可能な上限通期予算です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum reservable lifetime budget.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getUpperBudgetLimit() {
+  public Long getUpperBudgetLimit() {
     return upperBudgetLimit;
   }
 
-  public void setUpperBudgetLimit(JsonNullable<Long> upperBudgetLimit) {
+  public void setUpperBudgetLimit(Long upperBudgetLimit) {
     this.upperBudgetLimit = upperBudgetLimit;
   }
 
   public GuaranteedInventoryServiceInventory packageId(Long packageId) {
-    this.packageId = JsonNullable.of(packageId);
+    this.packageId = packageId;
     return this;
   }
 
@@ -455,16 +454,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品IDです。<br> ADD時、このフィールドは必須となります。 </div> <div lang=\"en\"> Package ID.<br> In ADD operation, this field will be required. </div> ")
 
 
-  public JsonNullable<Long> getPackageId() {
+  public Long getPackageId() {
     return packageId;
   }
 
-  public void setPackageId(JsonNullable<Long> packageId) {
+  public void setPackageId(Long packageId) {
     this.packageId = packageId;
   }
 
   public GuaranteedInventoryServiceInventory packageName(String packageName) {
-    this.packageName = JsonNullable.of(packageName);
+    this.packageName = packageName;
     return this;
   }
 
@@ -475,16 +474,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Package name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getPackageName() {
+  public String getPackageName() {
     return packageName;
   }
 
-  public void setPackageName(JsonNullable<String> packageName) {
+  public void setPackageName(String packageName) {
     this.packageName = packageName;
   }
 
   public GuaranteedInventoryServiceInventory packageHistoryId(Long packageHistoryId) {
-    this.packageHistoryId = JsonNullable.of(packageHistoryId);
+    this.packageHistoryId = packageHistoryId;
     return this;
   }
 
@@ -495,24 +494,24 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品履歴IDです。<br> ADD時、このフィールドは必須となります。 </div> <div lang=\"en\"> Package history ID.<br> In ADD operation, this field will be required. </div> ")
 
 
-  public JsonNullable<Long> getPackageHistoryId() {
+  public Long getPackageHistoryId() {
     return packageHistoryId;
   }
 
-  public void setPackageHistoryId(JsonNullable<Long> packageHistoryId) {
+  public void setPackageHistoryId(Long packageHistoryId) {
     this.packageHistoryId = packageHistoryId;
   }
 
   public GuaranteedInventoryServiceInventory adCategoryIds(List<Long> adCategoryIds) {
-    this.adCategoryIds = JsonNullable.of(adCategoryIds);
+    this.adCategoryIds = adCategoryIds;
     return this;
   }
 
   public GuaranteedInventoryServiceInventory addAdCategoryIdsItem(Long adCategoryIdsItem) {
-    if (this.adCategoryIds == null || !this.adCategoryIds.isPresent()) {
-      this.adCategoryIds = JsonNullable.of(new ArrayList<>());
+    if (this.adCategoryIds == null) {
+      this.adCategoryIds = new ArrayList<>();
     }
-    this.adCategoryIds.get().add(adCategoryIdsItem);
+    this.adCategoryIds.add(adCategoryIdsItem);
     return this;
   }
 
@@ -523,16 +522,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告カテゴリーIDです。<br> 広告カテゴリーは、配信する広告内容に該当するものを正確に指定して下さい。内容に応じて広告掲載量が変わるため、正確なシミュレーション結果の算出に必要です。<br> 詳細は<a href=\"https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan=ja&aid=50308\" target=\"_blank\">ヘルプ</a>を参照してください。<br> なお、ここで指定した広告カテゴリーと異なる広告が入稿された場合は、入稿した広告内容の修正が必要な旨をメールでご連絡します。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Ad category ID.<br> To get an accurate simulated result, specify the restricted contents correctly. The ad volume depends on the contents.<br> <a href=\"https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan=en&aid=28259\" target=\"_blank\">Learn more</a><br> If you add ads that have a content different from the one you specified, you will receive an email to fix them.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<List<Long>> getAdCategoryIds() {
+  public List<Long> getAdCategoryIds() {
     return adCategoryIds;
   }
 
-  public void setAdCategoryIds(JsonNullable<List<Long>> adCategoryIds) {
+  public void setAdCategoryIds(List<Long> adCategoryIds) {
     this.adCategoryIds = adCategoryIds;
   }
 
   public GuaranteedInventoryServiceInventory promotionUrl(String promotionUrl) {
-    this.promotionUrl = JsonNullable.of(promotionUrl);
+    this.promotionUrl = promotionUrl;
     return this;
   }
 
@@ -543,16 +542,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\">表示URLです。<br> ADD時、このフィールドは省略可能となります。</div> <div lang=\"en\">Promotion url.<br> This field is optional in ADD operation.</div> ")
 
 
-  public JsonNullable<String> getPromotionUrl() {
+  public String getPromotionUrl() {
     return promotionUrl;
   }
 
-  public void setPromotionUrl(JsonNullable<String> promotionUrl) {
+  public void setPromotionUrl(String promotionUrl) {
     this.promotionUrl = promotionUrl;
   }
 
   public GuaranteedInventoryServiceInventory minimumPurchaseVImps(Long minimumPurchaseVImps) {
-    this.minimumPurchaseVImps = JsonNullable.of(minimumPurchaseVImps);
+    this.minimumPurchaseVImps = minimumPurchaseVImps;
     return this;
   }
 
@@ -563,16 +562,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\">最低購入ビューアブルインプレッション数を表します。</div> <div lang=\"en\">Minimum purchase viewable impression.</div> ")
 
 
-  public JsonNullable<Long> getMinimumPurchaseVImps() {
+  public Long getMinimumPurchaseVImps() {
     return minimumPurchaseVImps;
   }
 
-  public void setMinimumPurchaseVImps(JsonNullable<Long> minimumPurchaseVImps) {
+  public void setMinimumPurchaseVImps(Long minimumPurchaseVImps) {
     this.minimumPurchaseVImps = minimumPurchaseVImps;
   }
 
   public GuaranteedInventoryServiceInventory maximumPurchaseVImps(Long maximumPurchaseVImps) {
-    this.maximumPurchaseVImps = JsonNullable.of(maximumPurchaseVImps);
+    this.maximumPurchaseVImps = maximumPurchaseVImps;
     return this;
   }
 
@@ -583,16 +582,16 @@ public class GuaranteedInventoryServiceInventory   {
   @ApiModelProperty(value = "<div lang=\"ja\">最大購入ビューアブルインプレッション数を表します。</div> <div lang=\"en\">Maximum purchase viewable impression.</div> ")
 
 
-  public JsonNullable<Long> getMaximumPurchaseVImps() {
+  public Long getMaximumPurchaseVImps() {
     return maximumPurchaseVImps;
   }
 
-  public void setMaximumPurchaseVImps(JsonNullable<Long> maximumPurchaseVImps) {
+  public void setMaximumPurchaseVImps(Long maximumPurchaseVImps) {
     this.maximumPurchaseVImps = maximumPurchaseVImps;
   }
 
   public GuaranteedInventoryServiceInventory inventoryUnit(GuaranteedInventoryServiceInventoryUnit inventoryUnit) {
-    this.inventoryUnit = JsonNullable.of(inventoryUnit);
+    this.inventoryUnit = inventoryUnit;
     return this;
   }
 
@@ -604,16 +603,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceInventoryUnit> getInventoryUnit() {
+  public GuaranteedInventoryServiceInventoryUnit getInventoryUnit() {
     return inventoryUnit;
   }
 
-  public void setInventoryUnit(JsonNullable<GuaranteedInventoryServiceInventoryUnit> inventoryUnit) {
+  public void setInventoryUnit(GuaranteedInventoryServiceInventoryUnit inventoryUnit) {
     this.inventoryUnit = inventoryUnit;
   }
 
   public GuaranteedInventoryServiceInventory campaignBiddingStrategyType(GuaranteedInventoryServiceCampaignBiddingStrategyType campaignBiddingStrategyType) {
-    this.campaignBiddingStrategyType = JsonNullable.of(campaignBiddingStrategyType);
+    this.campaignBiddingStrategyType = campaignBiddingStrategyType;
     return this;
   }
 
@@ -625,16 +624,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceCampaignBiddingStrategyType> getCampaignBiddingStrategyType() {
+  public GuaranteedInventoryServiceCampaignBiddingStrategyType getCampaignBiddingStrategyType() {
     return campaignBiddingStrategyType;
   }
 
-  public void setCampaignBiddingStrategyType(JsonNullable<GuaranteedInventoryServiceCampaignBiddingStrategyType> campaignBiddingStrategyType) {
+  public void setCampaignBiddingStrategyType(GuaranteedInventoryServiceCampaignBiddingStrategyType campaignBiddingStrategyType) {
     this.campaignBiddingStrategyType = campaignBiddingStrategyType;
   }
 
   public GuaranteedInventoryServiceInventory viewableFrequencyCap(GuaranteedInventoryServiceViewableFrequencyCap viewableFrequencyCap) {
-    this.viewableFrequencyCap = JsonNullable.of(viewableFrequencyCap);
+    this.viewableFrequencyCap = viewableFrequencyCap;
     return this;
   }
 
@@ -646,16 +645,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceViewableFrequencyCap> getViewableFrequencyCap() {
+  public GuaranteedInventoryServiceViewableFrequencyCap getViewableFrequencyCap() {
     return viewableFrequencyCap;
   }
 
-  public void setViewableFrequencyCap(JsonNullable<GuaranteedInventoryServiceViewableFrequencyCap> viewableFrequencyCap) {
+  public void setViewableFrequencyCap(GuaranteedInventoryServiceViewableFrequencyCap viewableFrequencyCap) {
     this.viewableFrequencyCap = viewableFrequencyCap;
   }
 
   public GuaranteedInventoryServiceInventory reservationStatus(GuaranteedInventoryServiceReservationStatus reservationStatus) {
-    this.reservationStatus = JsonNullable.of(reservationStatus);
+    this.reservationStatus = reservationStatus;
     return this;
   }
 
@@ -667,16 +666,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceReservationStatus> getReservationStatus() {
+  public GuaranteedInventoryServiceReservationStatus getReservationStatus() {
     return reservationStatus;
   }
 
-  public void setReservationStatus(JsonNullable<GuaranteedInventoryServiceReservationStatus> reservationStatus) {
+  public void setReservationStatus(GuaranteedInventoryServiceReservationStatus reservationStatus) {
     this.reservationStatus = reservationStatus;
   }
 
   public GuaranteedInventoryServiceInventory unreservableReason(GuaranteedInventoryServiceUnreservableReason unreservableReason) {
-    this.unreservableReason = JsonNullable.of(unreservableReason);
+    this.unreservableReason = unreservableReason;
     return this;
   }
 
@@ -688,24 +687,24 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceUnreservableReason> getUnreservableReason() {
+  public GuaranteedInventoryServiceUnreservableReason getUnreservableReason() {
     return unreservableReason;
   }
 
-  public void setUnreservableReason(JsonNullable<GuaranteedInventoryServiceUnreservableReason> unreservableReason) {
+  public void setUnreservableReason(GuaranteedInventoryServiceUnreservableReason unreservableReason) {
     this.unreservableReason = unreservableReason;
   }
 
   public GuaranteedInventoryServiceInventory adRequirements(List<GuaranteedInventoryServiceAdRequirement> adRequirements) {
-    this.adRequirements = JsonNullable.of(adRequirements);
+    this.adRequirements = adRequirements;
     return this;
   }
 
   public GuaranteedInventoryServiceInventory addAdRequirementsItem(GuaranteedInventoryServiceAdRequirement adRequirementsItem) {
-    if (this.adRequirements == null || !this.adRequirements.isPresent()) {
-      this.adRequirements = JsonNullable.of(new ArrayList<>());
+    if (this.adRequirements == null) {
+      this.adRequirements = new ArrayList<>();
     }
-    this.adRequirements.get().add(adRequirementsItem);
+    this.adRequirements.add(adRequirementsItem);
     return this;
   }
 
@@ -717,16 +716,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceAdRequirement>> getAdRequirements() {
+  public List<GuaranteedInventoryServiceAdRequirement> getAdRequirements() {
     return adRequirements;
   }
 
-  public void setAdRequirements(JsonNullable<List<GuaranteedInventoryServiceAdRequirement>> adRequirements) {
+  public void setAdRequirements(List<GuaranteedInventoryServiceAdRequirement> adRequirements) {
     this.adRequirements = adRequirements;
   }
 
   public GuaranteedInventoryServiceInventory inventoryDetailStatus(GuaranteedInventoryServiceInventoryDetailStatus inventoryDetailStatus) {
-    this.inventoryDetailStatus = JsonNullable.of(inventoryDetailStatus);
+    this.inventoryDetailStatus = inventoryDetailStatus;
     return this;
   }
 
@@ -738,16 +737,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceInventoryDetailStatus> getInventoryDetailStatus() {
+  public GuaranteedInventoryServiceInventoryDetailStatus getInventoryDetailStatus() {
     return inventoryDetailStatus;
   }
 
-  public void setInventoryDetailStatus(JsonNullable<GuaranteedInventoryServiceInventoryDetailStatus> inventoryDetailStatus) {
+  public void setInventoryDetailStatus(GuaranteedInventoryServiceInventoryDetailStatus inventoryDetailStatus) {
     this.inventoryDetailStatus = inventoryDetailStatus;
   }
 
   public GuaranteedInventoryServiceInventory actionAfterVideoAdTap(GuaranteedInventoryServiceActionAfterVideoAdTap actionAfterVideoAdTap) {
-    this.actionAfterVideoAdTap = JsonNullable.of(actionAfterVideoAdTap);
+    this.actionAfterVideoAdTap = actionAfterVideoAdTap;
     return this;
   }
 
@@ -759,16 +758,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceActionAfterVideoAdTap> getActionAfterVideoAdTap() {
+  public GuaranteedInventoryServiceActionAfterVideoAdTap getActionAfterVideoAdTap() {
     return actionAfterVideoAdTap;
   }
 
-  public void setActionAfterVideoAdTap(JsonNullable<GuaranteedInventoryServiceActionAfterVideoAdTap> actionAfterVideoAdTap) {
+  public void setActionAfterVideoAdTap(GuaranteedInventoryServiceActionAfterVideoAdTap actionAfterVideoAdTap) {
     this.actionAfterVideoAdTap = actionAfterVideoAdTap;
   }
 
   public GuaranteedInventoryServiceInventory priceType(GuaranteedInventoryServicePriceType priceType) {
-    this.priceType = JsonNullable.of(priceType);
+    this.priceType = priceType;
     return this;
   }
 
@@ -780,16 +779,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServicePriceType> getPriceType() {
+  public GuaranteedInventoryServicePriceType getPriceType() {
     return priceType;
   }
 
-  public void setPriceType(JsonNullable<GuaranteedInventoryServicePriceType> priceType) {
+  public void setPriceType(GuaranteedInventoryServicePriceType priceType) {
     this.priceType = priceType;
   }
 
   public GuaranteedInventoryServiceInventory placementMonopolyFlg(GuaranteedInventoryServicePlacementMonopolyFlg placementMonopolyFlg) {
-    this.placementMonopolyFlg = JsonNullable.of(placementMonopolyFlg);
+    this.placementMonopolyFlg = placementMonopolyFlg;
     return this;
   }
 
@@ -801,24 +800,24 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServicePlacementMonopolyFlg> getPlacementMonopolyFlg() {
+  public GuaranteedInventoryServicePlacementMonopolyFlg getPlacementMonopolyFlg() {
     return placementMonopolyFlg;
   }
 
-  public void setPlacementMonopolyFlg(JsonNullable<GuaranteedInventoryServicePlacementMonopolyFlg> placementMonopolyFlg) {
+  public void setPlacementMonopolyFlg(GuaranteedInventoryServicePlacementMonopolyFlg placementMonopolyFlg) {
     this.placementMonopolyFlg = placementMonopolyFlg;
   }
 
   public GuaranteedInventoryServiceInventory predictionResults(List<GuaranteedInventoryServicePredictionResult> predictionResults) {
-    this.predictionResults = JsonNullable.of(predictionResults);
+    this.predictionResults = predictionResults;
     return this;
   }
 
   public GuaranteedInventoryServiceInventory addPredictionResultsItem(GuaranteedInventoryServicePredictionResult predictionResultsItem) {
-    if (this.predictionResults == null || !this.predictionResults.isPresent()) {
-      this.predictionResults = JsonNullable.of(new ArrayList<>());
+    if (this.predictionResults == null) {
+      this.predictionResults = new ArrayList<>();
     }
-    this.predictionResults.get().add(predictionResultsItem);
+    this.predictionResults.add(predictionResultsItem);
     return this;
   }
 
@@ -830,16 +829,16 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServicePredictionResult>> getPredictionResults() {
+  public List<GuaranteedInventoryServicePredictionResult> getPredictionResults() {
     return predictionResults;
   }
 
-  public void setPredictionResults(JsonNullable<List<GuaranteedInventoryServicePredictionResult>> predictionResults) {
+  public void setPredictionResults(List<GuaranteedInventoryServicePredictionResult> predictionResults) {
     this.predictionResults = predictionResults;
   }
 
   public GuaranteedInventoryServiceInventory requestedConditionPredictionResult(GuaranteedInventoryServicePredictionResult requestedConditionPredictionResult) {
-    this.requestedConditionPredictionResult = JsonNullable.of(requestedConditionPredictionResult);
+    this.requestedConditionPredictionResult = requestedConditionPredictionResult;
     return this;
   }
 
@@ -851,24 +850,24 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServicePredictionResult> getRequestedConditionPredictionResult() {
+  public GuaranteedInventoryServicePredictionResult getRequestedConditionPredictionResult() {
     return requestedConditionPredictionResult;
   }
 
-  public void setRequestedConditionPredictionResult(JsonNullable<GuaranteedInventoryServicePredictionResult> requestedConditionPredictionResult) {
+  public void setRequestedConditionPredictionResult(GuaranteedInventoryServicePredictionResult requestedConditionPredictionResult) {
     this.requestedConditionPredictionResult = requestedConditionPredictionResult;
   }
 
   public GuaranteedInventoryServiceInventory inventoryResult(List<GuaranteedInventoryServiceInventoryResult> inventoryResult) {
-    this.inventoryResult = JsonNullable.of(inventoryResult);
+    this.inventoryResult = inventoryResult;
     return this;
   }
 
   public GuaranteedInventoryServiceInventory addInventoryResultItem(GuaranteedInventoryServiceInventoryResult inventoryResultItem) {
-    if (this.inventoryResult == null || !this.inventoryResult.isPresent()) {
-      this.inventoryResult = JsonNullable.of(new ArrayList<>());
+    if (this.inventoryResult == null) {
+      this.inventoryResult = new ArrayList<>();
     }
-    this.inventoryResult.get().add(inventoryResultItem);
+    this.inventoryResult.add(inventoryResultItem);
     return this;
   }
 
@@ -880,24 +879,24 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceInventoryResult>> getInventoryResult() {
+  public List<GuaranteedInventoryServiceInventoryResult> getInventoryResult() {
     return inventoryResult;
   }
 
-  public void setInventoryResult(JsonNullable<List<GuaranteedInventoryServiceInventoryResult>> inventoryResult) {
+  public void setInventoryResult(List<GuaranteedInventoryServiceInventoryResult> inventoryResult) {
     this.inventoryResult = inventoryResult;
   }
 
   public GuaranteedInventoryServiceInventory targets(List<GuaranteedInventoryServiceAdGroupTarget> targets) {
-    this.targets = JsonNullable.of(targets);
+    this.targets = targets;
     return this;
   }
 
   public GuaranteedInventoryServiceInventory addTargetsItem(GuaranteedInventoryServiceAdGroupTarget targetsItem) {
-    if (this.targets == null || !this.targets.isPresent()) {
-      this.targets = JsonNullable.of(new ArrayList<>());
+    if (this.targets == null) {
+      this.targets = new ArrayList<>();
     }
-    this.targets.get().add(targetsItem);
+    this.targets.add(targetsItem);
     return this;
   }
 
@@ -909,17 +908,17 @@ public class GuaranteedInventoryServiceInventory   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceAdGroupTarget>> getTargets() {
+  public List<GuaranteedInventoryServiceAdGroupTarget> getTargets() {
     return targets;
   }
 
-  public void setTargets(JsonNullable<List<GuaranteedInventoryServiceAdGroupTarget>> targets) {
+  public void setTargets(List<GuaranteedInventoryServiceAdGroupTarget> targets) {
     this.targets = targets;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -1019,7 +1018,7 @@ public class GuaranteedInventoryServiceInventory   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

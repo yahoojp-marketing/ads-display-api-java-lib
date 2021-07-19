@@ -10,7 +10,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceCrossCampaignRe
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceFrequencyReportCondition;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceReachReportCondition;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,25 +17,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceReportTypeConditionオブジェクトは、各レポートタイプごとのレポート作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceReportTypeCondition describes the condition to create each report type.   This field is optional in ADD operation, and will be ignored in REMOVE operation.  &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceReportTypeConditionオブジェクトは、各レポートタイプごとのレポート作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\">   ReportDefinitionServiceReportTypeCondition describes the condition to create each report type.   This field is optional in ADD operation, and will be ignored in REMOVE operation.  </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceReportTypeCondition   {
   @JsonProperty("conversionPathReportCondition")
-  private JsonNullable<ReportDefinitionServiceConversionPathReportCondition> conversionPathReportCondition = JsonNullable.undefined();
+  private ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition = null;
 
   @JsonProperty("crossCampaignReachesReportCondition")
-  private JsonNullable<ReportDefinitionServiceCrossCampaignReachesReportCondition> crossCampaignReachesReportCondition = JsonNullable.undefined();
+  private ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition = null;
 
   @JsonProperty("frequencyReportCondition")
-  private JsonNullable<ReportDefinitionServiceFrequencyReportCondition> frequencyReportCondition = JsonNullable.undefined();
+  private ReportDefinitionServiceFrequencyReportCondition frequencyReportCondition = null;
 
   @JsonProperty("reachReportCondition")
-  private JsonNullable<ReportDefinitionServiceReachReportCondition> reachReportCondition = JsonNullable.undefined();
+  private ReportDefinitionServiceReachReportCondition reachReportCondition = null;
 
   @JsonProperty("reportType")
-  private JsonNullable<ReportDefinitionServiceType> reportType = JsonNullable.undefined();
+  private ReportDefinitionServiceType reportType = null;
 
   public ReportDefinitionServiceReportTypeCondition conversionPathReportCondition(ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
-    this.conversionPathReportCondition = JsonNullable.of(conversionPathReportCondition);
+    this.conversionPathReportCondition = conversionPathReportCondition;
     return this;
   }
 
@@ -48,16 +47,16 @@ public class ReportDefinitionServiceReportTypeCondition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceConversionPathReportCondition> getConversionPathReportCondition() {
+  public ReportDefinitionServiceConversionPathReportCondition getConversionPathReportCondition() {
     return conversionPathReportCondition;
   }
 
-  public void setConversionPathReportCondition(JsonNullable<ReportDefinitionServiceConversionPathReportCondition> conversionPathReportCondition) {
+  public void setConversionPathReportCondition(ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
     this.conversionPathReportCondition = conversionPathReportCondition;
   }
 
   public ReportDefinitionServiceReportTypeCondition crossCampaignReachesReportCondition(ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition) {
-    this.crossCampaignReachesReportCondition = JsonNullable.of(crossCampaignReachesReportCondition);
+    this.crossCampaignReachesReportCondition = crossCampaignReachesReportCondition;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class ReportDefinitionServiceReportTypeCondition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceCrossCampaignReachesReportCondition> getCrossCampaignReachesReportCondition() {
+  public ReportDefinitionServiceCrossCampaignReachesReportCondition getCrossCampaignReachesReportCondition() {
     return crossCampaignReachesReportCondition;
   }
 
-  public void setCrossCampaignReachesReportCondition(JsonNullable<ReportDefinitionServiceCrossCampaignReachesReportCondition> crossCampaignReachesReportCondition) {
+  public void setCrossCampaignReachesReportCondition(ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition) {
     this.crossCampaignReachesReportCondition = crossCampaignReachesReportCondition;
   }
 
   public ReportDefinitionServiceReportTypeCondition frequencyReportCondition(ReportDefinitionServiceFrequencyReportCondition frequencyReportCondition) {
-    this.frequencyReportCondition = JsonNullable.of(frequencyReportCondition);
+    this.frequencyReportCondition = frequencyReportCondition;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class ReportDefinitionServiceReportTypeCondition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceFrequencyReportCondition> getFrequencyReportCondition() {
+  public ReportDefinitionServiceFrequencyReportCondition getFrequencyReportCondition() {
     return frequencyReportCondition;
   }
 
-  public void setFrequencyReportCondition(JsonNullable<ReportDefinitionServiceFrequencyReportCondition> frequencyReportCondition) {
+  public void setFrequencyReportCondition(ReportDefinitionServiceFrequencyReportCondition frequencyReportCondition) {
     this.frequencyReportCondition = frequencyReportCondition;
   }
 
   public ReportDefinitionServiceReportTypeCondition reachReportCondition(ReportDefinitionServiceReachReportCondition reachReportCondition) {
-    this.reachReportCondition = JsonNullable.of(reachReportCondition);
+    this.reachReportCondition = reachReportCondition;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class ReportDefinitionServiceReportTypeCondition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReachReportCondition> getReachReportCondition() {
+  public ReportDefinitionServiceReachReportCondition getReachReportCondition() {
     return reachReportCondition;
   }
 
-  public void setReachReportCondition(JsonNullable<ReportDefinitionServiceReachReportCondition> reachReportCondition) {
+  public void setReachReportCondition(ReportDefinitionServiceReachReportCondition reachReportCondition) {
     this.reachReportCondition = reachReportCondition;
   }
 
   public ReportDefinitionServiceReportTypeCondition reportType(ReportDefinitionServiceType reportType) {
-    this.reportType = JsonNullable.of(reportType);
+    this.reportType = reportType;
     return this;
   }
 
@@ -132,17 +131,17 @@ public class ReportDefinitionServiceReportTypeCondition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceType> getReportType() {
+  public ReportDefinitionServiceType getReportType() {
     return reportType;
   }
 
-  public void setReportType(JsonNullable<ReportDefinitionServiceType> reportType) {
+  public void setReportType(ReportDefinitionServiceType reportType) {
     this.reportType = reportType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -180,7 +179,7 @@ public class ReportDefinitionServiceReportTypeCondition   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

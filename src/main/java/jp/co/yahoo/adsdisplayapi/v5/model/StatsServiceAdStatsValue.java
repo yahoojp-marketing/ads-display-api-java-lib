@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.Stats;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,31 +13,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAdStatsValueオブジェクトは、広告の統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAdStatsValue object contains Ad stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceAdStatsValueオブジェクトは、広告の統計情報を保持します。</div> <div lang=\"en\">StatsServiceAdStatsValue object contains Ad stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceAdStatsValue   {
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("adId")
-  private JsonNullable<Long> adId = JsonNullable.undefined();
+  private Long adId = null;
 
   @JsonProperty("adName")
-  private JsonNullable<String> adName = JsonNullable.undefined();
+  private String adName = null;
 
   @JsonProperty("stats")
-  private JsonNullable<Stats> stats = JsonNullable.undefined();
+  private Stats stats = null;
 
   public StatsServiceAdStatsValue campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -49,16 +48,16 @@ public class StatsServiceAdStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンID</div> <div lang=\"en\">Campaign ID</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public StatsServiceAdStatsValue campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class StatsServiceAdStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名</div> <div lang=\"en\">Campaign name</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public StatsServiceAdStatsValue adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -89,16 +88,16 @@ public class StatsServiceAdStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループID</div> <div lang=\"en\">Ad group ID</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public StatsServiceAdStatsValue adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -109,16 +108,16 @@ public class StatsServiceAdStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループ名</div> <div lang=\"en\">Ad group name</div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public StatsServiceAdStatsValue adId(Long adId) {
-    this.adId = JsonNullable.of(adId);
+    this.adId = adId;
     return this;
   }
 
@@ -129,16 +128,16 @@ public class StatsServiceAdStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告ID</div> <div lang=\"en\">Ad ID</div> ")
 
 
-  public JsonNullable<Long> getAdId() {
+  public Long getAdId() {
     return adId;
   }
 
-  public void setAdId(JsonNullable<Long> adId) {
+  public void setAdId(Long adId) {
     this.adId = adId;
   }
 
   public StatsServiceAdStatsValue adName(String adName) {
-    this.adName = JsonNullable.of(adName);
+    this.adName = adName;
     return this;
   }
 
@@ -149,16 +148,16 @@ public class StatsServiceAdStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告名</div> <div lang=\"en\">Ad name</div> ")
 
 
-  public JsonNullable<String> getAdName() {
+  public String getAdName() {
     return adName;
   }
 
-  public void setAdName(JsonNullable<String> adName) {
+  public void setAdName(String adName) {
     this.adName = adName;
   }
 
   public StatsServiceAdStatsValue stats(Stats stats) {
-    this.stats = JsonNullable.of(stats);
+    this.stats = stats;
     return this;
   }
 
@@ -170,17 +169,17 @@ public class StatsServiceAdStatsValue   {
 
   @Valid
 
-  public JsonNullable<Stats> getStats() {
+  public Stats getStats() {
     return stats;
   }
 
-  public void setStats(JsonNullable<Stats> stats) {
+  public void setStats(Stats stats) {
     this.stats = stats;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -222,7 +221,7 @@ public class StatsServiceAdStatsValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

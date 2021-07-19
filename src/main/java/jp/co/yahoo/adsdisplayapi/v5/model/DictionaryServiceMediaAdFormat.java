@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,61 +12,61 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceMediaAdFormatオブジェクトは、メディアフォーマットの情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceMediaAdFormat object contains the information of media format.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceMediaAdFormatオブジェクトは、メディアフォーマットの情報を保持します。</div> <div lang=\"en\">DictionaryServiceMediaAdFormat object contains the information of media format.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceMediaAdFormat   {
   @JsonProperty("adFormat")
-  private JsonNullable<String> adFormat = JsonNullable.undefined();
+  private String adFormat = null;
 
   @JsonProperty("aspect")
-  private JsonNullable<Boolean> aspect = JsonNullable.undefined();
+  private Boolean aspect = null;
 
   @JsonProperty("aspectHeight")
-  private JsonNullable<Long> aspectHeight = JsonNullable.undefined();
+  private Long aspectHeight = null;
 
   @JsonProperty("aspectRatio")
-  private JsonNullable<String> aspectRatio = JsonNullable.undefined();
+  private String aspectRatio = null;
 
   @JsonProperty("aspectWidth")
-  private JsonNullable<Long> aspectWidth = JsonNullable.undefined();
+  private Long aspectWidth = null;
 
   @JsonProperty("campaignBanner")
-  private JsonNullable<Boolean> campaignBanner = JsonNullable.undefined();
+  private Boolean campaignBanner = null;
 
   @JsonProperty("height")
-  private JsonNullable<Long> height = JsonNullable.undefined();
+  private Long height = null;
 
   @JsonProperty("logo")
-  private JsonNullable<Boolean> logo = JsonNullable.undefined();
+  private Boolean logo = null;
 
   @JsonProperty("maxHeight")
-  private JsonNullable<Long> maxHeight = JsonNullable.undefined();
+  private Long maxHeight = null;
 
   @JsonProperty("maxWidth")
-  private JsonNullable<Long> maxWidth = JsonNullable.undefined();
+  private Long maxWidth = null;
 
   @JsonProperty("size")
-  private JsonNullable<Long> size = JsonNullable.undefined();
+  private Long size = null;
 
   @JsonProperty("sizeTo")
-  private JsonNullable<Long> sizeTo = JsonNullable.undefined();
+  private Long sizeTo = null;
 
   @JsonProperty("staticImage")
-  private JsonNullable<Boolean> staticImage = JsonNullable.undefined();
+  private Boolean staticImage = null;
 
   @JsonProperty("thumbnail")
-  private JsonNullable<Boolean> thumbnail = JsonNullable.undefined();
+  private Boolean thumbnail = null;
 
   @JsonProperty("transparent")
-  private JsonNullable<Boolean> transparent = JsonNullable.undefined();
+  private Boolean transparent = null;
 
   @JsonProperty("width")
-  private JsonNullable<Long> width = JsonNullable.undefined();
+  private Long width = null;
 
   @JsonProperty("richFormat")
-  private JsonNullable<Boolean> richFormat = JsonNullable.undefined();
+  private Boolean richFormat = null;
 
   public DictionaryServiceMediaAdFormat adFormat(String adFormat) {
-    this.adFormat = JsonNullable.of(adFormat);
+    this.adFormat = adFormat;
     return this;
   }
 
@@ -78,16 +77,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ディスプレイ（画像）広告のフォーマットです。<br> ※YJ_1350_760, YJ_450_150は予約型広告専用のadFormatとなります。 </div> <div lang=\"en\"> Format of display (image) ads.<br> *YJ_1350_760 and YJ_450_150 are adFormat exclusive for Guaranteed ads. </div> ")
 
 
-  public JsonNullable<String> getAdFormat() {
+  public String getAdFormat() {
     return adFormat;
   }
 
-  public void setAdFormat(JsonNullable<String> adFormat) {
+  public void setAdFormat(String adFormat) {
     this.adFormat = adFormat;
   }
 
   public DictionaryServiceMediaAdFormat aspect(Boolean aspect) {
-    this.aspect = JsonNullable.of(aspect);
+    this.aspect = aspect;
     return this;
   }
 
@@ -98,16 +97,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">アスペクト比対応かどうかを示します。</div> <div lang=\"en\">This field indicates whether the aspect ratio is supported.</div> ")
 
 
-  public JsonNullable<Boolean> getAspect() {
+  public Boolean getAspect() {
     return aspect;
   }
 
-  public void setAspect(JsonNullable<Boolean> aspect) {
+  public void setAspect(Boolean aspect) {
     this.aspect = aspect;
   }
 
   public DictionaryServiceMediaAdFormat aspectHeight(Long aspectHeight) {
-    this.aspectHeight = JsonNullable.of(aspectHeight);
+    this.aspectHeight = aspectHeight;
     return this;
   }
 
@@ -118,16 +117,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像アスペクト比：高さ [ratio]です。</div> <div lang=\"en\">Image aspect ratio: height [ratio]</div> ")
 
 
-  public JsonNullable<Long> getAspectHeight() {
+  public Long getAspectHeight() {
     return aspectHeight;
   }
 
-  public void setAspectHeight(JsonNullable<Long> aspectHeight) {
+  public void setAspectHeight(Long aspectHeight) {
     this.aspectHeight = aspectHeight;
   }
 
   public DictionaryServiceMediaAdFormat aspectRatio(String aspectRatio) {
-    this.aspectRatio = JsonNullable.of(aspectRatio);
+    this.aspectRatio = aspectRatio;
     return this;
   }
 
@@ -138,16 +137,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">アスペクト比です。</div> <div lang=\"en\">Aspect ratio.</div> ")
 
 
-  public JsonNullable<String> getAspectRatio() {
+  public String getAspectRatio() {
     return aspectRatio;
   }
 
-  public void setAspectRatio(JsonNullable<String> aspectRatio) {
+  public void setAspectRatio(String aspectRatio) {
     this.aspectRatio = aspectRatio;
   }
 
   public DictionaryServiceMediaAdFormat aspectWidth(Long aspectWidth) {
-    this.aspectWidth = JsonNullable.of(aspectWidth);
+    this.aspectWidth = aspectWidth;
     return this;
   }
 
@@ -158,16 +157,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像アスペクト比：幅 [ratio]です。</div> <div lang=\"en\">Image aspect ratio: width [ratio]</div> ")
 
 
-  public JsonNullable<Long> getAspectWidth() {
+  public Long getAspectWidth() {
     return aspectWidth;
   }
 
-  public void setAspectWidth(JsonNullable<Long> aspectWidth) {
+  public void setAspectWidth(Long aspectWidth) {
     this.aspectWidth = aspectWidth;
   }
 
   public DictionaryServiceMediaAdFormat campaignBanner(Boolean campaignBanner) {
-    this.campaignBanner = JsonNullable.of(campaignBanner);
+    this.campaignBanner = campaignBanner;
     return this;
   }
 
@@ -178,16 +177,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンバナー画像である/キャンペーンバナー画像ではないことを示します。</div> <div lang=\"en\">This field indicates whether it is a campaign banner image or not.</div> ")
 
 
-  public JsonNullable<Boolean> getCampaignBanner() {
+  public Boolean getCampaignBanner() {
     return campaignBanner;
   }
 
-  public void setCampaignBanner(JsonNullable<Boolean> campaignBanner) {
+  public void setCampaignBanner(Boolean campaignBanner) {
     this.campaignBanner = campaignBanner;
   }
 
   public DictionaryServiceMediaAdFormat height(Long height) {
-    this.height = JsonNullable.of(height);
+    this.height = height;
     return this;
   }
 
@@ -198,16 +197,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">最小画像サイズ：高さ [pixel]です。</div> <div lang=\"en\">Minimum image size: height [pixel]</div> ")
 
 
-  public JsonNullable<Long> getHeight() {
+  public Long getHeight() {
     return height;
   }
 
-  public void setHeight(JsonNullable<Long> height) {
+  public void setHeight(Long height) {
     this.height = height;
   }
 
   public DictionaryServiceMediaAdFormat logo(Boolean logo) {
-    this.logo = JsonNullable.of(logo);
+    this.logo = logo;
     return this;
   }
 
@@ -218,16 +217,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">ロゴ画像である/ロゴ画像ではないことを示します。</div> <div lang=\"en\">This field indicates whether it is a logo image or not.</div> ")
 
 
-  public JsonNullable<Boolean> getLogo() {
+  public Boolean getLogo() {
     return logo;
   }
 
-  public void setLogo(JsonNullable<Boolean> logo) {
+  public void setLogo(Boolean logo) {
     this.logo = logo;
   }
 
   public DictionaryServiceMediaAdFormat maxHeight(Long maxHeight) {
-    this.maxHeight = JsonNullable.of(maxHeight);
+    this.maxHeight = maxHeight;
     return this;
   }
 
@@ -238,16 +237,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">サイズ上限：高さ [pixel]です。</div> <div lang=\"en\">Size limit: height [pixel]</div> ")
 
 
-  public JsonNullable<Long> getMaxHeight() {
+  public Long getMaxHeight() {
     return maxHeight;
   }
 
-  public void setMaxHeight(JsonNullable<Long> maxHeight) {
+  public void setMaxHeight(Long maxHeight) {
     this.maxHeight = maxHeight;
   }
 
   public DictionaryServiceMediaAdFormat maxWidth(Long maxWidth) {
-    this.maxWidth = JsonNullable.of(maxWidth);
+    this.maxWidth = maxWidth;
     return this;
   }
 
@@ -258,16 +257,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">サイズ上限：幅 [pixel]です。</div> <div lang=\"en\">Size limit: width [pixel]</div> ")
 
 
-  public JsonNullable<Long> getMaxWidth() {
+  public Long getMaxWidth() {
     return maxWidth;
   }
 
-  public void setMaxWidth(JsonNullable<Long> maxWidth) {
+  public void setMaxWidth(Long maxWidth) {
     this.maxWidth = maxWidth;
   }
 
   public DictionaryServiceMediaAdFormat size(Long size) {
-    this.size = JsonNullable.of(size);
+    this.size = size;
     return this;
   }
 
@@ -278,16 +277,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像の最大容量：[byte]です。</div> <div lang=\"en\">Maximum image capacity: [byte]</div> ")
 
 
-  public JsonNullable<Long> getSize() {
+  public Long getSize() {
     return size;
   }
 
-  public void setSize(JsonNullable<Long> size) {
+  public void setSize(Long size) {
     this.size = size;
   }
 
   public DictionaryServiceMediaAdFormat sizeTo(Long sizeTo) {
-    this.sizeTo = JsonNullable.of(sizeTo);
+    this.sizeTo = sizeTo;
     return this;
   }
 
@@ -298,16 +297,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像圧縮後の容量：[byte]です。</div> <div lang=\"en\">Image compression capacity: [byte]</div> ")
 
 
-  public JsonNullable<Long> getSizeTo() {
+  public Long getSizeTo() {
     return sizeTo;
   }
 
-  public void setSizeTo(JsonNullable<Long> sizeTo) {
+  public void setSizeTo(Long sizeTo) {
     this.sizeTo = sizeTo;
   }
 
   public DictionaryServiceMediaAdFormat staticImage(Boolean staticImage) {
-    this.staticImage = JsonNullable.of(staticImage);
+    this.staticImage = staticImage;
     return this;
   }
 
@@ -318,16 +317,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">静止画用の画像かどうかを示します。</div> <div lang=\"en\">This field indicates whether it is a static image.</div> ")
 
 
-  public JsonNullable<Boolean> getStaticImage() {
+  public Boolean getStaticImage() {
     return staticImage;
   }
 
-  public void setStaticImage(JsonNullable<Boolean> staticImage) {
+  public void setStaticImage(Boolean staticImage) {
     this.staticImage = staticImage;
   }
 
   public DictionaryServiceMediaAdFormat thumbnail(Boolean thumbnail) {
-    this.thumbnail = JsonNullable.of(thumbnail);
+    this.thumbnail = thumbnail;
     return this;
   }
 
@@ -338,16 +337,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">サムネイル画像である/サムネイル画像ではないことを示します。</div> <div lang=\"en\">This field indicates whether it is a thumbnail image image or not.</div> ")
 
 
-  public JsonNullable<Boolean> getThumbnail() {
+  public Boolean getThumbnail() {
     return thumbnail;
   }
 
-  public void setThumbnail(JsonNullable<Boolean> thumbnail) {
+  public void setThumbnail(Boolean thumbnail) {
     this.thumbnail = thumbnail;
   }
 
   public DictionaryServiceMediaAdFormat transparent(Boolean transparent) {
-    this.transparent = JsonNullable.of(transparent);
+    this.transparent = transparent;
     return this;
   }
 
@@ -358,16 +357,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">透過画像の許可/不許可を示します。</div> <div lang=\"en\">This field indicates whether transparent image is permitted.</div> ")
 
 
-  public JsonNullable<Boolean> getTransparent() {
+  public Boolean getTransparent() {
     return transparent;
   }
 
-  public void setTransparent(JsonNullable<Boolean> transparent) {
+  public void setTransparent(Boolean transparent) {
     this.transparent = transparent;
   }
 
   public DictionaryServiceMediaAdFormat width(Long width) {
-    this.width = JsonNullable.of(width);
+    this.width = width;
     return this;
   }
 
@@ -378,16 +377,16 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">最小画像サイズ：幅 [pixel]です。</div> <div lang=\"en\">Minimum image size: width [pixel]</div> ")
 
 
-  public JsonNullable<Long> getWidth() {
+  public Long getWidth() {
     return width;
   }
 
-  public void setWidth(JsonNullable<Long> width) {
+  public void setWidth(Long width) {
     this.width = width;
   }
 
   public DictionaryServiceMediaAdFormat richFormat(Boolean richFormat) {
-    this.richFormat = JsonNullable.of(richFormat);
+    this.richFormat = richFormat;
     return this;
   }
 
@@ -398,17 +397,17 @@ public class DictionaryServiceMediaAdFormat   {
   @ApiModelProperty(value = "<div lang=\"ja\">リッチフォーマット用の画像かどうかを示します。</div> <div lang=\"en\">Indicates whether the image is for rich format.</div> ")
 
 
-  public JsonNullable<Boolean> getRichFormat() {
+  public Boolean getRichFormat() {
     return richFormat;
   }
 
-  public void setRichFormat(JsonNullable<Boolean> richFormat) {
+  public void setRichFormat(Boolean richFormat) {
     this.richFormat = richFormat;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -470,7 +469,7 @@ public class DictionaryServiceMediaAdFormat   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceAccount;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceCrossCampaignBuyingType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceCrossCampaignBuyingは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン購入タイプを示します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※ADD時、crossCampaignTypeが&lt;code&gt;CAMPAIGN_BUYING_TYPE&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceCrossCampaignBuying indicates account and campaign purchase type that is subject to Cross-campaign Reach Report combination.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation.&lt;br&gt; *If crossCampaignType is &lt;code&gt;CAMPAIGN_BUYING_TYPE&lt;/code&gt;, this field is required in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceCrossCampaignBuyingは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン購入タイプを示します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br> ※ADD時、crossCampaignTypeが<code>CAMPAIGN_BUYING_TYPE</code>の場合は必須です。 </div> <div lang=\"en\"> ReportDefinitionServiceCrossCampaignBuying indicates account and campaign purchase type that is subject to Cross-campaign Reach Report combination.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation.<br> *If crossCampaignType is <code>CAMPAIGN_BUYING_TYPE</code>, this field is required in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceCrossCampaignBuying   {
   @JsonProperty("account")
-  private JsonNullable<ReportDefinitionServiceAccount> account = JsonNullable.undefined();
+  private ReportDefinitionServiceAccount account = null;
 
   @JsonProperty("campaignBuyingType")
-  private JsonNullable<ReportDefinitionServiceCrossCampaignBuyingType> campaignBuyingType = JsonNullable.undefined();
+  private ReportDefinitionServiceCrossCampaignBuyingType campaignBuyingType = null;
 
   public ReportDefinitionServiceCrossCampaignBuying account(ReportDefinitionServiceAccount account) {
-    this.account = JsonNullable.of(account);
+    this.account = account;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class ReportDefinitionServiceCrossCampaignBuying   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceAccount> getAccount() {
+  public ReportDefinitionServiceAccount getAccount() {
     return account;
   }
 
-  public void setAccount(JsonNullable<ReportDefinitionServiceAccount> account) {
+  public void setAccount(ReportDefinitionServiceAccount account) {
     this.account = account;
   }
 
   public ReportDefinitionServiceCrossCampaignBuying campaignBuyingType(ReportDefinitionServiceCrossCampaignBuyingType campaignBuyingType) {
-    this.campaignBuyingType = JsonNullable.of(campaignBuyingType);
+    this.campaignBuyingType = campaignBuyingType;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class ReportDefinitionServiceCrossCampaignBuying   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceCrossCampaignBuyingType> getCampaignBuyingType() {
+  public ReportDefinitionServiceCrossCampaignBuyingType getCampaignBuyingType() {
     return campaignBuyingType;
   }
 
-  public void setCampaignBuyingType(JsonNullable<ReportDefinitionServiceCrossCampaignBuyingType> campaignBuyingType) {
+  public void setCampaignBuyingType(ReportDefinitionServiceCrossCampaignBuyingType campaignBuyingType) {
     this.campaignBuyingType = campaignBuyingType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class ReportDefinitionServiceCrossCampaignBuying   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

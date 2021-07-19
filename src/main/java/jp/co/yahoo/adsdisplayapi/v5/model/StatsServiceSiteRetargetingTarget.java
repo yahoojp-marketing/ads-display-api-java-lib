@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceTargetListDeliverType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSiteRetargetingTarget object holds configuration information of Site retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。</div> <div lang=\"en\">StatsServiceSiteRetargetingTarget object holds configuration information of Site retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceSiteRetargetingTarget   {
   @JsonProperty("targetListDeliverType")
-  private JsonNullable<StatsServiceTargetListDeliverType> targetListDeliverType = JsonNullable.undefined();
+  private StatsServiceTargetListDeliverType targetListDeliverType = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   public StatsServiceSiteRetargetingTarget targetListDeliverType(StatsServiceTargetListDeliverType targetListDeliverType) {
-    this.targetListDeliverType = JsonNullable.of(targetListDeliverType);
+    this.targetListDeliverType = targetListDeliverType;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class StatsServiceSiteRetargetingTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceTargetListDeliverType> getTargetListDeliverType() {
+  public StatsServiceTargetListDeliverType getTargetListDeliverType() {
     return targetListDeliverType;
   }
 
-  public void setTargetListDeliverType(JsonNullable<StatsServiceTargetListDeliverType> targetListDeliverType) {
+  public void setTargetListDeliverType(StatsServiceTargetListDeliverType targetListDeliverType) {
     this.targetListDeliverType = targetListDeliverType;
   }
 
   public StatsServiceSiteRetargetingTarget targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class StatsServiceSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリスト名</div> <div lang=\"en\">Target list name</div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class StatsServiceSiteRetargetingTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

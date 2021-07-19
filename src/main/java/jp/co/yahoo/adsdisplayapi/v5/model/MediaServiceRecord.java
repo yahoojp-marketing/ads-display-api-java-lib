@@ -14,7 +14,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceLogoFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceRichFormatFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceThumbnailFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -22,53 +21,53 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MediaServiceRecordオブジェクトは、画像の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The MediaServiceRecord object is a container for the information of media (image data).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">MediaServiceRecordオブジェクトは、画像の情報を表します。</div> <div lang=\"en\">The MediaServiceRecord object is a container for the information of media (image data).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class MediaServiceRecord   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<MediaServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private MediaServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("campaignBannerFlg")
-  private JsonNullable<MediaServiceCampaignBannerFlg> campaignBannerFlg = JsonNullable.undefined();
+  private MediaServiceCampaignBannerFlg campaignBannerFlg = null;
 
   @JsonProperty("creationTime")
-  private JsonNullable<String> creationTime = JsonNullable.undefined();
+  private String creationTime = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("logoFlg")
-  private JsonNullable<MediaServiceLogoFlg> logoFlg = JsonNullable.undefined();
+  private MediaServiceLogoFlg logoFlg = null;
 
   @JsonProperty("imageMedia")
-  private JsonNullable<MediaServiceImageMedia> imageMedia = JsonNullable.undefined();
+  private MediaServiceImageMedia imageMedia = null;
 
   @JsonProperty("mediaId")
-  private JsonNullable<Long> mediaId = JsonNullable.undefined();
+  private Long mediaId = null;
 
   @JsonProperty("mediaName")
-  private JsonNullable<String> mediaName = JsonNullable.undefined();
+  private String mediaName = null;
 
   @JsonProperty("mediaTitle")
-  private JsonNullable<String> mediaTitle = JsonNullable.undefined();
+  private String mediaTitle = null;
 
   @JsonProperty("thumbnailFlg")
-  private JsonNullable<MediaServiceThumbnailFlg> thumbnailFlg = JsonNullable.undefined();
+  private MediaServiceThumbnailFlg thumbnailFlg = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<MediaServiceUserStatus> userStatus = JsonNullable.undefined();
+  private MediaServiceUserStatus userStatus = null;
 
   @JsonProperty("mediaRichFormatFlg")
-  private JsonNullable<MediaServiceRichFormatFlg> mediaRichFormatFlg = JsonNullable.undefined();
+  private MediaServiceRichFormatFlg mediaRichFormatFlg = null;
 
   @JsonProperty("createdDate")
-  private JsonNullable<String> createdDate = JsonNullable.undefined();
+  private String createdDate = null;
 
   public MediaServiceRecord accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -79,16 +78,16 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\">Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public MediaServiceRecord approvalStatus(MediaServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -100,16 +99,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceApprovalStatus> getApprovalStatus() {
+  public MediaServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<MediaServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(MediaServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public MediaServiceRecord campaignBannerFlg(MediaServiceCampaignBannerFlg campaignBannerFlg) {
-    this.campaignBannerFlg = JsonNullable.of(campaignBannerFlg);
+    this.campaignBannerFlg = campaignBannerFlg;
     return this;
   }
 
@@ -121,16 +120,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceCampaignBannerFlg> getCampaignBannerFlg() {
+  public MediaServiceCampaignBannerFlg getCampaignBannerFlg() {
     return campaignBannerFlg;
   }
 
-  public void setCampaignBannerFlg(JsonNullable<MediaServiceCampaignBannerFlg> campaignBannerFlg) {
+  public void setCampaignBannerFlg(MediaServiceCampaignBannerFlg campaignBannerFlg) {
     this.campaignBannerFlg = campaignBannerFlg;
   }
 
   public MediaServiceRecord creationTime(String creationTime) {
-    this.creationTime = JsonNullable.of(creationTime);
+    this.creationTime = creationTime;
     return this;
   }
 
@@ -141,24 +140,24 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">入稿日時です。</div> <div lang=\"en\">Date and time of creation.</div> ")
 
 
-  public JsonNullable<String> getCreationTime() {
+  public String getCreationTime() {
     return creationTime;
   }
 
-  public void setCreationTime(JsonNullable<String> creationTime) {
+  public void setCreationTime(String creationTime) {
     this.creationTime = creationTime;
   }
 
   public MediaServiceRecord disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public MediaServiceRecord addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -169,16 +168,16 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">掲載拒否の理由です。</div> <div lang=\"en\">Reason code why it&#39;s disapproved on the review.</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public MediaServiceRecord logoFlg(MediaServiceLogoFlg logoFlg) {
-    this.logoFlg = JsonNullable.of(logoFlg);
+    this.logoFlg = logoFlg;
     return this;
   }
 
@@ -190,16 +189,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceLogoFlg> getLogoFlg() {
+  public MediaServiceLogoFlg getLogoFlg() {
     return logoFlg;
   }
 
-  public void setLogoFlg(JsonNullable<MediaServiceLogoFlg> logoFlg) {
+  public void setLogoFlg(MediaServiceLogoFlg logoFlg) {
     this.logoFlg = logoFlg;
   }
 
   public MediaServiceRecord imageMedia(MediaServiceImageMedia imageMedia) {
-    this.imageMedia = JsonNullable.of(imageMedia);
+    this.imageMedia = imageMedia;
     return this;
   }
 
@@ -211,16 +210,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceImageMedia> getImageMedia() {
+  public MediaServiceImageMedia getImageMedia() {
     return imageMedia;
   }
 
-  public void setImageMedia(JsonNullable<MediaServiceImageMedia> imageMedia) {
+  public void setImageMedia(MediaServiceImageMedia imageMedia) {
     this.imageMedia = imageMedia;
   }
 
   public MediaServiceRecord mediaId(Long mediaId) {
-    this.mediaId = JsonNullable.of(mediaId);
+    this.mediaId = mediaId;
     return this;
   }
 
@@ -231,16 +230,16 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像IDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\">Media ID (image ID). <br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getMediaId() {
+  public Long getMediaId() {
     return mediaId;
   }
 
-  public void setMediaId(JsonNullable<Long> mediaId) {
+  public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
 
   public MediaServiceRecord mediaName(String mediaName) {
-    this.mediaName = JsonNullable.of(mediaName);
+    this.mediaName = mediaName;
     return this;
   }
 
@@ -251,16 +250,16 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 実ファイル名です。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\">File name. <br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<String> getMediaName() {
+  public String getMediaName() {
     return mediaName;
   }
 
-  public void setMediaName(JsonNullable<String> mediaName) {
+  public void setMediaName(String mediaName) {
     this.mediaName = mediaName;
   }
 
   public MediaServiceRecord mediaTitle(String mediaTitle) {
-    this.mediaTitle = JsonNullable.of(mediaTitle);
+    this.mediaTitle = mediaTitle;
     return this;
   }
 
@@ -271,16 +270,16 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\">Image name. <br> This field is required in ADD operation, and is optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getMediaTitle() {
+  public String getMediaTitle() {
     return mediaTitle;
   }
 
-  public void setMediaTitle(JsonNullable<String> mediaTitle) {
+  public void setMediaTitle(String mediaTitle) {
     this.mediaTitle = mediaTitle;
   }
 
   public MediaServiceRecord thumbnailFlg(MediaServiceThumbnailFlg thumbnailFlg) {
-    this.thumbnailFlg = JsonNullable.of(thumbnailFlg);
+    this.thumbnailFlg = thumbnailFlg;
     return this;
   }
 
@@ -292,16 +291,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceThumbnailFlg> getThumbnailFlg() {
+  public MediaServiceThumbnailFlg getThumbnailFlg() {
     return thumbnailFlg;
   }
 
-  public void setThumbnailFlg(JsonNullable<MediaServiceThumbnailFlg> thumbnailFlg) {
+  public void setThumbnailFlg(MediaServiceThumbnailFlg thumbnailFlg) {
     this.thumbnailFlg = thumbnailFlg;
   }
 
   public MediaServiceRecord userStatus(MediaServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -313,16 +312,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceUserStatus> getUserStatus() {
+  public MediaServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<MediaServiceUserStatus> userStatus) {
+  public void setUserStatus(MediaServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public MediaServiceRecord mediaRichFormatFlg(MediaServiceRichFormatFlg mediaRichFormatFlg) {
-    this.mediaRichFormatFlg = JsonNullable.of(mediaRichFormatFlg);
+    this.mediaRichFormatFlg = mediaRichFormatFlg;
     return this;
   }
 
@@ -334,16 +333,16 @@ public class MediaServiceRecord   {
 
   @Valid
 
-  public JsonNullable<MediaServiceRichFormatFlg> getMediaRichFormatFlg() {
+  public MediaServiceRichFormatFlg getMediaRichFormatFlg() {
     return mediaRichFormatFlg;
   }
 
-  public void setMediaRichFormatFlg(JsonNullable<MediaServiceRichFormatFlg> mediaRichFormatFlg) {
+  public void setMediaRichFormatFlg(MediaServiceRichFormatFlg mediaRichFormatFlg) {
     this.mediaRichFormatFlg = mediaRichFormatFlg;
   }
 
   public MediaServiceRecord createdDate(String createdDate) {
-    this.createdDate = JsonNullable.of(createdDate);
+    this.createdDate = createdDate;
     return this;
   }
 
@@ -354,17 +353,17 @@ public class MediaServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">データが作成された日です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Media made.<br>* Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(JsonNullable<String> createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -420,7 +419,7 @@ public class MediaServiceRecord   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
