@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceDeviceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceDeviceTargetオブジェクトは、デバイスターゲティングの設定情報を保持します。&lt;br&gt; SET時のみ指定可能です。ADD、REMOVEおよびREPLACE時、このフィールドは無視されます。&lt;br&gt; SET時に必要なtargetIdは、AdGroupオブジェクトにデバイスが設定されている場合にレスポンスされます。&lt;br&gt; ※SET時、入札価格調整率のみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceDeviceTarget object is a container for storing device targeting settings.&lt;br&gt; This field can be specified only in SET operation and is ignored in ADD, REMOVE and REPLACE operation.&lt;br&gt; The targetId required on SET will be responded when devices are set on AdGroup object.&lt;br&gt; *Can set only bid adjustment in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceDeviceTargetオブジェクトは、デバイスターゲティングの設定情報を保持します。<br> SET時のみ指定可能です。ADD、REMOVEおよびREPLACE時、このフィールドは無視されます。<br> SET時に必要なtargetIdは、AdGroupオブジェクトにデバイスが設定されている場合にレスポンスされます。<br> ※SET時、入札価格調整率のみ設定可能です。 </div> <div lang=\"en\"> AdGroupTargetServiceDeviceTarget object is a container for storing device targeting settings.<br> This field can be specified only in SET operation and is ignored in ADD, REMOVE and REPLACE operation.<br> The targetId required on SET will be responded when devices are set on AdGroup object.<br> *Can set only bid adjustment in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceDeviceTarget   {
   @JsonProperty("deviceType")
-  private JsonNullable<AdGroupTargetServiceDeviceType> deviceType = JsonNullable.undefined();
+  private AdGroupTargetServiceDeviceType deviceType = null;
 
   public AdGroupTargetServiceDeviceTarget deviceType(AdGroupTargetServiceDeviceType deviceType) {
-    this.deviceType = JsonNullable.of(deviceType);
+    this.deviceType = deviceType;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class AdGroupTargetServiceDeviceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceDeviceType> getDeviceType() {
+  public AdGroupTargetServiceDeviceType getDeviceType() {
     return deviceType;
   }
 
-  public void setDeviceType(JsonNullable<AdGroupTargetServiceDeviceType> deviceType) {
+  public void setDeviceType(AdGroupTargetServiceDeviceType deviceType) {
     this.deviceType = deviceType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class AdGroupTargetServiceDeviceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

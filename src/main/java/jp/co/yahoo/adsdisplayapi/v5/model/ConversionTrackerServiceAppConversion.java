@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceAppConversionPlatform;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceAppConversionType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,19 +14,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceAppConversionオブジェクトは、アプリコンバージョントラッカーの情報を保持します。&lt;br&gt; このフィールドは、ADD時は省略可能となり、SET時は無視されます。ADD時、conversionTrackerTypeがAPP_CONVERSIONの場合、必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceAppConversion object contains the information for ConversionTrackerServiceAppConversionTracker.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET operation. If conversionTrackerType is APP_CONVERSION, this field is required in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ConversionTrackerServiceAppConversionオブジェクトは、アプリコンバージョントラッカーの情報を保持します。<br> このフィールドは、ADD時は省略可能となり、SET時は無視されます。ADD時、conversionTrackerTypeがAPP_CONVERSIONの場合、必須です。 </div> <div lang=\"en\"> ConversionTrackerServiceAppConversion object contains the information for ConversionTrackerServiceAppConversionTracker.<br> This field is optional in ADD operation, and will be ignored in SET operation. If conversionTrackerType is APP_CONVERSION, this field is required in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTrackerServiceAppConversion   {
   @JsonProperty("appConversionPlatform")
-  private JsonNullable<ConversionTrackerServiceAppConversionPlatform> appConversionPlatform = JsonNullable.undefined();
+  private ConversionTrackerServiceAppConversionPlatform appConversionPlatform = null;
 
   @JsonProperty("appConversionType")
-  private JsonNullable<ConversionTrackerServiceAppConversionType> appConversionType = JsonNullable.undefined();
+  private ConversionTrackerServiceAppConversionType appConversionType = null;
 
   @JsonProperty("appId")
-  private JsonNullable<String> appId = JsonNullable.undefined();
+  private String appId = null;
 
   public ConversionTrackerServiceAppConversion appConversionPlatform(ConversionTrackerServiceAppConversionPlatform appConversionPlatform) {
-    this.appConversionPlatform = JsonNullable.of(appConversionPlatform);
+    this.appConversionPlatform = appConversionPlatform;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class ConversionTrackerServiceAppConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppConversionPlatform> getAppConversionPlatform() {
+  public ConversionTrackerServiceAppConversionPlatform getAppConversionPlatform() {
     return appConversionPlatform;
   }
 
-  public void setAppConversionPlatform(JsonNullable<ConversionTrackerServiceAppConversionPlatform> appConversionPlatform) {
+  public void setAppConversionPlatform(ConversionTrackerServiceAppConversionPlatform appConversionPlatform) {
     this.appConversionPlatform = appConversionPlatform;
   }
 
   public ConversionTrackerServiceAppConversion appConversionType(ConversionTrackerServiceAppConversionType appConversionType) {
-    this.appConversionType = JsonNullable.of(appConversionType);
+    this.appConversionType = appConversionType;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class ConversionTrackerServiceAppConversion   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppConversionType> getAppConversionType() {
+  public ConversionTrackerServiceAppConversionType getAppConversionType() {
     return appConversionType;
   }
 
-  public void setAppConversionType(JsonNullable<ConversionTrackerServiceAppConversionType> appConversionType) {
+  public void setAppConversionType(ConversionTrackerServiceAppConversionType appConversionType) {
     this.appConversionType = appConversionType;
   }
 
   public ConversionTrackerServiceAppConversion appId(String appId) {
-    this.appId = JsonNullable.of(appId);
+    this.appId = appId;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class ConversionTrackerServiceAppConversion   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 計測対象のアプリIDです。<br> このフィールドは、ADD時は必須となり、SET時は無視されます。 </div> <div lang=\"en\"> App ID of the object to be tracked.<br> This field is required in ADD operation, and will be ignored in SET operation. </div> ")
 
 
-  public JsonNullable<String> getAppId() {
+  public String getAppId() {
     return appId;
   }
 
-  public void setAppId(JsonNullable<String> appId) {
+  public void setAppId(String appId) {
     this.appId = appId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class ConversionTrackerServiceAppConversion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

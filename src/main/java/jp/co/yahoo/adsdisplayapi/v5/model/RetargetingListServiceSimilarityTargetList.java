@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceTargetListSize;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceTargetListSizeReaches;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,20 +16,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 類似ユーザーターゲットの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※targetListTypeがSIMILARITYの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceSimilarityTargetList object is a container for storing the information of Targeting information of users (similar).&lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If targetListType is SIMILARITY, this field is required in ADD and SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> 類似ユーザーターゲットの情報を保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※targetListTypeがSIMILARITYの場合は、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> RetargetingListServiceSimilarityTargetList object is a container for storing the information of Targeting information of users (similar).<br> This field is optional in ADD and SET operation. <br> *If targetListType is SIMILARITY, this field is required in ADD and SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceSimilarityTargetList   {
   @JsonProperty("targetListId")
-  private JsonNullable<Long> targetListId = JsonNullable.undefined();
+  private Long targetListId = null;
 
   @JsonProperty("targetListSize")
-  private JsonNullable<RetargetingListServiceTargetListSize> targetListSize = JsonNullable.undefined();
+  private RetargetingListServiceTargetListSize targetListSize = null;
 
   @JsonProperty("targetListSizeReaches")
   @Valid
-  private JsonNullable<List<RetargetingListServiceTargetListSizeReaches>> targetListSizeReaches = JsonNullable.undefined();
+  private List<RetargetingListServiceTargetListSizeReaches> targetListSizeReaches = null;
 
   public RetargetingListServiceSimilarityTargetList targetListId(Long targetListId) {
-    this.targetListId = JsonNullable.of(targetListId);
+    this.targetListId = targetListId;
     return this;
   }
 
@@ -41,16 +40,16 @@ public class RetargetingListServiceSimilarityTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 類似ユーザーをリターゲティングするターゲットIDです。<br> このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。 </div> <div lang=\"en\"> Target ID for retargeting similar users. <br> This field is required in ADD operation, and will be ignored in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getTargetListId() {
+  public Long getTargetListId() {
     return targetListId;
   }
 
-  public void setTargetListId(JsonNullable<Long> targetListId) {
+  public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
 
   public RetargetingListServiceSimilarityTargetList targetListSize(RetargetingListServiceTargetListSize targetListSize) {
-    this.targetListSize = JsonNullable.of(targetListSize);
+    this.targetListSize = targetListSize;
     return this;
   }
 
@@ -62,24 +61,24 @@ public class RetargetingListServiceSimilarityTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetListSize> getTargetListSize() {
+  public RetargetingListServiceTargetListSize getTargetListSize() {
     return targetListSize;
   }
 
-  public void setTargetListSize(JsonNullable<RetargetingListServiceTargetListSize> targetListSize) {
+  public void setTargetListSize(RetargetingListServiceTargetListSize targetListSize) {
     this.targetListSize = targetListSize;
   }
 
   public RetargetingListServiceSimilarityTargetList targetListSizeReaches(List<RetargetingListServiceTargetListSizeReaches> targetListSizeReaches) {
-    this.targetListSizeReaches = JsonNullable.of(targetListSizeReaches);
+    this.targetListSizeReaches = targetListSizeReaches;
     return this;
   }
 
   public RetargetingListServiceSimilarityTargetList addTargetListSizeReachesItem(RetargetingListServiceTargetListSizeReaches targetListSizeReachesItem) {
-    if (this.targetListSizeReaches == null || !this.targetListSizeReaches.isPresent()) {
-      this.targetListSizeReaches = JsonNullable.of(new ArrayList<>());
+    if (this.targetListSizeReaches == null) {
+      this.targetListSizeReaches = new ArrayList<>();
     }
-    this.targetListSizeReaches.get().add(targetListSizeReachesItem);
+    this.targetListSizeReaches.add(targetListSizeReachesItem);
     return this;
   }
 
@@ -91,17 +90,17 @@ public class RetargetingListServiceSimilarityTargetList   {
 
   @Valid
 @Size(max=10) 
-  public JsonNullable<List<RetargetingListServiceTargetListSizeReaches>> getTargetListSizeReaches() {
+  public List<RetargetingListServiceTargetListSizeReaches> getTargetListSizeReaches() {
     return targetListSizeReaches;
   }
 
-  public void setTargetListSizeReaches(JsonNullable<List<RetargetingListServiceTargetListSizeReaches>> targetListSizeReaches) {
+  public void setTargetListSizeReaches(List<RetargetingListServiceTargetListSizeReaches> targetListSizeReaches) {
     this.targetListSizeReaches = targetListSizeReaches;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class RetargetingListServiceSimilarityTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

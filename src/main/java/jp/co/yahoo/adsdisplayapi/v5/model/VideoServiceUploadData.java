@@ -6,32 +6,31 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * VideoServiceUploadData
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class VideoServiceUploadData   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("mediaId")
-  private JsonNullable<Long> mediaId = JsonNullable.undefined();
+  private Long mediaId = null;
 
   @JsonProperty("videoName")
-  private JsonNullable<String> videoName = JsonNullable.undefined();
+  private String videoName = null;
 
   @JsonProperty("videoTitle")
-  private JsonNullable<String> videoTitle = JsonNullable.undefined();
+  private String videoTitle = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<VideoServiceUserStatus> userStatus = JsonNullable.undefined();
+  private VideoServiceUserStatus userStatus = null;
 
   public VideoServiceUploadData accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class VideoServiceUploadData   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public VideoServiceUploadData mediaId(Long mediaId) {
-    this.mediaId = JsonNullable.of(mediaId);
+    this.mediaId = mediaId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class VideoServiceUploadData   {
   @ApiModelProperty(value = "<div lang=\"ja\">メディアID</div> <div lang=\"en\">Media ID</div> ")
 
 
-  public JsonNullable<Long> getMediaId() {
+  public Long getMediaId() {
     return mediaId;
   }
 
-  public void setMediaId(JsonNullable<Long> mediaId) {
+  public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
 
   public VideoServiceUploadData videoName(String videoName) {
-    this.videoName = JsonNullable.of(videoName);
+    this.videoName = videoName;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class VideoServiceUploadData   {
   @ApiModelProperty(value = "<div lang=\"ja\">実ファイル名</div> <div lang=\"en\">File name</div> ")
 
 
-  public JsonNullable<String> getVideoName() {
+  public String getVideoName() {
     return videoName;
   }
 
-  public void setVideoName(JsonNullable<String> videoName) {
+  public void setVideoName(String videoName) {
     this.videoName = videoName;
   }
 
   public VideoServiceUploadData videoTitle(String videoTitle) {
-    this.videoTitle = JsonNullable.of(videoTitle);
+    this.videoTitle = videoTitle;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class VideoServiceUploadData   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビデオ名</div> <div lang=\"en\">Video title</div> ")
 
 
-  public JsonNullable<String> getVideoTitle() {
+  public String getVideoTitle() {
     return videoTitle;
   }
 
-  public void setVideoTitle(JsonNullable<String> videoTitle) {
+  public void setVideoTitle(String videoTitle) {
     this.videoTitle = videoTitle;
   }
 
   public VideoServiceUploadData userStatus(VideoServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -123,17 +122,17 @@ public class VideoServiceUploadData   {
 
   @Valid
 
-  public JsonNullable<VideoServiceUserStatus> getUserStatus() {
+  public VideoServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<VideoServiceUserStatus> userStatus) {
+  public void setUserStatus(VideoServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -171,7 +170,7 @@ public class VideoServiceUploadData   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtpServiceScheduleWeek;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpServiceScheduleWeeklyオブジェクトは、定期アップロードを何曜日の何時に実行するかを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceScheduleWeekly object displays what day of the week and what time of the day the Periodic Upload runs.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedFtpServiceScheduleWeeklyオブジェクトは、定期アップロードを何曜日の何時に実行するかを表します。</div> <div lang=\"en\">FeedFtpServiceScheduleWeekly object displays what day of the week and what time of the day the Periodic Upload runs.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedFtpServiceScheduleWeekly   {
   @JsonProperty("scheduleWeek")
-  private JsonNullable<FeedFtpServiceScheduleWeek> scheduleWeek = JsonNullable.undefined();
+  private FeedFtpServiceScheduleWeek scheduleWeek = null;
 
   @JsonProperty("time")
-  private JsonNullable<Integer> time = JsonNullable.undefined();
+  private Integer time = null;
 
   public FeedFtpServiceScheduleWeekly scheduleWeek(FeedFtpServiceScheduleWeek scheduleWeek) {
-    this.scheduleWeek = JsonNullable.of(scheduleWeek);
+    this.scheduleWeek = scheduleWeek;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class FeedFtpServiceScheduleWeekly   {
 
   @Valid
 
-  public JsonNullable<FeedFtpServiceScheduleWeek> getScheduleWeek() {
+  public FeedFtpServiceScheduleWeek getScheduleWeek() {
     return scheduleWeek;
   }
 
-  public void setScheduleWeek(JsonNullable<FeedFtpServiceScheduleWeek> scheduleWeek) {
+  public void setScheduleWeek(FeedFtpServiceScheduleWeek scheduleWeek) {
     this.scheduleWeek = scheduleWeek;
   }
 
   public FeedFtpServiceScheduleWeekly time(Integer time) {
-    this.time = JsonNullable.of(time);
+    this.time = time;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class FeedFtpServiceScheduleWeekly   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 何時に実行するかを表します。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Execution time.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Integer> getTime() {
+  public Integer getTime() {
     return time;
   }
 
-  public void setTime(JsonNullable<Integer> time) {
+  public void setTime(Integer time) {
     this.time = time;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class FeedFtpServiceScheduleWeekly   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

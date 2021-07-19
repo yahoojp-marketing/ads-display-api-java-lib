@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceDayOfWeek;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedInventoryServiceAdScheduleTargetオブジェクトは、時間帯ターゲティングの設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAD_SCHEDULE_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedInventoryServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; *If targetType is AD_SCHEDULE_TARGET, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedInventoryServiceAdScheduleTargetオブジェクトは、時間帯ターゲティングの設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。<br> ※targetTypeがAD_SCHEDULE_TARGETの場合は必須です。 </div> <div lang=\"en\"> GuaranteedInventoryServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.<br> This field is optional in ADD operation.<br> *If targetType is AD_SCHEDULE_TARGET, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceAdScheduleTarget   {
   @JsonProperty("dayOfWeek")
-  private JsonNullable<GuaranteedInventoryServiceDayOfWeek> dayOfWeek = JsonNullable.undefined();
+  private GuaranteedInventoryServiceDayOfWeek dayOfWeek = null;
 
   @JsonProperty("endHour")
-  private JsonNullable<Integer> endHour = JsonNullable.undefined();
+  private Integer endHour = null;
 
   @JsonProperty("startHour")
-  private JsonNullable<Integer> startHour = JsonNullable.undefined();
+  private Integer startHour = null;
 
   public GuaranteedInventoryServiceAdScheduleTarget dayOfWeek(GuaranteedInventoryServiceDayOfWeek dayOfWeek) {
-    this.dayOfWeek = JsonNullable.of(dayOfWeek);
+    this.dayOfWeek = dayOfWeek;
     return this;
   }
 
@@ -38,16 +37,16 @@ public class GuaranteedInventoryServiceAdScheduleTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceDayOfWeek> getDayOfWeek() {
+  public GuaranteedInventoryServiceDayOfWeek getDayOfWeek() {
     return dayOfWeek;
   }
 
-  public void setDayOfWeek(JsonNullable<GuaranteedInventoryServiceDayOfWeek> dayOfWeek) {
+  public void setDayOfWeek(GuaranteedInventoryServiceDayOfWeek dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
   public GuaranteedInventoryServiceAdScheduleTarget endHour(Integer endHour) {
-    this.endHour = JsonNullable.of(endHour);
+    this.endHour = endHour;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class GuaranteedInventoryServiceAdScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 終了時間（時のみ）です。<br> このフィールドは、ADD時は必須となります。 </div> <div lang=\"en\"> End time (hour only).<br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<Integer> getEndHour() {
+  public Integer getEndHour() {
     return endHour;
   }
 
-  public void setEndHour(JsonNullable<Integer> endHour) {
+  public void setEndHour(Integer endHour) {
     this.endHour = endHour;
   }
 
   public GuaranteedInventoryServiceAdScheduleTarget startHour(Integer startHour) {
-    this.startHour = JsonNullable.of(startHour);
+    this.startHour = startHour;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class GuaranteedInventoryServiceAdScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 開始時間（時のみ）です。<br> このフィールドは、ADD時は必須となります。 </div> <div lang=\"en\"> Start time (hour only).<br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<Integer> getStartHour() {
+  public Integer getStartHour() {
     return startHour;
   }
 
-  public void setStartHour(JsonNullable<Integer> startHour) {
+  public void setStartHour(Integer startHour) {
     this.startHour = startHour;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class GuaranteedInventoryServiceAdScheduleTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

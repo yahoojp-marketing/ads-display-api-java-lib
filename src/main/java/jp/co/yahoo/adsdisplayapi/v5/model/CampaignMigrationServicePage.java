@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignMigrationServiceJobValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignMigrationServicePageオブジェクトは、マイグレーションジョブの状況を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignMigrationServicePage object contains migration job status.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignMigrationServicePageオブジェクトは、マイグレーションジョブの状況を格納するコンテナです。</div> <div lang=\"en\">CampaignMigrationServicePage object contains migration job status.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignMigrationServicePage   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<CampaignMigrationServiceJobValue>> values = JsonNullable.undefined();
+  private List<CampaignMigrationServiceJobValue> values = null;
 
   public CampaignMigrationServicePage values(List<CampaignMigrationServiceJobValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public CampaignMigrationServicePage addValuesItem(CampaignMigrationServiceJobValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class CampaignMigrationServicePage   {
 
   @Valid
 
-  public JsonNullable<List<CampaignMigrationServiceJobValue>> getValues() {
+  public List<CampaignMigrationServiceJobValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<CampaignMigrationServiceJobValue>> values) {
+  public void setValues(List<CampaignMigrationServiceJobValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class CampaignMigrationServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

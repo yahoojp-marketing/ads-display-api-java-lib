@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServicePageオブジェクトは、取得されるアカウント情報に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountManagementServicePage object is a container for storing account information entry.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountManagementServicePageオブジェクトは、取得されるアカウント情報に関するエントリーを表します。</div> <div lang=\"en\">The AccountManagementServicePage object is a container for storing account information entry.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountManagementServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AccountManagementServiceValue>> values = JsonNullable.undefined();
+  private List<AccountManagementServiceValue> values = null;
 
   public AccountManagementServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class AccountManagementServicePage   {
   }
 
   public AccountManagementServicePage values(List<AccountManagementServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AccountManagementServicePage addValuesItem(AccountManagementServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class AccountManagementServicePage   {
 
   @Valid
 
-  public JsonNullable<List<AccountManagementServiceValue>> getValues() {
+  public List<AccountManagementServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AccountManagementServiceValue>> values) {
+  public void setValues(List<AccountManagementServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class AccountManagementServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

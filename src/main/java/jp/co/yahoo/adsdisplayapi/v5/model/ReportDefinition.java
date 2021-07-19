@@ -20,7 +20,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceReportSkipColum
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceReportSkipReportSummary;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceReportSortField;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceReportTypeCondition;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -28,73 +27,73 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionオブジェクトは、レポート定義を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The ReportDefinition object serves report definitions.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ReportDefinitionオブジェクトは、レポート定義を表します。</div> <div lang=\"en\">The ReportDefinition object serves report definitions.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinition   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("completeTime")
-  private JsonNullable<String> completeTime = JsonNullable.undefined();
+  private String completeTime = null;
 
   @JsonProperty("dateRange")
-  private JsonNullable<ReportDefinitionServiceDateRange> dateRange = JsonNullable.undefined();
+  private ReportDefinitionServiceDateRange dateRange = null;
 
   @JsonProperty("fields")
   @Valid
-  private JsonNullable<List<String>> fields = JsonNullable.undefined();
+  private List<String> fields = null;
 
   @JsonProperty("filters")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceFilter>> filters = JsonNullable.undefined();
+  private List<ReportDefinitionServiceFilter> filters = null;
 
   @JsonProperty("reportCompressType")
-  private JsonNullable<ReportDefinitionServiceReportCompressType> reportCompressType = JsonNullable.undefined();
+  private ReportDefinitionServiceReportCompressType reportCompressType = null;
 
   @JsonProperty("reportDateRangeType")
-  private JsonNullable<ReportDefinitionServiceReportDateRangeType> reportDateRangeType = JsonNullable.undefined();
+  private ReportDefinitionServiceReportDateRangeType reportDateRangeType = null;
 
   @JsonProperty("reportDownloadEncode")
-  private JsonNullable<ReportDefinitionServiceReportDownloadEncode> reportDownloadEncode = JsonNullable.undefined();
+  private ReportDefinitionServiceReportDownloadEncode reportDownloadEncode = null;
 
   @JsonProperty("reportDownloadFormat")
-  private JsonNullable<ReportDefinitionServiceReportDownloadFormat> reportDownloadFormat = JsonNullable.undefined();
+  private ReportDefinitionServiceReportDownloadFormat reportDownloadFormat = null;
 
   @JsonProperty("reportJobStatus")
-  private JsonNullable<ReportDefinitionServiceReportJobStatus> reportJobStatus = JsonNullable.undefined();
+  private ReportDefinitionServiceReportJobStatus reportJobStatus = null;
 
   @JsonProperty("reportJobErrorDetail")
-  private JsonNullable<String> reportJobErrorDetail = JsonNullable.undefined();
+  private String reportJobErrorDetail = null;
 
   @JsonProperty("reportJobId")
-  private JsonNullable<Long> reportJobId = JsonNullable.undefined();
+  private Long reportJobId = null;
 
   @JsonProperty("reportLanguage")
-  private JsonNullable<ReportDefinitionServiceReportLanguage> reportLanguage = JsonNullable.undefined();
+  private ReportDefinitionServiceReportLanguage reportLanguage = null;
 
   @JsonProperty("reportName")
-  private JsonNullable<String> reportName = JsonNullable.undefined();
+  private String reportName = null;
 
   @JsonProperty("requestTime")
-  private JsonNullable<String> requestTime = JsonNullable.undefined();
+  private String requestTime = null;
 
   @JsonProperty("reportSkipColumnHeader")
-  private JsonNullable<ReportDefinitionServiceReportSkipColumnHeader> reportSkipColumnHeader = JsonNullable.undefined();
+  private ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader = null;
 
   @JsonProperty("reportSkipReportSummary")
-  private JsonNullable<ReportDefinitionServiceReportSkipReportSummary> reportSkipReportSummary = JsonNullable.undefined();
+  private ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary = null;
 
   @JsonProperty("reportDecimalPartDisplayType")
-  private JsonNullable<ReportDefinitionServiceReportDecimalPartDisplayType> reportDecimalPartDisplayType = JsonNullable.undefined();
+  private ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType = null;
 
   @JsonProperty("reportTypeCondition")
-  private JsonNullable<ReportDefinitionServiceReportTypeCondition> reportTypeCondition = JsonNullable.undefined();
+  private ReportDefinitionServiceReportTypeCondition reportTypeCondition = null;
 
   @JsonProperty("sortFields")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceReportSortField>> sortFields = JsonNullable.undefined();
+  private List<ReportDefinitionServiceReportSortField> sortFields = null;
 
   public ReportDefinition accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -105,16 +104,16 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public ReportDefinition completeTime(String completeTime) {
-    this.completeTime = JsonNullable.of(completeTime);
+    this.completeTime = completeTime;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ジョブ完了日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The date and time of Job completion. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCompleteTime() {
+  public String getCompleteTime() {
     return completeTime;
   }
 
-  public void setCompleteTime(JsonNullable<String> completeTime) {
+  public void setCompleteTime(String completeTime) {
     this.completeTime = completeTime;
   }
 
   public ReportDefinition dateRange(ReportDefinitionServiceDateRange dateRange) {
-    this.dateRange = JsonNullable.of(dateRange);
+    this.dateRange = dateRange;
     return this;
   }
 
@@ -146,24 +145,24 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceDateRange> getDateRange() {
+  public ReportDefinitionServiceDateRange getDateRange() {
     return dateRange;
   }
 
-  public void setDateRange(JsonNullable<ReportDefinitionServiceDateRange> dateRange) {
+  public void setDateRange(ReportDefinitionServiceDateRange dateRange) {
     this.dateRange = dateRange;
   }
 
   public ReportDefinition fields(List<String> fields) {
-    this.fields = JsonNullable.of(fields);
+    this.fields = fields;
     return this;
   }
 
   public ReportDefinition addFieldsItem(String fieldsItem) {
-    if (this.fields == null || !this.fields.isPresent()) {
-      this.fields = JsonNullable.of(new ArrayList<>());
+    if (this.fields == null) {
+      this.fields = new ArrayList<>();
     }
-    this.fields.get().add(fieldsItem);
+    this.fields.add(fieldsItem);
     return this;
   }
 
@@ -174,24 +173,24 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 表示項目です。<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。<br> 指定可能な値は、ReportDefinitionServiceのgetReportFieldsで取得されるfieldNameをご確認ください。 </div> <div lang=\"en\"> Select the fields. <br> This field is required in ADD operation, and will be ignored in REMOVE operation.<br> * Available values can be referred to fieldName field of fields object obtained by getReportFields operation of ReportDefinitionService. </div> ")
 
 
-  public JsonNullable<List<String>> getFields() {
+  public List<String> getFields() {
     return fields;
   }
 
-  public void setFields(JsonNullable<List<String>> fields) {
+  public void setFields(List<String> fields) {
     this.fields = fields;
   }
 
   public ReportDefinition filters(List<ReportDefinitionServiceFilter> filters) {
-    this.filters = JsonNullable.of(filters);
+    this.filters = filters;
     return this;
   }
 
   public ReportDefinition addFiltersItem(ReportDefinitionServiceFilter filtersItem) {
-    if (this.filters == null || !this.filters.isPresent()) {
-      this.filters = JsonNullable.of(new ArrayList<>());
+    if (this.filters == null) {
+      this.filters = new ArrayList<>();
     }
-    this.filters.get().add(filtersItem);
+    this.filters.add(filtersItem);
     return this;
   }
 
@@ -203,16 +202,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceFilter>> getFilters() {
+  public List<ReportDefinitionServiceFilter> getFilters() {
     return filters;
   }
 
-  public void setFilters(JsonNullable<List<ReportDefinitionServiceFilter>> filters) {
+  public void setFilters(List<ReportDefinitionServiceFilter> filters) {
     this.filters = filters;
   }
 
   public ReportDefinition reportCompressType(ReportDefinitionServiceReportCompressType reportCompressType) {
-    this.reportCompressType = JsonNullable.of(reportCompressType);
+    this.reportCompressType = reportCompressType;
     return this;
   }
 
@@ -224,16 +223,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportCompressType> getReportCompressType() {
+  public ReportDefinitionServiceReportCompressType getReportCompressType() {
     return reportCompressType;
   }
 
-  public void setReportCompressType(JsonNullable<ReportDefinitionServiceReportCompressType> reportCompressType) {
+  public void setReportCompressType(ReportDefinitionServiceReportCompressType reportCompressType) {
     this.reportCompressType = reportCompressType;
   }
 
   public ReportDefinition reportDateRangeType(ReportDefinitionServiceReportDateRangeType reportDateRangeType) {
-    this.reportDateRangeType = JsonNullable.of(reportDateRangeType);
+    this.reportDateRangeType = reportDateRangeType;
     return this;
   }
 
@@ -245,16 +244,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportDateRangeType> getReportDateRangeType() {
+  public ReportDefinitionServiceReportDateRangeType getReportDateRangeType() {
     return reportDateRangeType;
   }
 
-  public void setReportDateRangeType(JsonNullable<ReportDefinitionServiceReportDateRangeType> reportDateRangeType) {
+  public void setReportDateRangeType(ReportDefinitionServiceReportDateRangeType reportDateRangeType) {
     this.reportDateRangeType = reportDateRangeType;
   }
 
   public ReportDefinition reportDownloadEncode(ReportDefinitionServiceReportDownloadEncode reportDownloadEncode) {
-    this.reportDownloadEncode = JsonNullable.of(reportDownloadEncode);
+    this.reportDownloadEncode = reportDownloadEncode;
     return this;
   }
 
@@ -266,16 +265,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportDownloadEncode> getReportDownloadEncode() {
+  public ReportDefinitionServiceReportDownloadEncode getReportDownloadEncode() {
     return reportDownloadEncode;
   }
 
-  public void setReportDownloadEncode(JsonNullable<ReportDefinitionServiceReportDownloadEncode> reportDownloadEncode) {
+  public void setReportDownloadEncode(ReportDefinitionServiceReportDownloadEncode reportDownloadEncode) {
     this.reportDownloadEncode = reportDownloadEncode;
   }
 
   public ReportDefinition reportDownloadFormat(ReportDefinitionServiceReportDownloadFormat reportDownloadFormat) {
-    this.reportDownloadFormat = JsonNullable.of(reportDownloadFormat);
+    this.reportDownloadFormat = reportDownloadFormat;
     return this;
   }
 
@@ -287,16 +286,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportDownloadFormat> getReportDownloadFormat() {
+  public ReportDefinitionServiceReportDownloadFormat getReportDownloadFormat() {
     return reportDownloadFormat;
   }
 
-  public void setReportDownloadFormat(JsonNullable<ReportDefinitionServiceReportDownloadFormat> reportDownloadFormat) {
+  public void setReportDownloadFormat(ReportDefinitionServiceReportDownloadFormat reportDownloadFormat) {
     this.reportDownloadFormat = reportDownloadFormat;
   }
 
   public ReportDefinition reportJobStatus(ReportDefinitionServiceReportJobStatus reportJobStatus) {
-    this.reportJobStatus = JsonNullable.of(reportJobStatus);
+    this.reportJobStatus = reportJobStatus;
     return this;
   }
 
@@ -308,16 +307,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportJobStatus> getReportJobStatus() {
+  public ReportDefinitionServiceReportJobStatus getReportJobStatus() {
     return reportJobStatus;
   }
 
-  public void setReportJobStatus(JsonNullable<ReportDefinitionServiceReportJobStatus> reportJobStatus) {
+  public void setReportJobStatus(ReportDefinitionServiceReportJobStatus reportJobStatus) {
     this.reportJobStatus = reportJobStatus;
   }
 
   public ReportDefinition reportJobErrorDetail(String reportJobErrorDetail) {
-    this.reportJobErrorDetail = JsonNullable.of(reportJobErrorDetail);
+    this.reportJobErrorDetail = reportJobErrorDetail;
     return this;
   }
 
@@ -328,16 +327,16 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ジョブエラー詳細です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> 「Over limit of file size.」が返される場合は、レポートのサイズが小さくなるようにレポート作成時の条件を変更してください。 </div> <div lang=\"en\"> Job Error Detail. <br> Although this field will be returned in the response, it will be ignored on input.<br> If the message \"Over limit of file size.\" is returned, change the report creation conditions to reduce the size of the report. </div> ")
 
 
-  public JsonNullable<String> getReportJobErrorDetail() {
+  public String getReportJobErrorDetail() {
     return reportJobErrorDetail;
   }
 
-  public void setReportJobErrorDetail(JsonNullable<String> reportJobErrorDetail) {
+  public void setReportJobErrorDetail(String reportJobErrorDetail) {
     this.reportJobErrorDetail = reportJobErrorDetail;
   }
 
   public ReportDefinition reportJobId(Long reportJobId) {
-    this.reportJobId = JsonNullable.of(reportJobId);
+    this.reportJobId = reportJobId;
     return this;
   }
 
@@ -348,16 +347,16 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> レポートジョブIDです。<br> このフィールドは、REMOVE時に必須となり、ADD時に無視されます。 </div> <div lang=\"en\"> Report Job Id. <br> This field is required in REMOVE operation, and will be ignored in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getReportJobId() {
+  public Long getReportJobId() {
     return reportJobId;
   }
 
-  public void setReportJobId(JsonNullable<Long> reportJobId) {
+  public void setReportJobId(Long reportJobId) {
     this.reportJobId = reportJobId;
   }
 
   public ReportDefinition reportLanguage(ReportDefinitionServiceReportLanguage reportLanguage) {
-    this.reportLanguage = JsonNullable.of(reportLanguage);
+    this.reportLanguage = reportLanguage;
     return this;
   }
 
@@ -369,16 +368,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportLanguage> getReportLanguage() {
+  public ReportDefinitionServiceReportLanguage getReportLanguage() {
     return reportLanguage;
   }
 
-  public void setReportLanguage(JsonNullable<ReportDefinitionServiceReportLanguage> reportLanguage) {
+  public void setReportLanguage(ReportDefinitionServiceReportLanguage reportLanguage) {
     this.reportLanguage = reportLanguage;
   }
 
   public ReportDefinition reportName(String reportName) {
-    this.reportName = JsonNullable.of(reportName);
+    this.reportName = reportName;
     return this;
   }
 
@@ -389,16 +388,16 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> レポート名です。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> Report name. <br> This field is optional in ADD operation, and will be ignored in REMOVE operation. </div> ")
 
 
-  public JsonNullable<String> getReportName() {
+  public String getReportName() {
     return reportName;
   }
 
-  public void setReportName(JsonNullable<String> reportName) {
+  public void setReportName(String reportName) {
     this.reportName = reportName;
   }
 
   public ReportDefinition requestTime(String requestTime) {
-    this.requestTime = JsonNullable.of(requestTime);
+    this.requestTime = requestTime;
     return this;
   }
 
@@ -409,16 +408,16 @@ public class ReportDefinition   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ジョブ依頼日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The date and time of Job request. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getRequestTime() {
+  public String getRequestTime() {
     return requestTime;
   }
 
-  public void setRequestTime(JsonNullable<String> requestTime) {
+  public void setRequestTime(String requestTime) {
     this.requestTime = requestTime;
   }
 
   public ReportDefinition reportSkipColumnHeader(ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader) {
-    this.reportSkipColumnHeader = JsonNullable.of(reportSkipColumnHeader);
+    this.reportSkipColumnHeader = reportSkipColumnHeader;
     return this;
   }
 
@@ -430,16 +429,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportSkipColumnHeader> getReportSkipColumnHeader() {
+  public ReportDefinitionServiceReportSkipColumnHeader getReportSkipColumnHeader() {
     return reportSkipColumnHeader;
   }
 
-  public void setReportSkipColumnHeader(JsonNullable<ReportDefinitionServiceReportSkipColumnHeader> reportSkipColumnHeader) {
+  public void setReportSkipColumnHeader(ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader) {
     this.reportSkipColumnHeader = reportSkipColumnHeader;
   }
 
   public ReportDefinition reportSkipReportSummary(ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary) {
-    this.reportSkipReportSummary = JsonNullable.of(reportSkipReportSummary);
+    this.reportSkipReportSummary = reportSkipReportSummary;
     return this;
   }
 
@@ -451,16 +450,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportSkipReportSummary> getReportSkipReportSummary() {
+  public ReportDefinitionServiceReportSkipReportSummary getReportSkipReportSummary() {
     return reportSkipReportSummary;
   }
 
-  public void setReportSkipReportSummary(JsonNullable<ReportDefinitionServiceReportSkipReportSummary> reportSkipReportSummary) {
+  public void setReportSkipReportSummary(ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary) {
     this.reportSkipReportSummary = reportSkipReportSummary;
   }
 
   public ReportDefinition reportDecimalPartDisplayType(ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType) {
-    this.reportDecimalPartDisplayType = JsonNullable.of(reportDecimalPartDisplayType);
+    this.reportDecimalPartDisplayType = reportDecimalPartDisplayType;
     return this;
   }
 
@@ -472,16 +471,16 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportDecimalPartDisplayType> getReportDecimalPartDisplayType() {
+  public ReportDefinitionServiceReportDecimalPartDisplayType getReportDecimalPartDisplayType() {
     return reportDecimalPartDisplayType;
   }
 
-  public void setReportDecimalPartDisplayType(JsonNullable<ReportDefinitionServiceReportDecimalPartDisplayType> reportDecimalPartDisplayType) {
+  public void setReportDecimalPartDisplayType(ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType) {
     this.reportDecimalPartDisplayType = reportDecimalPartDisplayType;
   }
 
   public ReportDefinition reportTypeCondition(ReportDefinitionServiceReportTypeCondition reportTypeCondition) {
-    this.reportTypeCondition = JsonNullable.of(reportTypeCondition);
+    this.reportTypeCondition = reportTypeCondition;
     return this;
   }
 
@@ -493,24 +492,24 @@ public class ReportDefinition   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceReportTypeCondition> getReportTypeCondition() {
+  public ReportDefinitionServiceReportTypeCondition getReportTypeCondition() {
     return reportTypeCondition;
   }
 
-  public void setReportTypeCondition(JsonNullable<ReportDefinitionServiceReportTypeCondition> reportTypeCondition) {
+  public void setReportTypeCondition(ReportDefinitionServiceReportTypeCondition reportTypeCondition) {
     this.reportTypeCondition = reportTypeCondition;
   }
 
   public ReportDefinition sortFields(List<ReportDefinitionServiceReportSortField> sortFields) {
-    this.sortFields = JsonNullable.of(sortFields);
+    this.sortFields = sortFields;
     return this;
   }
 
   public ReportDefinition addSortFieldsItem(ReportDefinitionServiceReportSortField sortFieldsItem) {
-    if (this.sortFields == null || !this.sortFields.isPresent()) {
-      this.sortFields = JsonNullable.of(new ArrayList<>());
+    if (this.sortFields == null) {
+      this.sortFields = new ArrayList<>();
     }
-    this.sortFields.get().add(sortFieldsItem);
+    this.sortFields.add(sortFieldsItem);
     return this;
   }
 
@@ -522,17 +521,17 @@ public class ReportDefinition   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<ReportDefinitionServiceReportSortField>> getSortFields() {
+  public List<ReportDefinitionServiceReportSortField> getSortFields() {
     return sortFields;
   }
 
-  public void setSortFields(JsonNullable<List<ReportDefinitionServiceReportSortField>> sortFields) {
+  public void setSortFields(List<ReportDefinitionServiceReportSortField> sortFields) {
     this.sortFields = sortFields;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -600,7 +599,7 @@ public class ReportDefinition   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

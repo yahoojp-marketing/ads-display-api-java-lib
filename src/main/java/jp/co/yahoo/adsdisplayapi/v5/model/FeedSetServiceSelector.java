@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,7 +14,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSetServiceSelector object contains search condition of get operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">get操作の検索条件を保持するオブジェクト</div> <div lang=\"en\">FeedSetServiceSelector object contains search condition of get operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedSetServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
@@ -25,10 +24,10 @@ public class FeedSetServiceSelector   {
 
   @JsonProperty("feedSetIds")
   @Valid
-  private JsonNullable<List<Long>> feedSetIds = JsonNullable.undefined();
+  private List<Long> feedSetIds = null;
 
   @JsonProperty("includeItemCount")
-  private JsonNullable<Boolean> includeItemCount = JsonNullable.undefined();
+  private Boolean includeItemCount = null;
 
   public FeedSetServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -73,15 +72,15 @@ public class FeedSetServiceSelector   {
   }
 
   public FeedSetServiceSelector feedSetIds(List<Long> feedSetIds) {
-    this.feedSetIds = JsonNullable.of(feedSetIds);
+    this.feedSetIds = feedSetIds;
     return this;
   }
 
   public FeedSetServiceSelector addFeedSetIdsItem(Long feedSetIdsItem) {
-    if (this.feedSetIds == null || !this.feedSetIds.isPresent()) {
-      this.feedSetIds = JsonNullable.of(new ArrayList<>());
+    if (this.feedSetIds == null) {
+      this.feedSetIds = new ArrayList<>();
     }
-    this.feedSetIds.get().add(feedSetIdsItem);
+    this.feedSetIds.add(feedSetIdsItem);
     return this;
   }
 
@@ -92,16 +91,16 @@ public class FeedSetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品セットID</div> <div lang=\"en\">Item Set ID.</div> ")
 
 @Size(max=30) 
-  public JsonNullable<List<Long>> getFeedSetIds() {
+  public List<Long> getFeedSetIds() {
     return feedSetIds;
   }
 
-  public void setFeedSetIds(JsonNullable<List<Long>> feedSetIds) {
+  public void setFeedSetIds(List<Long> feedSetIds) {
     this.feedSetIds = feedSetIds;
   }
 
   public FeedSetServiceSelector includeItemCount(Boolean includeItemCount) {
-    this.includeItemCount = JsonNullable.of(includeItemCount);
+    this.includeItemCount = includeItemCount;
     return this;
   }
 
@@ -112,17 +111,17 @@ public class FeedSetServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットのアイテム件数を表示<br> trueの場合は、アイテム件数を表示<br> ※デフォルト値はfalse:表示しない。 </div> <div lang=\"en\"> Describes number of items of Item Set.<br> If true, the number of items is described.<br> ∗ Default is false: Not described. </div> ")
 
 
-  public JsonNullable<Boolean> getIncludeItemCount() {
+  public Boolean getIncludeItemCount() {
     return includeItemCount;
   }
 
-  public void setIncludeItemCount(JsonNullable<Boolean> includeItemCount) {
+  public void setIncludeItemCount(Boolean includeItemCount) {
     this.includeItemCount = includeItemCount;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -158,7 +157,7 @@ public class FeedSetServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

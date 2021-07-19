@@ -18,7 +18,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServicePlacementCat
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServicePositionTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceSiteRetargetingTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -26,52 +25,52 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedInventoryServiceTargetオブジェクトは、ターゲティング設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedInventoryServiceTarget object holds information of the target setting.&lt;br&gt; This field is optional in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedInventoryServiceTargetオブジェクトは、ターゲティング設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> GuaranteedInventoryServiceTarget object holds information of the target setting.<br> This field is optional in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceTarget   {
   @JsonProperty("adScheduleTarget")
-  private JsonNullable<GuaranteedInventoryServiceAdScheduleTarget> adScheduleTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceAdScheduleTarget adScheduleTarget = null;
 
   @JsonProperty("ageTarget")
-  private JsonNullable<GuaranteedInventoryServiceAgeTarget> ageTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceAgeTarget ageTarget = null;
 
   @JsonProperty("appTarget")
-  private JsonNullable<GuaranteedInventoryServiceAppTarget> appTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceAppTarget appTarget = null;
 
   @JsonProperty("audienceCategoryTarget")
-  private JsonNullable<GuaranteedInventoryServiceAudienceCategoryTarget> audienceCategoryTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceAudienceCategoryTarget audienceCategoryTarget = null;
 
   @JsonProperty("deviceTarget")
-  private JsonNullable<GuaranteedInventoryServiceDeviceTarget> deviceTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceDeviceTarget deviceTarget = null;
 
   @JsonProperty("genderTarget")
-  private JsonNullable<GuaranteedInventoryServiceGenderTarget> genderTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceGenderTarget genderTarget = null;
 
   @JsonProperty("geoTarget")
-  private JsonNullable<GuaranteedInventoryServiceGeoTarget> geoTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceGeoTarget geoTarget = null;
 
   @JsonProperty("osTarget")
-  private JsonNullable<GuaranteedInventoryServiceOsTarget> osTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceOsTarget osTarget = null;
 
   @JsonProperty("placementCategoryTarget")
-  private JsonNullable<GuaranteedInventoryServicePlacementCategoryTarget> placementCategoryTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServicePlacementCategoryTarget placementCategoryTarget = null;
 
   @JsonProperty("placementCategoryDetailTarget")
-  private JsonNullable<GuaranteedInventoryServicePlacementCategoryDetailTarget> placementCategoryDetailTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServicePlacementCategoryDetailTarget placementCategoryDetailTarget = null;
 
   @JsonProperty("positionTarget")
-  private JsonNullable<GuaranteedInventoryServicePositionTarget> positionTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServicePositionTarget positionTarget = null;
 
   @JsonProperty("siteRetargetingTarget")
-  private JsonNullable<GuaranteedInventoryServiceSiteRetargetingTarget> siteRetargetingTarget = JsonNullable.undefined();
+  private GuaranteedInventoryServiceSiteRetargetingTarget siteRetargetingTarget = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("targetType")
-  private JsonNullable<GuaranteedInventoryServiceTargetType> targetType = JsonNullable.undefined();
+  private GuaranteedInventoryServiceTargetType targetType = null;
 
   public GuaranteedInventoryServiceTarget adScheduleTarget(GuaranteedInventoryServiceAdScheduleTarget adScheduleTarget) {
-    this.adScheduleTarget = JsonNullable.of(adScheduleTarget);
+    this.adScheduleTarget = adScheduleTarget;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceAdScheduleTarget> getAdScheduleTarget() {
+  public GuaranteedInventoryServiceAdScheduleTarget getAdScheduleTarget() {
     return adScheduleTarget;
   }
 
-  public void setAdScheduleTarget(JsonNullable<GuaranteedInventoryServiceAdScheduleTarget> adScheduleTarget) {
+  public void setAdScheduleTarget(GuaranteedInventoryServiceAdScheduleTarget adScheduleTarget) {
     this.adScheduleTarget = adScheduleTarget;
   }
 
   public GuaranteedInventoryServiceTarget ageTarget(GuaranteedInventoryServiceAgeTarget ageTarget) {
-    this.ageTarget = JsonNullable.of(ageTarget);
+    this.ageTarget = ageTarget;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceAgeTarget> getAgeTarget() {
+  public GuaranteedInventoryServiceAgeTarget getAgeTarget() {
     return ageTarget;
   }
 
-  public void setAgeTarget(JsonNullable<GuaranteedInventoryServiceAgeTarget> ageTarget) {
+  public void setAgeTarget(GuaranteedInventoryServiceAgeTarget ageTarget) {
     this.ageTarget = ageTarget;
   }
 
   public GuaranteedInventoryServiceTarget appTarget(GuaranteedInventoryServiceAppTarget appTarget) {
-    this.appTarget = JsonNullable.of(appTarget);
+    this.appTarget = appTarget;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceAppTarget> getAppTarget() {
+  public GuaranteedInventoryServiceAppTarget getAppTarget() {
     return appTarget;
   }
 
-  public void setAppTarget(JsonNullable<GuaranteedInventoryServiceAppTarget> appTarget) {
+  public void setAppTarget(GuaranteedInventoryServiceAppTarget appTarget) {
     this.appTarget = appTarget;
   }
 
   public GuaranteedInventoryServiceTarget audienceCategoryTarget(GuaranteedInventoryServiceAudienceCategoryTarget audienceCategoryTarget) {
-    this.audienceCategoryTarget = JsonNullable.of(audienceCategoryTarget);
+    this.audienceCategoryTarget = audienceCategoryTarget;
     return this;
   }
 
@@ -146,16 +145,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceAudienceCategoryTarget> getAudienceCategoryTarget() {
+  public GuaranteedInventoryServiceAudienceCategoryTarget getAudienceCategoryTarget() {
     return audienceCategoryTarget;
   }
 
-  public void setAudienceCategoryTarget(JsonNullable<GuaranteedInventoryServiceAudienceCategoryTarget> audienceCategoryTarget) {
+  public void setAudienceCategoryTarget(GuaranteedInventoryServiceAudienceCategoryTarget audienceCategoryTarget) {
     this.audienceCategoryTarget = audienceCategoryTarget;
   }
 
   public GuaranteedInventoryServiceTarget deviceTarget(GuaranteedInventoryServiceDeviceTarget deviceTarget) {
-    this.deviceTarget = JsonNullable.of(deviceTarget);
+    this.deviceTarget = deviceTarget;
     return this;
   }
 
@@ -167,16 +166,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceDeviceTarget> getDeviceTarget() {
+  public GuaranteedInventoryServiceDeviceTarget getDeviceTarget() {
     return deviceTarget;
   }
 
-  public void setDeviceTarget(JsonNullable<GuaranteedInventoryServiceDeviceTarget> deviceTarget) {
+  public void setDeviceTarget(GuaranteedInventoryServiceDeviceTarget deviceTarget) {
     this.deviceTarget = deviceTarget;
   }
 
   public GuaranteedInventoryServiceTarget genderTarget(GuaranteedInventoryServiceGenderTarget genderTarget) {
-    this.genderTarget = JsonNullable.of(genderTarget);
+    this.genderTarget = genderTarget;
     return this;
   }
 
@@ -188,16 +187,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceGenderTarget> getGenderTarget() {
+  public GuaranteedInventoryServiceGenderTarget getGenderTarget() {
     return genderTarget;
   }
 
-  public void setGenderTarget(JsonNullable<GuaranteedInventoryServiceGenderTarget> genderTarget) {
+  public void setGenderTarget(GuaranteedInventoryServiceGenderTarget genderTarget) {
     this.genderTarget = genderTarget;
   }
 
   public GuaranteedInventoryServiceTarget geoTarget(GuaranteedInventoryServiceGeoTarget geoTarget) {
-    this.geoTarget = JsonNullable.of(geoTarget);
+    this.geoTarget = geoTarget;
     return this;
   }
 
@@ -209,16 +208,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceGeoTarget> getGeoTarget() {
+  public GuaranteedInventoryServiceGeoTarget getGeoTarget() {
     return geoTarget;
   }
 
-  public void setGeoTarget(JsonNullable<GuaranteedInventoryServiceGeoTarget> geoTarget) {
+  public void setGeoTarget(GuaranteedInventoryServiceGeoTarget geoTarget) {
     this.geoTarget = geoTarget;
   }
 
   public GuaranteedInventoryServiceTarget osTarget(GuaranteedInventoryServiceOsTarget osTarget) {
-    this.osTarget = JsonNullable.of(osTarget);
+    this.osTarget = osTarget;
     return this;
   }
 
@@ -230,16 +229,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceOsTarget> getOsTarget() {
+  public GuaranteedInventoryServiceOsTarget getOsTarget() {
     return osTarget;
   }
 
-  public void setOsTarget(JsonNullable<GuaranteedInventoryServiceOsTarget> osTarget) {
+  public void setOsTarget(GuaranteedInventoryServiceOsTarget osTarget) {
     this.osTarget = osTarget;
   }
 
   public GuaranteedInventoryServiceTarget placementCategoryTarget(GuaranteedInventoryServicePlacementCategoryTarget placementCategoryTarget) {
-    this.placementCategoryTarget = JsonNullable.of(placementCategoryTarget);
+    this.placementCategoryTarget = placementCategoryTarget;
     return this;
   }
 
@@ -251,16 +250,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServicePlacementCategoryTarget> getPlacementCategoryTarget() {
+  public GuaranteedInventoryServicePlacementCategoryTarget getPlacementCategoryTarget() {
     return placementCategoryTarget;
   }
 
-  public void setPlacementCategoryTarget(JsonNullable<GuaranteedInventoryServicePlacementCategoryTarget> placementCategoryTarget) {
+  public void setPlacementCategoryTarget(GuaranteedInventoryServicePlacementCategoryTarget placementCategoryTarget) {
     this.placementCategoryTarget = placementCategoryTarget;
   }
 
   public GuaranteedInventoryServiceTarget placementCategoryDetailTarget(GuaranteedInventoryServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
-    this.placementCategoryDetailTarget = JsonNullable.of(placementCategoryDetailTarget);
+    this.placementCategoryDetailTarget = placementCategoryDetailTarget;
     return this;
   }
 
@@ -272,16 +271,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServicePlacementCategoryDetailTarget> getPlacementCategoryDetailTarget() {
+  public GuaranteedInventoryServicePlacementCategoryDetailTarget getPlacementCategoryDetailTarget() {
     return placementCategoryDetailTarget;
   }
 
-  public void setPlacementCategoryDetailTarget(JsonNullable<GuaranteedInventoryServicePlacementCategoryDetailTarget> placementCategoryDetailTarget) {
+  public void setPlacementCategoryDetailTarget(GuaranteedInventoryServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
   }
 
   public GuaranteedInventoryServiceTarget positionTarget(GuaranteedInventoryServicePositionTarget positionTarget) {
-    this.positionTarget = JsonNullable.of(positionTarget);
+    this.positionTarget = positionTarget;
     return this;
   }
 
@@ -293,16 +292,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServicePositionTarget> getPositionTarget() {
+  public GuaranteedInventoryServicePositionTarget getPositionTarget() {
     return positionTarget;
   }
 
-  public void setPositionTarget(JsonNullable<GuaranteedInventoryServicePositionTarget> positionTarget) {
+  public void setPositionTarget(GuaranteedInventoryServicePositionTarget positionTarget) {
     this.positionTarget = positionTarget;
   }
 
   public GuaranteedInventoryServiceTarget siteRetargetingTarget(GuaranteedInventoryServiceSiteRetargetingTarget siteRetargetingTarget) {
-    this.siteRetargetingTarget = JsonNullable.of(siteRetargetingTarget);
+    this.siteRetargetingTarget = siteRetargetingTarget;
     return this;
   }
 
@@ -314,16 +313,16 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceSiteRetargetingTarget> getSiteRetargetingTarget() {
+  public GuaranteedInventoryServiceSiteRetargetingTarget getSiteRetargetingTarget() {
     return siteRetargetingTarget;
   }
 
-  public void setSiteRetargetingTarget(JsonNullable<GuaranteedInventoryServiceSiteRetargetingTarget> siteRetargetingTarget) {
+  public void setSiteRetargetingTarget(GuaranteedInventoryServiceSiteRetargetingTarget siteRetargetingTarget) {
     this.siteRetargetingTarget = siteRetargetingTarget;
   }
 
   public GuaranteedInventoryServiceTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -334,16 +333,16 @@ public class GuaranteedInventoryServiceTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットIDです。<br> このフィールドは、ADD時は省略可能となります。 </div> <div lang=\"en\"> Target ID.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedInventoryServiceTarget targetType(GuaranteedInventoryServiceTargetType targetType) {
-    this.targetType = JsonNullable.of(targetType);
+    this.targetType = targetType;
     return this;
   }
 
@@ -355,17 +354,17 @@ public class GuaranteedInventoryServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedInventoryServiceTargetType> getTargetType() {
+  public GuaranteedInventoryServiceTargetType getTargetType() {
     return targetType;
   }
 
-  public void setTargetType(JsonNullable<GuaranteedInventoryServiceTargetType> targetType) {
+  public void setTargetType(GuaranteedInventoryServiceTargetType targetType) {
     this.targetType = targetType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -421,7 +420,7 @@ public class GuaranteedInventoryServiceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

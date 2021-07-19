@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   GuaranteedSimulationServiceBuyingTermは、範囲指定の商品購入期間情報を保持します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   GuaranteedSimulationServiceBuyingTerm holds information about the package purchase term with range specified.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   GuaranteedSimulationServiceBuyingTermは、範囲指定の商品購入期間情報を保持します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   GuaranteedSimulationServiceBuyingTerm holds information about the package purchase term with range specified.<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceCustomRangeBuyingTerm   {
   @JsonProperty("buyingTermDateMinRange")
-  private JsonNullable<Long> buyingTermDateMinRange = JsonNullable.undefined();
+  private Long buyingTermDateMinRange = null;
 
   @JsonProperty("buyingTermDateMaxRange")
-  private JsonNullable<Long> buyingTermDateMaxRange = JsonNullable.undefined();
+  private Long buyingTermDateMaxRange = null;
 
   public GuaranteedSimulationServiceCustomRangeBuyingTerm buyingTermDateMinRange(Long buyingTermDateMinRange) {
-    this.buyingTermDateMinRange = JsonNullable.of(buyingTermDateMinRange);
+    this.buyingTermDateMinRange = buyingTermDateMinRange;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class GuaranteedSimulationServiceCustomRangeBuyingTerm   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品購入期間日数（範囲最小）を表します。</div> <div lang=\"en\">The number of days in the package purchase term (minimum range).</div> ")
 
 
-  public JsonNullable<Long> getBuyingTermDateMinRange() {
+  public Long getBuyingTermDateMinRange() {
     return buyingTermDateMinRange;
   }
 
-  public void setBuyingTermDateMinRange(JsonNullable<Long> buyingTermDateMinRange) {
+  public void setBuyingTermDateMinRange(Long buyingTermDateMinRange) {
     this.buyingTermDateMinRange = buyingTermDateMinRange;
   }
 
   public GuaranteedSimulationServiceCustomRangeBuyingTerm buyingTermDateMaxRange(Long buyingTermDateMaxRange) {
-    this.buyingTermDateMaxRange = JsonNullable.of(buyingTermDateMaxRange);
+    this.buyingTermDateMaxRange = buyingTermDateMaxRange;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class GuaranteedSimulationServiceCustomRangeBuyingTerm   {
   @ApiModelProperty(value = "<div lang=\"ja\">商品購入期間日数（範囲最大）を表します。</div> <div lang=\"en\">The number of days in the package purchase term (maximum range).</div> ")
 
 
-  public JsonNullable<Long> getBuyingTermDateMaxRange() {
+  public Long getBuyingTermDateMaxRange() {
     return buyingTermDateMaxRange;
   }
 
-  public void setBuyingTermDateMaxRange(JsonNullable<Long> buyingTermDateMaxRange) {
+  public void setBuyingTermDateMaxRange(Long buyingTermDateMaxRange) {
     this.buyingTermDateMaxRange = buyingTermDateMaxRange;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class GuaranteedSimulationServiceCustomRangeBuyingTerm   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

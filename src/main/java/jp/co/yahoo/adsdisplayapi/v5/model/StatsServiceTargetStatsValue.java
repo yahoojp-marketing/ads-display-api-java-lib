@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.Stats;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceTarget;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,28 +14,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceTargetStatsValuesオブジェクトは、ターゲティングの統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTargetStatsValues object contains Target stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceTargetStatsValuesオブジェクトは、ターゲティングの統計情報を保持します。</div> <div lang=\"en\">StatsServiceTargetStatsValues object contains Target stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceTargetStatsValue   {
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("stats")
-  private JsonNullable<Stats> stats = JsonNullable.undefined();
+  private Stats stats = null;
 
   @JsonProperty("target")
-  private JsonNullable<StatsServiceTarget> target = JsonNullable.undefined();
+  private StatsServiceTarget target = null;
 
   public StatsServiceTargetStatsValue campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -47,16 +46,16 @@ public class StatsServiceTargetStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンID</div> <div lang=\"en\">Campaign ID</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public StatsServiceTargetStatsValue campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -67,16 +66,16 @@ public class StatsServiceTargetStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名</div> <div lang=\"en\">Campaign name</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public StatsServiceTargetStatsValue adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -87,16 +86,16 @@ public class StatsServiceTargetStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループID</div> <div lang=\"en\">Ad group ID</div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public StatsServiceTargetStatsValue adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -107,16 +106,16 @@ public class StatsServiceTargetStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループ名</div> <div lang=\"en\">Ad group name</div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public StatsServiceTargetStatsValue stats(Stats stats) {
-    this.stats = JsonNullable.of(stats);
+    this.stats = stats;
     return this;
   }
 
@@ -128,16 +127,16 @@ public class StatsServiceTargetStatsValue   {
 
   @Valid
 
-  public JsonNullable<Stats> getStats() {
+  public Stats getStats() {
     return stats;
   }
 
-  public void setStats(JsonNullable<Stats> stats) {
+  public void setStats(Stats stats) {
     this.stats = stats;
   }
 
   public StatsServiceTargetStatsValue target(StatsServiceTarget target) {
-    this.target = JsonNullable.of(target);
+    this.target = target;
     return this;
   }
 
@@ -149,17 +148,17 @@ public class StatsServiceTargetStatsValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceTarget> getTarget() {
+  public StatsServiceTarget getTarget() {
     return target;
   }
 
-  public void setTarget(JsonNullable<StatsServiceTarget> target) {
+  public void setTarget(StatsServiceTarget target) {
     this.target = target;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -199,7 +198,7 @@ public class StatsServiceTargetStatsValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

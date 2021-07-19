@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedPreviewServiceAdType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,31 +13,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedPreviewServiceMaterialMediaオブジェクトは、プレビュー素材（メディア）の情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedPreviewServiceMaterialMedia object holds information about the preview material (media).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedPreviewServiceMaterialMediaオブジェクトは、プレビュー素材（メディア）の情報を保持します。</div> <div lang=\"en\">GuaranteedPreviewServiceMaterialMedia object holds information about the preview material (media).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedPreviewServiceMaterialMedia   {
   @JsonProperty("adType")
-  private JsonNullable<GuaranteedPreviewServiceAdType> adType = JsonNullable.undefined();
+  private GuaranteedPreviewServiceAdType adType = null;
 
   @JsonProperty("mediaId")
-  private JsonNullable<Long> mediaId = JsonNullable.undefined();
+  private Long mediaId = null;
 
   @JsonProperty("thumbnailMediaId")
-  private JsonNullable<Long> thumbnailMediaId = JsonNullable.undefined();
+  private Long thumbnailMediaId = null;
 
   @JsonProperty("adLeftSideMediaId")
-  private JsonNullable<Long> adLeftSideMediaId = JsonNullable.undefined();
+  private Long adLeftSideMediaId = null;
 
   @JsonProperty("adRightSideMediaId")
-  private JsonNullable<Long> adRightSideMediaId = JsonNullable.undefined();
+  private Long adRightSideMediaId = null;
 
   @JsonProperty("adCenterMediaId")
-  private JsonNullable<Long> adCenterMediaId = JsonNullable.undefined();
+  private Long adCenterMediaId = null;
 
   @JsonProperty("adShrinkMainMediaId")
-  private JsonNullable<Long> adShrinkMainMediaId = JsonNullable.undefined();
+  private Long adShrinkMainMediaId = null;
 
   public GuaranteedPreviewServiceMaterialMedia adType(GuaranteedPreviewServiceAdType adType) {
-    this.adType = JsonNullable.of(adType);
+    this.adType = adType;
     return this;
   }
 
@@ -50,16 +49,16 @@ public class GuaranteedPreviewServiceMaterialMedia   {
 
   @Valid
 
-  public JsonNullable<GuaranteedPreviewServiceAdType> getAdType() {
+  public GuaranteedPreviewServiceAdType getAdType() {
     return adType;
   }
 
-  public void setAdType(JsonNullable<GuaranteedPreviewServiceAdType> adType) {
+  public void setAdType(GuaranteedPreviewServiceAdType adType) {
     this.adType = adType;
   }
 
   public GuaranteedPreviewServiceMaterialMedia mediaId(Long mediaId) {
-    this.mediaId = JsonNullable.of(mediaId);
+    this.mediaId = mediaId;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class GuaranteedPreviewServiceMaterialMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Media ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getMediaId() {
+  public Long getMediaId() {
     return mediaId;
   }
 
-  public void setMediaId(JsonNullable<Long> mediaId) {
+  public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
 
   public GuaranteedPreviewServiceMaterialMedia thumbnailMediaId(Long thumbnailMediaId) {
-    this.thumbnailMediaId = JsonNullable.of(thumbnailMediaId);
+    this.thumbnailMediaId = thumbnailMediaId;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class GuaranteedPreviewServiceMaterialMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サムネイルIDです。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> Thumbnail ID.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getThumbnailMediaId() {
+  public Long getThumbnailMediaId() {
     return thumbnailMediaId;
   }
 
-  public void setThumbnailMediaId(JsonNullable<Long> thumbnailMediaId) {
+  public void setThumbnailMediaId(Long thumbnailMediaId) {
     this.thumbnailMediaId = thumbnailMediaId;
   }
 
   public GuaranteedPreviewServiceMaterialMedia adLeftSideMediaId(Long adLeftSideMediaId) {
-    this.adLeftSideMediaId = JsonNullable.of(adLeftSideMediaId);
+    this.adLeftSideMediaId = adLeftSideMediaId;
     return this;
   }
 
@@ -110,16 +109,16 @@ public class GuaranteedPreviewServiceMaterialMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 左サイド画像です。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> Left side image.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getAdLeftSideMediaId() {
+  public Long getAdLeftSideMediaId() {
     return adLeftSideMediaId;
   }
 
-  public void setAdLeftSideMediaId(JsonNullable<Long> adLeftSideMediaId) {
+  public void setAdLeftSideMediaId(Long adLeftSideMediaId) {
     this.adLeftSideMediaId = adLeftSideMediaId;
   }
 
   public GuaranteedPreviewServiceMaterialMedia adRightSideMediaId(Long adRightSideMediaId) {
-    this.adRightSideMediaId = JsonNullable.of(adRightSideMediaId);
+    this.adRightSideMediaId = adRightSideMediaId;
     return this;
   }
 
@@ -130,16 +129,16 @@ public class GuaranteedPreviewServiceMaterialMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 右サイド画像です。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> Right side image.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getAdRightSideMediaId() {
+  public Long getAdRightSideMediaId() {
     return adRightSideMediaId;
   }
 
-  public void setAdRightSideMediaId(JsonNullable<Long> adRightSideMediaId) {
+  public void setAdRightSideMediaId(Long adRightSideMediaId) {
     this.adRightSideMediaId = adRightSideMediaId;
   }
 
   public GuaranteedPreviewServiceMaterialMedia adCenterMediaId(Long adCenterMediaId) {
-    this.adCenterMediaId = JsonNullable.of(adCenterMediaId);
+    this.adCenterMediaId = adCenterMediaId;
     return this;
   }
 
@@ -150,16 +149,16 @@ public class GuaranteedPreviewServiceMaterialMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> センター画像です。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> Center image.<br> This field is optional in requests. </div> ")
 
 
-  public JsonNullable<Long> getAdCenterMediaId() {
+  public Long getAdCenterMediaId() {
     return adCenterMediaId;
   }
 
-  public void setAdCenterMediaId(JsonNullable<Long> adCenterMediaId) {
+  public void setAdCenterMediaId(Long adCenterMediaId) {
     this.adCenterMediaId = adCenterMediaId;
   }
 
   public GuaranteedPreviewServiceMaterialMedia adShrinkMainMediaId(Long adShrinkMainMediaId) {
-    this.adShrinkMainMediaId = JsonNullable.of(adShrinkMainMediaId);
+    this.adShrinkMainMediaId = adShrinkMainMediaId;
     return this;
   }
 
@@ -170,17 +169,17 @@ public class GuaranteedPreviewServiceMaterialMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 縮小メイン画像です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reduced main image.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAdShrinkMainMediaId() {
+  public Long getAdShrinkMainMediaId() {
     return adShrinkMainMediaId;
   }
 
-  public void setAdShrinkMainMediaId(JsonNullable<Long> adShrinkMainMediaId) {
+  public void setAdShrinkMainMediaId(Long adShrinkMainMediaId) {
     this.adShrinkMainMediaId = adShrinkMainMediaId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -222,7 +221,7 @@ public class GuaranteedPreviewServiceMaterialMedia   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

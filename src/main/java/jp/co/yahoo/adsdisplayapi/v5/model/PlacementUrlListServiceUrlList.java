@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlListServiceUrlActiveFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PlacementUrlListServiceUrlListオブジェクトは、URLを保持するオブジェクトです。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The objects to keep url.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> PlacementUrlListServiceUrlListオブジェクトは、URLを保持するオブジェクトです。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> The objects to keep url.<br> This field is required in ADD operation, and is optional in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlListServiceUrlList   {
   @JsonProperty("placementUrl")
-  private JsonNullable<String> placementUrl = JsonNullable.undefined();
+  private String placementUrl = null;
 
   @JsonProperty("urlActiveFlg")
-  private JsonNullable<PlacementUrlListServiceUrlActiveFlg> urlActiveFlg = JsonNullable.undefined();
+  private PlacementUrlListServiceUrlActiveFlg urlActiveFlg = null;
 
   public PlacementUrlListServiceUrlList placementUrl(String placementUrl) {
-    this.placementUrl = JsonNullable.of(placementUrl);
+    this.placementUrl = placementUrl;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class PlacementUrlListServiceUrlList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> プレイスメントURLです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Url.<br> This field is required in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getPlacementUrl() {
+  public String getPlacementUrl() {
     return placementUrl;
   }
 
-  public void setPlacementUrl(JsonNullable<String> placementUrl) {
+  public void setPlacementUrl(String placementUrl) {
     this.placementUrl = placementUrl;
   }
 
   public PlacementUrlListServiceUrlList urlActiveFlg(PlacementUrlListServiceUrlActiveFlg urlActiveFlg) {
-    this.urlActiveFlg = JsonNullable.of(urlActiveFlg);
+    this.urlActiveFlg = urlActiveFlg;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class PlacementUrlListServiceUrlList   {
 
   @Valid
 
-  public JsonNullable<PlacementUrlListServiceUrlActiveFlg> getUrlActiveFlg() {
+  public PlacementUrlListServiceUrlActiveFlg getUrlActiveFlg() {
     return urlActiveFlg;
   }
 
-  public void setUrlActiveFlg(JsonNullable<PlacementUrlListServiceUrlActiveFlg> urlActiveFlg) {
+  public void setUrlActiveFlg(PlacementUrlListServiceUrlActiveFlg urlActiveFlg) {
     this.urlActiveFlg = urlActiveFlg;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class PlacementUrlListServiceUrlList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

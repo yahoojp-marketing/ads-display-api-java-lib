@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
 import jp.co.yahoo.adsdisplayapi.v5.model.Feed;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedServiceUploadLimit;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,24 +17,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceValueオブジェクトは、操作結果を含むFeed情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceValue object describes Feed information including operation result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedServiceValueオブジェクトは、操作結果を含むFeed情報を表します。</div> <div lang=\"en\">FeedServiceValue object describes Feed information including operation result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedServiceValue   {
   @JsonProperty("feed")
-  private JsonNullable<Feed> feed = JsonNullable.undefined();
+  private Feed feed = null;
 
   @JsonProperty("uploadLimits")
   @Valid
-  private JsonNullable<List<FeedServiceUploadLimit>> uploadLimits = JsonNullable.undefined();
+  private List<FeedServiceUploadLimit> uploadLimits = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public FeedServiceValue feed(Feed feed) {
-    this.feed = JsonNullable.of(feed);
+    this.feed = feed;
     return this;
   }
 
@@ -47,24 +46,24 @@ public class FeedServiceValue   {
 
   @Valid
 
-  public JsonNullable<Feed> getFeed() {
+  public Feed getFeed() {
     return feed;
   }
 
-  public void setFeed(JsonNullable<Feed> feed) {
+  public void setFeed(Feed feed) {
     this.feed = feed;
   }
 
   public FeedServiceValue uploadLimits(List<FeedServiceUploadLimit> uploadLimits) {
-    this.uploadLimits = JsonNullable.of(uploadLimits);
+    this.uploadLimits = uploadLimits;
     return this;
   }
 
   public FeedServiceValue addUploadLimitsItem(FeedServiceUploadLimit uploadLimitsItem) {
-    if (this.uploadLimits == null || !this.uploadLimits.isPresent()) {
-      this.uploadLimits = JsonNullable.of(new ArrayList<>());
+    if (this.uploadLimits == null) {
+      this.uploadLimits = new ArrayList<>();
     }
-    this.uploadLimits.get().add(uploadLimitsItem);
+    this.uploadLimits.add(uploadLimitsItem);
     return this;
   }
 
@@ -76,24 +75,24 @@ public class FeedServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<FeedServiceUploadLimit>> getUploadLimits() {
+  public List<FeedServiceUploadLimit> getUploadLimits() {
     return uploadLimits;
   }
 
-  public void setUploadLimits(JsonNullable<List<FeedServiceUploadLimit>> uploadLimits) {
+  public void setUploadLimits(List<FeedServiceUploadLimit> uploadLimits) {
     this.uploadLimits = uploadLimits;
   }
 
   public FeedServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public FeedServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -105,16 +104,16 @@ public class FeedServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public FeedServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -125,17 +124,17 @@ public class FeedServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果</div> <div lang=\"en\">Result of operation</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -171,7 +170,7 @@ public class FeedServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

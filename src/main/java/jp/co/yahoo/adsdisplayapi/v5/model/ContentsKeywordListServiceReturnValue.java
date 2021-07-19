@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ContentsKeywordListServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordListServiceReturnValueオブジェクトは、コンテンツキーワードリスト設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordListServiceReturnValue object displays the setting of contents keyword list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ContentsKeywordListServiceReturnValueオブジェクトは、コンテンツキーワードリスト設定を表します。</div> <div lang=\"en\">ContentsKeywordListServiceReturnValue object displays the setting of contents keyword list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ContentsKeywordListServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<ContentsKeywordListServiceValue>> values = JsonNullable.undefined();
+  private List<ContentsKeywordListServiceValue> values = null;
 
   public ContentsKeywordListServiceReturnValue values(List<ContentsKeywordListServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public ContentsKeywordListServiceReturnValue addValuesItem(ContentsKeywordListServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class ContentsKeywordListServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<ContentsKeywordListServiceValue>> getValues() {
+  public List<ContentsKeywordListServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<ContentsKeywordListServiceValue>> values) {
+  public void setValues(List<ContentsKeywordListServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class ContentsKeywordListServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

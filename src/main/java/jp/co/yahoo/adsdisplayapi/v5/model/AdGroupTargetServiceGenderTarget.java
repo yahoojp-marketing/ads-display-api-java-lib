@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceEstimateFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceGender;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceGenderTargetオブジェクトは、性別ターゲティングの設定を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがGENDER_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceGenderTarget object is a container for storing gender targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is GENDER_TARGET, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceGenderTargetオブジェクトは、性別ターゲティングの設定を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがGENDER_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceGenderTarget object is a container for storing gender targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is GENDER_TARGET, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceGenderTarget   {
   @JsonProperty("estimateFlg")
-  private JsonNullable<AdGroupTargetServiceEstimateFlg> estimateFlg = JsonNullable.undefined();
+  private AdGroupTargetServiceEstimateFlg estimateFlg = null;
 
   @JsonProperty("gender")
-  private JsonNullable<AdGroupTargetServiceGender> gender = JsonNullable.undefined();
+  private AdGroupTargetServiceGender gender = null;
 
   public AdGroupTargetServiceGenderTarget estimateFlg(AdGroupTargetServiceEstimateFlg estimateFlg) {
-    this.estimateFlg = JsonNullable.of(estimateFlg);
+    this.estimateFlg = estimateFlg;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class AdGroupTargetServiceGenderTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceEstimateFlg> getEstimateFlg() {
+  public AdGroupTargetServiceEstimateFlg getEstimateFlg() {
     return estimateFlg;
   }
 
-  public void setEstimateFlg(JsonNullable<AdGroupTargetServiceEstimateFlg> estimateFlg) {
+  public void setEstimateFlg(AdGroupTargetServiceEstimateFlg estimateFlg) {
     this.estimateFlg = estimateFlg;
   }
 
   public AdGroupTargetServiceGenderTarget gender(AdGroupTargetServiceGender gender) {
-    this.gender = JsonNullable.of(gender);
+    this.gender = gender;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class AdGroupTargetServiceGenderTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceGender> getGender() {
+  public AdGroupTargetServiceGender getGender() {
     return gender;
   }
 
-  public void setGender(JsonNullable<AdGroupTargetServiceGender> gender) {
+  public void setGender(AdGroupTargetServiceGender gender) {
     this.gender = gender;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class AdGroupTargetServiceGenderTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

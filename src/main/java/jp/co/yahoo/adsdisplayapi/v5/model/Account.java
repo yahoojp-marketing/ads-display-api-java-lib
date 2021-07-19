@@ -12,7 +12,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceIsManagerAccount;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceIsTestAccount;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -20,46 +19,46 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Accountオブジェクトは、アカウント情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account objects serve account information.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Accountオブジェクトは、アカウント情報を示します。<br> </div> <div lang=\"en\">Account objects serve account information.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Account   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("accountName")
-  private JsonNullable<String> accountName = JsonNullable.undefined();
+  private String accountName = null;
 
   @JsonProperty("accountStatus")
-  private JsonNullable<AccountServiceStatus> accountStatus = JsonNullable.undefined();
+  private AccountServiceStatus accountStatus = null;
 
   @JsonProperty("accountType")
-  private JsonNullable<AccountServiceType> accountType = JsonNullable.undefined();
+  private AccountServiceType accountType = null;
 
   @JsonProperty("authType")
-  private JsonNullable<AccountServiceAuthType> authType = JsonNullable.undefined();
+  private AccountServiceAuthType authType = null;
 
   @JsonProperty("autoTaggingEnabled")
-  private JsonNullable<AccountServiceAutoTaggingEnabled> autoTaggingEnabled = JsonNullable.undefined();
+  private AccountServiceAutoTaggingEnabled autoTaggingEnabled = null;
 
   @JsonProperty("deliveryStatus")
-  private JsonNullable<AccountServiceDeliveryStatus> deliveryStatus = JsonNullable.undefined();
+  private AccountServiceDeliveryStatus deliveryStatus = null;
 
   @JsonProperty("isTestAccount")
-  private JsonNullable<AccountServiceIsTestAccount> isTestAccount = JsonNullable.undefined();
+  private AccountServiceIsTestAccount isTestAccount = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("isManagerAccount")
-  private JsonNullable<AccountServiceIsManagerAccount> isManagerAccount = JsonNullable.undefined();
+  private AccountServiceIsManagerAccount isManagerAccount = null;
 
   @JsonProperty("contactBizId")
-  private JsonNullable<String> contactBizId = JsonNullable.undefined();
+  private String contactBizId = null;
 
   public Account accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class Account   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> SET時、このフィールドは必須となります。 </div> <div lang=\"en\"> Account ID.<br> This field is required in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public Account accountName(String accountName) {
-    this.accountName = JsonNullable.of(accountName);
+    this.accountName = accountName;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class Account   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウント名です。<br> SET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Account name.<br> This field is optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getAccountName() {
+  public String getAccountName() {
     return accountName;
   }
 
-  public void setAccountName(JsonNullable<String> accountName) {
+  public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
   public Account accountStatus(AccountServiceStatus accountStatus) {
-    this.accountStatus = JsonNullable.of(accountStatus);
+    this.accountStatus = accountStatus;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceStatus> getAccountStatus() {
+  public AccountServiceStatus getAccountStatus() {
     return accountStatus;
   }
 
-  public void setAccountStatus(JsonNullable<AccountServiceStatus> accountStatus) {
+  public void setAccountStatus(AccountServiceStatus accountStatus) {
     this.accountStatus = accountStatus;
   }
 
   public Account accountType(AccountServiceType accountType) {
-    this.accountType = JsonNullable.of(accountType);
+    this.accountType = accountType;
     return this;
   }
 
@@ -132,16 +131,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceType> getAccountType() {
+  public AccountServiceType getAccountType() {
     return accountType;
   }
 
-  public void setAccountType(JsonNullable<AccountServiceType> accountType) {
+  public void setAccountType(AccountServiceType accountType) {
     this.accountType = accountType;
   }
 
   public Account authType(AccountServiceAuthType authType) {
-    this.authType = JsonNullable.of(authType);
+    this.authType = authType;
     return this;
   }
 
@@ -153,16 +152,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceAuthType> getAuthType() {
+  public AccountServiceAuthType getAuthType() {
     return authType;
   }
 
-  public void setAuthType(JsonNullable<AccountServiceAuthType> authType) {
+  public void setAuthType(AccountServiceAuthType authType) {
     this.authType = authType;
   }
 
   public Account autoTaggingEnabled(AccountServiceAutoTaggingEnabled autoTaggingEnabled) {
-    this.autoTaggingEnabled = JsonNullable.of(autoTaggingEnabled);
+    this.autoTaggingEnabled = autoTaggingEnabled;
     return this;
   }
 
@@ -174,16 +173,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceAutoTaggingEnabled> getAutoTaggingEnabled() {
+  public AccountServiceAutoTaggingEnabled getAutoTaggingEnabled() {
     return autoTaggingEnabled;
   }
 
-  public void setAutoTaggingEnabled(JsonNullable<AccountServiceAutoTaggingEnabled> autoTaggingEnabled) {
+  public void setAutoTaggingEnabled(AccountServiceAutoTaggingEnabled autoTaggingEnabled) {
     this.autoTaggingEnabled = autoTaggingEnabled;
   }
 
   public Account deliveryStatus(AccountServiceDeliveryStatus deliveryStatus) {
-    this.deliveryStatus = JsonNullable.of(deliveryStatus);
+    this.deliveryStatus = deliveryStatus;
     return this;
   }
 
@@ -195,16 +194,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceDeliveryStatus> getDeliveryStatus() {
+  public AccountServiceDeliveryStatus getDeliveryStatus() {
     return deliveryStatus;
   }
 
-  public void setDeliveryStatus(JsonNullable<AccountServiceDeliveryStatus> deliveryStatus) {
+  public void setDeliveryStatus(AccountServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
   public Account isTestAccount(AccountServiceIsTestAccount isTestAccount) {
-    this.isTestAccount = JsonNullable.of(isTestAccount);
+    this.isTestAccount = isTestAccount;
     return this;
   }
 
@@ -216,16 +215,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceIsTestAccount> getIsTestAccount() {
+  public AccountServiceIsTestAccount getIsTestAccount() {
     return isTestAccount;
   }
 
-  public void setIsTestAccount(JsonNullable<AccountServiceIsTestAccount> isTestAccount) {
+  public void setIsTestAccount(AccountServiceIsTestAccount isTestAccount) {
     this.isTestAccount = isTestAccount;
   }
 
   public Account startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -236,16 +235,16 @@ public class Account   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 掲載開始日です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Start date of ad serving.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public Account endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -256,16 +255,16 @@ public class Account   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 掲載終了日です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> End date of ad serving.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public Account isManagerAccount(AccountServiceIsManagerAccount isManagerAccount) {
-    this.isManagerAccount = JsonNullable.of(isManagerAccount);
+    this.isManagerAccount = isManagerAccount;
     return this;
   }
 
@@ -277,16 +276,16 @@ public class Account   {
 
   @Valid
 
-  public JsonNullable<AccountServiceIsManagerAccount> getIsManagerAccount() {
+  public AccountServiceIsManagerAccount getIsManagerAccount() {
     return isManagerAccount;
   }
 
-  public void setIsManagerAccount(JsonNullable<AccountServiceIsManagerAccount> isManagerAccount) {
+  public void setIsManagerAccount(AccountServiceIsManagerAccount isManagerAccount) {
     this.isManagerAccount = isManagerAccount;
   }
 
   public Account contactBizId(String contactBizId) {
-    this.contactBizId = JsonNullable.of(contactBizId);
+    this.contactBizId = contactBizId;
     return this;
   }
 
@@ -297,17 +296,17 @@ public class Account   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウント管理者のYahoo! JAPANビジネスIDです。<br> MCCアカウントの場合、このフィールドは返却されず、リクエストの際も無視されます。<br> テストアカウントの場合、このフィールドは更新できません。</div> <div lang=\"en\">Contact Business ID.<br> If isManagerAccount is \"TRUE\", this field will not be returned and will be ignored on request.<br> If isTestAccount is \"TRUE\", this field cannot be updated.</div> ")
 
 
-  public JsonNullable<String> getContactBizId() {
+  public String getContactBizId() {
     return contactBizId;
   }
 
-  public void setContactBizId(JsonNullable<String> contactBizId) {
+  public void setContactBizId(String contactBizId) {
     this.contactBizId = contactBizId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -359,7 +358,7 @@ public class Account   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

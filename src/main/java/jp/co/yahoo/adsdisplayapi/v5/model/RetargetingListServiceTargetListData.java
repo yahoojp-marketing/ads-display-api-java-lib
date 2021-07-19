@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceTargetListDataオブジェクトは、ターゲットリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceTargetListData object displays the target list. &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceTargetListDataオブジェクトは、ターゲットリストを表します。<br> このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> RetargetingListServiceTargetListData object displays the target list. <br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceTargetListData   {
   @JsonProperty("targetListId")
-  private JsonNullable<Long> targetListId = JsonNullable.undefined();
+  private Long targetListId = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   public RetargetingListServiceTargetListData targetListId(Long targetListId) {
-    this.targetListId = JsonNullable.of(targetListId);
+    this.targetListId = targetListId;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class RetargetingListServiceTargetListData   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリストIDです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Target list ID.<br> This field is required in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<Long> getTargetListId() {
+  public Long getTargetListId() {
     return targetListId;
   }
 
-  public void setTargetListId(JsonNullable<Long> targetListId) {
+  public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
 
   public RetargetingListServiceTargetListData targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class RetargetingListServiceTargetListData   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリストの名前です。</div> <div lang=\"en\">Name of target list.</div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class RetargetingListServiceTargetListData   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

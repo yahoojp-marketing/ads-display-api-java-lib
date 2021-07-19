@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.BalanceServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BalanceServicePageオブジェクトは、取得される未消化予算情報に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BalanceServicePage object selects balance information pages.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BalanceServicePageオブジェクトは、取得される未消化予算情報に関するエントリーを表します。</div> <div lang=\"en\">The BalanceServicePage object selects balance information pages.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BalanceServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
-  private JsonNullable<BalanceServiceValue> values = JsonNullable.undefined();
+  private BalanceServiceValue values = null;
 
   public BalanceServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -43,7 +42,7 @@ public class BalanceServicePage   {
   }
 
   public BalanceServicePage values(BalanceServiceValue values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class BalanceServicePage   {
 
   @Valid
 
-  public JsonNullable<BalanceServiceValue> getValues() {
+  public BalanceServiceValue getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<BalanceServiceValue> values) {
+  public void setValues(BalanceServiceValue values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class BalanceServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

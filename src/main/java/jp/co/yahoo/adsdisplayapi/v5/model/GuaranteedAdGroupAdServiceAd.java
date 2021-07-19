@@ -27,7 +27,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAdServiceTopImpactSqu
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAdServiceTopImpactSquareVideo;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedAdGroupAdServiceTopImpactTheaterVideo;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -35,76 +34,76 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceAd object is a container for storing ads.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。<br> </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceAd object is a container for storing ads.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupAdServiceAd   {
   @JsonProperty("adType")
-  private JsonNullable<GuaranteedAdGroupAdServiceAdType> adType = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceAdType adType = null;
 
   @JsonProperty("bannerImageAd")
-  private JsonNullable<GuaranteedAdGroupAdServiceBannerImageAd> bannerImageAd = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceBannerImageAd bannerImageAd = null;
 
   @JsonProperty("bannerVideoAd")
-  private JsonNullable<GuaranteedAdGroupAdServiceBannerVideoAd> bannerVideoAd = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceBannerVideoAd bannerVideoAd = null;
 
   @JsonProperty("brandPanelQuintie")
-  private JsonNullable<GuaranteedAdGroupAdServiceBrandPanelQuintie> brandPanelQuintie = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie = null;
 
   @JsonProperty("brandPanelPanorama")
-  private JsonNullable<GuaranteedAdGroupAdServiceBrandPanelPanorama> brandPanelPanorama = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama = null;
 
   @JsonProperty("brandPanelPanoramaVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo> brandPanelPanoramaVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo brandPanelPanoramaVideo = null;
 
   @JsonProperty("brandPanelQuintieVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceBrandPanelQuintieVideo> brandPanelQuintieVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceBrandPanelQuintieVideo brandPanelQuintieVideo = null;
 
   @JsonProperty("topImpactSquare")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquare> topImpactSquare = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare = null;
 
   @JsonProperty("topImpactSquareVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareVideo> topImpactSquareVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactSquareVideo topImpactSquareVideo = null;
 
   @JsonProperty("topImpactQuintie")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactQuintie> topImpactQuintie = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie = null;
 
   @JsonProperty("topImpactQuintieVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactQuintieVideo> topImpactQuintieVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactQuintieVideo topImpactQuintieVideo = null;
 
   @JsonProperty("topImpactPanorama")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanorama> topImpactPanorama = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama = null;
 
   @JsonProperty("topImpactPanoramaVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaVideo> topImpactPanoramaVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactPanoramaVideo topImpactPanoramaVideo = null;
 
   @JsonProperty("topImpactPanoramaSideVisionVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo> topImpactPanoramaSideVisionVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo topImpactPanoramaSideVisionVideo = null;
 
   @JsonProperty("topImpactPanoramaSideSwitchVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo> topImpactPanoramaSideSwitchVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo topImpactPanoramaSideSwitchVideo = null;
 
   @JsonProperty("topImpactTheaterVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactTheaterVideo> topImpactTheaterVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactTheaterVideo topImpactTheaterVideo = null;
 
   @JsonProperty("topImpactSquareSpecial")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareSpecial> topImpactSquareSpecial = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactSquareSpecial topImpactSquareSpecial = null;
 
   @JsonProperty("topImpactSquareSpecialVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo> topImpactSquareSpecialVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo topImpactSquareSpecialVideo = null;
 
   @JsonProperty("topImpactPrimeDisplayDouble")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble> topImpactPrimeDisplayDouble = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble = null;
 
   @JsonProperty("topImpactPrimeDisplayDoubleVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo> topImpactPrimeDisplayDoubleVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo topImpactPrimeDisplayDoubleVideo = null;
 
   @JsonProperty("instreamVideo")
-  private JsonNullable<GuaranteedAdGroupAdServiceInstreamVideoAd> instreamVideo = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceInstreamVideoAd instreamVideo = null;
 
   @JsonProperty("carouselAd")
-  private JsonNullable<GuaranteedAdGroupAdServiceCarouselAd> carouselAd = JsonNullable.undefined();
+  private GuaranteedAdGroupAdServiceCarouselAd carouselAd = null;
 
   public GuaranteedAdGroupAdServiceAd adType(GuaranteedAdGroupAdServiceAdType adType) {
-    this.adType = JsonNullable.of(adType);
+    this.adType = adType;
     return this;
   }
 
@@ -116,16 +115,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceAdType> getAdType() {
+  public GuaranteedAdGroupAdServiceAdType getAdType() {
     return adType;
   }
 
-  public void setAdType(JsonNullable<GuaranteedAdGroupAdServiceAdType> adType) {
+  public void setAdType(GuaranteedAdGroupAdServiceAdType adType) {
     this.adType = adType;
   }
 
   public GuaranteedAdGroupAdServiceAd bannerImageAd(GuaranteedAdGroupAdServiceBannerImageAd bannerImageAd) {
-    this.bannerImageAd = JsonNullable.of(bannerImageAd);
+    this.bannerImageAd = bannerImageAd;
     return this;
   }
 
@@ -137,16 +136,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceBannerImageAd> getBannerImageAd() {
+  public GuaranteedAdGroupAdServiceBannerImageAd getBannerImageAd() {
     return bannerImageAd;
   }
 
-  public void setBannerImageAd(JsonNullable<GuaranteedAdGroupAdServiceBannerImageAd> bannerImageAd) {
+  public void setBannerImageAd(GuaranteedAdGroupAdServiceBannerImageAd bannerImageAd) {
     this.bannerImageAd = bannerImageAd;
   }
 
   public GuaranteedAdGroupAdServiceAd bannerVideoAd(GuaranteedAdGroupAdServiceBannerVideoAd bannerVideoAd) {
-    this.bannerVideoAd = JsonNullable.of(bannerVideoAd);
+    this.bannerVideoAd = bannerVideoAd;
     return this;
   }
 
@@ -158,16 +157,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceBannerVideoAd> getBannerVideoAd() {
+  public GuaranteedAdGroupAdServiceBannerVideoAd getBannerVideoAd() {
     return bannerVideoAd;
   }
 
-  public void setBannerVideoAd(JsonNullable<GuaranteedAdGroupAdServiceBannerVideoAd> bannerVideoAd) {
+  public void setBannerVideoAd(GuaranteedAdGroupAdServiceBannerVideoAd bannerVideoAd) {
     this.bannerVideoAd = bannerVideoAd;
   }
 
   public GuaranteedAdGroupAdServiceAd brandPanelQuintie(GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie) {
-    this.brandPanelQuintie = JsonNullable.of(brandPanelQuintie);
+    this.brandPanelQuintie = brandPanelQuintie;
     return this;
   }
 
@@ -179,16 +178,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceBrandPanelQuintie> getBrandPanelQuintie() {
+  public GuaranteedAdGroupAdServiceBrandPanelQuintie getBrandPanelQuintie() {
     return brandPanelQuintie;
   }
 
-  public void setBrandPanelQuintie(JsonNullable<GuaranteedAdGroupAdServiceBrandPanelQuintie> brandPanelQuintie) {
+  public void setBrandPanelQuintie(GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie) {
     this.brandPanelQuintie = brandPanelQuintie;
   }
 
   public GuaranteedAdGroupAdServiceAd brandPanelPanorama(GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama) {
-    this.brandPanelPanorama = JsonNullable.of(brandPanelPanorama);
+    this.brandPanelPanorama = brandPanelPanorama;
     return this;
   }
 
@@ -200,16 +199,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceBrandPanelPanorama> getBrandPanelPanorama() {
+  public GuaranteedAdGroupAdServiceBrandPanelPanorama getBrandPanelPanorama() {
     return brandPanelPanorama;
   }
 
-  public void setBrandPanelPanorama(JsonNullable<GuaranteedAdGroupAdServiceBrandPanelPanorama> brandPanelPanorama) {
+  public void setBrandPanelPanorama(GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama) {
     this.brandPanelPanorama = brandPanelPanorama;
   }
 
   public GuaranteedAdGroupAdServiceAd brandPanelPanoramaVideo(GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo brandPanelPanoramaVideo) {
-    this.brandPanelPanoramaVideo = JsonNullable.of(brandPanelPanoramaVideo);
+    this.brandPanelPanoramaVideo = brandPanelPanoramaVideo;
     return this;
   }
 
@@ -221,16 +220,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo> getBrandPanelPanoramaVideo() {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo getBrandPanelPanoramaVideo() {
     return brandPanelPanoramaVideo;
   }
 
-  public void setBrandPanelPanoramaVideo(JsonNullable<GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo> brandPanelPanoramaVideo) {
+  public void setBrandPanelPanoramaVideo(GuaranteedAdGroupAdServiceBrandPanelPanoramaVideo brandPanelPanoramaVideo) {
     this.brandPanelPanoramaVideo = brandPanelPanoramaVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd brandPanelQuintieVideo(GuaranteedAdGroupAdServiceBrandPanelQuintieVideo brandPanelQuintieVideo) {
-    this.brandPanelQuintieVideo = JsonNullable.of(brandPanelQuintieVideo);
+    this.brandPanelQuintieVideo = brandPanelQuintieVideo;
     return this;
   }
 
@@ -242,16 +241,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceBrandPanelQuintieVideo> getBrandPanelQuintieVideo() {
+  public GuaranteedAdGroupAdServiceBrandPanelQuintieVideo getBrandPanelQuintieVideo() {
     return brandPanelQuintieVideo;
   }
 
-  public void setBrandPanelQuintieVideo(JsonNullable<GuaranteedAdGroupAdServiceBrandPanelQuintieVideo> brandPanelQuintieVideo) {
+  public void setBrandPanelQuintieVideo(GuaranteedAdGroupAdServiceBrandPanelQuintieVideo brandPanelQuintieVideo) {
     this.brandPanelQuintieVideo = brandPanelQuintieVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactSquare(GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare) {
-    this.topImpactSquare = JsonNullable.of(topImpactSquare);
+    this.topImpactSquare = topImpactSquare;
     return this;
   }
 
@@ -263,16 +262,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquare> getTopImpactSquare() {
+  public GuaranteedAdGroupAdServiceTopImpactSquare getTopImpactSquare() {
     return topImpactSquare;
   }
 
-  public void setTopImpactSquare(JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquare> topImpactSquare) {
+  public void setTopImpactSquare(GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare) {
     this.topImpactSquare = topImpactSquare;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactSquareVideo(GuaranteedAdGroupAdServiceTopImpactSquareVideo topImpactSquareVideo) {
-    this.topImpactSquareVideo = JsonNullable.of(topImpactSquareVideo);
+    this.topImpactSquareVideo = topImpactSquareVideo;
     return this;
   }
 
@@ -284,16 +283,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareVideo> getTopImpactSquareVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactSquareVideo getTopImpactSquareVideo() {
     return topImpactSquareVideo;
   }
 
-  public void setTopImpactSquareVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareVideo> topImpactSquareVideo) {
+  public void setTopImpactSquareVideo(GuaranteedAdGroupAdServiceTopImpactSquareVideo topImpactSquareVideo) {
     this.topImpactSquareVideo = topImpactSquareVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactQuintie(GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie) {
-    this.topImpactQuintie = JsonNullable.of(topImpactQuintie);
+    this.topImpactQuintie = topImpactQuintie;
     return this;
   }
 
@@ -305,16 +304,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactQuintie> getTopImpactQuintie() {
+  public GuaranteedAdGroupAdServiceTopImpactQuintie getTopImpactQuintie() {
     return topImpactQuintie;
   }
 
-  public void setTopImpactQuintie(JsonNullable<GuaranteedAdGroupAdServiceTopImpactQuintie> topImpactQuintie) {
+  public void setTopImpactQuintie(GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie) {
     this.topImpactQuintie = topImpactQuintie;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactQuintieVideo(GuaranteedAdGroupAdServiceTopImpactQuintieVideo topImpactQuintieVideo) {
-    this.topImpactQuintieVideo = JsonNullable.of(topImpactQuintieVideo);
+    this.topImpactQuintieVideo = topImpactQuintieVideo;
     return this;
   }
 
@@ -326,16 +325,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactQuintieVideo> getTopImpactQuintieVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactQuintieVideo getTopImpactQuintieVideo() {
     return topImpactQuintieVideo;
   }
 
-  public void setTopImpactQuintieVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactQuintieVideo> topImpactQuintieVideo) {
+  public void setTopImpactQuintieVideo(GuaranteedAdGroupAdServiceTopImpactQuintieVideo topImpactQuintieVideo) {
     this.topImpactQuintieVideo = topImpactQuintieVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactPanorama(GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama) {
-    this.topImpactPanorama = JsonNullable.of(topImpactPanorama);
+    this.topImpactPanorama = topImpactPanorama;
     return this;
   }
 
@@ -347,16 +346,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanorama> getTopImpactPanorama() {
+  public GuaranteedAdGroupAdServiceTopImpactPanorama getTopImpactPanorama() {
     return topImpactPanorama;
   }
 
-  public void setTopImpactPanorama(JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanorama> topImpactPanorama) {
+  public void setTopImpactPanorama(GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama) {
     this.topImpactPanorama = topImpactPanorama;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactPanoramaVideo(GuaranteedAdGroupAdServiceTopImpactPanoramaVideo topImpactPanoramaVideo) {
-    this.topImpactPanoramaVideo = JsonNullable.of(topImpactPanoramaVideo);
+    this.topImpactPanoramaVideo = topImpactPanoramaVideo;
     return this;
   }
 
@@ -368,16 +367,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaVideo> getTopImpactPanoramaVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactPanoramaVideo getTopImpactPanoramaVideo() {
     return topImpactPanoramaVideo;
   }
 
-  public void setTopImpactPanoramaVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaVideo> topImpactPanoramaVideo) {
+  public void setTopImpactPanoramaVideo(GuaranteedAdGroupAdServiceTopImpactPanoramaVideo topImpactPanoramaVideo) {
     this.topImpactPanoramaVideo = topImpactPanoramaVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactPanoramaSideVisionVideo(GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo topImpactPanoramaSideVisionVideo) {
-    this.topImpactPanoramaSideVisionVideo = JsonNullable.of(topImpactPanoramaSideVisionVideo);
+    this.topImpactPanoramaSideVisionVideo = topImpactPanoramaSideVisionVideo;
     return this;
   }
 
@@ -389,16 +388,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo> getTopImpactPanoramaSideVisionVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo getTopImpactPanoramaSideVisionVideo() {
     return topImpactPanoramaSideVisionVideo;
   }
 
-  public void setTopImpactPanoramaSideVisionVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo> topImpactPanoramaSideVisionVideo) {
+  public void setTopImpactPanoramaSideVisionVideo(GuaranteedAdGroupAdServiceTopImpactPanoramaSideVisionVideo topImpactPanoramaSideVisionVideo) {
     this.topImpactPanoramaSideVisionVideo = topImpactPanoramaSideVisionVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactPanoramaSideSwitchVideo(GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo topImpactPanoramaSideSwitchVideo) {
-    this.topImpactPanoramaSideSwitchVideo = JsonNullable.of(topImpactPanoramaSideSwitchVideo);
+    this.topImpactPanoramaSideSwitchVideo = topImpactPanoramaSideSwitchVideo;
     return this;
   }
 
@@ -410,16 +409,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo> getTopImpactPanoramaSideSwitchVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo getTopImpactPanoramaSideSwitchVideo() {
     return topImpactPanoramaSideSwitchVideo;
   }
 
-  public void setTopImpactPanoramaSideSwitchVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo> topImpactPanoramaSideSwitchVideo) {
+  public void setTopImpactPanoramaSideSwitchVideo(GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitchVideo topImpactPanoramaSideSwitchVideo) {
     this.topImpactPanoramaSideSwitchVideo = topImpactPanoramaSideSwitchVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactTheaterVideo(GuaranteedAdGroupAdServiceTopImpactTheaterVideo topImpactTheaterVideo) {
-    this.topImpactTheaterVideo = JsonNullable.of(topImpactTheaterVideo);
+    this.topImpactTheaterVideo = topImpactTheaterVideo;
     return this;
   }
 
@@ -431,16 +430,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactTheaterVideo> getTopImpactTheaterVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactTheaterVideo getTopImpactTheaterVideo() {
     return topImpactTheaterVideo;
   }
 
-  public void setTopImpactTheaterVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactTheaterVideo> topImpactTheaterVideo) {
+  public void setTopImpactTheaterVideo(GuaranteedAdGroupAdServiceTopImpactTheaterVideo topImpactTheaterVideo) {
     this.topImpactTheaterVideo = topImpactTheaterVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactSquareSpecial(GuaranteedAdGroupAdServiceTopImpactSquareSpecial topImpactSquareSpecial) {
-    this.topImpactSquareSpecial = JsonNullable.of(topImpactSquareSpecial);
+    this.topImpactSquareSpecial = topImpactSquareSpecial;
     return this;
   }
 
@@ -452,16 +451,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareSpecial> getTopImpactSquareSpecial() {
+  public GuaranteedAdGroupAdServiceTopImpactSquareSpecial getTopImpactSquareSpecial() {
     return topImpactSquareSpecial;
   }
 
-  public void setTopImpactSquareSpecial(JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareSpecial> topImpactSquareSpecial) {
+  public void setTopImpactSquareSpecial(GuaranteedAdGroupAdServiceTopImpactSquareSpecial topImpactSquareSpecial) {
     this.topImpactSquareSpecial = topImpactSquareSpecial;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactSquareSpecialVideo(GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo topImpactSquareSpecialVideo) {
-    this.topImpactSquareSpecialVideo = JsonNullable.of(topImpactSquareSpecialVideo);
+    this.topImpactSquareSpecialVideo = topImpactSquareSpecialVideo;
     return this;
   }
 
@@ -473,16 +472,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo> getTopImpactSquareSpecialVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo getTopImpactSquareSpecialVideo() {
     return topImpactSquareSpecialVideo;
   }
 
-  public void setTopImpactSquareSpecialVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo> topImpactSquareSpecialVideo) {
+  public void setTopImpactSquareSpecialVideo(GuaranteedAdGroupAdServiceTopImpactSquareSpecialVideo topImpactSquareSpecialVideo) {
     this.topImpactSquareSpecialVideo = topImpactSquareSpecialVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactPrimeDisplayDouble(GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble) {
-    this.topImpactPrimeDisplayDouble = JsonNullable.of(topImpactPrimeDisplayDouble);
+    this.topImpactPrimeDisplayDouble = topImpactPrimeDisplayDouble;
     return this;
   }
 
@@ -494,16 +493,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble> getTopImpactPrimeDisplayDouble() {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble getTopImpactPrimeDisplayDouble() {
     return topImpactPrimeDisplayDouble;
   }
 
-  public void setTopImpactPrimeDisplayDouble(JsonNullable<GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble> topImpactPrimeDisplayDouble) {
+  public void setTopImpactPrimeDisplayDouble(GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble) {
     this.topImpactPrimeDisplayDouble = topImpactPrimeDisplayDouble;
   }
 
   public GuaranteedAdGroupAdServiceAd topImpactPrimeDisplayDoubleVideo(GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo topImpactPrimeDisplayDoubleVideo) {
-    this.topImpactPrimeDisplayDoubleVideo = JsonNullable.of(topImpactPrimeDisplayDoubleVideo);
+    this.topImpactPrimeDisplayDoubleVideo = topImpactPrimeDisplayDoubleVideo;
     return this;
   }
 
@@ -515,16 +514,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo> getTopImpactPrimeDisplayDoubleVideo() {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo getTopImpactPrimeDisplayDoubleVideo() {
     return topImpactPrimeDisplayDoubleVideo;
   }
 
-  public void setTopImpactPrimeDisplayDoubleVideo(JsonNullable<GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo> topImpactPrimeDisplayDoubleVideo) {
+  public void setTopImpactPrimeDisplayDoubleVideo(GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleVideo topImpactPrimeDisplayDoubleVideo) {
     this.topImpactPrimeDisplayDoubleVideo = topImpactPrimeDisplayDoubleVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd instreamVideo(GuaranteedAdGroupAdServiceInstreamVideoAd instreamVideo) {
-    this.instreamVideo = JsonNullable.of(instreamVideo);
+    this.instreamVideo = instreamVideo;
     return this;
   }
 
@@ -536,16 +535,16 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceInstreamVideoAd> getInstreamVideo() {
+  public GuaranteedAdGroupAdServiceInstreamVideoAd getInstreamVideo() {
     return instreamVideo;
   }
 
-  public void setInstreamVideo(JsonNullable<GuaranteedAdGroupAdServiceInstreamVideoAd> instreamVideo) {
+  public void setInstreamVideo(GuaranteedAdGroupAdServiceInstreamVideoAd instreamVideo) {
     this.instreamVideo = instreamVideo;
   }
 
   public GuaranteedAdGroupAdServiceAd carouselAd(GuaranteedAdGroupAdServiceCarouselAd carouselAd) {
-    this.carouselAd = JsonNullable.of(carouselAd);
+    this.carouselAd = carouselAd;
     return this;
   }
 
@@ -557,17 +556,17 @@ public class GuaranteedAdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<GuaranteedAdGroupAdServiceCarouselAd> getCarouselAd() {
+  public GuaranteedAdGroupAdServiceCarouselAd getCarouselAd() {
     return carouselAd;
   }
 
-  public void setCarouselAd(JsonNullable<GuaranteedAdGroupAdServiceCarouselAd> carouselAd) {
+  public void setCarouselAd(GuaranteedAdGroupAdServiceCarouselAd carouselAd) {
     this.carouselAd = carouselAd;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -639,7 +638,7 @@ public class GuaranteedAdGroupAdServiceAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

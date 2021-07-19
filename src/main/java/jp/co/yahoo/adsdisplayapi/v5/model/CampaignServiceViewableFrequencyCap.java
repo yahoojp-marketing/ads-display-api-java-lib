@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignServiceFrequencyLevel;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignServiceFrequencyTimeUnit;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,19 +14,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;br&gt; ADDおよびSET時、このフィールドは目的なしの場合は設定不可となり、目的ありの場合は省略可能となります。&lt;br&gt; REMOVE時は無視されます。&lt;br&gt; ※ADD時は全ての項目の指定が必須です。&lt;br&gt; ※SET時は更新する項目のみのリクエストが可能です。&lt;br&gt; ※ビューアブルフリークエンシーキャップの解除方法は、以下の通りです： &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceViewableFrequencyCap object describes viewable frequency restriction.&lt;br&gt; In ADD and SET operation, this field cannot be set for campaigns with no campaign goal, and will be optional for campaigns with campaign goal. &lt;br&gt; In REMOVE operation, this field will be ignored.&lt;br&gt; *All items must be specified in ADD operation.&lt;br&gt; *Only update items can be requested in SET operation.&lt;br&gt; *Method to remove the viewable frequency cap: &lt;/div&gt; &lt;code&gt; {     \&quot;viewableFrequencyCap\&quot;: {         \&quot;vImps\&quot;: 0     } } &lt;/code&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> CampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。<br> ADDおよびSET時、このフィールドは目的なしの場合は設定不可となり、目的ありの場合は省略可能となります。<br> REMOVE時は無視されます。<br> ※ADD時は全ての項目の指定が必須です。<br> ※SET時は更新する項目のみのリクエストが可能です。<br> ※ビューアブルフリークエンシーキャップの解除方法は、以下の通りです： </div> <div lang=\"en\"> CampaignServiceViewableFrequencyCap object describes viewable frequency restriction.<br> In ADD and SET operation, this field cannot be set for campaigns with no campaign goal, and will be optional for campaigns with campaign goal. <br> In REMOVE operation, this field will be ignored.<br> *All items must be specified in ADD operation.<br> *Only update items can be requested in SET operation.<br> *Method to remove the viewable frequency cap: </div> <code> {     \"viewableFrequencyCap\": {         \"vImps\": 0     } } </code> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceViewableFrequencyCap   {
   @JsonProperty("frequencyLevel")
-  private JsonNullable<CampaignServiceFrequencyLevel> frequencyLevel = JsonNullable.undefined();
+  private CampaignServiceFrequencyLevel frequencyLevel = null;
 
   @JsonProperty("frequencyTimeUnit")
-  private JsonNullable<CampaignServiceFrequencyTimeUnit> frequencyTimeUnit = JsonNullable.undefined();
+  private CampaignServiceFrequencyTimeUnit frequencyTimeUnit = null;
 
   @JsonProperty("vImps")
-  private JsonNullable<Long> vImps = JsonNullable.undefined();
+  private Long vImps = null;
 
   public CampaignServiceViewableFrequencyCap frequencyLevel(CampaignServiceFrequencyLevel frequencyLevel) {
-    this.frequencyLevel = JsonNullable.of(frequencyLevel);
+    this.frequencyLevel = frequencyLevel;
     return this;
   }
 
@@ -39,16 +38,16 @@ public class CampaignServiceViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceFrequencyLevel> getFrequencyLevel() {
+  public CampaignServiceFrequencyLevel getFrequencyLevel() {
     return frequencyLevel;
   }
 
-  public void setFrequencyLevel(JsonNullable<CampaignServiceFrequencyLevel> frequencyLevel) {
+  public void setFrequencyLevel(CampaignServiceFrequencyLevel frequencyLevel) {
     this.frequencyLevel = frequencyLevel;
   }
 
   public CampaignServiceViewableFrequencyCap frequencyTimeUnit(CampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
-    this.frequencyTimeUnit = JsonNullable.of(frequencyTimeUnit);
+    this.frequencyTimeUnit = frequencyTimeUnit;
     return this;
   }
 
@@ -60,16 +59,16 @@ public class CampaignServiceViewableFrequencyCap   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceFrequencyTimeUnit> getFrequencyTimeUnit() {
+  public CampaignServiceFrequencyTimeUnit getFrequencyTimeUnit() {
     return frequencyTimeUnit;
   }
 
-  public void setFrequencyTimeUnit(JsonNullable<CampaignServiceFrequencyTimeUnit> frequencyTimeUnit) {
+  public void setFrequencyTimeUnit(CampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
     this.frequencyTimeUnit = frequencyTimeUnit;
   }
 
   public CampaignServiceViewableFrequencyCap vImps(Long vImps) {
-    this.vImps = JsonNullable.of(vImps);
+    this.vImps = vImps;
     return this;
   }
 
@@ -80,17 +79,17 @@ public class CampaignServiceViewableFrequencyCap   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 同一ユーザに対する広告の最大ビューアブルインプレッション数です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Maximum number of ad viewable impressions to same user.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<Long> getvImps() {
+  public Long getvImps() {
     return vImps;
   }
 
-  public void setvImps(JsonNullable<Long> vImps) {
+  public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -124,7 +123,7 @@ public class CampaignServiceViewableFrequencyCap   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

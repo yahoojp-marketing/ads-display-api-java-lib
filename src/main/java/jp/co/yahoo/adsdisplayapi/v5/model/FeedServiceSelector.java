@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,20 +14,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceSelector object contains search condition by get operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">get操作の検索条件を保持するオブジェクト</div> <div lang=\"en\">FeedServiceSelector object contains search condition by get operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("feedIds")
   @Valid
-  private JsonNullable<List<Long>> feedIds = JsonNullable.undefined();
+  private List<Long> feedIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public FeedServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -52,15 +51,15 @@ public class FeedServiceSelector   {
   }
 
   public FeedServiceSelector feedIds(List<Long> feedIds) {
-    this.feedIds = JsonNullable.of(feedIds);
+    this.feedIds = feedIds;
     return this;
   }
 
   public FeedServiceSelector addFeedIdsItem(Long feedIdsItem) {
-    if (this.feedIds == null || !this.feedIds.isPresent()) {
-      this.feedIds = JsonNullable.of(new ArrayList<>());
+    if (this.feedIds == null) {
+      this.feedIds = new ArrayList<>();
     }
-    this.feedIds.get().add(feedIdsItem);
+    this.feedIds.add(feedIdsItem);
     return this;
   }
 
@@ -71,16 +70,16 @@ public class FeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">FeedID</div> ")
 
 @Size(max=1000) 
-  public JsonNullable<List<Long>> getFeedIds() {
+  public List<Long> getFeedIds() {
     return feedIds;
   }
 
-  public void setFeedIds(JsonNullable<List<Long>> feedIds) {
+  public void setFeedIds(List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
   public FeedServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -93,16 +92,16 @@ public class FeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(1000) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public FeedServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -114,17 +113,17 @@ public class FeedServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -160,7 +159,7 @@ public class FeedServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

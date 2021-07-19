@@ -23,7 +23,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceSiteCategoryTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceSiteRetargetingTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceTargetSetting;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -31,67 +30,67 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceTargetオブジェクトは、ターゲット設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTarget object holds configuration information of StatsServiceTargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceTargetオブジェクトは、ターゲット設定情報を保持します。</div> <div lang=\"en\">StatsServiceTarget object holds configuration information of StatsServiceTargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceTarget   {
   @JsonProperty("adScheduleTarget")
-  private JsonNullable<StatsServiceAdScheduleTarget> adScheduleTarget = JsonNullable.undefined();
+  private StatsServiceAdScheduleTarget adScheduleTarget = null;
 
   @JsonProperty("ageTarget")
-  private JsonNullable<StatsServiceAgeTarget> ageTarget = JsonNullable.undefined();
+  private StatsServiceAgeTarget ageTarget = null;
 
   @JsonProperty("appTarget")
-  private JsonNullable<StatsServiceAppTarget> appTarget = JsonNullable.undefined();
+  private StatsServiceAppTarget appTarget = null;
 
   @JsonProperty("audienceCategoryTarget")
-  private JsonNullable<StatsServiceAudienceCategoryTarget> audienceCategoryTarget = JsonNullable.undefined();
+  private StatsServiceAudienceCategoryTarget audienceCategoryTarget = null;
 
   @JsonProperty("carrierTarget")
-  private JsonNullable<StatsServiceCarrierTarget> carrierTarget = JsonNullable.undefined();
+  private StatsServiceCarrierTarget carrierTarget = null;
 
   @JsonProperty("deviceTarget")
-  private JsonNullable<StatsServiceDeviceTarget> deviceTarget = JsonNullable.undefined();
+  private StatsServiceDeviceTarget deviceTarget = null;
 
   @JsonProperty("genderTarget")
-  private JsonNullable<StatsServiceGenderTarget> genderTarget = JsonNullable.undefined();
+  private StatsServiceGenderTarget genderTarget = null;
 
   @JsonProperty("geoTarget")
-  private JsonNullable<StatsServiceGeoTarget> geoTarget = JsonNullable.undefined();
+  private StatsServiceGeoTarget geoTarget = null;
 
   @JsonProperty("interestCategoryTarget")
-  private JsonNullable<StatsServiceInterestCategoryTarget> interestCategoryTarget = JsonNullable.undefined();
+  private StatsServiceInterestCategoryTarget interestCategoryTarget = null;
 
   @JsonProperty("osTarget")
-  private JsonNullable<StatsServiceOsTarget> osTarget = JsonNullable.undefined();
+  private StatsServiceOsTarget osTarget = null;
 
   @JsonProperty("osVersionTarget")
-  private JsonNullable<StatsServiceOsVersionTarget> osVersionTarget = JsonNullable.undefined();
+  private StatsServiceOsVersionTarget osVersionTarget = null;
 
   @JsonProperty("placementTarget")
-  private JsonNullable<StatsServicePlacementTarget> placementTarget = JsonNullable.undefined();
+  private StatsServicePlacementTarget placementTarget = null;
 
   @JsonProperty("searchTarget")
-  private JsonNullable<StatsServiceSearchTarget> searchTarget = JsonNullable.undefined();
+  private StatsServiceSearchTarget searchTarget = null;
 
   @JsonProperty("siteCategoryTarget")
-  private JsonNullable<StatsServiceSiteCategoryTarget> siteCategoryTarget = JsonNullable.undefined();
+  private StatsServiceSiteCategoryTarget siteCategoryTarget = null;
 
   @JsonProperty("siteRetargetingTarget")
-  private JsonNullable<StatsServiceSiteRetargetingTarget> siteRetargetingTarget = JsonNullable.undefined();
+  private StatsServiceSiteRetargetingTarget siteRetargetingTarget = null;
 
   @JsonProperty("placementCategoryDetailTarget")
-  private JsonNullable<StatsServicePlacementCategoryDetailTarget> placementCategoryDetailTarget = JsonNullable.undefined();
+  private StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("targetSetting")
-  private JsonNullable<StatsServiceTargetSetting> targetSetting = JsonNullable.undefined();
+  private StatsServiceTargetSetting targetSetting = null;
 
   @JsonProperty("targetType")
-  private JsonNullable<StatsServiceTargetType> targetType = JsonNullable.undefined();
+  private StatsServiceTargetType targetType = null;
 
   public StatsServiceTarget adScheduleTarget(StatsServiceAdScheduleTarget adScheduleTarget) {
-    this.adScheduleTarget = JsonNullable.of(adScheduleTarget);
+    this.adScheduleTarget = adScheduleTarget;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceAdScheduleTarget> getAdScheduleTarget() {
+  public StatsServiceAdScheduleTarget getAdScheduleTarget() {
     return adScheduleTarget;
   }
 
-  public void setAdScheduleTarget(JsonNullable<StatsServiceAdScheduleTarget> adScheduleTarget) {
+  public void setAdScheduleTarget(StatsServiceAdScheduleTarget adScheduleTarget) {
     this.adScheduleTarget = adScheduleTarget;
   }
 
   public StatsServiceTarget ageTarget(StatsServiceAgeTarget ageTarget) {
-    this.ageTarget = JsonNullable.of(ageTarget);
+    this.ageTarget = ageTarget;
     return this;
   }
 
@@ -124,16 +123,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceAgeTarget> getAgeTarget() {
+  public StatsServiceAgeTarget getAgeTarget() {
     return ageTarget;
   }
 
-  public void setAgeTarget(JsonNullable<StatsServiceAgeTarget> ageTarget) {
+  public void setAgeTarget(StatsServiceAgeTarget ageTarget) {
     this.ageTarget = ageTarget;
   }
 
   public StatsServiceTarget appTarget(StatsServiceAppTarget appTarget) {
-    this.appTarget = JsonNullable.of(appTarget);
+    this.appTarget = appTarget;
     return this;
   }
 
@@ -145,16 +144,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceAppTarget> getAppTarget() {
+  public StatsServiceAppTarget getAppTarget() {
     return appTarget;
   }
 
-  public void setAppTarget(JsonNullable<StatsServiceAppTarget> appTarget) {
+  public void setAppTarget(StatsServiceAppTarget appTarget) {
     this.appTarget = appTarget;
   }
 
   public StatsServiceTarget audienceCategoryTarget(StatsServiceAudienceCategoryTarget audienceCategoryTarget) {
-    this.audienceCategoryTarget = JsonNullable.of(audienceCategoryTarget);
+    this.audienceCategoryTarget = audienceCategoryTarget;
     return this;
   }
 
@@ -166,16 +165,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceAudienceCategoryTarget> getAudienceCategoryTarget() {
+  public StatsServiceAudienceCategoryTarget getAudienceCategoryTarget() {
     return audienceCategoryTarget;
   }
 
-  public void setAudienceCategoryTarget(JsonNullable<StatsServiceAudienceCategoryTarget> audienceCategoryTarget) {
+  public void setAudienceCategoryTarget(StatsServiceAudienceCategoryTarget audienceCategoryTarget) {
     this.audienceCategoryTarget = audienceCategoryTarget;
   }
 
   public StatsServiceTarget carrierTarget(StatsServiceCarrierTarget carrierTarget) {
-    this.carrierTarget = JsonNullable.of(carrierTarget);
+    this.carrierTarget = carrierTarget;
     return this;
   }
 
@@ -187,16 +186,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceCarrierTarget> getCarrierTarget() {
+  public StatsServiceCarrierTarget getCarrierTarget() {
     return carrierTarget;
   }
 
-  public void setCarrierTarget(JsonNullable<StatsServiceCarrierTarget> carrierTarget) {
+  public void setCarrierTarget(StatsServiceCarrierTarget carrierTarget) {
     this.carrierTarget = carrierTarget;
   }
 
   public StatsServiceTarget deviceTarget(StatsServiceDeviceTarget deviceTarget) {
-    this.deviceTarget = JsonNullable.of(deviceTarget);
+    this.deviceTarget = deviceTarget;
     return this;
   }
 
@@ -208,16 +207,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceDeviceTarget> getDeviceTarget() {
+  public StatsServiceDeviceTarget getDeviceTarget() {
     return deviceTarget;
   }
 
-  public void setDeviceTarget(JsonNullable<StatsServiceDeviceTarget> deviceTarget) {
+  public void setDeviceTarget(StatsServiceDeviceTarget deviceTarget) {
     this.deviceTarget = deviceTarget;
   }
 
   public StatsServiceTarget genderTarget(StatsServiceGenderTarget genderTarget) {
-    this.genderTarget = JsonNullable.of(genderTarget);
+    this.genderTarget = genderTarget;
     return this;
   }
 
@@ -229,16 +228,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceGenderTarget> getGenderTarget() {
+  public StatsServiceGenderTarget getGenderTarget() {
     return genderTarget;
   }
 
-  public void setGenderTarget(JsonNullable<StatsServiceGenderTarget> genderTarget) {
+  public void setGenderTarget(StatsServiceGenderTarget genderTarget) {
     this.genderTarget = genderTarget;
   }
 
   public StatsServiceTarget geoTarget(StatsServiceGeoTarget geoTarget) {
-    this.geoTarget = JsonNullable.of(geoTarget);
+    this.geoTarget = geoTarget;
     return this;
   }
 
@@ -250,16 +249,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceGeoTarget> getGeoTarget() {
+  public StatsServiceGeoTarget getGeoTarget() {
     return geoTarget;
   }
 
-  public void setGeoTarget(JsonNullable<StatsServiceGeoTarget> geoTarget) {
+  public void setGeoTarget(StatsServiceGeoTarget geoTarget) {
     this.geoTarget = geoTarget;
   }
 
   public StatsServiceTarget interestCategoryTarget(StatsServiceInterestCategoryTarget interestCategoryTarget) {
-    this.interestCategoryTarget = JsonNullable.of(interestCategoryTarget);
+    this.interestCategoryTarget = interestCategoryTarget;
     return this;
   }
 
@@ -271,16 +270,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceInterestCategoryTarget> getInterestCategoryTarget() {
+  public StatsServiceInterestCategoryTarget getInterestCategoryTarget() {
     return interestCategoryTarget;
   }
 
-  public void setInterestCategoryTarget(JsonNullable<StatsServiceInterestCategoryTarget> interestCategoryTarget) {
+  public void setInterestCategoryTarget(StatsServiceInterestCategoryTarget interestCategoryTarget) {
     this.interestCategoryTarget = interestCategoryTarget;
   }
 
   public StatsServiceTarget osTarget(StatsServiceOsTarget osTarget) {
-    this.osTarget = JsonNullable.of(osTarget);
+    this.osTarget = osTarget;
     return this;
   }
 
@@ -292,16 +291,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceOsTarget> getOsTarget() {
+  public StatsServiceOsTarget getOsTarget() {
     return osTarget;
   }
 
-  public void setOsTarget(JsonNullable<StatsServiceOsTarget> osTarget) {
+  public void setOsTarget(StatsServiceOsTarget osTarget) {
     this.osTarget = osTarget;
   }
 
   public StatsServiceTarget osVersionTarget(StatsServiceOsVersionTarget osVersionTarget) {
-    this.osVersionTarget = JsonNullable.of(osVersionTarget);
+    this.osVersionTarget = osVersionTarget;
     return this;
   }
 
@@ -313,16 +312,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceOsVersionTarget> getOsVersionTarget() {
+  public StatsServiceOsVersionTarget getOsVersionTarget() {
     return osVersionTarget;
   }
 
-  public void setOsVersionTarget(JsonNullable<StatsServiceOsVersionTarget> osVersionTarget) {
+  public void setOsVersionTarget(StatsServiceOsVersionTarget osVersionTarget) {
     this.osVersionTarget = osVersionTarget;
   }
 
   public StatsServiceTarget placementTarget(StatsServicePlacementTarget placementTarget) {
-    this.placementTarget = JsonNullable.of(placementTarget);
+    this.placementTarget = placementTarget;
     return this;
   }
 
@@ -334,16 +333,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServicePlacementTarget> getPlacementTarget() {
+  public StatsServicePlacementTarget getPlacementTarget() {
     return placementTarget;
   }
 
-  public void setPlacementTarget(JsonNullable<StatsServicePlacementTarget> placementTarget) {
+  public void setPlacementTarget(StatsServicePlacementTarget placementTarget) {
     this.placementTarget = placementTarget;
   }
 
   public StatsServiceTarget searchTarget(StatsServiceSearchTarget searchTarget) {
-    this.searchTarget = JsonNullable.of(searchTarget);
+    this.searchTarget = searchTarget;
     return this;
   }
 
@@ -355,16 +354,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceSearchTarget> getSearchTarget() {
+  public StatsServiceSearchTarget getSearchTarget() {
     return searchTarget;
   }
 
-  public void setSearchTarget(JsonNullable<StatsServiceSearchTarget> searchTarget) {
+  public void setSearchTarget(StatsServiceSearchTarget searchTarget) {
     this.searchTarget = searchTarget;
   }
 
   public StatsServiceTarget siteCategoryTarget(StatsServiceSiteCategoryTarget siteCategoryTarget) {
-    this.siteCategoryTarget = JsonNullable.of(siteCategoryTarget);
+    this.siteCategoryTarget = siteCategoryTarget;
     return this;
   }
 
@@ -376,16 +375,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceSiteCategoryTarget> getSiteCategoryTarget() {
+  public StatsServiceSiteCategoryTarget getSiteCategoryTarget() {
     return siteCategoryTarget;
   }
 
-  public void setSiteCategoryTarget(JsonNullable<StatsServiceSiteCategoryTarget> siteCategoryTarget) {
+  public void setSiteCategoryTarget(StatsServiceSiteCategoryTarget siteCategoryTarget) {
     this.siteCategoryTarget = siteCategoryTarget;
   }
 
   public StatsServiceTarget siteRetargetingTarget(StatsServiceSiteRetargetingTarget siteRetargetingTarget) {
-    this.siteRetargetingTarget = JsonNullable.of(siteRetargetingTarget);
+    this.siteRetargetingTarget = siteRetargetingTarget;
     return this;
   }
 
@@ -397,16 +396,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceSiteRetargetingTarget> getSiteRetargetingTarget() {
+  public StatsServiceSiteRetargetingTarget getSiteRetargetingTarget() {
     return siteRetargetingTarget;
   }
 
-  public void setSiteRetargetingTarget(JsonNullable<StatsServiceSiteRetargetingTarget> siteRetargetingTarget) {
+  public void setSiteRetargetingTarget(StatsServiceSiteRetargetingTarget siteRetargetingTarget) {
     this.siteRetargetingTarget = siteRetargetingTarget;
   }
 
   public StatsServiceTarget placementCategoryDetailTarget(StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
-    this.placementCategoryDetailTarget = JsonNullable.of(placementCategoryDetailTarget);
+    this.placementCategoryDetailTarget = placementCategoryDetailTarget;
     return this;
   }
 
@@ -418,16 +417,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServicePlacementCategoryDetailTarget> getPlacementCategoryDetailTarget() {
+  public StatsServicePlacementCategoryDetailTarget getPlacementCategoryDetailTarget() {
     return placementCategoryDetailTarget;
   }
 
-  public void setPlacementCategoryDetailTarget(JsonNullable<StatsServicePlacementCategoryDetailTarget> placementCategoryDetailTarget) {
+  public void setPlacementCategoryDetailTarget(StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
   }
 
   public StatsServiceTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -438,16 +437,16 @@ public class StatsServiceTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットID</div> <div lang=\"en\">StatsServiceTarget ID</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public StatsServiceTarget targetSetting(StatsServiceTargetSetting targetSetting) {
-    this.targetSetting = JsonNullable.of(targetSetting);
+    this.targetSetting = targetSetting;
     return this;
   }
 
@@ -459,16 +458,16 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceTargetSetting> getTargetSetting() {
+  public StatsServiceTargetSetting getTargetSetting() {
     return targetSetting;
   }
 
-  public void setTargetSetting(JsonNullable<StatsServiceTargetSetting> targetSetting) {
+  public void setTargetSetting(StatsServiceTargetSetting targetSetting) {
     this.targetSetting = targetSetting;
   }
 
   public StatsServiceTarget targetType(StatsServiceTargetType targetType) {
-    this.targetType = JsonNullable.of(targetType);
+    this.targetType = targetType;
     return this;
   }
 
@@ -480,17 +479,17 @@ public class StatsServiceTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceTargetType> getTargetType() {
+  public StatsServiceTargetType getTargetType() {
     return targetType;
   }
 
-  public void setTargetType(JsonNullable<StatsServiceTargetType> targetType) {
+  public void setTargetType(StatsServiceTargetType targetType) {
     this.targetType = targetType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -556,7 +555,7 @@ public class StatsServiceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

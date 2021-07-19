@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignServiceConversionOptimizerEligibilityFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceAutoCampaignConversionOptimizerオブジェクトは、コンバージョン最適化設定情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceAutoCampaignConversionOptimizer retains conversion optimization settings.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignServiceAutoCampaignConversionOptimizerオブジェクトは、コンバージョン最適化設定情報を表します。</div> <div lang=\"en\">CampaignServiceAutoCampaignConversionOptimizer retains conversion optimization settings.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceAutoCampaignConversionOptimizer   {
   @JsonProperty("conversionOptimizerEligibilityFlg")
-  private JsonNullable<CampaignServiceConversionOptimizerEligibilityFlg> conversionOptimizerEligibilityFlg = JsonNullable.undefined();
+  private CampaignServiceConversionOptimizerEligibilityFlg conversionOptimizerEligibilityFlg = null;
 
   @JsonProperty("targetCpa")
-  private JsonNullable<Long> targetCpa = JsonNullable.undefined();
+  private Long targetCpa = null;
 
   public CampaignServiceAutoCampaignConversionOptimizer conversionOptimizerEligibilityFlg(CampaignServiceConversionOptimizerEligibilityFlg conversionOptimizerEligibilityFlg) {
-    this.conversionOptimizerEligibilityFlg = JsonNullable.of(conversionOptimizerEligibilityFlg);
+    this.conversionOptimizerEligibilityFlg = conversionOptimizerEligibilityFlg;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class CampaignServiceAutoCampaignConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceConversionOptimizerEligibilityFlg> getConversionOptimizerEligibilityFlg() {
+  public CampaignServiceConversionOptimizerEligibilityFlg getConversionOptimizerEligibilityFlg() {
     return conversionOptimizerEligibilityFlg;
   }
 
-  public void setConversionOptimizerEligibilityFlg(JsonNullable<CampaignServiceConversionOptimizerEligibilityFlg> conversionOptimizerEligibilityFlg) {
+  public void setConversionOptimizerEligibilityFlg(CampaignServiceConversionOptimizerEligibilityFlg conversionOptimizerEligibilityFlg) {
     this.conversionOptimizerEligibilityFlg = conversionOptimizerEligibilityFlg;
   }
 
   public CampaignServiceAutoCampaignConversionOptimizer targetCpa(Long targetCpa) {
-    this.targetCpa = JsonNullable.of(targetCpa);
+    this.targetCpa = targetCpa;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class CampaignServiceAutoCampaignConversionOptimizer   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン単価の目標値です。<br> このフィールドは、SET時に省略可能となり、ADDおよびREMOVE時に無視されます。<br> ※設定範囲：1 - 9,999,999,999<br> ※コンバージョン最適化機能が動作している場合には、手動で設定されている入札設定は無効になります。<br> </div> <div lang=\"en\"> This field is desired conversion cost value.<br> This field is optional in SET operation, and will be ignored in ADD and REMOVE operation. <br> * Settable range：1 - 9,999,999,999<br> * If function of conversion optimization is running, manual bid settings is invalid.<br> </div> ")
 
 
-  public JsonNullable<Long> getTargetCpa() {
+  public Long getTargetCpa() {
     return targetCpa;
   }
 
-  public void setTargetCpa(JsonNullable<Long> targetCpa) {
+  public void setTargetCpa(Long targetCpa) {
     this.targetCpa = targetCpa;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class CampaignServiceAutoCampaignConversionOptimizer   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

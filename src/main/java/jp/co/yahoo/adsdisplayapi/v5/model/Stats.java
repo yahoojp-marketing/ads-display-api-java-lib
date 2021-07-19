@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,175 +12,175 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Statsオブジェクトは、統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Stats object contains the stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Statsオブジェクトは、統計情報を保持します。</div> <div lang=\"en\">Stats object contains the stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Stats   {
   @JsonProperty("imps")
-  private JsonNullable<Long> imps = JsonNullable.undefined();
+  private Long imps = null;
 
   @JsonProperty("impsPrev")
-  private JsonNullable<Double> impsPrev = JsonNullable.undefined();
+  private Double impsPrev = null;
 
   @JsonProperty("clickCnt")
-  private JsonNullable<Long> clickCnt = JsonNullable.undefined();
+  private Long clickCnt = null;
 
   @JsonProperty("clickRate")
-  private JsonNullable<Double> clickRate = JsonNullable.undefined();
+  private Double clickRate = null;
 
   @JsonProperty("clickRatePrev")
-  private JsonNullable<Double> clickRatePrev = JsonNullable.undefined();
+  private Double clickRatePrev = null;
 
   @JsonProperty("cost")
-  private JsonNullable<Double> cost = JsonNullable.undefined();
+  private Double cost = null;
 
   @JsonProperty("avgCpc")
-  private JsonNullable<Double> avgCpc = JsonNullable.undefined();
+  private Double avgCpc = null;
 
   @JsonProperty("conversions")
-  private JsonNullable<Long> conversions = JsonNullable.undefined();
+  private Long conversions = null;
 
   @JsonProperty("conversionRate")
-  private JsonNullable<Double> conversionRate = JsonNullable.undefined();
+  private Double conversionRate = null;
 
   @JsonProperty("conversionsViaAdClick")
-  private JsonNullable<Long> conversionsViaAdClick = JsonNullable.undefined();
+  private Long conversionsViaAdClick = null;
 
   @JsonProperty("conversionRateViaAdClick")
-  private JsonNullable<Double> conversionRateViaAdClick = JsonNullable.undefined();
+  private Double conversionRateViaAdClick = null;
 
   @JsonProperty("allConversions")
-  private JsonNullable<Long> allConversions = JsonNullable.undefined();
+  private Long allConversions = null;
 
   @JsonProperty("allConversionRate")
-  private JsonNullable<Double> allConversionRate = JsonNullable.undefined();
+  private Double allConversionRate = null;
 
   @JsonProperty("cpa")
-  private JsonNullable<String> cpa = JsonNullable.undefined();
+  private String cpa = null;
 
   @JsonProperty("conversionValue")
-  private JsonNullable<String> conversionValue = JsonNullable.undefined();
+  private String conversionValue = null;
 
   @JsonProperty("valuePerConversions")
-  private JsonNullable<String> valuePerConversions = JsonNullable.undefined();
+  private String valuePerConversions = null;
 
   @JsonProperty("convValuePerCost")
-  private JsonNullable<Double> convValuePerCost = JsonNullable.undefined();
+  private Double convValuePerCost = null;
 
   @JsonProperty("allConvValuePerCost")
-  private JsonNullable<Double> allConvValuePerCost = JsonNullable.undefined();
+  private Double allConvValuePerCost = null;
 
   @JsonProperty("convValueViaAdClickPerCost")
-  private JsonNullable<Double> convValueViaAdClickPerCost = JsonNullable.undefined();
+  private Double convValueViaAdClickPerCost = null;
 
   @JsonProperty("allConversionValue")
-  private JsonNullable<String> allConversionValue = JsonNullable.undefined();
+  private String allConversionValue = null;
 
   @JsonProperty("valuePerAllConversions")
-  private JsonNullable<String> valuePerAllConversions = JsonNullable.undefined();
+  private String valuePerAllConversions = null;
 
   @JsonProperty("conversionValueViaAdClick")
-  private JsonNullable<String> conversionValueViaAdClick = JsonNullable.undefined();
+  private String conversionValueViaAdClick = null;
 
   @JsonProperty("valuePerConversionsViaAdClick")
-  private JsonNullable<String> valuePerConversionsViaAdClick = JsonNullable.undefined();
+  private String valuePerConversionsViaAdClick = null;
 
   @JsonProperty("cpaViaAdClick")
-  private JsonNullable<String> cpaViaAdClick = JsonNullable.undefined();
+  private String cpaViaAdClick = null;
 
   @JsonProperty("allCpa")
-  private JsonNullable<String> allCpa = JsonNullable.undefined();
+  private String allCpa = null;
 
   @JsonProperty("crossDeviceConversions")
-  private JsonNullable<Long> crossDeviceConversions = JsonNullable.undefined();
+  private Long crossDeviceConversions = null;
 
   @JsonProperty("avgDeliverRank")
-  private JsonNullable<Double> avgDeliverRank = JsonNullable.undefined();
+  private Double avgDeliverRank = null;
 
   @JsonProperty("measuredImps")
-  private JsonNullable<Double> measuredImps = JsonNullable.undefined();
+  private Double measuredImps = null;
 
   @JsonProperty("totalVimps")
-  private JsonNullable<Long> totalVimps = JsonNullable.undefined();
+  private Long totalVimps = null;
 
   @JsonProperty("measuredImpsRate")
-  private JsonNullable<Double> measuredImpsRate = JsonNullable.undefined();
+  private Double measuredImpsRate = null;
 
   @JsonProperty("vimps")
-  private JsonNullable<Long> vimps = JsonNullable.undefined();
+  private Long vimps = null;
 
   @JsonProperty("viewableImpsRate")
-  private JsonNullable<Double> viewableImpsRate = JsonNullable.undefined();
+  private Double viewableImpsRate = null;
 
   @JsonProperty("inViewRate")
-  private JsonNullable<Double> inViewRate = JsonNullable.undefined();
+  private Double inViewRate = null;
 
   @JsonProperty("viewableClicks")
-  private JsonNullable<Double> viewableClicks = JsonNullable.undefined();
+  private Double viewableClicks = null;
 
   @JsonProperty("inViewClickCnt")
-  private JsonNullable<Long> inViewClickCnt = JsonNullable.undefined();
+  private Long inViewClickCnt = null;
 
   @JsonProperty("viewableClickRate")
-  private JsonNullable<Double> viewableClickRate = JsonNullable.undefined();
+  private Double viewableClickRate = null;
 
   @JsonProperty("inViewClickRate")
-  private JsonNullable<Double> inViewClickRate = JsonNullable.undefined();
+  private Double inViewClickRate = null;
 
   @JsonProperty("paidVideoViews")
-  private JsonNullable<Long> paidVideoViews = JsonNullable.undefined();
+  private Long paidVideoViews = null;
 
   @JsonProperty("paidVideoViewRate")
-  private JsonNullable<Double> paidVideoViewRate = JsonNullable.undefined();
+  private Double paidVideoViewRate = null;
 
   @JsonProperty("averageCpv")
-  private JsonNullable<Double> averageCpv = JsonNullable.undefined();
+  private Double averageCpv = null;
 
   @JsonProperty("videoViews")
-  private JsonNullable<Long> videoViews = JsonNullable.undefined();
+  private Long videoViews = null;
 
   @JsonProperty("videoViewsTo25")
-  private JsonNullable<Long> videoViewsTo25 = JsonNullable.undefined();
+  private Long videoViewsTo25 = null;
 
   @JsonProperty("videoViewsTo50")
-  private JsonNullable<Long> videoViewsTo50 = JsonNullable.undefined();
+  private Long videoViewsTo50 = null;
 
   @JsonProperty("videoViewsTo75")
-  private JsonNullable<Long> videoViewsTo75 = JsonNullable.undefined();
+  private Long videoViewsTo75 = null;
 
   @JsonProperty("videoViewsTo95")
-  private JsonNullable<Long> videoViewsTo95 = JsonNullable.undefined();
+  private Long videoViewsTo95 = null;
 
   @JsonProperty("videoViewsTo100")
-  private JsonNullable<Long> videoViewsTo100 = JsonNullable.undefined();
+  private Long videoViewsTo100 = null;
 
   @JsonProperty("videoViewsTo3Sec")
-  private JsonNullable<Long> videoViewsTo3Sec = JsonNullable.undefined();
+  private Long videoViewsTo3Sec = null;
 
   @JsonProperty("videoViewsTo10Sec")
-  private JsonNullable<Long> videoViewsTo10Sec = JsonNullable.undefined();
+  private Long videoViewsTo10Sec = null;
 
   @JsonProperty("averageRateVideoViewed")
-  private JsonNullable<Double> averageRateVideoViewed = JsonNullable.undefined();
+  private Double averageRateVideoViewed = null;
 
   @JsonProperty("averageDurationVideoViewed")
-  private JsonNullable<Double> averageDurationVideoViewed = JsonNullable.undefined();
+  private Double averageDurationVideoViewed = null;
 
   @JsonProperty("videoViewThroughRate")
-  private JsonNullable<Double> videoViewThroughRate = JsonNullable.undefined();
+  private Double videoViewThroughRate = null;
 
   @JsonProperty("impressionShare")
-  private JsonNullable<Double> impressionShare = JsonNullable.undefined();
+  private Double impressionShare = null;
 
   @JsonProperty("budgetImpressionShareLostRate")
-  private JsonNullable<Double> budgetImpressionShareLostRate = JsonNullable.undefined();
+  private Double budgetImpressionShareLostRate = null;
 
   @JsonProperty("rankImpressionShareLostRate")
-  private JsonNullable<Double> rankImpressionShareLostRate = JsonNullable.undefined();
+  private Double rankImpressionShareLostRate = null;
 
   @JsonProperty("viewThroughConversions")
-  private JsonNullable<Long> viewThroughConversions = JsonNullable.undefined();
+  private Long viewThroughConversions = null;
 
   public Stats imps(Long imps) {
-    this.imps = JsonNullable.of(imps);
+    this.imps = imps;
     return this;
   }
 
@@ -192,16 +191,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">インプレッション数</div> <div lang=\"en\">Number of impressions</div> ")
 
 
-  public JsonNullable<Long> getImps() {
+  public Long getImps() {
     return imps;
   }
 
-  public void setImps(JsonNullable<Long> imps) {
+  public void setImps(Long imps) {
     this.imps = imps;
   }
 
   public Stats impsPrev(Double impsPrev) {
-    this.impsPrev = JsonNullable.of(impsPrev);
+    this.impsPrev = impsPrev;
     return this;
   }
 
@@ -212,16 +211,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">インプレッション数（旧）</div> <div lang=\"en\">Impressions (previous)</div> ")
 
 
-  public JsonNullable<Double> getImpsPrev() {
+  public Double getImpsPrev() {
     return impsPrev;
   }
 
-  public void setImpsPrev(JsonNullable<Double> impsPrev) {
+  public void setImpsPrev(Double impsPrev) {
     this.impsPrev = impsPrev;
   }
 
   public Stats clickCnt(Long clickCnt) {
-    this.clickCnt = JsonNullable.of(clickCnt);
+    this.clickCnt = clickCnt;
     return this;
   }
 
@@ -232,16 +231,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">クリック数</div> <div lang=\"en\">Number of clicks</div> ")
 
 
-  public JsonNullable<Long> getClickCnt() {
+  public Long getClickCnt() {
     return clickCnt;
   }
 
-  public void setClickCnt(JsonNullable<Long> clickCnt) {
+  public void setClickCnt(Long clickCnt) {
     this.clickCnt = clickCnt;
   }
 
   public Stats clickRate(Double clickRate) {
-    this.clickRate = JsonNullable.of(clickRate);
+    this.clickRate = clickRate;
     return this;
   }
 
@@ -252,16 +251,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">クリック率</div> <div lang=\"en\">Click through rate</div> ")
 
 
-  public JsonNullable<Double> getClickRate() {
+  public Double getClickRate() {
     return clickRate;
   }
 
-  public void setClickRate(JsonNullable<Double> clickRate) {
+  public void setClickRate(Double clickRate) {
     this.clickRate = clickRate;
   }
 
   public Stats clickRatePrev(Double clickRatePrev) {
-    this.clickRatePrev = JsonNullable.of(clickRatePrev);
+    this.clickRatePrev = clickRatePrev;
     return this;
   }
 
@@ -272,16 +271,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">クリック率（旧）</div> <div lang=\"en\">CTR (previous)</div> ")
 
 
-  public JsonNullable<Double> getClickRatePrev() {
+  public Double getClickRatePrev() {
     return clickRatePrev;
   }
 
-  public void setClickRatePrev(JsonNullable<Double> clickRatePrev) {
+  public void setClickRatePrev(Double clickRatePrev) {
     this.clickRatePrev = clickRatePrev;
   }
 
   public Stats cost(Double cost) {
-    this.cost = JsonNullable.of(cost);
+    this.cost = cost;
     return this;
   }
 
@@ -292,16 +291,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コスト</div> <div lang=\"en\">Cost</div> ")
 
 
-  public JsonNullable<Double> getCost() {
+  public Double getCost() {
     return cost;
   }
 
-  public void setCost(JsonNullable<Double> cost) {
+  public void setCost(Double cost) {
     this.cost = cost;
   }
 
   public Stats avgCpc(Double avgCpc) {
-    this.avgCpc = JsonNullable.of(avgCpc);
+    this.avgCpc = avgCpc;
     return this;
   }
 
@@ -312,16 +311,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">平均CPC</div> <div lang=\"en\">Avg. CPC</div> ")
 
 
-  public JsonNullable<Double> getAvgCpc() {
+  public Double getAvgCpc() {
     return avgCpc;
   }
 
-  public void setAvgCpc(JsonNullable<Double> avgCpc) {
+  public void setAvgCpc(Double avgCpc) {
     this.avgCpc = avgCpc;
   }
 
   public Stats conversions(Long conversions) {
-    this.conversions = JsonNullable.of(conversions);
+    this.conversions = conversions;
     return this;
   }
 
@@ -332,16 +331,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数</div> <div lang=\"en\">Conversions</div> ")
 
 
-  public JsonNullable<Long> getConversions() {
+  public Long getConversions() {
     return conversions;
   }
 
-  public void setConversions(JsonNullable<Long> conversions) {
+  public void setConversions(Long conversions) {
     this.conversions = conversions;
   }
 
   public Stats conversionRate(Double conversionRate) {
-    this.conversionRate = JsonNullable.of(conversionRate);
+    this.conversionRate = conversionRate;
     return this;
   }
 
@@ -352,16 +351,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン率</div> <div lang=\"en\">Conv. rate</div> ")
 
 
-  public JsonNullable<Double> getConversionRate() {
+  public Double getConversionRate() {
     return conversionRate;
   }
 
-  public void setConversionRate(JsonNullable<Double> conversionRate) {
+  public void setConversionRate(Double conversionRate) {
     this.conversionRate = conversionRate;
   }
 
   public Stats conversionsViaAdClick(Long conversionsViaAdClick) {
-    this.conversionsViaAdClick = JsonNullable.of(conversionsViaAdClick);
+    this.conversionsViaAdClick = conversionsViaAdClick;
     return this;
   }
 
@@ -372,16 +371,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数（クリック経由）</div> <div lang=\"en\">Conversions (via click)</div> ")
 
 
-  public JsonNullable<Long> getConversionsViaAdClick() {
+  public Long getConversionsViaAdClick() {
     return conversionsViaAdClick;
   }
 
-  public void setConversionsViaAdClick(JsonNullable<Long> conversionsViaAdClick) {
+  public void setConversionsViaAdClick(Long conversionsViaAdClick) {
     this.conversionsViaAdClick = conversionsViaAdClick;
   }
 
   public Stats conversionRateViaAdClick(Double conversionRateViaAdClick) {
-    this.conversionRateViaAdClick = JsonNullable.of(conversionRateViaAdClick);
+    this.conversionRateViaAdClick = conversionRateViaAdClick;
     return this;
   }
 
@@ -392,16 +391,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン率（クリック経由）</div> <div lang=\"en\">Conv. rate (via click)</div> ")
 
 
-  public JsonNullable<Double> getConversionRateViaAdClick() {
+  public Double getConversionRateViaAdClick() {
     return conversionRateViaAdClick;
   }
 
-  public void setConversionRateViaAdClick(JsonNullable<Double> conversionRateViaAdClick) {
+  public void setConversionRateViaAdClick(Double conversionRateViaAdClick) {
     this.conversionRateViaAdClick = conversionRateViaAdClick;
   }
 
   public Stats allConversions(Long allConversions) {
-    this.allConversions = JsonNullable.of(allConversions);
+    this.allConversions = allConversions;
     return this;
   }
 
@@ -412,16 +411,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数（全て）</div> <div lang=\"en\">Conversions (all)</div> ")
 
 
-  public JsonNullable<Long> getAllConversions() {
+  public Long getAllConversions() {
     return allConversions;
   }
 
-  public void setAllConversions(JsonNullable<Long> allConversions) {
+  public void setAllConversions(Long allConversions) {
     this.allConversions = allConversions;
   }
 
   public Stats allConversionRate(Double allConversionRate) {
-    this.allConversionRate = JsonNullable.of(allConversionRate);
+    this.allConversionRate = allConversionRate;
     return this;
   }
 
@@ -432,16 +431,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン率（全て）</div> <div lang=\"en\">Conv. rate (all)</div> ")
 
 
-  public JsonNullable<Double> getAllConversionRate() {
+  public Double getAllConversionRate() {
     return allConversionRate;
   }
 
-  public void setAllConversionRate(JsonNullable<Double> allConversionRate) {
+  public void setAllConversionRate(Double allConversionRate) {
     this.allConversionRate = allConversionRate;
   }
 
   public Stats cpa(String cpa) {
-    this.cpa = JsonNullable.of(cpa);
+    this.cpa = cpa;
     return this;
   }
 
@@ -452,16 +451,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価</div> <div lang=\"en\">Conversion cost per acquisition</div> ")
 
 
-  public JsonNullable<String> getCpa() {
+  public String getCpa() {
     return cpa;
   }
 
-  public void setCpa(JsonNullable<String> cpa) {
+  public void setCpa(String cpa) {
     this.cpa = cpa;
   }
 
   public Stats conversionValue(String conversionValue) {
-    this.conversionValue = JsonNullable.of(conversionValue);
+    this.conversionValue = conversionValue;
     return this;
   }
 
@@ -472,16 +471,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値</div> <div lang=\"en\">Conv. value</div> ")
 
 
-  public JsonNullable<String> getConversionValue() {
+  public String getConversionValue() {
     return conversionValue;
   }
 
-  public void setConversionValue(JsonNullable<String> conversionValue) {
+  public void setConversionValue(String conversionValue) {
     this.conversionValue = conversionValue;
   }
 
   public Stats valuePerConversions(String valuePerConversions) {
-    this.valuePerConversions = JsonNullable.of(valuePerConversions);
+    this.valuePerConversions = valuePerConversions;
     return this;
   }
 
@@ -492,16 +491,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値/コンバージョン数</div> <div lang=\"en\">Conv. value/conv.</div> ")
 
 
-  public JsonNullable<String> getValuePerConversions() {
+  public String getValuePerConversions() {
     return valuePerConversions;
   }
 
-  public void setValuePerConversions(JsonNullable<String> valuePerConversions) {
+  public void setValuePerConversions(String valuePerConversions) {
     this.valuePerConversions = valuePerConversions;
   }
 
   public Stats convValuePerCost(Double convValuePerCost) {
-    this.convValuePerCost = JsonNullable.of(convValuePerCost);
+    this.convValuePerCost = convValuePerCost;
     return this;
   }
 
@@ -512,16 +511,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）/コスト</div> <div lang=\"en\">Conversions value/cost</div> ")
 
 
-  public JsonNullable<Double> getConvValuePerCost() {
+  public Double getConvValuePerCost() {
     return convValuePerCost;
   }
 
-  public void setConvValuePerCost(JsonNullable<Double> convValuePerCost) {
+  public void setConvValuePerCost(Double convValuePerCost) {
     this.convValuePerCost = convValuePerCost;
   }
 
   public Stats allConvValuePerCost(Double allConvValuePerCost) {
-    this.allConvValuePerCost = JsonNullable.of(allConvValuePerCost);
+    this.allConvValuePerCost = allConvValuePerCost;
     return this;
   }
 
@@ -532,16 +531,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）/コスト</div> <div lang=\"en\">Conv. value (all)/cost All Conv.</div> ")
 
 
-  public JsonNullable<Double> getAllConvValuePerCost() {
+  public Double getAllConvValuePerCost() {
     return allConvValuePerCost;
   }
 
-  public void setAllConvValuePerCost(JsonNullable<Double> allConvValuePerCost) {
+  public void setAllConvValuePerCost(Double allConvValuePerCost) {
     this.allConvValuePerCost = allConvValuePerCost;
   }
 
   public Stats convValueViaAdClickPerCost(Double convValueViaAdClickPerCost) {
-    this.convValueViaAdClickPerCost = JsonNullable.of(convValueViaAdClickPerCost);
+    this.convValueViaAdClickPerCost = convValueViaAdClickPerCost;
     return this;
   }
 
@@ -552,16 +551,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）/コスト</div> <div lang=\"en\">Conversions value(via ad clicks)/cost</div> ")
 
 
-  public JsonNullable<Double> getConvValueViaAdClickPerCost() {
+  public Double getConvValueViaAdClickPerCost() {
     return convValueViaAdClickPerCost;
   }
 
-  public void setConvValueViaAdClickPerCost(JsonNullable<Double> convValueViaAdClickPerCost) {
+  public void setConvValueViaAdClickPerCost(Double convValueViaAdClickPerCost) {
     this.convValueViaAdClickPerCost = convValueViaAdClickPerCost;
   }
 
   public Stats allConversionValue(String allConversionValue) {
-    this.allConversionValue = JsonNullable.of(allConversionValue);
+    this.allConversionValue = allConversionValue;
     return this;
   }
 
@@ -572,16 +571,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）</div> <div lang=\"en\">Conv. value (all)</div> ")
 
 
-  public JsonNullable<String> getAllConversionValue() {
+  public String getAllConversionValue() {
     return allConversionValue;
   }
 
-  public void setAllConversionValue(JsonNullable<String> allConversionValue) {
+  public void setAllConversionValue(String allConversionValue) {
     this.allConversionValue = allConversionValue;
   }
 
   public Stats valuePerAllConversions(String valuePerAllConversions) {
-    this.valuePerAllConversions = JsonNullable.of(valuePerAllConversions);
+    this.valuePerAllConversions = valuePerAllConversions;
     return this;
   }
 
@@ -592,16 +591,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）/コンバージョン数（全て）</div> <div lang=\"en\">Conv. value (all)/conv. (all)</div> ")
 
 
-  public JsonNullable<String> getValuePerAllConversions() {
+  public String getValuePerAllConversions() {
     return valuePerAllConversions;
   }
 
-  public void setValuePerAllConversions(JsonNullable<String> valuePerAllConversions) {
+  public void setValuePerAllConversions(String valuePerAllConversions) {
     this.valuePerAllConversions = valuePerAllConversions;
   }
 
   public Stats conversionValueViaAdClick(String conversionValueViaAdClick) {
-    this.conversionValueViaAdClick = JsonNullable.of(conversionValueViaAdClick);
+    this.conversionValueViaAdClick = conversionValueViaAdClick;
     return this;
   }
 
@@ -612,16 +611,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）</div> <div lang=\"en\">Conv. value (via click)</div> ")
 
 
-  public JsonNullable<String> getConversionValueViaAdClick() {
+  public String getConversionValueViaAdClick() {
     return conversionValueViaAdClick;
   }
 
-  public void setConversionValueViaAdClick(JsonNullable<String> conversionValueViaAdClick) {
+  public void setConversionValueViaAdClick(String conversionValueViaAdClick) {
     this.conversionValueViaAdClick = conversionValueViaAdClick;
   }
 
   public Stats valuePerConversionsViaAdClick(String valuePerConversionsViaAdClick) {
-    this.valuePerConversionsViaAdClick = JsonNullable.of(valuePerConversionsViaAdClick);
+    this.valuePerConversionsViaAdClick = valuePerConversionsViaAdClick;
     return this;
   }
 
@@ -632,16 +631,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）/コンバージョン数（クリック経由）</div> <div lang=\"en\">Conv. value (via click)/conv. (via click)</div> ")
 
 
-  public JsonNullable<String> getValuePerConversionsViaAdClick() {
+  public String getValuePerConversionsViaAdClick() {
     return valuePerConversionsViaAdClick;
   }
 
-  public void setValuePerConversionsViaAdClick(JsonNullable<String> valuePerConversionsViaAdClick) {
+  public void setValuePerConversionsViaAdClick(String valuePerConversionsViaAdClick) {
     this.valuePerConversionsViaAdClick = valuePerConversionsViaAdClick;
   }
 
   public Stats cpaViaAdClick(String cpaViaAdClick) {
-    this.cpaViaAdClick = JsonNullable.of(cpaViaAdClick);
+    this.cpaViaAdClick = cpaViaAdClick;
     return this;
   }
 
@@ -652,16 +651,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コスト/コンバージョン数（クリック経由）</div> <div lang=\"en\">Cost/conv. (via click)</div> ")
 
 
-  public JsonNullable<String> getCpaViaAdClick() {
+  public String getCpaViaAdClick() {
     return cpaViaAdClick;
   }
 
-  public void setCpaViaAdClick(JsonNullable<String> cpaViaAdClick) {
+  public void setCpaViaAdClick(String cpaViaAdClick) {
     this.cpaViaAdClick = cpaViaAdClick;
   }
 
   public Stats allCpa(String allCpa) {
-    this.allCpa = JsonNullable.of(allCpa);
+    this.allCpa = allCpa;
     return this;
   }
 
@@ -672,16 +671,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">コスト/コンバージョン数（全て）</div> <div lang=\"en\">Cost/conv. (all)</div> ")
 
 
-  public JsonNullable<String> getAllCpa() {
+  public String getAllCpa() {
     return allCpa;
   }
 
-  public void setAllCpa(JsonNullable<String> allCpa) {
+  public void setAllCpa(String allCpa) {
     this.allCpa = allCpa;
   }
 
   public Stats crossDeviceConversions(Long crossDeviceConversions) {
-    this.crossDeviceConversions = JsonNullable.of(crossDeviceConversions);
+    this.crossDeviceConversions = crossDeviceConversions;
     return this;
   }
 
@@ -692,16 +691,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">クロスデバイスコンバージョン数</div> <div lang=\"en\">Cross-device conv.</div> ")
 
 
-  public JsonNullable<Long> getCrossDeviceConversions() {
+  public Long getCrossDeviceConversions() {
     return crossDeviceConversions;
   }
 
-  public void setCrossDeviceConversions(JsonNullable<Long> crossDeviceConversions) {
+  public void setCrossDeviceConversions(Long crossDeviceConversions) {
     this.crossDeviceConversions = crossDeviceConversions;
   }
 
   public Stats avgDeliverRank(Double avgDeliverRank) {
-    this.avgDeliverRank = JsonNullable.of(avgDeliverRank);
+    this.avgDeliverRank = avgDeliverRank;
     return this;
   }
 
@@ -712,16 +711,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">平均掲載順位（配信された時のeCPM順位の平均）</div> <div lang=\"en\">Avg. position (the average of eCPM rank on ads delivery)</div> ")
 
 
-  public JsonNullable<Double> getAvgDeliverRank() {
+  public Double getAvgDeliverRank() {
     return avgDeliverRank;
   }
 
-  public void setAvgDeliverRank(JsonNullable<Double> avgDeliverRank) {
+  public void setAvgDeliverRank(Double avgDeliverRank) {
     this.avgDeliverRank = avgDeliverRank;
   }
 
   public Stats measuredImps(Double measuredImps) {
-    this.measuredImps = JsonNullable.of(measuredImps);
+    this.measuredImps = measuredImps;
     return this;
   }
 
@@ -732,16 +731,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">メジャードインプレッション数</div> <div lang=\"en\">Measured impressions</div> ")
 
 
-  public JsonNullable<Double> getMeasuredImps() {
+  public Double getMeasuredImps() {
     return measuredImps;
   }
 
-  public void setMeasuredImps(JsonNullable<Double> measuredImps) {
+  public void setMeasuredImps(Double measuredImps) {
     this.measuredImps = measuredImps;
   }
 
   public Stats totalVimps(Long totalVimps) {
-    this.totalVimps = JsonNullable.of(totalVimps);
+    this.totalVimps = totalVimps;
     return this;
   }
 
@@ -752,16 +751,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">メジャードインプレッション数（旧）</div> <div lang=\"en\">Measured impressions (previous)</div> ")
 
 
-  public JsonNullable<Long> getTotalVimps() {
+  public Long getTotalVimps() {
     return totalVimps;
   }
 
-  public void setTotalVimps(JsonNullable<Long> totalVimps) {
+  public void setTotalVimps(Long totalVimps) {
     this.totalVimps = totalVimps;
   }
 
   public Stats measuredImpsRate(Double measuredImpsRate) {
-    this.measuredImpsRate = JsonNullable.of(measuredImpsRate);
+    this.measuredImpsRate = measuredImpsRate;
     return this;
   }
 
@@ -772,16 +771,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">メジャードインプレッション測定率</div> <div lang=\"en\">Measured impression rate</div> ")
 
 
-  public JsonNullable<Double> getMeasuredImpsRate() {
+  public Double getMeasuredImpsRate() {
     return measuredImpsRate;
   }
 
-  public void setMeasuredImpsRate(JsonNullable<Double> measuredImpsRate) {
+  public void setMeasuredImpsRate(Double measuredImpsRate) {
     this.measuredImpsRate = measuredImpsRate;
   }
 
   public Stats vimps(Long vimps) {
-    this.vimps = JsonNullable.of(vimps);
+    this.vimps = vimps;
     return this;
   }
 
@@ -792,16 +791,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルインプレッション数</div> <div lang=\"en\">Viewable impressions</div> ")
 
 
-  public JsonNullable<Long> getVimps() {
+  public Long getVimps() {
     return vimps;
   }
 
-  public void setVimps(JsonNullable<Long> vimps) {
+  public void setVimps(Long vimps) {
     this.vimps = vimps;
   }
 
   public Stats viewableImpsRate(Double viewableImpsRate) {
-    this.viewableImpsRate = JsonNullable.of(viewableImpsRate);
+    this.viewableImpsRate = viewableImpsRate;
     return this;
   }
 
@@ -812,16 +811,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルインプレッション率</div> <div lang=\"en\">Viewable impression rate</div> ")
 
 
-  public JsonNullable<Double> getViewableImpsRate() {
+  public Double getViewableImpsRate() {
     return viewableImpsRate;
   }
 
-  public void setViewableImpsRate(JsonNullable<Double> viewableImpsRate) {
+  public void setViewableImpsRate(Double viewableImpsRate) {
     this.viewableImpsRate = viewableImpsRate;
   }
 
   public Stats inViewRate(Double inViewRate) {
-    this.inViewRate = JsonNullable.of(inViewRate);
+    this.inViewRate = inViewRate;
     return this;
   }
 
@@ -832,16 +831,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルインプレッション率（旧）</div> <div lang=\"en\">Viewable impression rate (previous)</div> ")
 
 
-  public JsonNullable<Double> getInViewRate() {
+  public Double getInViewRate() {
     return inViewRate;
   }
 
-  public void setInViewRate(JsonNullable<Double> inViewRate) {
+  public void setInViewRate(Double inViewRate) {
     this.inViewRate = inViewRate;
   }
 
   public Stats viewableClicks(Double viewableClicks) {
-    this.viewableClicks = JsonNullable.of(viewableClicks);
+    this.viewableClicks = viewableClicks;
     return this;
   }
 
@@ -852,16 +851,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルクリック数</div> <div lang=\"en\">Viewable clicks</div> ")
 
 
-  public JsonNullable<Double> getViewableClicks() {
+  public Double getViewableClicks() {
     return viewableClicks;
   }
 
-  public void setViewableClicks(JsonNullable<Double> viewableClicks) {
+  public void setViewableClicks(Double viewableClicks) {
     this.viewableClicks = viewableClicks;
   }
 
   public Stats inViewClickCnt(Long inViewClickCnt) {
-    this.inViewClickCnt = JsonNullable.of(inViewClickCnt);
+    this.inViewClickCnt = inViewClickCnt;
     return this;
   }
 
@@ -872,16 +871,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルクリック数（旧）</div> <div lang=\"en\">Viewable clicks (previous)</div> ")
 
 
-  public JsonNullable<Long> getInViewClickCnt() {
+  public Long getInViewClickCnt() {
     return inViewClickCnt;
   }
 
-  public void setInViewClickCnt(JsonNullable<Long> inViewClickCnt) {
+  public void setInViewClickCnt(Long inViewClickCnt) {
     this.inViewClickCnt = inViewClickCnt;
   }
 
   public Stats viewableClickRate(Double viewableClickRate) {
-    this.viewableClickRate = JsonNullable.of(viewableClickRate);
+    this.viewableClickRate = viewableClickRate;
     return this;
   }
 
@@ -892,16 +891,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルクリック率</div> <div lang=\"en\">Viewable CTR</div> ")
 
 
-  public JsonNullable<Double> getViewableClickRate() {
+  public Double getViewableClickRate() {
     return viewableClickRate;
   }
 
-  public void setViewableClickRate(JsonNullable<Double> viewableClickRate) {
+  public void setViewableClickRate(Double viewableClickRate) {
     this.viewableClickRate = viewableClickRate;
   }
 
   public Stats inViewClickRate(Double inViewClickRate) {
-    this.inViewClickRate = JsonNullable.of(inViewClickRate);
+    this.inViewClickRate = inViewClickRate;
     return this;
   }
 
@@ -912,16 +911,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルクリック率（旧）</div> <div lang=\"en\">Viewable CTR (previous)</div> ")
 
 
-  public JsonNullable<Double> getInViewClickRate() {
+  public Double getInViewClickRate() {
     return inViewClickRate;
   }
 
-  public void setInViewClickRate(JsonNullable<Double> inViewClickRate) {
+  public void setInViewClickRate(Double inViewClickRate) {
     this.inViewClickRate = inViewClickRate;
   }
 
   public Stats paidVideoViews(Long paidVideoViews) {
-    this.paidVideoViews = JsonNullable.of(paidVideoViews);
+    this.paidVideoViews = paidVideoViews;
     return this;
   }
 
@@ -932,16 +931,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">課金が発生した動画再生数 (CPV課金キャンペーンのみ)</div> <div lang=\"en\">Paid video views (CPV)</div> ")
 
 
-  public JsonNullable<Long> getPaidVideoViews() {
+  public Long getPaidVideoViews() {
     return paidVideoViews;
   }
 
-  public void setPaidVideoViews(JsonNullable<Long> paidVideoViews) {
+  public void setPaidVideoViews(Long paidVideoViews) {
     this.paidVideoViews = paidVideoViews;
   }
 
   public Stats paidVideoViewRate(Double paidVideoViewRate) {
-    this.paidVideoViewRate = JsonNullable.of(paidVideoViewRate);
+    this.paidVideoViewRate = paidVideoViewRate;
     return this;
   }
 
@@ -952,16 +951,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">課金が発生した動画再生率 (CPV課金キャンペーンのみ)</div> <div lang=\"en\">Paid video view rate (CPV)</div> ")
 
 
-  public JsonNullable<Double> getPaidVideoViewRate() {
+  public Double getPaidVideoViewRate() {
     return paidVideoViewRate;
   }
 
-  public void setPaidVideoViewRate(JsonNullable<Double> paidVideoViewRate) {
+  public void setPaidVideoViewRate(Double paidVideoViewRate) {
     this.paidVideoViewRate = paidVideoViewRate;
   }
 
   public Stats averageCpv(Double averageCpv) {
-    this.averageCpv = JsonNullable.of(averageCpv);
+    this.averageCpv = averageCpv;
     return this;
   }
 
@@ -972,16 +971,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">平均CPV</div> <div lang=\"en\">Avg. CPV</div> ")
 
 
-  public JsonNullable<Double> getAverageCpv() {
+  public Double getAverageCpv() {
     return averageCpv;
   }
 
-  public void setAverageCpv(JsonNullable<Double> averageCpv) {
+  public void setAverageCpv(Double averageCpv) {
     this.averageCpv = averageCpv;
   }
 
   public Stats videoViews(Long videoViews) {
-    this.videoViews = JsonNullable.of(videoViews);
+    this.videoViews = videoViews;
     return this;
   }
 
@@ -992,16 +991,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の再生開始数</div> <div lang=\"en\">Video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViews() {
+  public Long getVideoViews() {
     return videoViews;
   }
 
-  public void setVideoViews(JsonNullable<Long> videoViews) {
+  public void setVideoViews(Long videoViews) {
     this.videoViews = videoViews;
   }
 
   public Stats videoViewsTo25(Long videoViewsTo25) {
-    this.videoViewsTo25 = JsonNullable.of(videoViewsTo25);
+    this.videoViewsTo25 = videoViewsTo25;
     return this;
   }
 
@@ -1012,16 +1011,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の25％再生数</div> <div lang=\"en\">25% video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo25() {
+  public Long getVideoViewsTo25() {
     return videoViewsTo25;
   }
 
-  public void setVideoViewsTo25(JsonNullable<Long> videoViewsTo25) {
+  public void setVideoViewsTo25(Long videoViewsTo25) {
     this.videoViewsTo25 = videoViewsTo25;
   }
 
   public Stats videoViewsTo50(Long videoViewsTo50) {
-    this.videoViewsTo50 = JsonNullable.of(videoViewsTo50);
+    this.videoViewsTo50 = videoViewsTo50;
     return this;
   }
 
@@ -1032,16 +1031,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の50％再生数</div> <div lang=\"en\">50% video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo50() {
+  public Long getVideoViewsTo50() {
     return videoViewsTo50;
   }
 
-  public void setVideoViewsTo50(JsonNullable<Long> videoViewsTo50) {
+  public void setVideoViewsTo50(Long videoViewsTo50) {
     this.videoViewsTo50 = videoViewsTo50;
   }
 
   public Stats videoViewsTo75(Long videoViewsTo75) {
-    this.videoViewsTo75 = JsonNullable.of(videoViewsTo75);
+    this.videoViewsTo75 = videoViewsTo75;
     return this;
   }
 
@@ -1052,16 +1051,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の75％再生数</div> <div lang=\"en\">75% video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo75() {
+  public Long getVideoViewsTo75() {
     return videoViewsTo75;
   }
 
-  public void setVideoViewsTo75(JsonNullable<Long> videoViewsTo75) {
+  public void setVideoViewsTo75(Long videoViewsTo75) {
     this.videoViewsTo75 = videoViewsTo75;
   }
 
   public Stats videoViewsTo95(Long videoViewsTo95) {
-    this.videoViewsTo95 = JsonNullable.of(videoViewsTo95);
+    this.videoViewsTo95 = videoViewsTo95;
     return this;
   }
 
@@ -1072,16 +1071,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の95％再生数</div> <div lang=\"en\">95% video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo95() {
+  public Long getVideoViewsTo95() {
     return videoViewsTo95;
   }
 
-  public void setVideoViewsTo95(JsonNullable<Long> videoViewsTo95) {
+  public void setVideoViewsTo95(Long videoViewsTo95) {
     this.videoViewsTo95 = videoViewsTo95;
   }
 
   public Stats videoViewsTo100(Long videoViewsTo100) {
-    this.videoViewsTo100 = JsonNullable.of(videoViewsTo100);
+    this.videoViewsTo100 = videoViewsTo100;
     return this;
   }
 
@@ -1092,16 +1091,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の100％再生数</div> <div lang=\"en\">100% video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo100() {
+  public Long getVideoViewsTo100() {
     return videoViewsTo100;
   }
 
-  public void setVideoViewsTo100(JsonNullable<Long> videoViewsTo100) {
+  public void setVideoViewsTo100(Long videoViewsTo100) {
     this.videoViewsTo100 = videoViewsTo100;
   }
 
   public Stats videoViewsTo3Sec(Long videoViewsTo3Sec) {
-    this.videoViewsTo3Sec = JsonNullable.of(videoViewsTo3Sec);
+    this.videoViewsTo3Sec = videoViewsTo3Sec;
     return this;
   }
 
@@ -1112,16 +1111,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の3秒再生数</div> <div lang=\"en\">3 sec video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo3Sec() {
+  public Long getVideoViewsTo3Sec() {
     return videoViewsTo3Sec;
   }
 
-  public void setVideoViewsTo3Sec(JsonNullable<Long> videoViewsTo3Sec) {
+  public void setVideoViewsTo3Sec(Long videoViewsTo3Sec) {
     this.videoViewsTo3Sec = videoViewsTo3Sec;
   }
 
   public Stats videoViewsTo10Sec(Long videoViewsTo10Sec) {
-    this.videoViewsTo10Sec = JsonNullable.of(videoViewsTo10Sec);
+    this.videoViewsTo10Sec = videoViewsTo10Sec;
     return this;
   }
 
@@ -1132,16 +1131,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の10秒再生数</div> <div lang=\"en\">10 sec video views</div> ")
 
 
-  public JsonNullable<Long> getVideoViewsTo10Sec() {
+  public Long getVideoViewsTo10Sec() {
     return videoViewsTo10Sec;
   }
 
-  public void setVideoViewsTo10Sec(JsonNullable<Long> videoViewsTo10Sec) {
+  public void setVideoViewsTo10Sec(Long videoViewsTo10Sec) {
     this.videoViewsTo10Sec = videoViewsTo10Sec;
   }
 
   public Stats averageRateVideoViewed(Double averageRateVideoViewed) {
-    this.averageRateVideoViewed = JsonNullable.of(averageRateVideoViewed);
+    this.averageRateVideoViewed = averageRateVideoViewed;
     return this;
   }
 
@@ -1152,16 +1151,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の平均再生率</div> <div lang=\"en\">Avg. video view rate</div> ")
 
 
-  public JsonNullable<Double> getAverageRateVideoViewed() {
+  public Double getAverageRateVideoViewed() {
     return averageRateVideoViewed;
   }
 
-  public void setAverageRateVideoViewed(JsonNullable<Double> averageRateVideoViewed) {
+  public void setAverageRateVideoViewed(Double averageRateVideoViewed) {
     this.averageRateVideoViewed = averageRateVideoViewed;
   }
 
   public Stats averageDurationVideoViewed(Double averageDurationVideoViewed) {
-    this.averageDurationVideoViewed = JsonNullable.of(averageDurationVideoViewed);
+    this.averageDurationVideoViewed = averageDurationVideoViewed;
     return this;
   }
 
@@ -1172,16 +1171,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の平均再生時間</div> <div lang=\"en\">Avg. duration of video viewed</div> ")
 
 
-  public JsonNullable<Double> getAverageDurationVideoViewed() {
+  public Double getAverageDurationVideoViewed() {
     return averageDurationVideoViewed;
   }
 
-  public void setAverageDurationVideoViewed(JsonNullable<Double> averageDurationVideoViewed) {
+  public void setAverageDurationVideoViewed(Double averageDurationVideoViewed) {
     this.averageDurationVideoViewed = averageDurationVideoViewed;
   }
 
   public Stats videoViewThroughRate(Double videoViewThroughRate) {
-    this.videoViewThroughRate = JsonNullable.of(videoViewThroughRate);
+    this.videoViewThroughRate = videoViewThroughRate;
     return this;
   }
 
@@ -1192,16 +1191,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">動画の再生完了率</div> <div lang=\"en\">Video view through rate</div> ")
 
 
-  public JsonNullable<Double> getVideoViewThroughRate() {
+  public Double getVideoViewThroughRate() {
     return videoViewThroughRate;
   }
 
-  public void setVideoViewThroughRate(JsonNullable<Double> videoViewThroughRate) {
+  public void setVideoViewThroughRate(Double videoViewThroughRate) {
     this.videoViewThroughRate = videoViewThroughRate;
   }
 
   public Stats impressionShare(Double impressionShare) {
-    this.impressionShare = JsonNullable.of(impressionShare);
+    this.impressionShare = impressionShare;
     return this;
   }
 
@@ -1212,16 +1211,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">インプレッションシェア</div> <div lang=\"en\">Impression share</div> ")
 
 
-  public JsonNullable<Double> getImpressionShare() {
+  public Double getImpressionShare() {
     return impressionShare;
   }
 
-  public void setImpressionShare(JsonNullable<Double> impressionShare) {
+  public void setImpressionShare(Double impressionShare) {
     this.impressionShare = impressionShare;
   }
 
   public Stats budgetImpressionShareLostRate(Double budgetImpressionShareLostRate) {
-    this.budgetImpressionShareLostRate = JsonNullable.of(budgetImpressionShareLostRate);
+    this.budgetImpressionShareLostRate = budgetImpressionShareLostRate;
     return this;
   }
 
@@ -1232,16 +1231,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">インプレッションシェア損失率（予算）</div> <div lang=\"en\">Impression share lost rate(budget)</div> ")
 
 
-  public JsonNullable<Double> getBudgetImpressionShareLostRate() {
+  public Double getBudgetImpressionShareLostRate() {
     return budgetImpressionShareLostRate;
   }
 
-  public void setBudgetImpressionShareLostRate(JsonNullable<Double> budgetImpressionShareLostRate) {
+  public void setBudgetImpressionShareLostRate(Double budgetImpressionShareLostRate) {
     this.budgetImpressionShareLostRate = budgetImpressionShareLostRate;
   }
 
   public Stats rankImpressionShareLostRate(Double rankImpressionShareLostRate) {
-    this.rankImpressionShareLostRate = JsonNullable.of(rankImpressionShareLostRate);
+    this.rankImpressionShareLostRate = rankImpressionShareLostRate;
     return this;
   }
 
@@ -1252,16 +1251,16 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">インプレッションシェア損失率（ランク）</div> <div lang=\"en\">Impression share lost rate(rank)</div> ")
 
 
-  public JsonNullable<Double> getRankImpressionShareLostRate() {
+  public Double getRankImpressionShareLostRate() {
     return rankImpressionShareLostRate;
   }
 
-  public void setRankImpressionShareLostRate(JsonNullable<Double> rankImpressionShareLostRate) {
+  public void setRankImpressionShareLostRate(Double rankImpressionShareLostRate) {
     this.rankImpressionShareLostRate = rankImpressionShareLostRate;
   }
 
   public Stats viewThroughConversions(Long viewThroughConversions) {
-    this.viewThroughConversions = JsonNullable.of(viewThroughConversions);
+    this.viewThroughConversions = viewThroughConversions;
     return this;
   }
 
@@ -1272,17 +1271,17 @@ public class Stats   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビュースルーコンバージョン数</div> <div lang=\"en\">View through conversions</div> ")
 
 
-  public JsonNullable<Long> getViewThroughConversions() {
+  public Long getViewThroughConversions() {
     return viewThroughConversions;
   }
 
-  public void setViewThroughConversions(JsonNullable<Long> viewThroughConversions) {
+  public void setViewThroughConversions(Long viewThroughConversions) {
     this.viewThroughConversions = viewThroughConversions;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -1420,7 +1419,7 @@ public class Stats   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

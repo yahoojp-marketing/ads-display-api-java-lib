@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,40 +12,40 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;追加を推奨するサーチキーワードに関する詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This describes the detailed information of recommended search keyword to add.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">追加を推奨するサーチキーワードに関する詳細情報を表します。</div> <div lang=\"en\">This describes the detailed information of recommended search keyword to add.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @JsonProperty("recommendationId")
-  private JsonNullable<Long> recommendationId = JsonNullable.undefined();
+  private Long recommendationId = null;
 
   @JsonProperty("currentSearchKeywordListId")
-  private JsonNullable<Long> currentSearchKeywordListId = JsonNullable.undefined();
+  private Long currentSearchKeywordListId = null;
 
   @JsonProperty("currentSearchKeywordListName")
-  private JsonNullable<String> currentSearchKeywordListName = JsonNullable.undefined();
+  private String currentSearchKeywordListName = null;
 
   @JsonProperty("currentSearchKeywordRecency")
-  private JsonNullable<String> currentSearchKeywordRecency = JsonNullable.undefined();
+  private String currentSearchKeywordRecency = null;
 
   @JsonProperty("currentSearchKeywordFrequency")
-  private JsonNullable<String> currentSearchKeywordFrequency = JsonNullable.undefined();
+  private String currentSearchKeywordFrequency = null;
 
   @JsonProperty("recommendedSearchKeywordId")
-  private JsonNullable<Long> recommendedSearchKeywordId = JsonNullable.undefined();
+  private Long recommendedSearchKeywordId = null;
 
   @JsonProperty("recommendedSearchKeyword")
-  private JsonNullable<String> recommendedSearchKeyword = JsonNullable.undefined();
+  private String recommendedSearchKeyword = null;
 
   @JsonProperty("desktopSearchVolume")
-  private JsonNullable<Long> desktopSearchVolume = JsonNullable.undefined();
+  private Long desktopSearchVolume = null;
 
   @JsonProperty("smartPhoneSearchVolume")
-  private JsonNullable<Long> smartPhoneSearchVolume = JsonNullable.undefined();
+  private Long smartPhoneSearchVolume = null;
 
   @JsonProperty("tabletSearchVolume")
-  private JsonNullable<Long> tabletSearchVolume = JsonNullable.undefined();
+  private Long tabletSearchVolume = null;
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendationId(Long recommendationId) {
-    this.recommendationId = JsonNullable.of(recommendationId);
+    this.recommendationId = recommendationId;
     return this;
   }
 
@@ -57,16 +56,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> </div> <div lang=\"en\"> Recommendation ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getRecommendationId() {
+  public Long getRecommendationId() {
     return recommendationId;
   }
 
-  public void setRecommendationId(JsonNullable<Long> recommendationId) {
+  public void setRecommendationId(Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordListId(Long currentSearchKeywordListId) {
-    this.currentSearchKeywordListId = JsonNullable.of(currentSearchKeywordListId);
+    this.currentSearchKeywordListId = currentSearchKeywordListId;
     return this;
   }
 
@@ -77,16 +76,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリストIDです。 </div> <div lang=\"en\"> Search keyword list ID. </div> ")
 
 
-  public JsonNullable<Long> getCurrentSearchKeywordListId() {
+  public Long getCurrentSearchKeywordListId() {
     return currentSearchKeywordListId;
   }
 
-  public void setCurrentSearchKeywordListId(JsonNullable<Long> currentSearchKeywordListId) {
+  public void setCurrentSearchKeywordListId(Long currentSearchKeywordListId) {
     this.currentSearchKeywordListId = currentSearchKeywordListId;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordListName(String currentSearchKeywordListName) {
-    this.currentSearchKeywordListName = JsonNullable.of(currentSearchKeywordListName);
+    this.currentSearchKeywordListName = currentSearchKeywordListName;
     return this;
   }
 
@@ -97,16 +96,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリスト名です。 </div> <div lang=\"en\"> Search keyword list name. </div> ")
 
 
-  public JsonNullable<String> getCurrentSearchKeywordListName() {
+  public String getCurrentSearchKeywordListName() {
     return currentSearchKeywordListName;
   }
 
-  public void setCurrentSearchKeywordListName(JsonNullable<String> currentSearchKeywordListName) {
+  public void setCurrentSearchKeywordListName(String currentSearchKeywordListName) {
     this.currentSearchKeywordListName = currentSearchKeywordListName;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordRecency(String currentSearchKeywordRecency) {
-    this.currentSearchKeywordRecency = JsonNullable.of(currentSearchKeywordRecency);
+    this.currentSearchKeywordRecency = currentSearchKeywordRecency;
     return this;
   }
 
@@ -117,16 +116,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードの有効期間を表します。<br> 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordRecencyオブジェクトをご参照ください。 </div> <div lang=\"en\"> Recency of search keyword list.<br> See the SearchKeywordListServiceKeywordRecency in SearchKeywordListService to learn about return value. </div> ")
 
 
-  public JsonNullable<String> getCurrentSearchKeywordRecency() {
+  public String getCurrentSearchKeywordRecency() {
     return currentSearchKeywordRecency;
   }
 
-  public void setCurrentSearchKeywordRecency(JsonNullable<String> currentSearchKeywordRecency) {
+  public void setCurrentSearchKeywordRecency(String currentSearchKeywordRecency) {
     this.currentSearchKeywordRecency = currentSearchKeywordRecency;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordFrequency(String currentSearchKeywordFrequency) {
-    this.currentSearchKeywordFrequency = JsonNullable.of(currentSearchKeywordFrequency);
+    this.currentSearchKeywordFrequency = currentSearchKeywordFrequency;
     return this;
   }
 
@@ -137,16 +136,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードの検索回数を表します。<br> 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordFrequencyオブジェクトをご参照ください。 </div> <div lang=\"en\"> Frequency of search keyword list.<br> See the SearchKeywordListServiceKeywordFrequency in SearchKeywordListService to learn about return value. </div> ")
 
 
-  public JsonNullable<String> getCurrentSearchKeywordFrequency() {
+  public String getCurrentSearchKeywordFrequency() {
     return currentSearchKeywordFrequency;
   }
 
-  public void setCurrentSearchKeywordFrequency(JsonNullable<String> currentSearchKeywordFrequency) {
+  public void setCurrentSearchKeywordFrequency(String currentSearchKeywordFrequency) {
     this.currentSearchKeywordFrequency = currentSearchKeywordFrequency;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendedSearchKeywordId(Long recommendedSearchKeywordId) {
-    this.recommendedSearchKeywordId = JsonNullable.of(recommendedSearchKeywordId);
+    this.recommendedSearchKeywordId = recommendedSearchKeywordId;
     return this;
   }
 
@@ -157,16 +156,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードIDです。 </div> <div lang=\"en\"> Recommended search keyword ID. </div> ")
 
 
-  public JsonNullable<Long> getRecommendedSearchKeywordId() {
+  public Long getRecommendedSearchKeywordId() {
     return recommendedSearchKeywordId;
   }
 
-  public void setRecommendedSearchKeywordId(JsonNullable<Long> recommendedSearchKeywordId) {
+  public void setRecommendedSearchKeywordId(Long recommendedSearchKeywordId) {
     this.recommendedSearchKeywordId = recommendedSearchKeywordId;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendedSearchKeyword(String recommendedSearchKeyword) {
-    this.recommendedSearchKeyword = JsonNullable.of(recommendedSearchKeyword);
+    this.recommendedSearchKeyword = recommendedSearchKeyword;
     return this;
   }
 
@@ -177,16 +176,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードです。 </div> <div lang=\"en\"> Recommended search keyword. </div> ")
 
 
-  public JsonNullable<String> getRecommendedSearchKeyword() {
+  public String getRecommendedSearchKeyword() {
     return recommendedSearchKeyword;
   }
 
-  public void setRecommendedSearchKeyword(JsonNullable<String> recommendedSearchKeyword) {
+  public void setRecommendedSearchKeyword(String recommendedSearchKeyword) {
     this.recommendedSearchKeyword = recommendedSearchKeyword;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList desktopSearchVolume(Long desktopSearchVolume) {
-    this.desktopSearchVolume = JsonNullable.of(desktopSearchVolume);
+    this.desktopSearchVolume = desktopSearchVolume;
     return this;
   }
 
@@ -197,16 +196,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードのPCでのリーチ数です。 </div> <div lang=\"en\"> Number of reach in PC with recommended search keyword. </div> ")
 
 
-  public JsonNullable<Long> getDesktopSearchVolume() {
+  public Long getDesktopSearchVolume() {
     return desktopSearchVolume;
   }
 
-  public void setDesktopSearchVolume(JsonNullable<Long> desktopSearchVolume) {
+  public void setDesktopSearchVolume(Long desktopSearchVolume) {
     this.desktopSearchVolume = desktopSearchVolume;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList smartPhoneSearchVolume(Long smartPhoneSearchVolume) {
-    this.smartPhoneSearchVolume = JsonNullable.of(smartPhoneSearchVolume);
+    this.smartPhoneSearchVolume = smartPhoneSearchVolume;
     return this;
   }
 
@@ -217,16 +216,16 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードのSmartPhoneでのリーチ数です。 </div> <div lang=\"en\"> Number of Reach in SmartPhone with recommended search keyword. </div> ")
 
 
-  public JsonNullable<Long> getSmartPhoneSearchVolume() {
+  public Long getSmartPhoneSearchVolume() {
     return smartPhoneSearchVolume;
   }
 
-  public void setSmartPhoneSearchVolume(JsonNullable<Long> smartPhoneSearchVolume) {
+  public void setSmartPhoneSearchVolume(Long smartPhoneSearchVolume) {
     this.smartPhoneSearchVolume = smartPhoneSearchVolume;
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList tabletSearchVolume(Long tabletSearchVolume) {
-    this.tabletSearchVolume = JsonNullable.of(tabletSearchVolume);
+    this.tabletSearchVolume = tabletSearchVolume;
     return this;
   }
 
@@ -237,17 +236,17 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードのTabletでのリーチ数です。 </div> <div lang=\"en\"> Number of Reach in Tablet with recommended search keyword. </div> ")
 
 
-  public JsonNullable<Long> getTabletSearchVolume() {
+  public Long getTabletSearchVolume() {
     return tabletSearchVolume;
   }
 
-  public void setTabletSearchVolume(JsonNullable<Long> tabletSearchVolume) {
+  public void setTabletSearchVolume(Long tabletSearchVolume) {
     this.tabletSearchVolume = tabletSearchVolume;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -295,7 +294,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

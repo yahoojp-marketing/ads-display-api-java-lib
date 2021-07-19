@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceDeliveryStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceTargetList;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,43 +15,43 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListオブジェクトは、サイトリターゲティング のターゲットリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingList object diplays the target list for site retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListオブジェクトは、サイトリターゲティング のターゲットリストの情報を表します。</div> <div lang=\"en\">RetargetingList object diplays the target list for site retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingList   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("deliveryStatus")
-  private JsonNullable<RetargetingListServiceDeliveryStatus> deliveryStatus = JsonNullable.undefined();
+  private RetargetingListServiceDeliveryStatus deliveryStatus = null;
 
   @JsonProperty("description")
-  private JsonNullable<String> description = JsonNullable.undefined();
+  private String description = null;
 
   @JsonProperty("isRemoveDescription")
-  private JsonNullable<RetargetingListServiceIsRemoveFlg> isRemoveDescription = JsonNullable.undefined();
+  private RetargetingListServiceIsRemoveFlg isRemoveDescription = null;
 
   @JsonProperty("reach")
-  private JsonNullable<Long> reach = JsonNullable.undefined();
+  private Long reach = null;
 
   @JsonProperty("targetList")
-  private JsonNullable<RetargetingListServiceTargetList> targetList = JsonNullable.undefined();
+  private RetargetingListServiceTargetList targetList = null;
 
   @JsonProperty("targetListId")
-  private JsonNullable<Long> targetListId = JsonNullable.undefined();
+  private Long targetListId = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   @JsonProperty("sourceAccountId")
-  private JsonNullable<Long> sourceAccountId = JsonNullable.undefined();
+  private Long sourceAccountId = null;
 
   @JsonProperty("sourceAccountName")
-  private JsonNullable<String> sourceAccountName = JsonNullable.undefined();
+  private String sourceAccountName = null;
 
   @JsonProperty("isShared")
-  private JsonNullable<Boolean> isShared = JsonNullable.undefined();
+  private Boolean isShared = null;
 
   public RetargetingList accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public RetargetingList deliveryStatus(RetargetingListServiceDeliveryStatus deliveryStatus) {
-    this.deliveryStatus = JsonNullable.of(deliveryStatus);
+    this.deliveryStatus = deliveryStatus;
     return this;
   }
 
@@ -84,16 +83,16 @@ public class RetargetingList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceDeliveryStatus> getDeliveryStatus() {
+  public RetargetingListServiceDeliveryStatus getDeliveryStatus() {
     return deliveryStatus;
   }
 
-  public void setDeliveryStatus(JsonNullable<RetargetingListServiceDeliveryStatus> deliveryStatus) {
+  public void setDeliveryStatus(RetargetingListServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
   public RetargetingList description(String description) {
-    this.description = JsonNullable.of(description);
+    this.description = description;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリストの説明です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> Description of Target List.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
 
 
-  public JsonNullable<String> getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(JsonNullable<String> description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 
   public RetargetingList isRemoveDescription(RetargetingListServiceIsRemoveFlg isRemoveDescription) {
-    this.isRemoveDescription = JsonNullable.of(isRemoveDescription);
+    this.isRemoveDescription = isRemoveDescription;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class RetargetingList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceIsRemoveFlg> getIsRemoveDescription() {
+  public RetargetingListServiceIsRemoveFlg getIsRemoveDescription() {
     return isRemoveDescription;
   }
 
-  public void setIsRemoveDescription(JsonNullable<RetargetingListServiceIsRemoveFlg> isRemoveDescription) {
+  public void setIsRemoveDescription(RetargetingListServiceIsRemoveFlg isRemoveDescription) {
     this.isRemoveDescription = isRemoveDescription;
   }
 
   public RetargetingList reach(Long reach) {
-    this.reach = JsonNullable.of(reach);
+    this.reach = reach;
     return this;
   }
 
@@ -145,16 +144,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of reaches.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getReach() {
+  public Long getReach() {
     return reach;
   }
 
-  public void setReach(JsonNullable<Long> reach) {
+  public void setReach(Long reach) {
     this.reach = reach;
   }
 
   public RetargetingList targetList(RetargetingListServiceTargetList targetList) {
-    this.targetList = JsonNullable.of(targetList);
+    this.targetList = targetList;
     return this;
   }
 
@@ -166,16 +165,16 @@ public class RetargetingList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceTargetList> getTargetList() {
+  public RetargetingListServiceTargetList getTargetList() {
     return targetList;
   }
 
-  public void setTargetList(JsonNullable<RetargetingListServiceTargetList> targetList) {
+  public void setTargetList(RetargetingListServiceTargetList targetList) {
     this.targetList = targetList;
   }
 
   public RetargetingList targetListId(Long targetListId) {
-    this.targetListId = JsonNullable.of(targetListId);
+    this.targetListId = targetListId;
     return this;
   }
 
@@ -186,16 +185,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時には無視されます。 </div> <div lang=\"en\"> Target List ID.<br> This field is required in SET and REMOVE operation, and will be ignored in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getTargetListId() {
+  public Long getTargetListId() {
     return targetListId;
   }
 
-  public void setTargetListId(JsonNullable<Long> targetListId) {
+  public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
 
   public RetargetingList targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -206,16 +205,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリスト名です。<br> このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 </div> <div lang=\"en\"> Target List name.<br> This field is required in ADD operation, optional in SET operation, and will be ignored in REMOVE operation. </div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
   public RetargetingList sourceAccountId(Long sourceAccountId) {
-    this.sourceAccountId = JsonNullable.of(sourceAccountId);
+    this.sourceAccountId = sourceAccountId;
     return this;
   }
 
@@ -226,16 +225,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">   共有元アカウントIDです。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   Account ID of the sharing source.<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getSourceAccountId() {
+  public Long getSourceAccountId() {
     return sourceAccountId;
   }
 
-  public void setSourceAccountId(JsonNullable<Long> sourceAccountId) {
+  public void setSourceAccountId(Long sourceAccountId) {
     this.sourceAccountId = sourceAccountId;
   }
 
   public RetargetingList sourceAccountName(String sourceAccountName) {
-    this.sourceAccountName = JsonNullable.of(sourceAccountName);
+    this.sourceAccountName = sourceAccountName;
     return this;
   }
 
@@ -246,16 +245,16 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">   共有元アカウント名です。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   Account name of the sharing source.<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getSourceAccountName() {
+  public String getSourceAccountName() {
     return sourceAccountName;
   }
 
-  public void setSourceAccountName(JsonNullable<String> sourceAccountName) {
+  public void setSourceAccountName(String sourceAccountName) {
     this.sourceAccountName = sourceAccountName;
   }
 
   public RetargetingList isShared(Boolean isShared) {
-    this.isShared = JsonNullable.of(isShared);
+    this.isShared = isShared;
     return this;
   }
 
@@ -266,17 +265,17 @@ public class RetargetingList   {
   @ApiModelProperty(value = "<div lang=\"ja\">   RetargetingListServiceIsSharedは、ターゲットリストの共有ステータスを示します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   RetargetingListServiceIsShared describes the sharing status of the target list.<br>   Although this field will be returned in the response, it will be ignored on input. </div> <hr> <dl class=term>   <dt class=\"term__item\">TRUE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">共有されたターゲットリストです。</span><span lang=\"en\">The shared target list.</span></dd>   <dt class=\"term__item\">FALSE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">共有されていないターゲットリストです。</span><span lang=\"en\">The non-shared target list.</span></dd>   <dt class=\"term__item\">UNKNOWN</dt>   <dd class=\"term__desc\"><span lang=\"ja\">未知の値です。</span><span lang=\"en\">Unknown Value</span></dd> </dl> ")
 
 
-  public JsonNullable<Boolean> getIsShared() {
+  public Boolean getIsShared() {
     return isShared;
   }
 
-  public void setIsShared(JsonNullable<Boolean> isShared) {
+  public void setIsShared(Boolean isShared) {
     this.isShared = isShared;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -326,7 +325,7 @@ public class RetargetingList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

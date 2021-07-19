@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,28 +12,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMigrateToYdaCampaignオブジェクトは、ディスプレイ広告（運用型）形式への変換が必要なキャンペーンに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMigrateToYdaCampaign object describes the detailed information of Recommendations about campaigns that are required to convert to Display Ads (Auction).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceMigrateToYdaCampaignオブジェクトは、ディスプレイ広告（運用型）形式への変換が必要なキャンペーンに関する最適化提案の詳細情報を表します。</div> <div lang=\"en\">RecommendationServiceMigrateToYdaCampaign object describes the detailed information of Recommendations about campaigns that are required to convert to Display Ads (Auction).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceMigrateToYdaCampaign   {
   @JsonProperty("recommendationId")
-  private JsonNullable<Long> recommendationId = JsonNullable.undefined();
+  private Long recommendationId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("campaignUserStatus")
-  private JsonNullable<String> campaignUserStatus = JsonNullable.undefined();
+  private String campaignUserStatus = null;
 
   @JsonProperty("stardDate")
-  private JsonNullable<String> stardDate = JsonNullable.undefined();
+  private String stardDate = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   public RecommendationServiceMigrateToYdaCampaign recommendationId(Long recommendationId) {
-    this.recommendationId = JsonNullable.of(recommendationId);
+    this.recommendationId = recommendationId;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class RecommendationServiceMigrateToYdaCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> </div> <div lang=\"en\"> Recommendation ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getRecommendationId() {
+  public Long getRecommendationId() {
     return recommendationId;
   }
 
-  public void setRecommendationId(JsonNullable<Long> recommendationId) {
+  public void setRecommendationId(Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
   public RecommendationServiceMigrateToYdaCampaign campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class RecommendationServiceMigrateToYdaCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> </div> <div lang=\"en\"> Campaign ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public RecommendationServiceMigrateToYdaCampaign campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class RecommendationServiceMigrateToYdaCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> </div> <div lang=\"en\"> Campaign Name.<br> </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public RecommendationServiceMigrateToYdaCampaign campaignUserStatus(String campaignUserStatus) {
-    this.campaignUserStatus = JsonNullable.of(campaignUserStatus);
+    this.campaignUserStatus = campaignUserStatus;
     return this;
   }
 
@@ -105,16 +104,16 @@ public class RecommendationServiceMigrateToYdaCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン配信設定です。 </div> <div lang=\"en\"> Campaign delivery setting. </div> ")
 
 
-  public JsonNullable<String> getCampaignUserStatus() {
+  public String getCampaignUserStatus() {
     return campaignUserStatus;
   }
 
-  public void setCampaignUserStatus(JsonNullable<String> campaignUserStatus) {
+  public void setCampaignUserStatus(String campaignUserStatus) {
     this.campaignUserStatus = campaignUserStatus;
   }
 
   public RecommendationServiceMigrateToYdaCampaign stardDate(String stardDate) {
-    this.stardDate = JsonNullable.of(stardDate);
+    this.stardDate = stardDate;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class RecommendationServiceMigrateToYdaCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン配信開始日です。<br>※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Start date of campaign delivery.<br>* Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getStardDate() {
+  public String getStardDate() {
     return stardDate;
   }
 
-  public void setStardDate(JsonNullable<String> stardDate) {
+  public void setStardDate(String stardDate) {
     this.stardDate = stardDate;
   }
 
   public RecommendationServiceMigrateToYdaCampaign endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -145,17 +144,17 @@ public class RecommendationServiceMigrateToYdaCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン配信終了日です。<br>※フォーマット：yyyyMMdd </div> <div lang=\"en\"> End date of campaign delivery.<br>* Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -195,7 +194,7 @@ public class RecommendationServiceMigrateToYdaCampaign   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

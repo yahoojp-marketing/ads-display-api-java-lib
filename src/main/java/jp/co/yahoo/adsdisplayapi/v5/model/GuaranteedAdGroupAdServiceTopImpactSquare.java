@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,25 +12,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactSquareオブジェクトは、予約型専用広告：メインの1:1の画像と、センター画像、右サイド画像、左サイド画像で構成される広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactSquare object describes information about a guaranteed ad composed of the main 1:1 image, the center image, the right side image, and the left side image.&lt;br&gt; This field is optional.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceTopImpactSquareオブジェクトは、予約型専用広告：メインの1:1の画像と、センター画像、右サイド画像、左サイド画像で構成される広告の情報を表します。<br> このフィールドは、省略可能となります。<br> </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceTopImpactSquare object describes information about a guaranteed ad composed of the main 1:1 image, the center image, the right side image, and the left side image.<br> This field is optional.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupAdServiceTopImpactSquare   {
   @JsonProperty("displayUrl")
-  private JsonNullable<String> displayUrl = JsonNullable.undefined();
+  private String displayUrl = null;
 
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   @JsonProperty("adLeftSideMediaId")
-  private JsonNullable<Long> adLeftSideMediaId = JsonNullable.undefined();
+  private Long adLeftSideMediaId = null;
 
   @JsonProperty("adRightSideMediaId")
-  private JsonNullable<Long> adRightSideMediaId = JsonNullable.undefined();
+  private Long adRightSideMediaId = null;
 
   @JsonProperty("adCenterMediaId")
-  private JsonNullable<Long> adCenterMediaId = JsonNullable.undefined();
+  private Long adCenterMediaId = null;
 
   public GuaranteedAdGroupAdServiceTopImpactSquare displayUrl(String displayUrl) {
-    this.displayUrl = JsonNullable.of(displayUrl);
+    this.displayUrl = displayUrl;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class GuaranteedAdGroupAdServiceTopImpactSquare   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 表示URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Display URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getDisplayUrl() {
+  public String getDisplayUrl() {
     return displayUrl;
   }
 
-  public void setDisplayUrl(JsonNullable<String> displayUrl) {
+  public void setDisplayUrl(String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
   public GuaranteedAdGroupAdServiceTopImpactSquare url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class GuaranteedAdGroupAdServiceTopImpactSquare   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リンク先URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Destination URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
   public GuaranteedAdGroupAdServiceTopImpactSquare adLeftSideMediaId(Long adLeftSideMediaId) {
-    this.adLeftSideMediaId = JsonNullable.of(adLeftSideMediaId);
+    this.adLeftSideMediaId = adLeftSideMediaId;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class GuaranteedAdGroupAdServiceTopImpactSquare   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 左サイド画像です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Left side image.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getAdLeftSideMediaId() {
+  public Long getAdLeftSideMediaId() {
     return adLeftSideMediaId;
   }
 
-  public void setAdLeftSideMediaId(JsonNullable<Long> adLeftSideMediaId) {
+  public void setAdLeftSideMediaId(Long adLeftSideMediaId) {
     this.adLeftSideMediaId = adLeftSideMediaId;
   }
 
   public GuaranteedAdGroupAdServiceTopImpactSquare adRightSideMediaId(Long adRightSideMediaId) {
-    this.adRightSideMediaId = JsonNullable.of(adRightSideMediaId);
+    this.adRightSideMediaId = adRightSideMediaId;
     return this;
   }
 
@@ -102,16 +101,16 @@ public class GuaranteedAdGroupAdServiceTopImpactSquare   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 右サイド画像です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Right side image.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getAdRightSideMediaId() {
+  public Long getAdRightSideMediaId() {
     return adRightSideMediaId;
   }
 
-  public void setAdRightSideMediaId(JsonNullable<Long> adRightSideMediaId) {
+  public void setAdRightSideMediaId(Long adRightSideMediaId) {
     this.adRightSideMediaId = adRightSideMediaId;
   }
 
   public GuaranteedAdGroupAdServiceTopImpactSquare adCenterMediaId(Long adCenterMediaId) {
-    this.adCenterMediaId = JsonNullable.of(adCenterMediaId);
+    this.adCenterMediaId = adCenterMediaId;
     return this;
   }
 
@@ -122,17 +121,17 @@ public class GuaranteedAdGroupAdServiceTopImpactSquare   {
   @ApiModelProperty(value = "<div lang=\"ja\"> センター画像です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Center image.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getAdCenterMediaId() {
+  public Long getAdCenterMediaId() {
     return adCenterMediaId;
   }
 
-  public void setAdCenterMediaId(JsonNullable<Long> adCenterMediaId) {
+  public void setAdCenterMediaId(Long adCenterMediaId) {
     this.adCenterMediaId = adCenterMediaId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -170,7 +169,7 @@ public class GuaranteedAdGroupAdServiceTopImpactSquare   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

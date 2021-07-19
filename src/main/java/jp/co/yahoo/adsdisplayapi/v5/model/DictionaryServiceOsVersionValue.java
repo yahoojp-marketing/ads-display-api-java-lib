@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceOsVersion;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,29 +16,29 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceOsVersionValueオブジェクトは、getOsVersionメソッドの実行結果（１Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceOsVersionValue object contains the results (1 Entity) for getOsVersion method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceOsVersionValueオブジェクトは、getOsVersionメソッドの実行結果（１Entity）を保持します。</div> <div lang=\"en\">DictionaryServiceOsVersionValue object contains the results (1 Entity) for getOsVersion method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceOsVersionValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   @JsonProperty("osVersion")
   @Valid
-  private JsonNullable<List<DictionaryServiceOsVersion>> osVersion = JsonNullable.undefined();
+  private List<DictionaryServiceOsVersion> osVersion = null;
 
   public DictionaryServiceOsVersionValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public DictionaryServiceOsVersionValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -51,16 +50,16 @@ public class DictionaryServiceOsVersionValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public DictionaryServiceOsVersionValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -71,24 +70,24 @@ public class DictionaryServiceOsVersionValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
   public DictionaryServiceOsVersionValue osVersion(List<DictionaryServiceOsVersion> osVersion) {
-    this.osVersion = JsonNullable.of(osVersion);
+    this.osVersion = osVersion;
     return this;
   }
 
   public DictionaryServiceOsVersionValue addOsVersionItem(DictionaryServiceOsVersion osVersionItem) {
-    if (this.osVersion == null || !this.osVersion.isPresent()) {
-      this.osVersion = JsonNullable.of(new ArrayList<>());
+    if (this.osVersion == null) {
+      this.osVersion = new ArrayList<>();
     }
-    this.osVersion.get().add(osVersionItem);
+    this.osVersion.add(osVersionItem);
     return this;
   }
 
@@ -100,17 +99,17 @@ public class DictionaryServiceOsVersionValue   {
 
   @Valid
 
-  public JsonNullable<List<DictionaryServiceOsVersion>> getOsVersion() {
+  public List<DictionaryServiceOsVersion> getOsVersion() {
     return osVersion;
   }
 
-  public void setOsVersion(JsonNullable<List<DictionaryServiceOsVersion>> osVersion) {
+  public void setOsVersion(List<DictionaryServiceOsVersion> osVersion) {
     this.osVersion = osVersion;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -144,7 +143,7 @@ public class DictionaryServiceOsVersionValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedInventoryServiceReturnValueオブジェクトは、予約型キャンペーンの在庫情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedInventoryServiceReturnValue object contains the guaranteed campaign delivery simulation including the operation result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedInventoryServiceReturnValueオブジェクトは、予約型キャンペーンの在庫情報を格納するコンテナです。</div> <div lang=\"en\">GuaranteedInventoryServiceReturnValue object contains the guaranteed campaign delivery simulation including the operation result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceValue>> values = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceValue> values = null;
 
   public GuaranteedInventoryServiceReturnValue values(List<GuaranteedInventoryServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public GuaranteedInventoryServiceReturnValue addValuesItem(GuaranteedInventoryServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class GuaranteedInventoryServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceValue>> getValues() {
+  public List<GuaranteedInventoryServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<GuaranteedInventoryServiceValue>> values) {
+  public void setValues(List<GuaranteedInventoryServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class GuaranteedInventoryServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

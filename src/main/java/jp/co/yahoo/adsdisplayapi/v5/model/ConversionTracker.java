@@ -12,7 +12,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceExcludeFromBid
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.ConversionTrackerServiceWebConversion;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -20,76 +19,76 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョントラッカー情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker object shows ConversionTracker information such as ConversionTag and performance data by tag.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョントラッカー情報を表します。</div> <div lang=\"en\">ConversionTracker object shows ConversionTracker information such as ConversionTag and performance data by tag.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ConversionTracker   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("allConversionValue")
-  private JsonNullable<String> allConversionValue = JsonNullable.undefined();
+  private String allConversionValue = null;
 
   @JsonProperty("allConversions")
-  private JsonNullable<Long> allConversions = JsonNullable.undefined();
+  private Long allConversions = null;
 
   @JsonProperty("viewThroughConversions")
-  private JsonNullable<Long> viewThroughConversions = JsonNullable.undefined();
+  private Long viewThroughConversions = null;
 
   @JsonProperty("appConversion")
-  private JsonNullable<ConversionTrackerServiceAppConversion> appConversion = JsonNullable.undefined();
+  private ConversionTrackerServiceAppConversion appConversion = null;
 
   @JsonProperty("category")
-  private JsonNullable<ConversionTrackerServiceCategory> category = JsonNullable.undefined();
+  private ConversionTrackerServiceCategory category = null;
 
   @JsonProperty("conversionTrackerId")
-  private JsonNullable<Long> conversionTrackerId = JsonNullable.undefined();
+  private Long conversionTrackerId = null;
 
   @JsonProperty("conversionTrackerName")
-  private JsonNullable<String> conversionTrackerName = JsonNullable.undefined();
+  private String conversionTrackerName = null;
 
   @JsonProperty("conversionTrackerType")
-  private JsonNullable<ConversionTrackerServiceType> conversionTrackerType = JsonNullable.undefined();
+  private ConversionTrackerServiceType conversionTrackerType = null;
 
   @JsonProperty("conversionValue")
-  private JsonNullable<String> conversionValue = JsonNullable.undefined();
+  private String conversionValue = null;
 
   @JsonProperty("conversionValueViaAdClick")
-  private JsonNullable<String> conversionValueViaAdClick = JsonNullable.undefined();
+  private String conversionValueViaAdClick = null;
 
   @JsonProperty("conversions")
-  private JsonNullable<Long> conversions = JsonNullable.undefined();
+  private Long conversions = null;
 
   @JsonProperty("conversionsViaAdClick")
-  private JsonNullable<Long> conversionsViaAdClick = JsonNullable.undefined();
+  private Long conversionsViaAdClick = null;
 
   @JsonProperty("countingType")
-  private JsonNullable<ConversionTrackerServiceCountingType> countingType = JsonNullable.undefined();
+  private ConversionTrackerServiceCountingType countingType = null;
 
   @JsonProperty("crossDeviceConversions")
-  private JsonNullable<Long> crossDeviceConversions = JsonNullable.undefined();
+  private Long crossDeviceConversions = null;
 
   @JsonProperty("excludeFromBidding")
-  private JsonNullable<ConversionTrackerServiceExcludeFromBidding> excludeFromBidding = JsonNullable.undefined();
+  private ConversionTrackerServiceExcludeFromBidding excludeFromBidding = null;
 
   @JsonProperty("measurementPeriod")
-  private JsonNullable<Integer> measurementPeriod = JsonNullable.undefined();
+  private Integer measurementPeriod = null;
 
   @JsonProperty("measurementPeriodView")
-  private JsonNullable<Integer> measurementPeriodView = JsonNullable.undefined();
+  private Integer measurementPeriodView = null;
 
   @JsonProperty("mostRecentConversionDate")
-  private JsonNullable<String> mostRecentConversionDate = JsonNullable.undefined();
+  private String mostRecentConversionDate = null;
 
   @JsonProperty("status")
-  private JsonNullable<ConversionTrackerServiceStatus> status = JsonNullable.undefined();
+  private ConversionTrackerServiceStatus status = null;
 
   @JsonProperty("userRevenueValue")
-  private JsonNullable<Long> userRevenueValue = JsonNullable.undefined();
+  private Long userRevenueValue = null;
 
   @JsonProperty("webConversion")
-  private JsonNullable<ConversionTrackerServiceWebConversion> webConversion = JsonNullable.undefined();
+  private ConversionTrackerServiceWebConversion webConversion = null;
 
   public ConversionTracker accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -100,16 +99,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public ConversionTracker allConversionValue(String allConversionValue) {
-    this.allConversionValue = JsonNullable.of(allConversionValue);
+    this.allConversionValue = allConversionValue;
     return this;
   }
 
@@ -120,16 +119,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの価値（全て）です。 </div> <div lang=\"en\"> Conv. value (all). </div> ")
 
 
-  public JsonNullable<String> getAllConversionValue() {
+  public String getAllConversionValue() {
     return allConversionValue;
   }
 
-  public void setAllConversionValue(JsonNullable<String> allConversionValue) {
+  public void setAllConversionValue(String allConversionValue) {
     this.allConversionValue = allConversionValue;
   }
 
   public ConversionTracker allConversions(Long allConversions) {
-    this.allConversions = JsonNullable.of(allConversions);
+    this.allConversions = allConversions;
     return this;
   }
 
@@ -140,16 +139,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン数（全て）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversions (all).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAllConversions() {
+  public Long getAllConversions() {
     return allConversions;
   }
 
-  public void setAllConversions(JsonNullable<Long> allConversions) {
+  public void setAllConversions(Long allConversions) {
     this.allConversions = allConversions;
   }
 
   public ConversionTracker viewThroughConversions(Long viewThroughConversions) {
-    this.viewThroughConversions = JsonNullable.of(viewThroughConversions);
+    this.viewThroughConversions = viewThroughConversions;
     return this;
   }
 
@@ -160,16 +159,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビュースルーコンバージョン数</div> <div lang=\"en\">View through conversions</div> ")
 
 
-  public JsonNullable<Long> getViewThroughConversions() {
+  public Long getViewThroughConversions() {
     return viewThroughConversions;
   }
 
-  public void setViewThroughConversions(JsonNullable<Long> viewThroughConversions) {
+  public void setViewThroughConversions(Long viewThroughConversions) {
     this.viewThroughConversions = viewThroughConversions;
   }
 
   public ConversionTracker appConversion(ConversionTrackerServiceAppConversion appConversion) {
-    this.appConversion = JsonNullable.of(appConversion);
+    this.appConversion = appConversion;
     return this;
   }
 
@@ -181,16 +180,16 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceAppConversion> getAppConversion() {
+  public ConversionTrackerServiceAppConversion getAppConversion() {
     return appConversion;
   }
 
-  public void setAppConversion(JsonNullable<ConversionTrackerServiceAppConversion> appConversion) {
+  public void setAppConversion(ConversionTrackerServiceAppConversion appConversion) {
     this.appConversion = appConversion;
   }
 
   public ConversionTracker category(ConversionTrackerServiceCategory category) {
-    this.category = JsonNullable.of(category);
+    this.category = category;
     return this;
   }
 
@@ -202,16 +201,16 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceCategory> getCategory() {
+  public ConversionTrackerServiceCategory getCategory() {
     return category;
   }
 
-  public void setCategory(JsonNullable<ConversionTrackerServiceCategory> category) {
+  public void setCategory(ConversionTrackerServiceCategory category) {
     this.category = category;
   }
 
   public ConversionTracker conversionTrackerId(Long conversionTrackerId) {
-    this.conversionTrackerId = JsonNullable.of(conversionTrackerId);
+    this.conversionTrackerId = conversionTrackerId;
     return this;
   }
 
@@ -222,16 +221,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョントラッカーIDです。<br> このフィールドは、ADD時は無視され、SET時は必須となります。 </div> <div lang=\"en\"> Conversion Tracker ID.<br> This field will be ignored in ADD operation, and will be required in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getConversionTrackerId() {
+  public Long getConversionTrackerId() {
     return conversionTrackerId;
   }
 
-  public void setConversionTrackerId(JsonNullable<Long> conversionTrackerId) {
+  public void setConversionTrackerId(Long conversionTrackerId) {
     this.conversionTrackerId = conversionTrackerId;
   }
 
   public ConversionTracker conversionTrackerName(String conversionTrackerName) {
-    this.conversionTrackerName = JsonNullable.of(conversionTrackerName);
+    this.conversionTrackerName = conversionTrackerName;
     return this;
   }
 
@@ -242,16 +241,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョントラッカー名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Conversion Tracker Name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getConversionTrackerName() {
+  public String getConversionTrackerName() {
     return conversionTrackerName;
   }
 
-  public void setConversionTrackerName(JsonNullable<String> conversionTrackerName) {
+  public void setConversionTrackerName(String conversionTrackerName) {
     this.conversionTrackerName = conversionTrackerName;
   }
 
   public ConversionTracker conversionTrackerType(ConversionTrackerServiceType conversionTrackerType) {
-    this.conversionTrackerType = JsonNullable.of(conversionTrackerType);
+    this.conversionTrackerType = conversionTrackerType;
     return this;
   }
 
@@ -263,16 +262,16 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceType> getConversionTrackerType() {
+  public ConversionTrackerServiceType getConversionTrackerType() {
     return conversionTrackerType;
   }
 
-  public void setConversionTrackerType(JsonNullable<ConversionTrackerServiceType> conversionTrackerType) {
+  public void setConversionTrackerType(ConversionTrackerServiceType conversionTrackerType) {
     this.conversionTrackerType = conversionTrackerType;
   }
 
   public ConversionTracker conversionValue(String conversionValue) {
-    this.conversionValue = JsonNullable.of(conversionValue);
+    this.conversionValue = conversionValue;
     return this;
   }
 
@@ -283,16 +282,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの価値/コンバージョン数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conv. value/conv.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getConversionValue() {
+  public String getConversionValue() {
     return conversionValue;
   }
 
-  public void setConversionValue(JsonNullable<String> conversionValue) {
+  public void setConversionValue(String conversionValue) {
     this.conversionValue = conversionValue;
   }
 
   public ConversionTracker conversionValueViaAdClick(String conversionValueViaAdClick) {
-    this.conversionValueViaAdClick = JsonNullable.of(conversionValueViaAdClick);
+    this.conversionValueViaAdClick = conversionValueViaAdClick;
     return this;
   }
 
@@ -303,16 +302,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの価値（クリック経由）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conv. value (via click).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getConversionValueViaAdClick() {
+  public String getConversionValueViaAdClick() {
     return conversionValueViaAdClick;
   }
 
-  public void setConversionValueViaAdClick(JsonNullable<String> conversionValueViaAdClick) {
+  public void setConversionValueViaAdClick(String conversionValueViaAdClick) {
     this.conversionValueViaAdClick = conversionValueViaAdClick;
   }
 
   public ConversionTracker conversions(Long conversions) {
-    this.conversions = JsonNullable.of(conversions);
+    this.conversions = conversions;
     return this;
   }
 
@@ -323,16 +322,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversions.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getConversions() {
+  public Long getConversions() {
     return conversions;
   }
 
-  public void setConversions(JsonNullable<Long> conversions) {
+  public void setConversions(Long conversions) {
     this.conversions = conversions;
   }
 
   public ConversionTracker conversionsViaAdClick(Long conversionsViaAdClick) {
-    this.conversionsViaAdClick = JsonNullable.of(conversionsViaAdClick);
+    this.conversionsViaAdClick = conversionsViaAdClick;
     return this;
   }
 
@@ -343,16 +342,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン数（クリック経由）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversions (via click).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getConversionsViaAdClick() {
+  public Long getConversionsViaAdClick() {
     return conversionsViaAdClick;
   }
 
-  public void setConversionsViaAdClick(JsonNullable<Long> conversionsViaAdClick) {
+  public void setConversionsViaAdClick(Long conversionsViaAdClick) {
     this.conversionsViaAdClick = conversionsViaAdClick;
   }
 
   public ConversionTracker countingType(ConversionTrackerServiceCountingType countingType) {
-    this.countingType = JsonNullable.of(countingType);
+    this.countingType = countingType;
     return this;
   }
 
@@ -364,16 +363,16 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceCountingType> getCountingType() {
+  public ConversionTrackerServiceCountingType getCountingType() {
     return countingType;
   }
 
-  public void setCountingType(JsonNullable<ConversionTrackerServiceCountingType> countingType) {
+  public void setCountingType(ConversionTrackerServiceCountingType countingType) {
     this.countingType = countingType;
   }
 
   public ConversionTracker crossDeviceConversions(Long crossDeviceConversions) {
-    this.crossDeviceConversions = JsonNullable.of(crossDeviceConversions);
+    this.crossDeviceConversions = crossDeviceConversions;
     return this;
   }
 
@@ -384,16 +383,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> クロスデバイスコンバージョン数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Cross-device conv.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getCrossDeviceConversions() {
+  public Long getCrossDeviceConversions() {
     return crossDeviceConversions;
   }
 
-  public void setCrossDeviceConversions(JsonNullable<Long> crossDeviceConversions) {
+  public void setCrossDeviceConversions(Long crossDeviceConversions) {
     this.crossDeviceConversions = crossDeviceConversions;
   }
 
   public ConversionTracker excludeFromBidding(ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
-    this.excludeFromBidding = JsonNullable.of(excludeFromBidding);
+    this.excludeFromBidding = excludeFromBidding;
     return this;
   }
 
@@ -405,16 +404,16 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceExcludeFromBidding> getExcludeFromBidding() {
+  public ConversionTrackerServiceExcludeFromBidding getExcludeFromBidding() {
     return excludeFromBidding;
   }
 
-  public void setExcludeFromBidding(JsonNullable<ConversionTrackerServiceExcludeFromBidding> excludeFromBidding) {
+  public void setExcludeFromBidding(ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
     this.excludeFromBidding = excludeFromBidding;
   }
 
   public ConversionTracker measurementPeriod(Integer measurementPeriod) {
-    this.measurementPeriod = JsonNullable.of(measurementPeriod);
+    this.measurementPeriod = measurementPeriod;
     return this;
   }
 
@@ -425,16 +424,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 計測期間（単位：日）です。<br> ※7～90の範囲内で指定可能です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は30となります。 </div> <div lang=\"en\"> Counting period (Unit: Day).<br> ∗ Can be specified within the range of 7 to 90 days.<br> This field is optional in requests. The default value in ADD operation will be 30. </div> ")
 
 
-  public JsonNullable<Integer> getMeasurementPeriod() {
+  public Integer getMeasurementPeriod() {
     return measurementPeriod;
   }
 
-  public void setMeasurementPeriod(JsonNullable<Integer> measurementPeriod) {
+  public void setMeasurementPeriod(Integer measurementPeriod) {
     this.measurementPeriod = measurementPeriod;
   }
 
   public ConversionTracker measurementPeriodView(Integer measurementPeriodView) {
-    this.measurementPeriodView = JsonNullable.of(measurementPeriodView);
+    this.measurementPeriodView = measurementPeriodView;
     return this;
   }
 
@@ -445,16 +444,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 測定期間（動画視聴）<br> ※1-30の範囲で指定可能です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は1となります。 </div> <div lang=\"en\"> Counting period (Video view).<br> ∗ Can be specified within the range of 1 to 30.<br> This field is optional in requests. The default value in ADD operation will be 1. </div> ")
 
 
-  public JsonNullable<Integer> getMeasurementPeriodView() {
+  public Integer getMeasurementPeriodView() {
     return measurementPeriodView;
   }
 
-  public void setMeasurementPeriodView(JsonNullable<Integer> measurementPeriodView) {
+  public void setMeasurementPeriodView(Integer measurementPeriodView) {
     this.measurementPeriodView = measurementPeriodView;
   }
 
   public ConversionTracker mostRecentConversionDate(String mostRecentConversionDate) {
-    this.mostRecentConversionDate = JsonNullable.of(mostRecentConversionDate);
+    this.mostRecentConversionDate = mostRecentConversionDate;
     return this;
   }
 
@@ -465,16 +464,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンが発生した直近の日付です。<br> ※YYYYMMDD形式です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The date of the most recent conversion.<br> ∗ Format: YYYYMMDD.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getMostRecentConversionDate() {
+  public String getMostRecentConversionDate() {
     return mostRecentConversionDate;
   }
 
-  public void setMostRecentConversionDate(JsonNullable<String> mostRecentConversionDate) {
+  public void setMostRecentConversionDate(String mostRecentConversionDate) {
     this.mostRecentConversionDate = mostRecentConversionDate;
   }
 
   public ConversionTracker status(ConversionTrackerServiceStatus status) {
-    this.status = JsonNullable.of(status);
+    this.status = status;
     return this;
   }
 
@@ -486,16 +485,16 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceStatus> getStatus() {
+  public ConversionTrackerServiceStatus getStatus() {
     return status;
   }
 
-  public void setStatus(JsonNullable<ConversionTrackerServiceStatus> status) {
+  public void setStatus(ConversionTrackerServiceStatus status) {
     this.status = status;
   }
 
   public ConversionTracker userRevenueValue(Long userRevenueValue) {
-    this.userRevenueValue = JsonNullable.of(userRevenueValue);
+    this.userRevenueValue = userRevenueValue;
     return this;
   }
 
@@ -506,16 +505,16 @@ public class ConversionTracker   {
   @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの収益値です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は0となります。 </div> <div lang=\"en\"> Revenue value for Conversions.<br> This field is optional in requests. The default value in ADD operation will be 0. </div> ")
 
 
-  public JsonNullable<Long> getUserRevenueValue() {
+  public Long getUserRevenueValue() {
     return userRevenueValue;
   }
 
-  public void setUserRevenueValue(JsonNullable<Long> userRevenueValue) {
+  public void setUserRevenueValue(Long userRevenueValue) {
     this.userRevenueValue = userRevenueValue;
   }
 
   public ConversionTracker webConversion(ConversionTrackerServiceWebConversion webConversion) {
-    this.webConversion = JsonNullable.of(webConversion);
+    this.webConversion = webConversion;
     return this;
   }
 
@@ -527,17 +526,17 @@ public class ConversionTracker   {
 
   @Valid
 
-  public JsonNullable<ConversionTrackerServiceWebConversion> getWebConversion() {
+  public ConversionTrackerServiceWebConversion getWebConversion() {
     return webConversion;
   }
 
-  public void setWebConversion(JsonNullable<ConversionTrackerServiceWebConversion> webConversion) {
+  public void setWebConversion(ConversionTrackerServiceWebConversion webConversion) {
     this.webConversion = webConversion;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -609,7 +608,7 @@ public class ConversionTracker   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

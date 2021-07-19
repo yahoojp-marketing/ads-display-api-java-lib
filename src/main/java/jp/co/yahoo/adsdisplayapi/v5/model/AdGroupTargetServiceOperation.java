@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTarget;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,7 +15,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupTargetServiceOperationオブジェクトは、replaceメソッドで操作対象のターゲティング設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupTargetServiceOperation object is a container for storing targeting information for replace operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupTargetServiceOperationオブジェクトは、replaceメソッドで操作対象のターゲティング設定情報を保持します。</div> <div lang=\"en\">AdGroupTargetServiceOperation object is a container for storing targeting information for replace operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
@@ -52,6 +51,9 @@ public class AdGroupTargetServiceOperation   {
   }
 
   public AdGroupTargetServiceOperation addOperandItem(AdGroupTarget operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -75,7 +77,7 @@ public class AdGroupTargetServiceOperation   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class AdGroupTargetServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceJobStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceUploadUserListUploadType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,31 +14,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceUploadUserListJobオブジェクトは、ユーザーリストのアップロードジョブの処理状況を示すオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingListServiceUploadUserListJob object indicates the processing status of user list upload.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceUploadUserListJobオブジェクトは、ユーザーリストのアップロードジョブの処理状況を示すオブジェクトです。</div> <div lang=\"en\">RetargetingListServiceUploadUserListJob object indicates the processing status of user list upload.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceUploadUserListJob   {
   @JsonProperty("uploadJobId")
-  private JsonNullable<String> uploadJobId = JsonNullable.undefined();
+  private String uploadJobId = null;
 
   @JsonProperty("retargetingTagId")
-  private JsonNullable<String> retargetingTagId = JsonNullable.undefined();
+  private String retargetingTagId = null;
 
   @JsonProperty("targetListId")
-  private JsonNullable<Long> targetListId = JsonNullable.undefined();
+  private Long targetListId = null;
 
   @JsonProperty("uploadType")
-  private JsonNullable<RetargetingListServiceUploadUserListUploadType> uploadType = JsonNullable.undefined();
+  private RetargetingListServiceUploadUserListUploadType uploadType = null;
 
   @JsonProperty("uploadSubmitDate")
-  private JsonNullable<String> uploadSubmitDate = JsonNullable.undefined();
+  private String uploadSubmitDate = null;
 
   @JsonProperty("receivedDate")
-  private JsonNullable<String> receivedDate = JsonNullable.undefined();
+  private String receivedDate = null;
 
   @JsonProperty("jobStatus")
-  private JsonNullable<RetargetingListServiceJobStatus> jobStatus = JsonNullable.undefined();
+  private RetargetingListServiceJobStatus jobStatus = null;
 
   public RetargetingListServiceUploadUserListJob uploadJobId(String uploadJobId) {
-    this.uploadJobId = JsonNullable.of(uploadJobId);
+    this.uploadJobId = uploadJobId;
     return this;
   }
 
@@ -50,16 +49,16 @@ public class RetargetingListServiceUploadUserListJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロードジョブIDです。</div> <div lang=\"en\">Upload job ID.</div> ")
 
 
-  public JsonNullable<String> getUploadJobId() {
+  public String getUploadJobId() {
     return uploadJobId;
   }
 
-  public void setUploadJobId(JsonNullable<String> uploadJobId) {
+  public void setUploadJobId(String uploadJobId) {
     this.uploadJobId = uploadJobId;
   }
 
   public RetargetingListServiceUploadUserListJob retargetingTagId(String retargetingTagId) {
-    this.retargetingTagId = JsonNullable.of(retargetingTagId);
+    this.retargetingTagId = retargetingTagId;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class RetargetingListServiceUploadUserListJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">サイトリターゲティングのタグIDです。</div> <div lang=\"en\">Tag ID for site retargeting.</div> ")
 
 
-  public JsonNullable<String> getRetargetingTagId() {
+  public String getRetargetingTagId() {
     return retargetingTagId;
   }
 
-  public void setRetargetingTagId(JsonNullable<String> retargetingTagId) {
+  public void setRetargetingTagId(String retargetingTagId) {
     this.retargetingTagId = retargetingTagId;
   }
 
   public RetargetingListServiceUploadUserListJob targetListId(Long targetListId) {
-    this.targetListId = JsonNullable.of(targetListId);
+    this.targetListId = targetListId;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class RetargetingListServiceUploadUserListJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">カスタムオーディエンスのターゲットリストIDです。</div> <div lang=\"en\">Target list ID of custom audience.</div> ")
 
 
-  public JsonNullable<Long> getTargetListId() {
+  public Long getTargetListId() {
     return targetListId;
   }
 
-  public void setTargetListId(JsonNullable<Long> targetListId) {
+  public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
 
   public RetargetingListServiceUploadUserListJob uploadType(RetargetingListServiceUploadUserListUploadType uploadType) {
-    this.uploadType = JsonNullable.of(uploadType);
+    this.uploadType = uploadType;
     return this;
   }
 
@@ -111,16 +110,16 @@ public class RetargetingListServiceUploadUserListJob   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceUploadUserListUploadType> getUploadType() {
+  public RetargetingListServiceUploadUserListUploadType getUploadType() {
     return uploadType;
   }
 
-  public void setUploadType(JsonNullable<RetargetingListServiceUploadUserListUploadType> uploadType) {
+  public void setUploadType(RetargetingListServiceUploadUserListUploadType uploadType) {
     this.uploadType = uploadType;
   }
 
   public RetargetingListServiceUploadUserListJob uploadSubmitDate(String uploadSubmitDate) {
-    this.uploadSubmitDate = JsonNullable.of(uploadSubmitDate);
+    this.uploadSubmitDate = uploadSubmitDate;
     return this;
   }
 
@@ -131,16 +130,16 @@ public class RetargetingListServiceUploadUserListJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロード日時</div> <div lang=\"en\">Upload date and time.</div> <br>Format: yyyyMMddHHmmss ")
 
 
-  public JsonNullable<String> getUploadSubmitDate() {
+  public String getUploadSubmitDate() {
     return uploadSubmitDate;
   }
 
-  public void setUploadSubmitDate(JsonNullable<String> uploadSubmitDate) {
+  public void setUploadSubmitDate(String uploadSubmitDate) {
     this.uploadSubmitDate = uploadSubmitDate;
   }
 
   public RetargetingListServiceUploadUserListJob receivedDate(String receivedDate) {
-    this.receivedDate = JsonNullable.of(receivedDate);
+    this.receivedDate = receivedDate;
     return this;
   }
 
@@ -151,16 +150,16 @@ public class RetargetingListServiceUploadUserListJob   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロード受付完了日時</div> <div lang=\"en\">Upload job completion date and time.</div> <br>Format: yyyyMMddHHmmss ")
 
 
-  public JsonNullable<String> getReceivedDate() {
+  public String getReceivedDate() {
     return receivedDate;
   }
 
-  public void setReceivedDate(JsonNullable<String> receivedDate) {
+  public void setReceivedDate(String receivedDate) {
     this.receivedDate = receivedDate;
   }
 
   public RetargetingListServiceUploadUserListJob jobStatus(RetargetingListServiceJobStatus jobStatus) {
-    this.jobStatus = JsonNullable.of(jobStatus);
+    this.jobStatus = jobStatus;
     return this;
   }
 
@@ -172,17 +171,17 @@ public class RetargetingListServiceUploadUserListJob   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceJobStatus> getJobStatus() {
+  public RetargetingListServiceJobStatus getJobStatus() {
     return jobStatus;
   }
 
-  public void setJobStatus(JsonNullable<RetargetingListServiceJobStatus> jobStatus) {
+  public void setJobStatus(RetargetingListServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -224,7 +223,7 @@ public class RetargetingListServiceUploadUserListJob   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

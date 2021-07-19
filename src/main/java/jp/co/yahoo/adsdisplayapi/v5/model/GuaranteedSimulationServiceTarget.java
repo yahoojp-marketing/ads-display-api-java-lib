@@ -18,7 +18,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePlacementCa
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePositionTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceSiteRetargetingTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -26,52 +25,52 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedSimulationServiceTargetオブジェクトは、ターゲティング設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedSimulationServiceTarget object holds information of the target setting.&lt;br&gt; This field is optional in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedSimulationServiceTargetオブジェクトは、ターゲティング設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> GuaranteedSimulationServiceTarget object holds information of the target setting.<br> This field is optional in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceTarget   {
   @JsonProperty("adScheduleTarget")
-  private JsonNullable<GuaranteedSimulationServiceAdScheduleTarget> adScheduleTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceAdScheduleTarget adScheduleTarget = null;
 
   @JsonProperty("ageTarget")
-  private JsonNullable<GuaranteedSimulationServiceAgeTarget> ageTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceAgeTarget ageTarget = null;
 
   @JsonProperty("appTarget")
-  private JsonNullable<GuaranteedSimulationServiceAppTarget> appTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceAppTarget appTarget = null;
 
   @JsonProperty("audienceCategoryTarget")
-  private JsonNullable<GuaranteedSimulationServiceAudienceCategoryTarget> audienceCategoryTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceAudienceCategoryTarget audienceCategoryTarget = null;
 
   @JsonProperty("deviceTarget")
-  private JsonNullable<GuaranteedSimulationServiceDeviceTarget> deviceTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceDeviceTarget deviceTarget = null;
 
   @JsonProperty("genderTarget")
-  private JsonNullable<GuaranteedSimulationServiceGenderTarget> genderTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceGenderTarget genderTarget = null;
 
   @JsonProperty("geoTarget")
-  private JsonNullable<GuaranteedSimulationServiceGeoTarget> geoTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceGeoTarget geoTarget = null;
 
   @JsonProperty("osTarget")
-  private JsonNullable<GuaranteedSimulationServiceOsTarget> osTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceOsTarget osTarget = null;
 
   @JsonProperty("placementCategoryTarget")
-  private JsonNullable<GuaranteedSimulationServicePlacementCategoryTarget> placementCategoryTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePlacementCategoryTarget placementCategoryTarget = null;
 
   @JsonProperty("placementCategoryDetailTarget")
-  private JsonNullable<GuaranteedSimulationServicePlacementCategoryDetailTarget> placementCategoryDetailTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePlacementCategoryDetailTarget placementCategoryDetailTarget = null;
 
   @JsonProperty("positionTarget")
-  private JsonNullable<GuaranteedSimulationServicePositionTarget> positionTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServicePositionTarget positionTarget = null;
 
   @JsonProperty("siteRetargetingTarget")
-  private JsonNullable<GuaranteedSimulationServiceSiteRetargetingTarget> siteRetargetingTarget = JsonNullable.undefined();
+  private GuaranteedSimulationServiceSiteRetargetingTarget siteRetargetingTarget = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("targetType")
-  private JsonNullable<GuaranteedSimulationServiceTargetType> targetType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceTargetType targetType = null;
 
   public GuaranteedSimulationServiceTarget adScheduleTarget(GuaranteedSimulationServiceAdScheduleTarget adScheduleTarget) {
-    this.adScheduleTarget = JsonNullable.of(adScheduleTarget);
+    this.adScheduleTarget = adScheduleTarget;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceAdScheduleTarget> getAdScheduleTarget() {
+  public GuaranteedSimulationServiceAdScheduleTarget getAdScheduleTarget() {
     return adScheduleTarget;
   }
 
-  public void setAdScheduleTarget(JsonNullable<GuaranteedSimulationServiceAdScheduleTarget> adScheduleTarget) {
+  public void setAdScheduleTarget(GuaranteedSimulationServiceAdScheduleTarget adScheduleTarget) {
     this.adScheduleTarget = adScheduleTarget;
   }
 
   public GuaranteedSimulationServiceTarget ageTarget(GuaranteedSimulationServiceAgeTarget ageTarget) {
-    this.ageTarget = JsonNullable.of(ageTarget);
+    this.ageTarget = ageTarget;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceAgeTarget> getAgeTarget() {
+  public GuaranteedSimulationServiceAgeTarget getAgeTarget() {
     return ageTarget;
   }
 
-  public void setAgeTarget(JsonNullable<GuaranteedSimulationServiceAgeTarget> ageTarget) {
+  public void setAgeTarget(GuaranteedSimulationServiceAgeTarget ageTarget) {
     this.ageTarget = ageTarget;
   }
 
   public GuaranteedSimulationServiceTarget appTarget(GuaranteedSimulationServiceAppTarget appTarget) {
-    this.appTarget = JsonNullable.of(appTarget);
+    this.appTarget = appTarget;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceAppTarget> getAppTarget() {
+  public GuaranteedSimulationServiceAppTarget getAppTarget() {
     return appTarget;
   }
 
-  public void setAppTarget(JsonNullable<GuaranteedSimulationServiceAppTarget> appTarget) {
+  public void setAppTarget(GuaranteedSimulationServiceAppTarget appTarget) {
     this.appTarget = appTarget;
   }
 
   public GuaranteedSimulationServiceTarget audienceCategoryTarget(GuaranteedSimulationServiceAudienceCategoryTarget audienceCategoryTarget) {
-    this.audienceCategoryTarget = JsonNullable.of(audienceCategoryTarget);
+    this.audienceCategoryTarget = audienceCategoryTarget;
     return this;
   }
 
@@ -146,16 +145,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceAudienceCategoryTarget> getAudienceCategoryTarget() {
+  public GuaranteedSimulationServiceAudienceCategoryTarget getAudienceCategoryTarget() {
     return audienceCategoryTarget;
   }
 
-  public void setAudienceCategoryTarget(JsonNullable<GuaranteedSimulationServiceAudienceCategoryTarget> audienceCategoryTarget) {
+  public void setAudienceCategoryTarget(GuaranteedSimulationServiceAudienceCategoryTarget audienceCategoryTarget) {
     this.audienceCategoryTarget = audienceCategoryTarget;
   }
 
   public GuaranteedSimulationServiceTarget deviceTarget(GuaranteedSimulationServiceDeviceTarget deviceTarget) {
-    this.deviceTarget = JsonNullable.of(deviceTarget);
+    this.deviceTarget = deviceTarget;
     return this;
   }
 
@@ -167,16 +166,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceDeviceTarget> getDeviceTarget() {
+  public GuaranteedSimulationServiceDeviceTarget getDeviceTarget() {
     return deviceTarget;
   }
 
-  public void setDeviceTarget(JsonNullable<GuaranteedSimulationServiceDeviceTarget> deviceTarget) {
+  public void setDeviceTarget(GuaranteedSimulationServiceDeviceTarget deviceTarget) {
     this.deviceTarget = deviceTarget;
   }
 
   public GuaranteedSimulationServiceTarget genderTarget(GuaranteedSimulationServiceGenderTarget genderTarget) {
-    this.genderTarget = JsonNullable.of(genderTarget);
+    this.genderTarget = genderTarget;
     return this;
   }
 
@@ -188,16 +187,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceGenderTarget> getGenderTarget() {
+  public GuaranteedSimulationServiceGenderTarget getGenderTarget() {
     return genderTarget;
   }
 
-  public void setGenderTarget(JsonNullable<GuaranteedSimulationServiceGenderTarget> genderTarget) {
+  public void setGenderTarget(GuaranteedSimulationServiceGenderTarget genderTarget) {
     this.genderTarget = genderTarget;
   }
 
   public GuaranteedSimulationServiceTarget geoTarget(GuaranteedSimulationServiceGeoTarget geoTarget) {
-    this.geoTarget = JsonNullable.of(geoTarget);
+    this.geoTarget = geoTarget;
     return this;
   }
 
@@ -209,16 +208,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceGeoTarget> getGeoTarget() {
+  public GuaranteedSimulationServiceGeoTarget getGeoTarget() {
     return geoTarget;
   }
 
-  public void setGeoTarget(JsonNullable<GuaranteedSimulationServiceGeoTarget> geoTarget) {
+  public void setGeoTarget(GuaranteedSimulationServiceGeoTarget geoTarget) {
     this.geoTarget = geoTarget;
   }
 
   public GuaranteedSimulationServiceTarget osTarget(GuaranteedSimulationServiceOsTarget osTarget) {
-    this.osTarget = JsonNullable.of(osTarget);
+    this.osTarget = osTarget;
     return this;
   }
 
@@ -230,16 +229,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceOsTarget> getOsTarget() {
+  public GuaranteedSimulationServiceOsTarget getOsTarget() {
     return osTarget;
   }
 
-  public void setOsTarget(JsonNullable<GuaranteedSimulationServiceOsTarget> osTarget) {
+  public void setOsTarget(GuaranteedSimulationServiceOsTarget osTarget) {
     this.osTarget = osTarget;
   }
 
   public GuaranteedSimulationServiceTarget placementCategoryTarget(GuaranteedSimulationServicePlacementCategoryTarget placementCategoryTarget) {
-    this.placementCategoryTarget = JsonNullable.of(placementCategoryTarget);
+    this.placementCategoryTarget = placementCategoryTarget;
     return this;
   }
 
@@ -251,16 +250,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePlacementCategoryTarget> getPlacementCategoryTarget() {
+  public GuaranteedSimulationServicePlacementCategoryTarget getPlacementCategoryTarget() {
     return placementCategoryTarget;
   }
 
-  public void setPlacementCategoryTarget(JsonNullable<GuaranteedSimulationServicePlacementCategoryTarget> placementCategoryTarget) {
+  public void setPlacementCategoryTarget(GuaranteedSimulationServicePlacementCategoryTarget placementCategoryTarget) {
     this.placementCategoryTarget = placementCategoryTarget;
   }
 
   public GuaranteedSimulationServiceTarget placementCategoryDetailTarget(GuaranteedSimulationServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
-    this.placementCategoryDetailTarget = JsonNullable.of(placementCategoryDetailTarget);
+    this.placementCategoryDetailTarget = placementCategoryDetailTarget;
     return this;
   }
 
@@ -272,16 +271,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePlacementCategoryDetailTarget> getPlacementCategoryDetailTarget() {
+  public GuaranteedSimulationServicePlacementCategoryDetailTarget getPlacementCategoryDetailTarget() {
     return placementCategoryDetailTarget;
   }
 
-  public void setPlacementCategoryDetailTarget(JsonNullable<GuaranteedSimulationServicePlacementCategoryDetailTarget> placementCategoryDetailTarget) {
+  public void setPlacementCategoryDetailTarget(GuaranteedSimulationServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
   }
 
   public GuaranteedSimulationServiceTarget positionTarget(GuaranteedSimulationServicePositionTarget positionTarget) {
-    this.positionTarget = JsonNullable.of(positionTarget);
+    this.positionTarget = positionTarget;
     return this;
   }
 
@@ -293,16 +292,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePositionTarget> getPositionTarget() {
+  public GuaranteedSimulationServicePositionTarget getPositionTarget() {
     return positionTarget;
   }
 
-  public void setPositionTarget(JsonNullable<GuaranteedSimulationServicePositionTarget> positionTarget) {
+  public void setPositionTarget(GuaranteedSimulationServicePositionTarget positionTarget) {
     this.positionTarget = positionTarget;
   }
 
   public GuaranteedSimulationServiceTarget siteRetargetingTarget(GuaranteedSimulationServiceSiteRetargetingTarget siteRetargetingTarget) {
-    this.siteRetargetingTarget = JsonNullable.of(siteRetargetingTarget);
+    this.siteRetargetingTarget = siteRetargetingTarget;
     return this;
   }
 
@@ -314,16 +313,16 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceSiteRetargetingTarget> getSiteRetargetingTarget() {
+  public GuaranteedSimulationServiceSiteRetargetingTarget getSiteRetargetingTarget() {
     return siteRetargetingTarget;
   }
 
-  public void setSiteRetargetingTarget(JsonNullable<GuaranteedSimulationServiceSiteRetargetingTarget> siteRetargetingTarget) {
+  public void setSiteRetargetingTarget(GuaranteedSimulationServiceSiteRetargetingTarget siteRetargetingTarget) {
     this.siteRetargetingTarget = siteRetargetingTarget;
   }
 
   public GuaranteedSimulationServiceTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -334,16 +333,16 @@ public class GuaranteedSimulationServiceTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットIDです。<br> このフィールドは、ADD時は省略可能となります。 </div> <div lang=\"en\"> Target ID.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServiceTarget targetType(GuaranteedSimulationServiceTargetType targetType) {
-    this.targetType = JsonNullable.of(targetType);
+    this.targetType = targetType;
     return this;
   }
 
@@ -355,17 +354,17 @@ public class GuaranteedSimulationServiceTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceTargetType> getTargetType() {
+  public GuaranteedSimulationServiceTargetType getTargetType() {
     return targetType;
   }
 
-  public void setTargetType(JsonNullable<GuaranteedSimulationServiceTargetType> targetType) {
+  public void setTargetType(GuaranteedSimulationServiceTargetType targetType) {
     this.targetType = targetType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -421,7 +420,7 @@ public class GuaranteedSimulationServiceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

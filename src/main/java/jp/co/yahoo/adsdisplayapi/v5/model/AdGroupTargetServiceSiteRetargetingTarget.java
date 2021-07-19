@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceTargetListDeliverType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSITE_RETARGETINGの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceSiteRetargetingTarget object is a container for storing site retargeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is SITE_RETARGETING, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがSITE_RETARGETINGの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceSiteRetargetingTarget object is a container for storing site retargeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is SITE_RETARGETING, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceSiteRetargetingTarget   {
   @JsonProperty("targetListDeliverType")
-  private JsonNullable<AdGroupTargetServiceTargetListDeliverType> targetListDeliverType = JsonNullable.undefined();
+  private AdGroupTargetServiceTargetListDeliverType targetListDeliverType = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   public AdGroupTargetServiceSiteRetargetingTarget targetListDeliverType(AdGroupTargetServiceTargetListDeliverType targetListDeliverType) {
-    this.targetListDeliverType = JsonNullable.of(targetListDeliverType);
+    this.targetListDeliverType = targetListDeliverType;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class AdGroupTargetServiceSiteRetargetingTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceTargetListDeliverType> getTargetListDeliverType() {
+  public AdGroupTargetServiceTargetListDeliverType getTargetListDeliverType() {
     return targetListDeliverType;
   }
 
-  public void setTargetListDeliverType(JsonNullable<AdGroupTargetServiceTargetListDeliverType> targetListDeliverType) {
+  public void setTargetListDeliverType(AdGroupTargetServiceTargetListDeliverType targetListDeliverType) {
     this.targetListDeliverType = targetListDeliverType;
   }
 
   public AdGroupTargetServiceSiteRetargetingTarget targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class AdGroupTargetServiceSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Target List name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class AdGroupTargetServiceSiteRetargetingTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

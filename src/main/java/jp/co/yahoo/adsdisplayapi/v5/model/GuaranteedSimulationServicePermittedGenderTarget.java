@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceGender;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedGenderTargetオブジェクトは、性別ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedGenderTarget object holds configuration information of gender targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedGenderTargetオブジェクトは、性別ターゲットの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedGenderTarget object holds configuration information of gender targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedGenderTarget   {
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("gender")
-  private JsonNullable<GuaranteedSimulationServiceGender> gender = JsonNullable.undefined();
+  private GuaranteedSimulationServiceGender gender = null;
 
   public GuaranteedSimulationServicePermittedGenderTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class GuaranteedSimulationServicePermittedGenderTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットID</div> <div lang=\"en\">Target ID</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServicePermittedGenderTarget gender(GuaranteedSimulationServiceGender gender) {
-    this.gender = JsonNullable.of(gender);
+    this.gender = gender;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class GuaranteedSimulationServicePermittedGenderTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceGender> getGender() {
+  public GuaranteedSimulationServiceGender getGender() {
     return gender;
   }
 
-  public void setGender(JsonNullable<GuaranteedSimulationServiceGender> gender) {
+  public void setGender(GuaranteedSimulationServiceGender gender) {
     this.gender = gender;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class GuaranteedSimulationServicePermittedGenderTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

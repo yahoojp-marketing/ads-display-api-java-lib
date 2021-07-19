@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.Stats;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceCampaignStatsValueオブジェクトは、キャンペーンの統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceCampaignStatsValue object contains Campaign stats information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceCampaignStatsValueオブジェクトは、キャンペーンの統計情報を保持します。</div> <div lang=\"en\">StatsServiceCampaignStatsValue object contains Campaign stats information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceCampaignStatsValue   {
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("stats")
-  private JsonNullable<Stats> stats = JsonNullable.undefined();
+  private Stats stats = null;
 
   public StatsServiceCampaignStatsValue campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -37,16 +36,16 @@ public class StatsServiceCampaignStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンID</div> <div lang=\"en\">Campaign ID</div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public StatsServiceCampaignStatsValue campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -57,16 +56,16 @@ public class StatsServiceCampaignStatsValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名</div> <div lang=\"en\">Campaign name</div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public StatsServiceCampaignStatsValue stats(Stats stats) {
-    this.stats = JsonNullable.of(stats);
+    this.stats = stats;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class StatsServiceCampaignStatsValue   {
 
   @Valid
 
-  public JsonNullable<Stats> getStats() {
+  public Stats getStats() {
     return stats;
   }
 
-  public void setStats(JsonNullable<Stats> stats) {
+  public void setStats(Stats stats) {
     this.stats = stats;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class StatsServiceCampaignStatsValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

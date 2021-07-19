@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.BudgetOrderServiceAccountType;
 import jp.co.yahoo.adsdisplayapi.v5.model.BudgetOrderServiceLimitChargeType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,22 +14,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BudgetOrderオブジェクトは、アカウント予算情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BudgetOrder object is a container for storing the account budget.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BudgetOrderオブジェクトは、アカウント予算情報を示します。<br> </div> <div lang=\"en\">BudgetOrder object is a container for storing the account budget.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BudgetOrder   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("accountType")
-  private JsonNullable<BudgetOrderServiceAccountType> accountType = JsonNullable.undefined();
+  private BudgetOrderServiceAccountType accountType = null;
 
   @JsonProperty("amount")
-  private JsonNullable<Long> amount = JsonNullable.undefined();
+  private Long amount = null;
 
   @JsonProperty("limitChargeType")
-  private JsonNullable<BudgetOrderServiceLimitChargeType> limitChargeType = JsonNullable.undefined();
+  private BudgetOrderServiceLimitChargeType limitChargeType = null;
 
   public BudgetOrder accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -41,16 +40,16 @@ public class BudgetOrder   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> SET時、このフィールドは必須となります。 </div> <div lang=\"en\"> Account ID.<br> This field is required in SET operation. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public BudgetOrder accountType(BudgetOrderServiceAccountType accountType) {
-    this.accountType = JsonNullable.of(accountType);
+    this.accountType = accountType;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class BudgetOrder   {
 
   @Valid
 
-  public JsonNullable<BudgetOrderServiceAccountType> getAccountType() {
+  public BudgetOrderServiceAccountType getAccountType() {
     return accountType;
   }
 
-  public void setAccountType(JsonNullable<BudgetOrderServiceAccountType> accountType) {
+  public void setAccountType(BudgetOrderServiceAccountType accountType) {
     this.accountType = accountType;
   }
 
   public BudgetOrder amount(Long amount) {
-    this.amount = JsonNullable.of(amount);
+    this.amount = amount;
     return this;
   }
 
@@ -82,16 +81,16 @@ public class BudgetOrder   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントの広告予算金額です。<br> SET時、このフィールドは省略可能となります。 月額予算は、accountTypeが<code>INVOICE</code>の場合のみ変更可能です。 また、予算額は1000円単位で指定する必要があります。 </div> <div lang=\"en\"> Amount of budget.<br> This field is optional in SET operation. The monthly budget can be changed only when accountType is <code>INVOICE</code>. In addition, the budget amount must be specified in units of 1000 yen. </div> ")
 
 
-  public JsonNullable<Long> getAmount() {
+  public Long getAmount() {
     return amount;
   }
 
-  public void setAmount(JsonNullable<Long> amount) {
+  public void setAmount(Long amount) {
     this.amount = amount;
   }
 
   public BudgetOrder limitChargeType(BudgetOrderServiceLimitChargeType limitChargeType) {
-    this.limitChargeType = JsonNullable.of(limitChargeType);
+    this.limitChargeType = limitChargeType;
     return this;
   }
 
@@ -103,17 +102,17 @@ public class BudgetOrder   {
 
   @Valid
 
-  public JsonNullable<BudgetOrderServiceLimitChargeType> getLimitChargeType() {
+  public BudgetOrderServiceLimitChargeType getLimitChargeType() {
     return limitChargeType;
   }
 
-  public void setLimitChargeType(JsonNullable<BudgetOrderServiceLimitChargeType> limitChargeType) {
+  public void setLimitChargeType(BudgetOrderServiceLimitChargeType limitChargeType) {
     this.limitChargeType = limitChargeType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -149,7 +148,7 @@ public class BudgetOrder   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

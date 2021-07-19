@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedItemServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedItemServiceReturnValueオブジェクトは、商品の情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedItemServiceReturnValue object contains the information about items.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedItemServiceReturnValueオブジェクトは、商品の情報を格納するコンテナです。</div> <div lang=\"en\">FeedItemServiceReturnValue object contains the information about items.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedItemServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<FeedItemServiceValue>> values = JsonNullable.undefined();
+  private List<FeedItemServiceValue> values = null;
 
   public FeedItemServiceReturnValue values(List<FeedItemServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public FeedItemServiceReturnValue addValuesItem(FeedItemServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class FeedItemServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<FeedItemServiceValue>> getValues() {
+  public List<FeedItemServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<FeedItemServiceValue>> values) {
+  public void setValues(List<FeedItemServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class FeedItemServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

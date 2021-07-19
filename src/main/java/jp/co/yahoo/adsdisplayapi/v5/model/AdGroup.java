@@ -17,7 +17,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceDynamicImageExtensions;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceLabel;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceSmartDeviceCarrier;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -25,69 +24,69 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupオブジェクトは、広告グループ情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The Ad Group object is a container for storing ad group information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AdGroupオブジェクトは、広告グループ情報を保持します。</div> <div lang=\"en\">The Ad Group object is a container for storing ad group information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroup   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupBiddingStrategy")
-  private JsonNullable<AdGroupServiceBiddingStrategy> adGroupBiddingStrategy = JsonNullable.undefined();
+  private AdGroupServiceBiddingStrategy adGroupBiddingStrategy = null;
 
   @JsonProperty("adGroupId")
-  private JsonNullable<Long> adGroupId = JsonNullable.undefined();
+  private Long adGroupId = null;
 
   @JsonProperty("adGroupName")
-  private JsonNullable<String> adGroupName = JsonNullable.undefined();
+  private String adGroupName = null;
 
   @JsonProperty("bid")
-  private JsonNullable<AdGroupServiceBid> bid = JsonNullable.undefined();
+  private AdGroupServiceBid bid = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("conversionOptimizer")
-  private JsonNullable<AdGroupServiceConversionOptimizer> conversionOptimizer = JsonNullable.undefined();
+  private AdGroupServiceConversionOptimizer conversionOptimizer = null;
 
   @JsonProperty("device")
   @Valid
-  private JsonNullable<List<AdGroupServiceDeviceType>> device = JsonNullable.undefined();
+  private List<AdGroupServiceDeviceType> device = null;
 
   @JsonProperty("deviceApp")
   @Valid
-  private JsonNullable<List<AdGroupServiceDeviceAppType>> deviceApp = JsonNullable.undefined();
+  private List<AdGroupServiceDeviceAppType> deviceApp = null;
 
   @JsonProperty("deviceOs")
   @Valid
-  private JsonNullable<List<AdGroupServiceDeviceOsType>> deviceOs = JsonNullable.undefined();
+  private List<AdGroupServiceDeviceOsType> deviceOs = null;
 
   @JsonProperty("deviceOsVersion")
-  private JsonNullable<String> deviceOsVersion = JsonNullable.undefined();
+  private String deviceOsVersion = null;
 
   @JsonProperty("dynamicImageExtensions")
-  private JsonNullable<AdGroupServiceDynamicImageExtensions> dynamicImageExtensions = JsonNullable.undefined();
+  private AdGroupServiceDynamicImageExtensions dynamicImageExtensions = null;
 
   @JsonProperty("feedSetId")
-  private JsonNullable<Long> feedSetId = JsonNullable.undefined();
+  private Long feedSetId = null;
 
   @JsonProperty("labels")
   @Valid
-  private JsonNullable<List<AdGroupServiceLabel>> labels = JsonNullable.undefined();
+  private List<AdGroupServiceLabel> labels = null;
 
   @JsonProperty("smartDeviceCarriers")
   @Valid
-  private JsonNullable<List<AdGroupServiceSmartDeviceCarrier>> smartDeviceCarriers = JsonNullable.undefined();
+  private List<AdGroupServiceSmartDeviceCarrier> smartDeviceCarriers = null;
 
   @JsonProperty("userStatus")
-  private JsonNullable<AdGroupServiceUserStatus> userStatus = JsonNullable.undefined();
+  private AdGroupServiceUserStatus userStatus = null;
 
   @JsonProperty("createdDate")
-  private JsonNullable<String> createdDate = JsonNullable.undefined();
+  private String createdDate = null;
 
   public AdGroup accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -98,16 +97,16 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public AdGroup adGroupBiddingStrategy(AdGroupServiceBiddingStrategy adGroupBiddingStrategy) {
-    this.adGroupBiddingStrategy = JsonNullable.of(adGroupBiddingStrategy);
+    this.adGroupBiddingStrategy = adGroupBiddingStrategy;
     return this;
   }
 
@@ -119,16 +118,16 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceBiddingStrategy> getAdGroupBiddingStrategy() {
+  public AdGroupServiceBiddingStrategy getAdGroupBiddingStrategy() {
     return adGroupBiddingStrategy;
   }
 
-  public void setAdGroupBiddingStrategy(JsonNullable<AdGroupServiceBiddingStrategy> adGroupBiddingStrategy) {
+  public void setAdGroupBiddingStrategy(AdGroupServiceBiddingStrategy adGroupBiddingStrategy) {
     this.adGroupBiddingStrategy = adGroupBiddingStrategy;
   }
 
   public AdGroup adGroupId(Long adGroupId) {
-    this.adGroupId = JsonNullable.of(adGroupId);
+    this.adGroupId = adGroupId;
     return this;
   }
 
@@ -139,16 +138,16 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループIDです。<br> このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。 </div> <div lang=\"en\"> Ad group ID.<br> This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getAdGroupId() {
+  public Long getAdGroupId() {
     return adGroupId;
   }
 
-  public void setAdGroupId(JsonNullable<Long> adGroupId) {
+  public void setAdGroupId(Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
   public AdGroup adGroupName(String adGroupName) {
-    this.adGroupName = JsonNullable.of(adGroupName);
+    this.adGroupName = adGroupName;
     return this;
   }
 
@@ -159,16 +158,16 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Ad group name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getAdGroupName() {
+  public String getAdGroupName() {
     return adGroupName;
   }
 
-  public void setAdGroupName(JsonNullable<String> adGroupName) {
+  public void setAdGroupName(String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
   public AdGroup bid(AdGroupServiceBid bid) {
-    this.bid = JsonNullable.of(bid);
+    this.bid = bid;
     return this;
   }
 
@@ -180,16 +179,16 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceBid> getBid() {
+  public AdGroupServiceBid getBid() {
     return bid;
   }
 
-  public void setBid(JsonNullable<AdGroupServiceBid> bid) {
+  public void setBid(AdGroupServiceBid bid) {
     this.bid = bid;
   }
 
   public AdGroup campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -200,16 +199,16 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public AdGroup campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -220,16 +219,16 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Campaign name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public AdGroup conversionOptimizer(AdGroupServiceConversionOptimizer conversionOptimizer) {
-    this.conversionOptimizer = JsonNullable.of(conversionOptimizer);
+    this.conversionOptimizer = conversionOptimizer;
     return this;
   }
 
@@ -241,24 +240,24 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceConversionOptimizer> getConversionOptimizer() {
+  public AdGroupServiceConversionOptimizer getConversionOptimizer() {
     return conversionOptimizer;
   }
 
-  public void setConversionOptimizer(JsonNullable<AdGroupServiceConversionOptimizer> conversionOptimizer) {
+  public void setConversionOptimizer(AdGroupServiceConversionOptimizer conversionOptimizer) {
     this.conversionOptimizer = conversionOptimizer;
   }
 
   public AdGroup device(List<AdGroupServiceDeviceType> device) {
-    this.device = JsonNullable.of(device);
+    this.device = device;
     return this;
   }
 
   public AdGroup addDeviceItem(AdGroupServiceDeviceType deviceItem) {
-    if (this.device == null || !this.device.isPresent()) {
-      this.device = JsonNullable.of(new ArrayList<>());
+    if (this.device == null) {
+      this.device = new ArrayList<>();
     }
-    this.device.get().add(deviceItem);
+    this.device.add(deviceItem);
     return this;
   }
 
@@ -270,24 +269,24 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupServiceDeviceType>> getDevice() {
+  public List<AdGroupServiceDeviceType> getDevice() {
     return device;
   }
 
-  public void setDevice(JsonNullable<List<AdGroupServiceDeviceType>> device) {
+  public void setDevice(List<AdGroupServiceDeviceType> device) {
     this.device = device;
   }
 
   public AdGroup deviceApp(List<AdGroupServiceDeviceAppType> deviceApp) {
-    this.deviceApp = JsonNullable.of(deviceApp);
+    this.deviceApp = deviceApp;
     return this;
   }
 
   public AdGroup addDeviceAppItem(AdGroupServiceDeviceAppType deviceAppItem) {
-    if (this.deviceApp == null || !this.deviceApp.isPresent()) {
-      this.deviceApp = JsonNullable.of(new ArrayList<>());
+    if (this.deviceApp == null) {
+      this.deviceApp = new ArrayList<>();
     }
-    this.deviceApp.get().add(deviceAppItem);
+    this.deviceApp.add(deviceAppItem);
     return this;
   }
 
@@ -299,24 +298,24 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupServiceDeviceAppType>> getDeviceApp() {
+  public List<AdGroupServiceDeviceAppType> getDeviceApp() {
     return deviceApp;
   }
 
-  public void setDeviceApp(JsonNullable<List<AdGroupServiceDeviceAppType>> deviceApp) {
+  public void setDeviceApp(List<AdGroupServiceDeviceAppType> deviceApp) {
     this.deviceApp = deviceApp;
   }
 
   public AdGroup deviceOs(List<AdGroupServiceDeviceOsType> deviceOs) {
-    this.deviceOs = JsonNullable.of(deviceOs);
+    this.deviceOs = deviceOs;
     return this;
   }
 
   public AdGroup addDeviceOsItem(AdGroupServiceDeviceOsType deviceOsItem) {
-    if (this.deviceOs == null || !this.deviceOs.isPresent()) {
-      this.deviceOs = JsonNullable.of(new ArrayList<>());
+    if (this.deviceOs == null) {
+      this.deviceOs = new ArrayList<>();
     }
-    this.deviceOs.get().add(deviceOsItem);
+    this.deviceOs.add(deviceOsItem);
     return this;
   }
 
@@ -328,16 +327,16 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupServiceDeviceOsType>> getDeviceOs() {
+  public List<AdGroupServiceDeviceOsType> getDeviceOs() {
     return deviceOs;
   }
 
-  public void setDeviceOs(JsonNullable<List<AdGroupServiceDeviceOsType>> deviceOs) {
+  public void setDeviceOs(List<AdGroupServiceDeviceOsType> deviceOs) {
     this.deviceOs = deviceOs;
   }
 
   public AdGroup deviceOsVersion(String deviceOsVersion) {
-    this.deviceOsVersion = JsonNullable.of(deviceOsVersion);
+    this.deviceOsVersion = deviceOsVersion;
     return this;
   }
 
@@ -348,16 +347,16 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> OSバージョンです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※設定を解除する場合は、NONEを設定してください。 </div> <div lang=\"en\"> OS version.<br> ∗To cancel the setting, specify &#34;NONE&#34;.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getDeviceOsVersion() {
+  public String getDeviceOsVersion() {
     return deviceOsVersion;
   }
 
-  public void setDeviceOsVersion(JsonNullable<String> deviceOsVersion) {
+  public void setDeviceOsVersion(String deviceOsVersion) {
     this.deviceOsVersion = deviceOsVersion;
   }
 
   public AdGroup dynamicImageExtensions(AdGroupServiceDynamicImageExtensions dynamicImageExtensions) {
-    this.dynamicImageExtensions = JsonNullable.of(dynamicImageExtensions);
+    this.dynamicImageExtensions = dynamicImageExtensions;
     return this;
   }
 
@@ -369,16 +368,16 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceDynamicImageExtensions> getDynamicImageExtensions() {
+  public AdGroupServiceDynamicImageExtensions getDynamicImageExtensions() {
     return dynamicImageExtensions;
   }
 
-  public void setDynamicImageExtensions(JsonNullable<AdGroupServiceDynamicImageExtensions> dynamicImageExtensions) {
+  public void setDynamicImageExtensions(AdGroupServiceDynamicImageExtensions dynamicImageExtensions) {
     this.dynamicImageExtensions = dynamicImageExtensions;
   }
 
   public AdGroup feedSetId(Long feedSetId) {
-    this.feedSetId = JsonNullable.of(feedSetId);
+    this.feedSetId = feedSetId;
     return this;
   }
 
@@ -389,24 +388,24 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットIDです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> *ADD時に未指定の場合、デフォルトセットを自動で関連付けます。 </div> <div lang=\"en\"> Feed set ID.<br> This field is optional in ADD and SET operation.<br> * If feedSetId is not specified in ADD operation, the default set is associated automatically. </div> ")
 
 
-  public JsonNullable<Long> getFeedSetId() {
+  public Long getFeedSetId() {
     return feedSetId;
   }
 
-  public void setFeedSetId(JsonNullable<Long> feedSetId) {
+  public void setFeedSetId(Long feedSetId) {
     this.feedSetId = feedSetId;
   }
 
   public AdGroup labels(List<AdGroupServiceLabel> labels) {
-    this.labels = JsonNullable.of(labels);
+    this.labels = labels;
     return this;
   }
 
   public AdGroup addLabelsItem(AdGroupServiceLabel labelsItem) {
-    if (this.labels == null || !this.labels.isPresent()) {
-      this.labels = JsonNullable.of(new ArrayList<>());
+    if (this.labels == null) {
+      this.labels = new ArrayList<>();
     }
-    this.labels.get().add(labelsItem);
+    this.labels.add(labelsItem);
     return this;
   }
 
@@ -418,24 +417,24 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupServiceLabel>> getLabels() {
+  public List<AdGroupServiceLabel> getLabels() {
     return labels;
   }
 
-  public void setLabels(JsonNullable<List<AdGroupServiceLabel>> labels) {
+  public void setLabels(List<AdGroupServiceLabel> labels) {
     this.labels = labels;
   }
 
   public AdGroup smartDeviceCarriers(List<AdGroupServiceSmartDeviceCarrier> smartDeviceCarriers) {
-    this.smartDeviceCarriers = JsonNullable.of(smartDeviceCarriers);
+    this.smartDeviceCarriers = smartDeviceCarriers;
     return this;
   }
 
   public AdGroup addSmartDeviceCarriersItem(AdGroupServiceSmartDeviceCarrier smartDeviceCarriersItem) {
-    if (this.smartDeviceCarriers == null || !this.smartDeviceCarriers.isPresent()) {
-      this.smartDeviceCarriers = JsonNullable.of(new ArrayList<>());
+    if (this.smartDeviceCarriers == null) {
+      this.smartDeviceCarriers = new ArrayList<>();
     }
-    this.smartDeviceCarriers.get().add(smartDeviceCarriersItem);
+    this.smartDeviceCarriers.add(smartDeviceCarriersItem);
     return this;
   }
 
@@ -447,16 +446,16 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<List<AdGroupServiceSmartDeviceCarrier>> getSmartDeviceCarriers() {
+  public List<AdGroupServiceSmartDeviceCarrier> getSmartDeviceCarriers() {
     return smartDeviceCarriers;
   }
 
-  public void setSmartDeviceCarriers(JsonNullable<List<AdGroupServiceSmartDeviceCarrier>> smartDeviceCarriers) {
+  public void setSmartDeviceCarriers(List<AdGroupServiceSmartDeviceCarrier> smartDeviceCarriers) {
     this.smartDeviceCarriers = smartDeviceCarriers;
   }
 
   public AdGroup userStatus(AdGroupServiceUserStatus userStatus) {
-    this.userStatus = JsonNullable.of(userStatus);
+    this.userStatus = userStatus;
     return this;
   }
 
@@ -468,16 +467,16 @@ public class AdGroup   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceUserStatus> getUserStatus() {
+  public AdGroupServiceUserStatus getUserStatus() {
     return userStatus;
   }
 
-  public void setUserStatus(JsonNullable<AdGroupServiceUserStatus> userStatus) {
+  public void setUserStatus(AdGroupServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
   public AdGroup createdDate(String createdDate) {
-    this.createdDate = JsonNullable.of(createdDate);
+    this.createdDate = createdDate;
     return this;
   }
 
@@ -488,17 +487,17 @@ public class AdGroup   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告グループが作成された日時です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Ad Group made.<br>* Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getCreatedDate() {
+  public String getCreatedDate() {
     return createdDate;
   }
 
-  public void setCreatedDate(JsonNullable<String> createdDate) {
+  public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -562,7 +561,7 @@ public class AdGroup   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

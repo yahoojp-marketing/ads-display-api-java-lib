@@ -15,7 +15,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePrediction;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceReservationStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceUnreservableReason;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceViewableFrequencyCap;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -23,88 +22,88 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationオブジェクトは、予約型キャンペーンの配信シミュレーション情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulation object holds information about the delivery simulation of the guaranteed campaign.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationオブジェクトは、予約型キャンペーンの配信シミュレーション情報を保持します。</div> <div lang=\"en\">GuaranteedSimulation object holds information about the delivery simulation of the guaranteed campaign.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulation   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("guaranteedSimulationId")
-  private JsonNullable<Long> guaranteedSimulationId = JsonNullable.undefined();
+  private Long guaranteedSimulationId = null;
 
   @JsonProperty("lifetimeBudget")
-  private JsonNullable<Long> lifetimeBudget = JsonNullable.undefined();
+  private Long lifetimeBudget = null;
 
   @JsonProperty("reach")
-  private JsonNullable<Long> reach = JsonNullable.undefined();
+  private Long reach = null;
 
   @JsonProperty("vImps")
-  private JsonNullable<Long> vImps = JsonNullable.undefined();
+  private Long vImps = null;
 
   @JsonProperty("sovRate")
-  private JsonNullable<Long> sovRate = JsonNullable.undefined();
+  private Long sovRate = null;
 
   @JsonProperty("slots")
-  private JsonNullable<Long> slots = JsonNullable.undefined();
+  private Long slots = null;
 
   @JsonProperty("campaignGoal")
-  private JsonNullable<String> campaignGoal = JsonNullable.undefined();
+  private String campaignGoal = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("viewableFrequencyCap")
-  private JsonNullable<GuaranteedSimulationServiceViewableFrequencyCap> viewableFrequencyCap = JsonNullable.undefined();
+  private GuaranteedSimulationServiceViewableFrequencyCap viewableFrequencyCap = null;
 
   @JsonProperty("maxVImps")
-  private JsonNullable<Long> maxVImps = JsonNullable.undefined();
+  private Long maxVImps = null;
 
   @JsonProperty("maxReach")
-  private JsonNullable<Long> maxReach = JsonNullable.undefined();
+  private Long maxReach = null;
 
   @JsonProperty("lowerBudgetLimit")
-  private JsonNullable<Long> lowerBudgetLimit = JsonNullable.undefined();
+  private Long lowerBudgetLimit = null;
 
   @JsonProperty("upperBudgetLimit")
-  private JsonNullable<Long> upperBudgetLimit = JsonNullable.undefined();
+  private Long upperBudgetLimit = null;
 
   @JsonProperty("reservationStatus")
-  private JsonNullable<GuaranteedSimulationServiceReservationStatus> reservationStatus = JsonNullable.undefined();
+  private GuaranteedSimulationServiceReservationStatus reservationStatus = null;
 
   @JsonProperty("unreservableReason")
-  private JsonNullable<GuaranteedSimulationServiceUnreservableReason> unreservableReason = JsonNullable.undefined();
+  private GuaranteedSimulationServiceUnreservableReason unreservableReason = null;
 
   @JsonProperty("adRequirements")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceAdRequirement>> adRequirements = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceAdRequirement> adRequirements = null;
 
   @JsonProperty("targets")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceAdGroupTarget>> targets = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceAdGroupTarget> targets = null;
 
   @JsonProperty("adPlaceType")
-  private JsonNullable<GuaranteedSimulationServiceAdPlaceType> adPlaceType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceAdPlaceType adPlaceType = null;
 
   @JsonProperty("prediction")
-  private JsonNullable<GuaranteedSimulationServicePrediction> prediction = JsonNullable.undefined();
+  private GuaranteedSimulationServicePrediction prediction = null;
 
   @JsonProperty("adCategoryIds")
   @Valid
-  private JsonNullable<List<Long>> adCategoryIds = JsonNullable.undefined();
+  private List<Long> adCategoryIds = null;
 
   @JsonProperty("packageId")
-  private JsonNullable<Long> packageId = JsonNullable.undefined();
+  private Long packageId = null;
 
   @JsonProperty("packageHistoryId")
-  private JsonNullable<Long> packageHistoryId = JsonNullable.undefined();
+  private Long packageHistoryId = null;
 
   @JsonProperty("actionAfterVideoAdTap")
-  private JsonNullable<GuaranteedSimulationServiceActionAfterVideoAdTap> actionAfterVideoAdTap = JsonNullable.undefined();
+  private GuaranteedSimulationServiceActionAfterVideoAdTap actionAfterVideoAdTap = null;
 
   public GuaranteedSimulation accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -115,16 +114,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public GuaranteedSimulation guaranteedSimulationId(Long guaranteedSimulationId) {
-    this.guaranteedSimulationId = JsonNullable.of(guaranteedSimulationId);
+    this.guaranteedSimulationId = guaranteedSimulationId;
     return this;
   }
 
@@ -135,16 +134,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> シミュレーションIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Simulation ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getGuaranteedSimulationId() {
+  public Long getGuaranteedSimulationId() {
     return guaranteedSimulationId;
   }
 
-  public void setGuaranteedSimulationId(JsonNullable<Long> guaranteedSimulationId) {
+  public void setGuaranteedSimulationId(Long guaranteedSimulationId) {
     this.guaranteedSimulationId = guaranteedSimulationId;
   }
 
   public GuaranteedSimulation lifetimeBudget(Long lifetimeBudget) {
-    this.lifetimeBudget = JsonNullable.of(lifetimeBudget);
+    this.lifetimeBudget = lifetimeBudget;
     return this;
   }
 
@@ -155,16 +154,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの通期予算額です。<br> ※この「通期予算」は、キャンペーンの全期間を通じて消費される予算を意味します。<br> ADD時、このフィールドは省略可能となります。<br> ※lifetimeBudget, reach, vImps, slotsは同時に設定することができません。 </div> <div lang=\"en\"> An amount of campaign's lifetime budget.<br> * \"lifetime budget\" means the total budget that is spent throughout the entire duration of the campaign.<br> This field is optional in ADD operation.<br> *lifetimeBudget, reach, vImps and slots cannot be set at the same time. </div> ")
 
 
-  public JsonNullable<Long> getLifetimeBudget() {
+  public Long getLifetimeBudget() {
     return lifetimeBudget;
   }
 
-  public void setLifetimeBudget(JsonNullable<Long> lifetimeBudget) {
+  public void setLifetimeBudget(Long lifetimeBudget) {
     this.lifetimeBudget = lifetimeBudget;
   }
 
   public GuaranteedSimulation reach(Long reach) {
-    this.reach = JsonNullable.of(reach);
+    this.reach = reach;
     return this;
   }
 
@@ -175,16 +174,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リーチ数です。<br> ADD時、このフィールドは省略可能となります。<br> ※lifetimeBudget, reach, vImps, slotsは同時に設定することができません。 </div> <div lang=\"en\"> Number of reaches.<br> This field is optional in ADD operation.<br> *lifetimeBudget, reach, vImps and slots cannot be set at the same time. </div> ")
 
 
-  public JsonNullable<Long> getReach() {
+  public Long getReach() {
     return reach;
   }
 
-  public void setReach(JsonNullable<Long> reach) {
+  public void setReach(Long reach) {
     this.reach = reach;
   }
 
   public GuaranteedSimulation vImps(Long vImps) {
-    this.vImps = JsonNullable.of(vImps);
+    this.vImps = vImps;
     return this;
   }
 
@@ -195,16 +194,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ビューアブルインプレッションです。<br> ADD時、このフィールドは省略可能となります。<br> ※lifetimeBudget, reach, vImps, slotsは同時に設定することができません。 </div> <div lang=\"en\"> Viewable impressions.<br> This field is optional in ADD operation.<br> *lifetimeBudget, reach, vImps and slots cannot be set at the same time. </div> ")
 
 
-  public JsonNullable<Long> getvImps() {
+  public Long getvImps() {
     return vImps;
   }
 
-  public void setvImps(JsonNullable<Long> vImps) {
+  public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
 
   public GuaranteedSimulation sovRate(Long sovRate) {
-    this.sovRate = JsonNullable.of(sovRate);
+    this.sovRate = sovRate;
     return this;
   }
 
@@ -215,16 +214,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SOV（1%〜100%）です。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> SOV (1% to 100%).<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getSovRate() {
+  public Long getSovRate() {
     return sovRate;
   }
 
-  public void setSovRate(JsonNullable<Long> sovRate) {
+  public void setSovRate(Long sovRate) {
     this.sovRate = sovRate;
   }
 
   public GuaranteedSimulation slots(Long slots) {
-    this.slots = JsonNullable.of(slots);
+    this.slots = slots;
     return this;
   }
 
@@ -235,16 +234,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 購入枠数です。<br> ADD時、このフィールドは省略可能となります。<br> ※lifetimeBudget, reach, vImps, slotsは同時に設定することができません。 </div> <div lang=\"en\"> Number of buying slots.<br> This field is optional in ADD operation.<br> *lifetimeBudget, reach, vImps and slots cannot be set at the same time. </div> ")
 
 
-  public JsonNullable<Long> getSlots() {
+  public Long getSlots() {
     return slots;
   }
 
-  public void setSlots(JsonNullable<Long> slots) {
+  public void setSlots(Long slots) {
     this.slots = slots;
   }
 
   public GuaranteedSimulation campaignGoal(String campaignGoal) {
-    this.campaignGoal = JsonNullable.of(campaignGoal);
+    this.campaignGoal = campaignGoal;
     return this;
   }
 
@@ -255,16 +254,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン目的です。<br> ADD時、このフィールドは必須となります。<br> ※指定可能な値は、AccountAuthorityServiceのGET操作で得られるAccountAuthorityのauthoritiesフィールドをご確認ください。<br> </div> <div lang=\"en\"> Campaign goal.<br> In ADD operation, this field will be required.<br> * Available values can be referred to authorities field of AccountAuthority object obtained by GET operation of AccountAuthorityService.<br> </div> ")
 
 
-  public JsonNullable<String> getCampaignGoal() {
+  public String getCampaignGoal() {
     return campaignGoal;
   }
 
-  public void setCampaignGoal(JsonNullable<String> campaignGoal) {
+  public void setCampaignGoal(String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
 
   public GuaranteedSimulation startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -275,16 +274,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 開始日です。<br> ADD時、このフィールドは必須となります。 </div> <div lang=\"en\"> Start date.<br> In ADD operation, this field will be required. </div> Format: yyyyMMdd ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
   public GuaranteedSimulation endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -295,16 +294,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 終了日です。<br> ADD時、このフィールドは必須となります。<br> </div> <div lang=\"en\"> End date.<br> In ADD operation, this field will be required.<br> </div> Format: yyyyMMdd ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public GuaranteedSimulation viewableFrequencyCap(GuaranteedSimulationServiceViewableFrequencyCap viewableFrequencyCap) {
-    this.viewableFrequencyCap = JsonNullable.of(viewableFrequencyCap);
+    this.viewableFrequencyCap = viewableFrequencyCap;
     return this;
   }
 
@@ -316,16 +315,16 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceViewableFrequencyCap> getViewableFrequencyCap() {
+  public GuaranteedSimulationServiceViewableFrequencyCap getViewableFrequencyCap() {
     return viewableFrequencyCap;
   }
 
-  public void setViewableFrequencyCap(JsonNullable<GuaranteedSimulationServiceViewableFrequencyCap> viewableFrequencyCap) {
+  public void setViewableFrequencyCap(GuaranteedSimulationServiceViewableFrequencyCap viewableFrequencyCap) {
     this.viewableFrequencyCap = viewableFrequencyCap;
   }
 
   public GuaranteedSimulation maxVImps(Long maxVImps) {
-    this.maxVImps = JsonNullable.of(maxVImps);
+    this.maxVImps = maxVImps;
     return this;
   }
 
@@ -336,16 +335,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最大ビューアブルインプレッション数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of ad viewable impressions to same user.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxVImps() {
+  public Long getMaxVImps() {
     return maxVImps;
   }
 
-  public void setMaxVImps(JsonNullable<Long> maxVImps) {
+  public void setMaxVImps(Long maxVImps) {
     this.maxVImps = maxVImps;
   }
 
   public GuaranteedSimulation maxReach(Long maxReach) {
-    this.maxReach = JsonNullable.of(maxReach);
+    this.maxReach = maxReach;
     return this;
   }
 
@@ -356,16 +355,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最大リーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of reaches.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getMaxReach() {
+  public Long getMaxReach() {
     return maxReach;
   }
 
-  public void setMaxReach(JsonNullable<Long> maxReach) {
+  public void setMaxReach(Long maxReach) {
     this.maxReach = maxReach;
   }
 
   public GuaranteedSimulation lowerBudgetLimit(Long lowerBudgetLimit) {
-    this.lowerBudgetLimit = JsonNullable.of(lowerBudgetLimit);
+    this.lowerBudgetLimit = lowerBudgetLimit;
     return this;
   }
 
@@ -376,16 +375,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 予約可能な下限通期予算です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Minimum reservable lifetime budget.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getLowerBudgetLimit() {
+  public Long getLowerBudgetLimit() {
     return lowerBudgetLimit;
   }
 
-  public void setLowerBudgetLimit(JsonNullable<Long> lowerBudgetLimit) {
+  public void setLowerBudgetLimit(Long lowerBudgetLimit) {
     this.lowerBudgetLimit = lowerBudgetLimit;
   }
 
   public GuaranteedSimulation upperBudgetLimit(Long upperBudgetLimit) {
-    this.upperBudgetLimit = JsonNullable.of(upperBudgetLimit);
+    this.upperBudgetLimit = upperBudgetLimit;
     return this;
   }
 
@@ -396,16 +395,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 予約可能な上限通期予算です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum reservable lifetime budget.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getUpperBudgetLimit() {
+  public Long getUpperBudgetLimit() {
     return upperBudgetLimit;
   }
 
-  public void setUpperBudgetLimit(JsonNullable<Long> upperBudgetLimit) {
+  public void setUpperBudgetLimit(Long upperBudgetLimit) {
     this.upperBudgetLimit = upperBudgetLimit;
   }
 
   public GuaranteedSimulation reservationStatus(GuaranteedSimulationServiceReservationStatus reservationStatus) {
-    this.reservationStatus = JsonNullable.of(reservationStatus);
+    this.reservationStatus = reservationStatus;
     return this;
   }
 
@@ -417,16 +416,16 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceReservationStatus> getReservationStatus() {
+  public GuaranteedSimulationServiceReservationStatus getReservationStatus() {
     return reservationStatus;
   }
 
-  public void setReservationStatus(JsonNullable<GuaranteedSimulationServiceReservationStatus> reservationStatus) {
+  public void setReservationStatus(GuaranteedSimulationServiceReservationStatus reservationStatus) {
     this.reservationStatus = reservationStatus;
   }
 
   public GuaranteedSimulation unreservableReason(GuaranteedSimulationServiceUnreservableReason unreservableReason) {
-    this.unreservableReason = JsonNullable.of(unreservableReason);
+    this.unreservableReason = unreservableReason;
     return this;
   }
 
@@ -438,24 +437,24 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceUnreservableReason> getUnreservableReason() {
+  public GuaranteedSimulationServiceUnreservableReason getUnreservableReason() {
     return unreservableReason;
   }
 
-  public void setUnreservableReason(JsonNullable<GuaranteedSimulationServiceUnreservableReason> unreservableReason) {
+  public void setUnreservableReason(GuaranteedSimulationServiceUnreservableReason unreservableReason) {
     this.unreservableReason = unreservableReason;
   }
 
   public GuaranteedSimulation adRequirements(List<GuaranteedSimulationServiceAdRequirement> adRequirements) {
-    this.adRequirements = JsonNullable.of(adRequirements);
+    this.adRequirements = adRequirements;
     return this;
   }
 
   public GuaranteedSimulation addAdRequirementsItem(GuaranteedSimulationServiceAdRequirement adRequirementsItem) {
-    if (this.adRequirements == null || !this.adRequirements.isPresent()) {
-      this.adRequirements = JsonNullable.of(new ArrayList<>());
+    if (this.adRequirements == null) {
+      this.adRequirements = new ArrayList<>();
     }
-    this.adRequirements.get().add(adRequirementsItem);
+    this.adRequirements.add(adRequirementsItem);
     return this;
   }
 
@@ -467,24 +466,24 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceAdRequirement>> getAdRequirements() {
+  public List<GuaranteedSimulationServiceAdRequirement> getAdRequirements() {
     return adRequirements;
   }
 
-  public void setAdRequirements(JsonNullable<List<GuaranteedSimulationServiceAdRequirement>> adRequirements) {
+  public void setAdRequirements(List<GuaranteedSimulationServiceAdRequirement> adRequirements) {
     this.adRequirements = adRequirements;
   }
 
   public GuaranteedSimulation targets(List<GuaranteedSimulationServiceAdGroupTarget> targets) {
-    this.targets = JsonNullable.of(targets);
+    this.targets = targets;
     return this;
   }
 
   public GuaranteedSimulation addTargetsItem(GuaranteedSimulationServiceAdGroupTarget targetsItem) {
-    if (this.targets == null || !this.targets.isPresent()) {
-      this.targets = JsonNullable.of(new ArrayList<>());
+    if (this.targets == null) {
+      this.targets = new ArrayList<>();
     }
-    this.targets.get().add(targetsItem);
+    this.targets.add(targetsItem);
     return this;
   }
 
@@ -496,16 +495,16 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceAdGroupTarget>> getTargets() {
+  public List<GuaranteedSimulationServiceAdGroupTarget> getTargets() {
     return targets;
   }
 
-  public void setTargets(JsonNullable<List<GuaranteedSimulationServiceAdGroupTarget>> targets) {
+  public void setTargets(List<GuaranteedSimulationServiceAdGroupTarget> targets) {
     this.targets = targets;
   }
 
   public GuaranteedSimulation adPlaceType(GuaranteedSimulationServiceAdPlaceType adPlaceType) {
-    this.adPlaceType = JsonNullable.of(adPlaceType);
+    this.adPlaceType = adPlaceType;
     return this;
   }
 
@@ -517,16 +516,16 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceAdPlaceType> getAdPlaceType() {
+  public GuaranteedSimulationServiceAdPlaceType getAdPlaceType() {
     return adPlaceType;
   }
 
-  public void setAdPlaceType(JsonNullable<GuaranteedSimulationServiceAdPlaceType> adPlaceType) {
+  public void setAdPlaceType(GuaranteedSimulationServiceAdPlaceType adPlaceType) {
     this.adPlaceType = adPlaceType;
   }
 
   public GuaranteedSimulation prediction(GuaranteedSimulationServicePrediction prediction) {
-    this.prediction = JsonNullable.of(prediction);
+    this.prediction = prediction;
     return this;
   }
 
@@ -538,24 +537,24 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePrediction> getPrediction() {
+  public GuaranteedSimulationServicePrediction getPrediction() {
     return prediction;
   }
 
-  public void setPrediction(JsonNullable<GuaranteedSimulationServicePrediction> prediction) {
+  public void setPrediction(GuaranteedSimulationServicePrediction prediction) {
     this.prediction = prediction;
   }
 
   public GuaranteedSimulation adCategoryIds(List<Long> adCategoryIds) {
-    this.adCategoryIds = JsonNullable.of(adCategoryIds);
+    this.adCategoryIds = adCategoryIds;
     return this;
   }
 
   public GuaranteedSimulation addAdCategoryIdsItem(Long adCategoryIdsItem) {
-    if (this.adCategoryIds == null || !this.adCategoryIds.isPresent()) {
-      this.adCategoryIds = JsonNullable.of(new ArrayList<>());
+    if (this.adCategoryIds == null) {
+      this.adCategoryIds = new ArrayList<>();
     }
-    this.adCategoryIds.get().add(adCategoryIdsItem);
+    this.adCategoryIds.add(adCategoryIdsItem);
     return this;
   }
 
@@ -566,16 +565,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告カテゴリーIDです。<br> 広告カテゴリーは、配信する広告内容に該当するものを正確に指定して下さい。内容に応じて広告掲載量が変わるため、正確なシミュレーション結果の算出に必要です。<br> 詳細は<a href=\"https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan=ja&aid=50308\" target=\"_blank\">ヘルプ</a>を参照してください。<br> なお、ここで指定した広告カテゴリーと異なる広告が入稿された場合は、入稿した広告内容の修正が必要な旨をメールでご連絡します。<br> ※指定した広告カテゴリーと広告タイプの組み合わせによっては、予約のキャンセルが必要な場合があります。その場合はキャンセル料が発生します。<br> 指定可能な値は、GuaranteedSimulationService/getAdCategoryで取得されるGuaranteedSimulationServiceAdCategoryオブジェクトのadCategoryIdフィールドをご参照ください。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Ad category ID.<br> To get an accurate simulated result, specify the restricted contents correctly. The ad volume depends on the contents.<br> <a href=\"https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan=en&aid=28259\" target=\"_blank\">Learn more</a><br> If you add ads that have a content different from the one you specified, you will receive an email to fix them.<br> You may need to cancel your ad depending on the combination of content and ad type you specified. Pay a cancellation fee in that case.<br> Available values can be referred to adCategoryId field of GuaranteedSimulationServiceAdCategory object obtained by getAdCategory operation of GuaranteedSimulationService.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<List<Long>> getAdCategoryIds() {
+  public List<Long> getAdCategoryIds() {
     return adCategoryIds;
   }
 
-  public void setAdCategoryIds(JsonNullable<List<Long>> adCategoryIds) {
+  public void setAdCategoryIds(List<Long> adCategoryIds) {
     this.adCategoryIds = adCategoryIds;
   }
 
   public GuaranteedSimulation packageId(Long packageId) {
-    this.packageId = JsonNullable.of(packageId);
+    this.packageId = packageId;
     return this;
   }
 
@@ -586,16 +585,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品IDです。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Package ID.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getPackageId() {
+  public Long getPackageId() {
     return packageId;
   }
 
-  public void setPackageId(JsonNullable<Long> packageId) {
+  public void setPackageId(Long packageId) {
     this.packageId = packageId;
   }
 
   public GuaranteedSimulation packageHistoryId(Long packageHistoryId) {
-    this.packageHistoryId = JsonNullable.of(packageHistoryId);
+    this.packageHistoryId = packageHistoryId;
     return this;
   }
 
@@ -606,16 +605,16 @@ public class GuaranteedSimulation   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 商品履歴IDです。<br> ADD時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Package history ID.<br> This field is optional in ADD operation. </div> ")
 
 
-  public JsonNullable<Long> getPackageHistoryId() {
+  public Long getPackageHistoryId() {
     return packageHistoryId;
   }
 
-  public void setPackageHistoryId(JsonNullable<Long> packageHistoryId) {
+  public void setPackageHistoryId(Long packageHistoryId) {
     this.packageHistoryId = packageHistoryId;
   }
 
   public GuaranteedSimulation actionAfterVideoAdTap(GuaranteedSimulationServiceActionAfterVideoAdTap actionAfterVideoAdTap) {
-    this.actionAfterVideoAdTap = JsonNullable.of(actionAfterVideoAdTap);
+    this.actionAfterVideoAdTap = actionAfterVideoAdTap;
     return this;
   }
 
@@ -627,17 +626,17 @@ public class GuaranteedSimulation   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceActionAfterVideoAdTap> getActionAfterVideoAdTap() {
+  public GuaranteedSimulationServiceActionAfterVideoAdTap getActionAfterVideoAdTap() {
     return actionAfterVideoAdTap;
   }
 
-  public void setActionAfterVideoAdTap(JsonNullable<GuaranteedSimulationServiceActionAfterVideoAdTap> actionAfterVideoAdTap) {
+  public void setActionAfterVideoAdTap(GuaranteedSimulationServiceActionAfterVideoAdTap actionAfterVideoAdTap) {
     this.actionAfterVideoAdTap = actionAfterVideoAdTap;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -715,7 +714,7 @@ public class GuaranteedSimulation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

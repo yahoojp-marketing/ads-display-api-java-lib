@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceGeographicLocation;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,28 +16,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationValueオブジェクトは、地域情報のリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationValue object displays the list of geographic location.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationValueオブジェクトは、地域情報のリストを表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocationValue object displays the list of geographic location.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceGeographicLocationValue   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("geographicLocation")
-  private JsonNullable<DictionaryServiceGeographicLocation> geographicLocation = JsonNullable.undefined();
+  private DictionaryServiceGeographicLocation geographicLocation = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   public DictionaryServiceGeographicLocationValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public DictionaryServiceGeographicLocationValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -50,16 +49,16 @@ public class DictionaryServiceGeographicLocationValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public DictionaryServiceGeographicLocationValue geographicLocation(DictionaryServiceGeographicLocation geographicLocation) {
-    this.geographicLocation = JsonNullable.of(geographicLocation);
+    this.geographicLocation = geographicLocation;
     return this;
   }
 
@@ -71,16 +70,16 @@ public class DictionaryServiceGeographicLocationValue   {
 
   @Valid
 
-  public JsonNullable<DictionaryServiceGeographicLocation> getGeographicLocation() {
+  public DictionaryServiceGeographicLocation getGeographicLocation() {
     return geographicLocation;
   }
 
-  public void setGeographicLocation(JsonNullable<DictionaryServiceGeographicLocation> geographicLocation) {
+  public void setGeographicLocation(DictionaryServiceGeographicLocation geographicLocation) {
     this.geographicLocation = geographicLocation;
   }
 
   public DictionaryServiceGeographicLocationValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class DictionaryServiceGeographicLocationValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class DictionaryServiceGeographicLocationValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

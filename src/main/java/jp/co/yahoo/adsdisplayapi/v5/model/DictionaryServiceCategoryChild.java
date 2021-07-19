@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,28 +12,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceCategoryChildオブジェクトは、1-5階層までのカテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceCategoryChild object is a container of category information in level 1-5.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceCategoryChildオブジェクトは、1-5階層までのカテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceCategoryChild object is a container of category information in level 1-5.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceCategoryChild   {
   @JsonProperty("code")
-  private JsonNullable<String> code = JsonNullable.undefined();
+  private String code = null;
 
   @JsonProperty("fullName")
-  private JsonNullable<String> fullName = JsonNullable.undefined();
+  private String fullName = null;
 
   @JsonProperty("name")
-  private JsonNullable<String> name = JsonNullable.undefined();
+  private String name = null;
 
   @JsonProperty("reachDesktop")
-  private JsonNullable<Long> reachDesktop = JsonNullable.undefined();
+  private Long reachDesktop = null;
 
   @JsonProperty("reachSmartphone")
-  private JsonNullable<Long> reachSmartphone = JsonNullable.undefined();
+  private Long reachSmartphone = null;
 
   @JsonProperty("reachTablet")
-  private JsonNullable<Long> reachTablet = JsonNullable.undefined();
+  private Long reachTablet = null;
 
   public DictionaryServiceCategoryChild code(String code) {
-    this.code = JsonNullable.of(code);
+    this.code = code;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class DictionaryServiceCategoryChild   {
   @ApiModelProperty(value = "<div lang=\"ja\">カテゴリコードです。</div> <div lang=\"en\">Category code.</div> ")
 
 
-  public JsonNullable<String> getCode() {
+  public String getCode() {
     return code;
   }
 
-  public void setCode(JsonNullable<String> code) {
+  public void setCode(String code) {
     this.code = code;
   }
 
   public DictionaryServiceCategoryChild fullName(String fullName) {
-    this.fullName = JsonNullable.of(fullName);
+    this.fullName = fullName;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class DictionaryServiceCategoryChild   {
   @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名称です。（カテゴリ名称、サブカテゴリ名称を含めた正式名称です。）</div> <div lang=\"en\">Category name in high level.</div> ")
 
 
-  public JsonNullable<String> getFullName() {
+  public String getFullName() {
     return fullName;
   }
 
-  public void setFullName(JsonNullable<String> fullName) {
+  public void setFullName(String fullName) {
     this.fullName = fullName;
   }
 
   public DictionaryServiceCategoryChild name(String name) {
-    this.name = JsonNullable.of(name);
+    this.name = name;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class DictionaryServiceCategoryChild   {
   @ApiModelProperty(value = "<div lang=\"ja\">サブカテゴリ名称です。</div> <div lang=\"en\">Category name.</div> ")
 
 
-  public JsonNullable<String> getName() {
+  public String getName() {
     return name;
   }
 
-  public void setName(JsonNullable<String> name) {
+  public void setName(String name) {
     this.name = name;
   }
 
   public DictionaryServiceCategoryChild reachDesktop(Long reachDesktop) {
-    this.reachDesktop = JsonNullable.of(reachDesktop);
+    this.reachDesktop = reachDesktop;
     return this;
   }
 
@@ -105,16 +104,16 @@ public class DictionaryServiceCategoryChild   {
   @ApiModelProperty(value = "<div lang=\"ja\">PCのリーチ実績数です。</div> <div lang=\"en\">Reach record number of PC</div> ")
 
 
-  public JsonNullable<Long> getReachDesktop() {
+  public Long getReachDesktop() {
     return reachDesktop;
   }
 
-  public void setReachDesktop(JsonNullable<Long> reachDesktop) {
+  public void setReachDesktop(Long reachDesktop) {
     this.reachDesktop = reachDesktop;
   }
 
   public DictionaryServiceCategoryChild reachSmartphone(Long reachSmartphone) {
-    this.reachSmartphone = JsonNullable.of(reachSmartphone);
+    this.reachSmartphone = reachSmartphone;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class DictionaryServiceCategoryChild   {
   @ApiModelProperty(value = "<div lang=\"ja\">スマホのリーチ実績数です。</div> <div lang=\"en\">Reach record number of smartphone</div> ")
 
 
-  public JsonNullable<Long> getReachSmartphone() {
+  public Long getReachSmartphone() {
     return reachSmartphone;
   }
 
-  public void setReachSmartphone(JsonNullable<Long> reachSmartphone) {
+  public void setReachSmartphone(Long reachSmartphone) {
     this.reachSmartphone = reachSmartphone;
   }
 
   public DictionaryServiceCategoryChild reachTablet(Long reachTablet) {
-    this.reachTablet = JsonNullable.of(reachTablet);
+    this.reachTablet = reachTablet;
     return this;
   }
 
@@ -145,17 +144,17 @@ public class DictionaryServiceCategoryChild   {
   @ApiModelProperty(value = "<div lang=\"ja\">タブレットのリーチ実績数です。</div> <div lang=\"en\">Reach record number of tablet</div> ")
 
 
-  public JsonNullable<Long> getReachTablet() {
+  public Long getReachTablet() {
     return reachTablet;
   }
 
-  public void setReachTablet(JsonNullable<Long> reachTablet) {
+  public void setReachTablet(Long reachTablet) {
     this.reachTablet = reachTablet;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -195,7 +194,7 @@ public class DictionaryServiceCategoryChild   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

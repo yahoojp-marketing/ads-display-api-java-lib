@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,14 +14,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignMigrationServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignMigrationServiceSelector object contains search condition of get method (execution parameters).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignMigrationServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">CampaignMigrationServiceSelector object contains search condition of get method (execution parameters).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignMigrationServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("migrationJobIds")
   @Valid
-  private JsonNullable<List<Long>> migrationJobIds = JsonNullable.undefined();
+  private List<Long> migrationJobIds = null;
 
   public CampaignMigrationServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -46,15 +45,15 @@ public class CampaignMigrationServiceSelector   {
   }
 
   public CampaignMigrationServiceSelector migrationJobIds(List<Long> migrationJobIds) {
-    this.migrationJobIds = JsonNullable.of(migrationJobIds);
+    this.migrationJobIds = migrationJobIds;
     return this;
   }
 
   public CampaignMigrationServiceSelector addMigrationJobIdsItem(Long migrationJobIdsItem) {
-    if (this.migrationJobIds == null || !this.migrationJobIds.isPresent()) {
-      this.migrationJobIds = JsonNullable.of(new ArrayList<>());
+    if (this.migrationJobIds == null) {
+      this.migrationJobIds = new ArrayList<>();
     }
-    this.migrationJobIds.get().add(migrationJobIdsItem);
+    this.migrationJobIds.add(migrationJobIdsItem);
     return this;
   }
 
@@ -65,17 +64,17 @@ public class CampaignMigrationServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">マイグレーションジョブID</div> <div lang=\"en\">Migration job ID</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getMigrationJobIds() {
+  public List<Long> getMigrationJobIds() {
     return migrationJobIds;
   }
 
-  public void setMigrationJobIds(JsonNullable<List<Long>> migrationJobIds) {
+  public void setMigrationJobIds(List<Long> migrationJobIds) {
     this.migrationJobIds = migrationJobIds;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +106,7 @@ public class CampaignMigrationServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

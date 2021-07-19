@@ -17,7 +17,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceStatsPeriod;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceTargetStatsValue;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceVideoStatsValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -25,47 +24,47 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceValueオブジェクトは、統計情報1件あたりの実行結果（1 Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceValue object is container for the execution result (1 entity) per single stats information by method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceValueオブジェクトは、統計情報1件あたりの実行結果（1 Entity）を保持します。</div> <div lang=\"en\">StatsServiceValue object is container for the execution result (1 entity) per single stats information by method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceValue   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("adGroupStatsValue")
-  private JsonNullable<StatsServiceAdGroupStatsValue> adGroupStatsValue = JsonNullable.undefined();
+  private StatsServiceAdGroupStatsValue adGroupStatsValue = null;
 
   @JsonProperty("adStatsValue")
-  private JsonNullable<StatsServiceAdStatsValue> adStatsValue = JsonNullable.undefined();
+  private StatsServiceAdStatsValue adStatsValue = null;
 
   @JsonProperty("campaignStatsValue")
-  private JsonNullable<StatsServiceCampaignStatsValue> campaignStatsValue = JsonNullable.undefined();
+  private StatsServiceCampaignStatsValue campaignStatsValue = null;
 
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("imageStatsValue")
-  private JsonNullable<StatsServiceImageStatsValue> imageStatsValue = JsonNullable.undefined();
+  private StatsServiceImageStatsValue imageStatsValue = null;
 
   @JsonProperty("operationSucceeded")
-  private JsonNullable<Boolean> operationSucceeded = JsonNullable.undefined();
+  private Boolean operationSucceeded = null;
 
   @JsonProperty("periodCustomDate")
-  private JsonNullable<StatsServicePeriodCustomDate> periodCustomDate = JsonNullable.undefined();
+  private StatsServicePeriodCustomDate periodCustomDate = null;
 
   @JsonProperty("statsPeriod")
-  private JsonNullable<StatsServiceStatsPeriod> statsPeriod = JsonNullable.undefined();
+  private StatsServiceStatsPeriod statsPeriod = null;
 
   @JsonProperty("targetStatsValue")
-  private JsonNullable<StatsServiceTargetStatsValue> targetStatsValue = JsonNullable.undefined();
+  private StatsServiceTargetStatsValue targetStatsValue = null;
 
   @JsonProperty("type")
-  private JsonNullable<StatsServiceType> type = JsonNullable.undefined();
+  private StatsServiceType type = null;
 
   @JsonProperty("videoStatsValue")
-  private JsonNullable<StatsServiceVideoStatsValue> videoStatsValue = JsonNullable.undefined();
+  private StatsServiceVideoStatsValue videoStatsValue = null;
 
   public StatsServiceValue accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -76,16 +75,16 @@ public class StatsServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public StatsServiceValue adGroupStatsValue(StatsServiceAdGroupStatsValue adGroupStatsValue) {
-    this.adGroupStatsValue = JsonNullable.of(adGroupStatsValue);
+    this.adGroupStatsValue = adGroupStatsValue;
     return this;
   }
 
@@ -97,16 +96,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceAdGroupStatsValue> getAdGroupStatsValue() {
+  public StatsServiceAdGroupStatsValue getAdGroupStatsValue() {
     return adGroupStatsValue;
   }
 
-  public void setAdGroupStatsValue(JsonNullable<StatsServiceAdGroupStatsValue> adGroupStatsValue) {
+  public void setAdGroupStatsValue(StatsServiceAdGroupStatsValue adGroupStatsValue) {
     this.adGroupStatsValue = adGroupStatsValue;
   }
 
   public StatsServiceValue adStatsValue(StatsServiceAdStatsValue adStatsValue) {
-    this.adStatsValue = JsonNullable.of(adStatsValue);
+    this.adStatsValue = adStatsValue;
     return this;
   }
 
@@ -118,16 +117,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceAdStatsValue> getAdStatsValue() {
+  public StatsServiceAdStatsValue getAdStatsValue() {
     return adStatsValue;
   }
 
-  public void setAdStatsValue(JsonNullable<StatsServiceAdStatsValue> adStatsValue) {
+  public void setAdStatsValue(StatsServiceAdStatsValue adStatsValue) {
     this.adStatsValue = adStatsValue;
   }
 
   public StatsServiceValue campaignStatsValue(StatsServiceCampaignStatsValue campaignStatsValue) {
-    this.campaignStatsValue = JsonNullable.of(campaignStatsValue);
+    this.campaignStatsValue = campaignStatsValue;
     return this;
   }
 
@@ -139,24 +138,24 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceCampaignStatsValue> getCampaignStatsValue() {
+  public StatsServiceCampaignStatsValue getCampaignStatsValue() {
     return campaignStatsValue;
   }
 
-  public void setCampaignStatsValue(JsonNullable<StatsServiceCampaignStatsValue> campaignStatsValue) {
+  public void setCampaignStatsValue(StatsServiceCampaignStatsValue campaignStatsValue) {
     this.campaignStatsValue = campaignStatsValue;
   }
 
   public StatsServiceValue errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public StatsServiceValue addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -168,16 +167,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
   public StatsServiceValue imageStatsValue(StatsServiceImageStatsValue imageStatsValue) {
-    this.imageStatsValue = JsonNullable.of(imageStatsValue);
+    this.imageStatsValue = imageStatsValue;
     return this;
   }
 
@@ -189,16 +188,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceImageStatsValue> getImageStatsValue() {
+  public StatsServiceImageStatsValue getImageStatsValue() {
     return imageStatsValue;
   }
 
-  public void setImageStatsValue(JsonNullable<StatsServiceImageStatsValue> imageStatsValue) {
+  public void setImageStatsValue(StatsServiceImageStatsValue imageStatsValue) {
     this.imageStatsValue = imageStatsValue;
   }
 
   public StatsServiceValue operationSucceeded(Boolean operationSucceeded) {
-    this.operationSucceeded = JsonNullable.of(operationSucceeded);
+    this.operationSucceeded = operationSucceeded;
     return this;
   }
 
@@ -209,16 +208,16 @@ public class StatsServiceValue   {
   @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
 
 
-  public JsonNullable<Boolean> getOperationSucceeded() {
+  public Boolean getOperationSucceeded() {
     return operationSucceeded;
   }
 
-  public void setOperationSucceeded(JsonNullable<Boolean> operationSucceeded) {
+  public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
   public StatsServiceValue periodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
-    this.periodCustomDate = JsonNullable.of(periodCustomDate);
+    this.periodCustomDate = periodCustomDate;
     return this;
   }
 
@@ -230,16 +229,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServicePeriodCustomDate> getPeriodCustomDate() {
+  public StatsServicePeriodCustomDate getPeriodCustomDate() {
     return periodCustomDate;
   }
 
-  public void setPeriodCustomDate(JsonNullable<StatsServicePeriodCustomDate> periodCustomDate) {
+  public void setPeriodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
     this.periodCustomDate = periodCustomDate;
   }
 
   public StatsServiceValue statsPeriod(StatsServiceStatsPeriod statsPeriod) {
-    this.statsPeriod = JsonNullable.of(statsPeriod);
+    this.statsPeriod = statsPeriod;
     return this;
   }
 
@@ -251,16 +250,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceStatsPeriod> getStatsPeriod() {
+  public StatsServiceStatsPeriod getStatsPeriod() {
     return statsPeriod;
   }
 
-  public void setStatsPeriod(JsonNullable<StatsServiceStatsPeriod> statsPeriod) {
+  public void setStatsPeriod(StatsServiceStatsPeriod statsPeriod) {
     this.statsPeriod = statsPeriod;
   }
 
   public StatsServiceValue targetStatsValue(StatsServiceTargetStatsValue targetStatsValue) {
-    this.targetStatsValue = JsonNullable.of(targetStatsValue);
+    this.targetStatsValue = targetStatsValue;
     return this;
   }
 
@@ -272,16 +271,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceTargetStatsValue> getTargetStatsValue() {
+  public StatsServiceTargetStatsValue getTargetStatsValue() {
     return targetStatsValue;
   }
 
-  public void setTargetStatsValue(JsonNullable<StatsServiceTargetStatsValue> targetStatsValue) {
+  public void setTargetStatsValue(StatsServiceTargetStatsValue targetStatsValue) {
     this.targetStatsValue = targetStatsValue;
   }
 
   public StatsServiceValue type(StatsServiceType type) {
-    this.type = JsonNullable.of(type);
+    this.type = type;
     return this;
   }
 
@@ -293,16 +292,16 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceType> getType() {
+  public StatsServiceType getType() {
     return type;
   }
 
-  public void setType(JsonNullable<StatsServiceType> type) {
+  public void setType(StatsServiceType type) {
     this.type = type;
   }
 
   public StatsServiceValue videoStatsValue(StatsServiceVideoStatsValue videoStatsValue) {
-    this.videoStatsValue = JsonNullable.of(videoStatsValue);
+    this.videoStatsValue = videoStatsValue;
     return this;
   }
 
@@ -314,17 +313,17 @@ public class StatsServiceValue   {
 
   @Valid
 
-  public JsonNullable<StatsServiceVideoStatsValue> getVideoStatsValue() {
+  public StatsServiceVideoStatsValue getVideoStatsValue() {
     return videoStatsValue;
   }
 
-  public void setVideoStatsValue(JsonNullable<StatsServiceVideoStatsValue> videoStatsValue) {
+  public void setVideoStatsValue(StatsServiceVideoStatsValue videoStatsValue) {
     this.videoStatsValue = videoStatsValue;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -376,7 +375,7 @@ public class StatsServiceValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

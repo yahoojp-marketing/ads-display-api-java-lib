@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceJobStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,24 +15,24 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingListServiceUploadUserListStatusSelectorオブジェクトは、ユーザーリストのアップロード情報の検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The RetargetingListServiceUploadUserListStatusSelector object is a container for storing a set of criteria (parameters) for upload jobs of user list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceUploadUserListStatusSelectorオブジェクトは、ユーザーリストのアップロード情報の検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The RetargetingListServiceUploadUserListStatusSelector object is a container for storing a set of criteria (parameters) for upload jobs of user list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceUploadUserListStatusSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("targetListId")
-  private JsonNullable<Long> targetListId = JsonNullable.undefined();
+  private Long targetListId = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("uploadJobIds")
   @Valid
-  private JsonNullable<List<String>> uploadJobIds = JsonNullable.undefined();
+  private List<String> uploadJobIds = null;
 
   @JsonProperty("jobStatues")
   @Valid
-  private JsonNullable<List<RetargetingListServiceJobStatus>> jobStatues = JsonNullable.undefined();
+  private List<RetargetingListServiceJobStatus> jobStatues = null;
 
   public RetargetingListServiceUploadUserListStatusSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -57,7 +56,7 @@ public class RetargetingListServiceUploadUserListStatusSelector   {
   }
 
   public RetargetingListServiceUploadUserListStatusSelector targetListId(Long targetListId) {
-    this.targetListId = JsonNullable.of(targetListId);
+    this.targetListId = targetListId;
     return this;
   }
 
@@ -69,16 +68,16 @@ public class RetargetingListServiceUploadUserListStatusSelector   {
   @NotNull
 
 
-  public JsonNullable<Long> getTargetListId() {
+  public Long getTargetListId() {
     return targetListId;
   }
 
-  public void setTargetListId(JsonNullable<Long> targetListId) {
+  public void setTargetListId(Long targetListId) {
     this.targetListId = targetListId;
   }
 
   public RetargetingListServiceUploadUserListStatusSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -91,24 +90,24 @@ public class RetargetingListServiceUploadUserListStatusSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1) @Max(100) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public RetargetingListServiceUploadUserListStatusSelector uploadJobIds(List<String> uploadJobIds) {
-    this.uploadJobIds = JsonNullable.of(uploadJobIds);
+    this.uploadJobIds = uploadJobIds;
     return this;
   }
 
   public RetargetingListServiceUploadUserListStatusSelector addUploadJobIdsItem(String uploadJobIdsItem) {
-    if (this.uploadJobIds == null || !this.uploadJobIds.isPresent()) {
-      this.uploadJobIds = JsonNullable.of(new ArrayList<>());
+    if (this.uploadJobIds == null) {
+      this.uploadJobIds = new ArrayList<>();
     }
-    this.uploadJobIds.get().add(uploadJobIdsItem);
+    this.uploadJobIds.add(uploadJobIdsItem);
     return this;
   }
 
@@ -119,24 +118,24 @@ public class RetargetingListServiceUploadUserListStatusSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロードジョブIDです。</div> <div lang=\"en\">Upload job ID.</div> ")
 
 @Size(max=100) 
-  public JsonNullable<List<String>> getUploadJobIds() {
+  public List<String> getUploadJobIds() {
     return uploadJobIds;
   }
 
-  public void setUploadJobIds(JsonNullable<List<String>> uploadJobIds) {
+  public void setUploadJobIds(List<String> uploadJobIds) {
     this.uploadJobIds = uploadJobIds;
   }
 
   public RetargetingListServiceUploadUserListStatusSelector jobStatues(List<RetargetingListServiceJobStatus> jobStatues) {
-    this.jobStatues = JsonNullable.of(jobStatues);
+    this.jobStatues = jobStatues;
     return this;
   }
 
   public RetargetingListServiceUploadUserListStatusSelector addJobStatuesItem(RetargetingListServiceJobStatus jobStatuesItem) {
-    if (this.jobStatues == null || !this.jobStatues.isPresent()) {
-      this.jobStatues = JsonNullable.of(new ArrayList<>());
+    if (this.jobStatues == null) {
+      this.jobStatues = new ArrayList<>();
     }
-    this.jobStatues.get().add(jobStatuesItem);
+    this.jobStatues.add(jobStatuesItem);
     return this;
   }
 
@@ -148,17 +147,17 @@ public class RetargetingListServiceUploadUserListStatusSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<RetargetingListServiceJobStatus>> getJobStatues() {
+  public List<RetargetingListServiceJobStatus> getJobStatues() {
     return jobStatues;
   }
 
-  public void setJobStatues(JsonNullable<List<RetargetingListServiceJobStatus>> jobStatues) {
+  public void setJobStatues(List<RetargetingListServiceJobStatus> jobStatues) {
     this.jobStatues = jobStatues;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -196,7 +195,7 @@ public class RetargetingListServiceUploadUserListStatusSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FileUploadDataRangeオブジェクトは、アップロードした日付を範囲指定する情報を保持する&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FileUploadDataRange object retains specific term of file upload date information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FileUploadDataRangeオブジェクトは、アップロードした日付を範囲指定する情報を保持する</div> <div lang=\"en\">FileUploadDataRange object retains specific term of file upload date information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedDataServiceFileUploadDateRange   {
   @JsonProperty("endDate")
-  private JsonNullable<String> endDate = JsonNullable.undefined();
+  private String endDate = null;
 
   @JsonProperty("startDate")
-  private JsonNullable<String> startDate = JsonNullable.undefined();
+  private String startDate = null;
 
   public FeedDataServiceFileUploadDateRange endDate(String endDate) {
-    this.endDate = JsonNullable.of(endDate);
+    this.endDate = endDate;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class FeedDataServiceFileUploadDateRange   {
   @ApiModelProperty(value = "<div lang=\"ja\">終了日 yyyyMMdd形式</div> <div lang=\"en\">End Date.<br>Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getEndDate() {
+  public String getEndDate() {
     return endDate;
   }
 
-  public void setEndDate(JsonNullable<String> endDate) {
+  public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
 
   public FeedDataServiceFileUploadDateRange startDate(String startDate) {
-    this.startDate = JsonNullable.of(startDate);
+    this.startDate = startDate;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class FeedDataServiceFileUploadDateRange   {
   @ApiModelProperty(value = "<div lang=\"ja\">開始日 yyyyMMdd形式</div> <div lang=\"en\">Start date.<br>Format: yyyyMMdd</div> ")
 
 
-  public JsonNullable<String> getStartDate() {
+  public String getStartDate() {
     return startDate;
   }
 
-  public void setStartDate(JsonNullable<String> startDate) {
+  public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class FeedDataServiceFileUploadDateRange   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServiceInvoice;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountManagementServicePaymentType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AccountManagementServicePaymentオブジェクトは、支払情報を保持します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AccountManagementServicePayment object contains the payment information.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AccountManagementServicePaymentオブジェクトは、支払情報を保持します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> AccountManagementServicePayment object contains the payment information.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountManagementServicePayment   {
   @JsonProperty("invoice")
-  private JsonNullable<AccountManagementServiceInvoice> invoice = JsonNullable.undefined();
+  private AccountManagementServiceInvoice invoice = null;
 
   @JsonProperty("paymentType")
-  private JsonNullable<AccountManagementServicePaymentType> paymentType = JsonNullable.undefined();
+  private AccountManagementServicePaymentType paymentType = null;
 
   public AccountManagementServicePayment invoice(AccountManagementServiceInvoice invoice) {
-    this.invoice = JsonNullable.of(invoice);
+    this.invoice = invoice;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class AccountManagementServicePayment   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServiceInvoice> getInvoice() {
+  public AccountManagementServiceInvoice getInvoice() {
     return invoice;
   }
 
-  public void setInvoice(JsonNullable<AccountManagementServiceInvoice> invoice) {
+  public void setInvoice(AccountManagementServiceInvoice invoice) {
     this.invoice = invoice;
   }
 
   public AccountManagementServicePayment paymentType(AccountManagementServicePaymentType paymentType) {
-    this.paymentType = JsonNullable.of(paymentType);
+    this.paymentType = paymentType;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class AccountManagementServicePayment   {
 
   @Valid
 
-  public JsonNullable<AccountManagementServicePaymentType> getPaymentType() {
+  public AccountManagementServicePaymentType getPaymentType() {
     return paymentType;
   }
 
-  public void setPaymentType(JsonNullable<AccountManagementServicePaymentType> paymentType) {
+  public void setPaymentType(AccountManagementServicePaymentType paymentType) {
     this.paymentType = paymentType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class AccountManagementServicePayment   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

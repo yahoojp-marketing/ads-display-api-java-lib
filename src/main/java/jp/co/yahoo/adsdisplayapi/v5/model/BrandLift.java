@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.BrandLiftServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.BrandLiftServiceQuestion;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,49 +16,49 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftオブジェクトは、ブランドリフトの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLift object describes brand lift information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BrandLiftオブジェクトは、ブランドリフトの情報を表します。</div> <div lang=\"en\">BrandLift object describes brand lift information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BrandLift   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("brandLiftId")
-  private JsonNullable<Long> brandLiftId = JsonNullable.undefined();
+  private Long brandLiftId = null;
 
   @JsonProperty("questions")
   @Valid
-  private JsonNullable<List<BrandLiftServiceQuestion>> questions = JsonNullable.undefined();
+  private List<BrandLiftServiceQuestion> questions = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<BrandLiftServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private BrandLiftServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("disapprovalReason")
-  private JsonNullable<String> disapprovalReason = JsonNullable.undefined();
+  private String disapprovalReason = null;
 
   @JsonProperty("reviewCompleteDate")
-  private JsonNullable<String> reviewCompleteDate = JsonNullable.undefined();
+  private String reviewCompleteDate = null;
 
   @JsonProperty("disapprovalReasonCodes")
   @Valid
-  private JsonNullable<List<String>> disapprovalReasonCodes = JsonNullable.undefined();
+  private List<String> disapprovalReasonCodes = null;
 
   @JsonProperty("submitDate")
-  private JsonNullable<String> submitDate = JsonNullable.undefined();
+  private String submitDate = null;
 
   @JsonProperty("campaignStartDate")
-  private JsonNullable<String> campaignStartDate = JsonNullable.undefined();
+  private String campaignStartDate = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("notificationBusinessIds")
   @Valid
-  private JsonNullable<List<String>> notificationBusinessIds = JsonNullable.undefined();
+  private List<String> notificationBusinessIds = null;
 
   public BrandLift accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public BrandLift campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public BrandLift brandLiftId(Long brandLiftId) {
-    this.brandLiftId = JsonNullable.of(brandLiftId);
+    this.brandLiftId = brandLiftId;
     return this;
   }
 
@@ -110,24 +109,24 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">ブランドリフト調査IDです。</div> <div lang=\"en\">BrandLift ID. </div> ")
 
 
-  public JsonNullable<Long> getBrandLiftId() {
+  public Long getBrandLiftId() {
     return brandLiftId;
   }
 
-  public void setBrandLiftId(JsonNullable<Long> brandLiftId) {
+  public void setBrandLiftId(Long brandLiftId) {
     this.brandLiftId = brandLiftId;
   }
 
   public BrandLift questions(List<BrandLiftServiceQuestion> questions) {
-    this.questions = JsonNullable.of(questions);
+    this.questions = questions;
     return this;
   }
 
   public BrandLift addQuestionsItem(BrandLiftServiceQuestion questionsItem) {
-    if (this.questions == null || !this.questions.isPresent()) {
-      this.questions = JsonNullable.of(new ArrayList<>());
+    if (this.questions == null) {
+      this.questions = new ArrayList<>();
     }
-    this.questions.get().add(questionsItem);
+    this.questions.add(questionsItem);
     return this;
   }
 
@@ -139,16 +138,16 @@ public class BrandLift   {
 
   @Valid
 
-  public JsonNullable<List<BrandLiftServiceQuestion>> getQuestions() {
+  public List<BrandLiftServiceQuestion> getQuestions() {
     return questions;
   }
 
-  public void setQuestions(JsonNullable<List<BrandLiftServiceQuestion>> questions) {
+  public void setQuestions(List<BrandLiftServiceQuestion> questions) {
     this.questions = questions;
   }
 
   public BrandLift approvalStatus(BrandLiftServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -160,16 +159,16 @@ public class BrandLift   {
 
   @Valid
 
-  public JsonNullable<BrandLiftServiceApprovalStatus> getApprovalStatus() {
+  public BrandLiftServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<BrandLiftServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(BrandLiftServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public BrandLift disapprovalReason(String disapprovalReason) {
-    this.disapprovalReason = JsonNullable.of(disapprovalReason);
+    this.disapprovalReason = disapprovalReason;
     return this;
   }
 
@@ -180,16 +179,16 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由です。</div> <div lang=\"en\">Disapproval Reason. </div> ")
 
 
-  public JsonNullable<String> getDisapprovalReason() {
+  public String getDisapprovalReason() {
     return disapprovalReason;
   }
 
-  public void setDisapprovalReason(JsonNullable<String> disapprovalReason) {
+  public void setDisapprovalReason(String disapprovalReason) {
     this.disapprovalReason = disapprovalReason;
   }
 
   public BrandLift reviewCompleteDate(String reviewCompleteDate) {
-    this.reviewCompleteDate = JsonNullable.of(reviewCompleteDate);
+    this.reviewCompleteDate = reviewCompleteDate;
     return this;
   }
 
@@ -200,24 +199,24 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査完了日時です。</div> <div lang=\"en\">Review Complete Date.</div> <br>Format: yyyyMMddHHmmss ")
 
 
-  public JsonNullable<String> getReviewCompleteDate() {
+  public String getReviewCompleteDate() {
     return reviewCompleteDate;
   }
 
-  public void setReviewCompleteDate(JsonNullable<String> reviewCompleteDate) {
+  public void setReviewCompleteDate(String reviewCompleteDate) {
     this.reviewCompleteDate = reviewCompleteDate;
   }
 
   public BrandLift disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
-    this.disapprovalReasonCodes = JsonNullable.of(disapprovalReasonCodes);
+    this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
   }
 
   public BrandLift addDisapprovalReasonCodesItem(String disapprovalReasonCodesItem) {
-    if (this.disapprovalReasonCodes == null || !this.disapprovalReasonCodes.isPresent()) {
-      this.disapprovalReasonCodes = JsonNullable.of(new ArrayList<>());
+    if (this.disapprovalReasonCodes == null) {
+      this.disapprovalReasonCodes = new ArrayList<>();
     }
-    this.disapprovalReasonCodes.get().add(disapprovalReasonCodesItem);
+    this.disapprovalReasonCodes.add(disapprovalReasonCodesItem);
     return this;
   }
 
@@ -228,16 +227,16 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コードです。</div> <div lang=\"en\">Disapproval Reason Codes</div> ")
 
 
-  public JsonNullable<List<String>> getDisapprovalReasonCodes() {
+  public List<String> getDisapprovalReasonCodes() {
     return disapprovalReasonCodes;
   }
 
-  public void setDisapprovalReasonCodes(JsonNullable<List<String>> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
   public BrandLift submitDate(String submitDate) {
-    this.submitDate = JsonNullable.of(submitDate);
+    this.submitDate = submitDate;
     return this;
   }
 
@@ -248,16 +247,16 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">入稿日時です。</div> <div lang=\"en\">Submit Date.</div> <br>Format: yyyyMMddHHmmss ")
 
 
-  public JsonNullable<String> getSubmitDate() {
+  public String getSubmitDate() {
     return submitDate;
   }
 
-  public void setSubmitDate(JsonNullable<String> submitDate) {
+  public void setSubmitDate(String submitDate) {
     this.submitDate = submitDate;
   }
 
   public BrandLift campaignStartDate(String campaignStartDate) {
-    this.campaignStartDate = JsonNullable.of(campaignStartDate);
+    this.campaignStartDate = campaignStartDate;
     return this;
   }
 
@@ -268,16 +267,16 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン配信開始日時です。</div> <div lang=\"en\">Campaign Start Date. </div> <br>Format: yyyyMMdd ")
 
 
-  public JsonNullable<String> getCampaignStartDate() {
+  public String getCampaignStartDate() {
     return campaignStartDate;
   }
 
-  public void setCampaignStartDate(JsonNullable<String> campaignStartDate) {
+  public void setCampaignStartDate(String campaignStartDate) {
     this.campaignStartDate = campaignStartDate;
   }
 
   public BrandLift campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -288,24 +287,24 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。</div> <div lang=\"en\">Campaign Name. </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public BrandLift notificationBusinessIds(List<String> notificationBusinessIds) {
-    this.notificationBusinessIds = JsonNullable.of(notificationBusinessIds);
+    this.notificationBusinessIds = notificationBusinessIds;
     return this;
   }
 
   public BrandLift addNotificationBusinessIdsItem(String notificationBusinessIdsItem) {
-    if (this.notificationBusinessIds == null || !this.notificationBusinessIds.isPresent()) {
-      this.notificationBusinessIds = JsonNullable.of(new ArrayList<>());
+    if (this.notificationBusinessIds == null) {
+      this.notificationBusinessIds = new ArrayList<>();
     }
-    this.notificationBusinessIds.get().add(notificationBusinessIdsItem);
+    this.notificationBusinessIds.add(notificationBusinessIdsItem);
     return this;
   }
 
@@ -316,17 +315,17 @@ public class BrandLift   {
   @ApiModelProperty(value = "<div lang=\"ja\">連絡先Yahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Yahoo! JAPAN Business ID to send notifications.</div> ")
 
 
-  public JsonNullable<List<String>> getNotificationBusinessIds() {
+  public List<String> getNotificationBusinessIds() {
     return notificationBusinessIds;
   }
 
-  public void setNotificationBusinessIds(JsonNullable<List<String>> notificationBusinessIds) {
+  public void setNotificationBusinessIds(List<String> notificationBusinessIds) {
     this.notificationBusinessIds = notificationBusinessIds;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -378,7 +377,7 @@ public class BrandLift   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,20 +14,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlListServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep get method search conditions (execution parameter).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PlacementUrlListServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep get method search conditions (execution parameter).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlListServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("urlListIds")
   @Valid
-  private JsonNullable<List<Long>> urlListIds = JsonNullable.undefined();
+  private List<Long> urlListIds = null;
 
   public PlacementUrlListServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -52,7 +51,7 @@ public class PlacementUrlListServiceSelector   {
   }
 
   public PlacementUrlListServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class PlacementUrlListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public PlacementUrlListServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -86,24 +85,24 @@ public class PlacementUrlListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public PlacementUrlListServiceSelector urlListIds(List<Long> urlListIds) {
-    this.urlListIds = JsonNullable.of(urlListIds);
+    this.urlListIds = urlListIds;
     return this;
   }
 
   public PlacementUrlListServiceSelector addUrlListIdsItem(Long urlListIdsItem) {
-    if (this.urlListIds == null || !this.urlListIds.isPresent()) {
-      this.urlListIds = JsonNullable.of(new ArrayList<>());
+    if (this.urlListIds == null) {
+      this.urlListIds = new ArrayList<>();
     }
-    this.urlListIds.get().add(urlListIdsItem);
+    this.urlListIds.add(urlListIdsItem);
     return this;
   }
 
@@ -114,17 +113,17 @@ public class PlacementUrlListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件：プレイスメントURLリストID</div> <div lang=\"en\">Search Condition: Placement Url List ID</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getUrlListIds() {
+  public List<Long> getUrlListIds() {
     return urlListIds;
   }
 
-  public void setUrlListIds(JsonNullable<List<Long>> urlListIds) {
+  public void setUrlListIds(List<Long> urlListIds) {
     this.urlListIds = urlListIds;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -160,7 +159,7 @@ public class PlacementUrlListServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

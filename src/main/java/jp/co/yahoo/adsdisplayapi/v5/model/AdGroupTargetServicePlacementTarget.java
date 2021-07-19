@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServicePlacementUrlListType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServicePlacementTargetオブジェクトは、プレイスメントターゲティングの設定情報を保持するオブジェクトです。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがPLACEMENT_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServicePlacementTarget object is a container for storing placement targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is PLACEMENT_TARGET, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServicePlacementTargetオブジェクトは、プレイスメントターゲティングの設定情報を保持するオブジェクトです。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがPLACEMENT_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServicePlacementTarget object is a container for storing placement targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is PLACEMENT_TARGET, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServicePlacementTarget   {
   @JsonProperty("placementUrlListName")
-  private JsonNullable<String> placementUrlListName = JsonNullable.undefined();
+  private String placementUrlListName = null;
 
   @JsonProperty("placementUrlListType")
-  private JsonNullable<AdGroupTargetServicePlacementUrlListType> placementUrlListType = JsonNullable.undefined();
+  private AdGroupTargetServicePlacementUrlListType placementUrlListType = null;
 
   public AdGroupTargetServicePlacementTarget placementUrlListName(String placementUrlListName) {
-    this.placementUrlListName = JsonNullable.of(placementUrlListName);
+    this.placementUrlListName = placementUrlListName;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class AdGroupTargetServicePlacementTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> プレイスメントリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Placement List Name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getPlacementUrlListName() {
+  public String getPlacementUrlListName() {
     return placementUrlListName;
   }
 
-  public void setPlacementUrlListName(JsonNullable<String> placementUrlListName) {
+  public void setPlacementUrlListName(String placementUrlListName) {
     this.placementUrlListName = placementUrlListName;
   }
 
   public AdGroupTargetServicePlacementTarget placementUrlListType(AdGroupTargetServicePlacementUrlListType placementUrlListType) {
-    this.placementUrlListType = JsonNullable.of(placementUrlListType);
+    this.placementUrlListType = placementUrlListType;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class AdGroupTargetServicePlacementTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServicePlacementUrlListType> getPlacementUrlListType() {
+  public AdGroupTargetServicePlacementUrlListType getPlacementUrlListType() {
     return placementUrlListType;
   }
 
-  public void setPlacementUrlListType(JsonNullable<AdGroupTargetServicePlacementUrlListType> placementUrlListType) {
+  public void setPlacementUrlListType(AdGroupTargetServicePlacementUrlListType placementUrlListType) {
     this.placementUrlListType = placementUrlListType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class AdGroupTargetServicePlacementTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

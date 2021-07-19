@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedDataServiceFileUploadSrc;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedDataServiceFileUploadStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedDataServiceItemListUploadType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,43 +15,43 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedDataServiceRecordオブジェクトは、アップロードした商品情報(ファイル形式)の状態を保持する。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceRecord object retains status of uploaded item list(file format).&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedDataServiceRecordオブジェクトは、アップロードした商品情報(ファイル形式)の状態を保持する。</div> <div lang=\"en\">FeedDataServiceRecord object retains status of uploaded item list(file format).</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedDataServiceRecord   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("completeDate")
-  private JsonNullable<String> completeDate = JsonNullable.undefined();
+  private String completeDate = null;
 
   @JsonProperty("errorCount")
-  private JsonNullable<Long> errorCount = JsonNullable.undefined();
+  private Long errorCount = null;
 
   @JsonProperty("errorRate")
-  private JsonNullable<Double> errorRate = JsonNullable.undefined();
+  private Double errorRate = null;
 
   @JsonProperty("feedId")
-  private JsonNullable<Long> feedId = JsonNullable.undefined();
+  private Long feedId = null;
 
   @JsonProperty("fileUploadSrc")
-  private JsonNullable<FeedDataServiceFileUploadSrc> fileUploadSrc = JsonNullable.undefined();
+  private FeedDataServiceFileUploadSrc fileUploadSrc = null;
 
   @JsonProperty("fileUploadStatus")
-  private JsonNullable<FeedDataServiceFileUploadStatus> fileUploadStatus = JsonNullable.undefined();
+  private FeedDataServiceFileUploadStatus fileUploadStatus = null;
 
   @JsonProperty("isDebug")
-  private JsonNullable<Boolean> isDebug = JsonNullable.undefined();
+  private Boolean isDebug = null;
 
   @JsonProperty("itemListUploadId")
-  private JsonNullable<Long> itemListUploadId = JsonNullable.undefined();
+  private Long itemListUploadId = null;
 
   @JsonProperty("itemListUploadType")
-  private JsonNullable<FeedDataServiceItemListUploadType> itemListUploadType = JsonNullable.undefined();
+  private FeedDataServiceItemListUploadType itemListUploadType = null;
 
   @JsonProperty("uploadDate")
-  private JsonNullable<String> uploadDate = JsonNullable.undefined();
+  private String uploadDate = null;
 
   public FeedDataServiceRecord accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public FeedDataServiceRecord completeDate(String completeDate) {
-    this.completeDate = JsonNullable.of(completeDate);
+    this.completeDate = completeDate;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">取り込み完了日(yyyyMMdd)</div> <div lang=\"en\"> Complete date.<br> Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getCompleteDate() {
+  public String getCompleteDate() {
     return completeDate;
   }
 
-  public void setCompleteDate(JsonNullable<String> completeDate) {
+  public void setCompleteDate(String completeDate) {
     this.completeDate = completeDate;
   }
 
   public FeedDataServiceRecord errorCount(Long errorCount) {
-    this.errorCount = JsonNullable.of(errorCount);
+    this.errorCount = errorCount;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">不備がある商品情報の件数</div> <div lang=\"en\">Number of item list with error.</div> ")
 
 
-  public JsonNullable<Long> getErrorCount() {
+  public Long getErrorCount() {
     return errorCount;
   }
 
-  public void setErrorCount(JsonNullable<Long> errorCount) {
+  public void setErrorCount(Long errorCount) {
     this.errorCount = errorCount;
   }
 
   public FeedDataServiceRecord errorRate(Double errorRate) {
-    this.errorRate = JsonNullable.of(errorRate);
+    this.errorRate = errorRate;
     return this;
   }
 
@@ -123,16 +122,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">エラー率</div> <div lang=\"en\">Error rate.</div> ")
 
 
-  public JsonNullable<Double> getErrorRate() {
+  public Double getErrorRate() {
     return errorRate;
   }
 
-  public void setErrorRate(JsonNullable<Double> errorRate) {
+  public void setErrorRate(Double errorRate) {
     this.errorRate = errorRate;
   }
 
   public FeedDataServiceRecord feedId(Long feedId) {
-    this.feedId = JsonNullable.of(feedId);
+    this.feedId = feedId;
     return this;
   }
 
@@ -143,16 +142,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">Feedを識別するId</div> <div lang=\"en\">Feed ID.</div> ")
 
 
-  public JsonNullable<Long> getFeedId() {
+  public Long getFeedId() {
     return feedId;
   }
 
-  public void setFeedId(JsonNullable<Long> feedId) {
+  public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
 
   public FeedDataServiceRecord fileUploadSrc(FeedDataServiceFileUploadSrc fileUploadSrc) {
-    this.fileUploadSrc = JsonNullable.of(fileUploadSrc);
+    this.fileUploadSrc = fileUploadSrc;
     return this;
   }
 
@@ -164,16 +163,16 @@ public class FeedDataServiceRecord   {
 
   @Valid
 
-  public JsonNullable<FeedDataServiceFileUploadSrc> getFileUploadSrc() {
+  public FeedDataServiceFileUploadSrc getFileUploadSrc() {
     return fileUploadSrc;
   }
 
-  public void setFileUploadSrc(JsonNullable<FeedDataServiceFileUploadSrc> fileUploadSrc) {
+  public void setFileUploadSrc(FeedDataServiceFileUploadSrc fileUploadSrc) {
     this.fileUploadSrc = fileUploadSrc;
   }
 
   public FeedDataServiceRecord fileUploadStatus(FeedDataServiceFileUploadStatus fileUploadStatus) {
-    this.fileUploadStatus = JsonNullable.of(fileUploadStatus);
+    this.fileUploadStatus = fileUploadStatus;
     return this;
   }
 
@@ -185,16 +184,16 @@ public class FeedDataServiceRecord   {
 
   @Valid
 
-  public JsonNullable<FeedDataServiceFileUploadStatus> getFileUploadStatus() {
+  public FeedDataServiceFileUploadStatus getFileUploadStatus() {
     return fileUploadStatus;
   }
 
-  public void setFileUploadStatus(JsonNullable<FeedDataServiceFileUploadStatus> fileUploadStatus) {
+  public void setFileUploadStatus(FeedDataServiceFileUploadStatus fileUploadStatus) {
     this.fileUploadStatus = fileUploadStatus;
   }
 
   public FeedDataServiceRecord isDebug(Boolean isDebug) {
-    this.isDebug = JsonNullable.of(isDebug);
+    this.isDebug = isDebug;
     return this;
   }
 
@@ -205,16 +204,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">trueはデバッグモードでの実行を意味します。</div> <div lang=\"en\">&#34;true&#34; means to run in debug mode.</div> ")
 
 
-  public JsonNullable<Boolean> getIsDebug() {
+  public Boolean getIsDebug() {
     return isDebug;
   }
 
-  public void setIsDebug(JsonNullable<Boolean> isDebug) {
+  public void setIsDebug(Boolean isDebug) {
     this.isDebug = isDebug;
   }
 
   public FeedDataServiceRecord itemListUploadId(Long itemListUploadId) {
-    this.itemListUploadId = JsonNullable.of(itemListUploadId);
+    this.itemListUploadId = itemListUploadId;
     return this;
   }
 
@@ -225,16 +224,16 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロードした商品情報を識別するID</div> <div lang=\"en\">Uploaded item list ID.</div> ")
 
 
-  public JsonNullable<Long> getItemListUploadId() {
+  public Long getItemListUploadId() {
     return itemListUploadId;
   }
 
-  public void setItemListUploadId(JsonNullable<Long> itemListUploadId) {
+  public void setItemListUploadId(Long itemListUploadId) {
     this.itemListUploadId = itemListUploadId;
   }
 
   public FeedDataServiceRecord itemListUploadType(FeedDataServiceItemListUploadType itemListUploadType) {
-    this.itemListUploadType = JsonNullable.of(itemListUploadType);
+    this.itemListUploadType = itemListUploadType;
     return this;
   }
 
@@ -246,16 +245,16 @@ public class FeedDataServiceRecord   {
 
   @Valid
 
-  public JsonNullable<FeedDataServiceItemListUploadType> getItemListUploadType() {
+  public FeedDataServiceItemListUploadType getItemListUploadType() {
     return itemListUploadType;
   }
 
-  public void setItemListUploadType(JsonNullable<FeedDataServiceItemListUploadType> itemListUploadType) {
+  public void setItemListUploadType(FeedDataServiceItemListUploadType itemListUploadType) {
     this.itemListUploadType = itemListUploadType;
   }
 
   public FeedDataServiceRecord uploadDate(String uploadDate) {
-    this.uploadDate = JsonNullable.of(uploadDate);
+    this.uploadDate = uploadDate;
     return this;
   }
 
@@ -266,17 +265,17 @@ public class FeedDataServiceRecord   {
   @ApiModelProperty(value = "<div lang=\"ja\">アップロード日(yyyyMMdd)</div> <div lang=\"en\"> Upload date.<br> Format: yyyyMMdd </div> ")
 
 
-  public JsonNullable<String> getUploadDate() {
+  public String getUploadDate() {
     return uploadDate;
   }
 
-  public void setUploadDate(JsonNullable<String> uploadDate) {
+  public void setUploadDate(String uploadDate) {
     this.uploadDate = uploadDate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -326,7 +325,7 @@ public class FeedDataServiceRecord   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceDayOfWeek;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,25 +13,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedAdScheduleTargetオブジェクトは、時間帯ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedAdScheduleTarget object is a container for storing day of week/hours targeting settings.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedAdScheduleTargetオブジェクトは、時間帯ターゲットの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedAdScheduleTarget object is a container for storing day of week/hours targeting settings.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("dayOfWeek")
-  private JsonNullable<GuaranteedSimulationServiceDayOfWeek> dayOfWeek = JsonNullable.undefined();
+  private GuaranteedSimulationServiceDayOfWeek dayOfWeek = null;
 
   @JsonProperty("endHour")
-  private JsonNullable<Integer> endHour = JsonNullable.undefined();
+  private Integer endHour = null;
 
   @JsonProperty("startHour")
-  private JsonNullable<Integer> startHour = JsonNullable.undefined();
+  private Integer startHour = null;
 
   @JsonProperty("price")
-  private JsonNullable<Long> price = JsonNullable.undefined();
+  private Long price = null;
 
   public GuaranteedSimulationServicePermittedAdScheduleTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -43,16 +42,16 @@ public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットIDです。</div> <div lang=\"en\">Target ID.</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServicePermittedAdScheduleTarget dayOfWeek(GuaranteedSimulationServiceDayOfWeek dayOfWeek) {
-    this.dayOfWeek = JsonNullable.of(dayOfWeek);
+    this.dayOfWeek = dayOfWeek;
     return this;
   }
 
@@ -64,16 +63,16 @@ public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceDayOfWeek> getDayOfWeek() {
+  public GuaranteedSimulationServiceDayOfWeek getDayOfWeek() {
     return dayOfWeek;
   }
 
-  public void setDayOfWeek(JsonNullable<GuaranteedSimulationServiceDayOfWeek> dayOfWeek) {
+  public void setDayOfWeek(GuaranteedSimulationServiceDayOfWeek dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
   public GuaranteedSimulationServicePermittedAdScheduleTarget endHour(Integer endHour) {
-    this.endHour = JsonNullable.of(endHour);
+    this.endHour = endHour;
     return this;
   }
 
@@ -84,16 +83,16 @@ public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">終了時間(時のみ)です。</div> <div lang=\"en\">End time (hour only).</div> ")
 
 
-  public JsonNullable<Integer> getEndHour() {
+  public Integer getEndHour() {
     return endHour;
   }
 
-  public void setEndHour(JsonNullable<Integer> endHour) {
+  public void setEndHour(Integer endHour) {
     this.endHour = endHour;
   }
 
   public GuaranteedSimulationServicePermittedAdScheduleTarget startHour(Integer startHour) {
-    this.startHour = JsonNullable.of(startHour);
+    this.startHour = startHour;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">開始時間(時のみ)です。</div> <div lang=\"en\">Start time (hour only).</div> ")
 
 
-  public JsonNullable<Integer> getStartHour() {
+  public Integer getStartHour() {
     return startHour;
   }
 
-  public void setStartHour(JsonNullable<Integer> startHour) {
+  public void setStartHour(Integer startHour) {
     this.startHour = startHour;
   }
 
   public GuaranteedSimulationServicePermittedAdScheduleTarget price(Long price) {
-    this.price = JsonNullable.of(price);
+    this.price = price;
     return this;
   }
 
@@ -124,17 +123,17 @@ public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">   固定価格です。 </div> <div lang=\"en\">   Fixed price. </div> ")
 
 
-  public JsonNullable<Long> getPrice() {
+  public Long getPrice() {
     return price;
   }
 
-  public void setPrice(JsonNullable<Long> price) {
+  public void setPrice(Long price) {
     this.price = price;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -172,7 +171,7 @@ public class GuaranteedSimulationServicePermittedAdScheduleTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

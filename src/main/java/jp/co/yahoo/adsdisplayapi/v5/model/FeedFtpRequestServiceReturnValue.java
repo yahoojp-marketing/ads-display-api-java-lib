@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtpRequestServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpRequestServiceReturnValueオブジェクトは、操作結果を含む即時アップロードリクエスト情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpRequestServiceReturnValue object contains Upload (Upload now) request information including operation result.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedFtpRequestServiceReturnValueオブジェクトは、操作結果を含む即時アップロードリクエスト情報を保持します。</div> <div lang=\"en\">FeedFtpRequestServiceReturnValue object contains Upload (Upload now) request information including operation result.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedFtpRequestServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<FeedFtpRequestServiceValue>> values = JsonNullable.undefined();
+  private List<FeedFtpRequestServiceValue> values = null;
 
   public FeedFtpRequestServiceReturnValue values(List<FeedFtpRequestServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public FeedFtpRequestServiceReturnValue addValuesItem(FeedFtpRequestServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class FeedFtpRequestServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<FeedFtpRequestServiceValue>> getValues() {
+  public List<FeedFtpRequestServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<FeedFtpRequestServiceValue>> values) {
+  public void setValues(List<FeedFtpRequestServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class FeedFtpRequestServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

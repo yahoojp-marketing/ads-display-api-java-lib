@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceAge;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceDeviceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedInventoryServiceGender;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,29 +17,29 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedInventoryServiceUnavailableReasonオブジェクトは、在庫の不足理由を表します。&lt;br&gt; このオブジェクトで返される各フィールドに対応する在庫は不足しています。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedInventoryServiceUnavailableReason describes a reason for lack of inventory.&lt;br&gt;  An inventory subject to each field returned by this object is lacking.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedInventoryServiceUnavailableReasonオブジェクトは、在庫の不足理由を表します。<br> このオブジェクトで返される各フィールドに対応する在庫は不足しています。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">GuaranteedInventoryServiceUnavailableReason describes a reason for lack of inventory.<br>  An inventory subject to each field returned by this object is lacking.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceUnavailableReason   {
   @JsonProperty("date")
-  private JsonNullable<String> date = JsonNullable.undefined();
+  private String date = null;
 
   @JsonProperty("genders")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceGender>> genders = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceGender> genders = null;
 
   @JsonProperty("ages")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceAge>> ages = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceAge> ages = null;
 
   @JsonProperty("devices")
   @Valid
-  private JsonNullable<List<GuaranteedInventoryServiceDeviceType>> devices = JsonNullable.undefined();
+  private List<GuaranteedInventoryServiceDeviceType> devices = null;
 
   @JsonProperty("audienceCategories")
   @Valid
-  private JsonNullable<List<String>> audienceCategories = JsonNullable.undefined();
+  private List<String> audienceCategories = null;
 
   public GuaranteedInventoryServiceUnavailableReason date(String date) {
-    this.date = JsonNullable.of(date);
+    this.date = date;
     return this;
   }
 
@@ -51,24 +50,24 @@ public class GuaranteedInventoryServiceUnavailableReason   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 在庫がない日を表します。 </div> <div lang=\"en\"> Indicates a day when it is out of inventory.  </div> Format: yyyyMMdd ")
 
 
-  public JsonNullable<String> getDate() {
+  public String getDate() {
     return date;
   }
 
-  public void setDate(JsonNullable<String> date) {
+  public void setDate(String date) {
     this.date = date;
   }
 
   public GuaranteedInventoryServiceUnavailableReason genders(List<GuaranteedInventoryServiceGender> genders) {
-    this.genders = JsonNullable.of(genders);
+    this.genders = genders;
     return this;
   }
 
   public GuaranteedInventoryServiceUnavailableReason addGendersItem(GuaranteedInventoryServiceGender gendersItem) {
-    if (this.genders == null || !this.genders.isPresent()) {
-      this.genders = JsonNullable.of(new ArrayList<>());
+    if (this.genders == null) {
+      this.genders = new ArrayList<>();
     }
-    this.genders.get().add(gendersItem);
+    this.genders.add(gendersItem);
     return this;
   }
 
@@ -80,24 +79,24 @@ public class GuaranteedInventoryServiceUnavailableReason   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceGender>> getGenders() {
+  public List<GuaranteedInventoryServiceGender> getGenders() {
     return genders;
   }
 
-  public void setGenders(JsonNullable<List<GuaranteedInventoryServiceGender>> genders) {
+  public void setGenders(List<GuaranteedInventoryServiceGender> genders) {
     this.genders = genders;
   }
 
   public GuaranteedInventoryServiceUnavailableReason ages(List<GuaranteedInventoryServiceAge> ages) {
-    this.ages = JsonNullable.of(ages);
+    this.ages = ages;
     return this;
   }
 
   public GuaranteedInventoryServiceUnavailableReason addAgesItem(GuaranteedInventoryServiceAge agesItem) {
-    if (this.ages == null || !this.ages.isPresent()) {
-      this.ages = JsonNullable.of(new ArrayList<>());
+    if (this.ages == null) {
+      this.ages = new ArrayList<>();
     }
-    this.ages.get().add(agesItem);
+    this.ages.add(agesItem);
     return this;
   }
 
@@ -109,24 +108,24 @@ public class GuaranteedInventoryServiceUnavailableReason   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceAge>> getAges() {
+  public List<GuaranteedInventoryServiceAge> getAges() {
     return ages;
   }
 
-  public void setAges(JsonNullable<List<GuaranteedInventoryServiceAge>> ages) {
+  public void setAges(List<GuaranteedInventoryServiceAge> ages) {
     this.ages = ages;
   }
 
   public GuaranteedInventoryServiceUnavailableReason devices(List<GuaranteedInventoryServiceDeviceType> devices) {
-    this.devices = JsonNullable.of(devices);
+    this.devices = devices;
     return this;
   }
 
   public GuaranteedInventoryServiceUnavailableReason addDevicesItem(GuaranteedInventoryServiceDeviceType devicesItem) {
-    if (this.devices == null || !this.devices.isPresent()) {
-      this.devices = JsonNullable.of(new ArrayList<>());
+    if (this.devices == null) {
+      this.devices = new ArrayList<>();
     }
-    this.devices.get().add(devicesItem);
+    this.devices.add(devicesItem);
     return this;
   }
 
@@ -138,24 +137,24 @@ public class GuaranteedInventoryServiceUnavailableReason   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedInventoryServiceDeviceType>> getDevices() {
+  public List<GuaranteedInventoryServiceDeviceType> getDevices() {
     return devices;
   }
 
-  public void setDevices(JsonNullable<List<GuaranteedInventoryServiceDeviceType>> devices) {
+  public void setDevices(List<GuaranteedInventoryServiceDeviceType> devices) {
     this.devices = devices;
   }
 
   public GuaranteedInventoryServiceUnavailableReason audienceCategories(List<String> audienceCategories) {
-    this.audienceCategories = JsonNullable.of(audienceCategories);
+    this.audienceCategories = audienceCategories;
     return this;
   }
 
   public GuaranteedInventoryServiceUnavailableReason addAudienceCategoriesItem(String audienceCategoriesItem) {
-    if (this.audienceCategories == null || !this.audienceCategories.isPresent()) {
-      this.audienceCategories = JsonNullable.of(new ArrayList<>());
+    if (this.audienceCategories == null) {
+      this.audienceCategories = new ArrayList<>();
     }
-    this.audienceCategories.get().add(audienceCategoriesItem);
+    this.audienceCategories.add(audienceCategoriesItem);
     return this;
   }
 
@@ -166,17 +165,17 @@ public class GuaranteedInventoryServiceUnavailableReason   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 在庫がないオーディエンスカテゴリーのターゲットID（カテゴリーコード）のリストです。 </div> <div lang=\"en\"> A list of Audience category target ID (category code) with no inventory. </div> ")
 
 
-  public JsonNullable<List<String>> getAudienceCategories() {
+  public List<String> getAudienceCategories() {
     return audienceCategories;
   }
 
-  public void setAudienceCategories(JsonNullable<List<String>> audienceCategories) {
+  public void setAudienceCategories(List<String> audienceCategories) {
     this.audienceCategories = audienceCategories;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -214,7 +213,7 @@ public class GuaranteedInventoryServiceUnavailableReason   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

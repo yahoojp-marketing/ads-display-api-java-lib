@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.SearchLiftServiceKeywordCategory;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchLiftServiceKeywordオブジェクトは、サーチリフトのキーワード情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchLiftServiceKeyword object describes information about the keyword of the search lift.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchLiftServiceKeywordオブジェクトは、サーチリフトのキーワード情報を表します。</div> <div lang=\"en\">SearchLiftServiceKeyword object describes information about the keyword of the search lift.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchLiftServiceKeyword   {
   @JsonProperty("keyword")
-  private JsonNullable<String> keyword = JsonNullable.undefined();
+  private String keyword = null;
 
   @JsonProperty("keywordCategory")
-  private JsonNullable<SearchLiftServiceKeywordCategory> keywordCategory = JsonNullable.undefined();
+  private SearchLiftServiceKeywordCategory keywordCategory = null;
 
   public SearchLiftServiceKeyword keyword(String keyword) {
-    this.keyword = JsonNullable.of(keyword);
+    this.keyword = keyword;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class SearchLiftServiceKeyword   {
   @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keyword. </div> ")
 
 
-  public JsonNullable<String> getKeyword() {
+  public String getKeyword() {
     return keyword;
   }
 
-  public void setKeyword(JsonNullable<String> keyword) {
+  public void setKeyword(String keyword) {
     this.keyword = keyword;
   }
 
   public SearchLiftServiceKeyword keywordCategory(SearchLiftServiceKeywordCategory keywordCategory) {
-    this.keywordCategory = JsonNullable.of(keywordCategory);
+    this.keywordCategory = keywordCategory;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class SearchLiftServiceKeyword   {
 
   @Valid
 
-  public JsonNullable<SearchLiftServiceKeywordCategory> getKeywordCategory() {
+  public SearchLiftServiceKeywordCategory getKeywordCategory() {
     return keywordCategory;
   }
 
-  public void setKeywordCategory(JsonNullable<SearchLiftServiceKeywordCategory> keywordCategory) {
+  public void setKeywordCategory(SearchLiftServiceKeywordCategory keywordCategory) {
     this.keywordCategory = keywordCategory;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class SearchLiftServiceKeyword   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

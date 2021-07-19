@@ -9,7 +9,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtpServiceScheduleDaily;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtpServiceScheduleHourly;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtpServiceScheduleType;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtpServiceScheduleWeekly;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,22 +16,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedFtpServiceScheduleオブジェクトは、定期アップロードのスケジュールを表します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedFtpServiceSchedule object displays Periodic Upload schedule.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> FeedFtpServiceScheduleオブジェクトは、定期アップロードのスケジュールを表します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> FeedFtpServiceSchedule object displays Periodic Upload schedule.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedFtpServiceSchedule   {
   @JsonProperty("scheduleDaily")
-  private JsonNullable<FeedFtpServiceScheduleDaily> scheduleDaily = JsonNullable.undefined();
+  private FeedFtpServiceScheduleDaily scheduleDaily = null;
 
   @JsonProperty("scheduleHourly")
-  private JsonNullable<FeedFtpServiceScheduleHourly> scheduleHourly = JsonNullable.undefined();
+  private FeedFtpServiceScheduleHourly scheduleHourly = null;
 
   @JsonProperty("scheduleType")
-  private JsonNullable<FeedFtpServiceScheduleType> scheduleType = JsonNullable.undefined();
+  private FeedFtpServiceScheduleType scheduleType = null;
 
   @JsonProperty("scheduleWeekly")
-  private JsonNullable<FeedFtpServiceScheduleWeekly> scheduleWeekly = JsonNullable.undefined();
+  private FeedFtpServiceScheduleWeekly scheduleWeekly = null;
 
   public FeedFtpServiceSchedule scheduleDaily(FeedFtpServiceScheduleDaily scheduleDaily) {
-    this.scheduleDaily = JsonNullable.of(scheduleDaily);
+    this.scheduleDaily = scheduleDaily;
     return this;
   }
 
@@ -44,16 +43,16 @@ public class FeedFtpServiceSchedule   {
 
   @Valid
 
-  public JsonNullable<FeedFtpServiceScheduleDaily> getScheduleDaily() {
+  public FeedFtpServiceScheduleDaily getScheduleDaily() {
     return scheduleDaily;
   }
 
-  public void setScheduleDaily(JsonNullable<FeedFtpServiceScheduleDaily> scheduleDaily) {
+  public void setScheduleDaily(FeedFtpServiceScheduleDaily scheduleDaily) {
     this.scheduleDaily = scheduleDaily;
   }
 
   public FeedFtpServiceSchedule scheduleHourly(FeedFtpServiceScheduleHourly scheduleHourly) {
-    this.scheduleHourly = JsonNullable.of(scheduleHourly);
+    this.scheduleHourly = scheduleHourly;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class FeedFtpServiceSchedule   {
 
   @Valid
 
-  public JsonNullable<FeedFtpServiceScheduleHourly> getScheduleHourly() {
+  public FeedFtpServiceScheduleHourly getScheduleHourly() {
     return scheduleHourly;
   }
 
-  public void setScheduleHourly(JsonNullable<FeedFtpServiceScheduleHourly> scheduleHourly) {
+  public void setScheduleHourly(FeedFtpServiceScheduleHourly scheduleHourly) {
     this.scheduleHourly = scheduleHourly;
   }
 
   public FeedFtpServiceSchedule scheduleType(FeedFtpServiceScheduleType scheduleType) {
-    this.scheduleType = JsonNullable.of(scheduleType);
+    this.scheduleType = scheduleType;
     return this;
   }
 
@@ -86,16 +85,16 @@ public class FeedFtpServiceSchedule   {
 
   @Valid
 
-  public JsonNullable<FeedFtpServiceScheduleType> getScheduleType() {
+  public FeedFtpServiceScheduleType getScheduleType() {
     return scheduleType;
   }
 
-  public void setScheduleType(JsonNullable<FeedFtpServiceScheduleType> scheduleType) {
+  public void setScheduleType(FeedFtpServiceScheduleType scheduleType) {
     this.scheduleType = scheduleType;
   }
 
   public FeedFtpServiceSchedule scheduleWeekly(FeedFtpServiceScheduleWeekly scheduleWeekly) {
-    this.scheduleWeekly = JsonNullable.of(scheduleWeekly);
+    this.scheduleWeekly = scheduleWeekly;
     return this;
   }
 
@@ -107,17 +106,17 @@ public class FeedFtpServiceSchedule   {
 
   @Valid
 
-  public JsonNullable<FeedFtpServiceScheduleWeekly> getScheduleWeekly() {
+  public FeedFtpServiceScheduleWeekly getScheduleWeekly() {
     return scheduleWeekly;
   }
 
-  public void setScheduleWeekly(JsonNullable<FeedFtpServiceScheduleWeekly> scheduleWeekly) {
+  public void setScheduleWeekly(FeedFtpServiceScheduleWeekly scheduleWeekly) {
     this.scheduleWeekly = scheduleWeekly;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -153,7 +152,7 @@ public class FeedFtpServiceSchedule   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.FeedFtp;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,7 +15,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpServiceOperationオブジェクトは、mutate対象となる定期アップロード設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceOperation object retains Periodic Upload setting information by mutate operation.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">FeedFtpServiceOperationオブジェクトは、mutate対象となる定期アップロード設定情報を保持します。</div> <div lang=\"en\">FeedFtpServiceOperation object retains Periodic Upload setting information by mutate operation.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedFtpServiceOperation   {
   @JsonProperty("accountId")
   private Long accountId;
@@ -52,6 +51,9 @@ public class FeedFtpServiceOperation   {
   }
 
   public FeedFtpServiceOperation addOperandItem(FeedFtp operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -75,7 +77,7 @@ public class FeedFtpServiceOperation   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -107,7 +109,7 @@ public class FeedFtpServiceOperation   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -11,7 +11,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceCreatedDateRange;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceProcessStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.VideoServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,35 +18,35 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServiceSelectorオブジェクトは、入稿済みの動画の情報を取得します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The VideoServiceSelector object is a container for storing added video information and filtering condition.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">VideoServiceSelectorオブジェクトは、入稿済みの動画の情報を取得します。</div> <div lang=\"en\">The VideoServiceSelector object is a container for storing added video information and filtering condition.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class VideoServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("approvalStatuses")
   @Valid
-  private JsonNullable<List<VideoServiceApprovalStatus>> approvalStatuses = JsonNullable.undefined();
+  private List<VideoServiceApprovalStatus> approvalStatuses = null;
 
   @JsonProperty("mediaIds")
   @Valid
-  private JsonNullable<List<Long>> mediaIds = JsonNullable.undefined();
+  private List<Long> mediaIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("processStatuses")
   @Valid
-  private JsonNullable<List<VideoServiceProcessStatus>> processStatuses = JsonNullable.undefined();
+  private List<VideoServiceProcessStatus> processStatuses = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("userStatuses")
   @Valid
-  private JsonNullable<List<VideoServiceUserStatus>> userStatuses = JsonNullable.undefined();
+  private List<VideoServiceUserStatus> userStatuses = null;
 
   @JsonProperty("createdDateRange")
-  private JsonNullable<VideoServiceCreatedDateRange> createdDateRange = JsonNullable.undefined();
+  private VideoServiceCreatedDateRange createdDateRange = null;
 
   public VideoServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -71,15 +70,15 @@ public class VideoServiceSelector   {
   }
 
   public VideoServiceSelector approvalStatuses(List<VideoServiceApprovalStatus> approvalStatuses) {
-    this.approvalStatuses = JsonNullable.of(approvalStatuses);
+    this.approvalStatuses = approvalStatuses;
     return this;
   }
 
   public VideoServiceSelector addApprovalStatusesItem(VideoServiceApprovalStatus approvalStatusesItem) {
-    if (this.approvalStatuses == null || !this.approvalStatuses.isPresent()) {
-      this.approvalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.approvalStatuses == null) {
+      this.approvalStatuses = new ArrayList<>();
     }
-    this.approvalStatuses.get().add(approvalStatusesItem);
+    this.approvalStatuses.add(approvalStatusesItem);
     return this;
   }
 
@@ -91,24 +90,24 @@ public class VideoServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<VideoServiceApprovalStatus>> getApprovalStatuses() {
+  public List<VideoServiceApprovalStatus> getApprovalStatuses() {
     return approvalStatuses;
   }
 
-  public void setApprovalStatuses(JsonNullable<List<VideoServiceApprovalStatus>> approvalStatuses) {
+  public void setApprovalStatuses(List<VideoServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
   public VideoServiceSelector mediaIds(List<Long> mediaIds) {
-    this.mediaIds = JsonNullable.of(mediaIds);
+    this.mediaIds = mediaIds;
     return this;
   }
 
   public VideoServiceSelector addMediaIdsItem(Long mediaIdsItem) {
-    if (this.mediaIds == null || !this.mediaIds.isPresent()) {
-      this.mediaIds = JsonNullable.of(new ArrayList<>());
+    if (this.mediaIds == null) {
+      this.mediaIds = new ArrayList<>();
     }
-    this.mediaIds.get().add(mediaIdsItem);
+    this.mediaIds.add(mediaIdsItem);
     return this;
   }
 
@@ -119,16 +118,16 @@ public class VideoServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">メディアIDです。</div> <div lang=\"en\">Media ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getMediaIds() {
+  public List<Long> getMediaIds() {
     return mediaIds;
   }
 
-  public void setMediaIds(JsonNullable<List<Long>> mediaIds) {
+  public void setMediaIds(List<Long> mediaIds) {
     this.mediaIds = mediaIds;
   }
 
   public VideoServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -141,24 +140,24 @@ public class VideoServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public VideoServiceSelector processStatuses(List<VideoServiceProcessStatus> processStatuses) {
-    this.processStatuses = JsonNullable.of(processStatuses);
+    this.processStatuses = processStatuses;
     return this;
   }
 
   public VideoServiceSelector addProcessStatusesItem(VideoServiceProcessStatus processStatusesItem) {
-    if (this.processStatuses == null || !this.processStatuses.isPresent()) {
-      this.processStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.processStatuses == null) {
+      this.processStatuses = new ArrayList<>();
     }
-    this.processStatuses.get().add(processStatusesItem);
+    this.processStatuses.add(processStatusesItem);
     return this;
   }
 
@@ -170,16 +169,16 @@ public class VideoServiceSelector   {
 
   @Valid
 @Size(max=3) 
-  public JsonNullable<List<VideoServiceProcessStatus>> getProcessStatuses() {
+  public List<VideoServiceProcessStatus> getProcessStatuses() {
     return processStatuses;
   }
 
-  public void setProcessStatuses(JsonNullable<List<VideoServiceProcessStatus>> processStatuses) {
+  public void setProcessStatuses(List<VideoServiceProcessStatus> processStatuses) {
     this.processStatuses = processStatuses;
   }
 
   public VideoServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -191,24 +190,24 @@ public class VideoServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public VideoServiceSelector userStatuses(List<VideoServiceUserStatus> userStatuses) {
-    this.userStatuses = JsonNullable.of(userStatuses);
+    this.userStatuses = userStatuses;
     return this;
   }
 
   public VideoServiceSelector addUserStatusesItem(VideoServiceUserStatus userStatusesItem) {
-    if (this.userStatuses == null || !this.userStatuses.isPresent()) {
-      this.userStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.userStatuses == null) {
+      this.userStatuses = new ArrayList<>();
     }
-    this.userStatuses.get().add(userStatusesItem);
+    this.userStatuses.add(userStatusesItem);
     return this;
   }
 
@@ -220,16 +219,16 @@ public class VideoServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<VideoServiceUserStatus>> getUserStatuses() {
+  public List<VideoServiceUserStatus> getUserStatuses() {
     return userStatuses;
   }
 
-  public void setUserStatuses(JsonNullable<List<VideoServiceUserStatus>> userStatuses) {
+  public void setUserStatuses(List<VideoServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
   public VideoServiceSelector createdDateRange(VideoServiceCreatedDateRange createdDateRange) {
-    this.createdDateRange = JsonNullable.of(createdDateRange);
+    this.createdDateRange = createdDateRange;
     return this;
   }
 
@@ -241,17 +240,17 @@ public class VideoServiceSelector   {
 
   @Valid
 
-  public JsonNullable<VideoServiceCreatedDateRange> getCreatedDateRange() {
+  public VideoServiceCreatedDateRange getCreatedDateRange() {
     return createdDateRange;
   }
 
-  public void setCreatedDateRange(JsonNullable<VideoServiceCreatedDateRange> createdDateRange) {
+  public void setCreatedDateRange(VideoServiceCreatedDateRange createdDateRange) {
     this.createdDateRange = createdDateRange;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -295,7 +294,7 @@ public class VideoServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServicePlacementCategory;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,17 +15,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServicePlacementCategoryListオブジェクトは、駅情報のリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServicePlacementCategoryList object displays the list of station.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServicePlacementCategoryListオブジェクトは、駅情報のリストを表します。</div> <div lang=\"en\">DictionaryServicePlacementCategoryList object displays the list of station.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServicePlacementCategoryList   {
   @JsonProperty("placementCategoryListId")
   private Long placementCategoryListId;
 
   @JsonProperty("placementCategoryListName")
-  private JsonNullable<String> placementCategoryListName = JsonNullable.undefined();
+  private String placementCategoryListName = null;
 
   @JsonProperty("placementCategories")
   @Valid
-  private JsonNullable<List<DictionaryServicePlacementCategory>> placementCategories = JsonNullable.undefined();
+  private List<DictionaryServicePlacementCategory> placementCategories = null;
 
   public DictionaryServicePlacementCategoryList placementCategoryListId(Long placementCategoryListId) {
     this.placementCategoryListId = placementCategoryListId;
@@ -49,7 +48,7 @@ public class DictionaryServicePlacementCategoryList   {
   }
 
   public DictionaryServicePlacementCategoryList placementCategoryListName(String placementCategoryListName) {
-    this.placementCategoryListName = JsonNullable.of(placementCategoryListName);
+    this.placementCategoryListName = placementCategoryListName;
     return this;
   }
 
@@ -60,24 +59,24 @@ public class DictionaryServicePlacementCategoryList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> プライスメントカテゴリリスト名です。<br> </div> <div lang=\"en\"> Placement category list name.<br> </div> ")
 
 
-  public JsonNullable<String> getPlacementCategoryListName() {
+  public String getPlacementCategoryListName() {
     return placementCategoryListName;
   }
 
-  public void setPlacementCategoryListName(JsonNullable<String> placementCategoryListName) {
+  public void setPlacementCategoryListName(String placementCategoryListName) {
     this.placementCategoryListName = placementCategoryListName;
   }
 
   public DictionaryServicePlacementCategoryList placementCategories(List<DictionaryServicePlacementCategory> placementCategories) {
-    this.placementCategories = JsonNullable.of(placementCategories);
+    this.placementCategories = placementCategories;
     return this;
   }
 
   public DictionaryServicePlacementCategoryList addPlacementCategoriesItem(DictionaryServicePlacementCategory placementCategoriesItem) {
-    if (this.placementCategories == null || !this.placementCategories.isPresent()) {
-      this.placementCategories = JsonNullable.of(new ArrayList<>());
+    if (this.placementCategories == null) {
+      this.placementCategories = new ArrayList<>();
     }
-    this.placementCategories.get().add(placementCategoriesItem);
+    this.placementCategories.add(placementCategoriesItem);
     return this;
   }
 
@@ -89,17 +88,17 @@ public class DictionaryServicePlacementCategoryList   {
 
   @Valid
 
-  public JsonNullable<List<DictionaryServicePlacementCategory>> getPlacementCategories() {
+  public List<DictionaryServicePlacementCategory> getPlacementCategories() {
     return placementCategories;
   }
 
-  public void setPlacementCategories(JsonNullable<List<DictionaryServicePlacementCategory>> placementCategories) {
+  public void setPlacementCategories(List<DictionaryServicePlacementCategory> placementCategories) {
     this.placementCategories = placementCategories;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -133,7 +132,7 @@ public class DictionaryServicePlacementCategoryList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

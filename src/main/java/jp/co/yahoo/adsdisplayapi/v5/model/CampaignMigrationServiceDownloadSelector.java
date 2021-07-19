@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignMigrationServiceLang;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイグレーション対象のキャンペーン一覧をダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download the list of campaigns targeted for migration.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">マイグレーション対象のキャンペーン一覧をダウンロードします。</div> <div lang=\"en\">Download the list of campaigns targeted for migration.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignMigrationServiceDownloadSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("lang")
-  private JsonNullable<CampaignMigrationServiceLang> lang = JsonNullable.undefined();
+  private CampaignMigrationServiceLang lang = null;
 
   public CampaignMigrationServiceDownloadSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -44,7 +43,7 @@ public class CampaignMigrationServiceDownloadSelector   {
   }
 
   public CampaignMigrationServiceDownloadSelector lang(CampaignMigrationServiceLang lang) {
-    this.lang = JsonNullable.of(lang);
+    this.lang = lang;
     return this;
   }
 
@@ -56,17 +55,17 @@ public class CampaignMigrationServiceDownloadSelector   {
 
   @Valid
 
-  public JsonNullable<CampaignMigrationServiceLang> getLang() {
+  public CampaignMigrationServiceLang getLang() {
     return lang;
   }
 
-  public void setLang(JsonNullable<CampaignMigrationServiceLang> lang) {
+  public void setLang(CampaignMigrationServiceLang lang) {
     this.lang = lang;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -98,7 +97,7 @@ public class CampaignMigrationServiceDownloadSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

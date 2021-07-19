@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServicePositionType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServicePositionTargetオブジェクトは、ポジションターゲティングの設定情報を保持します。&lt;br&gt; *このターゲットは予約型専用となります。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServicePositionTarget object contains position targeting settings.&lt;br&gt; *This target is exclusive for guaranteed ad.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServicePositionTargetオブジェクトは、ポジションターゲティングの設定情報を保持します。<br> *このターゲットは予約型専用となります。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupTargetServicePositionTarget object contains position targeting settings.<br> *This target is exclusive for guaranteed ad.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServicePositionTarget   {
   @JsonProperty("positionType")
-  private JsonNullable<AdGroupTargetServicePositionType> positionType = JsonNullable.undefined();
+  private AdGroupTargetServicePositionType positionType = null;
 
   public AdGroupTargetServicePositionTarget positionType(AdGroupTargetServicePositionType positionType) {
-    this.positionType = JsonNullable.of(positionType);
+    this.positionType = positionType;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class AdGroupTargetServicePositionTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServicePositionType> getPositionType() {
+  public AdGroupTargetServicePositionType getPositionType() {
     return positionType;
   }
 
-  public void setPositionType(JsonNullable<AdGroupTargetServicePositionType> positionType) {
+  public void setPositionType(AdGroupTargetServicePositionType positionType) {
     this.positionType = positionType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class AdGroupTargetServicePositionTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

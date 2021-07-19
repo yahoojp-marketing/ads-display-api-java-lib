@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Balanceオブジェクトは、選択したアカウントの未消化予算情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The Balance object is a container for storing balance information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">Balanceオブジェクトは、選択したアカウントの未消化予算情報を表します。</div> <div lang=\"en\">The Balance object is a container for storing balance information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Balance   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("balance")
-  private JsonNullable<Long> balance = JsonNullable.undefined();
+  private Long balance = null;
 
   public Balance accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class Balance   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">The account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public Balance balance(Long balance) {
-    this.balance = JsonNullable.of(balance);
+    this.balance = balance;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class Balance   {
   @ApiModelProperty(value = "<div lang=\"ja\">未消化予算です。</div> <div lang=\"en\">The balance.</div> ")
 
 
-  public JsonNullable<Long> getBalance() {
+  public Long getBalance() {
     return balance;
   }
 
-  public void setBalance(JsonNullable<Long> balance) {
+  public void setBalance(Long balance) {
     this.balance = balance;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class Balance   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,13 +12,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountAdProductServiceAdProductオブジェクトは、広告掲載方式に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountAdProductServiceAdProduct object is a relation of ad display\\ method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountAdProductServiceAdProductオブジェクトは、広告掲載方式に関する情報を表します。</div> <div lang=\"en\">AccountAdProductServiceAdProduct object is a relation of ad display\\ method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountAdProductServiceAdProduct   {
   @JsonProperty("adProductType")
-  private JsonNullable<String> adProductType = JsonNullable.undefined();
+  private String adProductType = null;
 
   public AccountAdProductServiceAdProduct adProductType(String adProductType) {
-    this.adProductType = JsonNullable.of(adProductType);
+    this.adProductType = adProductType;
     return this;
   }
 
@@ -30,17 +29,17 @@ public class AccountAdProductServiceAdProduct   {
   @ApiModelProperty(value = "<div lang=\"ja\">広告商品情報です。</div> <div lang=\"en\">Information of ad product.</div> ")
 
 
-  public JsonNullable<String> getAdProductType() {
+  public String getAdProductType() {
     return adProductType;
   }
 
-  public void setAdProductType(JsonNullable<String> adProductType) {
+  public void setAdProductType(String adProductType) {
     this.adProductType = adProductType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -70,7 +69,7 @@ public class AccountAdProductServiceAdProduct   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

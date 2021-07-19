@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceEligibilityFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceManualConversionOptimizerは、コンバージョン最適化「手動入札」設定を保持するオブジェクトです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceManualConversionOptimizer displays the contents of conversion optimization &#39;Manual Bidding&#39; settings.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupServiceManualConversionOptimizerは、コンバージョン最適化「手動入札」設定を保持するオブジェクトです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> AdGroupServiceManualConversionOptimizer displays the contents of conversion optimization 'Manual Bidding' settings.<br> This field is optional in ADD and SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceManualConversionOptimizer   {
   @JsonProperty("eligibilityFlg")
-  private JsonNullable<AdGroupServiceEligibilityFlg> eligibilityFlg = JsonNullable.undefined();
+  private AdGroupServiceEligibilityFlg eligibilityFlg = null;
 
   public AdGroupServiceManualConversionOptimizer eligibilityFlg(AdGroupServiceEligibilityFlg eligibilityFlg) {
-    this.eligibilityFlg = JsonNullable.of(eligibilityFlg);
+    this.eligibilityFlg = eligibilityFlg;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class AdGroupServiceManualConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceEligibilityFlg> getEligibilityFlg() {
+  public AdGroupServiceEligibilityFlg getEligibilityFlg() {
     return eligibilityFlg;
   }
 
-  public void setEligibilityFlg(JsonNullable<AdGroupServiceEligibilityFlg> eligibilityFlg) {
+  public void setEligibilityFlg(AdGroupServiceEligibilityFlg eligibilityFlg) {
     this.eligibilityFlg = eligibilityFlg;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class AdGroupServiceManualConversionOptimizer   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

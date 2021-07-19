@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,20 +15,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountServicePageオブジェクトは、取得されるアカウント情報に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountServicePage object is a container for storing account information entry.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountServicePageオブジェクトは、取得されるアカウント情報に関するエントリーを表します。</div> <div lang=\"en\">The AccountServicePage object is a container for storing account information entry.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountServicePage   {
   @JsonProperty("authorizationBusinessId")
-  private JsonNullable<String> authorizationBusinessId = JsonNullable.undefined();
+  private String authorizationBusinessId = null;
 
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<AccountServiceValue>> values = JsonNullable.undefined();
+  private List<AccountServiceValue> values = null;
 
   public AccountServicePage authorizationBusinessId(String authorizationBusinessId) {
-    this.authorizationBusinessId = JsonNullable.of(authorizationBusinessId);
+    this.authorizationBusinessId = authorizationBusinessId;
     return this;
   }
 
@@ -40,11 +39,11 @@ public class AccountServicePage   {
   @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションによるYahoo!広告へのアクセスを認可したYahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Yahoo! JAPAN Business ID that authorized access to Yahoo! JAPAN Ads via application.</div> ")
 
 
-  public JsonNullable<String> getAuthorizationBusinessId() {
+  public String getAuthorizationBusinessId() {
     return authorizationBusinessId;
   }
 
-  public void setAuthorizationBusinessId(JsonNullable<String> authorizationBusinessId) {
+  public void setAuthorizationBusinessId(String authorizationBusinessId) {
     this.authorizationBusinessId = authorizationBusinessId;
   }
 
@@ -69,15 +68,15 @@ public class AccountServicePage   {
   }
 
   public AccountServicePage values(List<AccountServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public AccountServicePage addValuesItem(AccountServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -89,17 +88,17 @@ public class AccountServicePage   {
 
   @Valid
 
-  public JsonNullable<List<AccountServiceValue>> getValues() {
+  public List<AccountServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<AccountServiceValue>> values) {
+  public void setValues(List<AccountServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -133,7 +132,7 @@ public class AccountServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,7 +14,7 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServicePlacementCategorySelectorオブジェクトは、駅情報を取得するプレイスメントカテゴリリストIDを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServicePlacementCategorySelector object describes placement category list ID that obtains station information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServicePlacementCategorySelectorオブジェクトは、駅情報を取得するプレイスメントカテゴリリストIDを表します。</div> <div lang=\"en\">DictionaryServicePlacementCategorySelector object describes placement category list ID that obtains station information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServicePlacementCategorySelector   {
   @JsonProperty("placementCategoryListIds")
   @Valid
@@ -27,6 +26,9 @@ public class DictionaryServicePlacementCategorySelector   {
   }
 
   public DictionaryServicePlacementCategorySelector addPlacementCategoryListIdsItem(Long placementCategoryListIdsItem) {
+    if (this.placementCategoryListIds == null) {
+      this.placementCategoryListIds = new ArrayList<>();
+    }
     this.placementCategoryListIds.add(placementCategoryListIdsItem);
     return this;
   }
@@ -49,7 +51,7 @@ public class DictionaryServicePlacementCategorySelector   {
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -79,7 +81,7 @@ public class DictionaryServicePlacementCategorySelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

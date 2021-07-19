@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,20 +14,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListServiceSelectorオブジェクトは、選択するサーチキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordListServiceSelector object displays the selected search keyword list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">SearchKeywordListServiceSelectorオブジェクトは、選択するサーチキーワードリストを表します。</div> <div lang=\"en\">SearchKeywordListServiceSelector object displays the selected search keyword list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class SearchKeywordListServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("searchKeywordListIds")
   @Valid
-  private JsonNullable<List<Long>> searchKeywordListIds = JsonNullable.undefined();
+  private List<Long> searchKeywordListIds = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public SearchKeywordListServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -52,7 +51,7 @@ public class SearchKeywordListServiceSelector   {
   }
 
   public SearchKeywordListServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -65,24 +64,24 @@ public class SearchKeywordListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public SearchKeywordListServiceSelector searchKeywordListIds(List<Long> searchKeywordListIds) {
-    this.searchKeywordListIds = JsonNullable.of(searchKeywordListIds);
+    this.searchKeywordListIds = searchKeywordListIds;
     return this;
   }
 
   public SearchKeywordListServiceSelector addSearchKeywordListIdsItem(Long searchKeywordListIdsItem) {
-    if (this.searchKeywordListIds == null || !this.searchKeywordListIds.isPresent()) {
-      this.searchKeywordListIds = JsonNullable.of(new ArrayList<>());
+    if (this.searchKeywordListIds == null) {
+      this.searchKeywordListIds = new ArrayList<>();
     }
-    this.searchKeywordListIds.get().add(searchKeywordListIdsItem);
+    this.searchKeywordListIds.add(searchKeywordListIdsItem);
     return this;
   }
 
@@ -93,16 +92,16 @@ public class SearchKeywordListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードIDです。</div> <div lang=\"en\">Search keyword ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getSearchKeywordListIds() {
+  public List<Long> getSearchKeywordListIds() {
     return searchKeywordListIds;
   }
 
-  public void setSearchKeywordListIds(JsonNullable<List<Long>> searchKeywordListIds) {
+  public void setSearchKeywordListIds(List<Long> searchKeywordListIds) {
     this.searchKeywordListIds = searchKeywordListIds;
   }
 
   public SearchKeywordListServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -114,17 +113,17 @@ public class SearchKeywordListServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -160,7 +159,7 @@ public class SearchKeywordListServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

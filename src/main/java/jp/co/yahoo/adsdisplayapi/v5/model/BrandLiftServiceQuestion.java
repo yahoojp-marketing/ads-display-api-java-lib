@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.BrandLiftServiceGoal;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,37 +13,37 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServiceQuestionオブジェクトは、ブランドリフト調査項目を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLiftServiceQuestion objects describes the brand lift survey contents.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BrandLiftServiceQuestionオブジェクトは、ブランドリフト調査項目を表します。</div> <div lang=\"en\">BrandLiftServiceQuestion objects describes the brand lift survey contents.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BrandLiftServiceQuestion   {
   @JsonProperty("questionId")
-  private JsonNullable<Long> questionId = JsonNullable.undefined();
+  private Long questionId = null;
 
   @JsonProperty("goal")
-  private JsonNullable<BrandLiftServiceGoal> goal = JsonNullable.undefined();
+  private BrandLiftServiceGoal goal = null;
 
   @JsonProperty("preApproveId")
-  private JsonNullable<String> preApproveId = JsonNullable.undefined();
+  private String preApproveId = null;
 
   @JsonProperty("question")
-  private JsonNullable<String> question = JsonNullable.undefined();
+  private String question = null;
 
   @JsonProperty("answerOption1")
-  private JsonNullable<String> answerOption1 = JsonNullable.undefined();
+  private String answerOption1 = null;
 
   @JsonProperty("answerOption2")
-  private JsonNullable<String> answerOption2 = JsonNullable.undefined();
+  private String answerOption2 = null;
 
   @JsonProperty("answerOption3")
-  private JsonNullable<String> answerOption3 = JsonNullable.undefined();
+  private String answerOption3 = null;
 
   @JsonProperty("answerOption4")
-  private JsonNullable<String> answerOption4 = JsonNullable.undefined();
+  private String answerOption4 = null;
 
   @JsonProperty("answerOption5")
-  private JsonNullable<String> answerOption5 = JsonNullable.undefined();
+  private String answerOption5 = null;
 
   public BrandLiftServiceQuestion questionId(Long questionId) {
-    this.questionId = JsonNullable.of(questionId);
+    this.questionId = questionId;
     return this;
   }
 
@@ -55,16 +54,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">調査IDです。</div> <div lang=\"en\">Question ID. </div> ")
 
 
-  public JsonNullable<Long> getQuestionId() {
+  public Long getQuestionId() {
     return questionId;
   }
 
-  public void setQuestionId(JsonNullable<Long> questionId) {
+  public void setQuestionId(Long questionId) {
     this.questionId = questionId;
   }
 
   public BrandLiftServiceQuestion goal(BrandLiftServiceGoal goal) {
-    this.goal = JsonNullable.of(goal);
+    this.goal = goal;
     return this;
   }
 
@@ -76,16 +75,16 @@ public class BrandLiftServiceQuestion   {
 
   @Valid
 
-  public JsonNullable<BrandLiftServiceGoal> getGoal() {
+  public BrandLiftServiceGoal getGoal() {
     return goal;
   }
 
-  public void setGoal(JsonNullable<BrandLiftServiceGoal> goal) {
+  public void setGoal(BrandLiftServiceGoal goal) {
     this.goal = goal;
   }
 
   public BrandLiftServiceQuestion preApproveId(String preApproveId) {
-    this.preApproveId = JsonNullable.of(preApproveId);
+    this.preApproveId = preApproveId;
     return this;
   }
 
@@ -96,16 +95,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">事前承認IDです。</div> <div lang=\"en\">Preapprove ID. </div> ")
 
 
-  public JsonNullable<String> getPreApproveId() {
+  public String getPreApproveId() {
     return preApproveId;
   }
 
-  public void setPreApproveId(JsonNullable<String> preApproveId) {
+  public void setPreApproveId(String preApproveId) {
     this.preApproveId = preApproveId;
   }
 
   public BrandLiftServiceQuestion question(String question) {
-    this.question = JsonNullable.of(question);
+    this.question = question;
     return this;
   }
 
@@ -116,16 +115,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">設問です。</div> <div lang=\"en\">Question. </div> ")
 
 
-  public JsonNullable<String> getQuestion() {
+  public String getQuestion() {
     return question;
   }
 
-  public void setQuestion(JsonNullable<String> question) {
+  public void setQuestion(String question) {
     this.question = question;
   }
 
   public BrandLiftServiceQuestion answerOption1(String answerOption1) {
-    this.answerOption1 = JsonNullable.of(answerOption1);
+    this.answerOption1 = answerOption1;
     return this;
   }
 
@@ -136,16 +135,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢1です。</div> <div lang=\"en\">Answer Option1. </div> ")
 
 
-  public JsonNullable<String> getAnswerOption1() {
+  public String getAnswerOption1() {
     return answerOption1;
   }
 
-  public void setAnswerOption1(JsonNullable<String> answerOption1) {
+  public void setAnswerOption1(String answerOption1) {
     this.answerOption1 = answerOption1;
   }
 
   public BrandLiftServiceQuestion answerOption2(String answerOption2) {
-    this.answerOption2 = JsonNullable.of(answerOption2);
+    this.answerOption2 = answerOption2;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢2です。</div> <div lang=\"en\">Answer Option2. </div> ")
 
 
-  public JsonNullable<String> getAnswerOption2() {
+  public String getAnswerOption2() {
     return answerOption2;
   }
 
-  public void setAnswerOption2(JsonNullable<String> answerOption2) {
+  public void setAnswerOption2(String answerOption2) {
     this.answerOption2 = answerOption2;
   }
 
   public BrandLiftServiceQuestion answerOption3(String answerOption3) {
-    this.answerOption3 = JsonNullable.of(answerOption3);
+    this.answerOption3 = answerOption3;
     return this;
   }
 
@@ -176,16 +175,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢3です。</div> <div lang=\"en\">Answer Option3. </div> ")
 
 
-  public JsonNullable<String> getAnswerOption3() {
+  public String getAnswerOption3() {
     return answerOption3;
   }
 
-  public void setAnswerOption3(JsonNullable<String> answerOption3) {
+  public void setAnswerOption3(String answerOption3) {
     this.answerOption3 = answerOption3;
   }
 
   public BrandLiftServiceQuestion answerOption4(String answerOption4) {
-    this.answerOption4 = JsonNullable.of(answerOption4);
+    this.answerOption4 = answerOption4;
     return this;
   }
 
@@ -196,16 +195,16 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢4です。</div> <div lang=\"en\">Answer Option4. </div> ")
 
 
-  public JsonNullable<String> getAnswerOption4() {
+  public String getAnswerOption4() {
     return answerOption4;
   }
 
-  public void setAnswerOption4(JsonNullable<String> answerOption4) {
+  public void setAnswerOption4(String answerOption4) {
     this.answerOption4 = answerOption4;
   }
 
   public BrandLiftServiceQuestion answerOption5(String answerOption5) {
-    this.answerOption5 = JsonNullable.of(answerOption5);
+    this.answerOption5 = answerOption5;
     return this;
   }
 
@@ -216,17 +215,17 @@ public class BrandLiftServiceQuestion   {
   @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢5です。</div> <div lang=\"en\">Answer Option5. </div> ")
 
 
-  public JsonNullable<String> getAnswerOption5() {
+  public String getAnswerOption5() {
     return answerOption5;
   }
 
-  public void setAnswerOption5(JsonNullable<String> answerOption5) {
+  public void setAnswerOption5(String answerOption5) {
     this.answerOption5 = answerOption5;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -272,7 +271,7 @@ public class BrandLiftServiceQuestion   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

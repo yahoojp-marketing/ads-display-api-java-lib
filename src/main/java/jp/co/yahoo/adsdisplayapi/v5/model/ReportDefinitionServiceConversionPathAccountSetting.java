@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceAccount;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,17 +15,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。 </div> <div lang=\"en\"> ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceConversionPathAccountSetting   {
   @JsonProperty("baseAccount")
-  private JsonNullable<ReportDefinitionServiceAccount> baseAccount = JsonNullable.undefined();
+  private ReportDefinitionServiceAccount baseAccount = null;
 
   @JsonProperty("subAccounts")
   @Valid
-  private JsonNullable<List<ReportDefinitionServiceAccount>> subAccounts = JsonNullable.undefined();
+  private List<ReportDefinitionServiceAccount> subAccounts = null;
 
   public ReportDefinitionServiceConversionPathAccountSetting baseAccount(ReportDefinitionServiceAccount baseAccount) {
-    this.baseAccount = JsonNullable.of(baseAccount);
+    this.baseAccount = baseAccount;
     return this;
   }
 
@@ -38,24 +37,24 @@ public class ReportDefinitionServiceConversionPathAccountSetting   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceAccount> getBaseAccount() {
+  public ReportDefinitionServiceAccount getBaseAccount() {
     return baseAccount;
   }
 
-  public void setBaseAccount(JsonNullable<ReportDefinitionServiceAccount> baseAccount) {
+  public void setBaseAccount(ReportDefinitionServiceAccount baseAccount) {
     this.baseAccount = baseAccount;
   }
 
   public ReportDefinitionServiceConversionPathAccountSetting subAccounts(List<ReportDefinitionServiceAccount> subAccounts) {
-    this.subAccounts = JsonNullable.of(subAccounts);
+    this.subAccounts = subAccounts;
     return this;
   }
 
   public ReportDefinitionServiceConversionPathAccountSetting addSubAccountsItem(ReportDefinitionServiceAccount subAccountsItem) {
-    if (this.subAccounts == null || !this.subAccounts.isPresent()) {
-      this.subAccounts = JsonNullable.of(new ArrayList<>());
+    if (this.subAccounts == null) {
+      this.subAccounts = new ArrayList<>();
     }
-    this.subAccounts.get().add(subAccountsItem);
+    this.subAccounts.add(subAccountsItem);
     return this;
   }
 
@@ -67,17 +66,17 @@ public class ReportDefinitionServiceConversionPathAccountSetting   {
 
   @Valid
 
-  public JsonNullable<List<ReportDefinitionServiceAccount>> getSubAccounts() {
+  public List<ReportDefinitionServiceAccount> getSubAccounts() {
     return subAccounts;
   }
 
-  public void setSubAccounts(JsonNullable<List<ReportDefinitionServiceAccount>> subAccounts) {
+  public void setSubAccounts(List<ReportDefinitionServiceAccount> subAccounts) {
     this.subAccounts = subAccounts;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -109,7 +108,7 @@ public class ReportDefinitionServiceConversionPathAccountSetting   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

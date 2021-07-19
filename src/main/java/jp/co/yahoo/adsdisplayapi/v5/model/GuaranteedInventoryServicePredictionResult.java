@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,28 +12,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedInventoryServicePredictionResultオブジェクトは、予約型キャンペーンの予測結果を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedInventoryServicePredictionResult object describes the prediction result of the guaranteed campaign. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedInventoryServicePredictionResultオブジェクトは、予約型キャンペーンの予測結果を表します。 </div> <div lang=\"en\"> GuaranteedInventoryServicePredictionResult object describes the prediction result of the guaranteed campaign. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServicePredictionResult   {
   @JsonProperty("lifetimeBudget")
-  private JsonNullable<Long> lifetimeBudget = JsonNullable.undefined();
+  private Long lifetimeBudget = null;
 
   @JsonProperty("reach")
-  private JsonNullable<Long> reach = JsonNullable.undefined();
+  private Long reach = null;
 
   @JsonProperty("vImps")
-  private JsonNullable<Long> vImps = JsonNullable.undefined();
+  private Long vImps = null;
 
   @JsonProperty("vcpm")
-  private JsonNullable<Long> vcpm = JsonNullable.undefined();
+  private Long vcpm = null;
 
   @JsonProperty("viewableFrequency")
-  private JsonNullable<Double> viewableFrequency = JsonNullable.undefined();
+  private Double viewableFrequency = null;
 
   @JsonProperty("sovRate")
-  private JsonNullable<Double> sovRate = JsonNullable.undefined();
+  private Double sovRate = null;
 
   public GuaranteedInventoryServicePredictionResult lifetimeBudget(Long lifetimeBudget) {
-    this.lifetimeBudget = JsonNullable.of(lifetimeBudget);
+    this.lifetimeBudget = lifetimeBudget;
     return this;
   }
 
@@ -45,16 +44,16 @@ public class GuaranteedInventoryServicePredictionResult   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 通期予算です。<br> ※この「通期予算」は、キャンペーンの全期間を通じて消費される予算を意味します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Lifetime budget.<br> * \"lifetime budget\" means the total budget that is spent throughout the entire duration of the campaign.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getLifetimeBudget() {
+  public Long getLifetimeBudget() {
     return lifetimeBudget;
   }
 
-  public void setLifetimeBudget(JsonNullable<Long> lifetimeBudget) {
+  public void setLifetimeBudget(Long lifetimeBudget) {
     this.lifetimeBudget = lifetimeBudget;
   }
 
   public GuaranteedInventoryServicePredictionResult reach(Long reach) {
-    this.reach = JsonNullable.of(reach);
+    this.reach = reach;
     return this;
   }
 
@@ -65,16 +64,16 @@ public class GuaranteedInventoryServicePredictionResult   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of reaches.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getReach() {
+  public Long getReach() {
     return reach;
   }
 
-  public void setReach(JsonNullable<Long> reach) {
+  public void setReach(Long reach) {
     this.reach = reach;
   }
 
   public GuaranteedInventoryServicePredictionResult vImps(Long vImps) {
-    this.vImps = JsonNullable.of(vImps);
+    this.vImps = vImps;
     return this;
   }
 
@@ -85,16 +84,16 @@ public class GuaranteedInventoryServicePredictionResult   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ビューアブルインプレッションです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Viewable impressions.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getvImps() {
+  public Long getvImps() {
     return vImps;
   }
 
-  public void setvImps(JsonNullable<Long> vImps) {
+  public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
 
   public GuaranteedInventoryServicePredictionResult vcpm(Long vcpm) {
-    this.vcpm = JsonNullable.of(vcpm);
+    this.vcpm = vcpm;
     return this;
   }
 
@@ -105,16 +104,16 @@ public class GuaranteedInventoryServicePredictionResult   {
   @ApiModelProperty(value = "<div lang=\"ja\"> vCPMです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> VCPM.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getVcpm() {
+  public Long getVcpm() {
     return vcpm;
   }
 
-  public void setVcpm(JsonNullable<Long> vcpm) {
+  public void setVcpm(Long vcpm) {
     this.vcpm = vcpm;
   }
 
   public GuaranteedInventoryServicePredictionResult viewableFrequency(Double viewableFrequency) {
-    this.viewableFrequency = JsonNullable.of(viewableFrequency);
+    this.viewableFrequency = viewableFrequency;
     return this;
   }
 
@@ -125,16 +124,16 @@ public class GuaranteedInventoryServicePredictionResult   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ビューアブルフリークエンシーです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Viewable frequency.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Double> getViewableFrequency() {
+  public Double getViewableFrequency() {
     return viewableFrequency;
   }
 
-  public void setViewableFrequency(JsonNullable<Double> viewableFrequency) {
+  public void setViewableFrequency(Double viewableFrequency) {
     this.viewableFrequency = viewableFrequency;
   }
 
   public GuaranteedInventoryServicePredictionResult sovRate(Double sovRate) {
-    this.sovRate = JsonNullable.of(sovRate);
+    this.sovRate = sovRate;
     return this;
   }
 
@@ -145,17 +144,17 @@ public class GuaranteedInventoryServicePredictionResult   {
   @ApiModelProperty(value = "<div lang=\"ja\"> SOV（0.0%〜100.0%）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> SOV (0.0% to 100.0%).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Double> getSovRate() {
+  public Double getSovRate() {
     return sovRate;
   }
 
-  public void setSovRate(JsonNullable<Double> sovRate) {
+  public void setSovRate(Double sovRate) {
     this.sovRate = sovRate;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -195,7 +194,7 @@ public class GuaranteedInventoryServicePredictionResult   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

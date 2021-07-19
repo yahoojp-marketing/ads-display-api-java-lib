@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceEstimateFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceGender;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceGenderTargetオブジェクトは、性別ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceGenderTarget object holds configuration information of gender targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceGenderTargetオブジェクトは、性別ターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceGenderTarget object holds configuration information of gender targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceGenderTarget   {
   @JsonProperty("estimateFlg")
-  private JsonNullable<StatsServiceEstimateFlg> estimateFlg = JsonNullable.undefined();
+  private StatsServiceEstimateFlg estimateFlg = null;
 
   @JsonProperty("gender")
-  private JsonNullable<StatsServiceGender> gender = JsonNullable.undefined();
+  private StatsServiceGender gender = null;
 
   public StatsServiceGenderTarget estimateFlg(StatsServiceEstimateFlg estimateFlg) {
-    this.estimateFlg = JsonNullable.of(estimateFlg);
+    this.estimateFlg = estimateFlg;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class StatsServiceGenderTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceEstimateFlg> getEstimateFlg() {
+  public StatsServiceEstimateFlg getEstimateFlg() {
     return estimateFlg;
   }
 
-  public void setEstimateFlg(JsonNullable<StatsServiceEstimateFlg> estimateFlg) {
+  public void setEstimateFlg(StatsServiceEstimateFlg estimateFlg) {
     this.estimateFlg = estimateFlg;
   }
 
   public StatsServiceGenderTarget gender(StatsServiceGender gender) {
-    this.gender = JsonNullable.of(gender);
+    this.gender = gender;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class StatsServiceGenderTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServiceGender> getGender() {
+  public StatsServiceGender getGender() {
     return gender;
   }
 
-  public void setGender(JsonNullable<StatsServiceGender> gender) {
+  public void setGender(StatsServiceGender gender) {
     this.gender = gender;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class StatsServiceGenderTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

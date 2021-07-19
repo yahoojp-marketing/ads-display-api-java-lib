@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceIsOpen;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceIsPreset;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceRule;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,26 +17,26 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceRuleTargetListオブジェクトは、ルール設定のリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※targetListTypeがDEFAULT_LISTまたはRULEの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceRuleTargetList object displays the list of rule settings.&lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If targetListType is DEFAULT_LIST, this field is required in ADD and SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceRuleTargetListオブジェクトは、ルール設定のリストを表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※targetListTypeがDEFAULT_LISTまたはRULEの場合は、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> RetargetingListServiceRuleTargetList object displays the list of rule settings.<br> This field is optional in ADD and SET operation. <br> *If targetListType is DEFAULT_LIST, this field is required in ADD and SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceRuleTargetList   {
   @JsonProperty("isOpen")
-  private JsonNullable<RetargetingListServiceIsOpen> isOpen = JsonNullable.undefined();
+  private RetargetingListServiceIsOpen isOpen = null;
 
   @JsonProperty("isPreset")
-  private JsonNullable<RetargetingListServiceIsPreset> isPreset = JsonNullable.undefined();
+  private RetargetingListServiceIsPreset isPreset = null;
 
   @JsonProperty("reachPeriod")
-  private JsonNullable<Integer> reachPeriod = JsonNullable.undefined();
+  private Integer reachPeriod = null;
 
   @JsonProperty("retargetingTagId")
-  private JsonNullable<String> retargetingTagId = JsonNullable.undefined();
+  private String retargetingTagId = null;
 
   @JsonProperty("rules")
   @Valid
-  private JsonNullable<List<RetargetingListServiceRule>> rules = JsonNullable.undefined();
+  private List<RetargetingListServiceRule> rules = null;
 
   public RetargetingListServiceRuleTargetList isOpen(RetargetingListServiceIsOpen isOpen) {
-    this.isOpen = JsonNullable.of(isOpen);
+    this.isOpen = isOpen;
     return this;
   }
 
@@ -49,16 +48,16 @@ public class RetargetingListServiceRuleTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceIsOpen> getIsOpen() {
+  public RetargetingListServiceIsOpen getIsOpen() {
     return isOpen;
   }
 
-  public void setIsOpen(JsonNullable<RetargetingListServiceIsOpen> isOpen) {
+  public void setIsOpen(RetargetingListServiceIsOpen isOpen) {
     this.isOpen = isOpen;
   }
 
   public RetargetingListServiceRuleTargetList isPreset(RetargetingListServiceIsPreset isPreset) {
-    this.isPreset = JsonNullable.of(isPreset);
+    this.isPreset = isPreset;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class RetargetingListServiceRuleTargetList   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceIsPreset> getIsPreset() {
+  public RetargetingListServiceIsPreset getIsPreset() {
     return isPreset;
   }
 
-  public void setIsPreset(JsonNullable<RetargetingListServiceIsPreset> isPreset) {
+  public void setIsPreset(RetargetingListServiceIsPreset isPreset) {
     this.isPreset = isPreset;
   }
 
   public RetargetingListServiceRuleTargetList reachPeriod(Integer reachPeriod) {
-    this.reachPeriod = JsonNullable.of(reachPeriod);
+    this.reachPeriod = reachPeriod;
     return this;
   }
 
@@ -90,16 +89,16 @@ public class RetargetingListServiceRuleTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リーチの蓄積期間（1日～540日）です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Cookies validation period. (1 - 540 days) <br> This field is required in ADD operation, and is optional in SET operation. </div> ")
 
 
-  public JsonNullable<Integer> getReachPeriod() {
+  public Integer getReachPeriod() {
     return reachPeriod;
   }
 
-  public void setReachPeriod(JsonNullable<Integer> reachPeriod) {
+  public void setReachPeriod(Integer reachPeriod) {
     this.reachPeriod = reachPeriod;
   }
 
   public RetargetingListServiceRuleTargetList retargetingTagId(String retargetingTagId) {
-    this.retargetingTagId = JsonNullable.of(retargetingTagId);
+    this.retargetingTagId = retargetingTagId;
     return this;
   }
 
@@ -110,24 +109,24 @@ public class RetargetingListServiceRuleTargetList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リターゲティングタグIDです。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> ID of Retargeting Tag. <br> This field is required in ADD operation. </div> ")
 
 
-  public JsonNullable<String> getRetargetingTagId() {
+  public String getRetargetingTagId() {
     return retargetingTagId;
   }
 
-  public void setRetargetingTagId(JsonNullable<String> retargetingTagId) {
+  public void setRetargetingTagId(String retargetingTagId) {
     this.retargetingTagId = retargetingTagId;
   }
 
   public RetargetingListServiceRuleTargetList rules(List<RetargetingListServiceRule> rules) {
-    this.rules = JsonNullable.of(rules);
+    this.rules = rules;
     return this;
   }
 
   public RetargetingListServiceRuleTargetList addRulesItem(RetargetingListServiceRule rulesItem) {
-    if (this.rules == null || !this.rules.isPresent()) {
-      this.rules = JsonNullable.of(new ArrayList<>());
+    if (this.rules == null) {
+      this.rules = new ArrayList<>();
     }
-    this.rules.get().add(rulesItem);
+    this.rules.add(rulesItem);
     return this;
   }
 
@@ -139,17 +138,17 @@ public class RetargetingListServiceRuleTargetList   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceRule>> getRules() {
+  public List<RetargetingListServiceRule> getRules() {
     return rules;
   }
 
-  public void setRules(JsonNullable<List<RetargetingListServiceRule>> rules) {
+  public void setRules(List<RetargetingListServiceRule> rules) {
     this.rules = rules;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -187,7 +186,7 @@ public class RetargetingListServiceRuleTargetList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

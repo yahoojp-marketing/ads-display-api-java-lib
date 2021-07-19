@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePositionType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedSimulationServicePositionTargetオブジェクトは、ポジションターゲティングの設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがPOSITION_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedSimulationServicePositionTarget object is a container for storing position targeting settings.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; ∗If targetType is POSITION_TARGET, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedSimulationServicePositionTargetオブジェクトは、ポジションターゲティングの設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。<br> ※targetTypeがPOSITION_TARGETの場合は必須です。 </div> <div lang=\"en\"> GuaranteedSimulationServicePositionTarget object is a container for storing position targeting settings.<br> This field is optional in ADD operation.<br> ∗If targetType is POSITION_TARGET, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePositionTarget   {
   @JsonProperty("positionType")
-  private JsonNullable<GuaranteedSimulationServicePositionType> positionType = JsonNullable.undefined();
+  private GuaranteedSimulationServicePositionType positionType = null;
 
   public GuaranteedSimulationServicePositionTarget positionType(GuaranteedSimulationServicePositionType positionType) {
-    this.positionType = JsonNullable.of(positionType);
+    this.positionType = positionType;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class GuaranteedSimulationServicePositionTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePositionType> getPositionType() {
+  public GuaranteedSimulationServicePositionType getPositionType() {
     return positionType;
   }
 
-  public void setPositionType(JsonNullable<GuaranteedSimulationServicePositionType> positionType) {
+  public void setPositionType(GuaranteedSimulationServicePositionType positionType) {
     this.positionType = positionType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class GuaranteedSimulationServicePositionTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceTargetListDeliverType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedSimulationServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSITE_RETARGETINGの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedSimulationServiceSiteRetargetingTarget object is a container for storing site retargeting settings.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; ∗If targetType is SITE_RETARGETING, this field is required. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedSimulationServiceSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。<br> ADD時、このフィールドは省略可能となります。<br> ※targetTypeがSITE_RETARGETINGの場合は必須です。 </div> <div lang=\"en\"> GuaranteedSimulationServiceSiteRetargetingTarget object is a container for storing site retargeting settings.<br> This field is optional in ADD operation.<br> ∗If targetType is SITE_RETARGETING, this field is required. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceSiteRetargetingTarget   {
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   @JsonProperty("deliverType")
-  private JsonNullable<GuaranteedSimulationServiceTargetListDeliverType> deliverType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceTargetListDeliverType deliverType = null;
 
   public GuaranteedSimulationServiceSiteRetargetingTarget targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class GuaranteedSimulationServiceSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Target list name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
   public GuaranteedSimulationServiceSiteRetargetingTarget deliverType(GuaranteedSimulationServiceTargetListDeliverType deliverType) {
-    this.deliverType = JsonNullable.of(deliverType);
+    this.deliverType = deliverType;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class GuaranteedSimulationServiceSiteRetargetingTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceTargetListDeliverType> getDeliverType() {
+  public GuaranteedSimulationServiceTargetListDeliverType getDeliverType() {
     return deliverType;
   }
 
-  public void setDeliverType(JsonNullable<GuaranteedSimulationServiceTargetListDeliverType> deliverType) {
+  public void setDeliverType(GuaranteedSimulationServiceTargetListDeliverType deliverType) {
     this.deliverType = deliverType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class GuaranteedSimulationServiceSiteRetargetingTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

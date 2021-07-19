@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceCreatedDateRange;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceUserStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,31 +17,31 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MediaServiceSelectorオブジェクトは、操作の対象とする画像およびフィルタ条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The MediaServiceSelector object serves operation target media and filtering condition.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">MediaServiceSelectorオブジェクトは、操作の対象とする画像およびフィルタ条件を表します。</div> <div lang=\"en\">The MediaServiceSelector object serves operation target media and filtering condition.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class MediaServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("approvalStatuses")
   @Valid
-  private JsonNullable<List<MediaServiceApprovalStatus>> approvalStatuses = JsonNullable.undefined();
+  private List<MediaServiceApprovalStatus> approvalStatuses = null;
 
   @JsonProperty("mediaIds")
   @Valid
-  private JsonNullable<List<Long>> mediaIds = JsonNullable.undefined();
+  private List<Long> mediaIds = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("userStatuses")
   @Valid
-  private JsonNullable<List<MediaServiceUserStatus>> userStatuses = JsonNullable.undefined();
+  private List<MediaServiceUserStatus> userStatuses = null;
 
   @JsonProperty("createdDateRange")
-  private JsonNullable<MediaServiceCreatedDateRange> createdDateRange = JsonNullable.undefined();
+  private MediaServiceCreatedDateRange createdDateRange = null;
 
   public MediaServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -66,15 +65,15 @@ public class MediaServiceSelector   {
   }
 
   public MediaServiceSelector approvalStatuses(List<MediaServiceApprovalStatus> approvalStatuses) {
-    this.approvalStatuses = JsonNullable.of(approvalStatuses);
+    this.approvalStatuses = approvalStatuses;
     return this;
   }
 
   public MediaServiceSelector addApprovalStatusesItem(MediaServiceApprovalStatus approvalStatusesItem) {
-    if (this.approvalStatuses == null || !this.approvalStatuses.isPresent()) {
-      this.approvalStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.approvalStatuses == null) {
+      this.approvalStatuses = new ArrayList<>();
     }
-    this.approvalStatuses.get().add(approvalStatusesItem);
+    this.approvalStatuses.add(approvalStatusesItem);
     return this;
   }
 
@@ -86,24 +85,24 @@ public class MediaServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<MediaServiceApprovalStatus>> getApprovalStatuses() {
+  public List<MediaServiceApprovalStatus> getApprovalStatuses() {
     return approvalStatuses;
   }
 
-  public void setApprovalStatuses(JsonNullable<List<MediaServiceApprovalStatus>> approvalStatuses) {
+  public void setApprovalStatuses(List<MediaServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
   public MediaServiceSelector mediaIds(List<Long> mediaIds) {
-    this.mediaIds = JsonNullable.of(mediaIds);
+    this.mediaIds = mediaIds;
     return this;
   }
 
   public MediaServiceSelector addMediaIdsItem(Long mediaIdsItem) {
-    if (this.mediaIds == null || !this.mediaIds.isPresent()) {
-      this.mediaIds = JsonNullable.of(new ArrayList<>());
+    if (this.mediaIds == null) {
+      this.mediaIds = new ArrayList<>();
     }
-    this.mediaIds.get().add(mediaIdsItem);
+    this.mediaIds.add(mediaIdsItem);
     return this;
   }
 
@@ -114,16 +113,16 @@ public class MediaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像IDです。</div> <div lang=\"en\">The media ID.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getMediaIds() {
+  public List<Long> getMediaIds() {
     return mediaIds;
   }
 
-  public void setMediaIds(JsonNullable<List<Long>> mediaIds) {
+  public void setMediaIds(List<Long> mediaIds) {
     this.mediaIds = mediaIds;
   }
 
   public MediaServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -136,16 +135,16 @@ public class MediaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public MediaServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -157,24 +156,24 @@ public class MediaServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public MediaServiceSelector userStatuses(List<MediaServiceUserStatus> userStatuses) {
-    this.userStatuses = JsonNullable.of(userStatuses);
+    this.userStatuses = userStatuses;
     return this;
   }
 
   public MediaServiceSelector addUserStatusesItem(MediaServiceUserStatus userStatusesItem) {
-    if (this.userStatuses == null || !this.userStatuses.isPresent()) {
-      this.userStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.userStatuses == null) {
+      this.userStatuses = new ArrayList<>();
     }
-    this.userStatuses.get().add(userStatusesItem);
+    this.userStatuses.add(userStatusesItem);
     return this;
   }
 
@@ -186,16 +185,16 @@ public class MediaServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<MediaServiceUserStatus>> getUserStatuses() {
+  public List<MediaServiceUserStatus> getUserStatuses() {
     return userStatuses;
   }
 
-  public void setUserStatuses(JsonNullable<List<MediaServiceUserStatus>> userStatuses) {
+  public void setUserStatuses(List<MediaServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
   public MediaServiceSelector createdDateRange(MediaServiceCreatedDateRange createdDateRange) {
-    this.createdDateRange = JsonNullable.of(createdDateRange);
+    this.createdDateRange = createdDateRange;
     return this;
   }
 
@@ -207,17 +206,17 @@ public class MediaServiceSelector   {
 
   @Valid
 
-  public JsonNullable<MediaServiceCreatedDateRange> getCreatedDateRange() {
+  public MediaServiceCreatedDateRange getCreatedDateRange() {
     return createdDateRange;
   }
 
-  public void setCreatedDateRange(JsonNullable<MediaServiceCreatedDateRange> createdDateRange) {
+  public void setCreatedDateRange(MediaServiceCreatedDateRange createdDateRange) {
     this.createdDateRange = createdDateRange;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -259,7 +258,7 @@ public class MediaServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

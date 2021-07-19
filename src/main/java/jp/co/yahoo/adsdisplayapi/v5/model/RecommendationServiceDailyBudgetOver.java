@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceDailyBudgetOverCampaign;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDailyBudgetOverオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDailyBudgetOver object describes recommendation information about campaigns that reached the daily budget.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceDailyBudgetOverオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceDailyBudgetOver object describes recommendation information about campaigns that reached the daily budget.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceDailyBudgetOver   {
   @JsonProperty("dailyBudgetOverCampaignList")
   @Valid
-  private JsonNullable<List<RecommendationServiceDailyBudgetOverCampaign>> dailyBudgetOverCampaignList = JsonNullable.undefined();
+  private List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList = null;
 
   public RecommendationServiceDailyBudgetOver dailyBudgetOverCampaignList(List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList) {
-    this.dailyBudgetOverCampaignList = JsonNullable.of(dailyBudgetOverCampaignList);
+    this.dailyBudgetOverCampaignList = dailyBudgetOverCampaignList;
     return this;
   }
 
   public RecommendationServiceDailyBudgetOver addDailyBudgetOverCampaignListItem(RecommendationServiceDailyBudgetOverCampaign dailyBudgetOverCampaignListItem) {
-    if (this.dailyBudgetOverCampaignList == null || !this.dailyBudgetOverCampaignList.isPresent()) {
-      this.dailyBudgetOverCampaignList = JsonNullable.of(new ArrayList<>());
+    if (this.dailyBudgetOverCampaignList == null) {
+      this.dailyBudgetOverCampaignList = new ArrayList<>();
     }
-    this.dailyBudgetOverCampaignList.get().add(dailyBudgetOverCampaignListItem);
+    this.dailyBudgetOverCampaignList.add(dailyBudgetOverCampaignListItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RecommendationServiceDailyBudgetOver   {
 
   @Valid
 
-  public JsonNullable<List<RecommendationServiceDailyBudgetOverCampaign>> getDailyBudgetOverCampaignList() {
+  public List<RecommendationServiceDailyBudgetOverCampaign> getDailyBudgetOverCampaignList() {
     return dailyBudgetOverCampaignList;
   }
 
-  public void setDailyBudgetOverCampaignList(JsonNullable<List<RecommendationServiceDailyBudgetOverCampaign>> dailyBudgetOverCampaignList) {
+  public void setDailyBudgetOverCampaignList(List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList) {
     this.dailyBudgetOverCampaignList = dailyBudgetOverCampaignList;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RecommendationServiceDailyBudgetOver   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceTargetListDeliverType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,19 +13,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedSiteRetargetingTarget object is a container for site retargeting settings.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedSiteRetargetingTargetオブジェクトは、サイトリターゲティングの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedSiteRetargetingTarget object is a container for site retargeting settings.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedSiteRetargetingTarget   {
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("targetListDeliverType")
-  private JsonNullable<GuaranteedSimulationServiceTargetListDeliverType> targetListDeliverType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceTargetListDeliverType targetListDeliverType = null;
 
   @JsonProperty("targetListName")
-  private JsonNullable<String> targetListName = JsonNullable.undefined();
+  private String targetListName = null;
 
   public GuaranteedSimulationServicePermittedSiteRetargetingTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -37,16 +36,16 @@ public class GuaranteedSimulationServicePermittedSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットIDです。</div> <div lang=\"en\">Target ID.</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServicePermittedSiteRetargetingTarget targetListDeliverType(GuaranteedSimulationServiceTargetListDeliverType targetListDeliverType) {
-    this.targetListDeliverType = JsonNullable.of(targetListDeliverType);
+    this.targetListDeliverType = targetListDeliverType;
     return this;
   }
 
@@ -58,16 +57,16 @@ public class GuaranteedSimulationServicePermittedSiteRetargetingTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceTargetListDeliverType> getTargetListDeliverType() {
+  public GuaranteedSimulationServiceTargetListDeliverType getTargetListDeliverType() {
     return targetListDeliverType;
   }
 
-  public void setTargetListDeliverType(JsonNullable<GuaranteedSimulationServiceTargetListDeliverType> targetListDeliverType) {
+  public void setTargetListDeliverType(GuaranteedSimulationServiceTargetListDeliverType targetListDeliverType) {
     this.targetListDeliverType = targetListDeliverType;
   }
 
   public GuaranteedSimulationServicePermittedSiteRetargetingTarget targetListName(String targetListName) {
-    this.targetListName = JsonNullable.of(targetListName);
+    this.targetListName = targetListName;
     return this;
   }
 
@@ -78,17 +77,17 @@ public class GuaranteedSimulationServicePermittedSiteRetargetingTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットリスト名です。</div> <div lang=\"en\">Target list name.</div> ")
 
 
-  public JsonNullable<String> getTargetListName() {
+  public String getTargetListName() {
     return targetListName;
   }
 
-  public void setTargetListName(JsonNullable<String> targetListName) {
+  public void setTargetListName(String targetListName) {
     this.targetListName = targetListName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -122,7 +121,7 @@ public class GuaranteedSimulationServicePermittedSiteRetargetingTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

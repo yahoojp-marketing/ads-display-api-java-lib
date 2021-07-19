@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignServiceAutoCampaignConversionOptimizer;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignServiceConversionOptimizerType;
 import jp.co.yahoo.adsdisplayapi.v5.model.CampaignServiceManualCampaignConversionOptimizer;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,19 +15,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceConversionOptimizerは、コンバージョン最適化制御を保持するオブジェクトです。&lt;br&gt; このフィールドは、SET時に省略可能となり、ADDおよびREMOVE時に無視されます。&lt;br&gt; ※SET時、目的ありの場合は設定不可となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionOptimizer retains conversion optimization control.&lt;br&gt; This field is optional in SET operation, and will be ignored in ADD and REMOVE operation. &lt;br&gt; *For campaign with campaign goal, this field cannot be set in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> CampaignServiceConversionOptimizerは、コンバージョン最適化制御を保持するオブジェクトです。<br> このフィールドは、SET時に省略可能となり、ADDおよびREMOVE時に無視されます。<br> ※SET時、目的ありの場合は設定不可となります。 </div> <div lang=\"en\"> CampaignServiceConversionOptimizer retains conversion optimization control.<br> This field is optional in SET operation, and will be ignored in ADD and REMOVE operation. <br> *For campaign with campaign goal, this field cannot be set in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceConversionOptimizer   {
   @JsonProperty("autoCampaignConversionOptimizer")
-  private JsonNullable<CampaignServiceAutoCampaignConversionOptimizer> autoCampaignConversionOptimizer = JsonNullable.undefined();
+  private CampaignServiceAutoCampaignConversionOptimizer autoCampaignConversionOptimizer = null;
 
   @JsonProperty("conversionOptimizerType")
-  private JsonNullable<CampaignServiceConversionOptimizerType> conversionOptimizerType = JsonNullable.undefined();
+  private CampaignServiceConversionOptimizerType conversionOptimizerType = null;
 
   @JsonProperty("manualCampaignConversionOptimizer")
-  private JsonNullable<CampaignServiceManualCampaignConversionOptimizer> manualCampaignConversionOptimizer = JsonNullable.undefined();
+  private CampaignServiceManualCampaignConversionOptimizer manualCampaignConversionOptimizer = null;
 
   public CampaignServiceConversionOptimizer autoCampaignConversionOptimizer(CampaignServiceAutoCampaignConversionOptimizer autoCampaignConversionOptimizer) {
-    this.autoCampaignConversionOptimizer = JsonNullable.of(autoCampaignConversionOptimizer);
+    this.autoCampaignConversionOptimizer = autoCampaignConversionOptimizer;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class CampaignServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceAutoCampaignConversionOptimizer> getAutoCampaignConversionOptimizer() {
+  public CampaignServiceAutoCampaignConversionOptimizer getAutoCampaignConversionOptimizer() {
     return autoCampaignConversionOptimizer;
   }
 
-  public void setAutoCampaignConversionOptimizer(JsonNullable<CampaignServiceAutoCampaignConversionOptimizer> autoCampaignConversionOptimizer) {
+  public void setAutoCampaignConversionOptimizer(CampaignServiceAutoCampaignConversionOptimizer autoCampaignConversionOptimizer) {
     this.autoCampaignConversionOptimizer = autoCampaignConversionOptimizer;
   }
 
   public CampaignServiceConversionOptimizer conversionOptimizerType(CampaignServiceConversionOptimizerType conversionOptimizerType) {
-    this.conversionOptimizerType = JsonNullable.of(conversionOptimizerType);
+    this.conversionOptimizerType = conversionOptimizerType;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class CampaignServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceConversionOptimizerType> getConversionOptimizerType() {
+  public CampaignServiceConversionOptimizerType getConversionOptimizerType() {
     return conversionOptimizerType;
   }
 
-  public void setConversionOptimizerType(JsonNullable<CampaignServiceConversionOptimizerType> conversionOptimizerType) {
+  public void setConversionOptimizerType(CampaignServiceConversionOptimizerType conversionOptimizerType) {
     this.conversionOptimizerType = conversionOptimizerType;
   }
 
   public CampaignServiceConversionOptimizer manualCampaignConversionOptimizer(CampaignServiceManualCampaignConversionOptimizer manualCampaignConversionOptimizer) {
-    this.manualCampaignConversionOptimizer = JsonNullable.of(manualCampaignConversionOptimizer);
+    this.manualCampaignConversionOptimizer = manualCampaignConversionOptimizer;
     return this;
   }
 
@@ -82,17 +81,17 @@ public class CampaignServiceConversionOptimizer   {
 
   @Valid
 
-  public JsonNullable<CampaignServiceManualCampaignConversionOptimizer> getManualCampaignConversionOptimizer() {
+  public CampaignServiceManualCampaignConversionOptimizer getManualCampaignConversionOptimizer() {
     return manualCampaignConversionOptimizer;
   }
 
-  public void setManualCampaignConversionOptimizer(JsonNullable<CampaignServiceManualCampaignConversionOptimizer> manualCampaignConversionOptimizer) {
+  public void setManualCampaignConversionOptimizer(CampaignServiceManualCampaignConversionOptimizer manualCampaignConversionOptimizer) {
     this.manualCampaignConversionOptimizer = manualCampaignConversionOptimizer;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -126,7 +125,7 @@ public class CampaignServiceConversionOptimizer   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

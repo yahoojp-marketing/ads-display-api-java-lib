@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,17 +14,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountAuthorityServiceSelectorオブジェクトは、操作の対象とするアカウント権限を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountAuthorityServiceSelector object displays the account authority for the operations.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountAuthorityServiceSelectorオブジェクトは、操作の対象とするアカウント権限を表します。</div> <div lang=\"en\">The AccountAuthorityServiceSelector object displays the account authority for the operations.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountAuthorityServiceSelector   {
   @JsonProperty("accountIds")
   @Valid
   private List<Long> accountIds = new ArrayList<>();
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AccountAuthorityServiceSelector accountIds(List<Long> accountIds) {
     this.accountIds = accountIds;
@@ -33,6 +32,9 @@ public class AccountAuthorityServiceSelector   {
   }
 
   public AccountAuthorityServiceSelector addAccountIdsItem(Long accountIdsItem) {
+    if (this.accountIds == null) {
+      this.accountIds = new ArrayList<>();
+    }
     this.accountIds.add(accountIdsItem);
     return this;
   }
@@ -54,7 +56,7 @@ public class AccountAuthorityServiceSelector   {
   }
 
   public AccountAuthorityServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -67,16 +69,16 @@ public class AccountAuthorityServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">The page's beginning of index. One or more must be selected for this field.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AccountAuthorityServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -88,17 +90,17 @@ public class AccountAuthorityServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">The maximum number of pages. Zero or more must be selected for this field.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -132,7 +134,7 @@ public class AccountAuthorityServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -11,7 +11,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.StatsServicePeriodCustomDate;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceStatsPeriod;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceTargetType;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -19,45 +18,45 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSelector object is a container that includes the search conditions (execution parameters) of get methods.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">StatsServiceSelector object is a container that includes the search conditions (execution parameters) of get methods.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("campaignIds")
   @Valid
-  private JsonNullable<List<Long>> campaignIds = JsonNullable.undefined();
+  private List<Long> campaignIds = null;
 
   @JsonProperty("adGroupIds")
   @Valid
-  private JsonNullable<List<Long>> adGroupIds = JsonNullable.undefined();
+  private List<Long> adGroupIds = null;
 
   @JsonProperty("adIds")
   @Valid
-  private JsonNullable<List<Long>> adIds = JsonNullable.undefined();
+  private List<Long> adIds = null;
 
   @JsonProperty("mediaIds")
   @Valid
-  private JsonNullable<List<Long>> mediaIds = JsonNullable.undefined();
+  private List<Long> mediaIds = null;
 
   @JsonProperty("statsPeriod")
-  private JsonNullable<StatsServiceStatsPeriod> statsPeriod = JsonNullable.undefined();
+  private StatsServiceStatsPeriod statsPeriod = null;
 
   @JsonProperty("periodCustomDate")
-  private JsonNullable<StatsServicePeriodCustomDate> periodCustomDate = JsonNullable.undefined();
+  private StatsServicePeriodCustomDate periodCustomDate = null;
 
   @JsonProperty("targetTypes")
   @Valid
-  private JsonNullable<List<StatsServiceTargetType>> targetTypes = JsonNullable.undefined();
+  private List<StatsServiceTargetType> targetTypes = null;
 
   @JsonProperty("type")
-  private JsonNullable<StatsServiceType> type = JsonNullable.undefined();
+  private StatsServiceType type = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   public StatsServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -81,15 +80,15 @@ public class StatsServiceSelector   {
   }
 
   public StatsServiceSelector campaignIds(List<Long> campaignIds) {
-    this.campaignIds = JsonNullable.of(campaignIds);
+    this.campaignIds = campaignIds;
     return this;
   }
 
   public StatsServiceSelector addCampaignIdsItem(Long campaignIdsItem) {
-    if (this.campaignIds == null || !this.campaignIds.isPresent()) {
-      this.campaignIds = JsonNullable.of(new ArrayList<>());
+    if (this.campaignIds == null) {
+      this.campaignIds = new ArrayList<>();
     }
-    this.campaignIds.get().add(campaignIdsItem);
+    this.campaignIds.add(campaignIdsItem);
     return this;
   }
 
@@ -100,24 +99,24 @@ public class StatsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンID<br> typeで「CAMPAIGN」または「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Campaign ID.<br> Available only when &#34;CAMPAIGN&#34; or &#34;ADGROUP&#34; or &#34;AD&#34; or &#34;TARGET&#34; is specified for type. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getCampaignIds() {
+  public List<Long> getCampaignIds() {
     return campaignIds;
   }
 
-  public void setCampaignIds(JsonNullable<List<Long>> campaignIds) {
+  public void setCampaignIds(List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
   public StatsServiceSelector adGroupIds(List<Long> adGroupIds) {
-    this.adGroupIds = JsonNullable.of(adGroupIds);
+    this.adGroupIds = adGroupIds;
     return this;
   }
 
   public StatsServiceSelector addAdGroupIdsItem(Long adGroupIdsItem) {
-    if (this.adGroupIds == null || !this.adGroupIds.isPresent()) {
-      this.adGroupIds = JsonNullable.of(new ArrayList<>());
+    if (this.adGroupIds == null) {
+      this.adGroupIds = new ArrayList<>();
     }
-    this.adGroupIds.get().add(adGroupIdsItem);
+    this.adGroupIds.add(adGroupIdsItem);
     return this;
   }
 
@@ -128,24 +127,24 @@ public class StatsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループID<br> typeで「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Ad group ID.<br> Available only when &#34;ADGROUP&#34; or &#34;AD&#34; or &#34;TARGET&#34; is specified for type. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAdGroupIds() {
+  public List<Long> getAdGroupIds() {
     return adGroupIds;
   }
 
-  public void setAdGroupIds(JsonNullable<List<Long>> adGroupIds) {
+  public void setAdGroupIds(List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
   public StatsServiceSelector adIds(List<Long> adIds) {
-    this.adIds = JsonNullable.of(adIds);
+    this.adIds = adIds;
     return this;
   }
 
   public StatsServiceSelector addAdIdsItem(Long adIdsItem) {
-    if (this.adIds == null || !this.adIds.isPresent()) {
-      this.adIds = JsonNullable.of(new ArrayList<>());
+    if (this.adIds == null) {
+      this.adIds = new ArrayList<>();
     }
-    this.adIds.get().add(adIdsItem);
+    this.adIds.add(adIdsItem);
     return this;
   }
 
@@ -156,24 +155,24 @@ public class StatsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告ID<br> typeで「AD」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Ad ID.<br> Available only when &#34;AD&#34; is specified for type. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAdIds() {
+  public List<Long> getAdIds() {
     return adIds;
   }
 
-  public void setAdIds(JsonNullable<List<Long>> adIds) {
+  public void setAdIds(List<Long> adIds) {
     this.adIds = adIds;
   }
 
   public StatsServiceSelector mediaIds(List<Long> mediaIds) {
-    this.mediaIds = JsonNullable.of(mediaIds);
+    this.mediaIds = mediaIds;
     return this;
   }
 
   public StatsServiceSelector addMediaIdsItem(Long mediaIdsItem) {
-    if (this.mediaIds == null || !this.mediaIds.isPresent()) {
-      this.mediaIds = JsonNullable.of(new ArrayList<>());
+    if (this.mediaIds == null) {
+      this.mediaIds = new ArrayList<>();
     }
-    this.mediaIds.get().add(mediaIdsItem);
+    this.mediaIds.add(mediaIdsItem);
     return this;
   }
 
@@ -184,16 +183,16 @@ public class StatsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 画像ID<br> typeで「MEDIA」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Media ID.<br> Available only when &#34;MEDIA&#34; is specified for type. </div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getMediaIds() {
+  public List<Long> getMediaIds() {
     return mediaIds;
   }
 
-  public void setMediaIds(JsonNullable<List<Long>> mediaIds) {
+  public void setMediaIds(List<Long> mediaIds) {
     this.mediaIds = mediaIds;
   }
 
   public StatsServiceSelector statsPeriod(StatsServiceStatsPeriod statsPeriod) {
-    this.statsPeriod = JsonNullable.of(statsPeriod);
+    this.statsPeriod = statsPeriod;
     return this;
   }
 
@@ -205,16 +204,16 @@ public class StatsServiceSelector   {
 
   @Valid
 
-  public JsonNullable<StatsServiceStatsPeriod> getStatsPeriod() {
+  public StatsServiceStatsPeriod getStatsPeriod() {
     return statsPeriod;
   }
 
-  public void setStatsPeriod(JsonNullable<StatsServiceStatsPeriod> statsPeriod) {
+  public void setStatsPeriod(StatsServiceStatsPeriod statsPeriod) {
     this.statsPeriod = statsPeriod;
   }
 
   public StatsServiceSelector periodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
-    this.periodCustomDate = JsonNullable.of(periodCustomDate);
+    this.periodCustomDate = periodCustomDate;
     return this;
   }
 
@@ -226,24 +225,24 @@ public class StatsServiceSelector   {
 
   @Valid
 
-  public JsonNullable<StatsServicePeriodCustomDate> getPeriodCustomDate() {
+  public StatsServicePeriodCustomDate getPeriodCustomDate() {
     return periodCustomDate;
   }
 
-  public void setPeriodCustomDate(JsonNullable<StatsServicePeriodCustomDate> periodCustomDate) {
+  public void setPeriodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
     this.periodCustomDate = periodCustomDate;
   }
 
   public StatsServiceSelector targetTypes(List<StatsServiceTargetType> targetTypes) {
-    this.targetTypes = JsonNullable.of(targetTypes);
+    this.targetTypes = targetTypes;
     return this;
   }
 
   public StatsServiceSelector addTargetTypesItem(StatsServiceTargetType targetTypesItem) {
-    if (this.targetTypes == null || !this.targetTypes.isPresent()) {
-      this.targetTypes = JsonNullable.of(new ArrayList<>());
+    if (this.targetTypes == null) {
+      this.targetTypes = new ArrayList<>();
     }
-    this.targetTypes.get().add(targetTypesItem);
+    this.targetTypes.add(targetTypesItem);
     return this;
   }
 
@@ -255,16 +254,16 @@ public class StatsServiceSelector   {
 
   @Valid
 @Size(max=4) 
-  public JsonNullable<List<StatsServiceTargetType>> getTargetTypes() {
+  public List<StatsServiceTargetType> getTargetTypes() {
     return targetTypes;
   }
 
-  public void setTargetTypes(JsonNullable<List<StatsServiceTargetType>> targetTypes) {
+  public void setTargetTypes(List<StatsServiceTargetType> targetTypes) {
     this.targetTypes = targetTypes;
   }
 
   public StatsServiceSelector type(StatsServiceType type) {
-    this.type = JsonNullable.of(type);
+    this.type = type;
     return this;
   }
 
@@ -276,16 +275,16 @@ public class StatsServiceSelector   {
 
   @Valid
 
-  public JsonNullable<StatsServiceType> getType() {
+  public StatsServiceType getType() {
     return type;
   }
 
-  public void setType(JsonNullable<StatsServiceType> type) {
+  public void setType(StatsServiceType type) {
     this.type = type;
   }
 
   public StatsServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -297,16 +296,16 @@ public class StatsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
   public StatsServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -319,17 +318,17 @@ public class StatsServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -379,7 +378,7 @@ public class StatsServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

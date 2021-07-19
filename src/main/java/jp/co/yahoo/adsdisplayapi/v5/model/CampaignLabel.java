@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,19 +12,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignLabelオブジェクトは、キャンペーンラベルの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignLabel object describes campaign label information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">CampaignLabelオブジェクトは、キャンペーンラベルの情報を表します。</div> <div lang=\"en\">CampaignLabel object describes campaign label information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignLabel   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("labelId")
-  private JsonNullable<Long> labelId = JsonNullable.undefined();
+  private Long labelId = null;
 
   public CampaignLabel accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class CampaignLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public CampaignLabel campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class CampaignLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public CampaignLabel labelId(Long labelId) {
-    this.labelId = JsonNullable.of(labelId);
+    this.labelId = labelId;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class CampaignLabel   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ラベルIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Label ID.<br> This field is required in requests. </div> ")
 
 
-  public JsonNullable<Long> getLabelId() {
+  public Long getLabelId() {
     return labelId;
   }
 
-  public void setLabelId(JsonNullable<Long> labelId) {
+  public void setLabelId(Long labelId) {
     this.labelId = labelId;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class CampaignLabel   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

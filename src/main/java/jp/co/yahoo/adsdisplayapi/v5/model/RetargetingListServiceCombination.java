@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceLogicalOperator;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingListServiceTargetListData;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,17 +16,17 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceCombinationオブジェクトは、ターゲットリストの組み合わせに関する情報を格納するコンテナです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceCombination object is a container for storing combination of target list information. &lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceCombinationオブジェクトは、ターゲットリストの組み合わせに関する情報を格納するコンテナです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> RetargetingListServiceCombination object is a container for storing combination of target list information. <br> This field is required in ADD and SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceCombination   {
   @JsonProperty("logicalOperator")
-  private JsonNullable<RetargetingListServiceLogicalOperator> logicalOperator = JsonNullable.undefined();
+  private RetargetingListServiceLogicalOperator logicalOperator = null;
 
   @JsonProperty("targetLists")
   @Valid
-  private JsonNullable<List<RetargetingListServiceTargetListData>> targetLists = JsonNullable.undefined();
+  private List<RetargetingListServiceTargetListData> targetLists = null;
 
   public RetargetingListServiceCombination logicalOperator(RetargetingListServiceLogicalOperator logicalOperator) {
-    this.logicalOperator = JsonNullable.of(logicalOperator);
+    this.logicalOperator = logicalOperator;
     return this;
   }
 
@@ -39,24 +38,24 @@ public class RetargetingListServiceCombination   {
 
   @Valid
 
-  public JsonNullable<RetargetingListServiceLogicalOperator> getLogicalOperator() {
+  public RetargetingListServiceLogicalOperator getLogicalOperator() {
     return logicalOperator;
   }
 
-  public void setLogicalOperator(JsonNullable<RetargetingListServiceLogicalOperator> logicalOperator) {
+  public void setLogicalOperator(RetargetingListServiceLogicalOperator logicalOperator) {
     this.logicalOperator = logicalOperator;
   }
 
   public RetargetingListServiceCombination targetLists(List<RetargetingListServiceTargetListData> targetLists) {
-    this.targetLists = JsonNullable.of(targetLists);
+    this.targetLists = targetLists;
     return this;
   }
 
   public RetargetingListServiceCombination addTargetListsItem(RetargetingListServiceTargetListData targetListsItem) {
-    if (this.targetLists == null || !this.targetLists.isPresent()) {
-      this.targetLists = JsonNullable.of(new ArrayList<>());
+    if (this.targetLists == null) {
+      this.targetLists = new ArrayList<>();
     }
-    this.targetLists.get().add(targetListsItem);
+    this.targetLists.add(targetListsItem);
     return this;
   }
 
@@ -68,17 +67,17 @@ public class RetargetingListServiceCombination   {
 
   @Valid
 
-  public JsonNullable<List<RetargetingListServiceTargetListData>> getTargetLists() {
+  public List<RetargetingListServiceTargetListData> getTargetLists() {
     return targetLists;
   }
 
-  public void setTargetLists(JsonNullable<List<RetargetingListServiceTargetListData>> targetLists) {
+  public void setTargetLists(List<RetargetingListServiceTargetListData> targetLists) {
     this.targetLists = targetLists;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -110,7 +109,7 @@ public class RetargetingListServiceCombination   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

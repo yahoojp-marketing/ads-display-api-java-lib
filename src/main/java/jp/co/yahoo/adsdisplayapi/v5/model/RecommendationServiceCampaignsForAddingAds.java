@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.RecommendationServiceCampaignsForAddingAdsCampaign;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceCampaignsForAddingAdsオブジェクトは、入稿していない画像サイズが存在するキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceCampaignsForAddingAds object describes information about Recommendations for the campaign with an image size that have not been submitted.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceCampaignsForAddingAdsオブジェクトは、入稿していない画像サイズが存在するキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceCampaignsForAddingAds object describes information about Recommendations for the campaign with an image size that have not been submitted.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceCampaignsForAddingAds   {
   @JsonProperty("campaignsForAddingAdsList")
   @Valid
-  private JsonNullable<List<RecommendationServiceCampaignsForAddingAdsCampaign>> campaignsForAddingAdsList = JsonNullable.undefined();
+  private List<RecommendationServiceCampaignsForAddingAdsCampaign> campaignsForAddingAdsList = null;
 
   public RecommendationServiceCampaignsForAddingAds campaignsForAddingAdsList(List<RecommendationServiceCampaignsForAddingAdsCampaign> campaignsForAddingAdsList) {
-    this.campaignsForAddingAdsList = JsonNullable.of(campaignsForAddingAdsList);
+    this.campaignsForAddingAdsList = campaignsForAddingAdsList;
     return this;
   }
 
   public RecommendationServiceCampaignsForAddingAds addCampaignsForAddingAdsListItem(RecommendationServiceCampaignsForAddingAdsCampaign campaignsForAddingAdsListItem) {
-    if (this.campaignsForAddingAdsList == null || !this.campaignsForAddingAdsList.isPresent()) {
-      this.campaignsForAddingAdsList = JsonNullable.of(new ArrayList<>());
+    if (this.campaignsForAddingAdsList == null) {
+      this.campaignsForAddingAdsList = new ArrayList<>();
     }
-    this.campaignsForAddingAdsList.get().add(campaignsForAddingAdsListItem);
+    this.campaignsForAddingAdsList.add(campaignsForAddingAdsListItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class RecommendationServiceCampaignsForAddingAds   {
 
   @Valid
 
-  public JsonNullable<List<RecommendationServiceCampaignsForAddingAdsCampaign>> getCampaignsForAddingAdsList() {
+  public List<RecommendationServiceCampaignsForAddingAdsCampaign> getCampaignsForAddingAdsList() {
     return campaignsForAddingAdsList;
   }
 
-  public void setCampaignsForAddingAdsList(JsonNullable<List<RecommendationServiceCampaignsForAddingAdsCampaign>> campaignsForAddingAdsList) {
+  public void setCampaignsForAddingAdsList(List<RecommendationServiceCampaignsForAddingAdsCampaign> campaignsForAddingAdsList) {
     this.campaignsForAddingAdsList = campaignsForAddingAdsList;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class RecommendationServiceCampaignsForAddingAds   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

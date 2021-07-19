@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceGeographicLocationType;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceLang;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,16 +14,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationSelectorオブジェクトは、取得する地域情報のリスト言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationSelector object displays the language selection for retrieving geographic location list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationSelectorオブジェクトは、取得する地域情報のリスト言語を表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocationSelector object displays the language selection for retrieving geographic location list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceGeographicLocationSelector   {
   @JsonProperty("geographicLocationType")
-  private JsonNullable<DictionaryServiceGeographicLocationType> geographicLocationType = JsonNullable.undefined();
+  private DictionaryServiceGeographicLocationType geographicLocationType = null;
 
   @JsonProperty("lang")
-  private JsonNullable<DictionaryServiceLang> lang = JsonNullable.undefined();
+  private DictionaryServiceLang lang = null;
 
   public DictionaryServiceGeographicLocationSelector geographicLocationType(DictionaryServiceGeographicLocationType geographicLocationType) {
-    this.geographicLocationType = JsonNullable.of(geographicLocationType);
+    this.geographicLocationType = geographicLocationType;
     return this;
   }
 
@@ -36,16 +35,16 @@ public class DictionaryServiceGeographicLocationSelector   {
 
   @Valid
 
-  public JsonNullable<DictionaryServiceGeographicLocationType> getGeographicLocationType() {
+  public DictionaryServiceGeographicLocationType getGeographicLocationType() {
     return geographicLocationType;
   }
 
-  public void setGeographicLocationType(JsonNullable<DictionaryServiceGeographicLocationType> geographicLocationType) {
+  public void setGeographicLocationType(DictionaryServiceGeographicLocationType geographicLocationType) {
     this.geographicLocationType = geographicLocationType;
   }
 
   public DictionaryServiceGeographicLocationSelector lang(DictionaryServiceLang lang) {
-    this.lang = JsonNullable.of(lang);
+    this.lang = lang;
     return this;
   }
 
@@ -58,17 +57,17 @@ public class DictionaryServiceGeographicLocationSelector   {
 
   @Valid
 
-  public JsonNullable<DictionaryServiceLang> getLang() {
+  public DictionaryServiceLang getLang() {
     return lang;
   }
 
-  public void setLang(JsonNullable<DictionaryServiceLang> lang) {
+  public void setLang(DictionaryServiceLang lang) {
     this.lang = lang;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -100,7 +99,7 @@ public class DictionaryServiceGeographicLocationSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

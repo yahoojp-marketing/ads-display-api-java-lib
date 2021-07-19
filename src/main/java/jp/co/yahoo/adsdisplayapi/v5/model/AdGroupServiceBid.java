@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceBidType;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceManualCPCBid;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupServiceManualCPVBid;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,19 +15,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceBidオブジェクトは、入札最適化方法を格納するコンテナです。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt; ADD時、このフィールドは指定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceBid object is a container for storing bid optimization method.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; In ADD operation, this field can not be set. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupServiceBidオブジェクトは、入札最適化方法を格納するコンテナです。<br> SET時、このフィールドは省略可能となります。<br> ADD時、このフィールドは指定できません。 </div> <div lang=\"en\"> AdGroupServiceBid object is a container for storing bid optimization method.<br> This field is optional in SET operation.<br> In ADD operation, this field can not be set. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceBid   {
   @JsonProperty("manualCPCBid")
-  private JsonNullable<AdGroupServiceManualCPCBid> manualCPCBid = JsonNullable.undefined();
+  private AdGroupServiceManualCPCBid manualCPCBid = null;
 
   @JsonProperty("manualCPVBid")
-  private JsonNullable<AdGroupServiceManualCPVBid> manualCPVBid = JsonNullable.undefined();
+  private AdGroupServiceManualCPVBid manualCPVBid = null;
 
   @JsonProperty("type")
-  private JsonNullable<AdGroupServiceBidType> type = JsonNullable.undefined();
+  private AdGroupServiceBidType type = null;
 
   public AdGroupServiceBid manualCPCBid(AdGroupServiceManualCPCBid manualCPCBid) {
-    this.manualCPCBid = JsonNullable.of(manualCPCBid);
+    this.manualCPCBid = manualCPCBid;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class AdGroupServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceManualCPCBid> getManualCPCBid() {
+  public AdGroupServiceManualCPCBid getManualCPCBid() {
     return manualCPCBid;
   }
 
-  public void setManualCPCBid(JsonNullable<AdGroupServiceManualCPCBid> manualCPCBid) {
+  public void setManualCPCBid(AdGroupServiceManualCPCBid manualCPCBid) {
     this.manualCPCBid = manualCPCBid;
   }
 
   public AdGroupServiceBid manualCPVBid(AdGroupServiceManualCPVBid manualCPVBid) {
-    this.manualCPVBid = JsonNullable.of(manualCPVBid);
+    this.manualCPVBid = manualCPVBid;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class AdGroupServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceManualCPVBid> getManualCPVBid() {
+  public AdGroupServiceManualCPVBid getManualCPVBid() {
     return manualCPVBid;
   }
 
-  public void setManualCPVBid(JsonNullable<AdGroupServiceManualCPVBid> manualCPVBid) {
+  public void setManualCPVBid(AdGroupServiceManualCPVBid manualCPVBid) {
     this.manualCPVBid = manualCPVBid;
   }
 
   public AdGroupServiceBid type(AdGroupServiceBidType type) {
-    this.type = JsonNullable.of(type);
+    this.type = type;
     return this;
   }
 
@@ -82,17 +81,17 @@ public class AdGroupServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupServiceBidType> getType() {
+  public AdGroupServiceBidType getType() {
     return type;
   }
 
-  public void setType(JsonNullable<AdGroupServiceBidType> type) {
+  public void setType(AdGroupServiceBidType type) {
     this.type = type;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -126,7 +125,7 @@ public class AdGroupServiceBid   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

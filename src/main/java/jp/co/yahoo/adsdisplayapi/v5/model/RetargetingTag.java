@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.RetargetingTagServiceApprovalStatus;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,25 +13,25 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagオブジェクトは、サイトリターゲティングのタグ情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTag objects displays tag information for site retargeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RetargetingTagオブジェクトは、サイトリターゲティングのタグ情報を表します。</div> <div lang=\"en\">RetargetingTag objects displays tag information for site retargeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingTag   {
   @JsonProperty("accountId")
-  private JsonNullable<Long> accountId = JsonNullable.undefined();
+  private Long accountId = null;
 
   @JsonProperty("approvalStatus")
-  private JsonNullable<RetargetingTagServiceApprovalStatus> approvalStatus = JsonNullable.undefined();
+  private RetargetingTagServiceApprovalStatus approvalStatus = null;
 
   @JsonProperty("retargetingTagId")
-  private JsonNullable<String> retargetingTagId = JsonNullable.undefined();
+  private String retargetingTagId = null;
 
   @JsonProperty("tag")
-  private JsonNullable<String> tag = JsonNullable.undefined();
+  private String tag = null;
 
   @JsonProperty("advancedTag")
-  private JsonNullable<String> advancedTag = JsonNullable.undefined();
+  private String advancedTag = null;
 
   public RetargetingTag accountId(Long accountId) {
-    this.accountId = JsonNullable.of(accountId);
+    this.accountId = accountId;
     return this;
   }
 
@@ -43,16 +42,16 @@ public class RetargetingTag   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
 
 
-  public JsonNullable<Long> getAccountId() {
+  public Long getAccountId() {
     return accountId;
   }
 
-  public void setAccountId(JsonNullable<Long> accountId) {
+  public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
 
   public RetargetingTag approvalStatus(RetargetingTagServiceApprovalStatus approvalStatus) {
-    this.approvalStatus = JsonNullable.of(approvalStatus);
+    this.approvalStatus = approvalStatus;
     return this;
   }
 
@@ -64,16 +63,16 @@ public class RetargetingTag   {
 
   @Valid
 
-  public JsonNullable<RetargetingTagServiceApprovalStatus> getApprovalStatus() {
+  public RetargetingTagServiceApprovalStatus getApprovalStatus() {
     return approvalStatus;
   }
 
-  public void setApprovalStatus(JsonNullable<RetargetingTagServiceApprovalStatus> approvalStatus) {
+  public void setApprovalStatus(RetargetingTagServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
   public RetargetingTag retargetingTagId(String retargetingTagId) {
-    this.retargetingTagId = JsonNullable.of(retargetingTagId);
+    this.retargetingTagId = retargetingTagId;
     return this;
   }
 
@@ -84,16 +83,16 @@ public class RetargetingTag   {
   @ApiModelProperty(value = "<div lang=\"ja\">サイトリターゲティングのタグIDです。</div> <div lang=\"en\">Tag ID for site retargeting.</div> ")
 
 
-  public JsonNullable<String> getRetargetingTagId() {
+  public String getRetargetingTagId() {
     return retargetingTagId;
   }
 
-  public void setRetargetingTagId(JsonNullable<String> retargetingTagId) {
+  public void setRetargetingTagId(String retargetingTagId) {
     this.retargetingTagId = retargetingTagId;
   }
 
   public RetargetingTag tag(String tag) {
-    this.tag = JsonNullable.of(tag);
+    this.tag = tag;
     return this;
   }
 
@@ -104,16 +103,16 @@ public class RetargetingTag   {
   @ApiModelProperty(value = "<div lang=\"ja\">サイトリターゲティングタグです。</div> <div lang=\"en\">Tag of site retargeting.</div> ")
 
 
-  public JsonNullable<String> getTag() {
+  public String getTag() {
     return tag;
   }
 
-  public void setTag(JsonNullable<String> tag) {
+  public void setTag(String tag) {
     this.tag = tag;
   }
 
   public RetargetingTag advancedTag(String advancedTag) {
-    this.advancedTag = JsonNullable.of(advancedTag);
+    this.advancedTag = advancedTag;
     return this;
   }
 
@@ -124,17 +123,17 @@ public class RetargetingTag   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。<br> 詳細は、「<a href=\"https://ads-help.yahoo.co.jp/yahooads/ydn/articledetail?lan=ja&aid=1397\">サイトリターゲティングタグの取得とサイトへの設置</a>」を参照してください。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The new format of site retargeting tag avoids the impacts such as changes made to the browser. <br> More details are described on <a href=\"https://ads-help.yahoo.co.jp/yahooads/ydn/articledetail?lan=en&aid=581\">Acquire Site Retargeting Tag and Tagging on Site</a>.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getAdvancedTag() {
+  public String getAdvancedTag() {
     return advancedTag;
   }
 
-  public void setAdvancedTag(JsonNullable<String> advancedTag) {
+  public void setAdvancedTag(String advancedTag) {
     this.advancedTag = advancedTag;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -172,7 +171,7 @@ public class RetargetingTag   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

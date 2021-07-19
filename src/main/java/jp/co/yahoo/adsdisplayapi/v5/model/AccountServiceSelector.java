@@ -12,7 +12,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceIncludeManagerAccount;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceIncludeTestAccount;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -20,48 +19,48 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountServiceSelectorオブジェクトは、取得するアカウントを指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountServiceSelector object is used to select accounts for acquisition.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountServiceSelectorオブジェクトは、取得するアカウントを指定します。</div> <div lang=\"en\">The AccountServiceSelector object is used to select accounts for acquisition.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountServiceSelector   {
   @JsonProperty("accountIds")
   @Valid
-  private JsonNullable<List<Long>> accountIds = JsonNullable.undefined();
+  private List<Long> accountIds = null;
 
   @JsonProperty("accountName")
-  private JsonNullable<String> accountName = JsonNullable.undefined();
+  private String accountName = null;
 
   @JsonProperty("accountStatuses")
   @Valid
-  private JsonNullable<List<AccountServiceStatus>> accountStatuses = JsonNullable.undefined();
+  private List<AccountServiceStatus> accountStatuses = null;
 
   @JsonProperty("accountTypes")
   @Valid
-  private JsonNullable<List<AccountServiceType>> accountTypes = JsonNullable.undefined();
+  private List<AccountServiceType> accountTypes = null;
 
   @JsonProperty("authType")
-  private JsonNullable<AccountServiceAuthType> authType = JsonNullable.undefined();
+  private AccountServiceAuthType authType = null;
 
   @JsonProperty("includeTestAccount")
-  private JsonNullable<AccountServiceIncludeTestAccount> includeTestAccount = JsonNullable.undefined();
+  private AccountServiceIncludeTestAccount includeTestAccount = null;
 
   @JsonProperty("includeManagerAccount")
-  private JsonNullable<AccountServiceIncludeManagerAccount> includeManagerAccount = JsonNullable.undefined();
+  private AccountServiceIncludeManagerAccount includeManagerAccount = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AccountServiceSelector accountIds(List<Long> accountIds) {
-    this.accountIds = JsonNullable.of(accountIds);
+    this.accountIds = accountIds;
     return this;
   }
 
   public AccountServiceSelector addAccountIdsItem(Long accountIdsItem) {
-    if (this.accountIds == null || !this.accountIds.isPresent()) {
-      this.accountIds = JsonNullable.of(new ArrayList<>());
+    if (this.accountIds == null) {
+      this.accountIds = new ArrayList<>();
     }
-    this.accountIds.get().add(accountIdsItem);
+    this.accountIds.add(accountIdsItem);
     return this;
   }
 
@@ -72,16 +71,16 @@ public class AccountServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">指定しない場合は紐づくアカウントをすべて取得します。</div> <div lang=\"en\">If nothing is selected, all accounts are retrieved.</div> ")
 
 @Size(max=500) 
-  public JsonNullable<List<Long>> getAccountIds() {
+  public List<Long> getAccountIds() {
     return accountIds;
   }
 
-  public void setAccountIds(JsonNullable<List<Long>> accountIds) {
+  public void setAccountIds(List<Long> accountIds) {
     this.accountIds = accountIds;
   }
 
   public AccountServiceSelector accountName(String accountName) {
-    this.accountName = JsonNullable.of(accountName);
+    this.accountName = accountName;
     return this;
   }
 
@@ -92,24 +91,24 @@ public class AccountServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">アカウント名です。</div> <div lang=\"en\">Account name.</div> ")
 
 
-  public JsonNullable<String> getAccountName() {
+  public String getAccountName() {
     return accountName;
   }
 
-  public void setAccountName(JsonNullable<String> accountName) {
+  public void setAccountName(String accountName) {
     this.accountName = accountName;
   }
 
   public AccountServiceSelector accountStatuses(List<AccountServiceStatus> accountStatuses) {
-    this.accountStatuses = JsonNullable.of(accountStatuses);
+    this.accountStatuses = accountStatuses;
     return this;
   }
 
   public AccountServiceSelector addAccountStatusesItem(AccountServiceStatus accountStatusesItem) {
-    if (this.accountStatuses == null || !this.accountStatuses.isPresent()) {
-      this.accountStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.accountStatuses == null) {
+      this.accountStatuses = new ArrayList<>();
     }
-    this.accountStatuses.get().add(accountStatusesItem);
+    this.accountStatuses.add(accountStatusesItem);
     return this;
   }
 
@@ -121,24 +120,24 @@ public class AccountServiceSelector   {
 
   @Valid
 @Size(max=6) 
-  public JsonNullable<List<AccountServiceStatus>> getAccountStatuses() {
+  public List<AccountServiceStatus> getAccountStatuses() {
     return accountStatuses;
   }
 
-  public void setAccountStatuses(JsonNullable<List<AccountServiceStatus>> accountStatuses) {
+  public void setAccountStatuses(List<AccountServiceStatus> accountStatuses) {
     this.accountStatuses = accountStatuses;
   }
 
   public AccountServiceSelector accountTypes(List<AccountServiceType> accountTypes) {
-    this.accountTypes = JsonNullable.of(accountTypes);
+    this.accountTypes = accountTypes;
     return this;
   }
 
   public AccountServiceSelector addAccountTypesItem(AccountServiceType accountTypesItem) {
-    if (this.accountTypes == null || !this.accountTypes.isPresent()) {
-      this.accountTypes = JsonNullable.of(new ArrayList<>());
+    if (this.accountTypes == null) {
+      this.accountTypes = new ArrayList<>();
     }
-    this.accountTypes.get().add(accountTypesItem);
+    this.accountTypes.add(accountTypesItem);
     return this;
   }
 
@@ -150,16 +149,16 @@ public class AccountServiceSelector   {
 
   @Valid
 @Size(max=2) 
-  public JsonNullable<List<AccountServiceType>> getAccountTypes() {
+  public List<AccountServiceType> getAccountTypes() {
     return accountTypes;
   }
 
-  public void setAccountTypes(JsonNullable<List<AccountServiceType>> accountTypes) {
+  public void setAccountTypes(List<AccountServiceType> accountTypes) {
     this.accountTypes = accountTypes;
   }
 
   public AccountServiceSelector authType(AccountServiceAuthType authType) {
-    this.authType = JsonNullable.of(authType);
+    this.authType = authType;
     return this;
   }
 
@@ -171,16 +170,16 @@ public class AccountServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AccountServiceAuthType> getAuthType() {
+  public AccountServiceAuthType getAuthType() {
     return authType;
   }
 
-  public void setAuthType(JsonNullable<AccountServiceAuthType> authType) {
+  public void setAuthType(AccountServiceAuthType authType) {
     this.authType = authType;
   }
 
   public AccountServiceSelector includeTestAccount(AccountServiceIncludeTestAccount includeTestAccount) {
-    this.includeTestAccount = JsonNullable.of(includeTestAccount);
+    this.includeTestAccount = includeTestAccount;
     return this;
   }
 
@@ -192,16 +191,16 @@ public class AccountServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AccountServiceIncludeTestAccount> getIncludeTestAccount() {
+  public AccountServiceIncludeTestAccount getIncludeTestAccount() {
     return includeTestAccount;
   }
 
-  public void setIncludeTestAccount(JsonNullable<AccountServiceIncludeTestAccount> includeTestAccount) {
+  public void setIncludeTestAccount(AccountServiceIncludeTestAccount includeTestAccount) {
     this.includeTestAccount = includeTestAccount;
   }
 
   public AccountServiceSelector includeManagerAccount(AccountServiceIncludeManagerAccount includeManagerAccount) {
-    this.includeManagerAccount = JsonNullable.of(includeManagerAccount);
+    this.includeManagerAccount = includeManagerAccount;
     return this;
   }
 
@@ -213,16 +212,16 @@ public class AccountServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AccountServiceIncludeManagerAccount> getIncludeManagerAccount() {
+  public AccountServiceIncludeManagerAccount getIncludeManagerAccount() {
     return includeManagerAccount;
   }
 
-  public void setIncludeManagerAccount(JsonNullable<AccountServiceIncludeManagerAccount> includeManagerAccount) {
+  public void setIncludeManagerAccount(AccountServiceIncludeManagerAccount includeManagerAccount) {
     this.includeManagerAccount = includeManagerAccount;
   }
 
   public AccountServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -235,16 +234,16 @@ public class AccountServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AccountServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -256,17 +255,17 @@ public class AccountServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -312,7 +311,7 @@ public class AccountServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

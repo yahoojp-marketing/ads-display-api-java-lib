@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceDeviceOsType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceOsTargetオブジェクトは、OSターゲティングの設定情報を保持します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceOsTarget object is a container for storing OS targeting settings.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceOsTargetオブジェクトは、OSターゲティングの設定情報を保持します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupTargetServiceOsTarget object is a container for storing OS targeting settings.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceOsTarget   {
   @JsonProperty("deviceOsType")
-  private JsonNullable<AdGroupTargetServiceDeviceOsType> deviceOsType = JsonNullable.undefined();
+  private AdGroupTargetServiceDeviceOsType deviceOsType = null;
 
   public AdGroupTargetServiceOsTarget deviceOsType(AdGroupTargetServiceDeviceOsType deviceOsType) {
-    this.deviceOsType = JsonNullable.of(deviceOsType);
+    this.deviceOsType = deviceOsType;
     return this;
   }
 
@@ -32,17 +31,17 @@ public class AdGroupTargetServiceOsTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceDeviceOsType> getDeviceOsType() {
+  public AdGroupTargetServiceDeviceOsType getDeviceOsType() {
     return deviceOsType;
   }
 
-  public void setDeviceOsType(JsonNullable<AdGroupTargetServiceDeviceOsType> deviceOsType) {
+  public void setDeviceOsType(AdGroupTargetServiceDeviceOsType deviceOsType) {
     this.deviceOsType = deviceOsType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -72,7 +71,7 @@ public class AdGroupTargetServiceOsTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

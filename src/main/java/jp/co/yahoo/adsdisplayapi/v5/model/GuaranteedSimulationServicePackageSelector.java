@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceAdPlaceType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceAdType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceDeviceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,35 +17,35 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackageSelectorオブジェクトは、getPackageメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The GuaranteedSimulationServicePackageSelector object is a container for storing a set of criteria (parameters) for getPackage method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackageSelectorオブジェクトは、getPackageメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The GuaranteedSimulationServicePackageSelector object is a container for storing a set of criteria (parameters) for getPackage method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackageSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("packageName")
-  private JsonNullable<String> packageName = JsonNullable.undefined();
+  private String packageName = null;
 
   @JsonProperty("packageIds")
   @Valid
-  private JsonNullable<List<Long>> packageIds = JsonNullable.undefined();
+  private List<Long> packageIds = null;
 
   @JsonProperty("adPlaceTypes")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceAdPlaceType>> adPlaceTypes = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceAdPlaceType> adPlaceTypes = null;
 
   @JsonProperty("deviceTypes")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceDeviceType>> deviceTypes = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceDeviceType> deviceTypes = null;
 
   @JsonProperty("adTypes")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceAdType>> adTypes = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceAdType> adTypes = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public GuaranteedSimulationServicePackageSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -70,7 +69,7 @@ public class GuaranteedSimulationServicePackageSelector   {
   }
 
   public GuaranteedSimulationServicePackageSelector packageName(String packageName) {
-    this.packageName = JsonNullable.of(packageName);
+    this.packageName = packageName;
     return this;
   }
 
@@ -81,24 +80,24 @@ public class GuaranteedSimulationServicePackageSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">検索条件 : 商品名</div> <div lang=\"en\">Search Condition: Package name</div> ")
 
 
-  public JsonNullable<String> getPackageName() {
+  public String getPackageName() {
     return packageName;
   }
 
-  public void setPackageName(JsonNullable<String> packageName) {
+  public void setPackageName(String packageName) {
     this.packageName = packageName;
   }
 
   public GuaranteedSimulationServicePackageSelector packageIds(List<Long> packageIds) {
-    this.packageIds = JsonNullable.of(packageIds);
+    this.packageIds = packageIds;
     return this;
   }
 
   public GuaranteedSimulationServicePackageSelector addPackageIdsItem(Long packageIdsItem) {
-    if (this.packageIds == null || !this.packageIds.isPresent()) {
-      this.packageIds = JsonNullable.of(new ArrayList<>());
+    if (this.packageIds == null) {
+      this.packageIds = new ArrayList<>();
     }
-    this.packageIds.get().add(packageIdsItem);
+    this.packageIds.add(packageIdsItem);
     return this;
   }
 
@@ -109,24 +108,24 @@ public class GuaranteedSimulationServicePackageSelector   {
   @ApiModelProperty(value = "")
 
 
-  public JsonNullable<List<Long>> getPackageIds() {
+  public List<Long> getPackageIds() {
     return packageIds;
   }
 
-  public void setPackageIds(JsonNullable<List<Long>> packageIds) {
+  public void setPackageIds(List<Long> packageIds) {
     this.packageIds = packageIds;
   }
 
   public GuaranteedSimulationServicePackageSelector adPlaceTypes(List<GuaranteedSimulationServiceAdPlaceType> adPlaceTypes) {
-    this.adPlaceTypes = JsonNullable.of(adPlaceTypes);
+    this.adPlaceTypes = adPlaceTypes;
     return this;
   }
 
   public GuaranteedSimulationServicePackageSelector addAdPlaceTypesItem(GuaranteedSimulationServiceAdPlaceType adPlaceTypesItem) {
-    if (this.adPlaceTypes == null || !this.adPlaceTypes.isPresent()) {
-      this.adPlaceTypes = JsonNullable.of(new ArrayList<>());
+    if (this.adPlaceTypes == null) {
+      this.adPlaceTypes = new ArrayList<>();
     }
-    this.adPlaceTypes.get().add(adPlaceTypesItem);
+    this.adPlaceTypes.add(adPlaceTypesItem);
     return this;
   }
 
@@ -138,24 +137,24 @@ public class GuaranteedSimulationServicePackageSelector   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceAdPlaceType>> getAdPlaceTypes() {
+  public List<GuaranteedSimulationServiceAdPlaceType> getAdPlaceTypes() {
     return adPlaceTypes;
   }
 
-  public void setAdPlaceTypes(JsonNullable<List<GuaranteedSimulationServiceAdPlaceType>> adPlaceTypes) {
+  public void setAdPlaceTypes(List<GuaranteedSimulationServiceAdPlaceType> adPlaceTypes) {
     this.adPlaceTypes = adPlaceTypes;
   }
 
   public GuaranteedSimulationServicePackageSelector deviceTypes(List<GuaranteedSimulationServiceDeviceType> deviceTypes) {
-    this.deviceTypes = JsonNullable.of(deviceTypes);
+    this.deviceTypes = deviceTypes;
     return this;
   }
 
   public GuaranteedSimulationServicePackageSelector addDeviceTypesItem(GuaranteedSimulationServiceDeviceType deviceTypesItem) {
-    if (this.deviceTypes == null || !this.deviceTypes.isPresent()) {
-      this.deviceTypes = JsonNullable.of(new ArrayList<>());
+    if (this.deviceTypes == null) {
+      this.deviceTypes = new ArrayList<>();
     }
-    this.deviceTypes.get().add(deviceTypesItem);
+    this.deviceTypes.add(deviceTypesItem);
     return this;
   }
 
@@ -167,24 +166,24 @@ public class GuaranteedSimulationServicePackageSelector   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceDeviceType>> getDeviceTypes() {
+  public List<GuaranteedSimulationServiceDeviceType> getDeviceTypes() {
     return deviceTypes;
   }
 
-  public void setDeviceTypes(JsonNullable<List<GuaranteedSimulationServiceDeviceType>> deviceTypes) {
+  public void setDeviceTypes(List<GuaranteedSimulationServiceDeviceType> deviceTypes) {
     this.deviceTypes = deviceTypes;
   }
 
   public GuaranteedSimulationServicePackageSelector adTypes(List<GuaranteedSimulationServiceAdType> adTypes) {
-    this.adTypes = JsonNullable.of(adTypes);
+    this.adTypes = adTypes;
     return this;
   }
 
   public GuaranteedSimulationServicePackageSelector addAdTypesItem(GuaranteedSimulationServiceAdType adTypesItem) {
-    if (this.adTypes == null || !this.adTypes.isPresent()) {
-      this.adTypes = JsonNullable.of(new ArrayList<>());
+    if (this.adTypes == null) {
+      this.adTypes = new ArrayList<>();
     }
-    this.adTypes.get().add(adTypesItem);
+    this.adTypes.add(adTypesItem);
     return this;
   }
 
@@ -196,16 +195,16 @@ public class GuaranteedSimulationServicePackageSelector   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceAdType>> getAdTypes() {
+  public List<GuaranteedSimulationServiceAdType> getAdTypes() {
     return adTypes;
   }
 
-  public void setAdTypes(JsonNullable<List<GuaranteedSimulationServiceAdType>> adTypes) {
+  public void setAdTypes(List<GuaranteedSimulationServiceAdType> adTypes) {
     this.adTypes = adTypes;
   }
 
   public GuaranteedSimulationServicePackageSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -218,16 +217,16 @@ public class GuaranteedSimulationServicePackageSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(10) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public GuaranteedSimulationServicePackageSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -239,17 +238,17 @@ public class GuaranteedSimulationServicePackageSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -293,7 +292,7 @@ public class GuaranteedSimulationServicePackageSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

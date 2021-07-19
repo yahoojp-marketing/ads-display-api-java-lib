@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.StatsServicePlacementUrlListType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePlacementTargetオブジェクトは、プレイスメントターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePlacementTarget object holds configuration information of placement targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">StatsServicePlacementTargetオブジェクトは、プレイスメントターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServicePlacementTarget object holds configuration information of placement targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class StatsServicePlacementTarget   {
   @JsonProperty("placementUrlListName")
-  private JsonNullable<String> placementUrlListName = JsonNullable.undefined();
+  private String placementUrlListName = null;
 
   @JsonProperty("placementUrlListType")
-  private JsonNullable<StatsServicePlacementUrlListType> placementUrlListType = JsonNullable.undefined();
+  private StatsServicePlacementUrlListType placementUrlListType = null;
 
   public StatsServicePlacementTarget placementUrlListName(String placementUrlListName) {
-    this.placementUrlListName = JsonNullable.of(placementUrlListName);
+    this.placementUrlListName = placementUrlListName;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class StatsServicePlacementTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">プレイスメントURLリスト名</div> <div lang=\"en\">Placement Url List Name</div> ")
 
 
-  public JsonNullable<String> getPlacementUrlListName() {
+  public String getPlacementUrlListName() {
     return placementUrlListName;
   }
 
-  public void setPlacementUrlListName(JsonNullable<String> placementUrlListName) {
+  public void setPlacementUrlListName(String placementUrlListName) {
     this.placementUrlListName = placementUrlListName;
   }
 
   public StatsServicePlacementTarget placementUrlListType(StatsServicePlacementUrlListType placementUrlListType) {
-    this.placementUrlListType = JsonNullable.of(placementUrlListType);
+    this.placementUrlListType = placementUrlListType;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class StatsServicePlacementTarget   {
 
   @Valid
 
-  public JsonNullable<StatsServicePlacementUrlListType> getPlacementUrlListType() {
+  public StatsServicePlacementUrlListType getPlacementUrlListType() {
     return placementUrlListType;
   }
 
-  public void setPlacementUrlListType(JsonNullable<StatsServicePlacementUrlListType> placementUrlListType) {
+  public void setPlacementUrlListType(StatsServicePlacementUrlListType placementUrlListType) {
     this.placementUrlListType = placementUrlListType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class StatsServicePlacementTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

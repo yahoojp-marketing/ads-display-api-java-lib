@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.BrandLiftServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServicePageオブジェクトは、取得されるブランドリフトに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BrandLiftServicePage object serves retrieved brand lift entry.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">BrandLiftServicePageオブジェクトは、取得されるブランドリフトに関するエントリーを表します。</div> <div lang=\"en\">The BrandLiftServicePage object serves retrieved brand lift entry.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BrandLiftServicePage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<BrandLiftServiceValue>> values = JsonNullable.undefined();
+  private List<BrandLiftServiceValue> values = null;
 
   public BrandLiftServicePage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class BrandLiftServicePage   {
   }
 
   public BrandLiftServicePage values(List<BrandLiftServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public BrandLiftServicePage addValuesItem(BrandLiftServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class BrandLiftServicePage   {
 
   @Valid
 
-  public JsonNullable<List<BrandLiftServiceValue>> getValues() {
+  public List<BrandLiftServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<BrandLiftServiceValue>> values) {
+  public void setValues(List<BrandLiftServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class BrandLiftServicePage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

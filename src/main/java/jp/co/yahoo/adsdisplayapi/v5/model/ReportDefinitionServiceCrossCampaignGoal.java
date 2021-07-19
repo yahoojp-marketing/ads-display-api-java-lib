@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.ReportDefinitionServiceAccount;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceCrossCampaignGoalは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン目的を示します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※ADD時、crossCampaignTypeが&lt;code&gt;CAMPAIGN_GOAL&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceCrossCampaignGoal indicates account and campaign goal that is subject to Cross-campaign Reach Report combination.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation.&lt;br&gt; *If crossCampaignType is &lt;code&gt;CAMPAIGN_GOAL&lt;/code&gt;, this field is required in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceCrossCampaignGoalは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン目的を示します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br> ※ADD時、crossCampaignTypeが<code>CAMPAIGN_GOAL</code>の場合は必須です。 </div> <div lang=\"en\"> ReportDefinitionServiceCrossCampaignGoal indicates account and campaign goal that is subject to Cross-campaign Reach Report combination.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation.<br> *If crossCampaignType is <code>CAMPAIGN_GOAL</code>, this field is required in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ReportDefinitionServiceCrossCampaignGoal   {
   @JsonProperty("account")
-  private JsonNullable<ReportDefinitionServiceAccount> account = JsonNullable.undefined();
+  private ReportDefinitionServiceAccount account = null;
 
   @JsonProperty("campaignGoal")
-  private JsonNullable<String> campaignGoal = JsonNullable.undefined();
+  private String campaignGoal = null;
 
   public ReportDefinitionServiceCrossCampaignGoal account(ReportDefinitionServiceAccount account) {
-    this.account = JsonNullable.of(account);
+    this.account = account;
     return this;
   }
 
@@ -35,16 +34,16 @@ public class ReportDefinitionServiceCrossCampaignGoal   {
 
   @Valid
 
-  public JsonNullable<ReportDefinitionServiceAccount> getAccount() {
+  public ReportDefinitionServiceAccount getAccount() {
     return account;
   }
 
-  public void setAccount(JsonNullable<ReportDefinitionServiceAccount> account) {
+  public void setAccount(ReportDefinitionServiceAccount account) {
     this.account = account;
   }
 
   public ReportDefinitionServiceCrossCampaignGoal campaignGoal(String campaignGoal) {
-    this.campaignGoal = JsonNullable.of(campaignGoal);
+    this.campaignGoal = campaignGoal;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class ReportDefinitionServiceCrossCampaignGoal   {
   @ApiModelProperty(value = "<div lang=\"ja\">   横断リーチレポートの組み合わせの対象となるキャンペーン目的です。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、crossCampaignReachTypeが<code>CAMPAIGN_GOAL</code>の場合は必須です。<br>   ※BRAND_AWARENESSを指定すると「運用型：ブランド認知」と「予約型：ブランド認知」の両方が対象になります。<br>   ※BRAND_AWARENESS_GUARANTEEDは指定できません。 </div> <div lang=\"en\">   Campaign goal that is subject to combination of Cross-campaign Reach Report. <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>   *If crossCampaignReachType is <code>CAMPAIGN_GOAL</code>, this field is required in ADD operation.<br>   *If you specify BRAND_AWARENESS, \"Auction: Brand awareness\" and \"Guaranteed: Brand awareness\" will be targeted. <br>   *BRAND_AWARENESS_GUARANTEED cannot be specified. </div> ")
 
 
-  public JsonNullable<String> getCampaignGoal() {
+  public String getCampaignGoal() {
     return campaignGoal;
   }
 
-  public void setCampaignGoal(JsonNullable<String> campaignGoal) {
+  public void setCampaignGoal(String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class ReportDefinitionServiceCrossCampaignGoal   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

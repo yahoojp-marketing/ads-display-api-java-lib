@@ -5,9 +5,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.Arrays;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceFileType;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,34 +15,34 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; MediaServiceImageMediaオブジェクトは、画像を格納するコンテナです。&lt;br&gt; このフィールドは、SET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The MediaServiceImageMedia object is a container for storing image. &lt;br&gt; This field is required in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> MediaServiceImageMediaオブジェクトは、画像を格納するコンテナです。<br> このフィールドは、SET時に必須となります。 </div> <div lang=\"en\"> The MediaServiceImageMedia object is a container for storing image. <br> This field is required in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class MediaServiceImageMedia   {
   @JsonProperty("mediaType")
-  private JsonNullable<MediaServiceType> mediaType = JsonNullable.undefined();
+  private MediaServiceType mediaType = null;
 
   @JsonProperty("aspectRatio")
-  private JsonNullable<String> aspectRatio = JsonNullable.undefined();
+  private String aspectRatio = null;
 
   @JsonProperty("data")
-  private JsonNullable<byte[]> data = JsonNullable.undefined();
+  private byte[] data = null;
 
   @JsonProperty("fileSize")
-  private JsonNullable<Long> fileSize = JsonNullable.undefined();
+  private Long fileSize = null;
 
   @JsonProperty("height")
-  private JsonNullable<Long> height = JsonNullable.undefined();
+  private Long height = null;
 
   @JsonProperty("mediaAdFormat")
-  private JsonNullable<String> mediaAdFormat = JsonNullable.undefined();
+  private String mediaAdFormat = null;
 
   @JsonProperty("mediaFileType")
-  private JsonNullable<MediaServiceFileType> mediaFileType = JsonNullable.undefined();
+  private MediaServiceFileType mediaFileType = null;
 
   @JsonProperty("width")
-  private JsonNullable<Long> width = JsonNullable.undefined();
+  private Long width = null;
 
   public MediaServiceImageMedia mediaType(MediaServiceType mediaType) {
-    this.mediaType = JsonNullable.of(mediaType);
+    this.mediaType = mediaType;
     return this;
   }
 
@@ -54,16 +54,16 @@ public class MediaServiceImageMedia   {
 
   @Valid
 
-  public JsonNullable<MediaServiceType> getMediaType() {
+  public MediaServiceType getMediaType() {
     return mediaType;
   }
 
-  public void setMediaType(JsonNullable<MediaServiceType> mediaType) {
+  public void setMediaType(MediaServiceType mediaType) {
     this.mediaType = mediaType;
   }
 
   public MediaServiceImageMedia aspectRatio(String aspectRatio) {
-    this.aspectRatio = JsonNullable.of(aspectRatio);
+    this.aspectRatio = aspectRatio;
     return this;
   }
 
@@ -74,16 +74,16 @@ public class MediaServiceImageMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 画像アスペクト比の種類です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのaspectRatioフィールドをご確認ください。 </div> <div lang=\"en\"> The type of aspect ratio.<br> Although this field will be returned in the response, it will be ignored on input. <br> * Available values can be referred to aspectRatio field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. </div> ")
 
 
-  public JsonNullable<String> getAspectRatio() {
+  public String getAspectRatio() {
     return aspectRatio;
   }
 
-  public void setAspectRatio(JsonNullable<String> aspectRatio) {
+  public void setAspectRatio(String aspectRatio) {
     this.aspectRatio = aspectRatio;
   }
 
   public MediaServiceImageMedia data(byte[] data) {
-    this.data = JsonNullable.of(data);
+    this.data = data;
     return this;
   }
 
@@ -94,16 +94,16 @@ public class MediaServiceImageMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\">画像ファイルのbase64エンコードです。ADD時のみ指定可能で、GET時のレスポンスでは値は取得されません。</div> <div lang=\"en\">The image file in base64 encode. It can be specified on ADD, however no value returns on the response of GET.</div> ")
 
 
-  public JsonNullable<byte[]> getData() {
+  public byte[] getData() {
     return data;
   }
 
-  public void setData(JsonNullable<byte[]> data) {
+  public void setData(byte[] data) {
     this.data = data;
   }
 
   public MediaServiceImageMedia fileSize(Long fileSize) {
-    this.fileSize = JsonNullable.of(fileSize);
+    this.fileSize = fileSize;
     return this;
   }
 
@@ -114,16 +114,16 @@ public class MediaServiceImageMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ファイルサイズです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The file size of image. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getFileSize() {
+  public Long getFileSize() {
     return fileSize;
   }
 
-  public void setFileSize(JsonNullable<Long> fileSize) {
+  public void setFileSize(Long fileSize) {
     this.fileSize = fileSize;
   }
 
   public MediaServiceImageMedia height(Long height) {
-    this.height = JsonNullable.of(height);
+    this.height = height;
     return this;
   }
 
@@ -134,16 +134,16 @@ public class MediaServiceImageMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 縦の長さです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The height of image. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getHeight() {
+  public Long getHeight() {
     return height;
   }
 
-  public void setHeight(JsonNullable<Long> height) {
+  public void setHeight(Long height) {
     this.height = height;
   }
 
   public MediaServiceImageMedia mediaAdFormat(String mediaAdFormat) {
-    this.mediaAdFormat = JsonNullable.of(mediaAdFormat);
+    this.mediaAdFormat = mediaAdFormat;
     return this;
   }
 
@@ -154,16 +154,16 @@ public class MediaServiceImageMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 画像フォーマットの種類です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのadFormatフィールドをご確認ください。 </div> <div lang=\"en\"> The type of image format.<br> Although this field will be returned in the response, it will be ignored on input. <br> * Available values can be referred to adFormat field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. </div> ")
 
 
-  public JsonNullable<String> getMediaAdFormat() {
+  public String getMediaAdFormat() {
     return mediaAdFormat;
   }
 
-  public void setMediaAdFormat(JsonNullable<String> mediaAdFormat) {
+  public void setMediaAdFormat(String mediaAdFormat) {
     this.mediaAdFormat = mediaAdFormat;
   }
 
   public MediaServiceImageMedia mediaFileType(MediaServiceFileType mediaFileType) {
-    this.mediaFileType = JsonNullable.of(mediaFileType);
+    this.mediaFileType = mediaFileType;
     return this;
   }
 
@@ -175,16 +175,16 @@ public class MediaServiceImageMedia   {
 
   @Valid
 
-  public JsonNullable<MediaServiceFileType> getMediaFileType() {
+  public MediaServiceFileType getMediaFileType() {
     return mediaFileType;
   }
 
-  public void setMediaFileType(JsonNullable<MediaServiceFileType> mediaFileType) {
+  public void setMediaFileType(MediaServiceFileType mediaFileType) {
     this.mediaFileType = mediaFileType;
   }
 
   public MediaServiceImageMedia width(Long width) {
-    this.width = JsonNullable.of(width);
+    this.width = width;
     return this;
   }
 
@@ -195,17 +195,17 @@ public class MediaServiceImageMedia   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 横幅です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The width of image.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getWidth() {
+  public Long getWidth() {
     return width;
   }
 
-  public void setWidth(JsonNullable<Long> width) {
+  public void setWidth(Long width) {
     this.width = width;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -215,7 +215,7 @@ public class MediaServiceImageMedia   {
     MediaServiceImageMedia mediaServiceImageMedia = (MediaServiceImageMedia) o;
     return Objects.equals(this.mediaType, mediaServiceImageMedia.mediaType) &&
         Objects.equals(this.aspectRatio, mediaServiceImageMedia.aspectRatio) &&
-        Objects.equals(this.data, mediaServiceImageMedia.data) &&
+        Arrays.equals(this.data, mediaServiceImageMedia.data) &&
         Objects.equals(this.fileSize, mediaServiceImageMedia.fileSize) &&
         Objects.equals(this.height, mediaServiceImageMedia.height) &&
         Objects.equals(this.mediaAdFormat, mediaServiceImageMedia.mediaAdFormat) &&
@@ -225,7 +225,7 @@ public class MediaServiceImageMedia   {
 
   @Override
   public int hashCode() {
-    return Objects.hash(mediaType, aspectRatio, data, fileSize, height, mediaAdFormat, mediaFileType, width);
+    return Objects.hash(mediaType, aspectRatio, Arrays.hashCode(data), fileSize, height, mediaAdFormat, mediaFileType, width);
   }
 
   @Override
@@ -249,7 +249,7 @@ public class MediaServiceImageMedia   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

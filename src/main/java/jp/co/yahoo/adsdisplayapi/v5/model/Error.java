@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.ErrorDetail;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,20 +15,20 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Errorオブジェクトは、エラー内容を表します。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;Error information.&lt;/div&gt;
  */
 @ApiModel(description = "<div lang=\"ja\">Errorオブジェクトは、エラー内容を表します。</div><div lang=\"en\">Error information.</div>")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class Error   {
   @JsonProperty("code")
-  private JsonNullable<String> code = JsonNullable.undefined();
+  private String code = null;
 
   @JsonProperty("message")
-  private JsonNullable<String> message = JsonNullable.undefined();
+  private String message = null;
 
   @JsonProperty("details")
   @Valid
-  private JsonNullable<List<ErrorDetail>> details = JsonNullable.undefined();
+  private List<ErrorDetail> details = null;
 
   public Error code(String code) {
-    this.code = JsonNullable.of(code);
+    this.code = code;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class Error   {
   @ApiModelProperty(value = "<div lang=\"ja\">エラーコードです。</div><div lang=\"en\">The error code.</div>")
 
 
-  public JsonNullable<String> getCode() {
+  public String getCode() {
     return code;
   }
 
-  public void setCode(JsonNullable<String> code) {
+  public void setCode(String code) {
     this.code = code;
   }
 
   public Error message(String message) {
-    this.message = JsonNullable.of(message);
+    this.message = message;
     return this;
   }
 
@@ -60,24 +59,24 @@ public class Error   {
   @ApiModelProperty(value = "<div lang=\"ja\">エラーメッセージです。</div><div lang=\"en\">A simple string representation of the error and reason.</div>")
 
 
-  public JsonNullable<String> getMessage() {
+  public String getMessage() {
     return message;
   }
 
-  public void setMessage(JsonNullable<String> message) {
+  public void setMessage(String message) {
     this.message = message;
   }
 
   public Error details(List<ErrorDetail> details) {
-    this.details = JsonNullable.of(details);
+    this.details = details;
     return this;
   }
 
   public Error addDetailsItem(ErrorDetail detailsItem) {
-    if (this.details == null || !this.details.isPresent()) {
-      this.details = JsonNullable.of(new ArrayList<>());
+    if (this.details == null) {
+      this.details = new ArrayList<>();
     }
-    this.details.get().add(detailsItem);
+    this.details.add(detailsItem);
     return this;
   }
 
@@ -89,17 +88,17 @@ public class Error   {
 
   @Valid
 
-  public JsonNullable<List<ErrorDetail>> getDetails() {
+  public List<ErrorDetail> getDetails() {
     return details;
   }
 
-  public void setDetails(JsonNullable<List<ErrorDetail>> details) {
+  public void setDetails(List<ErrorDetail> details) {
     this.details = details;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -133,7 +132,7 @@ public class Error   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

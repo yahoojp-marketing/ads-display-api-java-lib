@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceDocumentFile;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   GuaranteedSimulationServiceRelatedDocumentは、商品関連資料情報を保持します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   GuaranteedSimulationServiceRelatedDocument holds information about the package related document.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input.  &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">   GuaranteedSimulationServiceRelatedDocumentは、商品関連資料情報を保持します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   GuaranteedSimulationServiceRelatedDocument holds information about the package related document.<br>   Although this field will be returned in the response, it will be ignored on input.  </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServiceRelatedDocument   {
   @JsonProperty("files")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServiceDocumentFile>> files = JsonNullable.undefined();
+  private List<GuaranteedSimulationServiceDocumentFile> files = null;
 
   public GuaranteedSimulationServiceRelatedDocument files(List<GuaranteedSimulationServiceDocumentFile> files) {
-    this.files = JsonNullable.of(files);
+    this.files = files;
     return this;
   }
 
   public GuaranteedSimulationServiceRelatedDocument addFilesItem(GuaranteedSimulationServiceDocumentFile filesItem) {
-    if (this.files == null || !this.files.isPresent()) {
-      this.files = JsonNullable.of(new ArrayList<>());
+    if (this.files == null) {
+      this.files = new ArrayList<>();
     }
-    this.files.get().add(filesItem);
+    this.files.add(filesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class GuaranteedSimulationServiceRelatedDocument   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServiceDocumentFile>> getFiles() {
+  public List<GuaranteedSimulationServiceDocumentFile> getFiles() {
     return files;
   }
 
-  public void setFiles(JsonNullable<List<GuaranteedSimulationServiceDocumentFile>> files) {
+  public void setFiles(List<GuaranteedSimulationServiceDocumentFile> files) {
     this.files = files;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class GuaranteedSimulationServiceRelatedDocument   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceLang;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceCategorySelectorオブジェクトは、取得するカテゴリー情報の言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceCategorySelector object displays the language of retrieved category information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceCategorySelectorオブジェクトは、取得するカテゴリー情報の言語を表します。</div> <div lang=\"en\">DictionaryServiceCategorySelector object displays the language of retrieved category information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceCategorySelector   {
   @JsonProperty("lang")
-  private JsonNullable<DictionaryServiceLang> lang = JsonNullable.undefined();
+  private DictionaryServiceLang lang = null;
 
   public DictionaryServiceCategorySelector lang(DictionaryServiceLang lang) {
-    this.lang = JsonNullable.of(lang);
+    this.lang = lang;
     return this;
   }
 
@@ -33,17 +32,17 @@ public class DictionaryServiceCategorySelector   {
 
   @Valid
 
-  public JsonNullable<DictionaryServiceLang> getLang() {
+  public DictionaryServiceLang getLang() {
     return lang;
   }
 
-  public void setLang(JsonNullable<DictionaryServiceLang> lang) {
+  public void setLang(DictionaryServiceLang lang) {
     this.lang = lang;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -73,7 +72,7 @@ public class DictionaryServiceCategorySelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

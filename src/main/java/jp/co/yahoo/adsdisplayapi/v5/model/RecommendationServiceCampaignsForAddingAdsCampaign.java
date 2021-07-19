@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,23 +14,23 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceCampaignsForAddingAdsCampaignオブジェクトは、入稿していない画像サイズが存在するキャンペーンに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceCampaignsForAddingAdsCampaign object describes detailed information about Recommendations for the campaign with an image size that have not been submitted.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">RecommendationServiceCampaignsForAddingAdsCampaignオブジェクトは、入稿していない画像サイズが存在するキャンペーンに関する最適化提案の詳細情報を表します。</div> <div lang=\"en\">RecommendationServiceCampaignsForAddingAdsCampaign object describes detailed information about Recommendations for the campaign with an image size that have not been submitted.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RecommendationServiceCampaignsForAddingAdsCampaign   {
   @JsonProperty("recommendationId")
-  private JsonNullable<Long> recommendationId = JsonNullable.undefined();
+  private Long recommendationId = null;
 
   @JsonProperty("campaignId")
-  private JsonNullable<Long> campaignId = JsonNullable.undefined();
+  private Long campaignId = null;
 
   @JsonProperty("campaignName")
-  private JsonNullable<String> campaignName = JsonNullable.undefined();
+  private String campaignName = null;
 
   @JsonProperty("recommendationMediaAdFormat")
   @Valid
-  private JsonNullable<List<String>> recommendationMediaAdFormat = JsonNullable.undefined();
+  private List<String> recommendationMediaAdFormat = null;
 
   public RecommendationServiceCampaignsForAddingAdsCampaign recommendationId(Long recommendationId) {
-    this.recommendationId = JsonNullable.of(recommendationId);
+    this.recommendationId = recommendationId;
     return this;
   }
 
@@ -42,16 +41,16 @@ public class RecommendationServiceCampaignsForAddingAdsCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> </div> <div lang=\"en\"> Recommendation ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getRecommendationId() {
+  public Long getRecommendationId() {
     return recommendationId;
   }
 
-  public void setRecommendationId(JsonNullable<Long> recommendationId) {
+  public void setRecommendationId(Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
   public RecommendationServiceCampaignsForAddingAdsCampaign campaignId(Long campaignId) {
-    this.campaignId = JsonNullable.of(campaignId);
+    this.campaignId = campaignId;
     return this;
   }
 
@@ -62,16 +61,16 @@ public class RecommendationServiceCampaignsForAddingAdsCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> </div> <div lang=\"en\"> Campaign ID.<br> </div> ")
 
 
-  public JsonNullable<Long> getCampaignId() {
+  public Long getCampaignId() {
     return campaignId;
   }
 
-  public void setCampaignId(JsonNullable<Long> campaignId) {
+  public void setCampaignId(Long campaignId) {
     this.campaignId = campaignId;
   }
 
   public RecommendationServiceCampaignsForAddingAdsCampaign campaignName(String campaignName) {
-    this.campaignName = JsonNullable.of(campaignName);
+    this.campaignName = campaignName;
     return this;
   }
 
@@ -82,24 +81,24 @@ public class RecommendationServiceCampaignsForAddingAdsCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> </div> <div lang=\"en\"> Campaign Name.<br> </div> ")
 
 
-  public JsonNullable<String> getCampaignName() {
+  public String getCampaignName() {
     return campaignName;
   }
 
-  public void setCampaignName(JsonNullable<String> campaignName) {
+  public void setCampaignName(String campaignName) {
     this.campaignName = campaignName;
   }
 
   public RecommendationServiceCampaignsForAddingAdsCampaign recommendationMediaAdFormat(List<String> recommendationMediaAdFormat) {
-    this.recommendationMediaAdFormat = JsonNullable.of(recommendationMediaAdFormat);
+    this.recommendationMediaAdFormat = recommendationMediaAdFormat;
     return this;
   }
 
   public RecommendationServiceCampaignsForAddingAdsCampaign addRecommendationMediaAdFormatItem(String recommendationMediaAdFormatItem) {
-    if (this.recommendationMediaAdFormat == null || !this.recommendationMediaAdFormat.isPresent()) {
-      this.recommendationMediaAdFormat = JsonNullable.of(new ArrayList<>());
+    if (this.recommendationMediaAdFormat == null) {
+      this.recommendationMediaAdFormat = new ArrayList<>();
     }
-    this.recommendationMediaAdFormat.get().add(recommendationMediaAdFormatItem);
+    this.recommendationMediaAdFormat.add(recommendationMediaAdFormatItem);
     return this;
   }
 
@@ -110,17 +109,17 @@ public class RecommendationServiceCampaignsForAddingAdsCampaign   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するメディアフォーマットです。<br> フォーマットの詳細はDictionaryService/getMediaAdFormatのmediaAdFormatフィールドで確認できます。 </div> <div lang=\"en\"> Recommended media ad format.<br> The format details can be found in mediaAdFormat field of DictionaryService/getMediaAdFormat operation. </div> ")
 
 
-  public JsonNullable<List<String>> getRecommendationMediaAdFormat() {
+  public List<String> getRecommendationMediaAdFormat() {
     return recommendationMediaAdFormat;
   }
 
-  public void setRecommendationMediaAdFormat(JsonNullable<List<String>> recommendationMediaAdFormat) {
+  public void setRecommendationMediaAdFormat(List<String> recommendationMediaAdFormat) {
     this.recommendationMediaAdFormat = recommendationMediaAdFormat;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -156,7 +155,7 @@ public class RecommendationServiceCampaignsForAddingAdsCampaign   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

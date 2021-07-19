@@ -9,35 +9,34 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.Error;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlIdeaServicePage;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
  * PlacementUrlIdeaServiceGetResponse
  */
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlIdeaServiceGetResponse   {
   @JsonProperty("errors")
   @Valid
-  private JsonNullable<List<Error>> errors = JsonNullable.undefined();
+  private List<Error> errors = null;
 
   @JsonProperty("rid")
   private String rid;
 
   @JsonProperty("rval")
-  private JsonNullable<PlacementUrlIdeaServicePage> rval = JsonNullable.undefined();
+  private PlacementUrlIdeaServicePage rval = null;
 
   public PlacementUrlIdeaServiceGetResponse errors(List<Error> errors) {
-    this.errors = JsonNullable.of(errors);
+    this.errors = errors;
     return this;
   }
 
   public PlacementUrlIdeaServiceGetResponse addErrorsItem(Error errorsItem) {
-    if (this.errors == null || !this.errors.isPresent()) {
-      this.errors = JsonNullable.of(new ArrayList<>());
+    if (this.errors == null) {
+      this.errors = new ArrayList<>();
     }
-    this.errors.get().add(errorsItem);
+    this.errors.add(errorsItem);
     return this;
   }
 
@@ -49,11 +48,11 @@ public class PlacementUrlIdeaServiceGetResponse   {
 
   @Valid
 
-  public JsonNullable<List<Error>> getErrors() {
+  public List<Error> getErrors() {
     return errors;
   }
 
-  public void setErrors(JsonNullable<List<Error>> errors) {
+  public void setErrors(List<Error> errors) {
     this.errors = errors;
   }
 
@@ -78,7 +77,7 @@ public class PlacementUrlIdeaServiceGetResponse   {
   }
 
   public PlacementUrlIdeaServiceGetResponse rval(PlacementUrlIdeaServicePage rval) {
-    this.rval = JsonNullable.of(rval);
+    this.rval = rval;
     return this;
   }
 
@@ -90,17 +89,17 @@ public class PlacementUrlIdeaServiceGetResponse   {
 
   @Valid
 
-  public JsonNullable<PlacementUrlIdeaServicePage> getRval() {
+  public PlacementUrlIdeaServicePage getRval() {
     return rval;
   }
 
-  public void setRval(JsonNullable<PlacementUrlIdeaServicePage> rval) {
+  public void setRval(PlacementUrlIdeaServicePage rval) {
     this.rval = rval;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -134,7 +133,7 @@ public class PlacementUrlIdeaServiceGetResponse   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

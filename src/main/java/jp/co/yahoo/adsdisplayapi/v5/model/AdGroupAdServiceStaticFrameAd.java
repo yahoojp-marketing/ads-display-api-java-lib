@@ -7,7 +7,6 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceButtonText;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceIsRemoveFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -15,43 +14,43 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceStaticFrameAdオブジェクトは、広告枠サイズ固定広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがSTATIC_FRAME_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceStaticFrameAd object describes the Static Frame Ad information.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is STATIC_FRAME_AD, this field is required in ADD operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceStaticFrameAdオブジェクトは、広告枠サイズ固定広告の情報を表します。<br> このフィールドは、省略可能となります。<br> ※ADD時、adTypeがSTATIC_FRAME_ADの場合は必須です。 </div> <div lang=\"en\"> AdGroupAdServiceStaticFrameAd object describes the Static Frame Ad information.<br> This field is optional.<br> *If adType is STATIC_FRAME_AD, this field is required in ADD operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceStaticFrameAd   {
   @JsonProperty("buttonText")
-  private JsonNullable<AdGroupAdServiceButtonText> buttonText = JsonNullable.undefined();
+  private AdGroupAdServiceButtonText buttonText = null;
 
   @JsonProperty("colorSetId")
-  private JsonNullable<Long> colorSetId = JsonNullable.undefined();
+  private Long colorSetId = null;
 
   @JsonProperty("description")
-  private JsonNullable<String> description = JsonNullable.undefined();
+  private String description = null;
 
   @JsonProperty("displayUrl")
-  private JsonNullable<String> displayUrl = JsonNullable.undefined();
+  private String displayUrl = null;
 
   @JsonProperty("headline")
-  private JsonNullable<String> headline = JsonNullable.undefined();
+  private String headline = null;
 
   @JsonProperty("isRemoveLogoMediaId")
-  private JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveLogoMediaId = JsonNullable.undefined();
+  private AdGroupAdServiceIsRemoveFlg isRemoveLogoMediaId = null;
 
   @JsonProperty("layout")
-  private JsonNullable<String> layout = JsonNullable.undefined();
+  private String layout = null;
 
   @JsonProperty("logoMediaId")
-  private JsonNullable<Long> logoMediaId = JsonNullable.undefined();
+  private Long logoMediaId = null;
 
   @JsonProperty("principal")
-  private JsonNullable<String> principal = JsonNullable.undefined();
+  private String principal = null;
 
   @JsonProperty("size")
-  private JsonNullable<String> size = JsonNullable.undefined();
+  private String size = null;
 
   @JsonProperty("url")
-  private JsonNullable<String> url = JsonNullable.undefined();
+  private String url = null;
 
   public AdGroupAdServiceStaticFrameAd buttonText(AdGroupAdServiceButtonText buttonText) {
-    this.buttonText = JsonNullable.of(buttonText);
+    this.buttonText = buttonText;
     return this;
   }
 
@@ -63,16 +62,16 @@ public class AdGroupAdServiceStaticFrameAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceButtonText> getButtonText() {
+  public AdGroupAdServiceButtonText getButtonText() {
     return buttonText;
   }
 
-  public void setButtonText(JsonNullable<AdGroupAdServiceButtonText> buttonText) {
+  public void setButtonText(AdGroupAdServiceButtonText buttonText) {
     this.buttonText = buttonText;
   }
 
   public AdGroupAdServiceStaticFrameAd colorSetId(Long colorSetId) {
-    this.colorSetId = JsonNullable.of(colorSetId);
+    this.colorSetId = colorSetId;
     return this;
   }
 
@@ -83,16 +82,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> カラーセットIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Color set ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getColorSetId() {
+  public Long getColorSetId() {
     return colorSetId;
   }
 
-  public void setColorSetId(JsonNullable<Long> colorSetId) {
+  public void setColorSetId(Long colorSetId) {
     this.colorSetId = colorSetId;
   }
 
   public AdGroupAdServiceStaticFrameAd description(String description) {
-    this.description = JsonNullable.of(description);
+    this.description = description;
     return this;
   }
 
@@ -103,16 +102,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 説明文です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Description.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(JsonNullable<String> description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 
   public AdGroupAdServiceStaticFrameAd displayUrl(String displayUrl) {
-    this.displayUrl = JsonNullable.of(displayUrl);
+    this.displayUrl = displayUrl;
     return this;
   }
 
@@ -123,16 +122,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 表示URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Display URL.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getDisplayUrl() {
+  public String getDisplayUrl() {
     return displayUrl;
   }
 
-  public void setDisplayUrl(JsonNullable<String> displayUrl) {
+  public void setDisplayUrl(String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
   public AdGroupAdServiceStaticFrameAd headline(String headline) {
-    this.headline = JsonNullable.of(headline);
+    this.headline = headline;
     return this;
   }
 
@@ -143,16 +142,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> タイトルです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Title.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getHeadline() {
+  public String getHeadline() {
     return headline;
   }
 
-  public void setHeadline(JsonNullable<String> headline) {
+  public void setHeadline(String headline) {
     this.headline = headline;
   }
 
   public AdGroupAdServiceStaticFrameAd isRemoveLogoMediaId(AdGroupAdServiceIsRemoveFlg isRemoveLogoMediaId) {
-    this.isRemoveLogoMediaId = JsonNullable.of(isRemoveLogoMediaId);
+    this.isRemoveLogoMediaId = isRemoveLogoMediaId;
     return this;
   }
 
@@ -164,16 +163,16 @@ public class AdGroupAdServiceStaticFrameAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceIsRemoveFlg> getIsRemoveLogoMediaId() {
+  public AdGroupAdServiceIsRemoveFlg getIsRemoveLogoMediaId() {
     return isRemoveLogoMediaId;
   }
 
-  public void setIsRemoveLogoMediaId(JsonNullable<AdGroupAdServiceIsRemoveFlg> isRemoveLogoMediaId) {
+  public void setIsRemoveLogoMediaId(AdGroupAdServiceIsRemoveFlg isRemoveLogoMediaId) {
     this.isRemoveLogoMediaId = isRemoveLogoMediaId;
   }
 
   public AdGroupAdServiceStaticFrameAd layout(String layout) {
-    this.layout = JsonNullable.of(layout);
+    this.layout = layout;
     return this;
   }
 
@@ -184,16 +183,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告レイアウトです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Ad Layout.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getLayout() {
+  public String getLayout() {
     return layout;
   }
 
-  public void setLayout(JsonNullable<String> layout) {
+  public void setLayout(String layout) {
     this.layout = layout;
   }
 
   public AdGroupAdServiceStaticFrameAd logoMediaId(Long logoMediaId) {
-    this.logoMediaId = JsonNullable.of(logoMediaId);
+    this.logoMediaId = logoMediaId;
     return this;
   }
 
@@ -204,16 +203,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ロゴ画像のメディアIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Media ID of logo image.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<Long> getLogoMediaId() {
+  public Long getLogoMediaId() {
     return logoMediaId;
   }
 
-  public void setLogoMediaId(JsonNullable<Long> logoMediaId) {
+  public void setLogoMediaId(Long logoMediaId) {
     this.logoMediaId = logoMediaId;
   }
 
   public AdGroupAdServiceStaticFrameAd principal(String principal) {
-    this.principal = JsonNullable.of(principal);
+    this.principal = principal;
     return this;
   }
 
@@ -224,16 +223,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告の主体者表記です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Advertiser Indication.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getPrincipal() {
+  public String getPrincipal() {
     return principal;
   }
 
-  public void setPrincipal(JsonNullable<String> principal) {
+  public void setPrincipal(String principal) {
     this.principal = principal;
   }
 
   public AdGroupAdServiceStaticFrameAd size(String size) {
-    this.size = JsonNullable.of(size);
+    this.size = size;
     return this;
   }
 
@@ -244,16 +243,16 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 広告サイズです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Ad Size.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getSize() {
+  public String getSize() {
     return size;
   }
 
-  public void setSize(JsonNullable<String> size) {
+  public void setSize(String size) {
     this.size = size;
   }
 
   public AdGroupAdServiceStaticFrameAd url(String url) {
-    this.url = JsonNullable.of(url);
+    this.url = url;
     return this;
   }
 
@@ -264,17 +263,17 @@ public class AdGroupAdServiceStaticFrameAd   {
   @ApiModelProperty(value = "<div lang=\"ja\"> リンク先URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Destination URL.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 
 
-  public JsonNullable<String> getUrl() {
+  public String getUrl() {
     return url;
   }
 
-  public void setUrl(JsonNullable<String> url) {
+  public void setUrl(String url) {
     this.url = url;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -324,7 +323,7 @@ public class AdGroupAdServiceStaticFrameAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

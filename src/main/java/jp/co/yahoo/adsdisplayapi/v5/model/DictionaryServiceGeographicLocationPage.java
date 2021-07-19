@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.DictionaryServiceGeographicLocationValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,14 +15,14 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationPageオブジェクトは、地域情報のリストを取得するためのエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationPage object displays the entry to retrieve the geographic location list.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationPageオブジェクトは、地域情報のリストを取得するためのエントリーを表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocationPage object displays the entry to retrieve the geographic location list.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceGeographicLocationPage   {
   @JsonProperty("totalNumEntries")
   private Integer totalNumEntries;
 
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<DictionaryServiceGeographicLocationValue>> values = JsonNullable.undefined();
+  private List<DictionaryServiceGeographicLocationValue> values = null;
 
   public DictionaryServiceGeographicLocationPage totalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
@@ -46,15 +45,15 @@ public class DictionaryServiceGeographicLocationPage   {
   }
 
   public DictionaryServiceGeographicLocationPage values(List<DictionaryServiceGeographicLocationValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public DictionaryServiceGeographicLocationPage addValuesItem(DictionaryServiceGeographicLocationValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -66,17 +65,17 @@ public class DictionaryServiceGeographicLocationPage   {
 
   @Valid
 
-  public JsonNullable<List<DictionaryServiceGeographicLocationValue>> getValues() {
+  public List<DictionaryServiceGeographicLocationValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<DictionaryServiceGeographicLocationValue>> values) {
+  public void setValues(List<DictionaryServiceGeographicLocationValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -108,7 +107,7 @@ public class DictionaryServiceGeographicLocationPage   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

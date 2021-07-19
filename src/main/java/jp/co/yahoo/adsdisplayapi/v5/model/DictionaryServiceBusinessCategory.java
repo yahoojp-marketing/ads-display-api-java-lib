@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceBusinessCategoryオブジェクトは、ビジネスカテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceBusinessCategory object contains ad category information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">DictionaryServiceBusinessCategoryオブジェクトは、ビジネスカテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceBusinessCategory object contains ad category information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServiceBusinessCategory   {
   @JsonProperty("businessCategoryId")
-  private JsonNullable<String> businessCategoryId = JsonNullable.undefined();
+  private String businessCategoryId = null;
 
   @JsonProperty("businessCategoryName")
-  private JsonNullable<String> businessCategoryName = JsonNullable.undefined();
+  private String businessCategoryName = null;
 
   public DictionaryServiceBusinessCategory businessCategoryId(String businessCategoryId) {
-    this.businessCategoryId = JsonNullable.of(businessCategoryId);
+    this.businessCategoryId = businessCategoryId;
     return this;
   }
 
@@ -33,16 +32,16 @@ public class DictionaryServiceBusinessCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビジネスカテゴリIDを表します。</div> <div lang=\"en\">Business category ID.</div> ")
 
 
-  public JsonNullable<String> getBusinessCategoryId() {
+  public String getBusinessCategoryId() {
     return businessCategoryId;
   }
 
-  public void setBusinessCategoryId(JsonNullable<String> businessCategoryId) {
+  public void setBusinessCategoryId(String businessCategoryId) {
     this.businessCategoryId = businessCategoryId;
   }
 
   public DictionaryServiceBusinessCategory businessCategoryName(String businessCategoryName) {
-    this.businessCategoryName = JsonNullable.of(businessCategoryName);
+    this.businessCategoryName = businessCategoryName;
     return this;
   }
 
@@ -53,17 +52,17 @@ public class DictionaryServiceBusinessCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\">ビジネスカテゴリ名を表します。</div> <div lang=\"en\">Business category name.</div> ")
 
 
-  public JsonNullable<String> getBusinessCategoryName() {
+  public String getBusinessCategoryName() {
     return businessCategoryName;
   }
 
-  public void setBusinessCategoryName(JsonNullable<String> businessCategoryName) {
+  public void setBusinessCategoryName(String businessCategoryName) {
     this.businessCategoryName = businessCategoryName;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -95,7 +94,7 @@ public class DictionaryServiceBusinessCategory   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlListServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlListServiceUnknownDomainFlg;
 import jp.co.yahoo.adsdisplayapi.v5.model.PlacementUrlListServiceUrlList;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,32 +17,32 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlListオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep Placement Url Information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">PlacementUrlListオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep Placement Url Information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class PlacementUrlList   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("description")
-  private JsonNullable<String> description = JsonNullable.undefined();
+  private String description = null;
 
   @JsonProperty("isRemoveDescription")
-  private JsonNullable<PlacementUrlListServiceIsRemoveFlg> isRemoveDescription = JsonNullable.undefined();
+  private PlacementUrlListServiceIsRemoveFlg isRemoveDescription = null;
 
   @JsonProperty("unknownDomainFlg")
-  private JsonNullable<PlacementUrlListServiceUnknownDomainFlg> unknownDomainFlg = JsonNullable.undefined();
+  private PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg = null;
 
   @JsonProperty("urlListId")
-  private JsonNullable<Long> urlListId = JsonNullable.undefined();
+  private Long urlListId = null;
 
   @JsonProperty("urlListName")
-  private JsonNullable<String> urlListName = JsonNullable.undefined();
+  private String urlListName = null;
 
   @JsonProperty("brandSafetyDenyListFlg")
-  private JsonNullable<Boolean> brandSafetyDenyListFlg = JsonNullable.undefined();
+  private Boolean brandSafetyDenyListFlg = null;
 
   @JsonProperty("urls")
   @Valid
-  private JsonNullable<List<PlacementUrlListServiceUrlList>> urls = JsonNullable.undefined();
+  private List<PlacementUrlListServiceUrlList> urls = null;
 
   public PlacementUrlList accountId(Long accountId) {
     this.accountId = accountId;
@@ -67,7 +66,7 @@ public class PlacementUrlList   {
   }
 
   public PlacementUrlList description(String description) {
-    this.description = JsonNullable.of(description);
+    this.description = description;
     return this;
   }
 
@@ -78,16 +77,16 @@ public class PlacementUrlList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> urlリストの説明です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Url List Description.<br> This field is optional in ADD and SET operation. </div> ")
 
 
-  public JsonNullable<String> getDescription() {
+  public String getDescription() {
     return description;
   }
 
-  public void setDescription(JsonNullable<String> description) {
+  public void setDescription(String description) {
     this.description = description;
   }
 
   public PlacementUrlList isRemoveDescription(PlacementUrlListServiceIsRemoveFlg isRemoveDescription) {
-    this.isRemoveDescription = JsonNullable.of(isRemoveDescription);
+    this.isRemoveDescription = isRemoveDescription;
     return this;
   }
 
@@ -99,16 +98,16 @@ public class PlacementUrlList   {
 
   @Valid
 
-  public JsonNullable<PlacementUrlListServiceIsRemoveFlg> getIsRemoveDescription() {
+  public PlacementUrlListServiceIsRemoveFlg getIsRemoveDescription() {
     return isRemoveDescription;
   }
 
-  public void setIsRemoveDescription(JsonNullable<PlacementUrlListServiceIsRemoveFlg> isRemoveDescription) {
+  public void setIsRemoveDescription(PlacementUrlListServiceIsRemoveFlg isRemoveDescription) {
     this.isRemoveDescription = isRemoveDescription;
   }
 
   public PlacementUrlList unknownDomainFlg(PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg) {
-    this.unknownDomainFlg = JsonNullable.of(unknownDomainFlg);
+    this.unknownDomainFlg = unknownDomainFlg;
     return this;
   }
 
@@ -120,16 +119,16 @@ public class PlacementUrlList   {
 
   @Valid
 
-  public JsonNullable<PlacementUrlListServiceUnknownDomainFlg> getUnknownDomainFlg() {
+  public PlacementUrlListServiceUnknownDomainFlg getUnknownDomainFlg() {
     return unknownDomainFlg;
   }
 
-  public void setUnknownDomainFlg(JsonNullable<PlacementUrlListServiceUnknownDomainFlg> unknownDomainFlg) {
+  public void setUnknownDomainFlg(PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg) {
     this.unknownDomainFlg = unknownDomainFlg;
   }
 
   public PlacementUrlList urlListId(Long urlListId) {
-    this.urlListId = JsonNullable.of(urlListId);
+    this.urlListId = urlListId;
     return this;
   }
 
@@ -140,16 +139,16 @@ public class PlacementUrlList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> urlリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Url List ID. <br> This field is required in SET and REMOVE operation. </div> ")
 
 
-  public JsonNullable<Long> getUrlListId() {
+  public Long getUrlListId() {
     return urlListId;
   }
 
-  public void setUrlListId(JsonNullable<Long> urlListId) {
+  public void setUrlListId(Long urlListId) {
     this.urlListId = urlListId;
   }
 
   public PlacementUrlList urlListName(String urlListName) {
-    this.urlListName = JsonNullable.of(urlListName);
+    this.urlListName = urlListName;
     return this;
   }
 
@@ -160,16 +159,16 @@ public class PlacementUrlList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> urlリスト名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Url List Name. <br> This field is required in ADD operation, and is optional in SET operation. </div> ")
 
 
-  public JsonNullable<String> getUrlListName() {
+  public String getUrlListName() {
     return urlListName;
   }
 
-  public void setUrlListName(JsonNullable<String> urlListName) {
+  public void setUrlListName(String urlListName) {
     this.urlListName = urlListName;
   }
 
   public PlacementUrlList brandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
-    this.brandSafetyDenyListFlg = JsonNullable.of(brandSafetyDenyListFlg);
+    this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
     return this;
   }
 
@@ -180,24 +179,24 @@ public class PlacementUrlList   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 除外専用リストかどうかのフラグです。<br> 除外専用リストには下記の制約があります。<br> ・１アカウントにつき1つ作成が可能です。<br> ・除外にのみ紐付け可能です。<br> ・YDNキャンペーンには紐付けできません。<br> このフィールドは、ADD時に省略可能(デフォルトの値はFALSE)、SET時に指定不可となります。 </div> <div lang=\"en\"> A flag that indicates whether it is an exclusion list. <br> Exclusion list includes the following restrictions: <br> *Only one list can be created per account. <br> *Can be linked only to exclusion. <br> *Cannot be linked with YDN campaign. <br> This field is optional in ADD operation (default value will be FALSE), and cannot be specified in SET operation. </div> <dl class=term>   <dt class=\"term__item\">TRUE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">除外専用リストです。</span><span lang=\"en\">Exclusion list.</span></dd>   <dt class=\"term__item\">FALSE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">通常のurlリストです。</span><span lang=\"en\">Standard URL list.</span></dd> </dl> ")
 
 
-  public JsonNullable<Boolean> getBrandSafetyDenyListFlg() {
+  public Boolean getBrandSafetyDenyListFlg() {
     return brandSafetyDenyListFlg;
   }
 
-  public void setBrandSafetyDenyListFlg(JsonNullable<Boolean> brandSafetyDenyListFlg) {
+  public void setBrandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
   }
 
   public PlacementUrlList urls(List<PlacementUrlListServiceUrlList> urls) {
-    this.urls = JsonNullable.of(urls);
+    this.urls = urls;
     return this;
   }
 
   public PlacementUrlList addUrlsItem(PlacementUrlListServiceUrlList urlsItem) {
-    if (this.urls == null || !this.urls.isPresent()) {
-      this.urls = JsonNullable.of(new ArrayList<>());
+    if (this.urls == null) {
+      this.urls = new ArrayList<>();
     }
-    this.urls.get().add(urlsItem);
+    this.urls.add(urlsItem);
     return this;
   }
 
@@ -209,17 +208,17 @@ public class PlacementUrlList   {
 
   @Valid
 
-  public JsonNullable<List<PlacementUrlListServiceUrlList>> getUrls() {
+  public List<PlacementUrlListServiceUrlList> getUrls() {
     return urls;
   }
 
-  public void setUrls(JsonNullable<List<PlacementUrlListServiceUrlList>> urls) {
+  public void setUrls(List<PlacementUrlListServiceUrlList> urls) {
     this.urls = urls;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -263,7 +262,7 @@ public class PlacementUrlList   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

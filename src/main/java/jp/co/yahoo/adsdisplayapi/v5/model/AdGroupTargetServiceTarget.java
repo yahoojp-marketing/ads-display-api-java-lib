@@ -25,7 +25,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceSearchTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceSiteCategoryTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceSiteRetargetingTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupTargetServiceTargetType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -33,76 +32,76 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceTargetオブジェクトは、ターゲティング設定情報を保持します。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceTarget object is a container for storing targeting settings.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceTargetオブジェクトは、ターゲティング設定情報を保持します。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceTarget object is a container for storing targeting settings.<br> This field is required in requests. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceTarget   {
   @JsonProperty("adScheduleTarget")
-  private JsonNullable<AdGroupTargetServiceAdScheduleTarget> adScheduleTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceAdScheduleTarget adScheduleTarget = null;
 
   @JsonProperty("ageTarget")
-  private JsonNullable<AdGroupTargetServiceAgeTarget> ageTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceAgeTarget ageTarget = null;
 
   @JsonProperty("appTarget")
-  private JsonNullable<AdGroupTargetServiceAppTarget> appTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceAppTarget appTarget = null;
 
   @JsonProperty("audienceCategoryTarget")
-  private JsonNullable<AdGroupTargetServiceAudienceCategoryTarget> audienceCategoryTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceAudienceCategoryTarget audienceCategoryTarget = null;
 
   @JsonProperty("carrierTarget")
-  private JsonNullable<AdGroupTargetServiceCarrierTarget> carrierTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceCarrierTarget carrierTarget = null;
 
   @JsonProperty("deviceTarget")
-  private JsonNullable<AdGroupTargetServiceDeviceTarget> deviceTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceDeviceTarget deviceTarget = null;
 
   @JsonProperty("genderTarget")
-  private JsonNullable<AdGroupTargetServiceGenderTarget> genderTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceGenderTarget genderTarget = null;
 
   @JsonProperty("geoTarget")
-  private JsonNullable<AdGroupTargetServiceGeoTarget> geoTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceGeoTarget geoTarget = null;
 
   @JsonProperty("interestCategoryTarget")
-  private JsonNullable<AdGroupTargetServiceInterestCategoryTarget> interestCategoryTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceInterestCategoryTarget interestCategoryTarget = null;
 
   @JsonProperty("isRemove")
-  private JsonNullable<Boolean> isRemove = JsonNullable.undefined();
+  private Boolean isRemove = null;
 
   @JsonProperty("osTarget")
-  private JsonNullable<AdGroupTargetServiceOsTarget> osTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceOsTarget osTarget = null;
 
   @JsonProperty("osVersionTarget")
-  private JsonNullable<AdGroupTargetServiceOsVersionTarget> osVersionTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceOsVersionTarget osVersionTarget = null;
 
   @JsonProperty("placementTarget")
-  private JsonNullable<AdGroupTargetServicePlacementTarget> placementTarget = JsonNullable.undefined();
+  private AdGroupTargetServicePlacementTarget placementTarget = null;
 
   @JsonProperty("searchTarget")
-  private JsonNullable<AdGroupTargetServiceSearchTarget> searchTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceSearchTarget searchTarget = null;
 
   @JsonProperty("siteCategoryTarget")
-  private JsonNullable<AdGroupTargetServiceSiteCategoryTarget> siteCategoryTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceSiteCategoryTarget siteCategoryTarget = null;
 
   @JsonProperty("siteRetargetingTarget")
-  private JsonNullable<AdGroupTargetServiceSiteRetargetingTarget> siteRetargetingTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceSiteRetargetingTarget siteRetargetingTarget = null;
 
   @JsonProperty("positionTarget")
-  private JsonNullable<AdGroupTargetServicePositionTarget> positionTarget = JsonNullable.undefined();
+  private AdGroupTargetServicePositionTarget positionTarget = null;
 
   @JsonProperty("placementCategoryTarget")
-  private JsonNullable<AdGroupTargetServicePlacementCategoryTarget> placementCategoryTarget = JsonNullable.undefined();
+  private AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget = null;
 
   @JsonProperty("placementCategoryDetailTarget")
-  private JsonNullable<AdGroupTargetServicePlacementCategoryDetailTarget> placementCategoryDetailTarget = JsonNullable.undefined();
+  private AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget = null;
 
   @JsonProperty("contentsTarget")
-  private JsonNullable<AdGroupTargetServiceContentsTarget> contentsTarget = JsonNullable.undefined();
+  private AdGroupTargetServiceContentsTarget contentsTarget = null;
 
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("targetType")
-  private JsonNullable<AdGroupTargetServiceTargetType> targetType = JsonNullable.undefined();
+  private AdGroupTargetServiceTargetType targetType = null;
 
   public AdGroupTargetServiceTarget adScheduleTarget(AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
-    this.adScheduleTarget = JsonNullable.of(adScheduleTarget);
+    this.adScheduleTarget = adScheduleTarget;
     return this;
   }
 
@@ -114,16 +113,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceAdScheduleTarget> getAdScheduleTarget() {
+  public AdGroupTargetServiceAdScheduleTarget getAdScheduleTarget() {
     return adScheduleTarget;
   }
 
-  public void setAdScheduleTarget(JsonNullable<AdGroupTargetServiceAdScheduleTarget> adScheduleTarget) {
+  public void setAdScheduleTarget(AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
     this.adScheduleTarget = adScheduleTarget;
   }
 
   public AdGroupTargetServiceTarget ageTarget(AdGroupTargetServiceAgeTarget ageTarget) {
-    this.ageTarget = JsonNullable.of(ageTarget);
+    this.ageTarget = ageTarget;
     return this;
   }
 
@@ -135,16 +134,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceAgeTarget> getAgeTarget() {
+  public AdGroupTargetServiceAgeTarget getAgeTarget() {
     return ageTarget;
   }
 
-  public void setAgeTarget(JsonNullable<AdGroupTargetServiceAgeTarget> ageTarget) {
+  public void setAgeTarget(AdGroupTargetServiceAgeTarget ageTarget) {
     this.ageTarget = ageTarget;
   }
 
   public AdGroupTargetServiceTarget appTarget(AdGroupTargetServiceAppTarget appTarget) {
-    this.appTarget = JsonNullable.of(appTarget);
+    this.appTarget = appTarget;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceAppTarget> getAppTarget() {
+  public AdGroupTargetServiceAppTarget getAppTarget() {
     return appTarget;
   }
 
-  public void setAppTarget(JsonNullable<AdGroupTargetServiceAppTarget> appTarget) {
+  public void setAppTarget(AdGroupTargetServiceAppTarget appTarget) {
     this.appTarget = appTarget;
   }
 
   public AdGroupTargetServiceTarget audienceCategoryTarget(AdGroupTargetServiceAudienceCategoryTarget audienceCategoryTarget) {
-    this.audienceCategoryTarget = JsonNullable.of(audienceCategoryTarget);
+    this.audienceCategoryTarget = audienceCategoryTarget;
     return this;
   }
 
@@ -177,16 +176,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceAudienceCategoryTarget> getAudienceCategoryTarget() {
+  public AdGroupTargetServiceAudienceCategoryTarget getAudienceCategoryTarget() {
     return audienceCategoryTarget;
   }
 
-  public void setAudienceCategoryTarget(JsonNullable<AdGroupTargetServiceAudienceCategoryTarget> audienceCategoryTarget) {
+  public void setAudienceCategoryTarget(AdGroupTargetServiceAudienceCategoryTarget audienceCategoryTarget) {
     this.audienceCategoryTarget = audienceCategoryTarget;
   }
 
   public AdGroupTargetServiceTarget carrierTarget(AdGroupTargetServiceCarrierTarget carrierTarget) {
-    this.carrierTarget = JsonNullable.of(carrierTarget);
+    this.carrierTarget = carrierTarget;
     return this;
   }
 
@@ -198,16 +197,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceCarrierTarget> getCarrierTarget() {
+  public AdGroupTargetServiceCarrierTarget getCarrierTarget() {
     return carrierTarget;
   }
 
-  public void setCarrierTarget(JsonNullable<AdGroupTargetServiceCarrierTarget> carrierTarget) {
+  public void setCarrierTarget(AdGroupTargetServiceCarrierTarget carrierTarget) {
     this.carrierTarget = carrierTarget;
   }
 
   public AdGroupTargetServiceTarget deviceTarget(AdGroupTargetServiceDeviceTarget deviceTarget) {
-    this.deviceTarget = JsonNullable.of(deviceTarget);
+    this.deviceTarget = deviceTarget;
     return this;
   }
 
@@ -219,16 +218,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceDeviceTarget> getDeviceTarget() {
+  public AdGroupTargetServiceDeviceTarget getDeviceTarget() {
     return deviceTarget;
   }
 
-  public void setDeviceTarget(JsonNullable<AdGroupTargetServiceDeviceTarget> deviceTarget) {
+  public void setDeviceTarget(AdGroupTargetServiceDeviceTarget deviceTarget) {
     this.deviceTarget = deviceTarget;
   }
 
   public AdGroupTargetServiceTarget genderTarget(AdGroupTargetServiceGenderTarget genderTarget) {
-    this.genderTarget = JsonNullable.of(genderTarget);
+    this.genderTarget = genderTarget;
     return this;
   }
 
@@ -240,16 +239,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceGenderTarget> getGenderTarget() {
+  public AdGroupTargetServiceGenderTarget getGenderTarget() {
     return genderTarget;
   }
 
-  public void setGenderTarget(JsonNullable<AdGroupTargetServiceGenderTarget> genderTarget) {
+  public void setGenderTarget(AdGroupTargetServiceGenderTarget genderTarget) {
     this.genderTarget = genderTarget;
   }
 
   public AdGroupTargetServiceTarget geoTarget(AdGroupTargetServiceGeoTarget geoTarget) {
-    this.geoTarget = JsonNullable.of(geoTarget);
+    this.geoTarget = geoTarget;
     return this;
   }
 
@@ -261,16 +260,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceGeoTarget> getGeoTarget() {
+  public AdGroupTargetServiceGeoTarget getGeoTarget() {
     return geoTarget;
   }
 
-  public void setGeoTarget(JsonNullable<AdGroupTargetServiceGeoTarget> geoTarget) {
+  public void setGeoTarget(AdGroupTargetServiceGeoTarget geoTarget) {
     this.geoTarget = geoTarget;
   }
 
   public AdGroupTargetServiceTarget interestCategoryTarget(AdGroupTargetServiceInterestCategoryTarget interestCategoryTarget) {
-    this.interestCategoryTarget = JsonNullable.of(interestCategoryTarget);
+    this.interestCategoryTarget = interestCategoryTarget;
     return this;
   }
 
@@ -282,16 +281,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceInterestCategoryTarget> getInterestCategoryTarget() {
+  public AdGroupTargetServiceInterestCategoryTarget getInterestCategoryTarget() {
     return interestCategoryTarget;
   }
 
-  public void setInterestCategoryTarget(JsonNullable<AdGroupTargetServiceInterestCategoryTarget> interestCategoryTarget) {
+  public void setInterestCategoryTarget(AdGroupTargetServiceInterestCategoryTarget interestCategoryTarget) {
     this.interestCategoryTarget = interestCategoryTarget;
   }
 
   public AdGroupTargetServiceTarget isRemove(Boolean isRemove) {
-    this.isRemove = JsonNullable.of(isRemove);
+    this.isRemove = isRemove;
     return this;
   }
 
@@ -302,16 +301,16 @@ public class AdGroupTargetServiceTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> trueの場合、ターゲティング種別をすべて削除します。<br> このフィールドは、ADD、SETおよびREMOVE時は無視され、REPLACE時は省略可能となります。 </div> <div lang=\"en\"> If true, delete all targeting types.<br> This field will be ignored in ADD, SET and REMOVE operation, and will be optional in REPLACE operation. </div> ")
 
 
-  public JsonNullable<Boolean> getIsRemove() {
+  public Boolean getIsRemove() {
     return isRemove;
   }
 
-  public void setIsRemove(JsonNullable<Boolean> isRemove) {
+  public void setIsRemove(Boolean isRemove) {
     this.isRemove = isRemove;
   }
 
   public AdGroupTargetServiceTarget osTarget(AdGroupTargetServiceOsTarget osTarget) {
-    this.osTarget = JsonNullable.of(osTarget);
+    this.osTarget = osTarget;
     return this;
   }
 
@@ -323,16 +322,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceOsTarget> getOsTarget() {
+  public AdGroupTargetServiceOsTarget getOsTarget() {
     return osTarget;
   }
 
-  public void setOsTarget(JsonNullable<AdGroupTargetServiceOsTarget> osTarget) {
+  public void setOsTarget(AdGroupTargetServiceOsTarget osTarget) {
     this.osTarget = osTarget;
   }
 
   public AdGroupTargetServiceTarget osVersionTarget(AdGroupTargetServiceOsVersionTarget osVersionTarget) {
-    this.osVersionTarget = JsonNullable.of(osVersionTarget);
+    this.osVersionTarget = osVersionTarget;
     return this;
   }
 
@@ -344,16 +343,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceOsVersionTarget> getOsVersionTarget() {
+  public AdGroupTargetServiceOsVersionTarget getOsVersionTarget() {
     return osVersionTarget;
   }
 
-  public void setOsVersionTarget(JsonNullable<AdGroupTargetServiceOsVersionTarget> osVersionTarget) {
+  public void setOsVersionTarget(AdGroupTargetServiceOsVersionTarget osVersionTarget) {
     this.osVersionTarget = osVersionTarget;
   }
 
   public AdGroupTargetServiceTarget placementTarget(AdGroupTargetServicePlacementTarget placementTarget) {
-    this.placementTarget = JsonNullable.of(placementTarget);
+    this.placementTarget = placementTarget;
     return this;
   }
 
@@ -365,16 +364,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServicePlacementTarget> getPlacementTarget() {
+  public AdGroupTargetServicePlacementTarget getPlacementTarget() {
     return placementTarget;
   }
 
-  public void setPlacementTarget(JsonNullable<AdGroupTargetServicePlacementTarget> placementTarget) {
+  public void setPlacementTarget(AdGroupTargetServicePlacementTarget placementTarget) {
     this.placementTarget = placementTarget;
   }
 
   public AdGroupTargetServiceTarget searchTarget(AdGroupTargetServiceSearchTarget searchTarget) {
-    this.searchTarget = JsonNullable.of(searchTarget);
+    this.searchTarget = searchTarget;
     return this;
   }
 
@@ -386,16 +385,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceSearchTarget> getSearchTarget() {
+  public AdGroupTargetServiceSearchTarget getSearchTarget() {
     return searchTarget;
   }
 
-  public void setSearchTarget(JsonNullable<AdGroupTargetServiceSearchTarget> searchTarget) {
+  public void setSearchTarget(AdGroupTargetServiceSearchTarget searchTarget) {
     this.searchTarget = searchTarget;
   }
 
   public AdGroupTargetServiceTarget siteCategoryTarget(AdGroupTargetServiceSiteCategoryTarget siteCategoryTarget) {
-    this.siteCategoryTarget = JsonNullable.of(siteCategoryTarget);
+    this.siteCategoryTarget = siteCategoryTarget;
     return this;
   }
 
@@ -407,16 +406,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceSiteCategoryTarget> getSiteCategoryTarget() {
+  public AdGroupTargetServiceSiteCategoryTarget getSiteCategoryTarget() {
     return siteCategoryTarget;
   }
 
-  public void setSiteCategoryTarget(JsonNullable<AdGroupTargetServiceSiteCategoryTarget> siteCategoryTarget) {
+  public void setSiteCategoryTarget(AdGroupTargetServiceSiteCategoryTarget siteCategoryTarget) {
     this.siteCategoryTarget = siteCategoryTarget;
   }
 
   public AdGroupTargetServiceTarget siteRetargetingTarget(AdGroupTargetServiceSiteRetargetingTarget siteRetargetingTarget) {
-    this.siteRetargetingTarget = JsonNullable.of(siteRetargetingTarget);
+    this.siteRetargetingTarget = siteRetargetingTarget;
     return this;
   }
 
@@ -428,16 +427,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceSiteRetargetingTarget> getSiteRetargetingTarget() {
+  public AdGroupTargetServiceSiteRetargetingTarget getSiteRetargetingTarget() {
     return siteRetargetingTarget;
   }
 
-  public void setSiteRetargetingTarget(JsonNullable<AdGroupTargetServiceSiteRetargetingTarget> siteRetargetingTarget) {
+  public void setSiteRetargetingTarget(AdGroupTargetServiceSiteRetargetingTarget siteRetargetingTarget) {
     this.siteRetargetingTarget = siteRetargetingTarget;
   }
 
   public AdGroupTargetServiceTarget positionTarget(AdGroupTargetServicePositionTarget positionTarget) {
-    this.positionTarget = JsonNullable.of(positionTarget);
+    this.positionTarget = positionTarget;
     return this;
   }
 
@@ -449,16 +448,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServicePositionTarget> getPositionTarget() {
+  public AdGroupTargetServicePositionTarget getPositionTarget() {
     return positionTarget;
   }
 
-  public void setPositionTarget(JsonNullable<AdGroupTargetServicePositionTarget> positionTarget) {
+  public void setPositionTarget(AdGroupTargetServicePositionTarget positionTarget) {
     this.positionTarget = positionTarget;
   }
 
   public AdGroupTargetServiceTarget placementCategoryTarget(AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget) {
-    this.placementCategoryTarget = JsonNullable.of(placementCategoryTarget);
+    this.placementCategoryTarget = placementCategoryTarget;
     return this;
   }
 
@@ -470,16 +469,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServicePlacementCategoryTarget> getPlacementCategoryTarget() {
+  public AdGroupTargetServicePlacementCategoryTarget getPlacementCategoryTarget() {
     return placementCategoryTarget;
   }
 
-  public void setPlacementCategoryTarget(JsonNullable<AdGroupTargetServicePlacementCategoryTarget> placementCategoryTarget) {
+  public void setPlacementCategoryTarget(AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget) {
     this.placementCategoryTarget = placementCategoryTarget;
   }
 
   public AdGroupTargetServiceTarget placementCategoryDetailTarget(AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
-    this.placementCategoryDetailTarget = JsonNullable.of(placementCategoryDetailTarget);
+    this.placementCategoryDetailTarget = placementCategoryDetailTarget;
     return this;
   }
 
@@ -491,16 +490,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServicePlacementCategoryDetailTarget> getPlacementCategoryDetailTarget() {
+  public AdGroupTargetServicePlacementCategoryDetailTarget getPlacementCategoryDetailTarget() {
     return placementCategoryDetailTarget;
   }
 
-  public void setPlacementCategoryDetailTarget(JsonNullable<AdGroupTargetServicePlacementCategoryDetailTarget> placementCategoryDetailTarget) {
+  public void setPlacementCategoryDetailTarget(AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
   }
 
   public AdGroupTargetServiceTarget contentsTarget(AdGroupTargetServiceContentsTarget contentsTarget) {
-    this.contentsTarget = JsonNullable.of(contentsTarget);
+    this.contentsTarget = contentsTarget;
     return this;
   }
 
@@ -512,16 +511,16 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceContentsTarget> getContentsTarget() {
+  public AdGroupTargetServiceContentsTarget getContentsTarget() {
     return contentsTarget;
   }
 
-  public void setContentsTarget(JsonNullable<AdGroupTargetServiceContentsTarget> contentsTarget) {
+  public void setContentsTarget(AdGroupTargetServiceContentsTarget contentsTarget) {
     this.contentsTarget = contentsTarget;
   }
 
   public AdGroupTargetServiceTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -532,16 +531,16 @@ public class AdGroupTargetServiceTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットIDです。<br> このフィールドは、ADDおよびREPLACE時は省略可能となり、SETおよびREMOVE時は必須となります。<br> ※ADD時、targetTypeが以下のいずれかの場合は必須です。<br> ‐SITE_RETARGETING<br> ‐PLACEMENT_TARGET<br> ‐SEARCH_TARGET<br> ‐GEO_TARGET<br> ‐INTEREST_CATEGORY<br> ‐SITE_CATEGORY<br> ‐AUDIENCE_CATEGORY_TARGET<br> ‐PLACEMENT_CATEGORY_TARGET<br> -PLACEMENT_CATEGORY_DETAIL_TARGET<br> -CONTENTS_TARGET<br> ※REPLACE時、isRemoveがtrueの場合は設定不要です。<br> <br> ‐SITE_RETARGETING: targetListId<br> ‐PLACEMENT_TARGET: placementUrlListId<br> ‐SEARCH_TARGET: searchKeywordListId<br> ‐GEO_TARGET: IM地域コード(geo)<br> ‐INTEREST_CATEGORY: カテゴリーコード(category)<br> ‐SITE_CATEGORY: カテゴリーコード(category)<br> ‐OS_VERSION_TARGET: osVersion<br> ‐AUDIENCE_CATEGORY_TARGET: オーディエンスカテゴリーコード(audience category)<br> ‐POSITION_TARGET: PositionTypeのコード値<br> ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId<br> -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId<br> -CONTENTS_TARGET: contentsKeywordListId </div> <div lang=\"en\"> Target ID.<br> This field is optional in ADD and REPLACE operation, and is required in SET and REMOVE operation.<br> *If targetType is any of the following, this field is required in ADD operation.<br> ‐SITE_RETARGETING<br> ‐PLACEMENT_TARGET<br> ‐SEARCH_TARGET<br> ‐GEO_TARGET<br> ‐INTEREST_CATEGORY<br> ‐SITE_CATEGORY<br> ‐AUDIENCE_CATEGORY_TARGET<br> ‐PLACEMENT_CATEGORY_TARGET<br> -PLACEMENT_CATEGORY_DETAIL_TARGET<br> -CONTENTS_TARGET<br> *If isRemove is true, this field does not need to be set in REPLACE operation.<br> <br> ‐SITE_RETARGETING: targetListId<br> ‐PLACEMENT_TARGET: placementUrlListId<br> ‐SEARCH_TARGET: searchKeywordListId<br> ‐GEO_TARGET: IM area code(geo)<br> ‐INTEREST_CATEGORY: category code(category)<br> ‐SITE_CATEGORY: category code(category)<br> ‐OS_VERSION_TARGET: osVersion<br> ‐AUDIENCE_CATEGORY_TARGET: audience category code(audience category)<br> ‐POSITION_TARGET: PositionType code.<br> ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId<br> -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId<br> -CONTENTS_TARGET: contentsKeywordListId </div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public AdGroupTargetServiceTarget targetType(AdGroupTargetServiceTargetType targetType) {
-    this.targetType = JsonNullable.of(targetType);
+    this.targetType = targetType;
     return this;
   }
 
@@ -553,17 +552,17 @@ public class AdGroupTargetServiceTarget   {
 
   @Valid
 
-  public JsonNullable<AdGroupTargetServiceTargetType> getTargetType() {
+  public AdGroupTargetServiceTargetType getTargetType() {
     return targetType;
   }
 
-  public void setTargetType(JsonNullable<AdGroupTargetServiceTargetType> targetType) {
+  public void setTargetType(AdGroupTargetServiceTargetType targetType) {
     this.targetType = targetType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -635,7 +634,7 @@ public class AdGroupTargetServiceTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

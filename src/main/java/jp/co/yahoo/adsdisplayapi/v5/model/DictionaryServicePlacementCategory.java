@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -13,16 +12,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; DictionaryServicePlacementCategoryオブジェクトは、駅情報を保持します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; DictionaryServicePlacementCategory object contains information about station.&lt;br&gt; &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> DictionaryServicePlacementCategoryオブジェクトは、駅情報を保持します。<br> </div> <div lang=\"en\"> DictionaryServicePlacementCategory object contains information about station.<br> </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class DictionaryServicePlacementCategory   {
   @JsonProperty("placementCategoryId")
   private Long placementCategoryId;
 
   @JsonProperty("placementCategoryNameJa")
-  private JsonNullable<String> placementCategoryNameJa = JsonNullable.undefined();
+  private String placementCategoryNameJa = null;
 
   @JsonProperty("placementCategoryNameEn")
-  private JsonNullable<String> placementCategoryNameEn = JsonNullable.undefined();
+  private String placementCategoryNameEn = null;
 
   public DictionaryServicePlacementCategory placementCategoryId(Long placementCategoryId) {
     this.placementCategoryId = placementCategoryId;
@@ -45,7 +44,7 @@ public class DictionaryServicePlacementCategory   {
   }
 
   public DictionaryServicePlacementCategory placementCategoryNameJa(String placementCategoryNameJa) {
-    this.placementCategoryNameJa = JsonNullable.of(placementCategoryNameJa);
+    this.placementCategoryNameJa = placementCategoryNameJa;
     return this;
   }
 
@@ -56,16 +55,16 @@ public class DictionaryServicePlacementCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 駅名(日本語)です。<br> </div> <div lang=\"en\"> Station name(Ja)<br> </div> ")
 
 
-  public JsonNullable<String> getPlacementCategoryNameJa() {
+  public String getPlacementCategoryNameJa() {
     return placementCategoryNameJa;
   }
 
-  public void setPlacementCategoryNameJa(JsonNullable<String> placementCategoryNameJa) {
+  public void setPlacementCategoryNameJa(String placementCategoryNameJa) {
     this.placementCategoryNameJa = placementCategoryNameJa;
   }
 
   public DictionaryServicePlacementCategory placementCategoryNameEn(String placementCategoryNameEn) {
-    this.placementCategoryNameEn = JsonNullable.of(placementCategoryNameEn);
+    this.placementCategoryNameEn = placementCategoryNameEn;
     return this;
   }
 
@@ -76,17 +75,17 @@ public class DictionaryServicePlacementCategory   {
   @ApiModelProperty(value = "<div lang=\"ja\"> 駅名(英語)です。<br> </div> <div lang=\"en\"> Station name(Eng)<br> </div> ")
 
 
-  public JsonNullable<String> getPlacementCategoryNameEn() {
+  public String getPlacementCategoryNameEn() {
     return placementCategoryNameEn;
   }
 
-  public void setPlacementCategoryNameEn(JsonNullable<String> placementCategoryNameEn) {
+  public void setPlacementCategoryNameEn(String placementCategoryNameEn) {
     this.placementCategoryNameEn = placementCategoryNameEn;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -120,7 +119,7 @@ public class DictionaryServicePlacementCategory   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

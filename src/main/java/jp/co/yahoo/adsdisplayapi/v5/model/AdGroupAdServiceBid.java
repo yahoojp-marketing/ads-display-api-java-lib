@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceBiddingStrategyType;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceManualCPCAdGroupAdBid;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceManualCPVAdGroupAdBid;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,19 +15,19 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceBidオブジェクトは、入札最適化方法を格納するコンテナです。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt; ADD時、このフィールドは指定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceBid object is a container for storing bid optimization method.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; In ADD operation, this field can not be set. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceBidオブジェクトは、入札最適化方法を格納するコンテナです。<br> SET時、このフィールドは省略可能となります。<br> ADD時、このフィールドは指定できません。 </div> <div lang=\"en\"> AdGroupAdServiceBid object is a container for storing bid optimization method.<br> This field is optional in SET operation.<br> In ADD operation, this field can not be set. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceBid   {
   @JsonProperty("biddingStrategyType")
-  private JsonNullable<AdGroupAdServiceBiddingStrategyType> biddingStrategyType = JsonNullable.undefined();
+  private AdGroupAdServiceBiddingStrategyType biddingStrategyType = null;
 
   @JsonProperty("manualCPCAdGroupAdBid")
-  private JsonNullable<AdGroupAdServiceManualCPCAdGroupAdBid> manualCPCAdGroupAdBid = JsonNullable.undefined();
+  private AdGroupAdServiceManualCPCAdGroupAdBid manualCPCAdGroupAdBid = null;
 
   @JsonProperty("manualCPVAdGroupAdBid")
-  private JsonNullable<AdGroupAdServiceManualCPVAdGroupAdBid> manualCPVAdGroupAdBid = JsonNullable.undefined();
+  private AdGroupAdServiceManualCPVAdGroupAdBid manualCPVAdGroupAdBid = null;
 
   public AdGroupAdServiceBid biddingStrategyType(AdGroupAdServiceBiddingStrategyType biddingStrategyType) {
-    this.biddingStrategyType = JsonNullable.of(biddingStrategyType);
+    this.biddingStrategyType = biddingStrategyType;
     return this;
   }
 
@@ -40,16 +39,16 @@ public class AdGroupAdServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceBiddingStrategyType> getBiddingStrategyType() {
+  public AdGroupAdServiceBiddingStrategyType getBiddingStrategyType() {
     return biddingStrategyType;
   }
 
-  public void setBiddingStrategyType(JsonNullable<AdGroupAdServiceBiddingStrategyType> biddingStrategyType) {
+  public void setBiddingStrategyType(AdGroupAdServiceBiddingStrategyType biddingStrategyType) {
     this.biddingStrategyType = biddingStrategyType;
   }
 
   public AdGroupAdServiceBid manualCPCAdGroupAdBid(AdGroupAdServiceManualCPCAdGroupAdBid manualCPCAdGroupAdBid) {
-    this.manualCPCAdGroupAdBid = JsonNullable.of(manualCPCAdGroupAdBid);
+    this.manualCPCAdGroupAdBid = manualCPCAdGroupAdBid;
     return this;
   }
 
@@ -61,16 +60,16 @@ public class AdGroupAdServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceManualCPCAdGroupAdBid> getManualCPCAdGroupAdBid() {
+  public AdGroupAdServiceManualCPCAdGroupAdBid getManualCPCAdGroupAdBid() {
     return manualCPCAdGroupAdBid;
   }
 
-  public void setManualCPCAdGroupAdBid(JsonNullable<AdGroupAdServiceManualCPCAdGroupAdBid> manualCPCAdGroupAdBid) {
+  public void setManualCPCAdGroupAdBid(AdGroupAdServiceManualCPCAdGroupAdBid manualCPCAdGroupAdBid) {
     this.manualCPCAdGroupAdBid = manualCPCAdGroupAdBid;
   }
 
   public AdGroupAdServiceBid manualCPVAdGroupAdBid(AdGroupAdServiceManualCPVAdGroupAdBid manualCPVAdGroupAdBid) {
-    this.manualCPVAdGroupAdBid = JsonNullable.of(manualCPVAdGroupAdBid);
+    this.manualCPVAdGroupAdBid = manualCPVAdGroupAdBid;
     return this;
   }
 
@@ -82,17 +81,17 @@ public class AdGroupAdServiceBid   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceManualCPVAdGroupAdBid> getManualCPVAdGroupAdBid() {
+  public AdGroupAdServiceManualCPVAdGroupAdBid getManualCPVAdGroupAdBid() {
     return manualCPVAdGroupAdBid;
   }
 
-  public void setManualCPVAdGroupAdBid(JsonNullable<AdGroupAdServiceManualCPVAdGroupAdBid> manualCPVAdGroupAdBid) {
+  public void setManualCPVAdGroupAdBid(AdGroupAdServiceManualCPVAdGroupAdBid manualCPVAdGroupAdBid) {
     this.manualCPVAdGroupAdBid = manualCPVAdGroupAdBid;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -126,7 +125,7 @@ public class AdGroupAdServiceBid   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

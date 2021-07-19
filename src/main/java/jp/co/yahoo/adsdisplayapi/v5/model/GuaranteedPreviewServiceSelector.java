@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedPreviewServiceMaterial;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,13 +13,13 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedPreviewServiceSelectorオブジェクトは、getメソッドのプレビュー情報の取得条件を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedPreviewServiceSelector object holds acquisition conditions of preview information in the get method.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedPreviewServiceSelectorオブジェクトは、getメソッドのプレビュー情報の取得条件を保持します。</div> <div lang=\"en\">GuaranteedPreviewServiceSelector object holds acquisition conditions of preview information in the get method.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedPreviewServiceSelector   {
   @JsonProperty("accountId")
   private Long accountId;
 
   @JsonProperty("material")
-  private JsonNullable<GuaranteedPreviewServiceMaterial> material = JsonNullable.undefined();
+  private GuaranteedPreviewServiceMaterial material = null;
 
   public GuaranteedPreviewServiceSelector accountId(Long accountId) {
     this.accountId = accountId;
@@ -44,7 +43,7 @@ public class GuaranteedPreviewServiceSelector   {
   }
 
   public GuaranteedPreviewServiceSelector material(GuaranteedPreviewServiceMaterial material) {
-    this.material = JsonNullable.of(material);
+    this.material = material;
     return this;
   }
 
@@ -57,17 +56,17 @@ public class GuaranteedPreviewServiceSelector   {
 
   @Valid
 
-  public JsonNullable<GuaranteedPreviewServiceMaterial> getMaterial() {
+  public GuaranteedPreviewServiceMaterial getMaterial() {
     return material;
   }
 
-  public void setMaterial(JsonNullable<GuaranteedPreviewServiceMaterial> material) {
+  public void setMaterial(GuaranteedPreviewServiceMaterial material) {
     this.material = material;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -99,7 +98,7 @@ public class GuaranteedPreviewServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

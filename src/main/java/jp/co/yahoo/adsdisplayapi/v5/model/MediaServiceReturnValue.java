@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.MediaServiceValue;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,22 +15,22 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MediaServiceReturnValueオブジェクトは、画像の情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The MediaServiceReturnValue object is a container for storing media information.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">MediaServiceReturnValueオブジェクトは、画像の情報を格納するコンテナです。</div> <div lang=\"en\">The MediaServiceReturnValue object is a container for storing media information.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class MediaServiceReturnValue   {
   @JsonProperty("values")
   @Valid
-  private JsonNullable<List<MediaServiceValue>> values = JsonNullable.undefined();
+  private List<MediaServiceValue> values = null;
 
   public MediaServiceReturnValue values(List<MediaServiceValue> values) {
-    this.values = JsonNullable.of(values);
+    this.values = values;
     return this;
   }
 
   public MediaServiceReturnValue addValuesItem(MediaServiceValue valuesItem) {
-    if (this.values == null || !this.values.isPresent()) {
-      this.values = JsonNullable.of(new ArrayList<>());
+    if (this.values == null) {
+      this.values = new ArrayList<>();
     }
-    this.values.get().add(valuesItem);
+    this.values.add(valuesItem);
     return this;
   }
 
@@ -43,17 +42,17 @@ public class MediaServiceReturnValue   {
 
   @Valid
 
-  public JsonNullable<List<MediaServiceValue>> getValues() {
+  public List<MediaServiceValue> getValues() {
     return values;
   }
 
-  public void setValues(JsonNullable<List<MediaServiceValue>> values) {
+  public void setValues(List<MediaServiceValue> values) {
     this.values = values;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -83,7 +82,7 @@ public class MediaServiceReturnValue   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

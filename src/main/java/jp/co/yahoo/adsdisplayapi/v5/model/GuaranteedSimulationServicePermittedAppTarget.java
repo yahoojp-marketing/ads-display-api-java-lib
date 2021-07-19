@@ -6,7 +6,6 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServiceDeviceAppType;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -14,16 +13,16 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePermittedAppTargetオブジェクトは、アプリターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePermittedAppTarget object holds configuration information of app targeting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePermittedAppTargetオブジェクトは、アプリターゲットの設定情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePermittedAppTarget object holds configuration information of app targeting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePermittedAppTarget   {
   @JsonProperty("targetId")
-  private JsonNullable<String> targetId = JsonNullable.undefined();
+  private String targetId = null;
 
   @JsonProperty("appType")
-  private JsonNullable<GuaranteedSimulationServiceDeviceAppType> appType = JsonNullable.undefined();
+  private GuaranteedSimulationServiceDeviceAppType appType = null;
 
   public GuaranteedSimulationServicePermittedAppTarget targetId(String targetId) {
-    this.targetId = JsonNullable.of(targetId);
+    this.targetId = targetId;
     return this;
   }
 
@@ -34,16 +33,16 @@ public class GuaranteedSimulationServicePermittedAppTarget   {
   @ApiModelProperty(value = "<div lang=\"ja\">ターゲットID</div> <div lang=\"en\">Target ID</div> ")
 
 
-  public JsonNullable<String> getTargetId() {
+  public String getTargetId() {
     return targetId;
   }
 
-  public void setTargetId(JsonNullable<String> targetId) {
+  public void setTargetId(String targetId) {
     this.targetId = targetId;
   }
 
   public GuaranteedSimulationServicePermittedAppTarget appType(GuaranteedSimulationServiceDeviceAppType appType) {
-    this.appType = JsonNullable.of(appType);
+    this.appType = appType;
     return this;
   }
 
@@ -55,17 +54,17 @@ public class GuaranteedSimulationServicePermittedAppTarget   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServiceDeviceAppType> getAppType() {
+  public GuaranteedSimulationServiceDeviceAppType getAppType() {
     return appType;
   }
 
-  public void setAppType(JsonNullable<GuaranteedSimulationServiceDeviceAppType> appType) {
+  public void setAppType(GuaranteedSimulationServiceDeviceAppType appType) {
     this.appType = appType;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -97,7 +96,7 @@ public class GuaranteedSimulationServicePermittedAppTarget   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

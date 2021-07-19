@@ -16,7 +16,6 @@ import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceResponsiveImageAd;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceResponsiveVideoAd;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceStaticFrameAd;
 import jp.co.yahoo.adsdisplayapi.v5.model.AdGroupAdServiceTextAd;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -24,43 +23,43 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceAd object is a container for storing ads.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> AdGroupAdServiceAd object is a container for storing ads.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupAdServiceAd   {
   @JsonProperty("adType")
-  private JsonNullable<AdGroupAdServiceAdType> adType = JsonNullable.undefined();
+  private AdGroupAdServiceAdType adType = null;
 
   @JsonProperty("bannerImageAd")
-  private JsonNullable<AdGroupAdServiceBannerImageAd> bannerImageAd = JsonNullable.undefined();
+  private AdGroupAdServiceBannerImageAd bannerImageAd = null;
 
   @JsonProperty("bannerVideoAd")
-  private JsonNullable<AdGroupAdServiceBannerVideoAd> bannerVideoAd = JsonNullable.undefined();
+  private AdGroupAdServiceBannerVideoAd bannerVideoAd = null;
 
   @JsonProperty("dynamicAd")
-  private JsonNullable<AdGroupAdServiceDynamicAd> dynamicAd = JsonNullable.undefined();
+  private AdGroupAdServiceDynamicAd dynamicAd = null;
 
   @JsonProperty("mobileAd")
-  private JsonNullable<AdGroupAdServiceMobileAd> mobileAd = JsonNullable.undefined();
+  private AdGroupAdServiceMobileAd mobileAd = null;
 
   @JsonProperty("posAd")
-  private JsonNullable<AdGroupAdServicePosAd> posAd = JsonNullable.undefined();
+  private AdGroupAdServicePosAd posAd = null;
 
   @JsonProperty("responsiveImageAd")
-  private JsonNullable<AdGroupAdServiceResponsiveImageAd> responsiveImageAd = JsonNullable.undefined();
+  private AdGroupAdServiceResponsiveImageAd responsiveImageAd = null;
 
   @JsonProperty("responsiveVideoAd")
-  private JsonNullable<AdGroupAdServiceResponsiveVideoAd> responsiveVideoAd = JsonNullable.undefined();
+  private AdGroupAdServiceResponsiveVideoAd responsiveVideoAd = null;
 
   @JsonProperty("staticFrameAd")
-  private JsonNullable<AdGroupAdServiceStaticFrameAd> staticFrameAd = JsonNullable.undefined();
+  private AdGroupAdServiceStaticFrameAd staticFrameAd = null;
 
   @JsonProperty("textAd")
-  private JsonNullable<AdGroupAdServiceTextAd> textAd = JsonNullable.undefined();
+  private AdGroupAdServiceTextAd textAd = null;
 
   @JsonProperty("carouselAd")
-  private JsonNullable<AdGroupAdServiceCarouselAd> carouselAd = JsonNullable.undefined();
+  private AdGroupAdServiceCarouselAd carouselAd = null;
 
   public AdGroupAdServiceAd adType(AdGroupAdServiceAdType adType) {
-    this.adType = JsonNullable.of(adType);
+    this.adType = adType;
     return this;
   }
 
@@ -72,16 +71,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceAdType> getAdType() {
+  public AdGroupAdServiceAdType getAdType() {
     return adType;
   }
 
-  public void setAdType(JsonNullable<AdGroupAdServiceAdType> adType) {
+  public void setAdType(AdGroupAdServiceAdType adType) {
     this.adType = adType;
   }
 
   public AdGroupAdServiceAd bannerImageAd(AdGroupAdServiceBannerImageAd bannerImageAd) {
-    this.bannerImageAd = JsonNullable.of(bannerImageAd);
+    this.bannerImageAd = bannerImageAd;
     return this;
   }
 
@@ -93,16 +92,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceBannerImageAd> getBannerImageAd() {
+  public AdGroupAdServiceBannerImageAd getBannerImageAd() {
     return bannerImageAd;
   }
 
-  public void setBannerImageAd(JsonNullable<AdGroupAdServiceBannerImageAd> bannerImageAd) {
+  public void setBannerImageAd(AdGroupAdServiceBannerImageAd bannerImageAd) {
     this.bannerImageAd = bannerImageAd;
   }
 
   public AdGroupAdServiceAd bannerVideoAd(AdGroupAdServiceBannerVideoAd bannerVideoAd) {
-    this.bannerVideoAd = JsonNullable.of(bannerVideoAd);
+    this.bannerVideoAd = bannerVideoAd;
     return this;
   }
 
@@ -114,16 +113,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceBannerVideoAd> getBannerVideoAd() {
+  public AdGroupAdServiceBannerVideoAd getBannerVideoAd() {
     return bannerVideoAd;
   }
 
-  public void setBannerVideoAd(JsonNullable<AdGroupAdServiceBannerVideoAd> bannerVideoAd) {
+  public void setBannerVideoAd(AdGroupAdServiceBannerVideoAd bannerVideoAd) {
     this.bannerVideoAd = bannerVideoAd;
   }
 
   public AdGroupAdServiceAd dynamicAd(AdGroupAdServiceDynamicAd dynamicAd) {
-    this.dynamicAd = JsonNullable.of(dynamicAd);
+    this.dynamicAd = dynamicAd;
     return this;
   }
 
@@ -135,16 +134,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceDynamicAd> getDynamicAd() {
+  public AdGroupAdServiceDynamicAd getDynamicAd() {
     return dynamicAd;
   }
 
-  public void setDynamicAd(JsonNullable<AdGroupAdServiceDynamicAd> dynamicAd) {
+  public void setDynamicAd(AdGroupAdServiceDynamicAd dynamicAd) {
     this.dynamicAd = dynamicAd;
   }
 
   public AdGroupAdServiceAd mobileAd(AdGroupAdServiceMobileAd mobileAd) {
-    this.mobileAd = JsonNullable.of(mobileAd);
+    this.mobileAd = mobileAd;
     return this;
   }
 
@@ -156,16 +155,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceMobileAd> getMobileAd() {
+  public AdGroupAdServiceMobileAd getMobileAd() {
     return mobileAd;
   }
 
-  public void setMobileAd(JsonNullable<AdGroupAdServiceMobileAd> mobileAd) {
+  public void setMobileAd(AdGroupAdServiceMobileAd mobileAd) {
     this.mobileAd = mobileAd;
   }
 
   public AdGroupAdServiceAd posAd(AdGroupAdServicePosAd posAd) {
-    this.posAd = JsonNullable.of(posAd);
+    this.posAd = posAd;
     return this;
   }
 
@@ -177,16 +176,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServicePosAd> getPosAd() {
+  public AdGroupAdServicePosAd getPosAd() {
     return posAd;
   }
 
-  public void setPosAd(JsonNullable<AdGroupAdServicePosAd> posAd) {
+  public void setPosAd(AdGroupAdServicePosAd posAd) {
     this.posAd = posAd;
   }
 
   public AdGroupAdServiceAd responsiveImageAd(AdGroupAdServiceResponsiveImageAd responsiveImageAd) {
-    this.responsiveImageAd = JsonNullable.of(responsiveImageAd);
+    this.responsiveImageAd = responsiveImageAd;
     return this;
   }
 
@@ -198,16 +197,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceResponsiveImageAd> getResponsiveImageAd() {
+  public AdGroupAdServiceResponsiveImageAd getResponsiveImageAd() {
     return responsiveImageAd;
   }
 
-  public void setResponsiveImageAd(JsonNullable<AdGroupAdServiceResponsiveImageAd> responsiveImageAd) {
+  public void setResponsiveImageAd(AdGroupAdServiceResponsiveImageAd responsiveImageAd) {
     this.responsiveImageAd = responsiveImageAd;
   }
 
   public AdGroupAdServiceAd responsiveVideoAd(AdGroupAdServiceResponsiveVideoAd responsiveVideoAd) {
-    this.responsiveVideoAd = JsonNullable.of(responsiveVideoAd);
+    this.responsiveVideoAd = responsiveVideoAd;
     return this;
   }
 
@@ -219,16 +218,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceResponsiveVideoAd> getResponsiveVideoAd() {
+  public AdGroupAdServiceResponsiveVideoAd getResponsiveVideoAd() {
     return responsiveVideoAd;
   }
 
-  public void setResponsiveVideoAd(JsonNullable<AdGroupAdServiceResponsiveVideoAd> responsiveVideoAd) {
+  public void setResponsiveVideoAd(AdGroupAdServiceResponsiveVideoAd responsiveVideoAd) {
     this.responsiveVideoAd = responsiveVideoAd;
   }
 
   public AdGroupAdServiceAd staticFrameAd(AdGroupAdServiceStaticFrameAd staticFrameAd) {
-    this.staticFrameAd = JsonNullable.of(staticFrameAd);
+    this.staticFrameAd = staticFrameAd;
     return this;
   }
 
@@ -240,16 +239,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceStaticFrameAd> getStaticFrameAd() {
+  public AdGroupAdServiceStaticFrameAd getStaticFrameAd() {
     return staticFrameAd;
   }
 
-  public void setStaticFrameAd(JsonNullable<AdGroupAdServiceStaticFrameAd> staticFrameAd) {
+  public void setStaticFrameAd(AdGroupAdServiceStaticFrameAd staticFrameAd) {
     this.staticFrameAd = staticFrameAd;
   }
 
   public AdGroupAdServiceAd textAd(AdGroupAdServiceTextAd textAd) {
-    this.textAd = JsonNullable.of(textAd);
+    this.textAd = textAd;
     return this;
   }
 
@@ -261,16 +260,16 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceTextAd> getTextAd() {
+  public AdGroupAdServiceTextAd getTextAd() {
     return textAd;
   }
 
-  public void setTextAd(JsonNullable<AdGroupAdServiceTextAd> textAd) {
+  public void setTextAd(AdGroupAdServiceTextAd textAd) {
     this.textAd = textAd;
   }
 
   public AdGroupAdServiceAd carouselAd(AdGroupAdServiceCarouselAd carouselAd) {
-    this.carouselAd = JsonNullable.of(carouselAd);
+    this.carouselAd = carouselAd;
     return this;
   }
 
@@ -282,17 +281,17 @@ public class AdGroupAdServiceAd   {
 
   @Valid
 
-  public JsonNullable<AdGroupAdServiceCarouselAd> getCarouselAd() {
+  public AdGroupAdServiceCarouselAd getCarouselAd() {
     return carouselAd;
   }
 
-  public void setCarouselAd(JsonNullable<AdGroupAdServiceCarouselAd> carouselAd) {
+  public void setCarouselAd(AdGroupAdServiceCarouselAd carouselAd) {
     this.carouselAd = carouselAd;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -342,7 +341,7 @@ public class AdGroupAdServiceAd   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -10,7 +10,6 @@ import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePackagePermissionType;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePermittedPlacementCategoryTarget;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePlacementMonopolyFlg;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -18,23 +17,23 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedSimulationServicePackagePermittedPlacementCategoryTargetオブジェクトは、プレイスメントカテゴリターゲット設定の制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget object holds the restriction information about the placement category target setting.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">GuaranteedSimulationServicePackagePermittedPlacementCategoryTargetオブジェクトは、プレイスメントカテゴリターゲット設定の制限情報を保持します。</div> <div lang=\"en\">GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget object holds the restriction information about the placement category target setting.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget   {
   @JsonProperty("targetPermission")
-  private JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission = JsonNullable.undefined();
+  private GuaranteedSimulationServicePackagePermissionType targetPermission = null;
 
   @JsonProperty("permittedTargets")
   @Valid
   private List<GuaranteedSimulationServicePermittedPlacementCategoryTarget> permittedTargets = null;
 
   @JsonProperty("placementMonopolyFlg")
-  private JsonNullable<GuaranteedSimulationServicePlacementMonopolyFlg> placementMonopolyFlg = JsonNullable.undefined();
+  private GuaranteedSimulationServicePlacementMonopolyFlg placementMonopolyFlg = null;
 
   @JsonProperty("placementCategoryDetailMax")
-  private JsonNullable<Long> placementCategoryDetailMax = JsonNullable.undefined();
+  private Long placementCategoryDetailMax = null;
 
   public GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget targetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
-    this.targetPermission = JsonNullable.of(targetPermission);
+    this.targetPermission = targetPermission;
     return this;
   }
 
@@ -46,11 +45,11 @@ public class GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget 
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePackagePermissionType> getTargetPermission() {
+  public GuaranteedSimulationServicePackagePermissionType getTargetPermission() {
     return targetPermission;
   }
 
-  public void setTargetPermission(JsonNullable<GuaranteedSimulationServicePackagePermissionType> targetPermission) {
+  public void setTargetPermission(GuaranteedSimulationServicePackagePermissionType targetPermission) {
     this.targetPermission = targetPermission;
   }
 
@@ -84,7 +83,7 @@ public class GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget 
   }
 
   public GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget placementMonopolyFlg(GuaranteedSimulationServicePlacementMonopolyFlg placementMonopolyFlg) {
-    this.placementMonopolyFlg = JsonNullable.of(placementMonopolyFlg);
+    this.placementMonopolyFlg = placementMonopolyFlg;
     return this;
   }
 
@@ -96,16 +95,16 @@ public class GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget 
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePlacementMonopolyFlg> getPlacementMonopolyFlg() {
+  public GuaranteedSimulationServicePlacementMonopolyFlg getPlacementMonopolyFlg() {
     return placementMonopolyFlg;
   }
 
-  public void setPlacementMonopolyFlg(JsonNullable<GuaranteedSimulationServicePlacementMonopolyFlg> placementMonopolyFlg) {
+  public void setPlacementMonopolyFlg(GuaranteedSimulationServicePlacementMonopolyFlg placementMonopolyFlg) {
     this.placementMonopolyFlg = placementMonopolyFlg;
   }
 
   public GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget placementCategoryDetailMax(Long placementCategoryDetailMax) {
-    this.placementCategoryDetailMax = JsonNullable.of(placementCategoryDetailMax);
+    this.placementCategoryDetailMax = placementCategoryDetailMax;
     return this;
   }
 
@@ -116,17 +115,17 @@ public class GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget 
   @ApiModelProperty(value = "<div lang=\"ja\">プレイスメントカテゴリ詳細の最大数です。</div> <div lang=\"en\">The maximum number of placement category details.</div> ")
 
 
-  public JsonNullable<Long> getPlacementCategoryDetailMax() {
+  public Long getPlacementCategoryDetailMax() {
     return placementCategoryDetailMax;
   }
 
-  public void setPlacementCategoryDetailMax(JsonNullable<Long> placementCategoryDetailMax) {
+  public void setPlacementCategoryDetailMax(Long placementCategoryDetailMax) {
     this.placementCategoryDetailMax = placementCategoryDetailMax;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -162,7 +161,7 @@ public class GuaranteedSimulationServicePackagePermittedPlacementCategoryTarget 
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

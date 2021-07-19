@@ -8,7 +8,6 @@ import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.GuaranteedSimulationServicePredictionResult;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -16,28 +15,28 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedSimulationServicePredictionオブジェクトは、GuaranteedSimulationオブジェクトで定義された条件に基づく配信シミュレーションの予測結果を表します。&lt;br&gt; - results: 予約確定前の配信シミュレーションの予測結果のデータセットです。&lt;br&gt; - requestedConditionResult: 指定された条件（sov, reach, vImps, lifetimeBudget）に関連する予約確定前の配信シミュレーションの予測結果です。&lt;br&gt; - reservedConditionResult: 指定された条件（sov, reach, vImps, lifetimeBudget）に関連する予約確定後の配信シミュレーションの予測結果です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedSimulationServicePrediction object describes the prediction result of the delivery simulation based on conditions defined in GuaranteedSimulation object.&lt;br&gt; - results: Prediction result data set of the delivery simulation before reservation is confirmed.&lt;br&gt; - requestedConditionResult: Prediction result of the delivery simulation before reservation is confirmed that is related to the specified conditions (sov, reach, vImps, lifetimeBudget).&lt;br&gt; - reservedConditionResult: Prediction result of the delivery simulation after reservation is confirmed that is related to the specified conditions (sov, reach, vImps, lifetimeBudget). &lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\"> GuaranteedSimulationServicePredictionオブジェクトは、GuaranteedSimulationオブジェクトで定義された条件に基づく配信シミュレーションの予測結果を表します。<br> - results: 予約確定前の配信シミュレーションの予測結果のデータセットです。<br> - requestedConditionResult: 指定された条件（sov, reach, vImps, lifetimeBudget）に関連する予約確定前の配信シミュレーションの予測結果です。<br> - reservedConditionResult: 指定された条件（sov, reach, vImps, lifetimeBudget）に関連する予約確定後の配信シミュレーションの予測結果です。 </div> <div lang=\"en\"> GuaranteedSimulationServicePrediction object describes the prediction result of the delivery simulation based on conditions defined in GuaranteedSimulation object.<br> - results: Prediction result data set of the delivery simulation before reservation is confirmed.<br> - requestedConditionResult: Prediction result of the delivery simulation before reservation is confirmed that is related to the specified conditions (sov, reach, vImps, lifetimeBudget).<br> - reservedConditionResult: Prediction result of the delivery simulation after reservation is confirmed that is related to the specified conditions (sov, reach, vImps, lifetimeBudget). </div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedSimulationServicePrediction   {
   @JsonProperty("results")
   @Valid
-  private JsonNullable<List<GuaranteedSimulationServicePredictionResult>> results = JsonNullable.undefined();
+  private List<GuaranteedSimulationServicePredictionResult> results = null;
 
   @JsonProperty("requestedConditionResult")
-  private JsonNullable<GuaranteedSimulationServicePredictionResult> requestedConditionResult = JsonNullable.undefined();
+  private GuaranteedSimulationServicePredictionResult requestedConditionResult = null;
 
   @JsonProperty("reservedConditionResult")
-  private JsonNullable<GuaranteedSimulationServicePredictionResult> reservedConditionResult = JsonNullable.undefined();
+  private GuaranteedSimulationServicePredictionResult reservedConditionResult = null;
 
   public GuaranteedSimulationServicePrediction results(List<GuaranteedSimulationServicePredictionResult> results) {
-    this.results = JsonNullable.of(results);
+    this.results = results;
     return this;
   }
 
   public GuaranteedSimulationServicePrediction addResultsItem(GuaranteedSimulationServicePredictionResult resultsItem) {
-    if (this.results == null || !this.results.isPresent()) {
-      this.results = JsonNullable.of(new ArrayList<>());
+    if (this.results == null) {
+      this.results = new ArrayList<>();
     }
-    this.results.get().add(resultsItem);
+    this.results.add(resultsItem);
     return this;
   }
 
@@ -49,16 +48,16 @@ public class GuaranteedSimulationServicePrediction   {
 
   @Valid
 
-  public JsonNullable<List<GuaranteedSimulationServicePredictionResult>> getResults() {
+  public List<GuaranteedSimulationServicePredictionResult> getResults() {
     return results;
   }
 
-  public void setResults(JsonNullable<List<GuaranteedSimulationServicePredictionResult>> results) {
+  public void setResults(List<GuaranteedSimulationServicePredictionResult> results) {
     this.results = results;
   }
 
   public GuaranteedSimulationServicePrediction requestedConditionResult(GuaranteedSimulationServicePredictionResult requestedConditionResult) {
-    this.requestedConditionResult = JsonNullable.of(requestedConditionResult);
+    this.requestedConditionResult = requestedConditionResult;
     return this;
   }
 
@@ -70,16 +69,16 @@ public class GuaranteedSimulationServicePrediction   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePredictionResult> getRequestedConditionResult() {
+  public GuaranteedSimulationServicePredictionResult getRequestedConditionResult() {
     return requestedConditionResult;
   }
 
-  public void setRequestedConditionResult(JsonNullable<GuaranteedSimulationServicePredictionResult> requestedConditionResult) {
+  public void setRequestedConditionResult(GuaranteedSimulationServicePredictionResult requestedConditionResult) {
     this.requestedConditionResult = requestedConditionResult;
   }
 
   public GuaranteedSimulationServicePrediction reservedConditionResult(GuaranteedSimulationServicePredictionResult reservedConditionResult) {
-    this.reservedConditionResult = JsonNullable.of(reservedConditionResult);
+    this.reservedConditionResult = reservedConditionResult;
     return this;
   }
 
@@ -91,17 +90,17 @@ public class GuaranteedSimulationServicePrediction   {
 
   @Valid
 
-  public JsonNullable<GuaranteedSimulationServicePredictionResult> getReservedConditionResult() {
+  public GuaranteedSimulationServicePredictionResult getReservedConditionResult() {
     return reservedConditionResult;
   }
 
-  public void setReservedConditionResult(JsonNullable<GuaranteedSimulationServicePredictionResult> reservedConditionResult) {
+  public void setReservedConditionResult(GuaranteedSimulationServicePredictionResult reservedConditionResult) {
     this.reservedConditionResult = reservedConditionResult;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -135,7 +134,7 @@ public class GuaranteedSimulationServicePrediction   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }

@@ -9,7 +9,6 @@ import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountLinkServiceAccountStatus;
 import jp.co.yahoo.adsdisplayapi.v5.model.AccountLinkServiceRetargetingListSharingEnabled;
-import org.openapitools.jackson.nullable.JsonNullable;
 import javax.validation.Valid;
 import javax.validation.constraints.*;
 
@@ -17,23 +16,23 @@ import javax.validation.constraints.*;
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountLinkServiceSelectorオブジェクトは、取得するアカウントリンク情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountLinkServiceSelector object is used to select account link for acquisition.&lt;/div&gt; 
  */
 @ApiModel(description = "<div lang=\"ja\">AccountLinkServiceSelectorオブジェクトは、取得するアカウントリンク情報を指定します。</div> <div lang=\"en\">The AccountLinkServiceSelector object is used to select account link for acquisition.</div> ")
-
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountLinkServiceSelector   {
   @JsonProperty("managerAccountId")
   private Long managerAccountId;
 
   @JsonProperty("accountStatuses")
   @Valid
-  private JsonNullable<List<AccountLinkServiceAccountStatus>> accountStatuses = JsonNullable.undefined();
+  private List<AccountLinkServiceAccountStatus> accountStatuses = null;
 
   @JsonProperty("retargetingListSharingEnabled")
-  private JsonNullable<AccountLinkServiceRetargetingListSharingEnabled> retargetingListSharingEnabled = JsonNullable.undefined();
+  private AccountLinkServiceRetargetingListSharingEnabled retargetingListSharingEnabled = null;
 
   @JsonProperty("numberResults")
-  private JsonNullable<Integer> numberResults = JsonNullable.undefined();
+  private Integer numberResults = null;
 
   @JsonProperty("startIndex")
-  private JsonNullable<Integer> startIndex = JsonNullable.undefined();
+  private Integer startIndex = null;
 
   public AccountLinkServiceSelector managerAccountId(Long managerAccountId) {
     this.managerAccountId = managerAccountId;
@@ -57,15 +56,15 @@ public class AccountLinkServiceSelector   {
   }
 
   public AccountLinkServiceSelector accountStatuses(List<AccountLinkServiceAccountStatus> accountStatuses) {
-    this.accountStatuses = JsonNullable.of(accountStatuses);
+    this.accountStatuses = accountStatuses;
     return this;
   }
 
   public AccountLinkServiceSelector addAccountStatusesItem(AccountLinkServiceAccountStatus accountStatusesItem) {
-    if (this.accountStatuses == null || !this.accountStatuses.isPresent()) {
-      this.accountStatuses = JsonNullable.of(new ArrayList<>());
+    if (this.accountStatuses == null) {
+      this.accountStatuses = new ArrayList<>();
     }
-    this.accountStatuses.get().add(accountStatusesItem);
+    this.accountStatuses.add(accountStatusesItem);
     return this;
   }
 
@@ -77,16 +76,16 @@ public class AccountLinkServiceSelector   {
 
   @Valid
 @Size(max=5) 
-  public JsonNullable<List<AccountLinkServiceAccountStatus>> getAccountStatuses() {
+  public List<AccountLinkServiceAccountStatus> getAccountStatuses() {
     return accountStatuses;
   }
 
-  public void setAccountStatuses(JsonNullable<List<AccountLinkServiceAccountStatus>> accountStatuses) {
+  public void setAccountStatuses(List<AccountLinkServiceAccountStatus> accountStatuses) {
     this.accountStatuses = accountStatuses;
   }
 
   public AccountLinkServiceSelector retargetingListSharingEnabled(AccountLinkServiceRetargetingListSharingEnabled retargetingListSharingEnabled) {
-    this.retargetingListSharingEnabled = JsonNullable.of(retargetingListSharingEnabled);
+    this.retargetingListSharingEnabled = retargetingListSharingEnabled;
     return this;
   }
 
@@ -98,16 +97,16 @@ public class AccountLinkServiceSelector   {
 
   @Valid
 
-  public JsonNullable<AccountLinkServiceRetargetingListSharingEnabled> getRetargetingListSharingEnabled() {
+  public AccountLinkServiceRetargetingListSharingEnabled getRetargetingListSharingEnabled() {
     return retargetingListSharingEnabled;
   }
 
-  public void setRetargetingListSharingEnabled(JsonNullable<AccountLinkServiceRetargetingListSharingEnabled> retargetingListSharingEnabled) {
+  public void setRetargetingListSharingEnabled(AccountLinkServiceRetargetingListSharingEnabled retargetingListSharingEnabled) {
     this.retargetingListSharingEnabled = retargetingListSharingEnabled;
   }
 
   public AccountLinkServiceSelector numberResults(Integer numberResults) {
-    this.numberResults = JsonNullable.of(numberResults);
+    this.numberResults = numberResults;
     return this;
   }
 
@@ -120,16 +119,16 @@ public class AccountLinkServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
 
 @Min(1) @Max(500) 
-  public JsonNullable<Integer> getNumberResults() {
+  public Integer getNumberResults() {
     return numberResults;
   }
 
-  public void setNumberResults(JsonNullable<Integer> numberResults) {
+  public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
 
   public AccountLinkServiceSelector startIndex(Integer startIndex) {
-    this.startIndex = JsonNullable.of(startIndex);
+    this.startIndex = startIndex;
     return this;
   }
 
@@ -141,17 +140,17 @@ public class AccountLinkServiceSelector   {
   @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
 
 @Min(1)
-  public JsonNullable<Integer> getStartIndex() {
+  public Integer getStartIndex() {
     return startIndex;
   }
 
-  public void setStartIndex(JsonNullable<Integer> startIndex) {
+  public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
 
 
   @Override
-  public boolean equals(java.lang.Object o) {
+  public boolean equals(Object o) {
     if (this == o) {
       return true;
     }
@@ -189,7 +188,7 @@ public class AccountLinkServiceSelector   {
    * Convert the given object to string with each line indented by 4 spaces
    * (except the first line).
    */
-  private String toIndentedString(java.lang.Object o) {
+  private String toIndentedString(Object o) {
     if (o == null) {
       return "null";
     }
