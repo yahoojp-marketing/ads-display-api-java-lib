@@ -16,20 +16,14 @@ pom.xmlに下記の記述をしてください。
 
 ```xml
 ...
-<repositories>
-  <repository>
-    <id>ads-display-api-lib</id>
-    <url>https://raw.githubusercontent.com/yahoojp-marketing/ads-display-api-java-lib/mvn-repo</url>
-  </repository>
-</repositories>
-...
 <dependency>
-  <groupId>jp.co.yahoo</groupId>
+  <groupId>jp.co.yahoo.api-ads</groupId>
   <artifactId>ads-display-api-lib</artifactId>
-  <version>0.0.1</version>
+  <version>x.y.z</version>
 </dependency>
 ...
 ```
+versionはこちらを参照してください。https://mvnrepository.com/artifact/jp.co.yahoo.api-ads/ads-display-api-lib
 
 --------------------------------
 ご注意：Yahoo!広告 ディスプレイ広告 API - ライブラリの利用に関して

@@ -1,19 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>jp.co.yahoo</groupId>
+  <groupId>jp.co.yahoo.api-ads</groupId>
   <artifactId>ads-display-api-lib</artifactId>
-  <version>0.0.2</version>
+  <version>0.0.9</version>
 
-  <name>Yahoo! JAPAN Ads API library for Java project</name>
+  <name>ads-display-api-lib</name>
+  <description>Yahoo! JAPAN Ads Display Ads API library for Java</description>
+  <url>https://github.com/yahoojp-marketing/ads-display-api-java-lib</url>
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>http://www.opensource.org/licenses/mit-license.php</url>
+    </license>
+  </licenses>
+  <developers>
+    <developer>
+      <name>Hirotoshi Namikawa</name>
+      <organization>Yahoo Japan Corporation</organization>
+    </developer>
+  </developers>
+  <scm>
+    <connection>scm:git:https://github.com/yahoojp-marketing/ads-display-api-java-lib.git</connection>
+    <developerConnection>scm:git:https://github.com/yahoojp-marketing/ads-display-api-java-lib.git</developerConnection>
+    <url>https://github.com/yahoojp-marketing/ads-display-api-java-lib</url>
+  </scm>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <github.global.server>github-token</github.global.server>
   </properties>
 
   <dependencies>
@@ -35,41 +52,69 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-core</artifactId>
-      <version>5.3.8</version>
+      <version>5.3.9</version>
     </dependency>
   </dependencies>
-
-  <distributionManagement>
-    <repository>
-      <id>internal.repos</id>
-      <name>Temporary Staging Repository</name>
-      <url>file://${project.build.directory}/mvn-repo</url>
-    </repository>
-  </distributionManagement>
 
   <build>
     <plugins>
       <plugin>
-        <groupId>com.github.github</groupId>
-        <artifactId>site-maven-plugin</artifactId>
-        <version>0.12</version>
+        <groupId>org.sonatype.plugins</groupId>
+        <artifactId>nexus-staging-maven-plugin</artifactId>
+        <version>1.6.8</version>
+        <extensions>true</extensions>
         <configuration>
-          <message>Maven artifacts for ${project.version}</message>
-          <noJekyll>true</noJekyll>
-          <outputDirectory>${project.build.directory}/mvn-repo</outputDirectory>
-          <branch>refs/heads/mvn-repo</branch>
-          <includes>
-            <include>**/*</include>
-          </includes>
-          <repositoryName>ads-display-api-java-lib</repositoryName>
-          <repositoryOwner>yahoojp-marketing</repositoryOwner>
+          <serverId>ossrh</serverId>
+          <nexusUrl>https://oss.sonatype.org/</nexusUrl>
+          <autoReleaseAfterClose>true</autoReleaseAfterClose>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>3.2.1</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-javadoc-plugin</artifactId>
+        <version>3.3.0</version>
+        <configuration>
+          <doclint>none</doclint>
         </configuration>
         <executions>
           <execution>
+            <id>attach-javadocs</id>
             <goals>
-              <goal>site</goal>
+              <goal>jar</goal>
             </goals>
-            <phase>deploy</phase>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+            <configuration>
+              <gpgArguments>
+                <arg>--pinentry-mode</arg>
+                <arg>loopback</arg>
+              </gpgArguments>
+            </configuration>
           </execution>
         </executions>
       </plugin>
