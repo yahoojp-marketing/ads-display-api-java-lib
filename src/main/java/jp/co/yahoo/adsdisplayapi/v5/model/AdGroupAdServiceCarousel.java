@@ -61,10 +61,10 @@ public class AdGroupAdServiceCarousel   {
   }
 
   /**
-   * <div lang=\"ja\"> メディアIDです。<br> このフィールドは、ADD時およびSET時に指定不可です。 </div> <div lang=\"en\"> Media ID.<br> This field cannot be specified in ADD and SET operation. </div> 
+   * <div lang=\"ja\"> メディアIDです。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Media ID.<br> This field is requred in ADD and SET operation. </div> 
    * @return mediaId
   */
-  @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> このフィールドは、ADD時およびSET時に指定不可です。 </div> <div lang=\"en\"> Media ID.<br> This field cannot be specified in ADD and SET operation. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Media ID.<br> This field is requred in ADD and SET operation. </div> ")
 
 
   public Long getMediaId() {
@@ -101,10 +101,10 @@ public class AdGroupAdServiceCarousel   {
   }
 
   /**
-   * <div lang=\"ja\"> 広告の説明文です。<br> このフィールドは、SET時は必須となり、ADD時は省略可能となります。 </div> <div lang=\"en\"> Ad description.<br> This field is required in SET operation, and will be optional in ADD operation. </div> 
+   * <div lang=\"ja\"> 広告の説明文です。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Ad description.<br> This field is requred in ADD and SET operation. </div> 
    * @return description
   */
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告の説明文です。<br> このフィールドは、SET時は必須となり、ADD時は省略可能となります。 </div> <div lang=\"en\"> Ad description.<br> This field is required in SET operation, and will be optional in ADD operation. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 広告の説明文です。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Ad description.<br> This field is requred in ADD and SET operation. </div> ")
 
 
   public String getDescription() {

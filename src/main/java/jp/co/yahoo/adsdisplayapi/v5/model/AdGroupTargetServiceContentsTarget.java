@@ -10,9 +10,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがCONTENTS_TARGETの場合は必須です。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceContentsTarget object is a container for storing contents settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is CONTENTS_TARGET, this field is required.&lt;br&gt; * Not Available. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがCONTENTS_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceContentsTarget object is a container for storing contents settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is CONTENTS_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがCONTENTS_TARGETの場合は必須です。<br> ※現在利用できません </div> <div lang=\"en\"> AdGroupTargetServiceContentsTarget object is a container for storing contents settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is CONTENTS_TARGET, this field is required.<br> * Not Available. </div> ")
+@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがCONTENTS_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceContentsTarget object is a container for storing contents settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is CONTENTS_TARGET, this field is required. </div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupTargetServiceContentsTarget   {
   @JsonProperty("targetListDeliverType")
