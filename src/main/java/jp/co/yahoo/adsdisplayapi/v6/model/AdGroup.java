@@ -404,10 +404,10 @@ public class AdGroup   {
   }
 
   /**
-   * <div lang=\"ja\">トラッキングURLです。<br> このフィールドは、省略可能となります。<br> ※SET時、こちらが審査中の場合、編集はできません。<br>※現在利用できません</div> <div lang=\"en\">Tracking URL.<br> This field is optional.<br> *In SET operation, cannot update it when this field is in editorial review.<br>* Not Available.</div> 
+   * <div lang=\"ja\">トラッキングURLです。<br> このフィールドは、省略可能となります。<br> ※SET時、こちらが審査中の場合、編集はできません。</div> <div lang=\"en\">Tracking URL.<br> This field is optional.<br> *In SET operation, cannot update it when this field is in editorial review.</div> 
    * @return trackingUrl
   */
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> このフィールドは、省略可能となります。<br> ※SET時、こちらが審査中の場合、編集はできません。<br>※現在利用できません</div> <div lang=\"en\">Tracking URL.<br> This field is optional.<br> *In SET operation, cannot update it when this field is in editorial review.<br>* Not Available.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> このフィールドは、省略可能となります。<br> ※SET時、こちらが審査中の場合、編集はできません。</div> <div lang=\"en\">Tracking URL.<br> This field is optional.<br> *In SET operation, cannot update it when this field is in editorial review.</div> ")
 
 
   public String getTrackingUrl() {

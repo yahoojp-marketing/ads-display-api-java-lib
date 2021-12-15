@@ -14,6 +14,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">AccountTrackingUrlServiceSelectorオブジェクトは、トラッキング情報のget処理の検索条件を表します。</div> <div lang=\"en\">AccountTrackingUrlServiceSelector object describes the tracking details.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountTrackingUrlServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

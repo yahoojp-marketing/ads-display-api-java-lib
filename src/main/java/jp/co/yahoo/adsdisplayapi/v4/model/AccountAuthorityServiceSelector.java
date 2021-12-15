@@ -16,6 +16,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">AccountAuthorityServiceSelectorオブジェクトは、操作の対象とするアカウント権限を表します。</div> <div lang=\"en\">The AccountAuthorityServiceSelector object displays the account authority for the operations.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountAuthorityServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountIds")
   @Valid
   private List<Long> accountIds = new ArrayList<>();

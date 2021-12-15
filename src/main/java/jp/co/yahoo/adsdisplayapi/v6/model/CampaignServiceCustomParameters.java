@@ -13,9 +13,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;br&gt;※現在利用できません&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt;* Not Available.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceCustomParametersは、カスタムパラメータの設定を表します。<br> ADD時およびSET時、このフィールドは省略可能となります。<br>※現在利用できません</div> <div lang=\"en\">CampaignServiceCustomParameters displays the setting of custom parameters.<br> This field is optional in ADD and SET operation.<br>* Not Available.</div> ")
+@ApiModel(description = "<div lang=\"ja\">CampaignServiceCustomParametersは、カスタムパラメータの設定を表します。<br> ADD時およびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">CampaignServiceCustomParameters displays the setting of custom parameters.<br> This field is optional in ADD and SET operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class CampaignServiceCustomParameters   {
   @JsonProperty("isRemove")
