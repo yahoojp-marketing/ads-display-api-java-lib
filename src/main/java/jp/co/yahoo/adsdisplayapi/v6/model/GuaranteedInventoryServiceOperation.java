@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">GuaranteedInventoryServiceOperationオブジェクトは、操作の対象となる在庫確認ジョブの情報を表します。</div> <div lang=\"en\">GuaranteedInventoryServiceOperation describes the information of inventory check job to be operated.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedInventoryServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

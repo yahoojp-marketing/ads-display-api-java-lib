@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">FeedFtpRequestServiceOperationオブジェクトは、mutate対象となる即時アップロードリクエスト情報を保持します。</div> <div lang=\"en\">FeedFtpRequestServiceOperation object contains Upload (Upload now) request information by mutate operation.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedFtpRequestServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

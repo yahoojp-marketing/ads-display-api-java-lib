@@ -13,9 +13,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt;  このフィールドは、省略可能となります。&lt;br&gt; ※SET時、既存の項目を置き換えます。&lt;br&gt;※現在利用できません&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional.&lt;br&gt; *In SET operation, it will replace the current items.&lt;br&gt;* Not Available. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt;  このフィールドは、省略可能となります。&lt;br&gt; ※SET時、既存の項目を置き換えます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional.&lt;br&gt; *In SET operation, it will replace the current items. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceCustomParametersは、カスタムパラメータの設定を表します。<br>  このフィールドは、省略可能となります。<br> ※SET時、既存の項目を置き換えます。<br>※現在利用できません</div> <div lang=\"en\">AdGroupServiceCustomParameters displays the setting of custom parameters.<br> This field is optional.<br> *In SET operation, it will replace the current items.<br>* Not Available. </div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupServiceCustomParametersは、カスタムパラメータの設定を表します。<br>  このフィールドは、省略可能となります。<br> ※SET時、既存の項目を置き換えます。</div> <div lang=\"en\">AdGroupServiceCustomParameters displays the setting of custom parameters.<br> This field is optional.<br> *In SET operation, it will replace the current items. </div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AdGroupServiceCustomParameters   {
   @JsonProperty("isRemove")

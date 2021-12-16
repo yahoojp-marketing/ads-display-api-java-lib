@@ -19,6 +19,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">ContentsKeywordIdeaServiceSelectorオブジェクトは、コンテンツターゲティング対象キーワードのリストを表します。</div> <div lang=\"en\">ContentsKeywordIdeaServiceSelector object displays the list of keyword for contents targeting.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class ContentsKeywordIdeaServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("keywordIds")
   @Valid
   private List<Long> keywordIds = null;

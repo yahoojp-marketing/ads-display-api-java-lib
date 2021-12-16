@@ -14,6 +14,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">BalanceServiceSelectorオブジェクトは、操作対象となる未消化予算情報を表します。</div> <div lang=\"en\">The BalanceServiceSelector object is a container for storing specified blance information.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BalanceServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

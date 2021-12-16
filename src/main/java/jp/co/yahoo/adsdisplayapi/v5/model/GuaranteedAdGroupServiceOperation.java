@@ -17,6 +17,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">GuaranteedAdGroupServiceOperationオブジェクトは、操作の対象となる予約型の広告グループと処理の内容を表します。</div> <div lang=\"en\">GuaranteedAdGroupServiceOperation object describes the guaranteed ad group to be operated on and the content of the process.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class GuaranteedAdGroupServiceOperation   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

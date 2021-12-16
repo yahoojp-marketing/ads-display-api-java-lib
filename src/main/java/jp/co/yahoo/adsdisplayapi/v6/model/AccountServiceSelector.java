@@ -21,6 +21,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">AccountServiceSelectorオブジェクトは、取得するアカウントを指定します。</div> <div lang=\"en\">The AccountServiceSelector object is used to select accounts for acquisition.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class AccountServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountIds")
   @Valid
   private List<Long> accountIds = null;

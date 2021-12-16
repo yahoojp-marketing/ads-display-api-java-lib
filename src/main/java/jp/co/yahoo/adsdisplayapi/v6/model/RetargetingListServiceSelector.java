@@ -18,6 +18,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">RetargetingListServiceSelectorオブジェクトは、サイトリターゲティングのターゲットリストを指定します。</div> <div lang=\"en\">RetargetingListServiceSelector object selects the target list for site retargeting.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 

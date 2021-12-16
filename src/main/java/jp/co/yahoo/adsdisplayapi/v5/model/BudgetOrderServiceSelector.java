@@ -16,6 +16,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">BudgetOrderServiceSelectorオブジェクトは、取得するアカウント予算を指定します。</div> <div lang=\"en\">The BudgetOrderServiceSelector object is used to select account budget for acquisition.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class BudgetOrderServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountIds")
   @Valid
   private List<Long> accountIds = new ArrayList<>();

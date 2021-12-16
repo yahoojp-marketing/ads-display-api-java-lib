@@ -20,6 +20,14 @@ import javax.validation.constraints.*;
 @ApiModel(description = "<div lang=\"ja\">VideoServiceSelectorオブジェクトは、入稿済みの動画の情報を取得します。</div> <div lang=\"en\">The VideoServiceSelector object is a container for storing added video information and filtering condition.</div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class VideoServiceSelector   {
+
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+
+  @JsonProperty("_extraInfo")
+  public String get_extraInfo() {
+    return EXTRA_INFO;
+  }
+
   @JsonProperty("accountId")
   private Long accountId;
 
