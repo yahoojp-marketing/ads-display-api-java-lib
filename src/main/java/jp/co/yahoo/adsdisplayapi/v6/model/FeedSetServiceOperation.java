@@ -18,7 +18,7 @@ import javax.validation.constraints.*;
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class FeedSetServiceOperation   {
 
-  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.11";
+  private static final String EXTRA_INFO = "jp.co.yahoo.api-ads:ads-display-api-lib:0.0.12";
 
   @JsonProperty("_extraInfo")
   public String get_extraInfo() {

@@ -12,9 +12,9 @@ import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceRuleオブジェクトは、ターゲットリストに設定可能な条件を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceRule object displays the possible conditions for target list.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RetargetingListServiceRuleオブジェクトは、ターゲットリストに設定可能な条件を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RetargetingListServiceRule object displays the possible conditions for target list.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceRuleオブジェクトは、ターゲットリストに設定可能な条件を表します。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> RetargetingListServiceRule object displays the possible conditions for target list.<br> This field is required in ADD and SET operation. </div> ")
+@ApiModel(description = "<div lang=\"ja\"> RetargetingListServiceRuleオブジェクトは、ターゲットリストに設定可能な条件を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> RetargetingListServiceRule object displays the possible conditions for target list.<br> This field is optional in ADD and SET operation. </div> ")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.SpringCodegen")
 public class RetargetingListServiceRule   {
   @JsonProperty("ruleConditions")
