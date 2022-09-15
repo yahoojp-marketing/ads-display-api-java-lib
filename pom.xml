@@ -4,7 +4,7 @@
 
   <groupId>jp.co.yahoo.api-ads</groupId>
   <artifactId>ads-display-api-lib</artifactId>
-  <version>3.0.0</version>
+  <version>3.1.0</version>
 
   <name>ads-display-api-lib</name>
   <description>Yahoo! JAPAN Ads Display Ads API library for Java</description>
