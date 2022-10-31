@@ -52,11 +52,11 @@ public class AudienceListServiceCustomerDataAudienceList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カスタムオーディエンスID（サイトリターゲティングID）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom audience ID (site retargeting ID).&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カスタムオーディエンスID（サイトリターゲティングID）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom audience ID (site retargeting ID).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return customAudienceId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カスタムオーディエンスID（サイトリターゲティングID）です。</div> <div lang=\"en\">Custom audience ID (site retargeting ID).</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">カスタムオーディエンスID（サイトリターゲティングID）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">Custom audience ID (site retargeting ID).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
   @JsonProperty(JSON_PROPERTY_CUSTOM_AUDIENCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

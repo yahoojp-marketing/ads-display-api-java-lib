@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceHeadlineAssetオブジェクトは、レスポンシブ広告で指定するタイトルアセットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceHeadlineAsset object represents a headline asset to specify in responsive ads.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceHeadlineAssetオブジェクトは、レスポンシブディスプレイ広告で指定するタイトルアセットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceHeadlineAsset object represents a headline asset to specify in responsive display ads.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceHeadlineAssetオブジェクトは、レスポンシブ広告で指定するタイトルアセットを表します。</div> <div lang=\"en\">The AdGroupAdServiceHeadlineAsset object represents a headline asset to specify in responsive ads.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceHeadlineAssetオブジェクトは、レスポンシブディスプレイ広告で指定するタイトルアセットを表します。</div> <div lang=\"en\">The AdGroupAdServiceHeadlineAsset object represents a headline asset to specify in responsive display ads.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceHeadlineAsset.JSON_PROPERTY_TEXT,
   AdGroupAdServiceHeadlineAsset.JSON_PROPERTY_APPROVAL_STATUS,
