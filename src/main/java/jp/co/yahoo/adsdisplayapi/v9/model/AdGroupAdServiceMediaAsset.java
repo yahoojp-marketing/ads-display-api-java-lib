@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceMediaAssetオブジェクトは、レスポンシブ広告で指定するメディアアセットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceMediaAsset object represents a media asset to specify in responsive ads.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceMediaAssetオブジェクトは、レスポンシブディスプレイ広告で指定するメディアアセットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceMediaAsset object represents a media asset to specify in responsive display ads.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceMediaAssetオブジェクトは、レスポンシブ広告で指定するメディアアセットを表します。</div> <div lang=\"en\">The AdGroupAdServiceMediaAsset object represents a media asset to specify in responsive ads.</div> ")
+@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceMediaAssetオブジェクトは、レスポンシブディスプレイ広告で指定するメディアアセットを表します。</div> <div lang=\"en\">The AdGroupAdServiceMediaAsset object represents a media asset to specify in responsive display ads.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceMediaAsset.JSON_PROPERTY_MEDIA_ID
 })

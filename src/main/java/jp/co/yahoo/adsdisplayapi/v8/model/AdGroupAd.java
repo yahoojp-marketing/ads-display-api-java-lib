@@ -662,11 +662,11 @@ public class AdGroupAd {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※レスポンシブディスプレイ広告を利用する場合は指定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *Cannot be specified when using responsive display ads. &lt;/div&gt; 
    * @return mediaId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Media ID.<br> This field is optional in ADD and SET operation. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※レスポンシブディスプレイ広告を利用する場合は指定できません。 </div> <div lang=\"en\"> Media ID.<br> This field is optional in ADD and SET operation.<br> *Cannot be specified when using responsive display ads. </div> ")
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

@@ -52,11 +52,11 @@ public class AudienceListServiceCustomAudienceList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Yahoo! DMPに連携するIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ID to configure Yahoo! JAPAN DMP.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Yahoo! DMPに連携するIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ID to configure Yahoo! JAPAN DMP.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return customAudienceId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Yahoo! DMPに連携するIDです。</div> <div lang=\"en\">ID to configure Yahoo! JAPAN DMP.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">Yahoo! DMPに連携するIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">ID to configure Yahoo! JAPAN DMP.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
   @JsonProperty(JSON_PROPERTY_CUSTOM_AUDIENCE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
