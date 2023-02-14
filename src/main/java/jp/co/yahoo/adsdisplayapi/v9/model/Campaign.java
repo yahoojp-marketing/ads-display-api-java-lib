@@ -605,11 +605,11 @@ public class Campaign {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最適化スコアです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Optimization score.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最適化スコアです。&lt;br&gt; 最適化スコアは、0.0から1.0の範囲の値を返却します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Optimization score.&lt;br&gt; Optimization score returns a value ranging from 0.0 to 1.0.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return optimizationScore
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最適化スコアです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Optimization score.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">最適化スコアです。<br> 最適化スコアは、0.0から1.0の範囲の値を返却します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Optimization score.<br> Optimization score returns a value ranging from 0.0 to 1.0.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
   @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceReturnValueオブジェクトは、操作結果を含むコンバージョントラッカー情報のコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A container of ConversionTracker information includes operation results.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceReturnValueオブジェクトは、操作結果を含むコンバージョン設定のコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A container of ConversionTracker settings includes operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceReturnValueオブジェクトは、操作結果を含むコンバージョントラッカー情報のコンテナです。</div> <div lang=\"en\">A container of ConversionTracker information includes operation results.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceReturnValueオブジェクトは、操作結果を含むコンバージョン設定のコンテナです。</div> <div lang=\"en\">A container of ConversionTracker settings includes operation results.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceReturnValue.JSON_PROPERTY_VALUES
 })

@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceWebConversionは、ウェブページのコンバージョントラッカー情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceWebConversionは、ウェブページのコンバージョン設定を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ConversionTrackerServiceWebConversionは、ウェブページのコンバージョントラッカー情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+@ApiModel(description = "<div lang=\"ja\"> ConversionTrackerServiceWebConversionは、ウェブページのコンバージョン設定を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceWebConversion.JSON_PROPERTY_SNIPPET
 })

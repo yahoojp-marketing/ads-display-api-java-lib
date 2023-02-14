@@ -28,9 +28,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョントラッカー情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceConversion object shows ConversionTracker information such as ConversionTag.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceConversion object shows ConversionTracker settings such as ConversionTag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョントラッカー情報を表します。</div> <div lang=\"en\">ConversionGroupServiceConversion object shows ConversionTracker information such as ConversionTag.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョン設定を表します。</div> <div lang=\"en\">ConversionGroupServiceConversion object shows ConversionTracker settings such as ConversionTag.</div> ")
 @JsonPropertyOrder({
   ConversionGroupServiceConversion.JSON_PROPERTY_CONVERSION_TRACKER_ID,
   ConversionGroupServiceConversion.JSON_PROPERTY_CONVERSION_TRACKER_TYPE,
