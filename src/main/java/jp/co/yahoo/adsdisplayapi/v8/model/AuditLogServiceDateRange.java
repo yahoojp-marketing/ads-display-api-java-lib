@@ -52,11 +52,11 @@ public class AuditLogServiceDateRange {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日付です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。&lt;br&gt; ・入力形式：Ymd形式&lt;br&gt; ・デフォルト値：現在の日付&lt;br&gt; ・指定可能範囲：現在の日付&lt;br&gt; ※終了日付は開始日付以降の日付を指定してください。&lt;br&gt; ※開始日付から終了日付の期間は最大1カ月です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; This field is optional in requests.&lt;br&gt; - Entry format : Ymd format&lt;br&gt; - Default value : Current date&lt;br&gt; - Available range : Current date&lt;br&gt; *Enter the date after Start date.&lt;br&gt; *Maximum length of date range between Start and End is 1 month. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日付です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。&lt;br&gt; ・入力形式：Ymd形式&lt;br&gt; ・デフォルト値：現在の日付&lt;br&gt; ・指定可能範囲：現在の日付&lt;br&gt; ※終了日付は開始日付以降の日付を指定してください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; This field is optional in requests.&lt;br&gt; - Entry format : Ymd format&lt;br&gt; - Default value : Current date&lt;br&gt; - Available range : Current date&lt;br&gt; *Enter the date after Start date. &lt;/div&gt; 
    * @return endDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了日付です。<br> このフィールドは、リクエストの場合は省略可能となります。<br> ・入力形式：Ymd形式<br> ・デフォルト値：現在の日付<br> ・指定可能範囲：現在の日付<br> ※終了日付は開始日付以降の日付を指定してください。<br> ※開始日付から終了日付の期間は最大1カ月です。 </div> <div lang=\"en\"> End date.<br> This field is optional in requests.<br> - Entry format : Ymd format<br> - Default value : Current date<br> - Available range : Current date<br> *Enter the date after Start date.<br> *Maximum length of date range between Start and End is 1 month. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 終了日付です。<br> このフィールドは、リクエストの場合は省略可能となります。<br> ・入力形式：Ymd形式<br> ・デフォルト値：現在の日付<br> ・指定可能範囲：現在の日付<br> ※終了日付は開始日付以降の日付を指定してください。 </div> <div lang=\"en\"> End date.<br> This field is optional in requests.<br> - Entry format : Ymd format<br> - Default value : Current date<br> - Available range : Current date<br> *Enter the date after Start date. </div> ")
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -79,11 +79,11 @@ public class AuditLogServiceDateRange {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日付です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。&lt;br&gt; ・入力形式：Ymd形式&lt;br&gt; ・デフォルト値：現在の日付&lt;br&gt; ・指定可能範囲：前月の月初&lt;br&gt; 例：4/30時点で、開始日付に指定できるもっとも古い日付は3/1 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; This field is optional in requests.&lt;br&gt; - Entry format : Ymd format&lt;br&gt; - Default value : Current date&lt;br&gt; - Available range : Beginning of the last month&lt;br&gt; e.g.: The oldest date selectable as of April 30 is March 1. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日付です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。&lt;br&gt; ・入力形式：Ymd形式&lt;br&gt; ・デフォルト値：2週間前の日付&lt;br&gt; ・指定可能範囲：1年前の日付 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; This field is optional in requests.&lt;br&gt; - Entry format : Ymd format&lt;br&gt; - Default value : Dated 2 weeks ago&lt;br&gt; - Available range : Date one year ago &lt;/div&gt; 
    * @return startDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始日付です。<br> このフィールドは、リクエストの場合は省略可能となります。<br> ・入力形式：Ymd形式<br> ・デフォルト値：現在の日付<br> ・指定可能範囲：前月の月初<br> 例：4/30時点で、開始日付に指定できるもっとも古い日付は3/1 </div> <div lang=\"en\"> Start date.<br> This field is optional in requests.<br> - Entry format : Ymd format<br> - Default value : Current date<br> - Available range : Beginning of the last month<br> e.g.: The oldest date selectable as of April 30 is March 1. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 開始日付です。<br> このフィールドは、リクエストの場合は省略可能となります。<br> ・入力形式：Ymd形式<br> ・デフォルト値：2週間前の日付<br> ・指定可能範囲：1年前の日付 </div> <div lang=\"en\"> Start date.<br> This field is optional in requests.<br> - Entry format : Ymd format<br> - Default value : Dated 2 weeks ago<br> - Available range : Date one year ago </div> ")
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

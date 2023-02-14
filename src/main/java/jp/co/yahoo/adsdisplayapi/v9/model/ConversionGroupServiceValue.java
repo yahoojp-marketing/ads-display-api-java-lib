@@ -30,9 +30,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceValueオブジェクトは、操作結果を含むコンバージョントラッカー情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceValue object displays the entity of Conversion Tracker information.&lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceValueオブジェクトは、操作結果を含むコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceValue object displays the entity of Conversion Tracker information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionGroupServiceValueオブジェクトは、操作結果を含むコンバージョントラッカー情報を表します。</div> <div lang=\"en\">ConversionGroupServiceValue object displays the entity of Conversion Tracker information.</div> ")
+@ApiModel(description = "<div lang=\"ja\">ConversionGroupServiceValueオブジェクトは、操作結果を含むコンバージョン設定を表します。</div> <div lang=\"en\">ConversionGroupServiceValue object displays the entity of Conversion Tracker information.</div> ")
 @JsonPropertyOrder({
   ConversionGroupServiceValue.JSON_PROPERTY_CONVERSION_GROUP,
   ConversionGroupServiceValue.JSON_PROPERTY_ERRORS,
