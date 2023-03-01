@@ -130,7 +130,7 @@ public class OAuth2TokenService {
   /**
    * Retrieve access token from API.
    *
-   * @see https://ads-developers.yahoo.co.jp/developercenter/ja/startup-guide/api-call.html
+   * @see https://ads-developers.yahoo.co.jp/ja/ads-api/startup-guide/api-call.html
    * @return retrieved token
    */
   private OAuth2AccessTokenResponse getAccessTokenFromAPI() {

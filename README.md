@@ -34,7 +34,7 @@ String clientSecret = "INSERT_CLIENT_SECRET_HERE";
 String refreshToken = "INSERT_REFRESH_TOKEN_HERE";
 YahooJapanAdsApiClient yahooJapanAdsApiClient = new YahooJapanAdsApiClient(clientId, clientSecret, refreshToken);
 ```
-それぞれの値はこちらを参照してください。https://ads-developers.yahoo.co.jp/developercenter/ja/startup-guide/api-call.html
+それぞれの値はこちらを参照してください。https://ads-developers.yahoo.co.jp/ja/ads-api/startup-guide/api-call.html
 
 ### アカウントの取得(AccountService/get)
 
