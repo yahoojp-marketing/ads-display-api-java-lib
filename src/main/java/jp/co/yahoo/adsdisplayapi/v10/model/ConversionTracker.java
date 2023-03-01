@@ -608,11 +608,11 @@ public class ConversionTracker {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 測定期間（動画視聴）&lt;br&gt; ※1-30の範囲で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は1となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (Video view).&lt;br&gt; ∗ Can be specified within the range of 1 to 30.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 1. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 測定期間（動画視聴）&lt;br&gt; ※1-30の範囲で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は3となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (Video view).&lt;br&gt; ∗ Can be specified within the range of 1 to 30.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 3. &lt;/div&gt; 
    * @return measurementPeriodView
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 測定期間（動画視聴）<br> ※1-30の範囲で指定可能です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は1となります。 </div> <div lang=\"en\"> Counting period (Video view).<br> ∗ Can be specified within the range of 1 to 30.<br> This field is optional in requests. The default value in ADD operation will be 1. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 測定期間（動画視聴）<br> ※1-30の範囲で指定可能です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は3となります。 </div> <div lang=\"en\"> Counting period (Video view).<br> ∗ Can be specified within the range of 1 to 30.<br> This field is optional in requests. The default value in ADD operation will be 3. </div> ")
   @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
