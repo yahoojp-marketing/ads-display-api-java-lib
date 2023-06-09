@@ -238,11 +238,11 @@ public class RecommendationServiceCampaignBiddingStrategyToTargetCpaCampaign {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するキャンペーン入札戦略タイプです。&lt;br&gt; 現在は\&quot;AUTO\&quot;のみ返却します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended campaign bidding strategy type.&lt;br&gt; Currently, only \&quot;AUTO\&quot; will be returned. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するキャンペーン入札戦略タイプです。&lt;br&gt; 現在は\&quot;TARGET_CPA\&quot;のみ返却します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended campaign bidding strategy type.&lt;br&gt; Currently, only \&quot;TARGET_CPA\&quot; will be returned. &lt;/div&gt; 
    * @return recommendedCampaignBiddingStrategyType
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するキャンペーン入札戦略タイプです。<br> 現在は\"AUTO\"のみ返却します。 </div> <div lang=\"en\"> Recommended campaign bidding strategy type.<br> Currently, only \"AUTO\" will be returned. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するキャンペーン入札戦略タイプです。<br> 現在は\"TARGET_CPA\"のみ返却します。 </div> <div lang=\"en\"> Recommended campaign bidding strategy type.<br> Currently, only \"TARGET_CPA\" will be returned. </div> ")
   @JsonProperty(JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
