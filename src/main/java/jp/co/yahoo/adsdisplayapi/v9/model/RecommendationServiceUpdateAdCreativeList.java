@@ -273,11 +273,11 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ２カ月前のビューアブルクリック率(月間平均)です&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewable CTR two months ago (monthly average) &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; このフィールドはnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This field be returned null. &lt;/div&gt; 
    * @return viewableCtrTwoMonthsAgo
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ２カ月前のビューアブルクリック率(月間平均)です<br> </div> <div lang=\"en\"> Viewable CTR two months ago (monthly average) </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> このフィールドはnullが返却されます。 </div> <div lang=\"en\"> This field be returned null. </div> ")
   @JsonProperty(JSON_PROPERTY_VIEWABLE_CTR_TWO_MONTHS_AGO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -300,11 +300,11 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 直近１カ月のビューアブルクリック率(月間平均)です&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Latest viewable CTR (monthly average) &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 15~1日前のビューアブルクリック率(平均)です &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Latest viewable CTR 15~1 days ago (average) &lt;/div&gt; 
    * @return latestViewableCtr
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 直近１カ月のビューアブルクリック率(月間平均)です<br> </div> <div lang=\"en\"> Latest viewable CTR (monthly average) </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 15~1日前のビューアブルクリック率(平均)です </div> <div lang=\"en\"> Latest viewable CTR 15~1 days ago (average) </div> ")
   @JsonProperty(JSON_PROPERTY_LATEST_VIEWABLE_CTR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
