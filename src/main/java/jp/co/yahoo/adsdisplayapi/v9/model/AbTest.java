@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AbTestServiceCampaignUserStatus;
 import jp.co.yahoo.adsdisplayapi.v9.model.AbTestServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v9.model.AbTestServiceStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AbTestオブジェクトは、A/Bテスト情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The A/B Test object is a container for storing A/B test information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AbTestオブジェクトは、A/Bテスト情報を保持します。</div> <div lang=\"en\">The A/B Test object is a container for storing A/B test information.</div> ")
 @JsonPropertyOrder({
   AbTest.JSON_PROPERTY_ACCOUNT_ID,
   AbTest.JSON_PROPERTY_AB_TEST_ID,
@@ -48,8 +45,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AbTest.JSON_PROPERTY_START_DATE,
   AbTest.JSON_PROPERTY_STATUS
 })
-@JsonTypeName("AbTest")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AbTest {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -93,7 +89,7 @@ public class AbTest {
   public static final String JSON_PROPERTY_STATUS = "status";
   private AbTestServiceStatus status;
 
-  public AbTest() { 
+  public AbTest() {
   }
 
   public AbTest accountId(Long accountId) {
@@ -106,8 +102,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +128,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; A/BテストIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A/B test ID.&lt;br&gt; This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. &lt;/div&gt; 
    * @return abTestId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> A/BテストIDです。<br> このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。 </div> <div lang=\"en\"> A/B test ID.<br> This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AB_TEST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,8 +154,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; A/Bテスト名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A/B test name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return abTestName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> A/Bテスト名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> A/B test name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AB_TEST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,8 +180,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 説明文です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description text.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return description
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 説明文です。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Description text.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -214,8 +206,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンAのキャンペーンIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID of Campaign A.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return aCampaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンAのキャンペーンIDです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Campaign ID of Campaign A.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,8 +232,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンAのキャンペーン名です。&lt;br&gt; このフィールドはリクエストの際には無視されます。&lt;br&gt; GET時のみレスポンスの際に返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name of Campaign A.&lt;br&gt; This field will be ignored on input.&lt;br&gt; This field will be returned in the GET response only. &lt;/div&gt; 
    * @return aCampaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンAのキャンペーン名です。<br> このフィールドはリクエストの際には無視されます。<br> GET時のみレスポンスの際に返却されます。 </div> <div lang=\"en\"> Campaign Name of Campaign A.<br> This field will be ignored on input.<br> This field will be returned in the GET response only. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -268,8 +258,7 @@ public class AbTest {
    * Get aCampaignUserStatus
    * @return aCampaignUserStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_A_CAMPAIGN_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -295,8 +284,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンBのキャンペーンIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID of Campaign B.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return bCampaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンBのキャンペーンIDです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Campaign ID of Campaign B.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -322,8 +310,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンBのキャンペーン名です。&lt;br&gt; このフィールドはリクエストの際には無視されます。&lt;br&gt; GET時のみレスポンスの際に返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name of Campaign B.&lt;br&gt; This field will be ignored on input.&lt;br&gt; This field will be returned in the GET response only. &lt;/div&gt; 
    * @return bCampaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンBのキャンペーン名です。<br> このフィールドはリクエストの際には無視されます。<br> GET時のみレスポンスの際に返却されます。 </div> <div lang=\"en\"> Campaign Name of Campaign B.<br> This field will be ignored on input.<br> This field will be returned in the GET response only. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -349,8 +336,7 @@ public class AbTest {
    * Get bCampaignUserStatus
    * @return bCampaignUserStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_B_CAMPAIGN_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -376,8 +362,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了日です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> End date.<br> This field is required in ADD operation, and will be optional in SET operation.<br> *format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -403,8 +388,7 @@ public class AbTest {
    * Get isRemoveDescription
    * @return isRemoveDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -430,8 +414,7 @@ public class AbTest {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始日です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Start date.<br> This field is required in ADD operation, and will be optional in SET operation.<br> *format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -457,8 +440,7 @@ public class AbTest {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -472,7 +454,6 @@ public class AbTest {
   public void setStatus(AbTestServiceStatus status) {
     this.status = status;
   }
-
 
   @Override
   public boolean equals(Object o) {

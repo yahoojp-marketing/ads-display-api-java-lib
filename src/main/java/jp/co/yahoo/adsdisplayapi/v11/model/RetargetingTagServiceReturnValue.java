@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.RetargetingTagServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagServiceReturnValueオブジェクトは、サイトリターゲティングタグの情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTagServiceReturnValue object is a container that holds tag information of site retargeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingTagServiceReturnValueオブジェクトは、サイトリターゲティングタグの情報を格納するコンテナです。</div> <div lang=\"en\">RetargetingTagServiceReturnValue object is a container that holds tag information of site retargeting.</div> ")
 @JsonPropertyOrder({
   RetargetingTagServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("RetargetingTagServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingTagServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<RetargetingTagServiceValue> values = null;
+  private List<RetargetingTagServiceValue> values;
 
-  public RetargetingTagServiceReturnValue() { 
+  public RetargetingTagServiceReturnValue() {
   }
 
   public RetargetingTagServiceReturnValue values(List<RetargetingTagServiceValue> values) {
@@ -62,8 +58,7 @@ public class RetargetingTagServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RetargetingTagServiceReturnValue {
   public void setValues(List<RetargetingTagServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

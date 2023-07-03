@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AppLinkServiceAppLinkStatus;
 import jp.co.yahoo.adsdisplayapi.v9.model.AppLinkServiceAppPlatform;
 import jp.co.yahoo.adsdisplayapi.v9.model.AppLinkServiceAppVendor;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkオブジェクトは、アプリ連携の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The App Link object is a container for storing app link information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AppLinkオブジェクトは、アプリ連携の詳細情報を表します。</div> <div lang=\"en\">The App Link object is a container for storing app link information.</div> ")
 @JsonPropertyOrder({
   AppLink.JSON_PROPERTY_ACCOUNT_ID,
   AppLink.JSON_PROPERTY_CATEGORY_TYPE,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppLink.JSON_PROPERTY_APP_VENDOR,
   AppLink.JSON_PROPERTY_APP_LINK_STATUS
 })
-@JsonTypeName("AppLink")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AppLink {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -66,7 +62,7 @@ public class AppLink {
   public static final String JSON_PROPERTY_APP_LINK_STATUS = "appLinkStatus";
   private AppLinkServiceAppLinkStatus appLinkStatus;
 
-  public AppLink() { 
+  public AppLink() {
   }
 
   public AppLink accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -106,8 +101,7 @@ public class AppLink {
    * Get categoryType
    * @return categoryType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンクIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Link ID. &lt;/div&gt; 
    * @return linkId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リンクIDです。 </div> <div lang=\"en\"> Link ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,8 +153,7 @@ public class AppLink {
    * Get appPlatform
    * @return appPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,8 +179,7 @@ public class AppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アプリIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; App ID. &lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アプリIDです。 </div> <div lang=\"en\"> App ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -214,8 +205,7 @@ public class AppLink {
    * Get appVendor
    * @return appVendor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,8 +231,7 @@ public class AppLink {
    * Get appLinkStatus
    * @return appLinkStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -256,7 +245,6 @@ public class AppLink {
   public void setAppLinkStatus(AppLinkServiceAppLinkStatus appLinkStatus) {
     this.appLinkStatus = appLinkStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.ContentsKeywordIdea;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaServiceValueオブジェクトは、コンテンツターゲティング対象キーワードを含むコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdeaServiceValue object is a container that includes keyword for contents targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ContentsKeywordIdeaServiceValueオブジェクトは、コンテンツターゲティング対象キーワードを含むコンテナです。</div> <div lang=\"en\">ContentsKeywordIdeaServiceValue object is a container that includes keyword for contents targeting.</div> ")
 @JsonPropertyOrder({
   ContentsKeywordIdeaServiceValue.JSON_PROPERTY_ERRORS,
   ContentsKeywordIdeaServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   ContentsKeywordIdeaServiceValue.JSON_PROPERTY_CONTENTS_KEYWORD_IDEA
 })
-@JsonTypeName("ContentsKeywordIdeaServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentsKeywordIdeaServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
@@ -50,7 +46,7 @@ public class ContentsKeywordIdeaServiceValue {
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_IDEA = "contentsKeywordIdea";
   private ContentsKeywordIdea contentsKeywordIdea;
 
-  public ContentsKeywordIdeaServiceValue() { 
+  public ContentsKeywordIdeaServiceValue() {
   }
 
   public ContentsKeywordIdeaServiceValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class ContentsKeywordIdeaServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class ContentsKeywordIdeaServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class ContentsKeywordIdeaServiceValue {
    * Get contentsKeywordIdea
    * @return contentsKeywordIdea
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_IDEA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class ContentsKeywordIdeaServiceValue {
   public void setContentsKeywordIdea(ContentsKeywordIdea contentsKeywordIdea) {
     this.contentsKeywordIdea = contentsKeywordIdea;
   }
-
 
   @Override
   public boolean equals(Object o) {

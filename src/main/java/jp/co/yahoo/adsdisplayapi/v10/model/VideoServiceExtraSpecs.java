@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.VideoServiceExtraSpecsQualityType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServiceExtraSpecsは、通常の画質（低画質、中画質、高画質）の他に追加で利用できる画質です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;VideoServiceExtraSpecs is an additional video quality that can be used other than the regular video qualities (low-quality, medium-quality, high-quality).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">VideoServiceExtraSpecsは、通常の画質（低画質、中画質、高画質）の他に追加で利用できる画質です。</div> <div lang=\"en\">VideoServiceExtraSpecs is an additional video quality that can be used other than the regular video qualities (low-quality, medium-quality, high-quality).</div> ")
 @JsonPropertyOrder({
   VideoServiceExtraSpecs.JSON_PROPERTY_QUALITY_TYPE
 })
-@JsonTypeName("VideoServiceExtraSpecs")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VideoServiceExtraSpecs {
   public static final String JSON_PROPERTY_QUALITY_TYPE = "qualityType";
   private VideoServiceExtraSpecsQualityType qualityType;
 
-  public VideoServiceExtraSpecs() { 
+  public VideoServiceExtraSpecs() {
   }
 
   public VideoServiceExtraSpecs qualityType(VideoServiceExtraSpecsQualityType qualityType) {
@@ -52,8 +48,7 @@ public class VideoServiceExtraSpecs {
    * Get qualityType
    * @return qualityType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_QUALITY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class VideoServiceExtraSpecs {
   public void setQualityType(VideoServiceExtraSpecsQualityType qualityType) {
     this.qualityType = qualityType;
   }
-
 
   @Override
   public boolean equals(Object o) {

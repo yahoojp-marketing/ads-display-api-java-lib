@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceOsVersionTargetオブジェクトは、OSバージョンターゲティングの設定情報を保持します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceOsVersionTarget object is a container for storing OS version targeting settings.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceOsVersionTargetオブジェクトは、OSバージョンターゲティングの設定情報を保持します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupTargetServiceOsVersionTarget object is a container for storing OS version targeting settings.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceOsVersionTarget.JSON_PROPERTY_OS_VERSION
 })
-@JsonTypeName("AdGroupTargetServiceOsVersionTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceOsVersionTarget {
   public static final String JSON_PROPERTY_OS_VERSION = "osVersion";
   private String osVersion;
 
-  public AdGroupTargetServiceOsVersionTarget() { 
+  public AdGroupTargetServiceOsVersionTarget() {
   }
 
   public AdGroupTargetServiceOsVersionTarget osVersion(String osVersion) {
@@ -51,8 +47,7 @@ public class AdGroupTargetServiceOsVersionTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;OSのバージョンです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;OS version.&lt;/div&gt; 
    * @return osVersion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">OSのバージョンです。</div> <div lang=\"en\">OS version.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AdGroupTargetServiceOsVersionTarget {
   public void setOsVersion(String osVersion) {
     this.osVersion = osVersion;
   }
-
 
   @Override
   public boolean equals(Object o) {

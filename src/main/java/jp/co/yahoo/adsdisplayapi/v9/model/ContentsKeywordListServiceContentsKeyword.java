@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ContentsKeywordListServiceContentsKeywordオブジェクトは、コンテンツキーワードを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ContentsKeywordListServiceContentsKeyword is an object to display the contents keyword.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ContentsKeywordListServiceContentsKeywordオブジェクトは、コンテンツキーワードを表します。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> ContentsKeywordListServiceContentsKeyword is an object to display the contents keyword.<br> This field is required in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   ContentsKeywordListServiceContentsKeyword.JSON_PROPERTY_CONTENTS_KEYWORD_ID
 })
-@JsonTypeName("ContentsKeywordListServiceContentsKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentsKeywordListServiceContentsKeyword {
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_ID = "contentsKeywordId";
   private Long contentsKeywordId;
 
-  public ContentsKeywordListServiceContentsKeyword() { 
+  public ContentsKeywordListServiceContentsKeyword() {
   }
 
   public ContentsKeywordListServiceContentsKeyword contentsKeywordId(Long contentsKeywordId) {
@@ -51,8 +47,7 @@ public class ContentsKeywordListServiceContentsKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードIDです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contents keyword ID.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return contentsKeywordId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードIDです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Contents keyword ID.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class ContentsKeywordListServiceContentsKeyword {
   public void setContentsKeywordId(Long contentsKeywordId) {
     this.contentsKeywordId = contentsKeywordId;
   }
-
 
   @Override
   public boolean equals(Object o) {

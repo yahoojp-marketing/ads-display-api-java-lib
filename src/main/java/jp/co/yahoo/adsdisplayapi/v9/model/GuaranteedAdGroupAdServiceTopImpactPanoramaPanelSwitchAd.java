@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.GuaranteedAdGroupAdServiceCustomParameters;
@@ -34,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAdオブジェクトは、予約型専用広告：メインの3:1の画像と、1:1のスイッチ画像、16:9の縮小バナー、右サイド画像、左サイド画像で構成される広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがTOP_IMPACT_PANORAMA_PANEL_SWITCHの場合は必須です。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd object describes the information about guaranteed ad composed of the main 3:1 image, 1:1 switch image, 16:9 reduced banner, the right side image, and the left side image.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is TOP_IMPACT_PANORAMA_PANEL_SWITCH, this field is required in ADD operation.&lt;br&gt; * Not Available. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAdオブジェクトは、予約型専用広告：メインの3:1の画像と、1:1のスイッチ画像、16:9の縮小バナー、右サイド画像、左サイド画像で構成される広告の情報を表します。<br> このフィールドは、省略可能となります。<br> ※ADD時、adTypeがTOP_IMPACT_PANORAMA_PANEL_SWITCHの場合は必須です。<br> ※現在利用できません </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd object describes the information about guaranteed ad composed of the main 3:1 image, 1:1 switch image, 16:9 reduced banner, the right side image, and the left side image.<br> This field is optional.<br> *If adType is TOP_IMPACT_PANORAMA_PANEL_SWITCH, this field is required in ADD operation.<br> * Not Available. </div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd.JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID,
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd.JSON_PROPERTY_PANELS,
@@ -44,14 +41,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd.JSON_PROPERTY_IS_REMOVE_TRACKING_URL,
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd.JSON_PROPERTY_TRACKING_URL
 })
-@JsonTypeName("GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
   public static final String JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID = "adShrinkMainMediaId";
   private Long adShrinkMainMediaId;
 
   public static final String JSON_PROPERTY_PANELS = "panels";
-  private List<GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch> panels = null;
+  private List<GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch> panels;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
   private String finalUrl;
@@ -68,7 +64,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
   private String trackingUrl;
 
-  public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd() { 
+  public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd() {
   }
 
   public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd adShrinkMainMediaId(Long adShrinkMainMediaId) {
@@ -81,8 +77,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 縮小メイン画像です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reduced main image.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return adShrinkMainMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 縮小メイン画像です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Reduced main image.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,8 +111,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * Get panels
    * @return panels
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PANELS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -143,8 +137,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\">Final URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -170,8 +163,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * Get displayUrlLevel
    * @return displayUrlLevel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,8 +189,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -224,8 +215,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -251,8 +241,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; &lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> </div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD and SET operation.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,7 +255,6 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd {
   public void setTrackingUrl(String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
-
 
   @Override
   public boolean equals(Object o) {

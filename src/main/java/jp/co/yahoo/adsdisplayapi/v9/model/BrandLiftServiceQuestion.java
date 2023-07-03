@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.BrandLiftServiceGoal;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServiceQuestionオブジェクトは、ブランドリフト調査項目を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLiftServiceQuestion objects describes the brand lift survey contents.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BrandLiftServiceQuestionオブジェクトは、ブランドリフト調査項目を表します。</div> <div lang=\"en\">BrandLiftServiceQuestion objects describes the brand lift survey contents.</div> ")
 @JsonPropertyOrder({
   BrandLiftServiceQuestion.JSON_PROPERTY_QUESTION_ID,
   BrandLiftServiceQuestion.JSON_PROPERTY_GOAL,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BrandLiftServiceQuestion.JSON_PROPERTY_ANSWER_OPTION4,
   BrandLiftServiceQuestion.JSON_PROPERTY_ANSWER_OPTION5
 })
-@JsonTypeName("BrandLiftServiceQuestion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BrandLiftServiceQuestion {
   public static final String JSON_PROPERTY_QUESTION_ID = "questionId";
   private Long questionId;
@@ -71,7 +67,7 @@ public class BrandLiftServiceQuestion {
   public static final String JSON_PROPERTY_ANSWER_OPTION5 = "answerOption5";
   private String answerOption5;
 
-  public BrandLiftServiceQuestion() { 
+  public BrandLiftServiceQuestion() {
   }
 
   public BrandLiftServiceQuestion questionId(Long questionId) {
@@ -84,8 +80,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;調査IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Question ID. &lt;/div&gt; 
    * @return questionId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">調査IDです。</div> <div lang=\"en\">Question ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_QUESTION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,8 +106,7 @@ public class BrandLiftServiceQuestion {
    * Get goal
    * @return goal
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GOAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -138,8 +132,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;事前承認IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Preapprove ID. &lt;/div&gt; 
    * @return preApproveId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">事前承認IDです。</div> <div lang=\"en\">Preapprove ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PRE_APPROVE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -165,8 +158,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;設問です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Question. &lt;/div&gt; 
    * @return question
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">設問です。</div> <div lang=\"en\">Question. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_QUESTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,8 +184,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢1です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer Option1. &lt;/div&gt; 
    * @return answerOption1
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢1です。</div> <div lang=\"en\">Answer Option1. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ANSWER_OPTION1)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,8 +210,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢2です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer Option2. &lt;/div&gt; 
    * @return answerOption2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢2です。</div> <div lang=\"en\">Answer Option2. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ANSWER_OPTION2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -246,8 +236,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢3です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer Option3. &lt;/div&gt; 
    * @return answerOption3
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢3です。</div> <div lang=\"en\">Answer Option3. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ANSWER_OPTION3)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -273,8 +262,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢4です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer Option4. &lt;/div&gt; 
    * @return answerOption4
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢4です。</div> <div lang=\"en\">Answer Option4. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ANSWER_OPTION4)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -300,8 +288,7 @@ public class BrandLiftServiceQuestion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢5です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer Option5. &lt;/div&gt; 
    * @return answerOption5
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">回答選択肢5です。</div> <div lang=\"en\">Answer Option5. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ANSWER_OPTION5)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -315,7 +302,6 @@ public class BrandLiftServiceQuestion {
   public void setAnswerOption5(String answerOption5) {
     this.answerOption5 = answerOption5;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; MediaServiceCreatedDateRangeは、作成日時による検索対象期間を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; MediaServiceCreatedDateRange represents the search target period by the creation date. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> MediaServiceCreatedDateRangeは、作成日時による検索対象期間を表します。 </div> <div lang=\"en\"> MediaServiceCreatedDateRange represents the search target period by the creation date. </div> ")
 @JsonPropertyOrder({
   MediaServiceCreatedDateRange.JSON_PROPERTY_START_DATE,
   MediaServiceCreatedDateRange.JSON_PROPERTY_END_DATE
 })
-@JsonTypeName("MediaServiceCreatedDateRange")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MediaServiceCreatedDateRange {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
@@ -42,7 +38,7 @@ public class MediaServiceCreatedDateRange {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
 
-  public MediaServiceCreatedDateRange() { 
+  public MediaServiceCreatedDateRange() {
   }
 
   public MediaServiceCreatedDateRange startDate(String startDate) {
@@ -55,8 +51,7 @@ public class MediaServiceCreatedDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の開始日時です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the start date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索対象期間の開始日時です。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> This is the start date of the search target period.<br> * Format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class MediaServiceCreatedDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の終了日時です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the end date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索対象期間の終了日時です。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> This is the end date of the search target period.<br> * Format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class MediaServiceCreatedDateRange {
   public void setEndDate(String endDate) {
     this.endDate = endDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

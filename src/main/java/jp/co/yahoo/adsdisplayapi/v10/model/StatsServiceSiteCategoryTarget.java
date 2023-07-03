@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSiteCategoryTargetオブジェクトは、サイトカテゴリターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSiteCategoryTarget object holds configuration information of Site category targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceSiteCategoryTargetオブジェクトは、サイトカテゴリターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceSiteCategoryTarget object holds configuration information of Site category targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceSiteCategoryTarget.JSON_PROPERTY_CATEGORY_FULL_NAME_EN,
   StatsServiceSiteCategoryTarget.JSON_PROPERTY_CATEGORY_FULL_NAME_JA
 })
-@JsonTypeName("StatsServiceSiteCategoryTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceSiteCategoryTarget {
   public static final String JSON_PROPERTY_CATEGORY_FULL_NAME_EN = "categoryFullNameEn";
   private String categoryFullNameEn;
@@ -42,7 +38,7 @@ public class StatsServiceSiteCategoryTarget {
   public static final String JSON_PROPERTY_CATEGORY_FULL_NAME_JA = "categoryFullNameJa";
   private String categoryFullNameJa;
 
-  public StatsServiceSiteCategoryTarget() { 
+  public StatsServiceSiteCategoryTarget() {
   }
 
   public StatsServiceSiteCategoryTarget categoryFullNameEn(String categoryFullNameEn) {
@@ -55,8 +51,7 @@ public class StatsServiceSiteCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カテゴリ名（英語）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Site category name (English)&lt;/div&gt; 
    * @return categoryFullNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（英語）</div> <div lang=\"en\">Site category name (English)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_FULL_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class StatsServiceSiteCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カテゴリ名（日本語）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Site category name (Japanese)&lt;/div&gt; 
    * @return categoryFullNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（日本語）</div> <div lang=\"en\">Site category name (Japanese)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_FULL_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class StatsServiceSiteCategoryTarget {
   public void setCategoryFullNameJa(String categoryFullNameJa) {
     this.categoryFullNameJa = categoryFullNameJa;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.VideoServiceQualityType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビデオをダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Download the video.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ビデオをダウンロードします。</div> <div lang=\"en\"> Download the video.</div> ")
 @JsonPropertyOrder({
   VideoServiceDownloadSelector.JSON_PROPERTY_ACCOUNT_ID,
   VideoServiceDownloadSelector.JSON_PROPERTY_MEDIA_ID,
   VideoServiceDownloadSelector.JSON_PROPERTY_QUALITY_TYPE
 })
-@JsonTypeName("VideoServiceDownloadSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VideoServiceDownloadSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -47,7 +43,7 @@ public class VideoServiceDownloadSelector {
   public static final String JSON_PROPERTY_QUALITY_TYPE = "qualityType";
   private VideoServiceQualityType qualityType;
 
-  public VideoServiceDownloadSelector() { 
+  public VideoServiceDownloadSelector() {
   }
 
   public VideoServiceDownloadSelector accountId(Long accountId) {
@@ -60,8 +56,7 @@ public class VideoServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -87,8 +82,7 @@ public class VideoServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディアID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID&lt;/div&gt; 
    * @return mediaId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">メディアID</div> <div lang=\"en\">Media ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -114,8 +108,7 @@ public class VideoServiceDownloadSelector {
    * Get qualityType
    * @return qualityType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_QUALITY_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -129,7 +122,6 @@ public class VideoServiceDownloadSelector {
   public void setQualityType(VideoServiceQualityType qualityType) {
     this.qualityType = qualityType;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceRuleCondition;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceRuleオブジェクトは、オーディエンスリストに設定可能な条件を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceRule object displays the possible conditions for audience list.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceRuleオブジェクトは、オーディエンスリストに設定可能な条件を表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> AudienceListServiceRule object displays the possible conditions for audience list.<br> This field is optional in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceRule.JSON_PROPERTY_RULE_CONDITIONS
 })
-@JsonTypeName("AudienceListServiceRule")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceRule {
   public static final String JSON_PROPERTY_RULE_CONDITIONS = "ruleConditions";
-  private List<AudienceListServiceRuleCondition> ruleConditions = null;
+  private List<AudienceListServiceRuleCondition> ruleConditions;
 
-  public AudienceListServiceRule() { 
+  public AudienceListServiceRule() {
   }
 
   public AudienceListServiceRule ruleConditions(List<AudienceListServiceRuleCondition> ruleConditions) {
@@ -62,8 +58,7 @@ public class AudienceListServiceRule {
    * Get ruleConditions
    * @return ruleConditions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULE_CONDITIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AudienceListServiceRule {
   public void setRuleConditions(List<AudienceListServiceRuleCondition> ruleConditions) {
     this.ruleConditions = ruleConditions;
   }
-
 
   @Override
   public boolean equals(Object o) {

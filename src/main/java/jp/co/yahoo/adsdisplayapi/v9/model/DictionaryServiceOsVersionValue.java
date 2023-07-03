@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.DictionaryServiceOsVersion;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceOsVersionValueオブジェクトは、getOsVersionメソッドの実行結果（１Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceOsVersionValue object contains the results (1 Entity) for getOsVersion method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceOsVersionValueオブジェクトは、getOsVersionメソッドの実行結果（１Entity）を保持します。</div> <div lang=\"en\">DictionaryServiceOsVersionValue object contains the results (1 Entity) for getOsVersion method.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceOsVersionValue.JSON_PROPERTY_ERRORS,
   DictionaryServiceOsVersionValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   DictionaryServiceOsVersionValue.JSON_PROPERTY_OS_VERSION
 })
-@JsonTypeName("DictionaryServiceOsVersionValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceOsVersionValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
   public static final String JSON_PROPERTY_OS_VERSION = "osVersion";
-  private List<DictionaryServiceOsVersion> osVersion = null;
+  private List<DictionaryServiceOsVersion> osVersion;
 
-  public DictionaryServiceOsVersionValue() { 
+  public DictionaryServiceOsVersionValue() {
   }
 
   public DictionaryServiceOsVersionValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class DictionaryServiceOsVersionValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class DictionaryServiceOsVersionValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class DictionaryServiceOsVersionValue {
    * Get osVersion
    * @return osVersion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,7 +141,6 @@ public class DictionaryServiceOsVersionValue {
   public void setOsVersion(List<DictionaryServiceOsVersion> osVersion) {
     this.osVersion = osVersion;
   }
-
 
   @Override
   public boolean equals(Object o) {

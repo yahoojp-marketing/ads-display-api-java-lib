@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.AdGroupTargetServiceAreaSearchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceGeoTargetオブジェクトは、地域ターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがGEO_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceGeoTarget object is a container for storing geological targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is GEO_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceGeoTargetオブジェクトは、地域ターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがGEO_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceGeoTarget object is a container for storing geological targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is GEO_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceGeoTarget.JSON_PROPERTY_AREA_SEARCH_TYPE,
   AdGroupTargetServiceGeoTarget.JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTargetServiceGeoTarget.JSON_PROPERTY_GEO_NAME_EN,
   AdGroupTargetServiceGeoTarget.JSON_PROPERTY_GEO_NAME_JA
 })
-@JsonTypeName("AdGroupTargetServiceGeoTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceGeoTarget {
   public static final String JSON_PROPERTY_AREA_SEARCH_TYPE = "areaSearchType";
   private AdGroupTargetServiceAreaSearchType areaSearchType;
@@ -63,7 +59,7 @@ public class AdGroupTargetServiceGeoTarget {
   public static final String JSON_PROPERTY_GEO_NAME_JA = "geoNameJa";
   private String geoNameJa;
 
-  public AdGroupTargetServiceGeoTarget() { 
+  public AdGroupTargetServiceGeoTarget() {
   }
 
   public AdGroupTargetServiceGeoTarget areaSearchType(AdGroupTargetServiceAreaSearchType areaSearchType) {
@@ -76,8 +72,7 @@ public class AdGroupTargetServiceGeoTarget {
    * Get areaSearchType
    * @return areaSearchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AREA_SEARCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,8 +98,7 @@ public class AdGroupTargetServiceGeoTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイクロ表記の緯度です。&lt;br&gt; 1度と指定したい場合は、1000000を指定します。&lt;br&gt; ADおよびREPLACE時、areaSearchTypeがRADIUSの場合は必須です。areaSearchTypeがGEOの場合は指定できません。&lt;br&gt; 日本国内のみ指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Micro degrees for the latitude.&lt;br&gt; To specify 1 degree, specify 1000000.&lt;br&gt; In ADD and REPLACE operation, Required if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.&lt;br&gt; Can be specified only in Japan.&lt;/div&gt; 
    * @return latitudeInMicroDegrees
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">マイクロ表記の緯度です。<br> 1度と指定したい場合は、1000000を指定します。<br> ADおよびREPLACE時、areaSearchTypeがRADIUSの場合は必須です。areaSearchTypeがGEOの場合は指定できません。<br> 日本国内のみ指定できます。</div> <div lang=\"en\">Micro degrees for the latitude.<br> To specify 1 degree, specify 1000000.<br> In ADD and REPLACE operation, Required if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.<br> Can be specified only in Japan.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +124,7 @@ public class AdGroupTargetServiceGeoTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイクロ表記の経度です。&lt;br&gt; 1度と指定したい場合は、1000000を指定します。&lt;br&gt; ADおよびREPLACE時、areaSearchTypeがRADIUSの場合は必須です。areaSearchTypeがGEOの場合は指定できません。&lt;br&gt; 日本国内のみ指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Micro degrees for the longitude.&lt;br&gt; To specify 1 degree, specify 1000000.&lt;br&gt; In ADD and REPLACE operation, Required if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.&lt;br&gt; Can be specified only in Japan.&lt;/div&gt; 
    * @return longitudeInMicroDegrees
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">マイクロ表記の経度です。<br> 1度と指定したい場合は、1000000を指定します。<br> ADおよびREPLACE時、areaSearchTypeがRADIUSの場合は必須です。areaSearchTypeがGEOの場合は指定できません。<br> 日本国内のみ指定できます。</div> <div lang=\"en\">Micro degrees for the longitude.<br> To specify 1 degree, specify 1000000.<br> In ADD and REPLACE operation, Required if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.<br> Can be specified only in Japan.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class AdGroupTargetServiceGeoTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;半径(km)です。&lt;br&gt; ADDおよびREPLACE時、areaSearchTypeがRADIUSの場合は必須です。areaSearchTypeがGEOの場合は指定できません。&lt;br&gt; 最大80kmまで指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Radius(km).&lt;br&gt; In ADD and REPLACE operation, Required if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.&lt;br&gt; Can be specified up to 80km.&lt;/div&gt; 
    * @return radius
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">半径(km)です。<br> ADDおよびREPLACE時、areaSearchTypeがRADIUSの場合は必須です。areaSearchTypeがGEOの場合は指定できません。<br> 最大80kmまで指定できます。</div> <div lang=\"en\">Radius(km).<br> In ADD and REPLACE operation, Required if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.<br> Can be specified up to 80km.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RADIUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,8 +176,7 @@ public class AdGroupTargetServiceGeoTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;指定した地点の説明です。&lt;br&gt; ADDおよびREPLACE時、areaSearchTypeがRADIUSの場合は任意で指定できます。areaSearchTypeがGEOの場合は指定できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A description of the specified location.&lt;br&gt; In ADD and REPLACE operation, Optional if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.&lt;/div&gt; 
    * @return description
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">指定した地点の説明です。<br> ADDおよびREPLACE時、areaSearchTypeがRADIUSの場合は任意で指定できます。areaSearchTypeがGEOの場合は指定できません。</div> <div lang=\"en\">A description of the specified location.<br> In ADD and REPLACE operation, Optional if areaSearchType is RADIUS, and cannot be specified if areaSearchType is GEO.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,8 +202,7 @@ public class AdGroupTargetServiceGeoTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 地域名（英語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; areaSearchTypeがRADIUSの場合はレスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Region name (English).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; If areaSearchType is RADIUS, it will not be returned. &lt;/div&gt; 
    * @return geoNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 地域名（英語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> areaSearchTypeがRADIUSの場合はレスポンスの際に返却されません。 </div> <div lang=\"en\"> Region name (English).<br> Although this field will be returned in the response, it will be ignored on input.<br> If areaSearchType is RADIUS, it will not be returned. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -238,8 +228,7 @@ public class AdGroupTargetServiceGeoTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 地域名（日本語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; areaSearchTypeがRADIUSの場合はレスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Region name (Japanese).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; If areaSearchType is RADIUS, it will not be returned. &lt;/div&gt; 
    * @return geoNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 地域名（日本語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> areaSearchTypeがRADIUSの場合はレスポンスの際に返却されません。 </div> <div lang=\"en\">Region name (Japanese).<br> Although this field will be returned in the response, it will be ignored on input.<br> If areaSearchType is RADIUS, it will not be returned. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -253,7 +242,6 @@ public class AdGroupTargetServiceGeoTarget {
   public void setGeoNameJa(String geoNameJa) {
     this.geoNameJa = geoNameJa;
   }
-
 
   @Override
   public boolean equals(Object o) {

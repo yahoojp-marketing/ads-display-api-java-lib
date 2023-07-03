@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdLabelServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdLabelServiceReturnValueオブジェクトは、広告のラベル情報を含む操作結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdLabelServiceReturnValue object describes value returned as operation result including ad group ad label information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdLabelServiceReturnValueオブジェクトは、広告のラベル情報を含む操作結果として戻される値を表します。</div> <div lang=\"en\">AdGroupAdLabelServiceReturnValue object describes value returned as operation result including ad group ad label information.</div> ")
 @JsonPropertyOrder({
   AdGroupAdLabelServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupAdLabelServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdLabelServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupAdLabelServiceValue> values = null;
+  private List<AdGroupAdLabelServiceValue> values;
 
-  public AdGroupAdLabelServiceReturnValue() { 
+  public AdGroupAdLabelServiceReturnValue() {
   }
 
   public AdGroupAdLabelServiceReturnValue values(List<AdGroupAdLabelServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupAdLabelServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupAdLabelServiceReturnValue {
   public void setValues(List<AdGroupAdLabelServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceMaximizeClicksCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMaximizeClicksオブジェクトは、自動入札（クリック数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMaximizeClicks objects describes recommendation information about the campaign that is suitable for using autobidding (Maximize Clicks).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceMaximizeClicksオブジェクトは、自動入札（クリック数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceMaximizeClicks objects describes recommendation information about the campaign that is suitable for using autobidding (Maximize Clicks).</div> ")
 @JsonPropertyOrder({
   RecommendationServiceMaximizeClicks.JSON_PROPERTY_MAXIMIZE_CLICKS_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceMaximizeClicks")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceMaximizeClicks {
   public static final String JSON_PROPERTY_MAXIMIZE_CLICKS_CAMPAIGN_LIST = "maximizeClicksCampaignList";
-  private List<RecommendationServiceMaximizeClicksCampaign> maximizeClicksCampaignList = null;
+  private List<RecommendationServiceMaximizeClicksCampaign> maximizeClicksCampaignList;
 
-  public RecommendationServiceMaximizeClicks() { 
+  public RecommendationServiceMaximizeClicks() {
   }
 
   public RecommendationServiceMaximizeClicks maximizeClicksCampaignList(List<RecommendationServiceMaximizeClicksCampaign> maximizeClicksCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceMaximizeClicks {
    * Get maximizeClicksCampaignList
    * @return maximizeClicksCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CLICKS_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceMaximizeClicks {
   public void setMaximizeClicksCampaignList(List<RecommendationServiceMaximizeClicksCampaign> maximizeClicksCampaignList) {
     this.maximizeClicksCampaignList = maximizeClicksCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

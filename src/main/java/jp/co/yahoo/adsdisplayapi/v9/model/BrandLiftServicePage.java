@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.BrandLiftServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServicePageオブジェクトは、取得されるブランドリフトに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BrandLiftServicePage object serves retrieved brand lift entry.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BrandLiftServicePageオブジェクトは、取得されるブランドリフトに関するエントリーを表します。</div> <div lang=\"en\">The BrandLiftServicePage object serves retrieved brand lift entry.</div> ")
 @JsonPropertyOrder({
   BrandLiftServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   BrandLiftServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("BrandLiftServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BrandLiftServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<BrandLiftServiceValue> values = null;
+  private List<BrandLiftServiceValue> values;
 
-  public BrandLiftServicePage() { 
+  public BrandLiftServicePage() {
   }
 
   public BrandLiftServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class BrandLiftServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class BrandLiftServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class BrandLiftServicePage {
   public void setValues(List<BrandLiftServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceSharingStatusFilterType;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceSelectorオブジェクトは、オーディエンスリストを指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceSelector object specifies audience list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListServiceSelectorオブジェクトは、オーディエンスリストを指定します。</div> <div lang=\"en\">AudienceListServiceSelector object specifies audience list.</div> ")
 @JsonPropertyOrder({
   AudienceListServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AudienceListServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceSelector.JSON_PROPERTY_AUDIENCE_LIST_TYPES,
   AudienceListServiceSelector.JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE
 })
-@JsonTypeName("AudienceListServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -54,15 +50,15 @@ public class AudienceListServiceSelector {
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_IDS = "audienceListIds";
-  private List<Long> audienceListIds = null;
+  private List<Long> audienceListIds;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPES = "audienceListTypes";
-  private List<AudienceListServiceType> audienceListTypes = null;
+  private List<AudienceListServiceType> audienceListTypes;
 
   public static final String JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE = "sharingStatusFilterType";
   private AudienceListServiceSharingStatusFilterType sharingStatusFilterType;
 
-  public AudienceListServiceSelector() { 
+  public AudienceListServiceSelector() {
   }
 
   public AudienceListServiceSelector accountId(Long accountId) {
@@ -75,8 +71,7 @@ public class AudienceListServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -104,8 +99,7 @@ public class AudienceListServiceSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -132,8 +126,7 @@ public class AudienceListServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -167,8 +160,7 @@ public class AudienceListServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List ID.&lt;/div&gt; 
    * @return audienceListIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">オーディエンスリストIDです。</div> <div lang=\"en\">Audience List ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -202,8 +194,7 @@ public class AudienceListServiceSelector {
    * Get audienceListTypes
    * @return audienceListTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -229,8 +220,7 @@ public class AudienceListServiceSelector {
    * Get sharingStatusFilterType
    * @return sharingStatusFilterType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -244,7 +234,6 @@ public class AudienceListServiceSelector {
   public void setSharingStatusFilterType(AudienceListServiceSharingStatusFilterType sharingStatusFilterType) {
     this.sharingStatusFilterType = sharingStatusFilterType;
   }
-
 
   @Override
   public boolean equals(Object o) {

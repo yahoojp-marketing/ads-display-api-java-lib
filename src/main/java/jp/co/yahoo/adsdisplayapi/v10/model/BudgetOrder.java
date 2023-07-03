@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.BudgetOrderServiceAccountType;
 import jp.co.yahoo.adsdisplayapi.v10.model.BudgetOrderServiceLimitChargeType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BudgetOrderオブジェクトは、アカウント予算情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BudgetOrder object is a container for storing the account budget.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BudgetOrderオブジェクトは、アカウント予算情報を示します。<br> </div> <div lang=\"en\">BudgetOrder object is a container for storing the account budget.<br> </div> ")
 @JsonPropertyOrder({
   BudgetOrder.JSON_PROPERTY_ACCOUNT_ID,
   BudgetOrder.JSON_PROPERTY_ACCOUNT_TYPE,
   BudgetOrder.JSON_PROPERTY_AMOUNT,
   BudgetOrder.JSON_PROPERTY_LIMIT_CHARGE_TYPE
 })
-@JsonTypeName("BudgetOrder")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BudgetOrder {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -52,7 +48,7 @@ public class BudgetOrder {
   public static final String JSON_PROPERTY_LIMIT_CHARGE_TYPE = "limitChargeType";
   private BudgetOrderServiceLimitChargeType limitChargeType;
 
-  public BudgetOrder() { 
+  public BudgetOrder() {
   }
 
   public BudgetOrder accountId(Long accountId) {
@@ -65,8 +61,7 @@ public class BudgetOrder {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; SET時、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in SET operation. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> SET時、このフィールドは必須となります。 </div> <div lang=\"en\"> Account ID.<br> This field is required in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class BudgetOrder {
    * Get accountType
    * @return accountType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,8 +113,7 @@ public class BudgetOrder {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントの広告予算金額です。&lt;br&gt; SET時、このフィールドは省略可能となります。 月額予算は、accountTypeが&lt;code&gt;INVOICE&lt;/code&gt;の場合のみ変更可能です。 また、予算額は1000円単位で指定する必要があります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Amount of budget.&lt;br&gt; This field is optional in SET operation. The monthly budget can be changed only when accountType is &lt;code&gt;INVOICE&lt;/code&gt;. In addition, the budget amount must be specified in units of 1000 yen. &lt;/div&gt; 
    * @return amount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントの広告予算金額です。<br> SET時、このフィールドは省略可能となります。 月額予算は、accountTypeが<code>INVOICE</code>の場合のみ変更可能です。 また、予算額は1000円単位で指定する必要があります。 </div> <div lang=\"en\"> Amount of budget.<br> This field is optional in SET operation. The monthly budget can be changed only when accountType is <code>INVOICE</code>. In addition, the budget amount must be specified in units of 1000 yen. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +139,7 @@ public class BudgetOrder {
    * Get limitChargeType
    * @return limitChargeType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LIMIT_CHARGE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,7 +153,6 @@ public class BudgetOrder {
   public void setLimitChargeType(BudgetOrderServiceLimitChargeType limitChargeType) {
     this.limitChargeType = limitChargeType;
   }
-
 
   @Override
   public boolean equals(Object o) {

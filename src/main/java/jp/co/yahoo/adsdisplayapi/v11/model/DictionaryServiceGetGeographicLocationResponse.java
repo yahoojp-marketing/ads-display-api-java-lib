@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceGeographicLocationPage;
@@ -37,11 +35,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceGetGeographicLocationResponse.JSON_PROPERTY_RID,
   DictionaryServiceGetGeographicLocationResponse.JSON_PROPERTY_RVAL
 })
-@JsonTypeName("DictionaryServiceGetGeographicLocationResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceGetGeographicLocationResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
   private String rid;
@@ -49,7 +46,7 @@ public class DictionaryServiceGetGeographicLocationResponse {
   public static final String JSON_PROPERTY_RVAL = "rval";
   private DictionaryServiceGeographicLocationPage rval;
 
-  public DictionaryServiceGetGeographicLocationResponse() { 
+  public DictionaryServiceGetGeographicLocationResponse() {
   }
 
   public DictionaryServiceGetGeographicLocationResponse errors(List<Error> errors) {
@@ -70,8 +67,7 @@ public class DictionaryServiceGetGeographicLocationResponse {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,8 +93,7 @@ public class DictionaryServiceGetGeographicLocationResponse {
    * Get rid
    * @return rid
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +119,7 @@ public class DictionaryServiceGetGeographicLocationResponse {
    * Get rval
    * @return rval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RVAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +133,6 @@ public class DictionaryServiceGetGeographicLocationResponse {
   public void setRval(DictionaryServiceGeographicLocationPage rval) {
     this.rval = rval;
   }
-
 
   @Override
   public boolean equals(Object o) {

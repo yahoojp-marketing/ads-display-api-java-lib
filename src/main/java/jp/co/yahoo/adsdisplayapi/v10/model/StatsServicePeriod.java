@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServicePeriodDatetime;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePeriodオブジェクトは、統計情報の更新日を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePeriod object contains the update date of stats information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServicePeriodオブジェクトは、統計情報の更新日を保持します。</div> <div lang=\"en\">StatsServicePeriod object contains the update date of stats information.</div> ")
 @JsonPropertyOrder({
   StatsServicePeriod.JSON_PROPERTY_PERIOD_END_DATE,
   StatsServicePeriod.JSON_PROPERTY_PERIOD_START_DATE
 })
-@JsonTypeName("StatsServicePeriod")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServicePeriod {
   public static final String JSON_PROPERTY_PERIOD_END_DATE = "periodEndDate";
   private StatsServicePeriodDatetime periodEndDate;
@@ -43,7 +39,7 @@ public class StatsServicePeriod {
   public static final String JSON_PROPERTY_PERIOD_START_DATE = "periodStartDate";
   private StatsServicePeriodDatetime periodStartDate;
 
-  public StatsServicePeriod() { 
+  public StatsServicePeriod() {
   }
 
   public StatsServicePeriod periodEndDate(StatsServicePeriodDatetime periodEndDate) {
@@ -56,8 +52,7 @@ public class StatsServicePeriod {
    * Get periodEndDate
    * @return periodEndDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class StatsServicePeriod {
    * Get periodStartDate
    * @return periodStartDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class StatsServicePeriod {
   public void setPeriodStartDate(StatsServicePeriodDatetime periodStartDate) {
     this.periodStartDate = periodStartDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.BudgetOrderServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BudgetOrderServiceReturnValueオブジェクトは、アカウント予算情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BudgetOrderServiceReturnValue object is a container for storing account budget information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BudgetOrderServiceReturnValueオブジェクトは、アカウント予算情報を格納するコンテナです。</div> <div lang=\"en\">The BudgetOrderServiceReturnValue object is a container for storing account budget information.</div> ")
 @JsonPropertyOrder({
   BudgetOrderServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("BudgetOrderServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BudgetOrderServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<BudgetOrderServiceValue> values = null;
+  private List<BudgetOrderServiceValue> values;
 
-  public BudgetOrderServiceReturnValue() { 
+  public BudgetOrderServiceReturnValue() {
   }
 
   public BudgetOrderServiceReturnValue values(List<BudgetOrderServiceValue> values) {
@@ -62,8 +58,7 @@ public class BudgetOrderServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class BudgetOrderServiceReturnValue {
   public void setValues(List<BudgetOrderServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

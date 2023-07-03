@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.StatsServiceDeviceOsType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceOsTargetオブジェクトは、OSターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceOsTarget object holds configuration information of OS targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceOsTargetオブジェクトは、OSターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceOsTarget object holds configuration information of OS targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceOsTarget.JSON_PROPERTY_DEVICE_OS_TYPE
 })
-@JsonTypeName("StatsServiceOsTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceOsTarget {
   public static final String JSON_PROPERTY_DEVICE_OS_TYPE = "deviceOsType";
   private StatsServiceDeviceOsType deviceOsType;
 
-  public StatsServiceOsTarget() { 
+  public StatsServiceOsTarget() {
   }
 
   public StatsServiceOsTarget deviceOsType(StatsServiceDeviceOsType deviceOsType) {
@@ -52,8 +48,7 @@ public class StatsServiceOsTarget {
    * Get deviceOsType
    * @return deviceOsType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_OS_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class StatsServiceOsTarget {
   public void setDeviceOsType(StatsServiceDeviceOsType deviceOsType) {
     this.deviceOsType = deviceOsType;
   }
-
 
   @Override
   public boolean equals(Object o) {

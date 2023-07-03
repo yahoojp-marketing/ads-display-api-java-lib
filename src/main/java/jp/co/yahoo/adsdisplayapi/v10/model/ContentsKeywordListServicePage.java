@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.ContentsKeywordListServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordListServicePageオブジェクトは、取得されるコンテンツキーワードリストに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordListServicePage object displays that relatred to retrieved contents keyword list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ContentsKeywordListServicePageオブジェクトは、取得されるコンテンツキーワードリストに関するエントリーを表します。</div> <div lang=\"en\">ContentsKeywordListServicePage object displays that relatred to retrieved contents keyword list.</div> ")
 @JsonPropertyOrder({
   ContentsKeywordListServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   ContentsKeywordListServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("ContentsKeywordListServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentsKeywordListServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<ContentsKeywordListServiceValue> values = null;
+  private List<ContentsKeywordListServiceValue> values;
 
-  public ContentsKeywordListServicePage() { 
+  public ContentsKeywordListServicePage() {
   }
 
   public ContentsKeywordListServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class ContentsKeywordListServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of entries.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of entries.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class ContentsKeywordListServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class ContentsKeywordListServicePage {
   public void setValues(List<ContentsKeywordListServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

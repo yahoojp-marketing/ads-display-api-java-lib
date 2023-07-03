@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.CampaignLabelServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignLabelServiceReturnValueオブジェクトは、キャンペーンの情報を含む操作結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignLabelServiceReturnValue object describes value returned as operation result including campaign label information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignLabelServiceReturnValueオブジェクトは、キャンペーンの情報を含む操作結果として戻される値を表します。</div> <div lang=\"en\">CampaignLabelServiceReturnValue object describes value returned as operation result including campaign label information.</div> ")
 @JsonPropertyOrder({
   CampaignLabelServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("CampaignLabelServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignLabelServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<CampaignLabelServiceValue> values = null;
+  private List<CampaignLabelServiceValue> values;
 
-  public CampaignLabelServiceReturnValue() { 
+  public CampaignLabelServiceReturnValue() {
   }
 
   public CampaignLabelServiceReturnValue values(List<CampaignLabelServiceValue> values) {
@@ -62,8 +58,7 @@ public class CampaignLabelServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class CampaignLabelServiceReturnValue {
   public void setValues(List<CampaignLabelServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

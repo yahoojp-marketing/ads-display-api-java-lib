@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceSharedAudienceListType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceSharedAudienceListInfoオブジェクトは、共通オーディエンスリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListInfo object describes information of shared audience list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceSharedAudienceListInfoオブジェクトは、共通オーディエンスリストの情報を表します。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListInfo object describes information of shared audience list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceSharedAudienceListInfo.JSON_PROPERTY_AUDIENCE_LIST_ID,
   DictionaryServiceSharedAudienceListInfo.JSON_PROPERTY_AUDIENCE_LIST_NAME_JA,
@@ -37,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceSharedAudienceListInfo.JSON_PROPERTY_AUDIENCE_LIST_TYPE,
   DictionaryServiceSharedAudienceListInfo.JSON_PROPERTY_REACH
 })
-@JsonTypeName("DictionaryServiceSharedAudienceListInfo")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceSharedAudienceListInfo {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
   private Long audienceListId;
@@ -55,7 +51,7 @@ public class DictionaryServiceSharedAudienceListInfo {
   public static final String JSON_PROPERTY_REACH = "reach";
   private Long reach;
 
-  public DictionaryServiceSharedAudienceListInfo() { 
+  public DictionaryServiceSharedAudienceListInfo() {
   }
 
   public DictionaryServiceSharedAudienceListInfo audienceListId(Long audienceListId) {
@@ -68,8 +64,7 @@ public class DictionaryServiceSharedAudienceListInfo {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List ID. &lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリストIDです。<br> </div> <div lang=\"en\"> Audience List ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,8 +90,7 @@ public class DictionaryServiceSharedAudienceListInfo {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名(日本語)です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List name(Ja). &lt;/div&gt; 
    * @return audienceListNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリスト名(日本語)です。 </div> <div lang=\"en\"> Audience List name(Ja). </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,8 +116,7 @@ public class DictionaryServiceSharedAudienceListInfo {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名(英語)です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List name(Eng). &lt;/div&gt; 
    * @return audienceListNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリスト名(英語)です。 </div> <div lang=\"en\"> Audience List name(Eng). </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +142,7 @@ public class DictionaryServiceSharedAudienceListInfo {
    * Get audienceListType
    * @return audienceListType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +168,7 @@ public class DictionaryServiceSharedAudienceListInfo {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of reaches. &lt;/div&gt; 
    * @return reach
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リーチ数です。 </div> <div lang=\"en\"> Number of reaches. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,7 +182,6 @@ public class DictionaryServiceSharedAudienceListInfo {
   public void setReach(Long reach) {
     this.reach = reach;
   }
-
 
   @Override
   public boolean equals(Object o) {

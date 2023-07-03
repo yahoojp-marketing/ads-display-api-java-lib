@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceConversionPathReportCondition;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceCrossCampaignReachesReportCondition;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceModelComparisonReportCondition;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceReportTypeConditionオブジェクトは、各レポートタイプごとのレポート作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceReportTypeCondition describes the condition to create each report type.   This field is optional in ADD operation, and will be ignored in REMOVE operation.  &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceReportTypeConditionオブジェクトは、各レポートタイプごとのレポート作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\">   ReportDefinitionServiceReportTypeCondition describes the condition to create each report type.   This field is optional in ADD operation, and will be ignored in REMOVE operation.  </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceReportTypeCondition.JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION,
   ReportDefinitionServiceReportTypeCondition.JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceReportTypeCondition.JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION,
   ReportDefinitionServiceReportTypeCondition.JSON_PROPERTY_REPORT_TYPE
 })
-@JsonTypeName("ReportDefinitionServiceReportTypeCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceReportTypeCondition {
   public static final String JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION = "conversionPathReportCondition";
   private ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition;
@@ -59,7 +55,7 @@ public class ReportDefinitionServiceReportTypeCondition {
   public static final String JSON_PROPERTY_REPORT_TYPE = "reportType";
   private ReportDefinitionServiceType reportType;
 
-  public ReportDefinitionServiceReportTypeCondition() { 
+  public ReportDefinitionServiceReportTypeCondition() {
   }
 
   public ReportDefinitionServiceReportTypeCondition conversionPathReportCondition(ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
@@ -72,8 +68,7 @@ public class ReportDefinitionServiceReportTypeCondition {
    * Get conversionPathReportCondition
    * @return conversionPathReportCondition
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class ReportDefinitionServiceReportTypeCondition {
    * Get crossCampaignReachesReportCondition
    * @return crossCampaignReachesReportCondition
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class ReportDefinitionServiceReportTypeCondition {
    * Get reachReportCondition
    * @return reachReportCondition
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH_REPORT_CONDITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +146,7 @@ public class ReportDefinitionServiceReportTypeCondition {
    * Get modelComparisonReportCondition
    * @return modelComparisonReportCondition
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,8 +172,7 @@ public class ReportDefinitionServiceReportTypeCondition {
    * Get reportType
    * @return reportType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,7 +186,6 @@ public class ReportDefinitionServiceReportTypeCondition {
   public void setReportType(ReportDefinitionServiceType reportType) {
     this.reportType = reportType;
   }
-
 
   @Override
   public boolean equals(Object o) {

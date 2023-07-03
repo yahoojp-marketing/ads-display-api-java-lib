@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceDateRangeオブジェクトは、レポートの集計対象期間を表します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; DateRangeTypeがCUSTOM_DATEの場合、必須項目です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The ReportDefinitionServiceDateRange object serves the report compilation target period. &lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt; This field is required if DateRangeType is set to &amp;#34;CUSTOM DATE&amp;#34;. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceDateRangeオブジェクトは、レポートの集計対象期間を表します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br> DateRangeTypeがCUSTOM_DATEの場合、必須項目です。 </div> <div lang=\"en\"> The ReportDefinitionServiceDateRange object serves the report compilation target period. <br> This field is optional in ADD operation, and will be ignored in REMOVE operation. <br> This field is required if DateRangeType is set to &#34;CUSTOM DATE&#34;. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceDateRange.JSON_PROPERTY_END_DATE,
   ReportDefinitionServiceDateRange.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("ReportDefinitionServiceDateRange")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceDateRange {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
@@ -42,7 +38,7 @@ public class ReportDefinitionServiceDateRange {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public ReportDefinitionServiceDateRange() { 
+  public ReportDefinitionServiceDateRange() {
   }
 
   public ReportDefinitionServiceDateRange endDate(String endDate) {
@@ -55,8 +51,7 @@ public class ReportDefinitionServiceDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 集計終了日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The compilation end date. &lt;br&gt; ∗ Format: yyyyMMdd&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 集計終了日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> The compilation end date. <br> ∗ Format: yyyyMMdd<br> This field is required in ADD operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class ReportDefinitionServiceDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 集計開始日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The compilation start date.&lt;br&gt; ∗ Format: yyyyMMdd&lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 集計開始日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> The compilation start date.<br> ∗ Format: yyyyMMdd<br> This field is required in ADD operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class ReportDefinitionServiceDateRange {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

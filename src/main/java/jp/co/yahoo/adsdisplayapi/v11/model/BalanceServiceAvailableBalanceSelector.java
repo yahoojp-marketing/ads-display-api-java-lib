@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BalanceServiceAvailableBalanceSelectorオブジェクトは、操作対象となる推定現金残高情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BalanceServiceAvailableBalanceSelector object describes estimated cash balance information to be operated.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BalanceServiceAvailableBalanceSelectorオブジェクトは、操作対象となる推定現金残高情報を表します。</div> <div lang=\"en\">BalanceServiceAvailableBalanceSelector object describes estimated cash balance information to be operated.</div> ")
 @JsonPropertyOrder({
   BalanceServiceAvailableBalanceSelector.JSON_PROPERTY_ACCOUNT_ID
 })
-@JsonTypeName("BalanceServiceAvailableBalanceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BalanceServiceAvailableBalanceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
-  public BalanceServiceAvailableBalanceSelector() { 
+  public BalanceServiceAvailableBalanceSelector() {
   }
 
   public BalanceServiceAvailableBalanceSelector accountId(Long accountId) {
@@ -51,8 +47,7 @@ public class BalanceServiceAvailableBalanceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">The account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -66,7 +61,6 @@ public class BalanceServiceAvailableBalanceSelector {
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
-
 
   @Override
   public boolean equals(Object o) {

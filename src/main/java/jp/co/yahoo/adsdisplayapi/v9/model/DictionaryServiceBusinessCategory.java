@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceBusinessCategoryオブジェクトは、ビジネスカテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceBusinessCategory object contains ad category information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceBusinessCategoryオブジェクトは、ビジネスカテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceBusinessCategory object contains ad category information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceBusinessCategory.JSON_PROPERTY_BUSINESS_CATEGORY_ID,
   DictionaryServiceBusinessCategory.JSON_PROPERTY_BUSINESS_CATEGORY_NAME
 })
-@JsonTypeName("DictionaryServiceBusinessCategory")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceBusinessCategory {
   public static final String JSON_PROPERTY_BUSINESS_CATEGORY_ID = "businessCategoryId";
   private String businessCategoryId;
@@ -42,7 +38,7 @@ public class DictionaryServiceBusinessCategory {
   public static final String JSON_PROPERTY_BUSINESS_CATEGORY_NAME = "businessCategoryName";
   private String businessCategoryName;
 
-  public DictionaryServiceBusinessCategory() { 
+  public DictionaryServiceBusinessCategory() {
   }
 
   public DictionaryServiceBusinessCategory businessCategoryId(String businessCategoryId) {
@@ -55,8 +51,7 @@ public class DictionaryServiceBusinessCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビジネスカテゴリIDを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Business category ID.&lt;/div&gt; 
    * @return businessCategoryId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビジネスカテゴリIDを表します。</div> <div lang=\"en\">Business category ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUSINESS_CATEGORY_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class DictionaryServiceBusinessCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビジネスカテゴリ名を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Business category name.&lt;/div&gt; 
    * @return businessCategoryName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビジネスカテゴリ名を表します。</div> <div lang=\"en\">Business category name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUSINESS_CATEGORY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class DictionaryServiceBusinessCategory {
   public void setBusinessCategoryName(String businessCategoryName) {
     this.businessCategoryName = businessCategoryName;
   }
-
 
   @Override
   public boolean equals(Object o) {

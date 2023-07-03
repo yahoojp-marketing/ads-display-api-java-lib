@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.FeedSetServiceCompareOperator;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedSetServiceConditionオブジェクトは、商品セット情報のOR条件を保持します。&lt;br&gt; ADD時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedSetServiceCondition object contains OR conditional retrieval of feedset information.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> FeedSetServiceConditionオブジェクトは、商品セット情報のOR条件を保持します。<br> ADD時、このフィールドは必須です。 </div> <div lang=\"en\"> FeedSetServiceCondition object contains OR conditional retrieval of feedset information.<br> This field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   FeedSetServiceCondition.JSON_PROPERTY_COMPARE_OPERATOR,
   FeedSetServiceCondition.JSON_PROPERTY_VALUE
 })
-@JsonTypeName("FeedSetServiceCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedSetServiceCondition {
   public static final String JSON_PROPERTY_COMPARE_OPERATOR = "compareOperator";
   private FeedSetServiceCompareOperator compareOperator;
@@ -43,7 +39,7 @@ public class FeedSetServiceCondition {
   public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public FeedSetServiceCondition() { 
+  public FeedSetServiceCondition() {
   }
 
   public FeedSetServiceCondition compareOperator(FeedSetServiceCompareOperator compareOperator) {
@@ -56,8 +52,7 @@ public class FeedSetServiceCondition {
    * Get compareOperator
    * @return compareOperator
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COMPARE_OPERATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class FeedSetServiceCondition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 値です。&lt;br&gt; ADD時、このフィールドは必須です。&lt;br&gt; 設定可能な値はFeedSetServiceConditionTypeをご参照ください。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Value.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; Refer to FeedSetServiceConditionType for possible values. &lt;/div&gt; 
    * @return value
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 値です。<br> ADD時、このフィールドは必須です。<br> 設定可能な値はFeedSetServiceConditionTypeをご参照ください。<br> </div> <div lang=\"en\"> Value.<br> This field is required in ADD operation.<br> Refer to FeedSetServiceConditionType for possible values. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class FeedSetServiceCondition {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(Object o) {

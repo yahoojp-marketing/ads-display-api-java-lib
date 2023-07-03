@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AudienceListServiceSize;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストのサイズの各リーチ数を保持するオブジェクトです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceSizeReaches object contains each reaches of audience list size. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> オーディエンスリストのサイズの各リーチ数を保持するオブジェクトです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AudienceListServiceSizeReaches object contains each reaches of audience list size. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceSizeReaches.JSON_PROPERTY_REACH,
   AudienceListServiceSizeReaches.JSON_PROPERTY_AUDIENCE_LIST_SIZE
 })
-@JsonTypeName("AudienceListServiceSizeReaches")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceSizeReaches {
   public static final String JSON_PROPERTY_REACH = "reach";
   private Long reach;
@@ -43,7 +39,7 @@ public class AudienceListServiceSizeReaches {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_SIZE = "audienceListSize";
   private AudienceListServiceSize audienceListSize;
 
-  public AudienceListServiceSizeReaches() { 
+  public AudienceListServiceSizeReaches() {
   }
 
   public AudienceListServiceSizeReaches reach(Long reach) {
@@ -56,8 +52,7 @@ public class AudienceListServiceSizeReaches {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストのサイズのリーチ数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reaches of audience list size. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return reach
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリストのサイズのリーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reaches of audience list size. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AudienceListServiceSizeReaches {
    * Get audienceListSize
    * @return audienceListSize
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AudienceListServiceSizeReaches {
   public void setAudienceListSize(AudienceListServiceSize audienceListSize) {
     this.audienceListSize = audienceListSize;
   }
-
 
   @Override
   public boolean equals(Object o) {

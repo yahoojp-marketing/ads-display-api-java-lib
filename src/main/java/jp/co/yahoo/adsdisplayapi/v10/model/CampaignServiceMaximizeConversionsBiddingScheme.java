@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、キャンペーン目標単価(tCPA)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、指定可能となります。     &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpcBiddingScheme object holds configuration information of Target CPA (tCPA) of campaign.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSIONS. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、キャンペーン目標単価(tCPA)の設定情報を表します。<br> このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。<br> ※BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、指定可能となります。     </div> <div lang=\"en\"> AdGroupServiceCpcBiddingScheme object holds configuration information of Target CPA (tCPA) of campaign.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSIONS. </div> ")
 @JsonPropertyOrder({
   CampaignServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_TARGET_CPA
 })
-@JsonTypeName("CampaignServiceMaximizeConversionsBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
   private Long targetCpa;
 
-  public CampaignServiceMaximizeConversionsBiddingScheme() { 
+  public CampaignServiceMaximizeConversionsBiddingScheme() {
   }
 
   public CampaignServiceMaximizeConversionsBiddingScheme targetCpa(Long targetCpa) {
@@ -51,8 +47,7 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン目標単価(tCPA)です。&lt;br&gt; ADDおよびSET時、このフィールドは任意で指定できます。&lt;br&gt; SET時、BiddingStrategyTypeにMAXIMIZE_CONVERSIONSが指定されていて、targetCpaを指定しない場合、targetCpaの値がクリアされます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target CPA (tCPA) of campaign.&lt;br&gt; This field can be optionally specified in ADD and SET operation.&lt;br&gt; If BiddingStrategyType is MAXIMIZE_CONVERSION and targetCpa is not specified in SET operation, the value in this field will be cleared. &lt;/div&gt; 
    * @return targetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン目標単価(tCPA)です。<br> ADDおよびSET時、このフィールドは任意で指定できます。<br> SET時、BiddingStrategyTypeにMAXIMIZE_CONVERSIONSが指定されていて、targetCpaを指定しない場合、targetCpaの値がクリアされます。 </div> <div lang=\"en\"> Target CPA (tCPA) of campaign.<br> This field can be optionally specified in ADD and SET operation.<br> If BiddingStrategyType is MAXIMIZE_CONVERSION and targetCpa is not specified in SET operation, the value in this field will be cleared. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class CampaignServiceMaximizeConversionsBiddingScheme {
   public void setTargetCpa(Long targetCpa) {
     this.targetCpa = targetCpa;
   }
-
 
   @Override
   public boolean equals(Object o) {

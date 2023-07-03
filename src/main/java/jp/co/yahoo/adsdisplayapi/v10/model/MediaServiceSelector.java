@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.MediaServiceApprovalStatus;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MediaServiceSelectorオブジェクトは、操作の対象とする画像およびフィルタ条件を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The MediaServiceSelector object serves operation target media and filtering condition.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">MediaServiceSelectorオブジェクトは、操作の対象とする画像およびフィルタ条件を表します。</div> <div lang=\"en\">The MediaServiceSelector object serves operation target media and filtering condition.</div> ")
 @JsonPropertyOrder({
   MediaServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   MediaServiceSelector.JSON_PROPERTY_APPROVAL_STATUSES,
@@ -43,17 +40,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MediaServiceSelector.JSON_PROPERTY_USER_STATUSES,
   MediaServiceSelector.JSON_PROPERTY_CREATED_DATE_RANGE
 })
-@JsonTypeName("MediaServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MediaServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
-  private List<MediaServiceApprovalStatus> approvalStatuses = null;
+  private List<MediaServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_MEDIA_IDS = "mediaIds";
-  private List<Long> mediaIds = null;
+  private List<Long> mediaIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -62,12 +58,12 @@ public class MediaServiceSelector {
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
-  private List<MediaServiceUserStatus> userStatuses = null;
+  private List<MediaServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_CREATED_DATE_RANGE = "createdDateRange";
   private MediaServiceCreatedDateRange createdDateRange;
 
-  public MediaServiceSelector() { 
+  public MediaServiceSelector() {
   }
 
   public MediaServiceSelector accountId(Long accountId) {
@@ -80,8 +76,7 @@ public class MediaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">The account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -115,8 +110,7 @@ public class MediaServiceSelector {
    * Get approvalStatuses
    * @return approvalStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +144,7 @@ public class MediaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The media ID.&lt;/div&gt; 
    * @return mediaIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像IDです。</div> <div lang=\"en\">The media ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,8 +172,7 @@ public class MediaServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -207,8 +199,7 @@ public class MediaServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -242,8 +233,7 @@ public class MediaServiceSelector {
    * Get userStatuses
    * @return userStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -269,8 +259,7 @@ public class MediaServiceSelector {
    * Get createdDateRange
    * @return createdDateRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATED_DATE_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -284,7 +273,6 @@ public class MediaServiceSelector {
   public void setCreatedDateRange(MediaServiceCreatedDateRange createdDateRange) {
     this.createdDateRange = createdDateRange;
   }
-
 
   @Override
   public boolean equals(Object o) {

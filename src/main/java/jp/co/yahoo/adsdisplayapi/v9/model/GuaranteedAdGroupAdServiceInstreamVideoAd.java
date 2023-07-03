@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.GuaranteedAdGroupAdServiceCustomParameters;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceInstreamVideoAdオブジェクトは、動画で構成される広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceInstreamVideoAd object describes information regarding ads composed of videos.&lt;br&gt; This field is optional.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceInstreamVideoAdオブジェクトは、動画で構成される広告の情報を表します。<br> このフィールドは、省略可能となります。<br> </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceInstreamVideoAd object describes information regarding ads composed of videos.<br> This field is optional.<br> </div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroupAdServiceInstreamVideoAd.JSON_PROPERTY_DISPLAY_URL,
   GuaranteedAdGroupAdServiceInstreamVideoAd.JSON_PROPERTY_CUSTOM_PARAMETERS,
@@ -56,8 +53,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceInstreamVideoAd.JSON_PROPERTY_VIDEO_START_BEACON_URLS,
   GuaranteedAdGroupAdServiceInstreamVideoAd.JSON_PROPERTY_ACTION_AFTER_AD_CLICKS
 })
-@JsonTypeName("GuaranteedAdGroupAdServiceInstreamVideoAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroupAdServiceInstreamVideoAd {
   public static final String JSON_PROPERTY_DISPLAY_URL = "displayUrl";
   private String displayUrl;
@@ -102,24 +98,24 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
   private GuaranteedAdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS = "video25PercentBeaconUrls";
-  private List<String> video25PercentBeaconUrls = null;
+  private List<String> video25PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS = "video50PercentBeaconUrls";
-  private List<String> video50PercentBeaconUrls = null;
+  private List<String> video50PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS = "video75PercentBeaconUrls";
-  private List<String> video75PercentBeaconUrls = null;
+  private List<String> video75PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS = "videoCompleteBeaconUrls";
-  private List<String> videoCompleteBeaconUrls = null;
+  private List<String> videoCompleteBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_START_BEACON_URLS = "videoStartBeaconUrls";
-  private List<String> videoStartBeaconUrls = null;
+  private List<String> videoStartBeaconUrls;
 
   public static final String JSON_PROPERTY_ACTION_AFTER_AD_CLICKS = "actionAfterAdClicks";
   private Boolean actionAfterAdClicks;
 
-  public GuaranteedAdGroupAdServiceInstreamVideoAd() { 
+  public GuaranteedAdGroupAdServiceInstreamVideoAd() {
   }
 
   public GuaranteedAdGroupAdServiceInstreamVideoAd displayUrl(String displayUrl) {
@@ -132,8 +128,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 表示URLです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Display URL.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return displayUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 表示URLです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Display URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,8 +154,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,8 +180,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get displayUrlLevel
    * @return displayUrlLevel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,8 +206,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; finalUrlフィールドを設定する場合、trackingUrl、customParametersは任意になります。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※actionAfterAdClicksがtrueの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; If you specify finalUrl, trackingUrl and customParameters will be optional.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗If actionAfterAdClicks is true, this field is required. &lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> finalUrlフィールドを設定する場合、trackingUrl、customParametersは任意になります。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※actionAfterAdClicksがtrueの場合は必須です。 </div> <div lang=\"en\">Final URL.<br> If you specify finalUrl, trackingUrl and customParameters will be optional.<br> This field is optional in ADD and SET operation.<br> ∗If actionAfterAdClicks is true, this field is required. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -240,8 +232,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;スマートフォン向けURLです。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL (smartphone).&lt;br&gt; This field can be optionally specified only when specifying finalUrl. &lt;/div&gt; 
    * @return smartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">スマートフォン向けURLです。<br> finalUrlを指定するときのみ、任意で指定できます。 </div> <div lang=\"en\">Final URL (smartphone).<br> This field can be optionally specified only when specifying finalUrl. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -267,8 +258,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveSmartphoneFinalUrl
    * @return isRemoveSmartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -294,8 +284,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -321,8 +310,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; This field can be optionally specified only when specifying finalUrl. &lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時、このフィールドは省略可能となります。<br> finalUrlを指定するときのみ、任意で指定できます。 </div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD operation.<br> This field can be optionally specified only when specifying finalUrl. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -348,8 +336,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ヘッドラインです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Headline.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return headline
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ヘッドラインです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Headline.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -375,8 +362,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveVideo25PercentBeaconUrls
    * @return isRemoveVideo25PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -402,8 +388,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveVideo50PercentBeaconUrls
    * @return isRemoveVideo50PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -429,8 +414,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveVideo75PercentBeaconUrls
    * @return isRemoveVideo75PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -456,8 +440,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveVideoCompleteBeaconUrls
    * @return isRemoveVideoCompleteBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -483,8 +466,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * Get isRemoveVideoStartBeaconUrls
    * @return isRemoveVideoStartBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -518,8 +500,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 25％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (25%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video25PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 25％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Playback viewing beacon URL (25%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -553,8 +534,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 50％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (50%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video50PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 50％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Playback viewing beacon URL (50%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -588,8 +568,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 75％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (75%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video75PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 75％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Playback viewing beacon URL (75%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -623,8 +602,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生完了ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (complete).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return videoCompleteBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 再生完了ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Viewing beacon URL (complete).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -658,8 +636,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生開始ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (start).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return videoStartBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 再生開始ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。 </div> <div lang=\"en\"> Viewing beacon URL (start).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_START_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -685,8 +662,7 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告クリック時の動作です。trueの場合は、最終リンク先URLへ遷移します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Behavior when clicked on the ad. If true, it will transition to the final URL.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return actionAfterAdClicks
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告クリック時の動作です。trueの場合は、最終リンク先URLへ遷移します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Behavior when clicked on the ad. If true, it will transition to the final URL.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACTION_AFTER_AD_CLICKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -700,7 +676,6 @@ public class GuaranteedAdGroupAdServiceInstreamVideoAd {
   public void setActionAfterAdClicks(Boolean actionAfterAdClicks) {
     this.actionAfterAdClicks = actionAfterAdClicks;
   }
-
 
   @Override
   public boolean equals(Object o) {

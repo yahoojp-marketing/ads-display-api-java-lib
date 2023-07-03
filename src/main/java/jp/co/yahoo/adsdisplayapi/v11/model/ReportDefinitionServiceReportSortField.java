@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceReportSortType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceReportSortFieldオブジェクトは、レポート定義のソート詳細を表します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceReportSortField object describes sort details of report definition.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceReportSortFieldオブジェクトは、レポート定義のソート詳細を表します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> ReportDefinitionServiceReportSortField object describes sort details of report definition.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceReportSortField.JSON_PROPERTY_FIELD,
   ReportDefinitionServiceReportSortField.JSON_PROPERTY_REPORT_SORT_TYPE
 })
-@JsonTypeName("ReportDefinitionServiceReportSortField")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceReportSortField {
   public static final String JSON_PROPERTY_FIELD = "field";
   private String field;
@@ -43,7 +39,7 @@ public class ReportDefinitionServiceReportSortField {
   public static final String JSON_PROPERTY_REPORT_SORT_TYPE = "reportSortType";
   private ReportDefinitionServiceReportSortType reportSortType;
 
-  public ReportDefinitionServiceReportSortField() { 
+  public ReportDefinitionServiceReportSortField() {
   }
 
   public ReportDefinitionServiceReportSortField field(String field) {
@@ -56,8 +52,7 @@ public class ReportDefinitionServiceReportSortField {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; レポート定義のソート対象です。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Sort object (field) of report definition.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return field
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> レポート定義のソート対象です。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> Sort object (field) of report definition.<br> This field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class ReportDefinitionServiceReportSortField {
    * Get reportSortType
    * @return reportSortType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_SORT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class ReportDefinitionServiceReportSortField {
   public void setReportSortType(ReportDefinitionServiceReportSortType reportSortType) {
     this.reportSortType = reportSortType;
   }
-
 
   @Override
   public boolean equals(Object o) {

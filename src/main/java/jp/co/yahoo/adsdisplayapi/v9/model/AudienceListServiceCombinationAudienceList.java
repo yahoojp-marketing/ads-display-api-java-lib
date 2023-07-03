@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceCombination;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceCombinationAudienceListオブジェクトは、オーディエンスリストの組み合わせ情報のリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがCOMBINATIONの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceCombinationAudienceList object is a container for storing list of combination of audience list information. &lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If audienceListType is COMBINATION, this field is required in  ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceCombinationAudienceListオブジェクトは、オーディエンスリストの組み合わせ情報のリストを表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※audienceListTypeがCOMBINATIONの場合は、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> AudienceListServiceCombinationAudienceList object is a container for storing list of combination of audience list information. <br> This field is optional in ADD and SET operation. <br> *If audienceListType is COMBINATION, this field is required in  ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceCombinationAudienceList.JSON_PROPERTY_COMBINATIONS
 })
-@JsonTypeName("AudienceListServiceCombinationAudienceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceCombinationAudienceList {
   public static final String JSON_PROPERTY_COMBINATIONS = "combinations";
-  private List<AudienceListServiceCombination> combinations = null;
+  private List<AudienceListServiceCombination> combinations;
 
-  public AudienceListServiceCombinationAudienceList() { 
+  public AudienceListServiceCombinationAudienceList() {
   }
 
   public AudienceListServiceCombinationAudienceList combinations(List<AudienceListServiceCombination> combinations) {
@@ -62,8 +58,7 @@ public class AudienceListServiceCombinationAudienceList {
    * Get combinations
    * @return combinations
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COMBINATIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AudienceListServiceCombinationAudienceList {
   public void setCombinations(List<AudienceListServiceCombination> combinations) {
     this.combinations = combinations;
   }
-
 
   @Override
   public boolean equals(Object o) {

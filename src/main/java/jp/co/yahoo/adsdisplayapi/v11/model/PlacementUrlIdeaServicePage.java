@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.PlacementUrlIdeaServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep execution result of get method (All Entity list).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep execution result of get method (All Entity list).</div> ")
 @JsonPropertyOrder({
   PlacementUrlIdeaServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   PlacementUrlIdeaServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("PlacementUrlIdeaServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlIdeaServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<PlacementUrlIdeaServiceValue> values = null;
+  private List<PlacementUrlIdeaServiceValue> values;
 
-  public PlacementUrlIdeaServicePage() { 
+  public PlacementUrlIdeaServicePage() {
   }
 
   public PlacementUrlIdeaServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class PlacementUrlIdeaServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class PlacementUrlIdeaServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class PlacementUrlIdeaServicePage {
   public void setValues(List<PlacementUrlIdeaServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

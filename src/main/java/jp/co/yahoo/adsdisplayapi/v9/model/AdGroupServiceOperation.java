@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroup;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupServiceOperationオブジェクトは、操作の対象となる広告グループと処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupServiceOperation object is a container for storing ad group information and operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupServiceOperationオブジェクトは、操作の対象となる広告グループと処理の内容を表します。</div> <div lang=\"en\">The AdGroupServiceOperation object is a container for storing ad group information and operation results.</div> ")
 @JsonPropertyOrder({
   AdGroupServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AdGroupServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("AdGroupServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class AdGroupServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<AdGroup> operand = new ArrayList<>();
 
-  public AdGroupServiceOperation() { 
+  public AdGroupServiceOperation() {
   }
 
   public AdGroupServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class AdGroupServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">The account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class AdGroupServiceOperation {
   }
 
   public AdGroupServiceOperation addOperandItem(AdGroup operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class AdGroupServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class AdGroupServiceOperation {
   public void setOperand(List<AdGroup> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AbTestServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AbTestServiceReturnValueオブジェクトは、A/Bテストの情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AbTestServiceReturnValue object is a container for storing A/B test information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AbTestServiceReturnValueオブジェクトは、A/Bテストの情報を格納するコンテナです。</div> <div lang=\"en\">The AbTestServiceReturnValue object is a container for storing A/B test information.</div> ")
 @JsonPropertyOrder({
   AbTestServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AbTestServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AbTestServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AbTestServiceValue> values = null;
+  private List<AbTestServiceValue> values;
 
-  public AbTestServiceReturnValue() { 
+  public AbTestServiceReturnValue() {
   }
 
   public AbTestServiceReturnValue values(List<AbTestServiceValue> values) {
@@ -62,8 +58,7 @@ public class AbTestServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AbTestServiceReturnValue {
   public void setValues(List<AbTestServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

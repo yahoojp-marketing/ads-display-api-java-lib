@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceCategoryChild;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceCategoryオブジェクトは、カテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceCategory object is a container of category information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceCategoryオブジェクトは、カテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceCategory object is a container of category information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceCategory.JSON_PROPERTY_CHILD,
   DictionaryServiceCategory.JSON_PROPERTY_NAME
 })
-@JsonTypeName("DictionaryServiceCategory")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceCategory {
   public static final String JSON_PROPERTY_CHILD = "child";
-  private List<DictionaryServiceCategoryChild> child = null;
+  private List<DictionaryServiceCategoryChild> child;
 
   public static final String JSON_PROPERTY_NAME = "name";
   private String name;
 
-  public DictionaryServiceCategory() { 
+  public DictionaryServiceCategory() {
   }
 
   public DictionaryServiceCategory child(List<DictionaryServiceCategoryChild> child) {
@@ -66,8 +62,7 @@ public class DictionaryServiceCategory {
    * Get child
    * @return child
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CHILD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class DictionaryServiceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最上位階層のカテゴリー名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceCategory name in the highest level.&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最上位階層のカテゴリー名です。</div> <div lang=\"en\">DictionaryServiceCategory name in the highest level.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class DictionaryServiceCategory {
   public void setName(String name) {
     this.name = name;
   }
-
 
   @Override
   public boolean equals(Object o) {

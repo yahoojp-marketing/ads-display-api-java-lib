@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceSearchKeywordIdeaSearchKeywordList;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;追加を推奨するサーチキーワードに関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This describes the information of a recommended search keyword to add.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">追加を推奨するサーチキーワードに関する情報を表します。</div> <div lang=\"en\">This describes the information of a recommended search keyword to add.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceSearchKeywordIdea.JSON_PROPERTY_SEARCH_KEYWORD_IDEA_SEARCH_KEYWORD_LIST
 })
-@JsonTypeName("RecommendationServiceSearchKeywordIdea")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceSearchKeywordIdea {
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_IDEA_SEARCH_KEYWORD_LIST = "searchKeywordIdeaSearchKeywordList";
-  private List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList = null;
+  private List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList;
 
-  public RecommendationServiceSearchKeywordIdea() { 
+  public RecommendationServiceSearchKeywordIdea() {
   }
 
   public RecommendationServiceSearchKeywordIdea searchKeywordIdeaSearchKeywordList(List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceSearchKeywordIdea {
    * Get searchKeywordIdeaSearchKeywordList
    * @return searchKeywordIdeaSearchKeywordList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_IDEA_SEARCH_KEYWORD_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceSearchKeywordIdea {
   public void setSearchKeywordIdeaSearchKeywordList(List<RecommendationServiceSearchKeywordIdeaSearchKeywordList> searchKeywordIdeaSearchKeywordList) {
     this.searchKeywordIdeaSearchKeywordList = searchKeywordIdeaSearchKeywordList;
   }
-
 
   @Override
   public boolean equals(Object o) {

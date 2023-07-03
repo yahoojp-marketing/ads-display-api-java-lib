@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.ContentsKeywordIdeaServiceMatchType;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaServiceKeywordオブジェクトは、コンテンツターゲティングの検索条件です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdeaServiceKeyword object is search condition for contents targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ContentsKeywordIdeaServiceKeywordオブジェクトは、コンテンツターゲティングの検索条件です。</div> <div lang=\"en\">ContentsKeywordIdeaServiceKeyword object is search condition for contents targeting.</div> ")
 @JsonPropertyOrder({
   ContentsKeywordIdeaServiceKeyword.JSON_PROPERTY_KEYWORDS,
   ContentsKeywordIdeaServiceKeyword.JSON_PROPERTY_MATCH_TYPE
 })
-@JsonTypeName("ContentsKeywordIdeaServiceKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentsKeywordIdeaServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
-  private List<String> keywords = null;
+  private List<String> keywords;
 
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
   private ContentsKeywordIdeaServiceMatchType matchType;
 
-  public ContentsKeywordIdeaServiceKeyword() { 
+  public ContentsKeywordIdeaServiceKeyword() {
   }
 
   public ContentsKeywordIdeaServiceKeyword keywords(List<String> keywords) {
@@ -66,8 +62,7 @@ public class ContentsKeywordIdeaServiceKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索条件：キーワード&lt;br&gt; ※キーワード提案用&lt;br&gt; ※キーワード、キーワードIDの同時指定はできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search condition : Keyword.&lt;br&gt; *Keyword for suggesting.&lt;br&gt; *Can not specify Keyword and Keyword ID at the same time. &lt;/div&gt; 
    * @return keywords
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：キーワード<br> ※キーワード提案用<br> ※キーワード、キーワードIDの同時指定はできません。 </div> <div lang=\"en\"> Search condition : Keyword.<br> *Keyword for suggesting.<br> *Can not specify Keyword and Keyword ID at the same time. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class ContentsKeywordIdeaServiceKeyword {
    * Get matchType
    * @return matchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class ContentsKeywordIdeaServiceKeyword {
   public void setMatchType(ContentsKeywordIdeaServiceMatchType matchType) {
     this.matchType = matchType;
   }
-
 
   @Override
   public boolean equals(Object o) {

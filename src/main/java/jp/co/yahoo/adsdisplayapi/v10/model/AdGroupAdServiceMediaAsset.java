@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceMediaAssetオブジェクトは、レスポンシブディスプレイ広告で指定するメディアアセットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceMediaAsset object represents a media asset to specify in responsive display ads.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceMediaAssetオブジェクトは、レスポンシブディスプレイ広告で指定するメディアアセットを表します。</div> <div lang=\"en\">The AdGroupAdServiceMediaAsset object represents a media asset to specify in responsive display ads.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceMediaAsset.JSON_PROPERTY_MEDIA_ID
 })
-@JsonTypeName("AdGroupAdServiceMediaAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceMediaAsset {
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
   private Long mediaId;
 
-  public AdGroupAdServiceMediaAsset() { 
+  public AdGroupAdServiceMediaAsset() {
   }
 
   public AdGroupAdServiceMediaAsset mediaId(Long mediaId) {
@@ -51,8 +47,7 @@ public class AdGroupAdServiceMediaAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return mediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Media ID.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AdGroupAdServiceMediaAsset {
   public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.StatsServiceDeviceAppType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAppTargetオブジェクトは、アプリターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAppTarget object holds configuration information of app targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceAppTargetオブジェクトは、アプリターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceAppTarget object holds configuration information of app targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceAppTarget.JSON_PROPERTY_DEVICE_APP_TYPE
 })
-@JsonTypeName("StatsServiceAppTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceAppTarget {
   public static final String JSON_PROPERTY_DEVICE_APP_TYPE = "deviceAppType";
   private StatsServiceDeviceAppType deviceAppType;
 
-  public StatsServiceAppTarget() { 
+  public StatsServiceAppTarget() {
   }
 
   public StatsServiceAppTarget deviceAppType(StatsServiceDeviceAppType deviceAppType) {
@@ -52,8 +48,7 @@ public class StatsServiceAppTarget {
    * Get deviceAppType
    * @return deviceAppType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_APP_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class StatsServiceAppTarget {
   public void setDeviceAppType(StatsServiceDeviceAppType deviceAppType) {
     this.deviceAppType = deviceAppType;
   }
-
 
   @Override
   public boolean equals(Object o) {

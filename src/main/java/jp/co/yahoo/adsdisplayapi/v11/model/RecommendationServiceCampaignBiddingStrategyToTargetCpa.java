@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceCampaignBiddingStrategyToTargetCpaCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceCampaignBiddingStrategyToTargetCpaオブジェクトは、自動入札（コンバージョン単価の目標値）に適しているキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceCampaignBiddingStrategyToTargetCpa objects describes recommendation information about the campaign that is suitable for using autobidding (target CPA).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceCampaignBiddingStrategyToTargetCpaオブジェクトは、自動入札（コンバージョン単価の目標値）に適しているキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceCampaignBiddingStrategyToTargetCpa objects describes recommendation information about the campaign that is suitable for using autobidding (target CPA).</div> ")
 @JsonPropertyOrder({
   RecommendationServiceCampaignBiddingStrategyToTargetCpa.JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceCampaignBiddingStrategyToTargetCpa")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceCampaignBiddingStrategyToTargetCpa {
   public static final String JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA_CAMPAIGN_LIST = "campaignBiddingStrategyToTargetCpaCampaignList";
-  private List<RecommendationServiceCampaignBiddingStrategyToTargetCpaCampaign> campaignBiddingStrategyToTargetCpaCampaignList = null;
+  private List<RecommendationServiceCampaignBiddingStrategyToTargetCpaCampaign> campaignBiddingStrategyToTargetCpaCampaignList;
 
-  public RecommendationServiceCampaignBiddingStrategyToTargetCpa() { 
+  public RecommendationServiceCampaignBiddingStrategyToTargetCpa() {
   }
 
   public RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpaCampaignList(List<RecommendationServiceCampaignBiddingStrategyToTargetCpaCampaign> campaignBiddingStrategyToTargetCpaCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceCampaignBiddingStrategyToTargetCpa {
    * Get campaignBiddingStrategyToTargetCpaCampaignList
    * @return campaignBiddingStrategyToTargetCpaCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceCampaignBiddingStrategyToTargetCpa {
   public void setCampaignBiddingStrategyToTargetCpaCampaignList(List<RecommendationServiceCampaignBiddingStrategyToTargetCpaCampaign> campaignBiddingStrategyToTargetCpaCampaignList) {
     this.campaignBiddingStrategyToTargetCpaCampaignList = campaignBiddingStrategyToTargetCpaCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

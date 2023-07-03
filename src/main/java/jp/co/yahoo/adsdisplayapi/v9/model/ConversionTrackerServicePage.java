@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ConversionTrackerServicePeriod;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePage object contains the results (a list of all entities) for get method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">ConversionTrackerServicePage object contains the results (a list of all entities) for get method.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServicePage.JSON_PROPERTY_PERIOD,
   ConversionTrackerServicePage.JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE,
@@ -45,8 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   ConversionTrackerServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("ConversionTrackerServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServicePage {
   public static final String JSON_PROPERTY_PERIOD = "period";
   private ConversionTrackerServicePeriod period;
@@ -76,9 +72,9 @@ public class ConversionTrackerServicePage {
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<ConversionTrackerServiceValue> values = null;
+  private List<ConversionTrackerServiceValue> values;
 
-  public ConversionTrackerServicePage() { 
+  public ConversionTrackerServicePage() {
   }
 
   public ConversionTrackerServicePage period(ConversionTrackerServicePeriod period) {
@@ -91,8 +87,7 @@ public class ConversionTrackerServicePage {
    * Get period
    * @return period
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +113,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conv. value (all).&lt;/div&gt; 
    * @return totalAllConversionValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）の合計です。</div> <div lang=\"en\">Total of conv. value (all).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +139,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数（全て）の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conversions (all).&lt;/div&gt; 
    * @return totalAllConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数（全て）の合計です。</div> <div lang=\"en\">Total of conversions (all).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_ALL_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,8 +165,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conv. value.&lt;/div&gt; 
    * @return totalConversionValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値の合計です。</div> <div lang=\"en\">Total of conv. value.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSION_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -199,8 +191,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値の合計（クリック経由）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conv. value (via click).&lt;/div&gt; 
    * @return totalConversionValueViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値の合計（クリック経由）です。</div> <div lang=\"en\">Total of conv. value (via click).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSION_VALUE_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -226,8 +217,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conversions.&lt;/div&gt; 
    * @return totalConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数の合計です。</div> <div lang=\"en\">Total of conversions.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -253,8 +243,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数の合計（クリック経由）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conversions (via click).&lt;/div&gt; 
    * @return totalConversionsViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数の合計（クリック経由）です。</div> <div lang=\"en\">Total of conversions (via click).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSIONS_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -280,8 +269,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クロスデバイスコンバージョン数の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of cross-device conv.&lt;/div&gt; 
    * @return totalCrossDeviceConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クロスデバイスコンバージョン数の合計です。</div> <div lang=\"en\">Total of cross-device conv.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_CROSS_DEVICE_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -307,8 +295,7 @@ public class ConversionTrackerServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -342,8 +329,7 @@ public class ConversionTrackerServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -357,7 +343,6 @@ public class ConversionTrackerServicePage {
   public void setValues(List<ConversionTrackerServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

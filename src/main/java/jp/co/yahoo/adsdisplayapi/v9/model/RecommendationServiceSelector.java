@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceType;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The RecommendationServiceSelector object is a container for storing a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The RecommendationServiceSelector object is a container for storing a set of criteria (parameters) for get method.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   RecommendationServiceSelector.JSON_PROPERTY_TYPES
 })
-@JsonTypeName("RecommendationServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class RecommendationServiceSelector {
   public static final String JSON_PROPERTY_TYPES = "types";
   private List<RecommendationServiceType> types = new ArrayList<>();
 
-  public RecommendationServiceSelector() { 
+  public RecommendationServiceSelector() {
   }
 
   public RecommendationServiceSelector accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class RecommendationServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントID</div> <div lang=\"en\">Search Condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class RecommendationServiceSelector {
   }
 
   public RecommendationServiceSelector addTypesItem(RecommendationServiceType typesItem) {
+    if (this.types == null) {
+      this.types = new ArrayList<>();
+    }
     this.types.add(typesItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class RecommendationServiceSelector {
    * Get types
    * @return types
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_TYPES)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class RecommendationServiceSelector {
   public void setTypes(List<RecommendationServiceType> types) {
     this.types = types;
   }
-
 
   @Override
   public boolean equals(Object o) {

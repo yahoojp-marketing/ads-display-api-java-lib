@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupTargetServiceAge;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceAgeTargetオブジェクトは、年齢ターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAGE_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceAgeTarget object is a container for storing age targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is AGE_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceAgeTargetオブジェクトは、年齢ターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがAGE_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceAgeTarget object is a container for storing age targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is AGE_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceAgeTarget.JSON_PROPERTY_AGE
 })
-@JsonTypeName("AdGroupTargetServiceAgeTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceAgeTarget {
   public static final String JSON_PROPERTY_AGE = "age";
   private AdGroupTargetServiceAge age;
 
-  public AdGroupTargetServiceAgeTarget() { 
+  public AdGroupTargetServiceAgeTarget() {
   }
 
   public AdGroupTargetServiceAgeTarget age(AdGroupTargetServiceAge age) {
@@ -52,8 +48,7 @@ public class AdGroupTargetServiceAgeTarget {
    * Get age
    * @return age
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AdGroupTargetServiceAgeTarget {
   public void setAge(AdGroupTargetServiceAge age) {
     this.age = age;
   }
-
 
   @Override
   public boolean equals(Object o) {

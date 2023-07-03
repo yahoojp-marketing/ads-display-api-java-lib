@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AccountManagementServiceAuthType;
@@ -34,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServiceSelectorオブジェクトは、選択するアカウントを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagementServiceSelector object explains which accounts to return.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountManagementServiceSelectorオブジェクトは、選択するアカウントを表します。</div> <div lang=\"en\">AccountManagementServiceSelector object explains which accounts to return.</div> ")
 @JsonPropertyOrder({
   AccountManagementServiceSelector.JSON_PROPERTY_ACCOUNT_IDS,
   AccountManagementServiceSelector.JSON_PROPERTY_ACCOUNT_STATUSES,
@@ -44,17 +41,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountManagementServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AccountManagementServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AccountManagementServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountManagementServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_IDS = "accountIds";
-  private List<Long> accountIds = null;
+  private List<Long> accountIds;
 
   public static final String JSON_PROPERTY_ACCOUNT_STATUSES = "accountStatuses";
-  private List<AccountManagementServiceStatus> accountStatuses = null;
+  private List<AccountManagementServiceStatus> accountStatuses;
 
   public static final String JSON_PROPERTY_ACCOUNT_TYPES = "accountTypes";
-  private List<AccountManagementServicePaymentType> accountTypes = null;
+  private List<AccountManagementServicePaymentType> accountTypes;
 
   public static final String JSON_PROPERTY_AUTH_TYPE = "authType";
   private AccountManagementServiceAuthType authType;
@@ -68,7 +64,7 @@ public class AccountManagementServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AccountManagementServiceSelector() { 
+  public AccountManagementServiceSelector() {
   }
 
   public AccountManagementServiceSelector accountIds(List<Long> accountIds) {
@@ -89,8 +85,7 @@ public class AccountManagementServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account IDs.&lt;/div&gt; 
    * @return accountIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アカウントID</div> <div lang=\"en\">Account IDs.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +119,7 @@ public class AccountManagementServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントステータス&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account Statuses.&lt;/div&gt; 
    * @return accountStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アカウントステータス</div> <div lang=\"en\">Account Statuses.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,8 +153,7 @@ public class AccountManagementServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントの料金支払い種別&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account Payment Types.&lt;/div&gt; 
    * @return accountTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：アカウントの料金支払い種別</div> <div lang=\"en\">Account Payment Types.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -186,8 +179,7 @@ public class AccountManagementServiceSelector {
    * Get authType
    * @return authType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUTH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -213,8 +205,7 @@ public class AccountManagementServiceSelector {
    * Get includeTestAccount
    * @return includeTestAccount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INCLUDE_TEST_ACCOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -242,8 +233,7 @@ public class AccountManagementServiceSelector {
    * maximum: 200
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -270,8 +260,7 @@ public class AccountManagementServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -285,7 +274,6 @@ public class AccountManagementServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

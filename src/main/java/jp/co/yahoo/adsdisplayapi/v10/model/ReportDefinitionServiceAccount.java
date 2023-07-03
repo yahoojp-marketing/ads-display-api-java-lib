@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.ReportDefinitionServiceProductType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceAccountオブジェクトはアカウントと、そのアカウントのプロダクトタイプを表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceAccount object describes account and its product type. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceAccountオブジェクトはアカウントと、そのアカウントのプロダクトタイプを表します。 </div> <div lang=\"en\"> ReportDefinitionServiceAccount object describes account and its product type. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceAccount.JSON_PROPERTY_ACCOUNT_ID,
   ReportDefinitionServiceAccount.JSON_PROPERTY_PRODUCT_TYPE
 })
-@JsonTypeName("ReportDefinitionServiceAccount")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceAccount {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -43,7 +39,7 @@ public class ReportDefinitionServiceAccount {
   public static final String JSON_PROPERTY_PRODUCT_TYPE = "productType";
   private ReportDefinitionServiceProductType productType;
 
-  public ReportDefinitionServiceAccount() { 
+  public ReportDefinitionServiceAccount() {
   }
 
   public ReportDefinitionServiceAccount accountId(Long accountId) {
@@ -56,8 +52,7 @@ public class ReportDefinitionServiceAccount {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。 </div> <div lang=\"en\"> Account ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class ReportDefinitionServiceAccount {
    * Get productType
    * @return productType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PRODUCT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class ReportDefinitionServiceAccount {
   public void setProductType(ReportDefinitionServiceProductType productType) {
     this.productType = productType;
   }
-
 
   @Override
   public boolean equals(Object o) {

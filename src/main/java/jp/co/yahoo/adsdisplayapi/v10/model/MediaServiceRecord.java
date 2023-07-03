@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.MediaServiceApprovalStatus;
@@ -37,7 +35,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MediaServiceRecordオブジェクトは、画像の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The MediaServiceRecord object is a container for the information of media (image data).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">MediaServiceRecordオブジェクトは、画像の情報を表します。</div> <div lang=\"en\">The MediaServiceRecord object is a container for the information of media (image data).</div> ")
 @JsonPropertyOrder({
   MediaServiceRecord.JSON_PROPERTY_ACCOUNT_ID,
   MediaServiceRecord.JSON_PROPERTY_APPROVAL_STATUS,
@@ -54,8 +51,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MediaServiceRecord.JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG,
   MediaServiceRecord.JSON_PROPERTY_CREATED_DATE
 })
-@JsonTypeName("MediaServiceRecord")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MediaServiceRecord {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -70,7 +66,7 @@ public class MediaServiceRecord {
   private String creationTime;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_LOGO_FLG = "logoFlg";
   private MediaServiceLogoFlg logoFlg;
@@ -99,7 +95,7 @@ public class MediaServiceRecord {
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
   private String createdDate;
 
-  public MediaServiceRecord() { 
+  public MediaServiceRecord() {
   }
 
   public MediaServiceRecord accountId(Long accountId) {
@@ -112,8 +108,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\">Account ID.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,8 +134,7 @@ public class MediaServiceRecord {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,8 +160,7 @@ public class MediaServiceRecord {
    * Get campaignBannerFlg
    * @return campaignBannerFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -193,8 +186,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入稿日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date and time of creation.&lt;/div&gt; 
    * @return creationTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入稿日時です。</div> <div lang=\"en\">Date and time of creation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATION_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -228,8 +220,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載拒否の理由です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reason code why it&amp;#39;s disapproved on the review.&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">掲載拒否の理由です。</div> <div lang=\"en\">Reason code why it&#39;s disapproved on the review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -255,8 +246,7 @@ public class MediaServiceRecord {
    * Get logoFlg
    * @return logoFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGO_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -282,8 +272,7 @@ public class MediaServiceRecord {
    * Get imageMedia
    * @return imageMedia
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMAGE_MEDIA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -309,8 +298,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像IDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID (image ID). &lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return mediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像IDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\">Media ID (image ID). <br> This field is required in SET and REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -336,8 +324,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 実ファイル名です。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;File name. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return mediaName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 実ファイル名です。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\">File name. <br> This field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -363,8 +350,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Image name. &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return mediaTitle
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\">Image name. <br> This field is required in ADD operation, and is optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -390,8 +376,7 @@ public class MediaServiceRecord {
    * Get thumbnailFlg
    * @return thumbnailFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_THUMBNAIL_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -417,8 +402,7 @@ public class MediaServiceRecord {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -444,8 +428,7 @@ public class MediaServiceRecord {
    * Get mediaRichFormatFlg
    * @return mediaRichFormatFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -471,8 +454,7 @@ public class MediaServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;データが作成された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Media made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">データが作成された日です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Media made.<br>* Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -486,7 +468,6 @@ public class MediaServiceRecord {
   public void setCreatedDate(String createdDate) {
     this.createdDate = createdDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

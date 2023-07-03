@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.GuaranteedAdGroupAdServiceCustomParameter;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedAdGroupAdServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedAdGroupAdServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field can be optionally specified only when specifying finalUrl.&lt;br&gt; * Not Available. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">GuaranteedAdGroupAdServiceCustomParametersは、カスタムパラメータの設定を表します。<br> finalUrlを指定するときのみ、任意で指定できます。<br> ※現在利用できません </div> <div lang=\"en\">GuaranteedAdGroupAdServiceCustomParameters displays the setting of custom parameters.<br> This field can be optionally specified only when specifying finalUrl.<br> * Not Available. </div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroupAdServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   GuaranteedAdGroupAdServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@JsonTypeName("GuaranteedAdGroupAdServiceCustomParameters")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroupAdServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
   private GuaranteedAdGroupAdServiceIsRemoveFlg isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
-  private List<GuaranteedAdGroupAdServiceCustomParameter> parameters = null;
+  private List<GuaranteedAdGroupAdServiceCustomParameter> parameters;
 
-  public GuaranteedAdGroupAdServiceCustomParameters() { 
+  public GuaranteedAdGroupAdServiceCustomParameters() {
   }
 
   public GuaranteedAdGroupAdServiceCustomParameters isRemove(GuaranteedAdGroupAdServiceIsRemoveFlg isRemove) {
@@ -59,8 +55,7 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
    * Get isRemove
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
    * Get parameters
    * @return parameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
   public void setParameters(List<GuaranteedAdGroupAdServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceFilterOperator;
@@ -31,14 +29,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceFilterオブジェクトは、フィルター定義を表します。&lt;br&gt; フィルタ条件は最大6つまで設定が可能です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceFilter object serves filter definitions. &lt;br&gt; Filter condition can set up to 6.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceFilterオブジェクトは、フィルター定義を表します。<br> フィルタ条件は最大6つまで設定が可能です。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> ReportDefinitionServiceFilter object serves filter definitions. <br> Filter condition can set up to 6.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceFilter.JSON_PROPERTY_FIELD,
   ReportDefinitionServiceFilter.JSON_PROPERTY_FILTER_OPERATOR,
   ReportDefinitionServiceFilter.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("ReportDefinitionServiceFilter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceFilter {
   public static final String JSON_PROPERTY_FIELD = "field";
   private String field;
@@ -47,9 +43,9 @@ public class ReportDefinitionServiceFilter {
   private ReportDefinitionServiceFilterOperator filterOperator;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<String> values = null;
+  private List<String> values;
 
-  public ReportDefinitionServiceFilter() { 
+  public ReportDefinitionServiceFilter() {
   }
 
   public ReportDefinitionServiceFilter field(String field) {
@@ -62,8 +58,7 @@ public class ReportDefinitionServiceFilter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; フィルター対象となるフィールドです。&lt;br&gt; このフィールドは、ADD時に必須となります。&lt;br&gt; ※getReportFieldsのレスポンスで「filterable&#x3D;true」のフィールドのみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Field to be filtered.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; ※Can be specified for the field with &amp;#34;filterable&#x3D;true&amp;#34; on the response of getReportFields. &lt;/div&gt; 
    * @return field
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> フィルター対象となるフィールドです。<br> このフィールドは、ADD時に必須となります。<br> ※getReportFieldsのレスポンスで「filterable=true」のフィールドのみ指定可能です。 </div> <div lang=\"en\"> Field to be filtered.<br> This field is required in ADD operation.<br> ※Can be specified for the field with &#34;filterable=true&#34; on the response of getReportFields. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -89,8 +84,7 @@ public class ReportDefinitionServiceFilter {
    * Get filterOperator
    * @return filterOperator
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FILTER_OPERATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +118,7 @@ public class ReportDefinitionServiceFilter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 条件値です。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Value for condition. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 条件値です。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> Value for condition. <br> This field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +132,6 @@ public class ReportDefinitionServiceFilter {
   public void setValues(List<String> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

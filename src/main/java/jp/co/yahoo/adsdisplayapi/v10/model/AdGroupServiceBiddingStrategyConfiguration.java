@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.AdGroupServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceBiddingStrategyConfigurationは、広告グループ入札戦略を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceBiddingStrategyConfiguration object describes bidding strategy of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceBiddingStrategyConfigurationは、広告グループ入札戦略を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> </div> <div lang=\"en\"> AdGroupServiceBiddingStrategyConfiguration object describes bidding strategy of ad group.<br> This field is optional in ADD and SET operation.<br> </div> ")
 @JsonPropertyOrder({
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_BIDDING_SCHEME
 })
-@JsonTypeName("AdGroupServiceBiddingStrategyConfiguration")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
   private AdGroupServiceBiddingScheme biddingScheme;
 
-  public AdGroupServiceBiddingStrategyConfiguration() { 
+  public AdGroupServiceBiddingStrategyConfiguration() {
   }
 
   public AdGroupServiceBiddingStrategyConfiguration biddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
@@ -52,8 +48,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
    * Get biddingScheme
    * @return biddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   public void setBiddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
     this.biddingScheme = biddingScheme;
   }
-
 
   @Override
   public boolean equals(Object o) {

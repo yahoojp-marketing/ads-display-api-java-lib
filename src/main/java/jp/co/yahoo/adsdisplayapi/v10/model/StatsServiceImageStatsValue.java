@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.Stats;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceImageStatsValuesオブジェクトは、画像の統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceImageStatsValues object contains Image stats information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceImageStatsValuesオブジェクトは、画像の統計情報を保持します。</div> <div lang=\"en\">StatsServiceImageStatsValues object contains Image stats information.</div> ")
 @JsonPropertyOrder({
   StatsServiceImageStatsValue.JSON_PROPERTY_MEDIA_ID,
   StatsServiceImageStatsValue.JSON_PROPERTY_MEDIA_NAME,
   StatsServiceImageStatsValue.JSON_PROPERTY_MEDIA_TITLE,
   StatsServiceImageStatsValue.JSON_PROPERTY_STATS
 })
-@JsonTypeName("StatsServiceImageStatsValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceImageStatsValue {
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
   private Long mediaId;
@@ -51,7 +47,7 @@ public class StatsServiceImageStatsValue {
   public static final String JSON_PROPERTY_STATS = "stats";
   private Stats stats;
 
-  public StatsServiceImageStatsValue() { 
+  public StatsServiceImageStatsValue() {
   }
 
   public StatsServiceImageStatsValue mediaId(Long mediaId) {
@@ -64,8 +60,7 @@ public class StatsServiceImageStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディアID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID&lt;/div&gt; 
    * @return mediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">メディアID</div> <div lang=\"en\">Media ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class StatsServiceImageStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;実ファイル名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;File name&lt;/div&gt; 
    * @return mediaName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">実ファイル名</div> <div lang=\"en\">File name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class StatsServiceImageStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディア名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media title&lt;/div&gt; 
    * @return mediaTitle
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">メディア名</div> <div lang=\"en\">Media title</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class StatsServiceImageStatsValue {
    * Get stats
    * @return stats
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class StatsServiceImageStatsValue {
   public void setStats(Stats stats) {
     this.stats = stats;
   }
-
 
   @Override
   public boolean equals(Object o) {

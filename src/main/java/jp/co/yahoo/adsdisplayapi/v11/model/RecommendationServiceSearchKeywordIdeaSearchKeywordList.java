@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;追加を推奨するサーチキーワードに関する詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This describes the detailed information of recommended search keyword to add.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">追加を推奨するサーチキーワードに関する詳細情報を表します。</div> <div lang=\"en\">This describes the detailed information of recommended search keyword to add.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceSearchKeywordIdeaSearchKeywordList.JSON_PROPERTY_RECOMMENDATION_ID,
   RecommendationServiceSearchKeywordIdeaSearchKeywordList.JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceSearchKeywordIdeaSearchKeywordList.JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME,
   RecommendationServiceSearchKeywordIdeaSearchKeywordList.JSON_PROPERTY_TABLET_SEARCH_VOLUME
 })
-@JsonTypeName("RecommendationServiceSearchKeywordIdeaSearchKeywordList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
   private Long recommendationId;
@@ -74,7 +70,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   public static final String JSON_PROPERTY_TABLET_SEARCH_VOLUME = "tabletSearchVolume";
   private Long tabletSearchVolume;
 
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList() { 
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList() {
   }
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendationId(Long recommendationId) {
@@ -87,8 +83,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 </div> <div lang=\"en\"> Recommendation ID.<br> When optimizationScoreLift isn't null, the system will assign a common recommendation ID to the suggestion for the campaign. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +109,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリストIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword list ID. &lt;/div&gt; 
    * @return currentSearchKeywordListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリストIDです。 </div> <div lang=\"en\"> Search keyword list ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +135,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリスト名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword list name. &lt;/div&gt; 
    * @return currentSearchKeywordListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリスト名です。 </div> <div lang=\"en\"> Search keyword list name. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +161,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードの有効期間を表します。&lt;br&gt; 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordRecencyオブジェクトをご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recency of search keyword list.&lt;br&gt; See the SearchKeywordListServiceKeywordRecency in SearchKeywordListService to learn about return value. &lt;/div&gt; 
    * @return currentSearchKeywordRecency
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードの有効期間を表します。<br> 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordRecencyオブジェクトをご参照ください。 </div> <div lang=\"en\"> Recency of search keyword list.<br> See the SearchKeywordListServiceKeywordRecency in SearchKeywordListService to learn about return value. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_RECENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +187,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードの検索回数を表します。&lt;br&gt; 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordFrequencyオブジェクトをご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Frequency of search keyword list.&lt;br&gt; See the SearchKeywordListServiceKeywordFrequency in SearchKeywordListService to learn about return value. &lt;/div&gt; 
    * @return currentSearchKeywordFrequency
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードの検索回数を表します。<br> 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordFrequencyオブジェクトをご参照ください。 </div> <div lang=\"en\"> Frequency of search keyword list.<br> See the SearchKeywordListServiceKeywordFrequency in SearchKeywordListService to learn about return value. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_FREQUENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +213,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended search keyword ID. &lt;/div&gt; 
    * @return recommendedSearchKeywordId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードIDです。 </div> <div lang=\"en\"> Recommended search keyword ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +239,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended search keyword. &lt;/div&gt; 
    * @return recommendedSearchKeyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードです。 </div> <div lang=\"en\"> Recommended search keyword. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +265,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードのPCでのリーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of reach in PC with recommended search keyword. &lt;/div&gt; 
    * @return desktopSearchVolume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードのPCでのリーチ数です。 </div> <div lang=\"en\"> Number of reach in PC with recommended search keyword. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESKTOP_SEARCH_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,8 +291,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードのSmartPhoneでのリーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of Reach in SmartPhone with recommended search keyword. &lt;/div&gt; 
    * @return smartPhoneSearchVolume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードのSmartPhoneでのリーチ数です。 </div> <div lang=\"en\"> Number of Reach in SmartPhone with recommended search keyword. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,8 +317,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードのTabletでのリーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of Reach in Tablet with recommended search keyword. &lt;/div&gt; 
    * @return tabletSearchVolume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 推奨するサーチキーワードのTabletでのリーチ数です。 </div> <div lang=\"en\"> Number of Reach in Tablet with recommended search keyword. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TABLET_SEARCH_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -345,7 +331,6 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   public void setTabletSearchVolume(Long tabletSearchVolume) {
     this.tabletSearchVolume = tabletSearchVolume;
   }
-
 
   @Override
   public boolean equals(Object o) {

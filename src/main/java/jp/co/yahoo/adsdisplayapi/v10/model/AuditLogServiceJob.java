@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AuditLogServiceDateRange;
@@ -34,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AuditLogServiceJobは操作履歴のダウンロードジョブの情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceJob object is a container for storing the download operation history job information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AuditLogServiceJobは操作履歴のダウンロードジョブの情報を保持するオブジェクトです。</div> <div lang=\"en\">AuditLogServiceJob object is a container for storing the download operation history job information.</div> ")
 @JsonPropertyOrder({
   AuditLogServiceJob.JSON_PROPERTY_ACCOUNT_ID,
   AuditLogServiceJob.JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE,
@@ -49,8 +46,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AuditLogServiceJob.JSON_PROPERTY_PROGRESS,
   AuditLogServiceJob.JSON_PROPERTY_SOURCE_TYPE
 })
-@JsonTypeName("AuditLogServiceJob")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuditLogServiceJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -71,7 +67,7 @@ public class AuditLogServiceJob {
   private String auditLogJobUserName;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_DATE_RANGE = "dateRange";
   private AuditLogServiceDateRange dateRange;
@@ -88,7 +84,7 @@ public class AuditLogServiceJob {
   public static final String JSON_PROPERTY_SOURCE_TYPE = "sourceType";
   private AuditLogServiceSourceType sourceType;
 
-  public AuditLogServiceJob() { 
+  public AuditLogServiceJob() {
   }
 
   public AuditLogServiceJob accountId(Long accountId) {
@@ -101,8 +97,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,8 +123,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴ダウンロードジョブの終了日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The job end date (YYYY-MM-DDTHH:MI:SS+9:00).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobEndDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴ダウンロードジョブの終了日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The job end date (YYYY-MM-DDTHH:MI:SS+9:00).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -155,8 +149,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴のダウンロードジョブIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The operation history job ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴のダウンロードジョブIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The operation history job ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -182,8 +175,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴のダウンロードジョブ名です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The operation history job name.&lt;br&gt; This field is optional in requests. &lt;/div&gt; 
    * @return auditLogJobName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴のダウンロードジョブ名です。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> The operation history job name.<br> This field is optional in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -209,8 +201,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴ダウンロードジョブの開始日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The job start date (YYYY-MM-DDTHH:MI:SS+9:00).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobStartDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴ダウンロードジョブの開始日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The job start date (YYYY-MM-DDTHH:MI:SS+9:00).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -236,8 +227,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴ダウンロードジョブの実行ユーザー名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The user name who executes the operation history job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobUserName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 操作履歴ダウンロードジョブの実行ユーザー名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The user name who executes the operation history job.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_USER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -271,8 +261,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ダウンロード対象のキャンペーンIDです。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID of the download object.&lt;br&gt; This field is optional in requests. &lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ダウンロード対象のキャンペーンIDです。<br> このフィールドは、リクエストの場合は省略可能となります。 </div> <div lang=\"en\"> Campaign ID of the download object.<br> This field is optional in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -298,8 +287,7 @@ public class AuditLogServiceJob {
    * Get dateRange
    * @return dateRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DATE_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -325,8 +313,7 @@ public class AuditLogServiceJob {
    * Get jobStatus
    * @return jobStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -352,8 +339,7 @@ public class AuditLogServiceJob {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -379,8 +365,7 @@ public class AuditLogServiceJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 処理進捗です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Displays progress in integers from 1 to 100.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return progress
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 処理進捗です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Displays progress in integers from 1 to 100.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PROGRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -406,8 +391,7 @@ public class AuditLogServiceJob {
    * Get sourceType
    * @return sourceType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -421,7 +405,6 @@ public class AuditLogServiceJob {
   public void setSourceType(AuditLogServiceSourceType sourceType) {
     this.sourceType = sourceType;
   }
-
 
   @Override
   public boolean equals(Object o) {

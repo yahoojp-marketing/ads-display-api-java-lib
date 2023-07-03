@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.PlacementUrlList;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlListServiceOperationオブジェクトは、メソッドで操作対象のプレイスメントUrl情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep Placement Url information which is operation target by method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlListServiceOperationオブジェクトは、メソッドで操作対象のプレイスメントUrl情報を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep Placement Url information which is operation target by method.</div> ")
 @JsonPropertyOrder({
   PlacementUrlListServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   PlacementUrlListServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("PlacementUrlListServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlListServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class PlacementUrlListServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<PlacementUrlList> operand = new ArrayList<>();
 
-  public PlacementUrlListServiceOperation() { 
+  public PlacementUrlListServiceOperation() {
   }
 
   public PlacementUrlListServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class PlacementUrlListServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class PlacementUrlListServiceOperation {
   }
 
   public PlacementUrlListServiceOperation addOperandItem(PlacementUrlList operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class PlacementUrlListServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class PlacementUrlListServiceOperation {
   public void setOperand(List<PlacementUrlList> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

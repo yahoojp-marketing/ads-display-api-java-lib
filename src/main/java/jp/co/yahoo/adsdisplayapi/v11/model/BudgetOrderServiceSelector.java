@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BudgetOrderServiceSelectorオブジェクトは、取得するアカウント予算を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BudgetOrderServiceSelector object is used to select account budget for acquisition.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BudgetOrderServiceSelectorオブジェクトは、取得するアカウント予算を指定します。</div> <div lang=\"en\">The BudgetOrderServiceSelector object is used to select account budget for acquisition.</div> ")
 @JsonPropertyOrder({
   BudgetOrderServiceSelector.JSON_PROPERTY_ACCOUNT_IDS,
   BudgetOrderServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   BudgetOrderServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("BudgetOrderServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BudgetOrderServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_IDS = "accountIds";
   private List<Long> accountIds = new ArrayList<>();
@@ -48,7 +44,7 @@ public class BudgetOrderServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public BudgetOrderServiceSelector() { 
+  public BudgetOrderServiceSelector() {
   }
 
   public BudgetOrderServiceSelector accountIds(List<Long> accountIds) {
@@ -58,6 +54,9 @@ public class BudgetOrderServiceSelector {
   }
 
   public BudgetOrderServiceSelector addAccountIdsItem(Long accountIdsItem) {
+    if (this.accountIds == null) {
+      this.accountIds = new ArrayList<>();
+    }
     this.accountIds.add(accountIdsItem);
     return this;
   }
@@ -66,8 +65,7 @@ public class BudgetOrderServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountIds
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_IDS)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -95,8 +93,7 @@ public class BudgetOrderServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +120,7 @@ public class BudgetOrderServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -138,7 +134,6 @@ public class BudgetOrderServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

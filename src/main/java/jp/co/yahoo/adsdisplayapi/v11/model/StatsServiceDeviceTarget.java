@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.StatsServiceDeviceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceDeviceTargetオブジェクトは、デバイスターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceDeviceTarget object holds configuration information of device targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceDeviceTargetオブジェクトは、デバイスターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceDeviceTarget object holds configuration information of device targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceDeviceTarget.JSON_PROPERTY_DEVICE_TYPE
 })
-@JsonTypeName("StatsServiceDeviceTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceDeviceTarget {
   public static final String JSON_PROPERTY_DEVICE_TYPE = "deviceType";
   private StatsServiceDeviceType deviceType;
 
-  public StatsServiceDeviceTarget() { 
+  public StatsServiceDeviceTarget() {
   }
 
   public StatsServiceDeviceTarget deviceType(StatsServiceDeviceType deviceType) {
@@ -52,8 +48,7 @@ public class StatsServiceDeviceTarget {
    * Get deviceType
    * @return deviceType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class StatsServiceDeviceTarget {
   public void setDeviceType(StatsServiceDeviceType deviceType) {
     this.deviceType = deviceType;
   }
-
 
   @Override
   public boolean equals(Object o) {

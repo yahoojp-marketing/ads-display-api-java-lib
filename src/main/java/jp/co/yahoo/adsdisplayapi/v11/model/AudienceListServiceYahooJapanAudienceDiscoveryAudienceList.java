@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceYahooJapanAudienceDiscoveryAudienceListオブジェクトは、オーディエンスリスト(Yahoo! Audience Discovery)を表します。&lt;br&gt; このフィールドは、SET時に省略可能、ADD時に指定不可となります。&lt;br&gt; ※audienceListTypeがYAHOO_JAPAN_AUDIENCE_DISCOVERYの場合は、任意で指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceCustomAudienceList object displays audience list (Yahoo! JAPAN Audience Discovery)&lt;br&gt; This field is optional in SET operation, and cannot be specified in ADD operation.&lt;br&gt; *If audienceListType is YAHOO_JAPAN_AUDIENCE_DISCOVERY, this field can be optionally specified. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceYahooJapanAudienceDiscoveryAudienceListオブジェクトは、オーディエンスリスト(Yahoo! Audience Discovery)を表します。<br> このフィールドは、SET時に省略可能、ADD時に指定不可となります。<br> ※audienceListTypeがYAHOO_JAPAN_AUDIENCE_DISCOVERYの場合は、任意で指定できます。 </div> <div lang=\"en\"> AudienceListServiceCustomAudienceList object displays audience list (Yahoo! JAPAN Audience Discovery)<br> This field is optional in SET operation, and cannot be specified in ADD operation.<br> *If audienceListType is YAHOO_JAPAN_AUDIENCE_DISCOVERY, this field can be optionally specified. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceYahooJapanAudienceDiscoveryAudienceList.JSON_PROPERTY_REACH_PERIOD
 })
-@JsonTypeName("AudienceListServiceYahooJapanAudienceDiscoveryAudienceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceYahooJapanAudienceDiscoveryAudienceList {
   public static final String JSON_PROPERTY_REACH_PERIOD = "reachPeriod";
   private Integer reachPeriod;
 
-  public AudienceListServiceYahooJapanAudienceDiscoveryAudienceList() { 
+  public AudienceListServiceYahooJapanAudienceDiscoveryAudienceList() {
   }
 
   public AudienceListServiceYahooJapanAudienceDiscoveryAudienceList reachPeriod(Integer reachPeriod) {
@@ -51,8 +47,7 @@ public class AudienceListServiceYahooJapanAudienceDiscoveryAudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リーチの蓄積期間（1日～60日）です。&lt;br&gt; このフィールドは、SET時に省略可能、ADD時に指定不可となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Cookies validation period. (1 - 60 days) &lt;br&gt; This field is optional in SET operation, and cannot be specified in ADD operation. &lt;/div&gt; 
    * @return reachPeriod
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リーチの蓄積期間（1日～60日）です。<br> このフィールドは、SET時に省略可能、ADD時に指定不可となります。<br> </div> <div lang=\"en\"> Cookies validation period. (1 - 60 days) <br> This field is optional in SET operation, and cannot be specified in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AudienceListServiceYahooJapanAudienceDiscoveryAudienceList {
   public void setReachPeriod(Integer reachPeriod) {
     this.reachPeriod = reachPeriod;
   }
-
 
   @Override
   public boolean equals(Object o) {

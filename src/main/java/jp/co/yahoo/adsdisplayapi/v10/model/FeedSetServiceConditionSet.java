@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.FeedSetServiceCondition;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedSetServiceConditionSetオブジェクトは、商品セット情報の条件を保持します。&lt;br&gt; ADD時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedSetServiceConditionSet object contains conditions of Item Set information.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> FeedSetServiceConditionSetオブジェクトは、商品セット情報の条件を保持します。<br> ADD時、このフィールドは必須です。 </div> <div lang=\"en\"> FeedSetServiceConditionSet object contains conditions of Item Set information.<br> This field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   FeedSetServiceConditionSet.JSON_PROPERTY_CONDITION_TYPE,
   FeedSetServiceConditionSet.JSON_PROPERTY_OR_CONDITIONS
 })
-@JsonTypeName("FeedSetServiceConditionSet")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedSetServiceConditionSet {
   public static final String JSON_PROPERTY_CONDITION_TYPE = "conditionType";
   private FeedSetServiceConditionType conditionType;
 
   public static final String JSON_PROPERTY_OR_CONDITIONS = "orConditions";
-  private List<FeedSetServiceCondition> orConditions = null;
+  private List<FeedSetServiceCondition> orConditions;
 
-  public FeedSetServiceConditionSet() { 
+  public FeedSetServiceConditionSet() {
   }
 
   public FeedSetServiceConditionSet conditionType(FeedSetServiceConditionType conditionType) {
@@ -59,8 +55,7 @@ public class FeedSetServiceConditionSet {
    * Get conditionType
    * @return conditionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONDITION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class FeedSetServiceConditionSet {
    * Get orConditions
    * @return orConditions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OR_CONDITIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class FeedSetServiceConditionSet {
   public void setOrConditions(List<FeedSetServiceCondition> orConditions) {
     this.orConditions = orConditions;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceFrequencyRange;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceReachReportConditionオブジェクトは、リーチレポートの作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、reportTypeが&lt;code&gt;REACH&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceReachReportCondition describes the condition to create Reach Report. &lt;br&gt;    This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;    *If reportType is &lt;code&gt;REACH&lt;/code&gt;, this field is required in ADD operation.  &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceReachReportConditionオブジェクトは、リーチレポートの作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、reportTypeが<code>REACH</code>の場合は必須です。 </div> <div lang=\"en\">   ReportDefinitionServiceReachReportCondition describes the condition to create Reach Report. <br>    This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>    *If reportType is <code>REACH</code>, this field is required in ADD operation.  </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceReachReportCondition.JSON_PROPERTY_FREQUENCY_RANGE
 })
-@JsonTypeName("ReportDefinitionServiceReachReportCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceReachReportCondition {
   public static final String JSON_PROPERTY_FREQUENCY_RANGE = "frequencyRange";
   private ReportDefinitionServiceFrequencyRange frequencyRange;
 
-  public ReportDefinitionServiceReachReportCondition() { 
+  public ReportDefinitionServiceReachReportCondition() {
   }
 
   public ReportDefinitionServiceReachReportCondition frequencyRange(ReportDefinitionServiceFrequencyRange frequencyRange) {
@@ -52,8 +48,7 @@ public class ReportDefinitionServiceReachReportCondition {
    * Get frequencyRange
    * @return frequencyRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FREQUENCY_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class ReportDefinitionServiceReachReportCondition {
   public void setFrequencyRange(ReportDefinitionServiceFrequencyRange frequencyRange) {
     this.frequencyRange = frequencyRange;
   }
-
 
   @Override
   public boolean equals(Object o) {

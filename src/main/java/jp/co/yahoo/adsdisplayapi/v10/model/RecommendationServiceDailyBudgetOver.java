@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.RecommendationServiceDailyBudgetOverCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDailyBudgetOverオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDailyBudgetOver object describes recommendation information about campaigns that reached the daily budget.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceDailyBudgetOverオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceDailyBudgetOver object describes recommendation information about campaigns that reached the daily budget.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceDailyBudgetOver.JSON_PROPERTY_DAILY_BUDGET_OVER_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceDailyBudgetOver")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceDailyBudgetOver {
   public static final String JSON_PROPERTY_DAILY_BUDGET_OVER_CAMPAIGN_LIST = "dailyBudgetOverCampaignList";
-  private List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList = null;
+  private List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList;
 
-  public RecommendationServiceDailyBudgetOver() { 
+  public RecommendationServiceDailyBudgetOver() {
   }
 
   public RecommendationServiceDailyBudgetOver dailyBudgetOverCampaignList(List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceDailyBudgetOver {
    * Get dailyBudgetOverCampaignList
    * @return dailyBudgetOverCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_OVER_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceDailyBudgetOver {
   public void setDailyBudgetOverCampaignList(List<RecommendationServiceDailyBudgetOverCampaign> dailyBudgetOverCampaignList) {
     this.dailyBudgetOverCampaignList = dailyBudgetOverCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceSharedAudienceListMasterオブジェクトは、共通オーディエンスリストマスタを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListMaster object contains shared audience list master.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceSharedAudienceListMasterオブジェクトは、共通オーディエンスリストマスタを格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListMaster object contains shared audience list master.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceSharedAudienceListMaster.JSON_PROPERTY_AUDIENCE_LIST_ID,
   DictionaryServiceSharedAudienceListMaster.JSON_PROPERTY_AUDIENCE_LIST_NAME,
@@ -38,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceSharedAudienceListMaster.JSON_PROPERTY_CHILDREN,
   DictionaryServiceSharedAudienceListMaster.JSON_PROPERTY_IS_GUARANTEED_PERMITTED
 })
-@JsonTypeName("DictionaryServiceSharedAudienceListMaster")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceSharedAudienceListMaster {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
   private Long audienceListId;
@@ -51,12 +47,12 @@ public class DictionaryServiceSharedAudienceListMaster {
   private String subAudienceListName;
 
   public static final String JSON_PROPERTY_CHILDREN = "children";
-  private List<DictionaryServiceSharedAudienceListMaster> children = null;
+  private List<DictionaryServiceSharedAudienceListMaster> children;
 
   public static final String JSON_PROPERTY_IS_GUARANTEED_PERMITTED = "isGuaranteedPermitted";
   private String isGuaranteedPermitted;
 
-  public DictionaryServiceSharedAudienceListMaster() { 
+  public DictionaryServiceSharedAudienceListMaster() {
   }
 
   public DictionaryServiceSharedAudienceListMaster audienceListId(Long audienceListId) {
@@ -69,8 +65,7 @@ public class DictionaryServiceSharedAudienceListMaster {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List ID. &lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリストIDです。<br> </div> <div lang=\"en\"> Audience List ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,8 +91,7 @@ public class DictionaryServiceSharedAudienceListMaster {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名です&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List name.&lt;/div&gt; 
    * @return audienceListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">オーディエンスリスト名です</div> <div lang=\"en\">Audience List name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +117,7 @@ public class DictionaryServiceSharedAudienceListMaster {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サブオーディエンスリスト名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Sub-Audience List name.&lt;/div&gt; 
    * @return subAudienceListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サブオーディエンスリスト名です。</div> <div lang=\"en\">Sub-Audience List name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SUB_AUDIENCE_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -158,8 +151,7 @@ public class DictionaryServiceSharedAudienceListMaster {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;子要素としてDictionaryServiceSharedAudienceListMasterオブジェクトを使用します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListMaster object is used.&lt;/div&gt; 
    * @return children
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">子要素としてDictionaryServiceSharedAudienceListMasterオブジェクトを使用します。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListMaster object is used.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CHILDREN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,8 +177,7 @@ public class DictionaryServiceSharedAudienceListMaster {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;予約型販売対象を表します&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Indicates that it is subject to guaranteed sale.&lt;/div&gt; 
    * @return isGuaranteedPermitted
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">予約型販売対象を表します</div> <div lang=\"en\">Indicates that it is subject to guaranteed sale.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_GUARANTEED_PERMITTED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -200,7 +191,6 @@ public class DictionaryServiceSharedAudienceListMaster {
   public void setIsGuaranteedPermitted(String isGuaranteedPermitted) {
     this.isGuaranteedPermitted = isGuaranteedPermitted;
   }
-
 
   @Override
   public boolean equals(Object o) {

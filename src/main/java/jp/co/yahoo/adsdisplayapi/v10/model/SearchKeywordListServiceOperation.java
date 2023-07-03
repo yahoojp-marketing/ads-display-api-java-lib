@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.SearchKeywordList;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListServiceOperationオブジェクトは、操作の対象となるサーチキーワードリストと処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordListServiceOperation object displays the element of search keyword list and process for target of operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchKeywordListServiceOperationオブジェクトは、操作の対象となるサーチキーワードリストと処理の内容を表します。</div> <div lang=\"en\">SearchKeywordListServiceOperation object displays the element of search keyword list and process for target of operation.</div> ")
 @JsonPropertyOrder({
   SearchKeywordListServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   SearchKeywordListServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("SearchKeywordListServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchKeywordListServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class SearchKeywordListServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<SearchKeywordList> operand = new ArrayList<>();
 
-  public SearchKeywordListServiceOperation() { 
+  public SearchKeywordListServiceOperation() {
   }
 
   public SearchKeywordListServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class SearchKeywordListServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class SearchKeywordListServiceOperation {
   }
 
   public SearchKeywordListServiceOperation addOperandItem(SearchKeywordList operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class SearchKeywordListServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class SearchKeywordListServiceOperation {
   public void setOperand(List<SearchKeywordList> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

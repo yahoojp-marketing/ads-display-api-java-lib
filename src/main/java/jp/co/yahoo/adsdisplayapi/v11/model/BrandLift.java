@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.BrandLiftServiceApprovalStatus;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftオブジェクトは、ブランドリフトの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLift object describes brand lift information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BrandLiftオブジェクトは、ブランドリフトの情報を表します。</div> <div lang=\"en\">BrandLift object describes brand lift information.</div> ")
 @JsonPropertyOrder({
   BrandLift.JSON_PROPERTY_ACCOUNT_ID,
   BrandLift.JSON_PROPERTY_CAMPAIGN_ID,
@@ -47,8 +44,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BrandLift.JSON_PROPERTY_CAMPAIGN_NAME,
   BrandLift.JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS
 })
-@JsonTypeName("BrandLift")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BrandLift {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -60,7 +56,7 @@ public class BrandLift {
   private Long brandLiftId;
 
   public static final String JSON_PROPERTY_QUESTIONS = "questions";
-  private List<BrandLiftServiceQuestion> questions = null;
+  private List<BrandLiftServiceQuestion> questions;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
   private BrandLiftServiceApprovalStatus approvalStatus;
@@ -72,7 +68,7 @@ public class BrandLift {
   private String reviewCompleteDate;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_SUBMIT_DATE = "submitDate";
   private String submitDate;
@@ -84,9 +80,9 @@ public class BrandLift {
   private String campaignName;
 
   public static final String JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS = "notificationBusinessIds";
-  private List<String> notificationBusinessIds = null;
+  private List<String> notificationBusinessIds;
 
-  public BrandLift() { 
+  public BrandLift() {
   }
 
   public BrandLift accountId(Long accountId) {
@@ -99,8 +95,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +121,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID. &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +147,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ブランドリフト調査IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLift ID. &lt;/div&gt; 
    * @return brandLiftId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ブランドリフト調査IDです。</div> <div lang=\"en\">BrandLift ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_LIFT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -188,8 +181,7 @@ public class BrandLift {
    * Get questions
    * @return questions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_QUESTIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -215,8 +207,7 @@ public class BrandLift {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -242,8 +233,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Disapproval Reason. &lt;/div&gt; 
    * @return disapprovalReason
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由です。</div> <div lang=\"en\">Disapproval Reason. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -269,8 +259,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査完了日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Review Complete Date.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return reviewCompleteDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査完了日時です。</div> <div lang=\"en\">Review Complete Date.</div> <br>Format: yyyyMMddHHmmss ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REVIEW_COMPLETE_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -304,8 +293,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Disapproval Reason Codes&lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由コードです。</div> <div lang=\"en\">Disapproval Reason Codes</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -331,8 +319,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入稿日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Submit Date.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return submitDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">入稿日時です。</div> <div lang=\"en\">Submit Date.</div> <br>Format: yyyyMMddHHmmss ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SUBMIT_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -358,8 +345,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン配信開始日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign Start Date. &lt;/div&gt; &lt;br&gt;Format: yyyyMMdd 
    * @return campaignStartDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン配信開始日時です。</div> <div lang=\"en\">Campaign Start Date. </div> <br>Format: yyyyMMdd ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -385,8 +371,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign Name. &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名です。</div> <div lang=\"en\">Campaign Name. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -420,8 +405,7 @@ public class BrandLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;連絡先Yahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Yahoo! JAPAN Business ID to send notifications.&lt;/div&gt; 
    * @return notificationBusinessIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">連絡先Yahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Yahoo! JAPAN Business ID to send notifications.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -435,7 +419,6 @@ public class BrandLift {
   public void setNotificationBusinessIds(List<String> notificationBusinessIds) {
     this.notificationBusinessIds = notificationBusinessIds;
   }
-
 
   @Override
   public boolean equals(Object o) {

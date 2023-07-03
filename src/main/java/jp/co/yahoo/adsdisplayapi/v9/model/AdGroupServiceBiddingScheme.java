@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupServiceCampaignBiddingStrategyType;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupServiceCpcBiddingScheme;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupServiceCpvBiddingScheme;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceBiddingSchemeは、広告グループ入札戦略を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceBiddingScheme object displays the details of bidding strategy of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceBiddingSchemeは、広告グループ入札戦略を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> </div> <div lang=\"en\"> AdGroupServiceBiddingScheme object displays the details of bidding strategy of ad group.<br> This field is optional in ADD and SET operation.<br> </div> ")
 @JsonPropertyOrder({
   AdGroupServiceBiddingScheme.JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TYPE,
   AdGroupServiceBiddingScheme.JSON_PROPERTY_CPC_BIDDING_SCHEME,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceBiddingScheme.JSON_PROPERTY_VCPM_BIDDING_SCHEME,
   AdGroupServiceBiddingScheme.JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME
 })
-@JsonTypeName("AdGroupServiceBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceBiddingScheme {
   public static final String JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TYPE = "campaignBiddingStrategyType";
   private AdGroupServiceCampaignBiddingStrategyType campaignBiddingStrategyType;
@@ -59,7 +55,7 @@ public class AdGroupServiceBiddingScheme {
   public static final String JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME = "maximizeConversionsBiddingScheme";
   private AdGroupServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme;
 
-  public AdGroupServiceBiddingScheme() { 
+  public AdGroupServiceBiddingScheme() {
   }
 
   public AdGroupServiceBiddingScheme campaignBiddingStrategyType(AdGroupServiceCampaignBiddingStrategyType campaignBiddingStrategyType) {
@@ -72,8 +68,7 @@ public class AdGroupServiceBiddingScheme {
    * Get campaignBiddingStrategyType
    * @return campaignBiddingStrategyType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class AdGroupServiceBiddingScheme {
    * Get cpcBiddingScheme
    * @return cpcBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class AdGroupServiceBiddingScheme {
    * Get cpvBiddingScheme
    * @return cpvBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPV_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +146,7 @@ public class AdGroupServiceBiddingScheme {
    * Get vcpmBiddingScheme
    * @return vcpmBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VCPM_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,8 +172,7 @@ public class AdGroupServiceBiddingScheme {
    * Get maximizeConversionsBiddingScheme
    * @return maximizeConversionsBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,7 +186,6 @@ public class AdGroupServiceBiddingScheme {
   public void setMaximizeConversionsBiddingScheme(AdGroupServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme) {
     this.maximizeConversionsBiddingScheme = maximizeConversionsBiddingScheme;
   }
-
 
   @Override
   public boolean equals(Object o) {

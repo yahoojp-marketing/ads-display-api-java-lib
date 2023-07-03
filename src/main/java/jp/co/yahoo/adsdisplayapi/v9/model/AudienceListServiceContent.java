@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceAppUserAudienceList;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceCombinationAudienceList;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceCustomAudienceList;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceContentオブジェクトは、オーディエンスリストの詳細情報を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceContent object describes detailed information of audience list.&lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceContentオブジェクトは、オーディエンスリストの詳細情報を表します。<br> このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> AudienceListServiceContent object describes detailed information of audience list.<br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceContent.JSON_PROPERTY_COMBINATION_AUDIENCE_LIST,
   AudienceListServiceContent.JSON_PROPERTY_CUSTOM_AUDIENCE_LIST,
@@ -47,8 +44,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceContent.JSON_PROPERTY_APP_USER_AUDIENCE_LIST,
   AudienceListServiceContent.JSON_PROPERTY_AUDIENCE_LIST_TYPE
 })
-@JsonTypeName("AudienceListServiceContent")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceContent {
   public static final String JSON_PROPERTY_COMBINATION_AUDIENCE_LIST = "combinationAudienceList";
   private AudienceListServiceCombinationAudienceList combinationAudienceList;
@@ -74,7 +70,7 @@ public class AudienceListServiceContent {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPE = "audienceListType";
   private AudienceListServiceType audienceListType;
 
-  public AudienceListServiceContent() { 
+  public AudienceListServiceContent() {
   }
 
   public AudienceListServiceContent combinationAudienceList(AudienceListServiceCombinationAudienceList combinationAudienceList) {
@@ -87,8 +83,7 @@ public class AudienceListServiceContent {
    * Get combinationAudienceList
    * @return combinationAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COMBINATION_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +109,7 @@ public class AudienceListServiceContent {
    * Get customAudienceList
    * @return customAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +135,7 @@ public class AudienceListServiceContent {
    * Get ruleAudienceList
    * @return ruleAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULE_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +161,7 @@ public class AudienceListServiceContent {
    * Get similarityAudienceList
    * @return similarityAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SIMILARITY_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +187,7 @@ public class AudienceListServiceContent {
    * Get websiteVisitorsAudienceList
    * @return websiteVisitorsAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WEBSITE_VISITORS_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +213,7 @@ public class AudienceListServiceContent {
    * Get customerDataAudienceList
    * @return customerDataAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOMER_DATA_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +239,7 @@ public class AudienceListServiceContent {
    * Get appUserAudienceList
    * @return appUserAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_USER_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +265,7 @@ public class AudienceListServiceContent {
    * Get audienceListType
    * @return audienceListType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,7 +279,6 @@ public class AudienceListServiceContent {
   public void setAudienceListType(AudienceListServiceType audienceListType) {
     this.audienceListType = audienceListType;
   }
-
 
   @Override
   public boolean equals(Object o) {

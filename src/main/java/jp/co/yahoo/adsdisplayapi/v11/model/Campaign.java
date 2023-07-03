@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.CampaignServiceAppOsType;
@@ -41,7 +39,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Campaignオブジェクトは、キャンペーン情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign object describes campaign information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Campaignオブジェクトは、キャンペーン情報を表します。</div> <div lang=\"en\">Campaign object describes campaign information.</div> ")
 @JsonPropertyOrder({
   Campaign.JSON_PROPERTY_ACCOUNT_ID,
   Campaign.JSON_PROPERTY_APP_ID,
@@ -71,8 +68,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Campaign.JSON_PROPERTY_VENDOR_NAME,
   Campaign.JSON_PROPERTY_CONVERSION_TRACKER
 })
-@JsonTypeName("Campaign")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Campaign {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -120,7 +116,7 @@ public class Campaign {
   private CampaignServiceIsRemoveFlg isRemoveTrackingUrl;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
-  private List<CampaignServiceLabel> labels = null;
+  private List<CampaignServiceLabel> labels;
 
   public static final String JSON_PROPERTY_OPTIMIZATION_SCORE = "optimizationScore";
   private Double optimizationScore;
@@ -155,7 +151,7 @@ public class Campaign {
   public static final String JSON_PROPERTY_CONVERSION_TRACKER = "conversionTracker";
   private CampaignServiceConversionTracker conversionTracker;
 
-  public Campaign() { 
+  public Campaign() {
   }
 
   public Campaign accountId(Long accountId) {
@@ -168,8 +164,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID. <br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +190,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; iOS:アプリIDです。&lt;br&gt; Android:パッケージ名です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時は無視されます。&lt;br&gt; ※campaignGoalが「APP_PROMOTION」の場合、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; iOS: APP ID.&lt;br&gt; Android: Package name. &lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.&lt;br&gt; *If campaignGoal is APP_PROMOTION, this field is required in ADD operation. &lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> iOS:アプリIDです。<br> Android:パッケージ名です。<br> このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時は無視されます。<br> ※campaignGoalが「APP_PROMOTION」の場合、ADD時に必須となります。 </div> <div lang=\"en\"> iOS: APP ID.<br> Android: Package name. <br> This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.<br> *If campaignGoal is APP_PROMOTION, this field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +216,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アプリの名称です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時は無視されます。&lt;br&gt; ※campaignGoalが「APP_PROMOTION」の場合、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; App Name. &lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.&lt;br&gt; *If campaignGoal is APP_PROMOTION, this field is required in ADD operation. &lt;/div&gt; 
    * @return appName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アプリの名称です。<br> このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時は無視されます。<br> ※campaignGoalが「APP_PROMOTION」の場合、ADD時に必須となります。 </div> <div lang=\"en\"> App Name. <br> This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.<br> *If campaignGoal is APP_PROMOTION, this field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +242,7 @@ public class Campaign {
    * Get budget
    * @return budget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUDGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +268,7 @@ public class Campaign {
    * Get biddingStrategyConfiguration
    * @return biddingStrategyConfiguration
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,8 +294,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン目的です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; SETおよびREMOVE時、このフィールドは無視されます。&lt;br&gt; ※指定可能な値は、AccountAuthorityServiceのGET操作で得られるAccountAuthorityのauthoritiesフィールドをご確認ください。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign goal.&lt;br&gt; In ADD operation, this field is required.&lt;br&gt; In SET and REMOVE operation, this field will be ignored.&lt;br&gt; * Available values can be referred to authorities field of AccountAuthority object obtained by GET operation of AccountAuthorityService.&lt;br&gt; &lt;/div&gt; 
    * @return campaignGoal
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン目的です。<br> ADD時、このフィールドは必須となります。<br> SETおよびREMOVE時、このフィールドは無視されます。<br> ※指定可能な値は、AccountAuthorityServiceのGET操作で得られるAccountAuthorityのauthoritiesフィールドをご確認ください。<br> </div> <div lang=\"en\"> Campaign goal.<br> In ADD operation, this field is required.<br> In SET and REMOVE operation, this field will be ignored.<br> * Available values can be referred to authorities field of AccountAuthority object obtained by GET operation of AccountAuthorityService.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,8 +320,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドはSETおよびREMOVE時に必須となり、ADD時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation. &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドはSETおよびREMOVE時に必須となり、ADD時に無視されます。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in SET and REMOVE operation, and will be ignored in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -357,8 +346,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 </div> <div lang=\"en\"> Campaign Name.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -384,8 +372,7 @@ public class Campaign {
    * Get conversionOptimizer
    * @return conversionOptimizer
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_OPTIMIZER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -411,8 +398,7 @@ public class Campaign {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -438,8 +424,7 @@ public class Campaign {
    * Get appOsType
    * @return appOsType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_OS_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -465,8 +450,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※endTimeが指定されている場合、ADDおよびSET時に必須となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; If endTime is specified, This field is required in ADD and SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了日です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※endTimeが指定されている場合、ADDおよびSET時に必須となります。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> End date.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> If endTime is specified, This field is required in ADD and SET operation.<br> *format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -492,8 +476,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了時刻です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※フォーマット：HHmm &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End time.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; * Format: HHmm &lt;/div&gt; 
    * @return endTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了時刻です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※フォーマット：HHmm </div> <div lang=\"en\"> End time.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> * Format: HHmm </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -519,8 +502,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; フィードIDです。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時に無視されます。&lt;br&gt; ※campaignGoalが「ITEM_LIST」の場合、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Feed ID.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation. &lt;br&gt; *If campaignGoal is ITEM_LIST, this field is required in ADD operation. &lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> フィードIDです。<br> このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時に無視されます。<br> ※campaignGoalが「ITEM_LIST」の場合、ADD時に必須となります。 </div> <div lang=\"en\"> Feed ID.<br> This field is optional in ADD operation, and will be ignored in SET and REMOVE operation. <br> *If campaignGoal is ITEM_LIST, this field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -546,8 +528,7 @@ public class Campaign {
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -581,8 +562,7 @@ public class Campaign {
    * Get labels
    * @return labels
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABELS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -608,8 +588,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最適化スコアです。&lt;br&gt; 最適化スコアは、0.0から1.0の範囲の値を返却します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Optimization score.&lt;br&gt; Optimization score returns a value ranging from 0.0 to 1.0.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return optimizationScore
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最適化スコアです。<br> 最適化スコアは、0.0から1.0の範囲の値を返却します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。</div> <div lang=\"en\">Optimization score.<br> Optimization score returns a value ranging from 0.0 to 1.0.<br> Although this field will be returned in the response, it will be ignored on input.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -635,8 +614,7 @@ public class Campaign {
    * Get servingStatus
    * @return servingStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -662,8 +640,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※startTimeが指定されている場合、ADDおよびSET時に必須となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; If startTime is specified, This field is required in ADD and SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始日です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※startTimeが指定されている場合、ADDおよびSET時に必須となります。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Start date.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> If startTime is specified, This field is required in ADD and SET operation.<br> *format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -689,8 +666,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始時刻です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※フォーマット：HHmm &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start time.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; * Format: HHmm &lt;/div&gt; 
    * @return startTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始時刻です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> ※フォーマット：HHmm </div> <div lang=\"en\"> Start time.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> * Format: HHmm </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -716,8 +692,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時、こちらが審査中の場合、編集はできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *In SET operation, cannot update it when this field is in editorial review.&lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時およびSET時、このフィールドは省略可能となります。<br> ※SET時、こちらが審査中の場合、編集はできません。</div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD and SET operation.<br> *In SET operation, cannot update it when this field is in editorial review.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -743,8 +718,7 @@ public class Campaign {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -770,8 +744,7 @@ public class Campaign {
    * Get viewableFrequencyCap
    * @return viewableFrequencyCap
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -797,8 +770,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン掲載タイプです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; CampaignDeliveryTypeを指定してのキャンペーン作成は、一部の利用者向けの機能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign delivery type.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; Creating a campaign with the CampaignDeliveryType specified is a function for some users. &lt;/div&gt; 
    * @return campaignDeliveryType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン掲載タイプです。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。<br> CampaignDeliveryTypeを指定してのキャンペーン作成は、一部の利用者向けの機能となります。 </div> <div lang=\"en\"> Campaign delivery type.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> Creating a campaign with the CampaignDeliveryType specified is a function for some users. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_DELIVERY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -824,8 +796,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンが作成された日時です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Campaign made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンが作成された日時です。<br>※フォーマット：yyyyMMdd</div> <div lang=\"en\">Date of Campaign made.<br>* Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -851,8 +822,7 @@ public class Campaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンの広告効果測定ツールのベンダー名です。キャンペーン目的「アプリ訴求」の場合にのみ設定されます。&lt;br&gt; このフィールドはキャンペーン作成後、最初にリンク先URLを設定した広告が作成された時に設定されます。&lt;br&gt; キャンペーンに紐づく広告のリンク先URLには、このベンダー名に対応する広告効果測定ツールのURLのみが指定できます。&lt;br&gt; ADD時およびSET時、&lt;code&gt;APPSFLYER&lt;/code&gt;, &lt;code&gt;ADJUST&lt;/code&gt;, &lt;code&gt;SINGULAR&lt;/code&gt;, &lt;code&gt;KOCHAVA&lt;/code&gt;, &lt;code&gt;BRANCH&lt;/code&gt; および &lt;code&gt;NONE&lt;/code&gt; のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Vendor name of tracking tool for the campaign. It will be set only when the campaign goal is \&quot;app promotion\&quot;. &lt;br&gt; This field will be set when the first ad with destination URL is created after creating the campaign.&lt;br&gt; Only the tracking tool URL corresponds to this tool vendor name can be specified for the destination URL of the ad linked to the campaign.&lt;br&gt; Only &lt;code&gt;APPSFLYER&lt;/code&gt;, &lt;code&gt;ADJUST&lt;/code&gt;, &lt;code&gt;SINGULAR&lt;/code&gt;, &lt;code&gt;KOCHAVA&lt;/code&gt;, &lt;code&gt;BRANCH&lt;/code&gt; and &lt;code&gt;NONE&lt;/code&gt; can be specified in ADD and SET operation. &lt;/div&gt; 
    * @return vendorName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの広告効果測定ツールのベンダー名です。キャンペーン目的「アプリ訴求」の場合にのみ設定されます。<br> このフィールドはキャンペーン作成後、最初にリンク先URLを設定した広告が作成された時に設定されます。<br> キャンペーンに紐づく広告のリンク先URLには、このベンダー名に対応する広告効果測定ツールのURLのみが指定できます。<br> ADD時およびSET時、<code>APPSFLYER</code>, <code>ADJUST</code>, <code>SINGULAR</code>, <code>KOCHAVA</code>, <code>BRANCH</code> および <code>NONE</code> のみ指定可能です。 </div> <div lang=\"en\"> Vendor name of tracking tool for the campaign. It will be set only when the campaign goal is \"app promotion\". <br> This field will be set when the first ad with destination URL is created after creating the campaign.<br> Only the tracking tool URL corresponds to this tool vendor name can be specified for the destination URL of the ad linked to the campaign.<br> Only <code>APPSFLYER</code>, <code>ADJUST</code>, <code>SINGULAR</code>, <code>KOCHAVA</code>, <code>BRANCH</code> and <code>NONE</code> can be specified in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VENDOR_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -878,8 +848,7 @@ public class Campaign {
    * Get conversionTracker
    * @return conversionTracker
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -893,7 +862,6 @@ public class Campaign {
   public void setConversionTracker(CampaignServiceConversionTracker conversionTracker) {
     this.conversionTracker = conversionTracker;
   }
-
 
   @Override
   public boolean equals(Object o) {

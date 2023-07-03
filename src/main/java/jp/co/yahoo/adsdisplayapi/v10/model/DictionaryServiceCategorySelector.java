@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceCategorySelectorオブジェクトは、取得するカテゴリー情報の言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceCategorySelector object displays the language of retrieved category information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceCategorySelectorオブジェクトは、取得するカテゴリー情報の言語を表します。</div> <div lang=\"en\">DictionaryServiceCategorySelector object displays the language of retrieved category information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceCategorySelector.JSON_PROPERTY_LANG
 })
-@JsonTypeName("DictionaryServiceCategorySelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceCategorySelector {
   public static final String JSON_PROPERTY_LANG = "lang";
   private DictionaryServiceLang lang;
 
-  public DictionaryServiceCategorySelector() { 
+  public DictionaryServiceCategorySelector() {
   }
 
   public DictionaryServiceCategorySelector lang(DictionaryServiceLang lang) {
@@ -52,8 +48,7 @@ public class DictionaryServiceCategorySelector {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -67,7 +62,6 @@ public class DictionaryServiceCategorySelector {
   public void setLang(DictionaryServiceLang lang) {
     this.lang = lang;
   }
-
 
   @Override
   public boolean equals(Object o) {

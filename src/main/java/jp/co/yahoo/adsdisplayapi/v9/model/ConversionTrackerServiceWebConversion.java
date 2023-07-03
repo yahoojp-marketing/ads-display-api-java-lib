@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ConversionTrackerServiceWebConversionSnippet;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceWebConversionは、ウェブページのコンバージョン設定を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ConversionTrackerServiceWebConversionは、ウェブページのコンバージョン設定を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> ConversionTrackerServiceWebConversion object displays the Web Conversion Tracker information.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceWebConversion.JSON_PROPERTY_SNIPPET
 })
-@JsonTypeName("ConversionTrackerServiceWebConversion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceWebConversion {
   public static final String JSON_PROPERTY_SNIPPET = "snippet";
-  private List<ConversionTrackerServiceWebConversionSnippet> snippet = null;
+  private List<ConversionTrackerServiceWebConversionSnippet> snippet;
 
-  public ConversionTrackerServiceWebConversion() { 
+  public ConversionTrackerServiceWebConversion() {
   }
 
   public ConversionTrackerServiceWebConversion snippet(List<ConversionTrackerServiceWebConversionSnippet> snippet) {
@@ -62,8 +58,7 @@ public class ConversionTrackerServiceWebConversion {
    * Get snippet
    * @return snippet
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SNIPPET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class ConversionTrackerServiceWebConversion {
   public void setSnippet(List<ConversionTrackerServiceWebConversionSnippet> snippet) {
     this.snippet = snippet;
   }
-
 
   @Override
   public boolean equals(Object o) {

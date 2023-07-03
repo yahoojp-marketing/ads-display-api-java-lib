@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AppLinkServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServicePage object contains the results (a list of all entities) for get method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AppLinkServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">AppLinkServicePage object contains the results (a list of all entities) for get method.</div> ")
 @JsonPropertyOrder({
   AppLinkServicePage.JSON_PROPERTY_VALUES,
   AppLinkServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES
 })
-@JsonTypeName("AppLinkServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AppLinkServicePage {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AppLinkServiceValue> values = null;
+  private List<AppLinkServiceValue> values;
 
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
-  public AppLinkServicePage() { 
+  public AppLinkServicePage() {
   }
 
   public AppLinkServicePage values(List<AppLinkServiceValue> values) {
@@ -66,8 +62,7 @@ public class AppLinkServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class AppLinkServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class AppLinkServicePage {
   public void setTotalNumEntries(Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
-
 
   @Override
   public boolean equals(Object o) {

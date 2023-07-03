@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.RecommendationServiceInsufficientTargetingCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceInsufficientTargetingオブジェクトは、ターゲットを絞り込みすぎているキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceInsufficientTargeting objects describes recommendation information about the campaign that too narrow down the targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceInsufficientTargetingオブジェクトは、ターゲットを絞り込みすぎているキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceInsufficientTargeting objects describes recommendation information about the campaign that too narrow down the targeting.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceInsufficientTargeting.JSON_PROPERTY_INSUFFICIENT_TARGETING_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceInsufficientTargeting")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceInsufficientTargeting {
   public static final String JSON_PROPERTY_INSUFFICIENT_TARGETING_CAMPAIGN_LIST = "insufficientTargetingCampaignList";
-  private List<RecommendationServiceInsufficientTargetingCampaign> insufficientTargetingCampaignList = null;
+  private List<RecommendationServiceInsufficientTargetingCampaign> insufficientTargetingCampaignList;
 
-  public RecommendationServiceInsufficientTargeting() { 
+  public RecommendationServiceInsufficientTargeting() {
   }
 
   public RecommendationServiceInsufficientTargeting insufficientTargetingCampaignList(List<RecommendationServiceInsufficientTargetingCampaign> insufficientTargetingCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceInsufficientTargeting {
    * Get insufficientTargetingCampaignList
    * @return insufficientTargetingCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_TARGETING_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceInsufficientTargeting {
   public void setInsufficientTargetingCampaignList(List<RecommendationServiceInsufficientTargetingCampaign> insufficientTargetingCampaignList) {
     this.insufficientTargetingCampaignList = insufficientTargetingCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

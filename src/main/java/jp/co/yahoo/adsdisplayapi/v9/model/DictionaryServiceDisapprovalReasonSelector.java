@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceDisapprovalReasonSelectorオブジェクトは、EditorialReason一覧を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceDisapprovalReasonSelector object is a container of EditorialReason list request.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceDisapprovalReasonSelectorオブジェクトは、EditorialReason一覧を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceDisapprovalReasonSelector object is a container of EditorialReason list request.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceDisapprovalReasonSelector.JSON_PROPERTY_LANG,
   DictionaryServiceDisapprovalReasonSelector.JSON_PROPERTY_START_INDEX,
   DictionaryServiceDisapprovalReasonSelector.JSON_PROPERTY_NUMBER_RESULTS
 })
-@JsonTypeName("DictionaryServiceDisapprovalReasonSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceDisapprovalReasonSelector {
   public static final String JSON_PROPERTY_LANG = "lang";
   private DictionaryServiceLang lang;
@@ -47,7 +43,7 @@ public class DictionaryServiceDisapprovalReasonSelector {
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults;
 
-  public DictionaryServiceDisapprovalReasonSelector() { 
+  public DictionaryServiceDisapprovalReasonSelector() {
   }
 
   public DictionaryServiceDisapprovalReasonSelector lang(DictionaryServiceLang lang) {
@@ -60,8 +56,7 @@ public class DictionaryServiceDisapprovalReasonSelector {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -88,8 +83,7 @@ public class DictionaryServiceDisapprovalReasonSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -116,8 +110,7 @@ public class DictionaryServiceDisapprovalReasonSelector {
    * minimum: 1
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,7 +124,6 @@ public class DictionaryServiceDisapprovalReasonSelector {
   public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
-
 
   @Override
   public boolean equals(Object o) {

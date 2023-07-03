@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServicePackageオブジェクトは、予約型のキャンペーンの商品に関する情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The GuaranteedCampaignServicePackage object serves package of guaranteed campaign.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedCampaignServicePackageオブジェクトは、予約型のキャンペーンの商品に関する情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The GuaranteedCampaignServicePackage object serves package of guaranteed campaign.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   GuaranteedCampaignServicePackage.JSON_PROPERTY_PACKAGE_ID,
   GuaranteedCampaignServicePackage.JSON_PROPERTY_PACKAGE_HISTORY_ID,
   GuaranteedCampaignServicePackage.JSON_PROPERTY_PACKAGE_NAME
 })
-@JsonTypeName("GuaranteedCampaignServicePackage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedCampaignServicePackage {
   public static final String JSON_PROPERTY_PACKAGE_ID = "packageId";
   private Long packageId;
@@ -46,7 +42,7 @@ public class GuaranteedCampaignServicePackage {
   public static final String JSON_PROPERTY_PACKAGE_NAME = "packageName";
   private String packageName;
 
-  public GuaranteedCampaignServicePackage() { 
+  public GuaranteedCampaignServicePackage() {
   }
 
   public GuaranteedCampaignServicePackage packageId(Long packageId) {
@@ -59,8 +55,7 @@ public class GuaranteedCampaignServicePackage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Package ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return packageId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品IDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Package ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PACKAGE_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class GuaranteedCampaignServicePackage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品履歴IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Package history ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return packageHistoryId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品履歴IDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Package history ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PACKAGE_HISTORY_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class GuaranteedCampaignServicePackage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Package Name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return packageName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Package Name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PACKAGE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class GuaranteedCampaignServicePackage {
   public void setPackageName(String packageName) {
     this.packageName = packageName;
   }
-
 
   @Override
   public boolean equals(Object o) {

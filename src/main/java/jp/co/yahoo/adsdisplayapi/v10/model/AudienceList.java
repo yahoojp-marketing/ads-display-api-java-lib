@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceContent;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceDataConnectionStopped;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceDeliveryStatus;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListオブジェクトは、オーディエンスリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceList object describes information of audience list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListオブジェクトは、オーディエンスリストの情報を表します。</div> <div lang=\"en\">AudienceList object describes information of audience list.</div> ")
 @JsonPropertyOrder({
   AudienceList.JSON_PROPERTY_ACCOUNT_ID,
   AudienceList.JSON_PROPERTY_DELIVERY_STATUS,
@@ -49,8 +46,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceList.JSON_PROPERTY_IS_SHARED,
   AudienceList.JSON_PROPERTY_DATA_CONNECTION_STOPPED
 })
-@JsonTypeName("AudienceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -91,7 +87,7 @@ public class AudienceList {
   public static final String JSON_PROPERTY_DATA_CONNECTION_STOPPED = "dataConnectionStopped";
   private AudienceListServiceDataConnectionStopped dataConnectionStopped;
 
-  public AudienceList() { 
+  public AudienceList() {
   }
 
   public AudienceList accountId(Long accountId) {
@@ -104,8 +100,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,8 +126,7 @@ public class AudienceList {
    * Get deliveryStatus
    * @return deliveryStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -158,8 +152,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストの説明です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description of Audience List.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return description
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリストの説明です。<br> このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> Description of Audience List.<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,8 +178,7 @@ public class AudienceList {
    * Get isRemoveDescription
    * @return isRemoveDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,8 +204,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リーチ数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of reaches.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return reach
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リーチ数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of reaches.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -239,8 +230,7 @@ public class AudienceList {
    * Get audienceListContent
    * @return audienceListContent
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_CONTENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,8 +256,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation. &lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となり、ADD時には無視されます。 </div> <div lang=\"en\"> Audience List ID.<br> This field is required in SET and REMOVE operation, and will be ignored in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -293,8 +282,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名です。&lt;br&gt; このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List name.&lt;br&gt; This field is required in ADD operation, optional in SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return audienceListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリスト名です。<br> このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 </div> <div lang=\"en\"> Audience List name.<br> This field is required in ADD operation, optional in SET operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -320,8 +308,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   共有元アカウントIDです。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Account ID of the sharing source.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return sourceAccountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   共有元アカウントIDです。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   Account ID of the sharing source.<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SOURCE_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -347,8 +334,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   共有元アカウント名です。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Account name of the sharing source.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return sourceAccountName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   共有元アカウント名です。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   Account name of the sharing source.<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SOURCE_ACCOUNT_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -374,8 +360,7 @@ public class AudienceList {
    * Get sourceType
    * @return sourceType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -401,8 +386,7 @@ public class AudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   AudienceListServiceIsSharedは、オーディエンスリストの共有ステータスを示します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   AudienceListServiceIsShared describes the sharing status of the audience list.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return isShared
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   AudienceListServiceIsSharedは、オーディエンスリストの共有ステータスを示します。<br>   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">   AudienceListServiceIsShared describes the sharing status of the audience list.<br>   Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_SHARED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -428,8 +412,7 @@ public class AudienceList {
    * Get dataConnectionStopped
    * @return dataConnectionStopped
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DATA_CONNECTION_STOPPED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -443,7 +426,6 @@ public class AudienceList {
   public void setDataConnectionStopped(AudienceListServiceDataConnectionStopped dataConnectionStopped) {
     this.dataConnectionStopped = dataConnectionStopped;
   }
-
 
   @Override
   public boolean equals(Object o) {

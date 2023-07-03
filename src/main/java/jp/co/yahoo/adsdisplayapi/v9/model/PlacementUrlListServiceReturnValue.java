@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.PlacementUrlListServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlListServiceReturnValueオブジェクトは、メソッドの実行結果（全Entityのリスト）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep execution result of method (All Entity list).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlListServiceReturnValueオブジェクトは、メソッドの実行結果（全Entityのリスト）を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep execution result of method (All Entity list).</div> ")
 @JsonPropertyOrder({
   PlacementUrlListServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("PlacementUrlListServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlListServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<PlacementUrlListServiceValue> values = null;
+  private List<PlacementUrlListServiceValue> values;
 
-  public PlacementUrlListServiceReturnValue() { 
+  public PlacementUrlListServiceReturnValue() {
   }
 
   public PlacementUrlListServiceReturnValue values(List<PlacementUrlListServiceValue> values) {
@@ -62,8 +58,7 @@ public class PlacementUrlListServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class PlacementUrlListServiceReturnValue {
   public void setValues(List<PlacementUrlListServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

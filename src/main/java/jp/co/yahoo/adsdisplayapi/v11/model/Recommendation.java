@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceAdGroupsForAddingAds;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceCampaignBiddingStrategyToTargetCpa;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceDailyBudgetOver;
@@ -46,7 +44,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Recommendationオブジェクトは、最適化提案を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Recommendation object is a container for storing a recommendation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Recommendationオブジェクトは、最適化提案を格納するコンテナです。</div> <div lang=\"en\">Recommendation object is a container for storing a recommendation.</div> ")
 @JsonPropertyOrder({
   Recommendation.JSON_PROPERTY_TYPE,
   Recommendation.JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT,
@@ -68,8 +65,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Recommendation.JSON_PROPERTY_INSUFFICIENT_CLICKS,
   Recommendation.JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS
 })
-@JsonTypeName("Recommendation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Recommendation {
   public static final String JSON_PROPERTY_TYPE = "type";
   private RecommendationServiceType type;
@@ -128,7 +124,7 @@ public class Recommendation {
   public static final String JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS = "insufficientVideoViews";
   private RecommendationServiceInsufficientVideoViews insufficientVideoViews;
 
-  public Recommendation() { 
+  public Recommendation() {
   }
 
   public Recommendation type(RecommendationServiceType type) {
@@ -141,8 +137,7 @@ public class Recommendation {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +163,7 @@ public class Recommendation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化スコアの上昇推測値です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Estimated optimization score increase&lt;br&gt; &lt;/div&gt; 
    * @return optimizationScoreLift
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 最適化スコアの上昇推測値です。<br> </div> <div lang=\"en\"> Estimated optimization score increase<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +189,7 @@ public class Recommendation {
    * Get campaignBiddingStrategyToTargetCpa
    * @return campaignBiddingStrategyToTargetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +215,7 @@ public class Recommendation {
    * Get dailyBudgetOver
    * @return dailyBudgetOver
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_OVER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +241,7 @@ public class Recommendation {
    * Get impsShareBudgetLossOver
    * @return impsShareBudgetLossOver
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +267,7 @@ public class Recommendation {
    * Get searchKeywordIdea
    * @return searchKeywordIdea
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_IDEA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,8 +293,7 @@ public class Recommendation {
    * Get maximizeConversions
    * @return maximizeConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,8 +319,7 @@ public class Recommendation {
    * Get maximizeClicks
    * @return maximizeClicks
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CLICKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -357,8 +345,7 @@ public class Recommendation {
    * Get maximizeVideoViews
    * @return maximizeVideoViews
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -384,8 +371,7 @@ public class Recommendation {
    * Get updateAdCreative
    * @return updateAdCreative
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPDATE_AD_CREATIVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -411,8 +397,7 @@ public class Recommendation {
    * Get duplicateTargetingSettings
    * @return duplicateTargetingSettings
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -438,8 +423,7 @@ public class Recommendation {
    * Get notOptimalAdCountCombinedAdTypeAndImageSize
    * @return notOptimalAdCountCombinedAdTypeAndImageSize
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -465,8 +449,7 @@ public class Recommendation {
    * Get adGroupsForAddingAds
    * @return adGroupsForAddingAds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -492,8 +475,7 @@ public class Recommendation {
    * Get dailyBudgetSmall
    * @return dailyBudgetSmall
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_SMALL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -519,8 +501,7 @@ public class Recommendation {
    * Get insufficientTargeting
    * @return insufficientTargeting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_TARGETING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -546,8 +527,7 @@ public class Recommendation {
    * Get insufficientAdScheduleTargeting
    * @return insufficientAdScheduleTargeting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -573,8 +553,7 @@ public class Recommendation {
    * Get insufficientConversions
    * @return insufficientConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -600,8 +579,7 @@ public class Recommendation {
    * Get insufficientClicks
    * @return insufficientClicks
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CLICKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -627,8 +605,7 @@ public class Recommendation {
    * Get insufficientVideoViews
    * @return insufficientVideoViews
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -642,7 +619,6 @@ public class Recommendation {
   public void setInsufficientVideoViews(RecommendationServiceInsufficientVideoViews insufficientVideoViews) {
     this.insufficientVideoViews = insufficientVideoViews;
   }
-
 
   @Override
   public boolean equals(Object o) {

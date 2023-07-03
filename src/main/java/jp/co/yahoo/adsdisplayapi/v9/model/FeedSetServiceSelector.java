@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSetServiceSelector object contains search condition of get operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">get操作の検索条件を保持するオブジェクト</div> <div lang=\"en\">FeedSetServiceSelector object contains search condition of get operation.</div> ")
 @JsonPropertyOrder({
   FeedSetServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   FeedSetServiceSelector.JSON_PROPERTY_FEED_ID,
   FeedSetServiceSelector.JSON_PROPERTY_FEED_SET_IDS,
   FeedSetServiceSelector.JSON_PROPERTY_INCLUDE_ITEM_COUNT
 })
-@JsonTypeName("FeedSetServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedSetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -47,12 +43,12 @@ public class FeedSetServiceSelector {
   private Long feedId;
 
   public static final String JSON_PROPERTY_FEED_SET_IDS = "feedSetIds";
-  private List<Long> feedSetIds = null;
+  private List<Long> feedSetIds;
 
   public static final String JSON_PROPERTY_INCLUDE_ITEM_COUNT = "includeItemCount";
   private Boolean includeItemCount;
 
-  public FeedSetServiceSelector() { 
+  public FeedSetServiceSelector() {
   }
 
   public FeedSetServiceSelector accountId(Long accountId) {
@@ -65,8 +61,7 @@ public class FeedSetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -92,8 +87,7 @@ public class FeedSetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">Feed ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -127,8 +121,7 @@ public class FeedSetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品セットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Item Set ID.&lt;/div&gt; 
    * @return feedSetIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">商品セットID</div> <div lang=\"en\">Item Set ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_SET_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -154,8 +147,7 @@ public class FeedSetServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットのアイテム件数を表示&lt;br&gt; trueの場合は、アイテム件数を表示&lt;br&gt; ※デフォルト値はfalse:表示しない。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Describes number of items of Item Set.&lt;br&gt; If true, the number of items is described.&lt;br&gt; ∗ Default is false: Not described. &lt;/div&gt; 
    * @return includeItemCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットのアイテム件数を表示<br> trueの場合は、アイテム件数を表示<br> ※デフォルト値はfalse:表示しない。 </div> <div lang=\"en\"> Describes number of items of Item Set.<br> If true, the number of items is described.<br> ∗ Default is false: Not described. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INCLUDE_ITEM_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,7 +161,6 @@ public class FeedSetServiceSelector {
   public void setIncludeItemCount(Boolean includeItemCount) {
     this.includeItemCount = includeItemCount;
   }
-
 
   @Override
   public boolean equals(Object o) {

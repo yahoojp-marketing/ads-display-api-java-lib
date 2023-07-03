@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceSharedAudienceListType;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceSharedAudienceListInfoSelectorオブジェクトは、共通オーディエンスリストを指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListInfoSelector object specifies shared audience list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceSharedAudienceListInfoSelectorオブジェクトは、共通オーディエンスリストを指定します。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListInfoSelector object specifies shared audience list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceSharedAudienceListInfoSelector.JSON_PROPERTY_AUDIENCE_LIST_IDS,
   DictionaryServiceSharedAudienceListInfoSelector.JSON_PROPERTY_AUDIENCE_LIST_TYPES,
   DictionaryServiceSharedAudienceListInfoSelector.JSON_PROPERTY_NUMBER_RESULTS,
   DictionaryServiceSharedAudienceListInfoSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("DictionaryServiceSharedAudienceListInfoSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceSharedAudienceListInfoSelector {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_IDS = "audienceListIds";
-  private List<Long> audienceListIds = null;
+  private List<Long> audienceListIds;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPES = "audienceListTypes";
-  private List<DictionaryServiceSharedAudienceListType> audienceListTypes = null;
+  private List<DictionaryServiceSharedAudienceListType> audienceListTypes;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 1000;
@@ -53,7 +49,7 @@ public class DictionaryServiceSharedAudienceListInfoSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public DictionaryServiceSharedAudienceListInfoSelector() { 
+  public DictionaryServiceSharedAudienceListInfoSelector() {
   }
 
   public DictionaryServiceSharedAudienceListInfoSelector audienceListIds(List<Long> audienceListIds) {
@@ -74,8 +70,7 @@ public class DictionaryServiceSharedAudienceListInfoSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience List ID.&lt;/div&gt; 
    * @return audienceListIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">オーディエンスリストIDです。</div> <div lang=\"en\">Audience List ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,8 +104,7 @@ public class DictionaryServiceSharedAudienceListInfoSelector {
    * Get audienceListTypes
    * @return audienceListTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -138,8 +132,7 @@ public class DictionaryServiceSharedAudienceListInfoSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,8 +159,7 @@ public class DictionaryServiceSharedAudienceListInfoSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,7 +173,6 @@ public class DictionaryServiceSharedAudienceListInfoSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

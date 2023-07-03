@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.ConversionTrackerServiceWebConversionSnippetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceWebConversionSnippetオブジェクトは、ウェブコンバージョントラッカーのトラッキングスクリプト情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceWebConversionSnippet object displays the tracking script information of Web Conversion Tracker.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ConversionTrackerServiceWebConversionSnippetオブジェクトは、ウェブコンバージョントラッカーのトラッキングスクリプト情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> ConversionTrackerServiceWebConversionSnippet object displays the tracking script information of Web Conversion Tracker.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceWebConversionSnippet.JSON_PROPERTY_ADVANCED_TAG,
   ConversionTrackerServiceWebConversionSnippet.JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE
 })
-@JsonTypeName("ConversionTrackerServiceWebConversionSnippet")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceWebConversionSnippet {
   public static final String JSON_PROPERTY_ADVANCED_TAG = "advancedTag";
   private String advancedTag;
@@ -43,7 +39,7 @@ public class ConversionTrackerServiceWebConversionSnippet {
   public static final String JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE = "webConversionSnippetType";
   private ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType;
 
-  public ConversionTrackerServiceWebConversionSnippet() { 
+  public ConversionTrackerServiceWebConversionSnippet() {
   }
 
   public ConversionTrackerServiceWebConversionSnippet advancedTag(String advancedTag) {
@@ -56,8 +52,7 @@ public class ConversionTrackerServiceWebConversionSnippet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。&lt;br&gt; 詳細は、「&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan&#x3D;ja&amp;aid&#x3D;59417\&quot;&gt;コンバージョン測定とは&lt;/a&gt;」を参照してください。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The new format of conversion tag avoids the impacts such as changes made to the browser. &lt;br&gt; More details are described on &lt;a https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan&#x3D;en&amp;aid&#x3D;33889\&quot;&gt;Conversion Analytics&lt;/a&gt;.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return advancedTag
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。<br> 詳細は、「<a href=\"https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan=ja&aid=59417\">コンバージョン測定とは</a>」を参照してください。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The new format of conversion tag avoids the impacts such as changes made to the browser. <br> More details are described on <a https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan=en&aid=33889\">Conversion Analytics</a>.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ADVANCED_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class ConversionTrackerServiceWebConversionSnippet {
    * Get webConversionSnippetType
    * @return webConversionSnippetType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class ConversionTrackerServiceWebConversionSnippet {
   public void setWebConversionSnippetType(ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType) {
     this.webConversionSnippetType = webConversionSnippetType;
   }
-
 
   @Override
   public boolean equals(Object o) {

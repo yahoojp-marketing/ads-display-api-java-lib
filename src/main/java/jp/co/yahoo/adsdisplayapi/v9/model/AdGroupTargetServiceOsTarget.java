@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTargetServiceDeviceOsType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceOsTargetオブジェクトは、OSターゲティングの設定情報を保持します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceOsTarget object is a container for storing OS targeting settings.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceOsTargetオブジェクトは、OSターゲティングの設定情報を保持します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupTargetServiceOsTarget object is a container for storing OS targeting settings.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceOsTarget.JSON_PROPERTY_DEVICE_OS_TYPE
 })
-@JsonTypeName("AdGroupTargetServiceOsTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceOsTarget {
   public static final String JSON_PROPERTY_DEVICE_OS_TYPE = "deviceOsType";
   private AdGroupTargetServiceDeviceOsType deviceOsType;
 
-  public AdGroupTargetServiceOsTarget() { 
+  public AdGroupTargetServiceOsTarget() {
   }
 
   public AdGroupTargetServiceOsTarget deviceOsType(AdGroupTargetServiceDeviceOsType deviceOsType) {
@@ -52,8 +48,7 @@ public class AdGroupTargetServiceOsTarget {
    * Get deviceOsType
    * @return deviceOsType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_OS_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AdGroupTargetServiceOsTarget {
   public void setDeviceOsType(AdGroupTargetServiceDeviceOsType deviceOsType) {
     this.deviceOsType = deviceOsType;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.FeedFtpServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpServiceReturnValueオブジェクトは、操作結果を含む定期アップロード設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceReturnValue object retains Periodic Upload setting information including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedFtpServiceReturnValueオブジェクトは、操作結果を含む定期アップロード設定情報を保持します。</div> <div lang=\"en\">FeedFtpServiceReturnValue object retains Periodic Upload setting information including operation result.</div> ")
 @JsonPropertyOrder({
   FeedFtpServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("FeedFtpServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<FeedFtpServiceValue> values = null;
+  private List<FeedFtpServiceValue> values;
 
-  public FeedFtpServiceReturnValue() { 
+  public FeedFtpServiceReturnValue() {
   }
 
   public FeedFtpServiceReturnValue values(List<FeedFtpServiceValue> values) {
@@ -62,8 +58,7 @@ public class FeedFtpServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class FeedFtpServiceReturnValue {
   public void setValues(List<FeedFtpServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

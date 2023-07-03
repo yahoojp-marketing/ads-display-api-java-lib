@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AdGroupAdServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceReturnValueオブジェクトは、広告の情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceReturnValue object is a container for storing ad information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceReturnValueオブジェクトは、広告の情報を格納するコンテナです。</div> <div lang=\"en\">The AdGroupAdServiceReturnValue object is a container for storing ad information.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupAdServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupAdServiceValue> values = null;
+  private List<AdGroupAdServiceValue> values;
 
-  public AdGroupAdServiceReturnValue() { 
+  public AdGroupAdServiceReturnValue() {
   }
 
   public AdGroupAdServiceReturnValue values(List<AdGroupAdServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupAdServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupAdServiceReturnValue {
   public void setValues(List<AdGroupAdServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

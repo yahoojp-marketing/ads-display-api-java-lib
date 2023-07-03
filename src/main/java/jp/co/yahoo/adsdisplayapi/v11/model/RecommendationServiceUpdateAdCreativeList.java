@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RecommendationServiceUpdateAdCreativeListオブジェクトは、画像・動画の更新を推奨する広告に関する詳細情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RecommendationServiceUpdateAdCreativeList object describes the detailed information of ads that have recommendations for updating images or videos. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> RecommendationServiceUpdateAdCreativeListオブジェクトは、画像・動画の更新を推奨する広告に関する詳細情報を表します。 </div> <div lang=\"en\"> RecommendationServiceUpdateAdCreativeList object describes the detailed information of ads that have recommendations for updating images or videos. </div> ")
 @JsonPropertyOrder({
   RecommendationServiceUpdateAdCreativeList.JSON_PROPERTY_RECOMMENDATION_ID,
   RecommendationServiceUpdateAdCreativeList.JSON_PROPERTY_CAMPAIGN_ID,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceUpdateAdCreativeList.JSON_PROPERTY_LATEST_VIEWABLE_CTR,
   RecommendationServiceUpdateAdCreativeList.JSON_PROPERTY_VIEWABLE_CTR_DECREASE
 })
-@JsonTypeName("RecommendationServiceUpdateAdCreativeList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceUpdateAdCreativeList {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
   private Long recommendationId;
@@ -74,7 +70,7 @@ public class RecommendationServiceUpdateAdCreativeList {
   public static final String JSON_PROPERTY_VIEWABLE_CTR_DECREASE = "viewableCtrDecrease";
   private Double viewableCtrDecrease;
 
-  public RecommendationServiceUpdateAdCreativeList() { 
+  public RecommendationServiceUpdateAdCreativeList() {
   }
 
   public RecommendationServiceUpdateAdCreativeList recommendationId(Long recommendationId) {
@@ -87,8 +83,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 </div> <div lang=\"en\"> Recommendation ID.<br> When optimizationScoreLift isn't null, the system will assign a common recommendation ID to the suggestion for the campaign. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +109,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> </div> <div lang=\"en\"> Campaign ID.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +135,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> </div> <div lang=\"en\"> Campaign Name.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +161,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID. &lt;/div&gt; 
    * @return adGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループIDです。 </div> <div lang=\"en\"> Ad group ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +187,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group name. &lt;/div&gt; 
    * @return adGroupName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ名です。 </div> <div lang=\"en\"> Ad group name. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +213,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告IDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad ID. &lt;/div&gt; 
    * @return adId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告IDです。 </div> <div lang=\"en\"> Ad ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +239,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad name. &lt;/div&gt; 
    * @return adName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告名です。 </div> <div lang=\"en\"> Ad name. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +265,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 30~16日前のビューアブルクリック率(平均)です&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewable CTR 30~16 days ago (average) &lt;/div&gt; 
    * @return previousViewableCtr
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 30~16日前のビューアブルクリック率(平均)です<br> </div> <div lang=\"en\"> Viewable CTR 30~16 days ago (average) </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PREVIOUS_VIEWABLE_CTR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,8 +291,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 15~1日前のビューアブルクリック率(平均)です&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Latest viewable CTR 15~1 days ago (average) &lt;/div&gt; 
    * @return latestViewableCtr
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 15~1日前のビューアブルクリック率(平均)です<br> </div> <div lang=\"en\"> Latest viewable CTR 15~1 days ago (average) </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LATEST_VIEWABLE_CTR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,8 +317,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ビューアブルクリック率の減少量です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewable CTR decrease &lt;/div&gt; 
    * @return viewableCtrDecrease
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ビューアブルクリック率の減少量です。 </div> <div lang=\"en\"> Viewable CTR decrease </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_CTR_DECREASE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -345,7 +331,6 @@ public class RecommendationServiceUpdateAdCreativeList {
   public void setViewableCtrDecrease(Double viewableCtrDecrease) {
     this.viewableCtrDecrease = viewableCtrDecrease;
   }
-
 
   @Override
   public boolean equals(Object o) {

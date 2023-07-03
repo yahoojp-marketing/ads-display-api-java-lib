@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AdGroupAdServiceIsRemoveFlg;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceBannerAdオブジェクトは、バナー広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがBANNER_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceBannerAd object describes information of Banner ad.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is BANNER_AD, this field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceBannerAdオブジェクトは、バナー広告の情報を表します。<br> このフィールドは、省略可能となります。<br> ※ADD時、adTypeがBANNER_ADの場合は必須です。 </div> <div lang=\"en\"> AdGroupAdServiceBannerAd object describes information of Banner ad.<br> This field is optional.<br> *If adType is BANNER_AD, this field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceBannerAd.JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS,
   AdGroupAdServiceBannerAd.JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS,
@@ -50,8 +47,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceBannerAd.JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS,
   AdGroupAdServiceBannerAd.JSON_PROPERTY_VIDEO_START_BEACON_URLS
 })
-@JsonTypeName("AdGroupAdServiceBannerAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceBannerAd {
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS = "isRemoveVideo10SecBeaconUrls";
   private AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls;
@@ -81,27 +77,27 @@ public class AdGroupAdServiceBannerAd {
   private String url;
 
   public static final String JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS = "video10SecBeaconUrls";
-  private List<String> video10SecBeaconUrls = null;
+  private List<String> video10SecBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS = "video25PercentBeaconUrls";
-  private List<String> video25PercentBeaconUrls = null;
+  private List<String> video25PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS = "video3SecBeaconUrls";
-  private List<String> video3SecBeaconUrls = null;
+  private List<String> video3SecBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS = "video50PercentBeaconUrls";
-  private List<String> video50PercentBeaconUrls = null;
+  private List<String> video50PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS = "video75PercentBeaconUrls";
-  private List<String> video75PercentBeaconUrls = null;
+  private List<String> video75PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS = "videoCompleteBeaconUrls";
-  private List<String> videoCompleteBeaconUrls = null;
+  private List<String> videoCompleteBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_START_BEACON_URLS = "videoStartBeaconUrls";
-  private List<String> videoStartBeaconUrls = null;
+  private List<String> videoStartBeaconUrls;
 
-  public AdGroupAdServiceBannerAd() { 
+  public AdGroupAdServiceBannerAd() {
   }
 
   public AdGroupAdServiceBannerAd isRemoveVideo10SecBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls) {
@@ -114,8 +110,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideo10SecBeaconUrls
    * @return isRemoveVideo10SecBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +136,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideo25PercentBeaconUrls
    * @return isRemoveVideo25PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +162,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideo3SecBeaconUrls
    * @return isRemoveVideo3SecBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO3_SEC_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +188,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideo50PercentBeaconUrls
    * @return isRemoveVideo50PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +214,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideo75PercentBeaconUrls
    * @return isRemoveVideo75PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +240,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideoCompleteBeaconUrls
    * @return isRemoveVideoCompleteBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,8 +266,7 @@ public class AdGroupAdServiceBannerAd {
    * Get isRemoveVideoStartBeaconUrls
    * @return isRemoveVideoStartBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -303,8 +292,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サムネイルIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Thumbnail ID.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return thumbnailMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サムネイルIDです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Thumbnail ID.<br> This field is required in ADD operation, and will be optional in SET operation.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_THUMBNAIL_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,8 +318,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンク先URLです。&lt;br&gt; アプリ訴求キャンペーンで設定可能なリンク先URLについては&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan&#x3D;ja&amp;aid&#x3D;61528\&quot;&gt;こちら&lt;/a&gt;をご参照ください。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt; ADD時、urlフィールドとfinalUrlフィールドは同時に設定することはできず、どちらか片方の設定が必須となります。&lt;br&gt; urlフィールドを設定する場合、displayUrlの指定が必須になります。またその際は、finalUrl、smartphoneFinalUrl、trackingUrl、customParametersは指定不可です。&lt;br&gt; SET時にfinalUrlを指定する場合、このフィールドの値はクリアされます。&lt;br&gt; ※現在は指定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Destination URL.&lt;br&gt; For information about the destination URL that can be set with campaigns for \&quot;app promotion\&quot;, refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan&#x3D;en&amp;aid&#x3D;39261\&quot;&gt;this page&lt;/a&gt;.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; In ADD operation, url field and finalUrl field cannot be set at the same time, and one of them must be set.&lt;br&gt; When url field is specified, displayUrl must be specified. In that case, finalUrl, smartphoneFinalUrl, trackingUrl and customParameters cannot be specified.&lt;br&gt; If finalUrl is specified in SET operation, the value in this field will be cleared.&lt;br&gt; ※Not available. &lt;/div&gt; 
    * @return url
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リンク先URLです。<br> アプリ訴求キャンペーンで設定可能なリンク先URLについては<a href=\"https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan=ja&aid=61528\">こちら</a>をご参照ください。<br> SET時、このフィールドは省略可能となります。<br> ADD時、urlフィールドとfinalUrlフィールドは同時に設定することはできず、どちらか片方の設定が必須となります。<br> urlフィールドを設定する場合、displayUrlの指定が必須になります。またその際は、finalUrl、smartphoneFinalUrl、trackingUrl、customParametersは指定不可です。<br> SET時にfinalUrlを指定する場合、このフィールドの値はクリアされます。<br> ※現在は指定できません。 </div> <div lang=\"en\"> Destination URL.<br> For information about the destination URL that can be set with campaigns for \"app promotion\", refer to <a href=\"https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan=en&aid=39261\">this page</a>.<br> This field is optional in SET operation.<br> In ADD operation, url field and finalUrl field cannot be set at the same time, and one of them must be set.<br> When url field is specified, displayUrl must be specified. In that case, finalUrl, smartphoneFinalUrl, trackingUrl and customParameters cannot be specified.<br> If finalUrl is specified in SET operation, the value in this field will be cleared.<br> ※Not available. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -365,8 +352,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 10秒視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (10 seconds).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video10SecBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 10秒視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Viewing beacon URL (10 seconds).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -400,8 +386,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 25％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (25%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video25PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 25％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Playback viewing beacon URL (25%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -435,8 +420,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 3秒視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (3 seconds).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video3SecBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 3秒視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Viewing beacon URL (3 seconds).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -470,8 +454,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 50％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (50%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video50PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 50％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Playback viewing beacon URL (50%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -505,8 +488,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 75％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (75%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video75PercentBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 75％再生視聴ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Playback viewing beacon URL (75%).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -540,8 +522,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生完了ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (complete).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return videoCompleteBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 再生完了ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Viewing beacon URL (complete).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -575,8 +556,7 @@ public class AdGroupAdServiceBannerAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生開始ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (start).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return videoStartBeaconUrls
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 再生開始ビーコンURLです。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※SET時はすべて上書きされます。<br> ※httpsのURLのみ設定可能です。<br> ※mainMediaFormatがVIDEOの場合にのみ指定できます。 </div> <div lang=\"en\"> Viewing beacon URL (start).<br> This field is optional in ADD and SET operation.<br> ∗Replace all URLs in SET operation.<br> ∗Available URL is only &#34;https&#34;.<br> *If mainMediaFormat is VIDEO, this field can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_START_BEACON_URLS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -590,7 +570,6 @@ public class AdGroupAdServiceBannerAd {
   public void setVideoStartBeaconUrls(List<String> videoStartBeaconUrls) {
     this.videoStartBeaconUrls = videoStartBeaconUrls;
   }
-
 
   @Override
   public boolean equals(Object o) {

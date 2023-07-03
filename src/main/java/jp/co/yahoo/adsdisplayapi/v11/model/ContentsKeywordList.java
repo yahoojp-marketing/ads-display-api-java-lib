@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.ContentsKeywordListServiceContentsKeyword;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordListオブジェクトは、コンテンツキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordList object displays the contents keyword list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ContentsKeywordListオブジェクトは、コンテンツキーワードリストを表します。</div> <div lang=\"en\">ContentsKeywordList object displays the contents keyword list.</div> ")
 @JsonPropertyOrder({
   ContentsKeywordList.JSON_PROPERTY_ACCOUNT_ID,
   ContentsKeywordList.JSON_PROPERTY_CONTENTS_KEYWORD,
@@ -42,14 +39,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ContentsKeywordList.JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME,
   ContentsKeywordList.JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG
 })
-@JsonTypeName("ContentsKeywordList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentsKeywordList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD = "contentsKeyword";
-  private List<ContentsKeywordListServiceContentsKeyword> contentsKeyword = null;
+  private List<ContentsKeywordListServiceContentsKeyword> contentsKeyword;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION = "contentsKeywordListDescription";
   private String contentsKeywordListDescription;
@@ -66,7 +62,7 @@ public class ContentsKeywordList {
   public static final String JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG = "brandSafetyDenyListFlg";
   private Boolean brandSafetyDenyListFlg;
 
-  public ContentsKeywordList() { 
+  public ContentsKeywordList() {
   }
 
   public ContentsKeywordList accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class ContentsKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +109,7 @@ public class ContentsKeywordList {
    * Get contentsKeyword
    * @return contentsKeyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +135,7 @@ public class ContentsKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリストの説明文です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description of Contents keyword list.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return contentsKeywordListDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリストの説明文です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Description of Contents keyword list.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -168,8 +161,7 @@ public class ContentsKeywordList {
    * Get isRemoveContentsKeywordListDescription
    * @return isRemoveContentsKeywordListDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONTENTS_KEYWORD_LIST_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,8 +187,7 @@ public class ContentsKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリストIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contents keyword list ID.&lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return contentsKeywordListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Contents keyword list ID.<br> This field is required in SET and REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -222,8 +213,7 @@ public class ContentsKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリスト名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Name of Contents keyword list.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return contentsKeywordListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリスト名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Name of Contents keyword list.<br> This field is required in ADD operation, and is optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -249,8 +239,7 @@ public class ContentsKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 除外専用リストかどうかのフラグです。&lt;br&gt; 除外専用リストには下記の制約があります。&lt;br&gt; ・１アカウントにつき1つ作成が可能です。&lt;br&gt; ・除外にのみ紐付け可能です。&lt;br&gt; このフィールドは、ADD時に省略可能(デフォルトの値はFALSE)、SET時に指定不可となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A flag that indicates whether it is an exclusion list. &lt;br&gt; Exclusion list includes the following restrictions: &lt;br&gt; *Only one list can be created per account. &lt;br&gt; *Can be linked only to exclusion. &lt;br&gt; This field is optional in ADD operation (default value will be FALSE), and cannot be specified in SET operation. &lt;/div&gt; &lt;dl class&#x3D;term&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;TRUE&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;除外専用リストです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Exclusion list.&lt;/span&gt;&lt;/dd&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;FALSE&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;通常のurlリストです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Standard URL list.&lt;/span&gt;&lt;/dd&gt; &lt;/dl&gt; 
    * @return brandSafetyDenyListFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 除外専用リストかどうかのフラグです。<br> 除外専用リストには下記の制約があります。<br> ・１アカウントにつき1つ作成が可能です。<br> ・除外にのみ紐付け可能です。<br> このフィールドは、ADD時に省略可能(デフォルトの値はFALSE)、SET時に指定不可となります。 </div> <div lang=\"en\"> A flag that indicates whether it is an exclusion list. <br> Exclusion list includes the following restrictions: <br> *Only one list can be created per account. <br> *Can be linked only to exclusion. <br> This field is optional in ADD operation (default value will be FALSE), and cannot be specified in SET operation. </div> <dl class=term>   <dt class=\"term__item\">TRUE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">除外専用リストです。</span><span lang=\"en\">Exclusion list.</span></dd>   <dt class=\"term__item\">FALSE</dt>   <dd class=\"term__desc\"><span lang=\"ja\">通常のurlリストです。</span><span lang=\"en\">Standard URL list.</span></dd> </dl> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -264,7 +253,6 @@ public class ContentsKeywordList {
   public void setBrandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
   }
-
 
   @Override
   public boolean equals(Object o) {

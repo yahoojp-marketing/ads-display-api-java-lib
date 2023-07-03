@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedSetServiceConditionSet;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedSetオブジェクトは、商品セット情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSet object contains Item Set information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedSetオブジェクトは、商品セット情報を保持します。</div> <div lang=\"en\">FeedSet object contains Item Set information.</div> ")
 @JsonPropertyOrder({
   FeedSet.JSON_PROPERTY_ACCOUNT_ID,
   FeedSet.JSON_PROPERTY_CONDITION_SETS,
@@ -41,14 +38,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedSet.JSON_PROPERTY_IS_DEFAULT_SET,
   FeedSet.JSON_PROPERTY_ITEM_COUNT
 })
-@JsonTypeName("FeedSet")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedSet {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CONDITION_SETS = "conditionSets";
-  private List<FeedSetServiceConditionSet> conditionSets = null;
+  private List<FeedSetServiceConditionSet> conditionSets;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
   private Long feedId;
@@ -65,7 +61,7 @@ public class FeedSet {
   public static final String JSON_PROPERTY_ITEM_COUNT = "itemCount";
   private Long itemCount;
 
-  public FeedSet() { 
+  public FeedSet() {
   }
 
   public FeedSet accountId(Long accountId) {
@@ -78,8 +74,7 @@ public class FeedSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +108,7 @@ public class FeedSet {
    * Get conditionSets
    * @return conditionSets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONDITION_SETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,8 +134,7 @@ public class FeedSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; Feedを識別するIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Feed ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> Feedを識別するIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Feed ID.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -167,8 +160,7 @@ public class FeedSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットIDです。&lt;br&gt; REMOVE時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Item Set ID.&lt;br&gt; This field is required in REMOVE operation. &lt;/div&gt; 
    * @return feedSetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットIDです。<br> REMOVE時、このフィールドは必須です。 </div> <div lang=\"en\"> Item Set ID.<br> This field is required in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_SET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -194,8 +186,7 @@ public class FeedSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セット名です。&lt;br&gt; ADD時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Item Set name.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return feedSetName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品セット名です。<br> ADD時、このフィールドは必須です。 </div> <div lang=\"en\"> Item Set name.<br> This field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_SET_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -221,8 +212,7 @@ public class FeedSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デフォルトセット判定です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Default setting of Item Set or not.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return isDefaultSet
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> デフォルトセット判定です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Default setting of Item Set or not.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_DEFAULT_SET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,8 +238,7 @@ public class FeedSet {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットの条件に含まれるアイテム数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of items included in Item Set conditions.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return itemCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 商品セットの条件に含まれるアイテム数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Number of items included in Item Set conditions.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ITEM_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -263,7 +252,6 @@ public class FeedSet {
   public void setItemCount(Long itemCount) {
     this.itemCount = itemCount;
   }
-
 
   @Override
   public boolean equals(Object o) {

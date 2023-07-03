@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTargetServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupTargetReturnValueオブジェクトは、mutateメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupTargetReturnValue object contains the results (a list of all entities) for mutate method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupTargetReturnValueオブジェクトは、mutateメソッドの実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">The AdGroupTargetReturnValue object contains the results (a list of all entities) for mutate method.</div> ")
 @JsonPropertyOrder({
   AdGroupTargetReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AdGroupTargetReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AdGroupTargetServiceValue> values = null;
+  private List<AdGroupTargetServiceValue> values;
 
-  public AdGroupTargetReturnValue() { 
+  public AdGroupTargetReturnValue() {
   }
 
   public AdGroupTargetReturnValue values(List<AdGroupTargetServiceValue> values) {
@@ -62,8 +58,7 @@ public class AdGroupTargetReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AdGroupTargetReturnValue {
   public void setValues(List<AdGroupTargetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

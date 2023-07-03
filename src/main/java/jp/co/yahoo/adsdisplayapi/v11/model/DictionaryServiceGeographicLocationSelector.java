@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceGeographicLocationType;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationSelectorオブジェクトは、取得する地域情報のリスト言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationSelector object displays the language selection for retrieving geographic location list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationSelectorオブジェクトは、取得する地域情報のリスト言語を表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocationSelector object displays the language selection for retrieving geographic location list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceGeographicLocationSelector.JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE,
   DictionaryServiceGeographicLocationSelector.JSON_PROPERTY_LANG
 })
-@JsonTypeName("DictionaryServiceGeographicLocationSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceGeographicLocationSelector {
   public static final String JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE = "geographicLocationType";
   private DictionaryServiceGeographicLocationType geographicLocationType;
@@ -44,7 +40,7 @@ public class DictionaryServiceGeographicLocationSelector {
   public static final String JSON_PROPERTY_LANG = "lang";
   private DictionaryServiceLang lang;
 
-  public DictionaryServiceGeographicLocationSelector() { 
+  public DictionaryServiceGeographicLocationSelector() {
   }
 
   public DictionaryServiceGeographicLocationSelector geographicLocationType(DictionaryServiceGeographicLocationType geographicLocationType) {
@@ -57,8 +53,7 @@ public class DictionaryServiceGeographicLocationSelector {
    * Get geographicLocationType
    * @return geographicLocationType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class DictionaryServiceGeographicLocationSelector {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -99,7 +93,6 @@ public class DictionaryServiceGeographicLocationSelector {
   public void setLang(DictionaryServiceLang lang) {
     this.lang = lang;
   }
-
 
   @Override
   public boolean equals(Object o) {

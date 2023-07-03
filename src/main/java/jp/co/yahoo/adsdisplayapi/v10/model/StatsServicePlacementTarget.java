@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServicePlacementUrlListType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePlacementTargetオブジェクトは、プレイスメントターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePlacementTarget object holds configuration information of placement targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServicePlacementTargetオブジェクトは、プレイスメントターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServicePlacementTarget object holds configuration information of placement targeting.</div> ")
 @JsonPropertyOrder({
   StatsServicePlacementTarget.JSON_PROPERTY_PLACEMENT_URL_LIST_NAME,
   StatsServicePlacementTarget.JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE
 })
-@JsonTypeName("StatsServicePlacementTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServicePlacementTarget {
   public static final String JSON_PROPERTY_PLACEMENT_URL_LIST_NAME = "placementUrlListName";
   private String placementUrlListName;
@@ -43,7 +39,7 @@ public class StatsServicePlacementTarget {
   public static final String JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE = "placementUrlListType";
   private StatsServicePlacementUrlListType placementUrlListType;
 
-  public StatsServicePlacementTarget() { 
+  public StatsServicePlacementTarget() {
   }
 
   public StatsServicePlacementTarget placementUrlListName(String placementUrlListName) {
@@ -56,8 +52,7 @@ public class StatsServicePlacementTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;プレイスメントURLリスト名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Placement Url List Name&lt;/div&gt; 
    * @return placementUrlListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">プレイスメントURLリスト名</div> <div lang=\"en\">Placement Url List Name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class StatsServicePlacementTarget {
    * Get placementUrlListType
    * @return placementUrlListType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class StatsServicePlacementTarget {
   public void setPlacementUrlListType(StatsServicePlacementUrlListType placementUrlListType) {
     this.placementUrlListType = placementUrlListType;
   }
-
 
   @Override
   public boolean equals(Object o) {

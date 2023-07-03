@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.SearchLiftServiceKeywordCategory;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchLiftServiceKeywordオブジェクトは、サーチリフトのキーワード情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchLiftServiceKeyword object describes information about the keyword of the search lift.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchLiftServiceKeywordオブジェクトは、サーチリフトのキーワード情報を表します。</div> <div lang=\"en\">SearchLiftServiceKeyword object describes information about the keyword of the search lift.</div> ")
 @JsonPropertyOrder({
   SearchLiftServiceKeyword.JSON_PROPERTY_KEYWORD,
   SearchLiftServiceKeyword.JSON_PROPERTY_KEYWORD_CATEGORY
 })
-@JsonTypeName("SearchLiftServiceKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchLiftServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
   private String keyword;
@@ -43,7 +39,7 @@ public class SearchLiftServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORD_CATEGORY = "keywordCategory";
   private SearchLiftServiceKeywordCategory keywordCategory;
 
-  public SearchLiftServiceKeyword() { 
+  public SearchLiftServiceKeyword() {
   }
 
   public SearchLiftServiceKeyword keyword(String keyword) {
@@ -56,8 +52,7 @@ public class SearchLiftServiceKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Keyword. &lt;/div&gt; 
    * @return keyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーワードです。</div> <div lang=\"en\">Keyword. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class SearchLiftServiceKeyword {
    * Get keywordCategory
    * @return keywordCategory
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_CATEGORY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class SearchLiftServiceKeyword {
   public void setKeywordCategory(SearchLiftServiceKeywordCategory keywordCategory) {
     this.keywordCategory = keywordCategory;
   }
-
 
   @Override
   public boolean equals(Object o) {

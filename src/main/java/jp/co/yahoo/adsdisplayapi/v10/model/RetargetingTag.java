@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.RetargetingTagServiceApprovalStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagオブジェクトは、サイトリターゲティングのタグ情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTag objects displays tag information for site retargeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingTagオブジェクトは、サイトリターゲティングのタグ情報を表します。</div> <div lang=\"en\">RetargetingTag objects displays tag information for site retargeting.</div> ")
 @JsonPropertyOrder({
   RetargetingTag.JSON_PROPERTY_ACCOUNT_ID,
   RetargetingTag.JSON_PROPERTY_APPROVAL_STATUS,
   RetargetingTag.JSON_PROPERTY_RETARGETING_TAG_ID,
   RetargetingTag.JSON_PROPERTY_ADVANCED_TAG
 })
-@JsonTypeName("RetargetingTag")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingTag {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,7 +47,7 @@ public class RetargetingTag {
   public static final String JSON_PROPERTY_ADVANCED_TAG = "advancedTag";
   private String advancedTag;
 
-  public RetargetingTag() { 
+  public RetargetingTag() {
   }
 
   public RetargetingTag accountId(Long accountId) {
@@ -64,8 +60,7 @@ public class RetargetingTag {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class RetargetingTag {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class RetargetingTag {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サイトリターゲティングのタグIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tag ID for site retargeting.&lt;/div&gt; 
    * @return retargetingTagId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サイトリターゲティングのタグIDです。</div> <div lang=\"en\">Tag ID for site retargeting.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class RetargetingTag {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。&lt;br&gt; 詳細は、「&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/ydn/articledetail?lan&#x3D;ja&amp;aid&#x3D;1397\&quot;&gt;サイトリターゲティングタグの取得とサイトへの設置&lt;/a&gt;」を参照してください。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The new format of site retargeting tag avoids the impacts such as changes made to the browser. &lt;br&gt; More details are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/ydn/articledetail?lan&#x3D;en&amp;aid&#x3D;581\&quot;&gt;Acquire Site Retargeting Tag and Tagging on Site&lt;/a&gt;.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return advancedTag
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。<br> 詳細は、「<a href=\"https://ads-help.yahoo.co.jp/yahooads/ydn/articledetail?lan=ja&aid=1397\">サイトリターゲティングタグの取得とサイトへの設置</a>」を参照してください。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The new format of site retargeting tag avoids the impacts such as changes made to the browser. <br> More details are described on <a href=\"https://ads-help.yahoo.co.jp/yahooads/ydn/articledetail?lan=en&aid=581\">Acquire Site Retargeting Tag and Tagging on Site</a>.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ADVANCED_TAG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class RetargetingTag {
   public void setAdvancedTag(String advancedTag) {
     this.advancedTag = advancedTag;
   }
-
 
   @Override
   public boolean equals(Object o) {

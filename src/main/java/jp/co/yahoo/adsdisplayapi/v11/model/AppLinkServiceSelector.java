@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AppLinkServiceAppLinkStatus;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServiceSelector object contains a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AppLinkServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">AppLinkServiceSelector object contains a set of criteria (parameters) for get method.</div> ")
 @JsonPropertyOrder({
   AppLinkServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AppLinkServiceSelector.JSON_PROPERTY_APP_VENDORS,
@@ -43,17 +40,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppLinkServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AppLinkServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AppLinkServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AppLinkServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_APP_VENDORS = "appVendors";
-  private List<AppLinkServiceAppVendor> appVendors = null;
+  private List<AppLinkServiceAppVendor> appVendors;
 
   public static final String JSON_PROPERTY_LINK_IDS = "linkIds";
-  private List<String> linkIds = null;
+  private List<String> linkIds;
 
   public static final String JSON_PROPERTY_APP_PLATFORM = "appPlatform";
   private AppLinkServiceAppPlatform appPlatform;
@@ -67,7 +63,7 @@ public class AppLinkServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AppLinkServiceSelector() { 
+  public AppLinkServiceSelector() {
   }
 
   public AppLinkServiceSelector accountId(Long accountId) {
@@ -80,8 +76,7 @@ public class AppLinkServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -115,8 +110,7 @@ public class AppLinkServiceSelector {
    * Get appVendors
    * @return appVendors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +144,7 @@ public class AppLinkServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リンクID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link ID&lt;/div&gt; 
    * @return linkIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リンクID。</div> <div lang=\"en\">Link ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +170,7 @@ public class AppLinkServiceSelector {
    * Get appPlatform
    * @return appPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,8 +196,7 @@ public class AppLinkServiceSelector {
    * Get appLinkStatus
    * @return appLinkStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -233,8 +224,7 @@ public class AppLinkServiceSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -261,8 +251,7 @@ public class AppLinkServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -276,7 +265,6 @@ public class AppLinkServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

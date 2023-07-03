@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceUploadUserListValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceUploadUserListReturnValueオブジェクトは、ユーザーリストのアップロード情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceUploadUserListReturnValue object describes upload information of the user list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListServiceUploadUserListReturnValueオブジェクトは、ユーザーリストのアップロード情報を表します。</div> <div lang=\"en\">AudienceListServiceUploadUserListReturnValue object describes upload information of the user list.</div> ")
 @JsonPropertyOrder({
   AudienceListServiceUploadUserListReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AudienceListServiceUploadUserListReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceUploadUserListReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AudienceListServiceUploadUserListValue> values = null;
+  private List<AudienceListServiceUploadUserListValue> values;
 
-  public AudienceListServiceUploadUserListReturnValue() { 
+  public AudienceListServiceUploadUserListReturnValue() {
   }
 
   public AudienceListServiceUploadUserListReturnValue values(List<AudienceListServiceUploadUserListValue> values) {
@@ -62,8 +58,7 @@ public class AudienceListServiceUploadUserListReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AudienceListServiceUploadUserListReturnValue {
   public void setValues(List<AudienceListServiceUploadUserListValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.DictionaryServiceDeviceOsType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceOsVersionSelectorオブジェクトは、getOsVersionメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceOsVersionSelector object contains a set of criteria (parameters) for getOsVersion method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceOsVersionSelectorオブジェクトは、getOsVersionメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">DictionaryServiceOsVersionSelector object contains a set of criteria (parameters) for getOsVersion method.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceOsVersionSelector.JSON_PROPERTY_DEVICE_OS_TYPE
 })
-@JsonTypeName("DictionaryServiceOsVersionSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceOsVersionSelector {
   public static final String JSON_PROPERTY_DEVICE_OS_TYPE = "deviceOsType";
   private DictionaryServiceDeviceOsType deviceOsType;
 
-  public DictionaryServiceOsVersionSelector() { 
+  public DictionaryServiceOsVersionSelector() {
   }
 
   public DictionaryServiceOsVersionSelector deviceOsType(DictionaryServiceDeviceOsType deviceOsType) {
@@ -52,8 +48,7 @@ public class DictionaryServiceOsVersionSelector {
    * Get deviceOsType
    * @return deviceOsType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_OS_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class DictionaryServiceOsVersionSelector {
   public void setDeviceOsType(DictionaryServiceDeviceOsType deviceOsType) {
     this.deviceOsType = deviceOsType;
   }
-
 
   @Override
   public boolean equals(Object o) {

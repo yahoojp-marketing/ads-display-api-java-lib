@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.FeedSet;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedSetServiceOperationオブジェクトは、mutate対象となる商品セットを保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSetServiceOperation object contains Item Set for mutate operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedSetServiceOperationオブジェクトは、mutate対象となる商品セットを保持します。</div> <div lang=\"en\">FeedSetServiceOperation object contains Item Set for mutate operation.</div> ")
 @JsonPropertyOrder({
   FeedSetServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   FeedSetServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("FeedSetServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedSetServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class FeedSetServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<FeedSet> operand = new ArrayList<>();
 
-  public FeedSetServiceOperation() { 
+  public FeedSetServiceOperation() {
   }
 
   public FeedSetServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class FeedSetServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class FeedSetServiceOperation {
   }
 
   public FeedSetServiceOperation addOperandItem(FeedSet operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class FeedSetServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class FeedSetServiceOperation {
   public void setOperand(List<FeedSet> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

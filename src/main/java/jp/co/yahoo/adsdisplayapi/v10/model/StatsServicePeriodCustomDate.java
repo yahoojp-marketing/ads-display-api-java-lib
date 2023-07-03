@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePeriodCustomDateは、統計情報の取得日を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePeriodCustomDate object contains date of acquisition of stats information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServicePeriodCustomDateは、統計情報の取得日を保持するオブジェクトです。</div> <div lang=\"en\">StatsServicePeriodCustomDate object contains date of acquisition of stats information.</div> ")
 @JsonPropertyOrder({
   StatsServicePeriodCustomDate.JSON_PROPERTY_END_DATE,
   StatsServicePeriodCustomDate.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("StatsServicePeriodCustomDate")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServicePeriodCustomDate {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
@@ -42,7 +38,7 @@ public class StatsServicePeriodCustomDate {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public StatsServicePeriodCustomDate() { 
+  public StatsServicePeriodCustomDate() {
   }
 
   public StatsServicePeriodCustomDate endDate(String endDate) {
@@ -55,8 +51,7 @@ public class StatsServicePeriodCustomDate {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日時&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得終了日時<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Acquisition end date of stats information<br> ∗ Format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class StatsServicePeriodCustomDate {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日時&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得開始日時<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Acquisition start date of stats information<br> ∗ Format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class StatsServicePeriodCustomDate {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

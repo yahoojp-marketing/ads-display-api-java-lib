@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServiceEstimateFlg;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServiceGender;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceGenderTargetオブジェクトは、性別ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceGenderTarget object holds configuration information of gender targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceGenderTargetオブジェクトは、性別ターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceGenderTarget object holds configuration information of gender targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceGenderTarget.JSON_PROPERTY_ESTIMATE_FLG,
   StatsServiceGenderTarget.JSON_PROPERTY_GENDER
 })
-@JsonTypeName("StatsServiceGenderTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceGenderTarget {
   public static final String JSON_PROPERTY_ESTIMATE_FLG = "estimateFlg";
   private StatsServiceEstimateFlg estimateFlg;
@@ -44,7 +40,7 @@ public class StatsServiceGenderTarget {
   public static final String JSON_PROPERTY_GENDER = "gender";
   private StatsServiceGender gender;
 
-  public StatsServiceGenderTarget() { 
+  public StatsServiceGenderTarget() {
   }
 
   public StatsServiceGenderTarget estimateFlg(StatsServiceEstimateFlg estimateFlg) {
@@ -57,8 +53,7 @@ public class StatsServiceGenderTarget {
    * Get estimateFlg
    * @return estimateFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ESTIMATE_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class StatsServiceGenderTarget {
    * Get gender
    * @return gender
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GENDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class StatsServiceGenderTarget {
   public void setGender(StatsServiceGender gender) {
     this.gender = gender;
   }
-
 
   @Override
   public boolean equals(Object o) {

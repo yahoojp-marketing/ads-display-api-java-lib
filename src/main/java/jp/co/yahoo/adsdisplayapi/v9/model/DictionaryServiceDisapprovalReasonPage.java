@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.DictionaryServiceDisapprovalReasonValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceDisapprovalReasonPage オブジェクトは、EditorialReason一覧を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceDisapprovalReasonPage object is a container of EditorialReason list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceDisapprovalReasonPage オブジェクトは、EditorialReason一覧を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceDisapprovalReasonPage object is a container of EditorialReason list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceDisapprovalReasonPage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   DictionaryServiceDisapprovalReasonPage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("DictionaryServiceDisapprovalReasonPage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceDisapprovalReasonPage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<DictionaryServiceDisapprovalReasonValue> values = null;
+  private List<DictionaryServiceDisapprovalReasonValue> values;
 
-  public DictionaryServiceDisapprovalReasonPage() { 
+  public DictionaryServiceDisapprovalReasonPage() {
   }
 
   public DictionaryServiceDisapprovalReasonPage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class DictionaryServiceDisapprovalReasonPage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class DictionaryServiceDisapprovalReasonPage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class DictionaryServiceDisapprovalReasonPage {
   public void setValues(List<DictionaryServiceDisapprovalReasonValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

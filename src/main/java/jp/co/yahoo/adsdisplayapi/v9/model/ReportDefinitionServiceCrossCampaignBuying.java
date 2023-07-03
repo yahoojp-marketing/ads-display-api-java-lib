@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceAccount;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceCrossCampaignBuyingType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceCrossCampaignBuyingは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン購入タイプを示します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※ADD時、crossCampaignTypeが&lt;code&gt;CAMPAIGN_BUYING_TYPE&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceCrossCampaignBuying indicates account and campaign purchase type that is subject to Cross-campaign Reach Report combination.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation.&lt;br&gt; *If crossCampaignType is &lt;code&gt;CAMPAIGN_BUYING_TYPE&lt;/code&gt;, this field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceCrossCampaignBuyingは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン購入タイプを示します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br> ※ADD時、crossCampaignTypeが<code>CAMPAIGN_BUYING_TYPE</code>の場合は必須です。 </div> <div lang=\"en\"> ReportDefinitionServiceCrossCampaignBuying indicates account and campaign purchase type that is subject to Cross-campaign Reach Report combination.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation.<br> *If crossCampaignType is <code>CAMPAIGN_BUYING_TYPE</code>, this field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceCrossCampaignBuying.JSON_PROPERTY_ACCOUNT,
   ReportDefinitionServiceCrossCampaignBuying.JSON_PROPERTY_CAMPAIGN_BUYING_TYPE
 })
-@JsonTypeName("ReportDefinitionServiceCrossCampaignBuying")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceCrossCampaignBuying {
   public static final String JSON_PROPERTY_ACCOUNT = "account";
   private ReportDefinitionServiceAccount account;
@@ -44,7 +40,7 @@ public class ReportDefinitionServiceCrossCampaignBuying {
   public static final String JSON_PROPERTY_CAMPAIGN_BUYING_TYPE = "campaignBuyingType";
   private ReportDefinitionServiceCrossCampaignBuyingType campaignBuyingType;
 
-  public ReportDefinitionServiceCrossCampaignBuying() { 
+  public ReportDefinitionServiceCrossCampaignBuying() {
   }
 
   public ReportDefinitionServiceCrossCampaignBuying account(ReportDefinitionServiceAccount account) {
@@ -57,8 +53,7 @@ public class ReportDefinitionServiceCrossCampaignBuying {
    * Get account
    * @return account
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class ReportDefinitionServiceCrossCampaignBuying {
    * Get campaignBuyingType
    * @return campaignBuyingType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUYING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class ReportDefinitionServiceCrossCampaignBuying {
   public void setCampaignBuyingType(ReportDefinitionServiceCrossCampaignBuyingType campaignBuyingType) {
     this.campaignBuyingType = campaignBuyingType;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupTargetServiceDayOfWeek;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceAdScheduleTargetオブジェクトは、時間帯ターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAD_SCHEDULE_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; *If targetType is AD_SCHEDULE_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceAdScheduleTargetオブジェクトは、時間帯ターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがAD_SCHEDULE_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> *If targetType is AD_SCHEDULE_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceAdScheduleTarget.JSON_PROPERTY_DAY_OF_WEEK,
   AdGroupTargetServiceAdScheduleTarget.JSON_PROPERTY_END_HOUR,
   AdGroupTargetServiceAdScheduleTarget.JSON_PROPERTY_START_HOUR
 })
-@JsonTypeName("AdGroupTargetServiceAdScheduleTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceAdScheduleTarget {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
   private AdGroupTargetServiceDayOfWeek dayOfWeek;
@@ -47,7 +43,7 @@ public class AdGroupTargetServiceAdScheduleTarget {
   public static final String JSON_PROPERTY_START_HOUR = "startHour";
   private Integer startHour;
 
-  public AdGroupTargetServiceAdScheduleTarget() { 
+  public AdGroupTargetServiceAdScheduleTarget() {
   }
 
   public AdGroupTargetServiceAdScheduleTarget dayOfWeek(AdGroupTargetServiceDayOfWeek dayOfWeek) {
@@ -60,8 +56,7 @@ public class AdGroupTargetServiceAdScheduleTarget {
    * Get dayOfWeek
    * @return dayOfWeek
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class AdGroupTargetServiceAdScheduleTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了時間（時のみ）です。&lt;br&gt; このフィールドは、ADD時は必須となり、REPLACE時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End time (hour only).&lt;br&gt; This field is required in ADD operation, and will be optional in REPLACE operation. &lt;/div&gt; 
    * @return endHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了時間（時のみ）です。<br> このフィールドは、ADD時は必須となり、REPLACE時は省略可能となります。 </div> <div lang=\"en\"> End time (hour only).<br> This field is required in ADD operation, and will be optional in REPLACE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class AdGroupTargetServiceAdScheduleTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始時間（時のみ）です。&lt;br&gt; このフィールドは、ADD時は必須となり、REPLACE時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start time (hour only).&lt;br&gt; This field is required in ADD operation, and will be optional in REPLACE operation. &lt;/div&gt; 
    * @return startHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始時間（時のみ）です。<br> このフィールドは、ADD時は必須となり、REPLACE時は省略可能となります。 </div> <div lang=\"en\"> Start time (hour only).<br> This field is required in ADD operation, and will be optional in REPLACE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class AdGroupTargetServiceAdScheduleTarget {
   public void setStartHour(Integer startHour) {
     this.startHour = startHour;
   }
-
 
   @Override
   public boolean equals(Object o) {

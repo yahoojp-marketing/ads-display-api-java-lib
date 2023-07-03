@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.StatsServicePlacementCategoryType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; StatsServicePlacementCategoryDetailTargetオブジェクトは、プレイスメントカテゴリー詳細ターゲティングの設定情報を保持します。&lt;br&gt; ※targetTypeがPLACEMENT_CATEGORY_DETAIL_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; StatsServicePlacementCategoryDetailTarget object contains information about placement category detail targeting settings.&lt;br&gt; ∗If targetType is PLACEMENT_CATEGORY_DETAIL_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> StatsServicePlacementCategoryDetailTargetオブジェクトは、プレイスメントカテゴリー詳細ターゲティングの設定情報を保持します。<br> ※targetTypeがPLACEMENT_CATEGORY_DETAIL_TARGETの場合は必須です。 </div> <div lang=\"en\"> StatsServicePlacementCategoryDetailTarget object contains information about placement category detail targeting settings.<br> ∗If targetType is PLACEMENT_CATEGORY_DETAIL_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   StatsServicePlacementCategoryDetailTarget.JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA,
   StatsServicePlacementCategoryDetailTarget.JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN,
   StatsServicePlacementCategoryDetailTarget.JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE
 })
-@JsonTypeName("StatsServicePlacementCategoryDetailTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServicePlacementCategoryDetailTarget {
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA = "placementCategoryNameJa";
   private String placementCategoryNameJa;
@@ -47,7 +43,7 @@ public class StatsServicePlacementCategoryDetailTarget {
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE = "placementCategoryType";
   private StatsServicePlacementCategoryType placementCategoryType;
 
-  public StatsServicePlacementCategoryDetailTarget() { 
+  public StatsServicePlacementCategoryDetailTarget() {
   }
 
   public StatsServicePlacementCategoryDetailTarget placementCategoryNameJa(String placementCategoryNameJa) {
@@ -60,8 +56,7 @@ public class StatsServicePlacementCategoryDetailTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリ名(日本語)です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Category name (Japanese).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return placementCategoryNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリ名(日本語)です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Category name (Japanese).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class StatsServicePlacementCategoryDetailTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリ名(英語)です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Category name (English).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return placementCategoryNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリ名(英語)です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Category name (English).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class StatsServicePlacementCategoryDetailTarget {
    * Get placementCategoryType
    * @return placementCategoryType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class StatsServicePlacementCategoryDetailTarget {
   public void setPlacementCategoryType(StatsServicePlacementCategoryType placementCategoryType) {
     this.placementCategoryType = placementCategoryType;
   }
-
 
   @Override
   public boolean equals(Object o) {

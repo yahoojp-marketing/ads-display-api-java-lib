@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
@@ -39,11 +37,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedFtpServiceMutateResponse.JSON_PROPERTY_RVAL,
   FeedFtpServiceMutateResponse.JSON_PROPERTY_TIME_TAKEN_SECONDS
 })
-@JsonTypeName("FeedFtpServiceMutateResponse")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpServiceMutateResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
   private String rid;
@@ -54,7 +51,7 @@ public class FeedFtpServiceMutateResponse {
   public static final String JSON_PROPERTY_TIME_TAKEN_SECONDS = "timeTakenSeconds";
   private BigDecimal timeTakenSeconds;
 
-  public FeedFtpServiceMutateResponse() { 
+  public FeedFtpServiceMutateResponse() {
   }
 
   public FeedFtpServiceMutateResponse errors(List<Error> errors) {
@@ -75,8 +72,7 @@ public class FeedFtpServiceMutateResponse {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,8 +98,7 @@ public class FeedFtpServiceMutateResponse {
    * Get rid
    * @return rid
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +124,7 @@ public class FeedFtpServiceMutateResponse {
    * Get rval
    * @return rval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RVAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +150,7 @@ public class FeedFtpServiceMutateResponse {
    * Get timeTakenSeconds
    * @return timeTakenSeconds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TIME_TAKEN_SECONDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,7 +164,6 @@ public class FeedFtpServiceMutateResponse {
   public void setTimeTakenSeconds(BigDecimal timeTakenSeconds) {
     this.timeTakenSeconds = timeTakenSeconds;
   }
-
 
   @Override
   public boolean equals(Object o) {

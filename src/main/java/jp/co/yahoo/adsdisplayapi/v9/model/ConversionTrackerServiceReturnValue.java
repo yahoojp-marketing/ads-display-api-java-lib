@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ConversionTrackerServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServiceReturnValueオブジェクトは、操作結果を含むコンバージョン設定のコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A container of ConversionTracker settings includes operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServiceReturnValueオブジェクトは、操作結果を含むコンバージョン設定のコンテナです。</div> <div lang=\"en\">A container of ConversionTracker settings includes operation results.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("ConversionTrackerServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<ConversionTrackerServiceValue> values = null;
+  private List<ConversionTrackerServiceValue> values;
 
-  public ConversionTrackerServiceReturnValue() { 
+  public ConversionTrackerServiceReturnValue() {
   }
 
   public ConversionTrackerServiceReturnValue values(List<ConversionTrackerServiceValue> values) {
@@ -62,8 +58,7 @@ public class ConversionTrackerServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class ConversionTrackerServiceReturnValue {
   public void setValues(List<ConversionTrackerServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

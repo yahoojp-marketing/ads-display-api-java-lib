@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceMediaAdFormatオブジェクトは、メディアフォーマットの情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceMediaAdFormat object contains the information of media format.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceMediaAdFormatオブジェクトは、メディアフォーマットの情報を保持します。</div> <div lang=\"en\">DictionaryServiceMediaAdFormat object contains the information of media format.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceMediaAdFormat.JSON_PROPERTY_AD_FORMAT,
   DictionaryServiceMediaAdFormat.JSON_PROPERTY_ASPECT,
@@ -48,8 +45,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceMediaAdFormat.JSON_PROPERTY_WIDTH,
   DictionaryServiceMediaAdFormat.JSON_PROPERTY_RICH_FORMAT
 })
-@JsonTypeName("DictionaryServiceMediaAdFormat")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceMediaAdFormat {
   public static final String JSON_PROPERTY_AD_FORMAT = "adFormat";
   private String adFormat;
@@ -102,7 +98,7 @@ public class DictionaryServiceMediaAdFormat {
   public static final String JSON_PROPERTY_RICH_FORMAT = "richFormat";
   private Boolean richFormat;
 
-  public DictionaryServiceMediaAdFormat() { 
+  public DictionaryServiceMediaAdFormat() {
   }
 
   public DictionaryServiceMediaAdFormat adFormat(String adFormat) {
@@ -115,8 +111,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ディスプレイ（画像）広告のフォーマットです。&lt;br&gt; ※YJ_1350_760, YJ_450_150は予約型広告専用のadFormatとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Format of display (image) ads.&lt;br&gt; *YJ_1350_760 and YJ_450_150 are adFormat exclusive for Guaranteed ads. &lt;/div&gt; 
    * @return adFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ディスプレイ（画像）広告のフォーマットです。<br> ※YJ_1350_760, YJ_450_150は予約型広告専用のadFormatとなります。 </div> <div lang=\"en\"> Format of display (image) ads.<br> *YJ_1350_760 and YJ_450_150 are adFormat exclusive for Guaranteed ads. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -142,8 +137,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アスペクト比対応かどうかを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether the aspect ratio is supported.&lt;/div&gt; 
    * @return aspect
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アスペクト比対応かどうかを示します。</div> <div lang=\"en\">This field indicates whether the aspect ratio is supported.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASPECT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +163,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像アスペクト比：高さ [ratio]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Image aspect ratio: height [ratio]&lt;/div&gt; 
    * @return aspectHeight
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像アスペクト比：高さ [ratio]です。</div> <div lang=\"en\">Image aspect ratio: height [ratio]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASPECT_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -196,8 +189,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アスペクト比です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Aspect ratio.&lt;/div&gt; 
    * @return aspectRatio
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アスペクト比です。</div> <div lang=\"en\">Aspect ratio.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASPECT_RATIO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,8 +215,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像アスペクト比：幅 [ratio]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Image aspect ratio: width [ratio]&lt;/div&gt; 
    * @return aspectWidth
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像アスペクト比：幅 [ratio]です。</div> <div lang=\"en\">Image aspect ratio: width [ratio]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ASPECT_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -250,8 +241,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンバナー画像である/キャンペーンバナー画像ではないことを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether it is a campaign banner image or not.&lt;/div&gt; 
    * @return campaignBanner
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンバナー画像である/キャンペーンバナー画像ではないことを示します。</div> <div lang=\"en\">This field indicates whether it is a campaign banner image or not.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -277,8 +267,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最小画像サイズ：高さ [pixel]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Minimum image size: height [pixel]&lt;/div&gt; 
    * @return height
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最小画像サイズ：高さ [pixel]です。</div> <div lang=\"en\">Minimum image size: height [pixel]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -304,8 +293,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ロゴ画像である/ロゴ画像ではないことを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether it is a logo image or not.&lt;/div&gt; 
    * @return logo
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ロゴ画像である/ロゴ画像ではないことを示します。</div> <div lang=\"en\">This field indicates whether it is a logo image or not.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -331,8 +319,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サイズ上限：高さ [pixel]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Size limit: height [pixel]&lt;/div&gt; 
    * @return maxHeight
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サイズ上限：高さ [pixel]です。</div> <div lang=\"en\">Size limit: height [pixel]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAX_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -358,8 +345,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サイズ上限：幅 [pixel]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Size limit: width [pixel]&lt;/div&gt; 
    * @return maxWidth
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サイズ上限：幅 [pixel]です。</div> <div lang=\"en\">Size limit: width [pixel]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAX_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -385,8 +371,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像の最大容量：[byte]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum image capacity: [byte]&lt;/div&gt; 
    * @return size
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像の最大容量：[byte]です。</div> <div lang=\"en\">Maximum image capacity: [byte]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -412,8 +397,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像圧縮後の容量：[byte]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Image compression capacity: [byte]&lt;/div&gt; 
    * @return sizeTo
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像圧縮後の容量：[byte]です。</div> <div lang=\"en\">Image compression capacity: [byte]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SIZE_TO)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -439,8 +423,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;静止画用の画像かどうかを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether it is a static image.&lt;/div&gt; 
    * @return staticImage
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">静止画用の画像かどうかを示します。</div> <div lang=\"en\">This field indicates whether it is a static image.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATIC_IMAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -466,8 +449,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サムネイル画像である/サムネイル画像ではないことを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether it is a thumbnail image image or not.&lt;/div&gt; 
    * @return thumbnail
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サムネイル画像である/サムネイル画像ではないことを示します。</div> <div lang=\"en\">This field indicates whether it is a thumbnail image image or not.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_THUMBNAIL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -493,8 +475,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;透過画像の許可/不許可を示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether transparent image is permitted.&lt;/div&gt; 
    * @return transparent
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">透過画像の許可/不許可を示します。</div> <div lang=\"en\">This field indicates whether transparent image is permitted.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRANSPARENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -520,8 +501,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最小画像サイズ：幅 [pixel]です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Minimum image size: width [pixel]&lt;/div&gt; 
    * @return width
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最小画像サイズ：幅 [pixel]です。</div> <div lang=\"en\">Minimum image size: width [pixel]</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -547,8 +527,7 @@ public class DictionaryServiceMediaAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リッチフォーマット用の画像かどうかを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Indicates whether the image is for rich format.&lt;/div&gt; 
    * @return richFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リッチフォーマット用の画像かどうかを示します。</div> <div lang=\"en\">Indicates whether the image is for rich format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RICH_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -562,7 +541,6 @@ public class DictionaryServiceMediaAdFormat {
   public void setRichFormat(Boolean richFormat) {
     this.richFormat = richFormat;
   }
-
 
   @Override
   public boolean equals(Object o) {

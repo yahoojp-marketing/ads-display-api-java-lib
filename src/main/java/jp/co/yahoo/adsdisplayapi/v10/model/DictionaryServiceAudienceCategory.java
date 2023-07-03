@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceAudienceCategoryオブジェクトは、オーディエンスカテゴリー情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAudienceCategory object contains audience category information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceAudienceCategoryオブジェクトは、オーディエンスカテゴリー情報を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceAudienceCategory object contains audience category information.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceAudienceCategory.JSON_PROPERTY_AUDIENCE_CATEGORY_TYPE,
   DictionaryServiceAudienceCategory.JSON_PROPERTY_IS_GUARANTEED_PERMITTED,
@@ -40,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceAudienceCategory.JSON_PROPERTY_NAME,
   DictionaryServiceAudienceCategory.JSON_PROPERTY_REACH
 })
-@JsonTypeName("DictionaryServiceAudienceCategory")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceAudienceCategory {
   public static final String JSON_PROPERTY_AUDIENCE_CATEGORY_TYPE = "audienceCategoryType";
   private String audienceCategoryType;
@@ -50,7 +46,7 @@ public class DictionaryServiceAudienceCategory {
   private String isGuaranteedPermitted;
 
   public static final String JSON_PROPERTY_CHILD = "child";
-  private List<DictionaryServiceAudienceCategory> child = null;
+  private List<DictionaryServiceAudienceCategory> child;
 
   public static final String JSON_PROPERTY_CODE = "code";
   private String code;
@@ -64,7 +60,7 @@ public class DictionaryServiceAudienceCategory {
   public static final String JSON_PROPERTY_REACH = "reach";
   private Long reach;
 
-  public DictionaryServiceAudienceCategory() { 
+  public DictionaryServiceAudienceCategory() {
   }
 
   public DictionaryServiceAudienceCategory audienceCategoryType(String audienceCategoryType) {
@@ -77,8 +73,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;提供されるカテゴリの種別を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience category information.&lt;/div&gt; &lt;dl class&#x3D;term&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;AFFINITY&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;興味関心です。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Affinity.&lt;/span&gt;&lt;/dd&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;IN_MARKET&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;購買意向です。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;In-market.&lt;/span&gt;&lt;/dd&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;ATTRIBUTE_LIFE_EVENTS&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;属性ライフイベントです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Attribute-life-events.&lt;/span&gt;&lt;/dd&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;UNKNOWN&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;未知の値です。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Unknown Value.&lt;/span&gt;&lt;/dd&gt; &lt;/dl&gt; 
    * @return audienceCategoryType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">提供されるカテゴリの種別を表します。</div> <div lang=\"en\">Audience category information.</div> <dl class=term>   <dt class=\"term__item\">AFFINITY</dt>   <dd class=\"term__desc\"><span lang=\"ja\">興味関心です。</span><span lang=\"en\">Affinity.</span></dd>   <dt class=\"term__item\">IN_MARKET</dt>   <dd class=\"term__desc\"><span lang=\"ja\">購買意向です。</span><span lang=\"en\">In-market.</span></dd>   <dt class=\"term__item\">ATTRIBUTE_LIFE_EVENTS</dt>   <dd class=\"term__desc\"><span lang=\"ja\">属性ライフイベントです。</span><span lang=\"en\">Attribute-life-events.</span></dd>   <dt class=\"term__item\">UNKNOWN</dt>   <dd class=\"term__desc\"><span lang=\"ja\">未知の値です。</span><span lang=\"en\">Unknown Value.</span></dd> </dl> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_CATEGORY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -104,8 +99,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;予約型販売対象を表します&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Indicates that it is subject to guaranteed sale.&lt;/div&gt; 
    * @return isGuaranteedPermitted
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">予約型販売対象を表します</div> <div lang=\"en\">Indicates that it is subject to guaranteed sale.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_GUARANTEED_PERMITTED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,8 +133,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;子要素としてDictionaryServiceAudienceCategoryオブジェクトを使用します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceAudienceCategory object is used.&lt;/div&gt; 
    * @return child
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">子要素としてDictionaryServiceAudienceCategoryオブジェクトを使用します。</div> <div lang=\"en\">DictionaryServiceAudienceCategory object is used.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CHILD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -166,8 +159,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カテゴリコードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Category code&lt;/div&gt; 
    * @return code
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カテゴリコードです。</div> <div lang=\"en\">Category code</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -193,8 +185,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カテゴリ名称です。（カテゴリ名称、サブカテゴリ名称を含めた正式名称です。）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Category name (A formal name including category name and sub category name.)&lt;/div&gt; 
    * @return fullName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名称です。（カテゴリ名称、サブカテゴリ名称を含めた正式名称です。）</div> <div lang=\"en\">Category name (A formal name including category name and sub category name.)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -220,8 +211,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サブカテゴリ名称です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Sub-category name&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サブカテゴリ名称です。</div> <div lang=\"en\">Sub-category name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -247,8 +237,7 @@ public class DictionaryServiceAudienceCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リーチ数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reach record number&lt;/div&gt; 
    * @return reach
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">リーチ数です。</div> <div lang=\"en\">Reach record number</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -262,7 +251,6 @@ public class DictionaryServiceAudienceCategory {
   public void setReach(Long reach) {
     this.reach = reach;
   }
-
 
   @Override
   public boolean equals(Object o) {

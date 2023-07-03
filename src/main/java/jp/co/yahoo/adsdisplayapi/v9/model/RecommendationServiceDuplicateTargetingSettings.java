@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceDuplicateTargetingSettingsAdGroup;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDuplicateTargetingSettingsオブジェクトは、ターゲティング設定が重複している広告グループに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDuplicateTargetingSettings objects describes recommendation information about the ad group with duplicate targeting settings.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceDuplicateTargetingSettingsオブジェクトは、ターゲティング設定が重複している広告グループに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceDuplicateTargetingSettings objects describes recommendation information about the ad group with duplicate targeting settings.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceDuplicateTargetingSettings.JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS_AD_GROUP_LIST
 })
-@JsonTypeName("RecommendationServiceDuplicateTargetingSettings")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceDuplicateTargetingSettings {
   public static final String JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS_AD_GROUP_LIST = "duplicateTargetingSettingsAdGroupList";
-  private List<RecommendationServiceDuplicateTargetingSettingsAdGroup> duplicateTargetingSettingsAdGroupList = null;
+  private List<RecommendationServiceDuplicateTargetingSettingsAdGroup> duplicateTargetingSettingsAdGroupList;
 
-  public RecommendationServiceDuplicateTargetingSettings() { 
+  public RecommendationServiceDuplicateTargetingSettings() {
   }
 
   public RecommendationServiceDuplicateTargetingSettings duplicateTargetingSettingsAdGroupList(List<RecommendationServiceDuplicateTargetingSettingsAdGroup> duplicateTargetingSettingsAdGroupList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceDuplicateTargetingSettings {
    * Get duplicateTargetingSettingsAdGroupList
    * @return duplicateTargetingSettingsAdGroupList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS_AD_GROUP_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceDuplicateTargetingSettings {
   public void setDuplicateTargetingSettingsAdGroupList(List<RecommendationServiceDuplicateTargetingSettingsAdGroup> duplicateTargetingSettingsAdGroupList) {
     this.duplicateTargetingSettingsAdGroupList = duplicateTargetingSettingsAdGroupList;
   }
-
 
   @Override
   public boolean equals(Object o) {

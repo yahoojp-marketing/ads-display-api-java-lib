@@ -20,23 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDailyBudgetOverCampaignオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDailyBudgetOverCampaign object describes detailed information of recommendation about campaigns that reached the daily budget.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceDailyBudgetOverCampaignオブジェクトは、1日の予算上限に達したキャンペーンに関する最適化提案の詳細情報を表します。</div> <div lang=\"en\">RecommendationServiceDailyBudgetOverCampaign object describes detailed information of recommendation about campaigns that reached the daily budget.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceDailyBudgetOverCampaign.JSON_PROPERTY_RECOMMENDATION_ID,
   RecommendationServiceDailyBudgetOverCampaign.JSON_PROPERTY_CAMPAIGN_ID,
   RecommendationServiceDailyBudgetOverCampaign.JSON_PROPERTY_CAMPAIGN_NAME,
   RecommendationServiceDailyBudgetOverCampaign.JSON_PROPERTY_CURRENT_BUDGET
 })
-@JsonTypeName("RecommendationServiceDailyBudgetOverCampaign")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceDailyBudgetOverCampaign {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
   private Long recommendationId;
@@ -50,7 +46,7 @@ public class RecommendationServiceDailyBudgetOverCampaign {
   public static final String JSON_PROPERTY_CURRENT_BUDGET = "currentBudget";
   private Long currentBudget;
 
-  public RecommendationServiceDailyBudgetOverCampaign() { 
+  public RecommendationServiceDailyBudgetOverCampaign() {
   }
 
   public RecommendationServiceDailyBudgetOverCampaign recommendationId(Long recommendationId) {
@@ -63,8 +59,7 @@ public class RecommendationServiceDailyBudgetOverCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 </div> <div lang=\"en\"> Recommendation ID.<br> When optimizationScoreLift isn't null, the system will assign a common recommendation ID to the suggestion for the campaign. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class RecommendationServiceDailyBudgetOverCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> </div> <div lang=\"en\"> Campaign ID.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,8 +111,7 @@ public class RecommendationServiceDailyBudgetOverCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> </div> <div lang=\"en\"> Campaign Name.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +137,7 @@ public class RecommendationServiceDailyBudgetOverCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 現在のキャンペーン予算です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Current campaign budget. &lt;/div&gt; 
    * @return currentBudget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 現在のキャンペーン予算です。 </div> <div lang=\"en\"> Current campaign budget. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CURRENT_BUDGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,7 +151,6 @@ public class RecommendationServiceDailyBudgetOverCampaign {
   public void setCurrentBudget(Long currentBudget) {
     this.currentBudget = currentBudget;
   }
-
 
   @Override
   public boolean equals(Object o) {
