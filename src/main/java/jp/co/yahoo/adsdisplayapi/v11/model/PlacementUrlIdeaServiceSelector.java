@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,21 +28,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep get method search conditions (execution parameter).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">The objects to keep get method search conditions (execution parameter).</div> ")
 @JsonPropertyOrder({
   PlacementUrlIdeaServiceSelector.JSON_PROPERTY_KEYWORD,
   PlacementUrlIdeaServiceSelector.JSON_PROPERTY_SITE_CATEGORIES,
   PlacementUrlIdeaServiceSelector.JSON_PROPERTY_START_INDEX,
   PlacementUrlIdeaServiceSelector.JSON_PROPERTY_NUMBER_RESULTS
 })
-@JsonTypeName("PlacementUrlIdeaServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlIdeaServiceSelector {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
   private String keyword;
 
   public static final String JSON_PROPERTY_SITE_CATEGORIES = "siteCategories";
-  private List<String> siteCategories = null;
+  private List<String> siteCategories;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
@@ -52,7 +48,7 @@ public class PlacementUrlIdeaServiceSelector {
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
 
-  public PlacementUrlIdeaServiceSelector() { 
+  public PlacementUrlIdeaServiceSelector() {
   }
 
   public PlacementUrlIdeaServiceSelector keyword(String keyword) {
@@ -65,8 +61,7 @@ public class PlacementUrlIdeaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索キーワードの配列です。&lt;br&gt; ・URLを検索するためのキーワードです。&lt;br&gt; ・部分一致です。&lt;br&gt; ・スペース区切りでAND検索です。&lt;br&gt; ・最大文字数250です。&lt;br&gt; ・スペース区切りでの単語数は最大10個です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Array of Search keyword.&lt;br&gt; ・Keyword to search the URL&lt;br&gt; ・Broad match&lt;br&gt; ・Search all keywords (AND), separated by spaces&lt;br&gt; ・Maximum of 250 characters&lt;br&gt; ・Maximum of 10 spaces to separate the words &lt;/div&gt; 
    * @return keyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索キーワードの配列です。<br> ・URLを検索するためのキーワードです。<br> ・部分一致です。<br> ・スペース区切りでAND検索です。<br> ・最大文字数250です。<br> ・スペース区切りでの単語数は最大10個です。 </div> <div lang=\"en\"> Array of Search keyword.<br> ・Keyword to search the URL<br> ・Broad match<br> ・Search all keywords (AND), separated by spaces<br> ・Maximum of 250 characters<br> ・Maximum of 10 spaces to separate the words </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,8 +95,7 @@ public class PlacementUrlIdeaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリの配列です。&lt;br&gt; ・URLのカテゴリです。&lt;br&gt; ・完全一致です。&lt;br&gt; ・複数指定でOR検索です。&lt;br&gt; ・TC-SC-xxxxxxで現される規定値です。&lt;br&gt; ・DicitonaryServiceから返ってくるTC-SC-xxxxxxをそのまま指定です。&lt;br&gt; ・最大50件です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Array of categories.&lt;br&gt; ・Category of URL&lt;br&gt; ・Exact match&lt;br&gt; ・Search multiple specific keywords (OR)&lt;br&gt; ・From value: TC-SC-xxxxxx&lt;br&gt; ・Choose the TC-SC-xxxxxx value from DictionaryService&lt;br&gt; ・Maximum of 50 cases &lt;/div&gt; 
    * @return siteCategories
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリの配列です。<br> ・URLのカテゴリです。<br> ・完全一致です。<br> ・複数指定でOR検索です。<br> ・TC-SC-xxxxxxで現される規定値です。<br> ・DicitonaryServiceから返ってくるTC-SC-xxxxxxをそのまま指定です。<br> ・最大50件です。 </div> <div lang=\"en\"> Array of categories.<br> ・Category of URL<br> ・Exact match<br> ・Search multiple specific keywords (OR)<br> ・From value: TC-SC-xxxxxx<br> ・Choose the TC-SC-xxxxxx value from DictionaryService<br> ・Maximum of 50 cases </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SITE_CATEGORIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,8 +122,7 @@ public class PlacementUrlIdeaServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class PlacementUrlIdeaServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,7 +164,6 @@ public class PlacementUrlIdeaServiceSelector {
   public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
-
 
   @Override
   public boolean equals(Object o) {

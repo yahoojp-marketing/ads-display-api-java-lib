@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceUpdateAdCreativeList;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceUpdateAdCreativeオブジェクトは、画像・動画の更新を推奨する広告に関する情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The RecommendationServiceUpdateAdCreative object contains ads that have recommendations for updating images or videos.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceUpdateAdCreativeオブジェクトは、画像・動画の更新を推奨する広告に関する情報を表します。</div> <div lang=\"en\">The RecommendationServiceUpdateAdCreative object contains ads that have recommendations for updating images or videos.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceUpdateAdCreative.JSON_PROPERTY_UPDATE_AD_CREATIVE_LIST
 })
-@JsonTypeName("RecommendationServiceUpdateAdCreative")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceUpdateAdCreative {
   public static final String JSON_PROPERTY_UPDATE_AD_CREATIVE_LIST = "updateAdCreativeList";
-  private List<RecommendationServiceUpdateAdCreativeList> updateAdCreativeList = null;
+  private List<RecommendationServiceUpdateAdCreativeList> updateAdCreativeList;
 
-  public RecommendationServiceUpdateAdCreative() { 
+  public RecommendationServiceUpdateAdCreative() {
   }
 
   public RecommendationServiceUpdateAdCreative updateAdCreativeList(List<RecommendationServiceUpdateAdCreativeList> updateAdCreativeList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceUpdateAdCreative {
    * Get updateAdCreativeList
    * @return updateAdCreativeList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPDATE_AD_CREATIVE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceUpdateAdCreative {
   public void setUpdateAdCreativeList(List<RecommendationServiceUpdateAdCreativeList> updateAdCreativeList) {
     this.updateAdCreativeList = updateAdCreativeList;
   }
-
 
   @Override
   public boolean equals(Object o) {

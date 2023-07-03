@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceCpvBiddingSchemeオブジェクトは、キャンペーン最大入札価格(CPV)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがCPVの場合、指定必須となります。     &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceCpvBiddingScheme object holds configuration information of Max bid of campaign (CPV).&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *If BiddingStrategyType is CPV, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceCpvBiddingSchemeオブジェクトは、キャンペーン最大入札価格(CPV)の設定情報を表します。<br> このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。<br> ※BiddingStrategyTypeがCPVの場合、指定必須となります。     </div> <div lang=\"en\"> CampaignServiceCpvBiddingScheme object holds configuration information of Max bid of campaign (CPV).<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *If BiddingStrategyType is CPV, this field is required. </div> ")
 @JsonPropertyOrder({
   CampaignServiceCpvBiddingScheme.JSON_PROPERTY_CPV
 })
-@JsonTypeName("CampaignServiceCpvBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceCpvBiddingScheme {
   public static final String JSON_PROPERTY_CPV = "cpv";
   private Long cpv;
 
-  public CampaignServiceCpvBiddingScheme() { 
+  public CampaignServiceCpvBiddingScheme() {
   }
 
   public CampaignServiceCpvBiddingScheme cpv(Long cpv) {
@@ -51,8 +47,7 @@ public class CampaignServiceCpvBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン最大入札価格(CPV)です。&lt;br&gt; このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of campaign (CPV). &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return cpv
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン最大入札価格(CPV)です。<br> このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> Max bid of campaign (CPV). <br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPV)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class CampaignServiceCpvBiddingScheme {
   public void setCpv(Long cpv) {
     this.cpv = cpv;
   }
-
 
   @Override
   public boolean equals(Object o) {

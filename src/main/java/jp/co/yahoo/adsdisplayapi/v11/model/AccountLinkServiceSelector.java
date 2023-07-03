@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AccountLinkServiceAccountStatus;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountLinkServiceSelectorオブジェクトは、取得するアカウントリンク情報を指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountLinkServiceSelector object is used to select account link for acquisition.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountLinkServiceSelectorオブジェクトは、取得するアカウントリンク情報を指定します。</div> <div lang=\"en\">The AccountLinkServiceSelector object is used to select account link for acquisition.</div> ")
 @JsonPropertyOrder({
   AccountLinkServiceSelector.JSON_PROPERTY_MANAGER_ACCOUNT_ID,
   AccountLinkServiceSelector.JSON_PROPERTY_ACCOUNT_STATUSES,
@@ -40,14 +37,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountLinkServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AccountLinkServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AccountLinkServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountLinkServiceSelector {
   public static final String JSON_PROPERTY_MANAGER_ACCOUNT_ID = "managerAccountId";
   private Long managerAccountId;
 
   public static final String JSON_PROPERTY_ACCOUNT_STATUSES = "accountStatuses";
-  private List<AccountLinkServiceAccountStatus> accountStatuses = null;
+  private List<AccountLinkServiceAccountStatus> accountStatuses;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_SHARING_ENABLED = "audienceListSharingEnabled";
   private AccountLinkServiceAudienceListSharingEnabled audienceListSharingEnabled;
@@ -58,7 +54,7 @@ public class AccountLinkServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AccountLinkServiceSelector() { 
+  public AccountLinkServiceSelector() {
   }
 
   public AccountLinkServiceSelector managerAccountId(Long managerAccountId) {
@@ -71,8 +67,7 @@ public class AccountLinkServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MCCアカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;MCC Account ID.&lt;/div&gt; 
    * @return managerAccountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">MCCアカウントIDです。</div> <div lang=\"en\">MCC Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_MANAGER_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -106,8 +101,7 @@ public class AccountLinkServiceSelector {
    * Get accountStatuses
    * @return accountStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class AccountLinkServiceSelector {
    * Get audienceListSharingEnabled
    * @return audienceListSharingEnabled
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SHARING_ENABLED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,8 +155,7 @@ public class AccountLinkServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,8 +182,7 @@ public class AccountLinkServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -205,7 +196,6 @@ public class AccountLinkServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

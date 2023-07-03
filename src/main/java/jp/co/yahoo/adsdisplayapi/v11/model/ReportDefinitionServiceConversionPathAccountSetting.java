@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceAccount;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。 </div> <div lang=\"en\"> ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceConversionPathAccountSetting.JSON_PROPERTY_BASE_ACCOUNT,
   ReportDefinitionServiceConversionPathAccountSetting.JSON_PROPERTY_SUB_ACCOUNTS
 })
-@JsonTypeName("ReportDefinitionServiceConversionPathAccountSetting")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceConversionPathAccountSetting {
   public static final String JSON_PROPERTY_BASE_ACCOUNT = "baseAccount";
   private ReportDefinitionServiceAccount baseAccount;
 
   public static final String JSON_PROPERTY_SUB_ACCOUNTS = "subAccounts";
-  private List<ReportDefinitionServiceAccount> subAccounts = null;
+  private List<ReportDefinitionServiceAccount> subAccounts;
 
-  public ReportDefinitionServiceConversionPathAccountSetting() { 
+  public ReportDefinitionServiceConversionPathAccountSetting() {
   }
 
   public ReportDefinitionServiceConversionPathAccountSetting baseAccount(ReportDefinitionServiceAccount baseAccount) {
@@ -58,8 +54,7 @@ public class ReportDefinitionServiceConversionPathAccountSetting {
    * Get baseAccount
    * @return baseAccount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BASE_ACCOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class ReportDefinitionServiceConversionPathAccountSetting {
    * Get subAccounts
    * @return subAccounts
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SUB_ACCOUNTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class ReportDefinitionServiceConversionPathAccountSetting {
   public void setSubAccounts(List<ReportDefinitionServiceAccount> subAccounts) {
     this.subAccounts = subAccounts;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceJobStatus;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceListServiceUploadUserListUploadType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceUploadUserListJobオブジェクトは、ユーザーリストのアップロードジョブの処理状況を示すオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceUploadUserListJob object indicates the processing status of user list upload.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListServiceUploadUserListJobオブジェクトは、ユーザーリストのアップロードジョブの処理状況を示すオブジェクトです。</div> <div lang=\"en\">AudienceListServiceUploadUserListJob object indicates the processing status of user list upload.</div> ")
 @JsonPropertyOrder({
   AudienceListServiceUploadUserListJob.JSON_PROPERTY_UPLOAD_JOB_ID,
   AudienceListServiceUploadUserListJob.JSON_PROPERTY_RETARGETING_TAG_ID,
@@ -40,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceUploadUserListJob.JSON_PROPERTY_RECEIVED_DATE,
   AudienceListServiceUploadUserListJob.JSON_PROPERTY_JOB_STATUS
 })
-@JsonTypeName("AudienceListServiceUploadUserListJob")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceUploadUserListJob {
   public static final String JSON_PROPERTY_UPLOAD_JOB_ID = "uploadJobId";
   private String uploadJobId;
@@ -64,7 +60,7 @@ public class AudienceListServiceUploadUserListJob {
   public static final String JSON_PROPERTY_JOB_STATUS = "jobStatus";
   private AudienceListServiceJobStatus jobStatus;
 
-  public AudienceListServiceUploadUserListJob() { 
+  public AudienceListServiceUploadUserListJob() {
   }
 
   public AudienceListServiceUploadUserListJob uploadJobId(String uploadJobId) {
@@ -77,8 +73,7 @@ public class AudienceListServiceUploadUserListJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload job ID.&lt;/div&gt; 
    * @return uploadJobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロードジョブIDです。</div> <div lang=\"en\">Upload job ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -104,8 +99,7 @@ public class AudienceListServiceUploadUserListJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サイトリターゲティングのタグIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tag ID for site retargeting.&lt;/div&gt; 
    * @return retargetingTagId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サイトリターゲティングのタグIDです。</div> <div lang=\"en\">Tag ID for site retargeting.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -131,8 +125,7 @@ public class AudienceListServiceUploadUserListJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">オーディエンスリストIDです。</div> <div lang=\"en\">Audience list ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -158,8 +151,7 @@ public class AudienceListServiceUploadUserListJob {
    * Get uploadType
    * @return uploadType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -185,8 +177,7 @@ public class AudienceListServiceUploadUserListJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード日時&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload date and time.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return uploadSubmitDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロード日時</div> <div lang=\"en\">Upload date and time.</div> <br>Format: yyyyMMddHHmmss ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_SUBMIT_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,8 +203,7 @@ public class AudienceListServiceUploadUserListJob {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード受付完了日時&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload job completion date and time.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return receivedDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロード受付完了日時</div> <div lang=\"en\">Upload job completion date and time.</div> <br>Format: yyyyMMddHHmmss ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECEIVED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -239,8 +229,7 @@ public class AudienceListServiceUploadUserListJob {
    * Get jobStatus
    * @return jobStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -254,7 +243,6 @@ public class AudienceListServiceUploadUserListJob {
   public void setJobStatus(AudienceListServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

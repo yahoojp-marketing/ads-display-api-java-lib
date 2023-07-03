@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.GuaranteedCampaignServiceFrequencyLevel;
 import jp.co.yahoo.adsdisplayapi.v11.model.GuaranteedCampaignServiceFrequencyTimeUnit;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   GuaranteedCampaignServiceViewableFrequencyCap.JSON_PROPERTY_FREQUENCY_LEVEL,
   GuaranteedCampaignServiceViewableFrequencyCap.JSON_PROPERTY_FREQUENCY_TIME_UNIT,
   GuaranteedCampaignServiceViewableFrequencyCap.JSON_PROPERTY_V_IMPS
 })
-@JsonTypeName("GuaranteedCampaignServiceViewableFrequencyCap")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedCampaignServiceViewableFrequencyCap {
   public static final String JSON_PROPERTY_FREQUENCY_LEVEL = "frequencyLevel";
   private GuaranteedCampaignServiceFrequencyLevel frequencyLevel;
@@ -48,7 +44,7 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
   public static final String JSON_PROPERTY_V_IMPS = "vImps";
   private Long vImps;
 
-  public GuaranteedCampaignServiceViewableFrequencyCap() { 
+  public GuaranteedCampaignServiceViewableFrequencyCap() {
   }
 
   public GuaranteedCampaignServiceViewableFrequencyCap frequencyLevel(GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
@@ -61,8 +57,7 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
    * Get frequencyLevel
    * @return frequencyLevel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FREQUENCY_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,8 +83,7 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
    * Get frequencyTimeUnit
    * @return frequencyTimeUnit
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FREQUENCY_TIME_UNIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,8 +109,7 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 同一ユーザに対する広告の最大ビューアブルインプレッション数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Maximum number of ad viewable impressions to same user.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return vImps
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 同一ユーザに対する広告の最大ビューアブルインプレッション数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Maximum number of ad viewable impressions to same user.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_V_IMPS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,7 +123,6 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
   public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceDataオブジェクトは、オーディエンスリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceData object displays the audience list. &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceDataオブジェクトは、オーディエンスリストを表します。<br> このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> AudienceListServiceData object displays the audience list. <br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceData.JSON_PROPERTY_AUDIENCE_LIST_ID,
   AudienceListServiceData.JSON_PROPERTY_AUDIENCE_LIST_NAME
 })
-@JsonTypeName("AudienceListServiceData")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceData {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
   private Long audienceListId;
@@ -42,7 +38,7 @@ public class AudienceListServiceData {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
   private String audienceListName;
 
-  public AudienceListServiceData() { 
+  public AudienceListServiceData() {
   }
 
   public AudienceListServiceData audienceListId(Long audienceListId) {
@@ -55,8 +51,7 @@ public class AudienceListServiceData {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 組み合わせ対象のオーディエンスリストIDです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list ID that is subject to the combination.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 組み合わせ対象のオーディエンスリストIDです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Audience list ID that is subject to the combination.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class AudienceListServiceData {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;組み合わせ対象のオーディエンスリストの名前です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name that is subject to the combination.&lt;/div&gt; 
    * @return audienceListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">組み合わせ対象のオーディエンスリストの名前です。</div> <div lang=\"en\">Audience list name that is subject to the combination.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class AudienceListServiceData {
   public void setAudienceListName(String audienceListName) {
     this.audienceListName = audienceListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

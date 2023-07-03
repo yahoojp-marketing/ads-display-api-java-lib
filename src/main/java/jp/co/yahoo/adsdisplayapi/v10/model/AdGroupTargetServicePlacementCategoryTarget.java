@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServicePlacementCategoryTargetオブジェクトは、プレイスメントカテゴリーターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがPLACEMENT_CATEGORY_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServicePlacementCategoryTarget object contains information about placement category targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is PLACEMENT_CATEGORY_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServicePlacementCategoryTargetオブジェクトは、プレイスメントカテゴリーターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがPLACEMENT_CATEGORY_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServicePlacementCategoryTarget object contains information about placement category targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is PLACEMENT_CATEGORY_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServicePlacementCategoryTarget.JSON_PROPERTY_PLACEMENT_CATEGORY_LIST_NAME
 })
-@JsonTypeName("AdGroupTargetServicePlacementCategoryTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServicePlacementCategoryTarget {
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_LIST_NAME = "placementCategoryListName";
   private String placementCategoryListName;
 
-  public AdGroupTargetServicePlacementCategoryTarget() { 
+  public AdGroupTargetServicePlacementCategoryTarget() {
   }
 
   public AdGroupTargetServicePlacementCategoryTarget placementCategoryListName(String placementCategoryListName) {
@@ -51,8 +47,7 @@ public class AdGroupTargetServicePlacementCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; プレイスメントカテゴリリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Placement category list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return placementCategoryListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> プレイスメントカテゴリリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Placement category list name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AdGroupTargetServicePlacementCategoryTarget {
   public void setPlacementCategoryListName(String placementCategoryListName) {
     this.placementCategoryListName = placementCategoryListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

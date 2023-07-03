@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceThirdPartyTrackingDomainオブジェクトは第三者計測スクリプトタグのsrcで利用可能なドメインを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceThirdPartyTrackingDomain object indicates the domain that can be used for the src of third party tracking scripting tag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceThirdPartyTrackingDomainオブジェクトは第三者計測スクリプトタグのsrcで利用可能なドメインを示します。</div> <div lang=\"en\">DictionaryServiceThirdPartyTrackingDomain object indicates the domain that can be used for the src of third party tracking scripting tag.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceThirdPartyTrackingDomain.JSON_PROPERTY_DOMAIN,
   DictionaryServiceThirdPartyTrackingDomain.JSON_PROPERTY_VENDOR,
   DictionaryServiceThirdPartyTrackingDomain.JSON_PROPERTY_VENDOR_NAME
 })
-@JsonTypeName("DictionaryServiceThirdPartyTrackingDomain")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceThirdPartyTrackingDomain {
   public static final String JSON_PROPERTY_DOMAIN = "domain";
   private String domain;
@@ -46,7 +42,7 @@ public class DictionaryServiceThirdPartyTrackingDomain {
   public static final String JSON_PROPERTY_VENDOR_NAME = "vendorName";
   private String vendorName;
 
-  public DictionaryServiceThirdPartyTrackingDomain() { 
+  public DictionaryServiceThirdPartyTrackingDomain() {
   }
 
   public DictionaryServiceThirdPartyTrackingDomain domain(String domain) {
@@ -59,8 +55,7 @@ public class DictionaryServiceThirdPartyTrackingDomain {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ドメイン&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Domain&lt;/div&gt; 
    * @return domain
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ドメイン</div> <div lang=\"en\">Domain</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DOMAIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class DictionaryServiceThirdPartyTrackingDomain {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;第三者計測ベンダー&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Third Party Tracking vendor&lt;/div&gt; 
    * @return vendor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">第三者計測ベンダー</div> <div lang=\"en\">Third Party Tracking vendor</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VENDOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class DictionaryServiceThirdPartyTrackingDomain {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;第三者計測ベンダーの論理名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Logical name of Third Party Tracking vendor&lt;/div&gt; 
    * @return vendorName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">第三者計測ベンダーの論理名</div> <div lang=\"en\">Logical name of Third Party Tracking vendor</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VENDOR_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class DictionaryServiceThirdPartyTrackingDomain {
   public void setVendorName(String vendorName) {
     this.vendorName = vendorName;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceAdType;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceBannerImageAd;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceBannerVideoAd;
@@ -39,7 +37,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceAd object is a container for storing ads.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> AdGroupAdServiceAd object is a container for storing ads.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceAd.JSON_PROPERTY_AD_TYPE,
   AdGroupAdServiceAd.JSON_PROPERTY_BANNER_IMAGE_AD,
@@ -53,8 +50,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceAd.JSON_PROPERTY_TEXT_AD,
   AdGroupAdServiceAd.JSON_PROPERTY_CAROUSEL_AD
 })
-@JsonTypeName("AdGroupAdServiceAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceAd {
   public static final String JSON_PROPERTY_AD_TYPE = "adType";
   private AdGroupAdServiceAdType adType;
@@ -89,7 +85,7 @@ public class AdGroupAdServiceAd {
   public static final String JSON_PROPERTY_CAROUSEL_AD = "carouselAd";
   private AdGroupAdServiceCarouselAd carouselAd;
 
-  public AdGroupAdServiceAd() { 
+  public AdGroupAdServiceAd() {
   }
 
   public AdGroupAdServiceAd adType(AdGroupAdServiceAdType adType) {
@@ -102,8 +98,7 @@ public class AdGroupAdServiceAd {
    * Get adType
    * @return adType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +124,7 @@ public class AdGroupAdServiceAd {
    * Get bannerImageAd
    * @return bannerImageAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BANNER_IMAGE_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +150,7 @@ public class AdGroupAdServiceAd {
    * Get bannerVideoAd
    * @return bannerVideoAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BANNER_VIDEO_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -183,8 +176,7 @@ public class AdGroupAdServiceAd {
    * Get dynamicAd
    * @return dynamicAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DYNAMIC_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,8 +202,7 @@ public class AdGroupAdServiceAd {
    * Get mobileAd
    * @return mobileAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MOBILE_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -237,8 +228,7 @@ public class AdGroupAdServiceAd {
    * Get posAd
    * @return posAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_POS_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -264,8 +254,7 @@ public class AdGroupAdServiceAd {
    * Get responsiveImageAd
    * @return responsiveImageAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RESPONSIVE_IMAGE_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,8 +280,7 @@ public class AdGroupAdServiceAd {
    * Get responsiveVideoAd
    * @return responsiveVideoAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RESPONSIVE_VIDEO_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -318,8 +306,7 @@ public class AdGroupAdServiceAd {
    * Get staticFrameAd
    * @return staticFrameAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATIC_FRAME_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -345,8 +332,7 @@ public class AdGroupAdServiceAd {
    * Get textAd
    * @return textAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -372,8 +358,7 @@ public class AdGroupAdServiceAd {
    * Get carouselAd
    * @return carouselAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAROUSEL_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -387,7 +372,6 @@ public class AdGroupAdServiceAd {
   public void setCarouselAd(AdGroupAdServiceCarouselAd carouselAd) {
     this.carouselAd = carouselAd;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.CampaignServiceConversionOptimizerTrainingStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceConversionOptimizerは、コンバージョン最適化制御を保持するオブジェクトです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionOptimizer retains conversion optimization control.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceConversionOptimizerは、コンバージョン最適化制御を保持するオブジェクトです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> CampaignServiceConversionOptimizer retains conversion optimization control.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   CampaignServiceConversionOptimizer.JSON_PROPERTY_CONVERSION_OPTIMIZER_TRAINING_STATUS
 })
-@JsonTypeName("CampaignServiceConversionOptimizer")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceConversionOptimizer {
   public static final String JSON_PROPERTY_CONVERSION_OPTIMIZER_TRAINING_STATUS = "conversionOptimizerTrainingStatus";
   private CampaignServiceConversionOptimizerTrainingStatus conversionOptimizerTrainingStatus;
 
-  public CampaignServiceConversionOptimizer() { 
+  public CampaignServiceConversionOptimizer() {
   }
 
   public CampaignServiceConversionOptimizer conversionOptimizerTrainingStatus(CampaignServiceConversionOptimizerTrainingStatus conversionOptimizerTrainingStatus) {
@@ -52,8 +48,7 @@ public class CampaignServiceConversionOptimizer {
    * Get conversionOptimizerTrainingStatus
    * @return conversionOptimizerTrainingStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_OPTIMIZER_TRAINING_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class CampaignServiceConversionOptimizer {
   public void setConversionOptimizerTrainingStatus(CampaignServiceConversionOptimizerTrainingStatus conversionOptimizerTrainingStatus) {
     this.conversionOptimizerTrainingStatus = conversionOptimizerTrainingStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

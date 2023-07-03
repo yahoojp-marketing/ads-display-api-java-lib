@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagServiceSelectorオブジェクトは、取得するサイトリターゲティングのタグを指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTagServiceSelector object selects the retrieving tag for site retargeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RetargetingTagServiceSelectorオブジェクトは、取得するサイトリターゲティングのタグを指定します。</div> <div lang=\"en\">RetargetingTagServiceSelector object selects the retrieving tag for site retargeting.</div> ")
 @JsonPropertyOrder({
   RetargetingTagServiceSelector.JSON_PROPERTY_ACCOUNT_ID
 })
-@JsonTypeName("RetargetingTagServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RetargetingTagServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
-  public RetargetingTagServiceSelector() { 
+  public RetargetingTagServiceSelector() {
   }
 
   public RetargetingTagServiceSelector accountId(Long accountId) {
@@ -51,8 +47,7 @@ public class RetargetingTagServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -66,7 +61,6 @@ public class RetargetingTagServiceSelector {
   public void setAccountId(Long accountId) {
     this.accountId = accountId;
   }
-
 
   @Override
   public boolean equals(Object o) {

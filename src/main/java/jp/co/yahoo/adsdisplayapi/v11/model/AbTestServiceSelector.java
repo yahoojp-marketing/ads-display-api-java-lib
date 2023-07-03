@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,21 +28,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AbTestServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AbTestServiceSelector object is a container for storing a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AbTestServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The AbTestServiceSelector object is a container for storing a set of criteria (parameters) for get method.</div> ")
 @JsonPropertyOrder({
   AbTestServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AbTestServiceSelector.JSON_PROPERTY_AB_TEST_IDS
 })
-@JsonTypeName("AbTestServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AbTestServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AB_TEST_IDS = "abTestIds";
-  private List<Long> abTestIds = null;
+  private List<Long> abTestIds;
 
-  public AbTestServiceSelector() { 
+  public AbTestServiceSelector() {
   }
 
   public AbTestServiceSelector accountId(Long accountId) {
@@ -57,8 +53,7 @@ public class AbTestServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントID</div> <div lang=\"en\">Search Condition: Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -92,8 +87,7 @@ public class AbTestServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：A/BテストID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Condition: A/B test ID.&lt;/div&gt; 
    * @return abTestIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件：A/BテストID</div> <div lang=\"en\">Search Condition: A/B test ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AB_TEST_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,7 +101,6 @@ public class AbTestServiceSelector {
   public void setAbTestIds(List<Long> abTestIds) {
     this.abTestIds = abTestIds;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AuditLogServiceJobStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceSelector object is container storing the search conditions of get method (execution parameter).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。</div> <div lang=\"en\">AuditLogServiceSelector object is container storing the search conditions of get method (execution parameter).</div> ")
 @JsonPropertyOrder({
   AuditLogServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   AuditLogServiceSelector.JSON_PROPERTY_AUDIT_LOG_JOB_IDS,
@@ -39,17 +36,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AuditLogServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AuditLogServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("AuditLogServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AuditLogServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_AUDIT_LOG_JOB_IDS = "auditLogJobIds";
-  private List<Long> auditLogJobIds = null;
+  private List<Long> auditLogJobIds;
 
   public static final String JSON_PROPERTY_JOB_STATUSES = "jobStatuses";
-  private List<AuditLogServiceJobStatus> jobStatuses = null;
+  private List<AuditLogServiceJobStatus> jobStatuses;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -57,7 +53,7 @@ public class AuditLogServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public AuditLogServiceSelector() { 
+  public AuditLogServiceSelector() {
   }
 
   public AuditLogServiceSelector accountId(Long accountId) {
@@ -70,8 +66,7 @@ public class AuditLogServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,8 +100,7 @@ public class AuditLogServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The job ID.&lt;/div&gt; 
    * @return auditLogJobIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブIDです。</div> <div lang=\"en\">The job ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,8 +134,7 @@ public class AuditLogServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ジョブステータスです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The job status information.&lt;/div&gt; 
    * @return jobStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ジョブステータスです。</div> <div lang=\"en\">The job status information.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +162,7 @@ public class AuditLogServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,8 +189,7 @@ public class AuditLogServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -212,7 +203,6 @@ public class AuditLogServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

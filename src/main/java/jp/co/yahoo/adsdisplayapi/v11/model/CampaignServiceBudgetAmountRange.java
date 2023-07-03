@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceBudgetAmountRangeは、予算利用金額による検索対象範囲を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceBudgetAmountRange represents the search range by budget amount.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignServiceBudgetAmountRangeは、予算利用金額による検索対象範囲を表します。</div> <div lang=\"en\">CampaignServiceBudgetAmountRange represents the search range by budget amount.</div> ")
 @JsonPropertyOrder({
   CampaignServiceBudgetAmountRange.JSON_PROPERTY_MIN,
   CampaignServiceBudgetAmountRange.JSON_PROPERTY_MAX
 })
-@JsonTypeName("CampaignServiceBudgetAmountRange")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceBudgetAmountRange {
   public static final String JSON_PROPERTY_MIN = "min";
   private Long min;
@@ -42,7 +38,7 @@ public class CampaignServiceBudgetAmountRange {
   public static final String JSON_PROPERTY_MAX = "max";
   private Long max;
 
-  public CampaignServiceBudgetAmountRange() { 
+  public CampaignServiceBudgetAmountRange() {
   }
 
   public CampaignServiceBudgetAmountRange min(Long min) {
@@ -55,8 +51,7 @@ public class CampaignServiceBudgetAmountRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索対象範囲の最小値です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This is the minimum value of the search range.&lt;/div&gt; 
    * @return min
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索対象範囲の最小値です。</div> <div lang=\"en\">This is the minimum value of the search range.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class CampaignServiceBudgetAmountRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索対象範囲の最大値です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This is the maximum value of the search range.&lt;/div&gt; 
    * @return max
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索対象範囲の最大値です。</div> <div lang=\"en\">This is the maximum value of the search range.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class CampaignServiceBudgetAmountRange {
   public void setMax(Long max) {
     this.max = max;
   }
-
 
   @Override
   public boolean equals(Object o) {

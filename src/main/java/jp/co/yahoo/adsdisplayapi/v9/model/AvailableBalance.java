@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AvailableBalanceオブジェクトは、選択したアカウントの推定現金残高情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AvailableBalance object describes estimated cash balance information for the selected account.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AvailableBalanceオブジェクトは、選択したアカウントの推定現金残高情報を表します。</div> <div lang=\"en\">AvailableBalance object describes estimated cash balance information for the selected account.</div> ")
 @JsonPropertyOrder({
   AvailableBalance.JSON_PROPERTY_ACCOUNT_ID,
   AvailableBalance.JSON_PROPERTY_AVAILABLE_BALANCE
 })
-@JsonTypeName("AvailableBalance")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AvailableBalance {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -42,7 +38,7 @@ public class AvailableBalance {
   public static final String JSON_PROPERTY_AVAILABLE_BALANCE = "availableBalance";
   private Long availableBalance;
 
-  public AvailableBalance() { 
+  public AvailableBalance() {
   }
 
   public AvailableBalance accountId(Long accountId) {
@@ -55,8 +51,7 @@ public class AvailableBalance {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">The account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class AvailableBalance {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;推定現金残高です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Estimated cash balance.&lt;/div&gt; 
    * @return availableBalance
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">推定現金残高です。</div> <div lang=\"en\">Estimated cash balance.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVAILABLE_BALANCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class AvailableBalance {
   public void setAvailableBalance(Long availableBalance) {
     this.availableBalance = availableBalance;
   }
-
 
   @Override
   public boolean equals(Object o) {

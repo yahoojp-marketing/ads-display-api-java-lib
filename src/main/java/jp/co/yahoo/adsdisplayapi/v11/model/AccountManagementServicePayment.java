@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AccountManagementServiceInvoice;
 import jp.co.yahoo.adsdisplayapi.v11.model.AccountManagementServicePaymentType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AccountManagementServicePaymentオブジェクトは、支払情報を保持します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AccountManagementServicePayment object contains the payment information.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AccountManagementServicePaymentオブジェクトは、支払情報を保持します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> AccountManagementServicePayment object contains the payment information.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 @JsonPropertyOrder({
   AccountManagementServicePayment.JSON_PROPERTY_INVOICE,
   AccountManagementServicePayment.JSON_PROPERTY_PAYMENT_TYPE
 })
-@JsonTypeName("AccountManagementServicePayment")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountManagementServicePayment {
   public static final String JSON_PROPERTY_INVOICE = "invoice";
   private AccountManagementServiceInvoice invoice;
@@ -44,7 +40,7 @@ public class AccountManagementServicePayment {
   public static final String JSON_PROPERTY_PAYMENT_TYPE = "paymentType";
   private AccountManagementServicePaymentType paymentType;
 
-  public AccountManagementServicePayment() { 
+  public AccountManagementServicePayment() {
   }
 
   public AccountManagementServicePayment invoice(AccountManagementServiceInvoice invoice) {
@@ -57,8 +53,7 @@ public class AccountManagementServicePayment {
    * Get invoice
    * @return invoice
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INVOICE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class AccountManagementServicePayment {
    * Get paymentType
    * @return paymentType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAYMENT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class AccountManagementServicePayment {
   public void setPaymentType(AccountManagementServicePaymentType paymentType) {
     this.paymentType = paymentType;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Statsオブジェクトは、統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Stats object contains the stats information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Statsオブジェクトは、統計情報を保持します。</div> <div lang=\"en\">Stats object contains the stats information.</div> ")
 @JsonPropertyOrder({
   Stats.JSON_PROPERTY_IMPS,
   Stats.JSON_PROPERTY_CLICKS,
@@ -82,8 +79,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Stats.JSON_PROPERTY_AVG_CPM,
   Stats.JSON_PROPERTY_AVG_VCPM
 })
-@JsonTypeName("Stats")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class Stats {
   public static final String JSON_PROPERTY_IMPS = "imps";
   private Long imps;
@@ -238,7 +234,7 @@ public class Stats {
   public static final String JSON_PROPERTY_AVG_VCPM = "avgVcpm";
   private Double avgVcpm;
 
-  public Stats() { 
+  public Stats() {
   }
 
   public Stats imps(Long imps) {
@@ -251,8 +247,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッション数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of impressions&lt;/div&gt; 
    * @return imps
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">インプレッション数</div> <div lang=\"en\">Number of impressions</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -278,8 +273,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クリック数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of clicks&lt;/div&gt; 
    * @return clicks
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クリック数</div> <div lang=\"en\">Number of clicks</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CLICKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -305,8 +299,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クリック率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Click through rate&lt;/div&gt; 
    * @return clickRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クリック率</div> <div lang=\"en\">Click through rate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CLICK_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -332,8 +325,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cost&lt;/div&gt; 
    * @return cost
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コスト</div> <div lang=\"en\">Cost</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -359,8 +351,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均CPC&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. CPC&lt;/div&gt; 
    * @return avgCpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">平均CPC</div> <div lang=\"en\">Avg. CPC</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -386,8 +377,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions&lt;/div&gt; 
    * @return conversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数</div> <div lang=\"en\">Conversions</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -413,8 +403,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. rate&lt;/div&gt; 
    * @return convRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン率</div> <div lang=\"en\">Conv. rate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONV_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -440,8 +429,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions (via click)&lt;/div&gt; 
    * @return conversionsViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数（クリック経由）</div> <div lang=\"en\">Conversions (via click)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -467,8 +455,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. rate (via click)&lt;/div&gt; 
    * @return conversionRateViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン率（クリック経由）</div> <div lang=\"en\">Conv. rate (via click)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_RATE_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -494,8 +481,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions (all)&lt;/div&gt; 
    * @return allConv
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン数（全て）</div> <div lang=\"en\">Conversions (all)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONV)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -521,8 +507,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. rate (all)&lt;/div&gt; 
    * @return allConvRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン率（全て）</div> <div lang=\"en\">Conv. rate (all)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONV_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -548,8 +533,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion cost per acquisition&lt;/div&gt; 
    * @return cpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョン単価</div> <div lang=\"en\">Conversion cost per acquisition</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -575,8 +559,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value&lt;/div&gt; 
    * @return convValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値</div> <div lang=\"en\">Conv. value</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONV_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -602,8 +585,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値/コンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value/conv.&lt;/div&gt; 
    * @return valuePerConv
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値/コンバージョン数</div> <div lang=\"en\">Conv. value/conv.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE_PER_CONV)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -629,8 +611,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）/コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions value/cost&lt;/div&gt; 
    * @return convValuePerCost
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）/コスト</div> <div lang=\"en\">Conversions value/cost</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONV_VALUE_PER_COST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -656,8 +637,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）/コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (all)/cost All Conv.&lt;/div&gt; 
    * @return allConvValuePerCost
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）/コスト</div> <div lang=\"en\">Conv. value (all)/cost All Conv.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONV_VALUE_PER_COST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -683,8 +663,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）/コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions value(via ad clicks)/cost&lt;/div&gt; 
    * @return convValueViaAdClickPerCost
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）/コスト</div> <div lang=\"en\">Conversions value(via ad clicks)/cost</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK_PER_COST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -710,8 +689,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (all)&lt;/div&gt; 
    * @return allConvValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）</div> <div lang=\"en\">Conv. value (all)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONV_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -737,8 +715,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）/コンバージョン数（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (all)/conv. (all)&lt;/div&gt; 
    * @return valuePerAllConv
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（全て）/コンバージョン数（全て）</div> <div lang=\"en\">Conv. value (all)/conv. (all)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE_PER_ALL_CONV)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -764,8 +741,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (via click)&lt;/div&gt; 
    * @return convValueViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）</div> <div lang=\"en\">Conv. value (via click)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -791,8 +767,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）/コンバージョン数（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (via click)/conv. (via click)&lt;/div&gt; 
    * @return valuePerConvViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョンの価値（クリック経由）/コンバージョン数（クリック経由）</div> <div lang=\"en\">Conv. value (via click)/conv. (via click)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE_PER_CONV_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -818,8 +793,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コスト/コンバージョン数（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cost/conv. (via click)&lt;/div&gt; 
    * @return cpaViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コスト/コンバージョン数（クリック経由）</div> <div lang=\"en\">Cost/conv. (via click)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPA_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -845,8 +819,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コスト/コンバージョン数（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cost/conv. (all)&lt;/div&gt; 
    * @return allCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コスト/コンバージョン数（全て）</div> <div lang=\"en\">Cost/conv. (all)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -872,8 +845,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クロスデバイスコンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cross-device conv.&lt;/div&gt; 
    * @return crossDeviceConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">クロスデバイスコンバージョン数</div> <div lang=\"en\">Cross-device conv.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -899,8 +871,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均掲載順位（配信された時のeCPM順位の平均）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. position (the average of eCPM rank on ads delivery)&lt;/div&gt; 
    * @return avgDeliverRank
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">平均掲載順位（配信された時のeCPM順位の平均）</div> <div lang=\"en\">Avg. position (the average of eCPM rank on ads delivery)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_DELIVER_RANK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -926,8 +897,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メジャードインプレッション数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Measured impressions&lt;/div&gt; 
    * @return measuredImps
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">メジャードインプレッション数</div> <div lang=\"en\">Measured impressions</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEASURED_IMPS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -953,8 +923,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メジャードインプレッション測定率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Measured impression rate&lt;/div&gt; 
    * @return measuredImpsRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">メジャードインプレッション測定率</div> <div lang=\"en\">Measured impression rate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEASURED_IMPS_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -980,8 +949,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルインプレッション数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable impressions&lt;/div&gt; 
    * @return viewableImps
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルインプレッション数</div> <div lang=\"en\">Viewable impressions</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1007,8 +975,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルインプレッション率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable impression rate&lt;/div&gt; 
    * @return viewableImpsRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルインプレッション率</div> <div lang=\"en\">Viewable impression rate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPS_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1034,8 +1001,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルクリック数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable clicks&lt;/div&gt; 
    * @return viewableClicks
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルクリック数</div> <div lang=\"en\">Viewable clicks</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_CLICKS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1061,8 +1027,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルクリック率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable CTR&lt;/div&gt; 
    * @return viewableClickRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビューアブルクリック率</div> <div lang=\"en\">Viewable CTR</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_CLICK_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1088,8 +1053,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;課金が発生した動画再生数 (CPV課金キャンペーンのみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Paid video views (CPV)&lt;/div&gt; 
    * @return paidVideoViews
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">課金が発生した動画再生数 (CPV課金キャンペーンのみ)</div> <div lang=\"en\">Paid video views (CPV)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAID_VIDEO_VIEWS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1115,8 +1079,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;課金が発生した動画再生率 (CPV課金キャンペーンのみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Paid video view rate (CPV)&lt;/div&gt; 
    * @return paidVideoViewRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">課金が発生した動画再生率 (CPV課金キャンペーンのみ)</div> <div lang=\"en\">Paid video view rate (CPV)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PAID_VIDEO_VIEW_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1142,8 +1105,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均CPV&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. CPV&lt;/div&gt; 
    * @return avgCpv
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">平均CPV</div> <div lang=\"en\">Avg. CPV</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_CPV)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1169,8 +1131,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の再生開始数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video views&lt;/div&gt; 
    * @return videoViews
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の再生開始数</div> <div lang=\"en\">Video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1196,8 +1157,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の25％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;25% video views&lt;/div&gt; 
    * @return videoViewsTo25
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の25％再生数</div> <div lang=\"en\">25% video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO25)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1223,8 +1183,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の50％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;50% video views&lt;/div&gt; 
    * @return videoViewsTo50
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の50％再生数</div> <div lang=\"en\">50% video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO50)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1250,8 +1209,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の75％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;75% video views&lt;/div&gt; 
    * @return videoViewsTo75
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の75％再生数</div> <div lang=\"en\">75% video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO75)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1277,8 +1235,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の95％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;95% video views&lt;/div&gt; 
    * @return videoViewsTo95
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の95％再生数</div> <div lang=\"en\">95% video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO95)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1304,8 +1261,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の100％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;100% video views&lt;/div&gt; 
    * @return videoViewsTo100
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の100％再生数</div> <div lang=\"en\">100% video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO100)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1331,8 +1287,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の3秒再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;3 sec video views&lt;/div&gt; 
    * @return videoViewsTo3Sec
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の3秒再生数</div> <div lang=\"en\">3 sec video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO3_SEC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1358,8 +1313,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の10秒再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;10 sec video views&lt;/div&gt; 
    * @return videoViewsTo10Sec
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の10秒再生数</div> <div lang=\"en\">10 sec video views</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO10_SEC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1385,8 +1339,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の平均再生率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. video view rate&lt;/div&gt; 
    * @return avgPercentVideoViewed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の平均再生率</div> <div lang=\"en\">Avg. video view rate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_PERCENT_VIDEO_VIEWED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1412,8 +1365,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の平均再生時間&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. duration of video viewed&lt;/div&gt; 
    * @return avgDurationVideoViewed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の平均再生時間</div> <div lang=\"en\">Avg. duration of video viewed</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_DURATION_VIDEO_VIEWED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1439,8 +1391,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の再生完了率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video view through rate&lt;/div&gt; 
    * @return videoViewThroughRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">動画の再生完了率</div> <div lang=\"en\">Video view through rate</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIDEO_VIEW_THROUGH_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1466,8 +1417,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッションシェア&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Impression share&lt;/div&gt; 
    * @return impressionShare
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">インプレッションシェア</div> <div lang=\"en\">Impression share</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1493,8 +1443,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッションシェア損失率（予算）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Impression share lost rate(budget)&lt;/div&gt; 
    * @return impressionShareBudgetLoss
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">インプレッションシェア損失率（予算）</div> <div lang=\"en\">Impression share lost rate(budget)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE_BUDGET_LOSS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1520,8 +1469,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッションシェア損失率（ランク）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Impression share lost rate(rank)&lt;/div&gt; 
    * @return impressionShareRankLoss
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">インプレッションシェア損失率（ランク）</div> <div lang=\"en\">Impression share lost rate(rank)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE_RANK_LOSS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1547,8 +1495,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビュースルーコンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;View through conversions&lt;/div&gt; 
    * @return convValueViaViewThrough
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビュースルーコンバージョン数</div> <div lang=\"en\">View through conversions</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_VIEW_THROUGH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1574,8 +1521,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均CPM&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. CPM&lt;/div&gt; 
    * @return avgCpm
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">平均CPM</div> <div lang=\"en\">Avg. CPM</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_CPM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1601,8 +1547,7 @@ public class Stats {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均vCPM&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. vCPM&lt;/div&gt; 
    * @return avgVcpm
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">平均vCPM</div> <div lang=\"en\">Avg. vCPM</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVG_VCPM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -1616,7 +1561,6 @@ public class Stats {
   public void setAvgVcpm(Double avgVcpm) {
     this.avgVcpm = avgVcpm;
   }
-
 
   @Override
   public boolean equals(Object o) {

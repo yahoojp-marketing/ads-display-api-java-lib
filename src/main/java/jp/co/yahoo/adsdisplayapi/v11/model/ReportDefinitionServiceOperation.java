@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinition;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionServiceOperationオブジェクトは、操作の対象となるレポート定義および操作の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The ReportDefinitionServiceOperation object serves operation target report definitions and operation content.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ReportDefinitionServiceOperationオブジェクトは、操作の対象となるレポート定義および操作の内容を表します。</div> <div lang=\"en\">The ReportDefinitionServiceOperation object serves operation target report definitions and operation content.</div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   ReportDefinitionServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("ReportDefinitionServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class ReportDefinitionServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<ReportDefinition> operand = new ArrayList<>();
 
-  public ReportDefinitionServiceOperation() { 
+  public ReportDefinitionServiceOperation() {
   }
 
   public ReportDefinitionServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class ReportDefinitionServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class ReportDefinitionServiceOperation {
   }
 
   public ReportDefinitionServiceOperation addOperandItem(ReportDefinition operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class ReportDefinitionServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class ReportDefinitionServiceOperation {
   public void setOperand(List<ReportDefinition> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

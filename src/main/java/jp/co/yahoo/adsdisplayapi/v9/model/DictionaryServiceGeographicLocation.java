@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationオブジェクトは、地域情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocation object displays the geographic location.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceGeographicLocationオブジェクトは、地域情報を表します。</div> <div lang=\"en\">DictionaryServiceGeographicLocation object displays the geographic location.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceGeographicLocation.JSON_PROPERTY_CHILD,
   DictionaryServiceGeographicLocation.JSON_PROPERTY_CODE,
@@ -39,11 +36,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceGeographicLocation.JSON_PROPERTY_ORDER,
   DictionaryServiceGeographicLocation.JSON_PROPERTY_PARENT
 })
-@JsonTypeName("DictionaryServiceGeographicLocation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceGeographicLocation {
   public static final String JSON_PROPERTY_CHILD = "child";
-  private List<DictionaryServiceGeographicLocation> child = null;
+  private List<DictionaryServiceGeographicLocation> child;
 
   public static final String JSON_PROPERTY_CODE = "code";
   private String code;
@@ -60,7 +56,7 @@ public class DictionaryServiceGeographicLocation {
   public static final String JSON_PROPERTY_PARENT = "parent";
   private String parent;
 
-  public DictionaryServiceGeographicLocation() { 
+  public DictionaryServiceGeographicLocation() {
   }
 
   public DictionaryServiceGeographicLocation child(List<DictionaryServiceGeographicLocation> child) {
@@ -81,8 +77,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;子要素としてDictionaryServiceGeographicLocationオブジェクトを使用します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocation object is used.&lt;/div&gt; 
    * @return child
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">子要素としてDictionaryServiceGeographicLocationオブジェクトを使用します。</div> <div lang=\"en\">DictionaryServiceGeographicLocation object is used.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CHILD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,8 +103,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 地域コードです。&lt;br&gt; 「その他」の地域コード(TC-CI-00000073)は、地域ターゲティングでは利用できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Geographic code.&lt;br&gt; The \&quot;Other\&quot; geo code (TC-CI-00000073) is not available for geo targeting. &lt;/div&gt; 
    * @return code
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 地域コードです。<br> 「その他」の地域コード(TC-CI-00000073)は、地域ターゲティングでは利用できません。 </div> <div lang=\"en\"> Geographic code.<br> The \"Other\" geo code (TC-CI-00000073) is not available for geo targeting. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,8 +129,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;都道府県名を含む地域名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of places including prefecture name.&lt;/div&gt; 
    * @return fullName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">都道府県名を含む地域名です。</div> <div lang=\"en\">Name of places including prefecture name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,8 +155,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;市区町村名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of places.&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">市区町村名です。</div> <div lang=\"en\">Name of places.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,8 +181,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;並び順を示す番号です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number indicating the order of arrangement.&lt;/div&gt; 
    * @return order
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">並び順を示す番号です。</div> <div lang=\"en\">Number indicating the order of arrangement.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ORDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,8 +207,7 @@ public class DictionaryServiceGeographicLocation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上位階層の地域コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Parent geographic code.&lt;/div&gt; 
    * @return parent
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">上位階層の地域コードです。</div> <div lang=\"en\">Parent geographic code.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -231,7 +221,6 @@ public class DictionaryServiceGeographicLocation {
   public void setParent(String parent) {
     this.parent = parent;
   }
-
 
   @Override
   public boolean equals(Object o) {

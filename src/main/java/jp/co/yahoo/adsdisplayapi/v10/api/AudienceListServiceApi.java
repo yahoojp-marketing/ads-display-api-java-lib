@@ -34,7 +34,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adsdisplayapi.v10.api.AudienceListServiceApi")
 public class AudienceListServiceApi {
     private ApiClient apiClient;
@@ -87,27 +87,27 @@ public class AudienceListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AudienceListServiceMutateResponse> audienceListServiceAddPostWithHttpInfo(AudienceListServiceOperation audienceListServiceOperation) throws RestClientException {
-        Object postBody = audienceListServiceOperation;
+        Object localVarPostBody = audienceListServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AudienceListServiceMutateResponse> returnType = new ParameterizedTypeReference<AudienceListServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AudienceListService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AudienceListServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AudienceListServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AudienceListService/add", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -140,27 +140,27 @@ public class AudienceListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AudienceListServiceGetResponse> audienceListServiceGetPostWithHttpInfo(AudienceListServiceSelector audienceListServiceSelector) throws RestClientException {
-        Object postBody = audienceListServiceSelector;
+        Object localVarPostBody = audienceListServiceSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AudienceListServiceGetResponse> returnType = new ParameterizedTypeReference<AudienceListServiceGetResponse>() {};
-        return apiClient.invokeAPI("/AudienceListService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AudienceListServiceGetResponse> localReturnType = new ParameterizedTypeReference<AudienceListServiceGetResponse>() {};
+        return apiClient.invokeAPI("/AudienceListService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -193,27 +193,27 @@ public class AudienceListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AudienceListServiceGetUploadUserListResponse> audienceListServiceGetUploadUserListStatusPostWithHttpInfo(AudienceListServiceUploadUserListStatusSelector audienceListServiceUploadUserListStatusSelector) throws RestClientException {
-        Object postBody = audienceListServiceUploadUserListStatusSelector;
+        Object localVarPostBody = audienceListServiceUploadUserListStatusSelector;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AudienceListServiceGetUploadUserListResponse> returnType = new ParameterizedTypeReference<AudienceListServiceGetUploadUserListResponse>() {};
-        return apiClient.invokeAPI("/AudienceListService/getUploadUserListStatus", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AudienceListServiceGetUploadUserListResponse> localReturnType = new ParameterizedTypeReference<AudienceListServiceGetUploadUserListResponse>() {};
+        return apiClient.invokeAPI("/AudienceListService/getUploadUserListStatus", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -246,27 +246,27 @@ public class AudienceListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AudienceListServiceMutateResponse> audienceListServiceRemovePostWithHttpInfo(AudienceListServiceOperation audienceListServiceOperation) throws RestClientException {
-        Object postBody = audienceListServiceOperation;
+        Object localVarPostBody = audienceListServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AudienceListServiceMutateResponse> returnType = new ParameterizedTypeReference<AudienceListServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AudienceListService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AudienceListServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AudienceListServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AudienceListService/remove", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -299,27 +299,27 @@ public class AudienceListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AudienceListServiceMutateResponse> audienceListServiceSetPostWithHttpInfo(AudienceListServiceOperation audienceListServiceOperation) throws RestClientException {
-        Object postBody = audienceListServiceOperation;
+        Object localVarPostBody = audienceListServiceOperation;
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/json"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AudienceListServiceMutateResponse> returnType = new ParameterizedTypeReference<AudienceListServiceMutateResponse>() {};
-        return apiClient.invokeAPI("/AudienceListService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AudienceListServiceMutateResponse> localReturnType = new ParameterizedTypeReference<AudienceListServiceMutateResponse>() {};
+        return apiClient.invokeAPI("/AudienceListService/set", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
     /**
      * 
@@ -366,7 +366,7 @@ public class AudienceListServiceApi {
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
     public ResponseEntity<AudienceListServiceUploadUserListResponse> audienceListServiceUploadUserListPostWithHttpInfo(Long accountId, String retargetingTagId, Long audienceListId, AudienceListServiceUploadUserListUploadType uploadType, AudienceListServiceUploadUserListCompressType compressType, String customUidKey, String customEntityId, org.springframework.core.io.Resource body) throws RestClientException {
-        Object postBody = body;
+        Object localVarPostBody = body;
         
         // verify the required parameter 'accountId' is set
         if (accountId == null) {
@@ -394,31 +394,31 @@ public class AudienceListServiceApi {
         }
         
 
-        final MultiValueMap<String, String> queryParams = new LinkedMultiValueMap<String, String>();
-        final HttpHeaders headerParams = new HttpHeaders();
-        final MultiValueMap<String, String> cookieParams = new LinkedMultiValueMap<String, String>();
-        final MultiValueMap<String, Object> formParams = new LinkedMultiValueMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
 
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "accountId", accountId));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "retargetingTagId", retargetingTagId));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "audienceListId", audienceListId));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "uploadType", uploadType));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "compressType", compressType));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "customUidKey", customUidKey));
-        queryParams.putAll(apiClient.parameterToMultiValueMap(null, "customEntityId", customEntityId));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "accountId", accountId));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "retargetingTagId", retargetingTagId));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "audienceListId", audienceListId));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "uploadType", uploadType));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "compressType", compressType));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "customUidKey", customUidKey));
+        localVarQueryParams.putAll(apiClient.parameterToMultiValueMap(null, "customEntityId", customEntityId));
 
         final String[] localVarAccepts = { 
             "application/json"
          };
         final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-        final String[] contentTypes = { 
+        final String[] localVarContentTypes = { 
             "application/octet-stream"
          };
-        final MediaType localVarContentType = apiClient.selectHeaderContentType(contentTypes);
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-        String[] authNames = new String[] { "oAuth" };
+        String[] localVarAuthNames = new String[] { "oAuth" };
 
-        ParameterizedTypeReference<AudienceListServiceUploadUserListResponse> returnType = new ParameterizedTypeReference<AudienceListServiceUploadUserListResponse>() {};
-        return apiClient.invokeAPI("/AudienceListService/uploadUserList", HttpMethod.POST, Collections.<String, Object>emptyMap(), queryParams, postBody, headerParams, cookieParams, formParams, localVarAccept, localVarContentType, authNames, returnType);
+        ParameterizedTypeReference<AudienceListServiceUploadUserListResponse> localReturnType = new ParameterizedTypeReference<AudienceListServiceUploadUserListResponse>() {};
+        return apiClient.invokeAPI("/AudienceListService/uploadUserList", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
     }
 }

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionServiceReturnValueオブジェクトは、操作結果を含むレポート定義のコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The ReportDefinitionServiceReturnValue object is a container that holds report definitions, including operation results.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ReportDefinitionServiceReturnValueオブジェクトは、操作結果を含むレポート定義のコンテナです。</div> <div lang=\"en\">The ReportDefinitionServiceReturnValue object is a container that holds report definitions, including operation results.</div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("ReportDefinitionServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<ReportDefinitionServiceValue> values = null;
+  private List<ReportDefinitionServiceValue> values;
 
-  public ReportDefinitionServiceReturnValue() { 
+  public ReportDefinitionServiceReturnValue() {
   }
 
   public ReportDefinitionServiceReturnValue values(List<ReportDefinitionServiceValue> values) {
@@ -62,8 +58,7 @@ public class ReportDefinitionServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class ReportDefinitionServiceReturnValue {
   public void setValues(List<ReportDefinitionServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

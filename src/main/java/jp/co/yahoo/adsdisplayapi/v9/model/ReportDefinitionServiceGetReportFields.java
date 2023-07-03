@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -32,13 +30,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   ReportDefinitionServiceGetReportFields.JSON_PROPERTY_TYPE
 })
-@JsonTypeName("ReportDefinitionServiceGetReportFields")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceGetReportFields {
   public static final String JSON_PROPERTY_TYPE = "type";
   private ReportDefinitionServiceType type;
 
-  public ReportDefinitionServiceGetReportFields() { 
+  public ReportDefinitionServiceGetReportFields() {
   }
 
   public ReportDefinitionServiceGetReportFields type(ReportDefinitionServiceType type) {
@@ -51,8 +48,7 @@ public class ReportDefinitionServiceGetReportFields {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -66,7 +62,6 @@ public class ReportDefinitionServiceGetReportFields {
   public void setType(ReportDefinitionServiceType type) {
     this.type = type;
   }
-
 
   @Override
   public boolean equals(Object o) {

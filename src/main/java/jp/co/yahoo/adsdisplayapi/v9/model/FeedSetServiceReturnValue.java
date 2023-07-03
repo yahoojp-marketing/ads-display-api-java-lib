@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedSetServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedSetServiceReturnValueオブジェクトは、操作結果を含む商品セット情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSetServiceReturnValue object contains Item Set information including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedSetServiceReturnValueオブジェクトは、操作結果を含む商品セット情報を保持します。</div> <div lang=\"en\">FeedSetServiceReturnValue object contains Item Set information including operation result.</div> ")
 @JsonPropertyOrder({
   FeedSetServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("FeedSetServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedSetServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<FeedSetServiceValue> values = null;
+  private List<FeedSetServiceValue> values;
 
-  public FeedSetServiceReturnValue() { 
+  public FeedSetServiceReturnValue() {
   }
 
   public FeedSetServiceReturnValue values(List<FeedSetServiceValue> values) {
@@ -62,8 +58,7 @@ public class FeedSetServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class FeedSetServiceReturnValue {
   public void setValues(List<FeedSetServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

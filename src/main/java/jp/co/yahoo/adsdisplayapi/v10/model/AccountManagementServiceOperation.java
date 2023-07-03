@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AccountManagement;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServiceOperationオブジェクトは、操作対象となるアカウント情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagementServiceOperation object describes account information for operation and list of operations.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountManagementServiceOperationオブジェクトは、操作対象となるアカウント情報と処理の内容を表します。</div> <div lang=\"en\">AccountManagementServiceOperation object describes account information for operation and list of operations.</div> ")
 @JsonPropertyOrder({
   AccountManagementServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AccountManagementServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("AccountManagementServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountManagementServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class AccountManagementServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<AccountManagement> operand = new ArrayList<>();
 
-  public AccountManagementServiceOperation() { 
+  public AccountManagementServiceOperation() {
   }
 
   public AccountManagementServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class AccountManagementServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、SET時に必須となり、ADD時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in SET operation and ignored in ADD operation. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、SET時に必須となり、ADD時に無視されます。 </div> <div lang=\"en\"> Account ID.<br> This field is required in SET operation and ignored in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,6 +77,9 @@ public class AccountManagementServiceOperation {
   }
 
   public AccountManagementServiceOperation addOperandItem(AccountManagement operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class AccountManagementServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class AccountManagementServiceOperation {
   public void setOperand(List<AccountManagement> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

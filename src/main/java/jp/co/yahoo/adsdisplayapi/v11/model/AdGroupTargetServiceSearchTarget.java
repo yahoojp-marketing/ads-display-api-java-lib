@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceSearchTargetオブジェクトは、サーチターゲティング設定情報を保持します。br&gt;ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSEARCH_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceSearchTarget object is a container for storing search targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is SEARCH_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceSearchTargetオブジェクトは、サーチターゲティング設定情報を保持します。br>ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがSEARCH_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceSearchTarget object is a container for storing search targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is SEARCH_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceSearchTarget.JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME
 })
-@JsonTypeName("AdGroupTargetServiceSearchTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceSearchTarget {
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME = "searchKeywordListName";
   private String searchKeywordListName;
 
-  public AdGroupTargetServiceSearchTarget() { 
+  public AdGroupTargetServiceSearchTarget() {
   }
 
   public AdGroupTargetServiceSearchTarget searchKeywordListName(String searchKeywordListName) {
@@ -51,8 +47,7 @@ public class AdGroupTargetServiceSearchTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search Keyword List name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return searchKeywordListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Search Keyword List name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AdGroupTargetServiceSearchTarget {
   public void setSearchKeywordListName(String searchKeywordListName) {
     this.searchKeywordListName = searchKeywordListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

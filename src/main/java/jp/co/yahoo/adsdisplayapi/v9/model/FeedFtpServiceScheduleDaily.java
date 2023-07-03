@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpServiceScheduleDailyオブジェクトは、定期アップロードを何時に実行するかを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceScheduleDaily object displays the execution time of the day for Periodic Upload.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedFtpServiceScheduleDailyオブジェクトは、定期アップロードを何時に実行するかを表します。</div> <div lang=\"en\">FeedFtpServiceScheduleDaily object displays the execution time of the day for Periodic Upload.</div> ")
 @JsonPropertyOrder({
   FeedFtpServiceScheduleDaily.JSON_PROPERTY_TIME
 })
-@JsonTypeName("FeedFtpServiceScheduleDaily")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpServiceScheduleDaily {
   public static final String JSON_PROPERTY_TIME = "time";
   private Integer time;
 
-  public FeedFtpServiceScheduleDaily() { 
+  public FeedFtpServiceScheduleDaily() {
   }
 
   public FeedFtpServiceScheduleDaily time(Integer time) {
@@ -51,8 +47,7 @@ public class FeedFtpServiceScheduleDaily {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 何時に実行するかを表します。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Execution time.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return time
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 何時に実行するかを表します。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Execution time.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class FeedFtpServiceScheduleDaily {
   public void setTime(Integer time) {
     this.time = time;
   }
-
 
   @Override
   public boolean equals(Object o) {

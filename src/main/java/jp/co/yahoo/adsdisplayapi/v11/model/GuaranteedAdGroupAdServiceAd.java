@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.GuaranteedAdGroupAdServiceAdType;
 import jp.co.yahoo.adsdisplayapi.v11.model.GuaranteedAdGroupAdServiceBannerAd;
 import jp.co.yahoo.adsdisplayapi.v11.model.GuaranteedAdGroupAdServiceBrandPanelPanorama;
@@ -44,7 +42,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceAd object is a container for storing ads.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。<br> </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceAd object is a container for storing ads.<br> </div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroupAdServiceAd.JSON_PROPERTY_AD_TYPE,
   GuaranteedAdGroupAdServiceAd.JSON_PROPERTY_MAIN_MEDIA_FORMAT,
@@ -63,8 +60,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceAd.JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH,
   GuaranteedAdGroupAdServiceAd.JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH
 })
-@JsonTypeName("GuaranteedAdGroupAdServiceAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroupAdServiceAd {
   public static final String JSON_PROPERTY_AD_TYPE = "adType";
   private GuaranteedAdGroupAdServiceAdType adType;
@@ -114,7 +110,7 @@ public class GuaranteedAdGroupAdServiceAd {
   public static final String JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH = "topImpactPanoramaPanelSwitch";
   private GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch;
 
-  public GuaranteedAdGroupAdServiceAd() { 
+  public GuaranteedAdGroupAdServiceAd() {
   }
 
   public GuaranteedAdGroupAdServiceAd adType(GuaranteedAdGroupAdServiceAdType adType) {
@@ -127,8 +123,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get adType
    * @return adType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -154,8 +149,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get mainMediaFormat
    * @return mainMediaFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAIN_MEDIA_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,8 +175,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get bannerAd
    * @return bannerAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BANNER_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -208,8 +201,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get carouselAd
    * @return carouselAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAROUSEL_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -235,8 +227,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get instreamAd
    * @return instreamAd
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSTREAM_AD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -262,8 +253,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get brandPanelQuintie
    * @return brandPanelQuintie
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_PANEL_QUINTIE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -289,8 +279,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get brandPanelPanorama
    * @return brandPanelPanorama
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_PANEL_PANORAMA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -316,8 +305,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get brandPanelPanoramaPanelSwitch
    * @return brandPanelPanoramaPanelSwitch
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_PANEL_PANORAMA_PANEL_SWITCH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -343,8 +331,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactSquare
    * @return topImpactSquare
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_SQUARE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -370,8 +357,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactQuintie
    * @return topImpactQuintie
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_QUINTIE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -397,8 +383,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactTheater
    * @return topImpactTheater
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_THEATER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -424,8 +409,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactPrimeDisplayDouble
    * @return topImpactPrimeDisplayDouble
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PRIME_DISPLAY_DOUBLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -451,8 +435,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactPanorama
    * @return topImpactPanorama
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -478,8 +461,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactPanoramaSideVision
    * @return topImpactPanoramaSideVision
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_VISION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -505,8 +487,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactPanoramaSideSwitch
    * @return topImpactPanoramaSideSwitch
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -532,8 +513,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * Get topImpactPanoramaPanelSwitch
    * @return topImpactPanoramaPanelSwitch
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -547,7 +527,6 @@ public class GuaranteedAdGroupAdServiceAd {
   public void setTopImpactPanoramaPanelSwitch(GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch) {
     this.topImpactPanoramaPanelSwitch = topImpactPanoramaPanelSwitch;
   }
-
 
   @Override
   public boolean equals(Object o) {

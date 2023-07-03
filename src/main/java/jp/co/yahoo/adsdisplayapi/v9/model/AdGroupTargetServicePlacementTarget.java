@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTargetServicePlacementUrlListType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServicePlacementTargetオブジェクトは、プレイスメントターゲティングの設定情報を保持するオブジェクトです。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがPLACEMENT_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServicePlacementTarget object is a container for storing placement targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is PLACEMENT_TARGET, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServicePlacementTargetオブジェクトは、プレイスメントターゲティングの設定情報を保持するオブジェクトです。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがPLACEMENT_TARGETの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServicePlacementTarget object is a container for storing placement targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is PLACEMENT_TARGET, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServicePlacementTarget.JSON_PROPERTY_PLACEMENT_URL_LIST_NAME,
   AdGroupTargetServicePlacementTarget.JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE
 })
-@JsonTypeName("AdGroupTargetServicePlacementTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServicePlacementTarget {
   public static final String JSON_PROPERTY_PLACEMENT_URL_LIST_NAME = "placementUrlListName";
   private String placementUrlListName;
@@ -43,7 +39,7 @@ public class AdGroupTargetServicePlacementTarget {
   public static final String JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE = "placementUrlListType";
   private AdGroupTargetServicePlacementUrlListType placementUrlListType;
 
-  public AdGroupTargetServicePlacementTarget() { 
+  public AdGroupTargetServicePlacementTarget() {
   }
 
   public AdGroupTargetServicePlacementTarget placementUrlListName(String placementUrlListName) {
@@ -56,8 +52,7 @@ public class AdGroupTargetServicePlacementTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; プレイスメントリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Placement List Name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return placementUrlListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> プレイスメントリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Placement List Name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AdGroupTargetServicePlacementTarget {
    * Get placementUrlListType
    * @return placementUrlListType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AdGroupTargetServicePlacementTarget {
   public void setPlacementUrlListType(AdGroupTargetServicePlacementUrlListType placementUrlListType) {
     this.placementUrlListType = placementUrlListType;
   }
-
 
   @Override
   public boolean equals(Object o) {

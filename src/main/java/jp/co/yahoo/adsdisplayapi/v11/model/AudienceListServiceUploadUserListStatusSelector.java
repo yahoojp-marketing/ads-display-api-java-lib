@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AudienceListServiceJobStatus;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceUploadUserListStatusSelectorオブジェクトは、ユーザーリストのアップロード情報の検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AudienceListServiceUploadUserListStatusSelector object is a container for storing a set of criteria (parameters) for upload jobs of user list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListServiceUploadUserListStatusSelectorオブジェクトは、ユーザーリストのアップロード情報の検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">The AudienceListServiceUploadUserListStatusSelector object is a container for storing a set of criteria (parameters) for upload jobs of user list.</div> ")
 @JsonPropertyOrder({
   AudienceListServiceUploadUserListStatusSelector.JSON_PROPERTY_ACCOUNT_ID,
   AudienceListServiceUploadUserListStatusSelector.JSON_PROPERTY_AUDIENCE_LIST_ID,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceUploadUserListStatusSelector.JSON_PROPERTY_UPLOAD_JOB_IDS,
   AudienceListServiceUploadUserListStatusSelector.JSON_PROPERTY_JOB_STATUES
 })
-@JsonTypeName("AudienceListServiceUploadUserListStatusSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceUploadUserListStatusSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -52,12 +48,12 @@ public class AudienceListServiceUploadUserListStatusSelector {
   private Integer numberResults = 10;
 
   public static final String JSON_PROPERTY_UPLOAD_JOB_IDS = "uploadJobIds";
-  private List<String> uploadJobIds = null;
+  private List<String> uploadJobIds;
 
   public static final String JSON_PROPERTY_JOB_STATUES = "jobStatues";
-  private List<AudienceListServiceJobStatus> jobStatues = null;
+  private List<AudienceListServiceJobStatus> jobStatues;
 
-  public AudienceListServiceUploadUserListStatusSelector() { 
+  public AudienceListServiceUploadUserListStatusSelector() {
   }
 
   public AudienceListServiceUploadUserListStatusSelector accountId(Long accountId) {
@@ -70,8 +66,7 @@ public class AudienceListServiceUploadUserListStatusSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,8 +92,7 @@ public class AudienceListServiceUploadUserListStatusSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">オーディエンスリストIDです。</div> <div lang=\"en\">Audience list ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -126,8 +120,7 @@ public class AudienceListServiceUploadUserListStatusSelector {
    * maximum: 100
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,8 +154,7 @@ public class AudienceListServiceUploadUserListStatusSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload job ID.&lt;/div&gt; 
    * @return uploadJobIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロードジョブIDです。</div> <div lang=\"en\">Upload job ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -196,8 +188,7 @@ public class AudienceListServiceUploadUserListStatusSelector {
    * Get jobStatues
    * @return jobStatues
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_JOB_STATUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,7 +202,6 @@ public class AudienceListServiceUploadUserListStatusSelector {
   public void setJobStatues(List<AudienceListServiceJobStatus> jobStatues) {
     this.jobStatues = jobStatues;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.FeedFtpRequest;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpRequestServiceOperationオブジェクトは、mutate対象となる即時アップロードリクエスト情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpRequestServiceOperation object contains Upload (Upload now) request information by mutate operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedFtpRequestServiceOperationオブジェクトは、mutate対象となる即時アップロードリクエスト情報を保持します。</div> <div lang=\"en\">FeedFtpRequestServiceOperation object contains Upload (Upload now) request information by mutate operation.</div> ")
 @JsonPropertyOrder({
   FeedFtpRequestServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   FeedFtpRequestServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("FeedFtpRequestServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpRequestServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class FeedFtpRequestServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<FeedFtpRequest> operand = new ArrayList<>();
 
-  public FeedFtpRequestServiceOperation() { 
+  public FeedFtpRequestServiceOperation() {
   }
 
   public FeedFtpRequestServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class FeedFtpRequestServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;account Id&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">account Id</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class FeedFtpRequestServiceOperation {
   }
 
   public FeedFtpRequestServiceOperation addOperandItem(FeedFtpRequest operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class FeedFtpRequestServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class FeedFtpRequestServiceOperation {
   public void setOperand(List<FeedFtpRequest> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

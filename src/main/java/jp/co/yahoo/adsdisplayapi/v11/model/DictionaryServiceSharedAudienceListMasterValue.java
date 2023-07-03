@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceSharedAudienceListMaster;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceSharedAudienceListMasterValueオブジェクトは、共通オーディエンスリストマスタを取得するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListMasterValue object is a container that retrieves shared audience list master.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceSharedAudienceListMasterValueオブジェクトは、共通オーディエンスリストマスタを取得するコンテナです。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListMasterValue object is a container that retrieves shared audience list master.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceSharedAudienceListMasterValue.JSON_PROPERTY_ERRORS,
   DictionaryServiceSharedAudienceListMasterValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   DictionaryServiceSharedAudienceListMasterValue.JSON_PROPERTY_SHARED_AUDIENCE_LIST_MASTER
 })
-@JsonTypeName("DictionaryServiceSharedAudienceListMasterValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceSharedAudienceListMasterValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
@@ -50,7 +46,7 @@ public class DictionaryServiceSharedAudienceListMasterValue {
   public static final String JSON_PROPERTY_SHARED_AUDIENCE_LIST_MASTER = "sharedAudienceListMaster";
   private DictionaryServiceSharedAudienceListMaster sharedAudienceListMaster;
 
-  public DictionaryServiceSharedAudienceListMasterValue() { 
+  public DictionaryServiceSharedAudienceListMasterValue() {
   }
 
   public DictionaryServiceSharedAudienceListMasterValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class DictionaryServiceSharedAudienceListMasterValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class DictionaryServiceSharedAudienceListMasterValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class DictionaryServiceSharedAudienceListMasterValue {
    * Get sharedAudienceListMaster
    * @return sharedAudienceListMaster
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_AUDIENCE_LIST_MASTER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class DictionaryServiceSharedAudienceListMasterValue {
   public void setSharedAudienceListMaster(DictionaryServiceSharedAudienceListMaster sharedAudienceListMaster) {
     this.sharedAudienceListMaster = sharedAudienceListMaster;
   }
-
 
   @Override
   public boolean equals(Object o) {

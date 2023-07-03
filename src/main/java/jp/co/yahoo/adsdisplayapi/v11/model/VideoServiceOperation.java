@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.Video;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServiceOperationオブジェクトは、メソッドの操作対象を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;VideoServiceOperation object stores the operation target of method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">VideoServiceOperationオブジェクトは、メソッドの操作対象を保持します。</div> <div lang=\"en\">VideoServiceOperation object stores the operation target of method.</div> ")
 @JsonPropertyOrder({
   VideoServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   VideoServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("VideoServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VideoServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class VideoServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<Video> operand = new ArrayList<>();
 
-  public VideoServiceOperation() { 
+  public VideoServiceOperation() {
   }
 
   public VideoServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class VideoServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AccountID.&lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> AccountID.<br> This field is required in SET and REMOVE operation. </div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class VideoServiceOperation {
   }
 
   public VideoServiceOperation addOperandItem(Video operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class VideoServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;このフィールドは、SETおよびREMOVE時に必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field is required in SET and REMOVE operation.&lt;/div&gt; 
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">このフィールドは、SETおよびREMOVE時に必須となります。</div> <div lang=\"en\">This field is required in SET and REMOVE operation.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class VideoServiceOperation {
   public void setOperand(List<Video> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

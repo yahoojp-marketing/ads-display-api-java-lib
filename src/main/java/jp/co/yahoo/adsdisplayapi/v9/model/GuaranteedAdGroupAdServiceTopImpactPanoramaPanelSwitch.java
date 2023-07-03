@@ -20,15 +20,12 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchオブジェクトは、予約型専用広告：メインの3:1の画像と、1:1のスイッチ画像、16:9の縮小バナー、右サイド画像、左サイド画像で構成される広告の詳細情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch object describes detailed information about guaranteed ad composed of the main 3:1 image, 1:1 switch image, 16:9 reduced banner, the right side image, and the left side image. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchオブジェクトは、予約型専用広告：メインの3:1の画像と、1:1のスイッチ画像、16:9の縮小バナー、右サイド画像、左サイド画像で構成される広告の詳細情報を表します。 </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch object describes detailed information about guaranteed ad composed of the main 3:1 image, 1:1 switch image, 16:9 reduced banner, the right side image, and the left side image. </div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch.JSON_PROPERTY_DISPLAY_ORDER,
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch.JSON_PROPERTY_FINAL_URL,
@@ -37,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch.JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID,
   GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch.JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID
 })
-@JsonTypeName("GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
   public static final String JSON_PROPERTY_DISPLAY_ORDER = "displayOrder";
   private Long displayOrder;
@@ -58,7 +54,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
   public static final String JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID = "adRightSideMediaId";
   private Long adRightSideMediaId;
 
-  public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch() { 
+  public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch() {
   }
 
   public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch displayOrder(Long displayOrder) {
@@ -71,8 +67,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; パネルの表示順です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※指定しない場合は自動で設定されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Panel display order.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If not specified, it will be set automatically. &lt;/div&gt; 
    * @return displayOrder
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> パネルの表示順です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※指定しない場合は自動で設定されます。 </div> <div lang=\"en\"> Panel display order.<br> This field is optional in ADD and SET operation.<br> *If not specified, it will be set automatically. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_ORDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; このフィールドは、ADD時およびSET時に必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\">Final URL.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; このフィールドは、ADD時およびSET時に必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return mediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> メディアIDです。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Media ID.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -152,8 +145,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; スイッチ画像のメディアIDです。&lt;br&gt; このフィールドは、ADD時およびSET時に必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of switch image.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return switchMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> スイッチ画像のメディアIDです。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Media ID of switch image.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SWITCH_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,8 +171,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 左サイド画像です。&lt;br&gt; このフィールドは、ADD時およびSET時に必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Left side image.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return adLeftSideMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 左サイド画像です。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Left side image.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -206,8 +197,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 右サイド画像です。&lt;br&gt; このフィールドは、ADD時およびSET時に必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Right side image.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return adRightSideMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 右サイド画像です。<br> このフィールドは、ADD時およびSET時に必須です。 </div> <div lang=\"en\"> Right side image.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -221,7 +211,6 @@ public class GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitch {
   public void setAdRightSideMediaId(Long adRightSideMediaId) {
     this.adRightSideMediaId = adRightSideMediaId;
   }
-
 
   @Override
   public boolean equals(Object o) {

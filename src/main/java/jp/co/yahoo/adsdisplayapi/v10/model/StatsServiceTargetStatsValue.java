@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.Stats;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServiceTarget;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceTargetStatsValuesオブジェクトは、ターゲティングの統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTargetStatsValues object contains Target stats information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceTargetStatsValuesオブジェクトは、ターゲティングの統計情報を保持します。</div> <div lang=\"en\">StatsServiceTargetStatsValues object contains Target stats information.</div> ")
 @JsonPropertyOrder({
   StatsServiceTargetStatsValue.JSON_PROPERTY_CAMPAIGN_ID,
   StatsServiceTargetStatsValue.JSON_PROPERTY_CAMPAIGN_NAME,
@@ -39,8 +36,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceTargetStatsValue.JSON_PROPERTY_STATS,
   StatsServiceTargetStatsValue.JSON_PROPERTY_TARGET
 })
-@JsonTypeName("StatsServiceTargetStatsValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceTargetStatsValue {
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
   private Long campaignId;
@@ -60,7 +56,7 @@ public class StatsServiceTargetStatsValue {
   public static final String JSON_PROPERTY_TARGET = "target";
   private StatsServiceTarget target;
 
-  public StatsServiceTargetStatsValue() { 
+  public StatsServiceTargetStatsValue() {
   }
 
   public StatsServiceTargetStatsValue campaignId(Long campaignId) {
@@ -73,8 +69,7 @@ public class StatsServiceTargetStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID&lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンID</div> <div lang=\"en\">Campaign ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,8 +95,7 @@ public class StatsServiceTargetStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign name&lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーン名</div> <div lang=\"en\">Campaign name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,8 +121,7 @@ public class StatsServiceTargetStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID&lt;/div&gt; 
    * @return adGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループID</div> <div lang=\"en\">Ad group ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -154,8 +147,7 @@ public class StatsServiceTargetStatsValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループ名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group name&lt;/div&gt; 
    * @return adGroupName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告グループ名</div> <div lang=\"en\">Ad group name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -181,8 +173,7 @@ public class StatsServiceTargetStatsValue {
    * Get stats
    * @return stats
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -208,8 +199,7 @@ public class StatsServiceTargetStatsValue {
    * Get target
    * @return target
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -223,7 +213,6 @@ public class StatsServiceTargetStatsValue {
   public void setTarget(StatsServiceTarget target) {
     this.target = target;
   }
-
 
   @Override
   public boolean equals(Object o) {

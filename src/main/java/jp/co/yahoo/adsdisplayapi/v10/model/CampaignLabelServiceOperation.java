@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.CampaignLabel;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignLabelServiceOperationオブジェクトは、操作の対象となるキャンペーンラベルの情報と処理の内容を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignLabelServiceOperation object displays the information on campaign label to be operated and processing content.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">CampaignLabelServiceOperationオブジェクトは、操作の対象となるキャンペーンラベルの情報と処理の内容を表します。</div> <div lang=\"en\">CampaignLabelServiceOperation object displays the information on campaign label to be operated and processing content.</div> ")
 @JsonPropertyOrder({
   CampaignLabelServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   CampaignLabelServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("CampaignLabelServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignLabelServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class CampaignLabelServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<CampaignLabel> operand = new ArrayList<>();
 
-  public CampaignLabelServiceOperation() { 
+  public CampaignLabelServiceOperation() {
   }
 
   public CampaignLabelServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class CampaignLabelServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class CampaignLabelServiceOperation {
   }
 
   public CampaignLabelServiceOperation addOperandItem(CampaignLabel operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class CampaignLabelServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class CampaignLabelServiceOperation {
   public void setOperand(List<CampaignLabel> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {

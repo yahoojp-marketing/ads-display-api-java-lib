@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入稿済みのメディアファイルをダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download the submitted media file.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">入稿済みのメディアファイルをダウンロードします。</div> <div lang=\"en\">Download the submitted media file.</div> ")
 @JsonPropertyOrder({
   MediaServiceDownloadSelector.JSON_PROPERTY_ACCOUNT_ID,
   MediaServiceDownloadSelector.JSON_PROPERTY_MEDIA_ID
 })
-@JsonTypeName("MediaServiceDownloadSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class MediaServiceDownloadSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -42,7 +38,7 @@ public class MediaServiceDownloadSelector {
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
   private Long mediaId;
 
-  public MediaServiceDownloadSelector() { 
+  public MediaServiceDownloadSelector() {
   }
 
   public MediaServiceDownloadSelector accountId(Long accountId) {
@@ -55,8 +51,7 @@ public class MediaServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,8 +77,7 @@ public class MediaServiceDownloadSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：メディアIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Media ID.&lt;/div&gt; 
    * @return mediaId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：メディアIDです。</div> <div lang=\"en\">Search condition: Media ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,7 +91,6 @@ public class MediaServiceDownloadSelector {
   public void setMediaId(Long mediaId) {
     this.mediaId = mediaId;
   }
-
 
   @Override
   public boolean equals(Object o) {

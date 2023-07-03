@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.CampaignServiceFrequencyLevel;
 import jp.co.yahoo.adsdisplayapi.v10.model.CampaignServiceFrequencyTimeUnit;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; REMOVE時は無視されます。&lt;br&gt; ※ADD時は全ての項目の指定が必須です。&lt;br&gt; ※SET時は更新する項目のみのリクエストが可能です。&lt;br&gt; ※ビューアブルフリークエンシーキャップの解除方法は、以下の通りです： &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceViewableFrequencyCap object describes viewable frequency restriction.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; In REMOVE operation, this field will be ignored.&lt;br&gt; *All items must be specified in ADD operation.&lt;br&gt; *Only update items can be requested in SET operation.&lt;br&gt; *Method to remove the viewable frequency cap: &lt;/div&gt; &lt;code&gt; {     \&quot;viewableFrequencyCap\&quot;: {         \&quot;vImps\&quot;: 0     } } &lt;/code&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> REMOVE時は無視されます。<br> ※ADD時は全ての項目の指定が必須です。<br> ※SET時は更新する項目のみのリクエストが可能です。<br> ※ビューアブルフリークエンシーキャップの解除方法は、以下の通りです： </div> <div lang=\"en\"> CampaignServiceViewableFrequencyCap object describes viewable frequency restriction.<br> This field is optional in ADD and SET operation.<br> In REMOVE operation, this field will be ignored.<br> *All items must be specified in ADD operation.<br> *Only update items can be requested in SET operation.<br> *Method to remove the viewable frequency cap: </div> <code> {     \"viewableFrequencyCap\": {         \"vImps\": 0     } } </code> ")
 @JsonPropertyOrder({
   CampaignServiceViewableFrequencyCap.JSON_PROPERTY_FREQUENCY_LEVEL,
   CampaignServiceViewableFrequencyCap.JSON_PROPERTY_FREQUENCY_TIME_UNIT,
   CampaignServiceViewableFrequencyCap.JSON_PROPERTY_V_IMPS
 })
-@JsonTypeName("CampaignServiceViewableFrequencyCap")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceViewableFrequencyCap {
   public static final String JSON_PROPERTY_FREQUENCY_LEVEL = "frequencyLevel";
   private CampaignServiceFrequencyLevel frequencyLevel;
@@ -48,7 +44,7 @@ public class CampaignServiceViewableFrequencyCap {
   public static final String JSON_PROPERTY_V_IMPS = "vImps";
   private Long vImps;
 
-  public CampaignServiceViewableFrequencyCap() { 
+  public CampaignServiceViewableFrequencyCap() {
   }
 
   public CampaignServiceViewableFrequencyCap frequencyLevel(CampaignServiceFrequencyLevel frequencyLevel) {
@@ -61,8 +57,7 @@ public class CampaignServiceViewableFrequencyCap {
    * Get frequencyLevel
    * @return frequencyLevel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FREQUENCY_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,8 +83,7 @@ public class CampaignServiceViewableFrequencyCap {
    * Get frequencyTimeUnit
    * @return frequencyTimeUnit
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FREQUENCY_TIME_UNIT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,8 +109,7 @@ public class CampaignServiceViewableFrequencyCap {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 同一ユーザに対する広告の最大ビューアブルインプレッション数です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Maximum number of ad viewable impressions to same user.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return vImps
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 同一ユーザに対する広告の最大ビューアブルインプレッション数です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Maximum number of ad viewable impressions to same user.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_V_IMPS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,7 +123,6 @@ public class CampaignServiceViewableFrequencyCap {
   public void setvImps(Long vImps) {
     this.vImps = vImps;
   }
-
 
   @Override
   public boolean equals(Object o) {

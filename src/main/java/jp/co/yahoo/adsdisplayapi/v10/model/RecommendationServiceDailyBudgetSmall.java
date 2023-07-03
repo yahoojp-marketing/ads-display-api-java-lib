@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.RecommendationServiceDailyBudgetSmallCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDailyBudgetSmallオブジェクトは、1日の予算が5,000円未満のキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDailyBudgetSmall objects describes recommendation information about the campaign with less than 5,000 JPY daily budget.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceDailyBudgetSmallオブジェクトは、1日の予算が5,000円未満のキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceDailyBudgetSmall objects describes recommendation information about the campaign with less than 5,000 JPY daily budget.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceDailyBudgetSmall.JSON_PROPERTY_DAILY_BUDGET_SMALL_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceDailyBudgetSmall")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceDailyBudgetSmall {
   public static final String JSON_PROPERTY_DAILY_BUDGET_SMALL_CAMPAIGN_LIST = "dailyBudgetSmallCampaignList";
-  private List<RecommendationServiceDailyBudgetSmallCampaign> dailyBudgetSmallCampaignList = null;
+  private List<RecommendationServiceDailyBudgetSmallCampaign> dailyBudgetSmallCampaignList;
 
-  public RecommendationServiceDailyBudgetSmall() { 
+  public RecommendationServiceDailyBudgetSmall() {
   }
 
   public RecommendationServiceDailyBudgetSmall dailyBudgetSmallCampaignList(List<RecommendationServiceDailyBudgetSmallCampaign> dailyBudgetSmallCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceDailyBudgetSmall {
    * Get dailyBudgetSmallCampaignList
    * @return dailyBudgetSmallCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_SMALL_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceDailyBudgetSmall {
   public void setDailyBudgetSmallCampaignList(List<RecommendationServiceDailyBudgetSmallCampaign> dailyBudgetSmallCampaignList) {
     this.dailyBudgetSmallCampaignList = dailyBudgetSmallCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

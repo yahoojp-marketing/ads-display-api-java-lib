@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AccountManagementServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementServiceReturnValueオブジェクトは、アカウント情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountManagementServiceReturnValue object is a container for storing account information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountManagementServiceReturnValueオブジェクトは、アカウント情報を格納するコンテナです。</div> <div lang=\"en\">The AccountManagementServiceReturnValue object is a container for storing account information.</div> ")
 @JsonPropertyOrder({
   AccountManagementServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AccountManagementServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountManagementServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AccountManagementServiceValue> values = null;
+  private List<AccountManagementServiceValue> values;
 
-  public AccountManagementServiceReturnValue() { 
+  public AccountManagementServiceReturnValue() {
   }
 
   public AccountManagementServiceReturnValue values(List<AccountManagementServiceValue> values) {
@@ -62,8 +58,7 @@ public class AccountManagementServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class AccountManagementServiceReturnValue {
   public void setValues(List<AccountManagementServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

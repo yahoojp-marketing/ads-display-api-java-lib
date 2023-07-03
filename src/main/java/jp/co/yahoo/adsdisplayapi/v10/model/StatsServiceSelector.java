@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServicePeriodCustomDate;
@@ -34,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSelector object is a container that includes the search conditions (execution parameters) of get methods.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">StatsServiceSelector object is a container that includes the search conditions (execution parameters) of get methods.</div> ")
 @JsonPropertyOrder({
   StatsServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   StatsServiceSelector.JSON_PROPERTY_CAMPAIGN_IDS,
@@ -48,23 +45,22 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceSelector.JSON_PROPERTY_START_INDEX,
   StatsServiceSelector.JSON_PROPERTY_NUMBER_RESULTS
 })
-@JsonTypeName("StatsServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
-  private List<Long> campaignIds = null;
+  private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
-  private List<Long> adGroupIds = null;
+  private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_AD_IDS = "adIds";
-  private List<Long> adIds = null;
+  private List<Long> adIds;
 
   public static final String JSON_PROPERTY_MEDIA_IDS = "mediaIds";
-  private List<Long> mediaIds = null;
+  private List<Long> mediaIds;
 
   public static final String JSON_PROPERTY_STATS_PERIOD = "statsPeriod";
   private StatsServiceStatsPeriod statsPeriod;
@@ -73,7 +69,7 @@ public class StatsServiceSelector {
   private StatsServicePeriodCustomDate periodCustomDate;
 
   public static final String JSON_PROPERTY_TARGET_TYPES = "targetTypes";
-  private List<StatsServiceTargetType> targetTypes = null;
+  private List<StatsServiceTargetType> targetTypes;
 
   public static final String JSON_PROPERTY_TYPE = "type";
   private StatsServiceType type;
@@ -84,7 +80,7 @@ public class StatsServiceSelector {
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
 
-  public StatsServiceSelector() { 
+  public StatsServiceSelector() {
   }
 
   public StatsServiceSelector accountId(Long accountId) {
@@ -97,8 +93,7 @@ public class StatsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -132,8 +127,7 @@ public class StatsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンID&lt;br&gt; typeで「CAMPAIGN」または「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; Available only when &amp;#34;CAMPAIGN&amp;#34; or &amp;#34;ADGROUP&amp;#34; or &amp;#34;AD&amp;#34; or &amp;#34;TARGET&amp;#34; is specified for type. &lt;/div&gt; 
    * @return campaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンID<br> typeで「CAMPAIGN」または「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Campaign ID.<br> Available only when &#34;CAMPAIGN&#34; or &#34;ADGROUP&#34; or &#34;AD&#34; or &#34;TARGET&#34; is specified for type. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -167,8 +161,7 @@ public class StatsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループID&lt;br&gt; typeで「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID.&lt;br&gt; Available only when &amp;#34;ADGROUP&amp;#34; or &amp;#34;AD&amp;#34; or &amp;#34;TARGET&amp;#34; is specified for type. &lt;/div&gt; 
    * @return adGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループID<br> typeで「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Ad group ID.<br> Available only when &#34;ADGROUP&#34; or &#34;AD&#34; or &#34;TARGET&#34; is specified for type. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -202,8 +195,7 @@ public class StatsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告ID&lt;br&gt; typeで「AD」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad ID.&lt;br&gt; Available only when &amp;#34;AD&amp;#34; is specified for type. &lt;/div&gt; 
    * @return adIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告ID<br> typeで「AD」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Ad ID.<br> Available only when &#34;AD&#34; is specified for type. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -237,8 +229,7 @@ public class StatsServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像ID&lt;br&gt; typeで「MEDIA」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; Available only when &amp;#34;MEDIA&amp;#34; is specified for type. &lt;/div&gt; 
    * @return mediaIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 画像ID<br> typeで「MEDIA」を指定した場合のみ有効です。 </div> <div lang=\"en\"> Media ID.<br> Available only when &#34;MEDIA&#34; is specified for type. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -264,8 +255,7 @@ public class StatsServiceSelector {
    * Get statsPeriod
    * @return statsPeriod
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATS_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -291,8 +281,7 @@ public class StatsServiceSelector {
    * Get periodCustomDate
    * @return periodCustomDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD_CUSTOM_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -326,8 +315,7 @@ public class StatsServiceSelector {
    * Get targetTypes
    * @return targetTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -353,8 +341,7 @@ public class StatsServiceSelector {
    * Get type
    * @return type
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -381,8 +368,7 @@ public class StatsServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -410,8 +396,7 @@ public class StatsServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -425,7 +410,6 @@ public class StatsServiceSelector {
   public void setNumberResults(Integer numberResults) {
     this.numberResults = numberResults;
   }
-
 
   @Override
   public boolean equals(Object o) {

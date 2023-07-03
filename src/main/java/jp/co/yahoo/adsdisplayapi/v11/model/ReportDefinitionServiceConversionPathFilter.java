@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceConversionPathFilterOperator;
@@ -32,14 +30,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceConversionPathFilterオブジェクトは、コンバージョン経路レポートのフィルタ条件を表します。&lt;br&gt;   複数指定した場合、AND条件になります。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceConversionPathFilter describes the filter condition of Conversion Path Report. &lt;br&gt;    If multiple values are specified, the condition will be \&quot;AND\&quot;. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation.  &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceConversionPathFilterオブジェクトは、コンバージョン経路レポートのフィルタ条件を表します。<br>   複数指定した場合、AND条件になります。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\">   ReportDefinitionServiceConversionPathFilter describes the filter condition of Conversion Path Report. <br>    If multiple values are specified, the condition will be \"AND\". <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation.  </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceConversionPathFilter.JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE,
   ReportDefinitionServiceConversionPathFilter.JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR,
   ReportDefinitionServiceConversionPathFilter.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("ReportDefinitionServiceConversionPathFilter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceConversionPathFilter {
   public static final String JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE = "conversionPathFilterType";
   private ReportDefinitionServiceConversionPathFilterType conversionPathFilterType;
@@ -48,9 +44,9 @@ public class ReportDefinitionServiceConversionPathFilter {
   private ReportDefinitionServiceConversionPathFilterOperator conversionPathFilterOperator;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<String> values = null;
+  private List<String> values;
 
-  public ReportDefinitionServiceConversionPathFilter() { 
+  public ReportDefinitionServiceConversionPathFilter() {
   }
 
   public ReportDefinitionServiceConversionPathFilter conversionPathFilterType(ReportDefinitionServiceConversionPathFilterType conversionPathFilterType) {
@@ -63,8 +59,7 @@ public class ReportDefinitionServiceConversionPathFilter {
    * Get conversionPathFilterType
    * @return conversionPathFilterType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class ReportDefinitionServiceConversionPathFilter {
    * Get conversionPathFilterOperator
    * @return conversionPathFilterOperator
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class ReportDefinitionServiceConversionPathFilter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件値です。複数指定した場合は、OR条件になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Condition value. If multiple values are specified, the condition will be \&quot;OR\&quot;. &lt;/div&gt; 
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">条件値です。複数指定した場合は、OR条件になります。</div> <div lang=\"en\">Condition value. If multiple values are specified, the condition will be \"OR\". </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class ReportDefinitionServiceConversionPathFilter {
   public void setValues(List<String> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

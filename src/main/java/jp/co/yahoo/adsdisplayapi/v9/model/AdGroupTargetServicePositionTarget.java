@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTargetServicePositionType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServicePositionTargetオブジェクトは、ポジションターゲティングの設定情報を保持します。&lt;br&gt; *このターゲットは予約型専用となります。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServicePositionTarget object contains position targeting settings.&lt;br&gt; *This target is exclusive for guaranteed ad.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServicePositionTargetオブジェクトは、ポジションターゲティングの設定情報を保持します。<br> *このターゲットは予約型専用となります。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupTargetServicePositionTarget object contains position targeting settings.<br> *This target is exclusive for guaranteed ad.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServicePositionTarget.JSON_PROPERTY_POSITION_TYPE
 })
-@JsonTypeName("AdGroupTargetServicePositionTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServicePositionTarget {
   public static final String JSON_PROPERTY_POSITION_TYPE = "positionType";
   private AdGroupTargetServicePositionType positionType;
 
-  public AdGroupTargetServicePositionTarget() { 
+  public AdGroupTargetServicePositionTarget() {
   }
 
   public AdGroupTargetServicePositionTarget positionType(AdGroupTargetServicePositionType positionType) {
@@ -52,8 +48,7 @@ public class AdGroupTargetServicePositionTarget {
    * Get positionType
    * @return positionType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_POSITION_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AdGroupTargetServicePositionTarget {
   public void setPositionType(AdGroupTargetServicePositionType positionType) {
     this.positionType = positionType;
   }
-
 
   @Override
   public boolean equals(Object o) {

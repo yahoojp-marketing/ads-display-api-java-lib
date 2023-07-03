@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceAccount;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceCrossCampaignGoalは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン目的を示します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※ADD時、crossCampaignTypeが&lt;code&gt;CAMPAIGN_GOAL&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceCrossCampaignGoal indicates account and campaign goal that is subject to Cross-campaign Reach Report combination.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation.&lt;br&gt; *If crossCampaignType is &lt;code&gt;CAMPAIGN_GOAL&lt;/code&gt;, this field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceCrossCampaignGoalは、横断リーチレポートの組み合わせの対象となるアカウントおよびキャンペーン目的を示します。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br> ※ADD時、crossCampaignTypeが<code>CAMPAIGN_GOAL</code>の場合は必須です。 </div> <div lang=\"en\"> ReportDefinitionServiceCrossCampaignGoal indicates account and campaign goal that is subject to Cross-campaign Reach Report combination.<br> This field is optional in ADD operation, and will be ignored in REMOVE operation.<br> *If crossCampaignType is <code>CAMPAIGN_GOAL</code>, this field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceCrossCampaignGoal.JSON_PROPERTY_ACCOUNT,
   ReportDefinitionServiceCrossCampaignGoal.JSON_PROPERTY_CAMPAIGN_GOAL
 })
-@JsonTypeName("ReportDefinitionServiceCrossCampaignGoal")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceCrossCampaignGoal {
   public static final String JSON_PROPERTY_ACCOUNT = "account";
   private ReportDefinitionServiceAccount account;
@@ -43,7 +39,7 @@ public class ReportDefinitionServiceCrossCampaignGoal {
   public static final String JSON_PROPERTY_CAMPAIGN_GOAL = "campaignGoal";
   private String campaignGoal;
 
-  public ReportDefinitionServiceCrossCampaignGoal() { 
+  public ReportDefinitionServiceCrossCampaignGoal() {
   }
 
   public ReportDefinitionServiceCrossCampaignGoal account(ReportDefinitionServiceAccount account) {
@@ -56,8 +52,7 @@ public class ReportDefinitionServiceCrossCampaignGoal {
    * Get account
    * @return account
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class ReportDefinitionServiceCrossCampaignGoal {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   横断リーチレポートの組み合わせの対象となるキャンペーン目的です。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、crossCampaignReachTypeが&lt;code&gt;CAMPAIGN_GOAL&lt;/code&gt;の場合は必須です。&lt;br&gt;   ※BRAND_AWARENESSを指定すると「運用型：ブランド認知」と「予約型：ブランド認知」の両方が対象になります。&lt;br&gt;   ※BRAND_AWARENESS_GUARANTEEDは指定できません。&lt;br&gt;   ※指定可能な値は、AccountAuthorityServiceのGET操作で得られるAccountAuthorityのauthoritiesフィールドをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Campaign goal that is subject to combination of Cross-campaign Reach Report. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;   *If crossCampaignReachType is &lt;code&gt;CAMPAIGN_GOAL&lt;/code&gt;, this field is required in ADD operation.&lt;br&gt;   *If you specify BRAND_AWARENESS, \&quot;Auction: Brand awareness\&quot; and \&quot;Guaranteed: Brand awareness\&quot; will be targeted. &lt;br&gt;   *BRAND_AWARENESS_GUARANTEED cannot be specified.&lt;br&gt;   *Available values can be referred to authorities field of AccountAuthority object obtained by GET operation of AccountAuthorityService. &lt;/div&gt; 
    * @return campaignGoal
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   横断リーチレポートの組み合わせの対象となるキャンペーン目的です。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、crossCampaignReachTypeが<code>CAMPAIGN_GOAL</code>の場合は必須です。<br>   ※BRAND_AWARENESSを指定すると「運用型：ブランド認知」と「予約型：ブランド認知」の両方が対象になります。<br>   ※BRAND_AWARENESS_GUARANTEEDは指定できません。<br>   ※指定可能な値は、AccountAuthorityServiceのGET操作で得られるAccountAuthorityのauthoritiesフィールドをご確認ください。 </div> <div lang=\"en\">   Campaign goal that is subject to combination of Cross-campaign Reach Report. <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>   *If crossCampaignReachType is <code>CAMPAIGN_GOAL</code>, this field is required in ADD operation.<br>   *If you specify BRAND_AWARENESS, \"Auction: Brand awareness\" and \"Guaranteed: Brand awareness\" will be targeted. <br>   *BRAND_AWARENESS_GUARANTEED cannot be specified.<br>   *Available values can be referred to authorities field of AccountAuthority object obtained by GET operation of AccountAuthorityService. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class ReportDefinitionServiceCrossCampaignGoal {
   public void setCampaignGoal(String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -50,14 +50,12 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.TimeZone;
-
 import java.time.OffsetDateTime;
-
 
 import jp.co.yahoo.adsdisplayapi.v11.auth.Authentication;
 import jp.co.yahoo.adsdisplayapi.v11.auth.OAuth;
 
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 @Component("jp.co.yahoo.adsdisplayapi.v11.ApiClient")
 public class ApiClient extends JavaTimeFormatter {
     public enum CollectionFormat {
@@ -500,12 +498,6 @@ public class ApiClient extends JavaTimeFormatter {
      * @return path with placeholders replaced by variables
      */
     public String expandPath(String pathTemplate, Map<String, Object> variables) {
-        // disable default URL encoding 
-        DefaultUriBuilderFactory uriBuilderFactory = new DefaultUriBuilderFactory();
-        uriBuilderFactory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.NONE);
-        final RestTemplate restTemplate = new RestTemplate();
-        restTemplate.setUriTemplateHandler(uriBuilderFactory);
-
         return restTemplate.getUriTemplateHandler().expand(pathTemplate, variables).toString();
     }
 
@@ -535,8 +527,7 @@ public class ApiClient extends JavaTimeFormatter {
                         queryBuilder.append(encodedName);
                         if (value != null) {
                             String templatizedKey = encodedName + valueItemCounter++;
-                            final String encodedValue = URLEncoder.encode(value.toString(), "UTF-8");
-                            uriParams.put(templatizedKey, encodedValue);
+                            uriParams.put(templatizedKey, value.toString());
                             queryBuilder.append('=').append("{").append(templatizedKey).append("}");
                         }
                     }
@@ -570,7 +561,7 @@ public class ApiClient extends JavaTimeFormatter {
     public <T> ResponseEntity<T> invokeAPI(String path, HttpMethod method, Map<String, Object> pathParams, MultiValueMap<String, String> queryParams, Object body, HttpHeaders headerParams, MultiValueMap<String, String> cookieParams, MultiValueMap<String, Object> formParams, List<MediaType> accept, MediaType contentType, String[] authNames, ParameterizedTypeReference<T> returnType) throws RestClientException {
         updateParamsForAuth(authNames, queryParams, headerParams, cookieParams);
 
-   	    Map<String,Object> uriParams = new HashMap<>();
+        Map<String,Object> uriParams = new HashMap<>();
         uriParams.putAll(pathParams);
 
         String finalUri = path;
@@ -591,7 +582,7 @@ public class ApiClient extends JavaTimeFormatter {
             throw new RestClientException("Could not build URL: " + builder.toUriString(), ex);
         }
 
-        final BodyBuilder requestBuilder = RequestEntity.method(method, uri);
+        final BodyBuilder requestBuilder = RequestEntity.method(method, UriComponentsBuilder.fromHttpUrl(basePath).toUriString() + finalUri, uriParams);
         if (accept != null) {
             requestBuilder.accept(accept.toArray(new MediaType[accept.size()]));
         }
@@ -670,6 +661,11 @@ public class ApiClient extends JavaTimeFormatter {
         RestTemplate restTemplate = new RestTemplate();
         // This allows us to read the response more than once - Necessary for debugging.
         restTemplate.setRequestFactory(new BufferingClientHttpRequestFactory(restTemplate.getRequestFactory()));
+
+        // disable default URL encoding
+        DefaultUriBuilderFactory uriBuilderFactory = new DefaultUriBuilderFactory();
+        uriBuilderFactory.setEncodingMode(DefaultUriBuilderFactory.EncodingMode.VALUES_ONLY);
+        restTemplate.setUriTemplateHandler(uriBuilderFactory);
         return restTemplate;
     }
 
@@ -716,6 +712,9 @@ public class ApiClient extends JavaTimeFormatter {
         }
 
         private String headersToString(HttpHeaders headers) {
+            if(headers == null || headers.isEmpty()) {
+                return "";
+            }
             StringBuilder builder = new StringBuilder();
             for (Entry<String, List<String>> entry : headers.entrySet()) {
                 builder.append(entry.getKey()).append("=[");

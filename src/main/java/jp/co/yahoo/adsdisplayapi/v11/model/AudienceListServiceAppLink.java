@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AudienceListServiceAppPlatform;
 import jp.co.yahoo.adsdisplayapi.v11.model.AudienceListServiceAppVendor;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,15 +28,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceAppLinkオブジェクトは、アプリリンクの詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceAppLink object describes the detailed information of app link.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListServiceAppLinkオブジェクトは、アプリリンクの詳細情報を表します。</div> <div lang=\"en\">AudienceListServiceAppLink object describes the detailed information of app link.</div> ")
 @JsonPropertyOrder({
   AudienceListServiceAppLink.JSON_PROPERTY_APP_ID,
   AudienceListServiceAppLink.JSON_PROPERTY_APP_VENDOR,
   AudienceListServiceAppLink.JSON_PROPERTY_LINK_ID,
   AudienceListServiceAppLink.JSON_PROPERTY_APP_PLATFORM
 })
-@JsonTypeName("AudienceListServiceAppLink")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceAppLink {
   public static final String JSON_PROPERTY_APP_ID = "appId";
   private String appId;
@@ -52,7 +48,7 @@ public class AudienceListServiceAppLink {
   public static final String JSON_PROPERTY_APP_PLATFORM = "appPlatform";
   private AudienceListServiceAppPlatform appPlatform;
 
-  public AudienceListServiceAppLink() { 
+  public AudienceListServiceAppLink() {
   }
 
   public AudienceListServiceAppLink appId(String appId) {
@@ -65,8 +61,7 @@ public class AudienceListServiceAppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アプリIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; App ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return appId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アプリIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> App ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -92,8 +87,7 @@ public class AudienceListServiceAppLink {
    * Get appVendor
    * @return appVendor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_VENDOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -119,8 +113,7 @@ public class AudienceListServiceAppLink {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンクIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Link ID.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation. &lt;/div&gt; 
    * @return linkId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リンクIDです。<br> このフィールドは、ADD時は必須となり、SET時は無視されます。 </div> <div lang=\"en\"> Link ID.<br> This field is required in ADD operation, and will be ignored in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LINK_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -146,8 +139,7 @@ public class AudienceListServiceAppLink {
    * Get appPlatform
    * @return appPlatform
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,7 +153,6 @@ public class AudienceListServiceAppLink {
   public void setAppPlatform(AudienceListServiceAppPlatform appPlatform) {
     this.appPlatform = appPlatform;
   }
-
 
   @Override
   public boolean equals(Object o) {

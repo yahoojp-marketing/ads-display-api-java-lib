@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.GuaranteedCampaignServiceAdCategoryStatus;
@@ -40,7 +38,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedCampaignオブジェクトは、予約型のキャンペーン情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedCampaign object describes guaranteed campaign information. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">GuaranteedCampaignオブジェクトは、予約型のキャンペーン情報を表します。</div> <div lang=\"en\">GuaranteedCampaign object describes guaranteed campaign information. </div> ")
 @JsonPropertyOrder({
   GuaranteedCampaign.JSON_PROPERTY_ACCOUNT_ID,
   GuaranteedCampaign.JSON_PROPERTY_LIFETIME_BUDGET,
@@ -64,8 +61,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedCampaign.JSON_PROPERTY_BRAND_TRACKING,
   GuaranteedCampaign.JSON_PROPERTY_CONVERSION_TRACKER
 })
-@JsonTypeName("GuaranteedCampaign")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedCampaign {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -92,7 +88,7 @@ public class GuaranteedCampaign {
   private String endTime;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
-  private List<GuaranteedCampaignServiceLabel> labels = null;
+  private List<GuaranteedCampaignServiceLabel> labels;
 
   public static final String JSON_PROPERTY_SERVING_STATUS = "servingStatus";
   private GuaranteedCampaignServiceServingStatus servingStatus;
@@ -113,7 +109,7 @@ public class GuaranteedCampaign {
   private Long guaranteedSimulationId;
 
   public static final String JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS = "notificationEmailAddress";
-  private List<String> notificationEmailAddress = null;
+  private List<String> notificationEmailAddress;
 
   public static final String JSON_PROPERTY_AD_CATEGORY_STATUS = "adCategoryStatus";
   private GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus;
@@ -130,7 +126,7 @@ public class GuaranteedCampaign {
   public static final String JSON_PROPERTY_CONVERSION_TRACKER = "conversionTracker";
   private GuaranteedCampaignServiceConversionTracker conversionTracker;
 
-  public GuaranteedCampaign() { 
+  public GuaranteedCampaign() {
   }
 
   public GuaranteedCampaign accountId(Long accountId) {
@@ -143,8 +139,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID. <br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -170,8 +165,7 @@ public class GuaranteedCampaign {
    * Get lifetimeBudget
    * @return lifetimeBudget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LIFETIME_BUDGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -197,8 +191,7 @@ public class GuaranteedCampaign {
    * Get campaignBiddingStrategy
    * @return campaignBiddingStrategy
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -224,8 +217,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン目的です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign goal.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignGoal
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン目的です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Campaign goal.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -251,8 +243,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドはSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in SET operation. &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドはSET時に必須となります。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -278,8 +269,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name. &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。 </div> <div lang=\"en\"> Campaign Name. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -305,8 +295,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; ∗ Format: yyyyMMdd&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> End date.<br> ∗ Format: yyyyMMdd<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -332,8 +321,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了時刻です。&lt;br&gt; ※フォーマット：HHmm&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End time.&lt;br&gt; * Format: HHmm&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return endTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 終了時刻です。<br> ※フォーマット：HHmm<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> End time.<br> * Format: HHmm<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -367,8 +355,7 @@ public class GuaranteedCampaign {
    * Get labels
    * @return labels
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABELS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -394,8 +381,7 @@ public class GuaranteedCampaign {
    * Get servingStatus
    * @return servingStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -421,8 +407,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; ∗ Format: yyyyMMdd&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始日です。<br> ※フォーマット：yyyyMMdd<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Start date.<br> ∗ Format: yyyyMMdd<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -448,8 +433,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始時刻です。&lt;br&gt; ※フォーマット：HHmm&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start time.&lt;br&gt; * Format: HHmm&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return startTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 開始時刻です。<br> ※フォーマット：HHmm<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Start time.<br> * Format: HHmm<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -475,8 +459,7 @@ public class GuaranteedCampaign {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -502,8 +485,7 @@ public class GuaranteedCampaign {
    * Get viewableFrequencyCap
    * @return viewableFrequencyCap
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -529,8 +511,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; シミュレーションIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Simulation ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return guaranteedSimulationId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> シミュレーションIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Simulation ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GUARANTEED_SIMULATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -564,8 +545,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 連絡先メールアドレスです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Email address to send notifications.&lt;br&gt; &lt;/div&gt; 
    * @return notificationEmailAddress
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 連絡先メールアドレスです。<br> </div> <div lang=\"en\"> Email address to send notifications.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -591,8 +571,7 @@ public class GuaranteedCampaign {
    * Get adCategoryStatus
    * @return adCategoryStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_CATEGORY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -618,8 +597,7 @@ public class GuaranteedCampaign {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 予約型のキャンペーンをキャンセルした日時です。&lt;br&gt; ※フォーマット：yyyyMMddHHmmss&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A date and time which the guaranteed campaign is cancelled.&lt;br&gt; ∗ Format: yyyyMMddHHmmss&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignCanceledDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 予約型のキャンペーンをキャンセルした日時です。<br> ※フォーマット：yyyyMMddHHmmss<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> A date and time which the guaranteed campaign is cancelled.<br> ∗ Format: yyyyMMddHHmmss<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_CANCELED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -645,8 +623,7 @@ public class GuaranteedCampaign {
    * Get _package
    * @return _package
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PACKAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -672,8 +649,7 @@ public class GuaranteedCampaign {
    * Get brandTracking
    * @return brandTracking
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_TRACKING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -699,8 +675,7 @@ public class GuaranteedCampaign {
    * Get conversionTracker
    * @return conversionTracker
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -714,7 +689,6 @@ public class GuaranteedCampaign {
   public void setConversionTracker(GuaranteedCampaignServiceConversionTracker conversionTracker) {
     this.conversionTracker = conversionTracker;
   }
-
 
   @Override
   public boolean equals(Object o) {

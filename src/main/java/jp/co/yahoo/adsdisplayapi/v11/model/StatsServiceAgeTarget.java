@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.StatsServiceAge;
 import jp.co.yahoo.adsdisplayapi.v11.model.StatsServiceEstimateFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,13 +28,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAgeTargetオブジェクトは、年齢ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAgeTarget object holds configuration information of age targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceAgeTargetオブジェクトは、年齢ターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceAgeTarget object holds configuration information of age targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceAgeTarget.JSON_PROPERTY_AGE,
   StatsServiceAgeTarget.JSON_PROPERTY_ESTIMATE_FLG
 })
-@JsonTypeName("StatsServiceAgeTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceAgeTarget {
   public static final String JSON_PROPERTY_AGE = "age";
   private StatsServiceAge age;
@@ -44,7 +40,7 @@ public class StatsServiceAgeTarget {
   public static final String JSON_PROPERTY_ESTIMATE_FLG = "estimateFlg";
   private StatsServiceEstimateFlg estimateFlg;
 
-  public StatsServiceAgeTarget() { 
+  public StatsServiceAgeTarget() {
   }
 
   public StatsServiceAgeTarget age(StatsServiceAge age) {
@@ -57,8 +53,7 @@ public class StatsServiceAgeTarget {
    * Get age
    * @return age
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -84,8 +79,7 @@ public class StatsServiceAgeTarget {
    * Get estimateFlg
    * @return estimateFlg
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ESTIMATE_FLG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,7 +93,6 @@ public class StatsServiceAgeTarget {
   public void setEstimateFlg(StatsServiceEstimateFlg estimateFlg) {
     this.estimateFlg = estimateFlg;
   }
-
 
   @Override
   public boolean equals(Object o) {

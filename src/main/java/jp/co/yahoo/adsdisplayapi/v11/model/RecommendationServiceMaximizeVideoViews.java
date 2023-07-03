@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceMaximizeVideoViewsCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMaximizeVideoViewsオブジェクトは、自動入札（動画再生数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMaximizeVideoViews objects describes recommendation information about the campaign that is suitable for using autobidding (Maximize video views).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceMaximizeVideoViewsオブジェクトは、自動入札（動画再生数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceMaximizeVideoViews objects describes recommendation information about the campaign that is suitable for using autobidding (Maximize video views).</div> ")
 @JsonPropertyOrder({
   RecommendationServiceMaximizeVideoViews.JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceMaximizeVideoViews")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceMaximizeVideoViews {
   public static final String JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS_CAMPAIGN_LIST = "maximizeVideoViewsCampaignList";
-  private List<RecommendationServiceMaximizeVideoViewsCampaign> maximizeVideoViewsCampaignList = null;
+  private List<RecommendationServiceMaximizeVideoViewsCampaign> maximizeVideoViewsCampaignList;
 
-  public RecommendationServiceMaximizeVideoViews() { 
+  public RecommendationServiceMaximizeVideoViews() {
   }
 
   public RecommendationServiceMaximizeVideoViews maximizeVideoViewsCampaignList(List<RecommendationServiceMaximizeVideoViewsCampaign> maximizeVideoViewsCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceMaximizeVideoViews {
    * Get maximizeVideoViewsCampaignList
    * @return maximizeVideoViewsCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceMaximizeVideoViews {
   public void setMaximizeVideoViewsCampaignList(List<RecommendationServiceMaximizeVideoViewsCampaign> maximizeVideoViewsCampaignList) {
     this.maximizeVideoViewsCampaignList = maximizeVideoViewsCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

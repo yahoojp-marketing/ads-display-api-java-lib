@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceBudgetオブジェクトは、キャンペーン予算に関する情報を表します。&lt;br&gt; このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The CampaignServiceBudget object serves campaign budgets.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceBudgetオブジェクトは、キャンペーン予算に関する情報を表します。<br> このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 </div> <div lang=\"en\"> The CampaignServiceBudget object serves campaign budgets.<br> This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   CampaignServiceBudget.JSON_PROPERTY_AMOUNT
 })
-@JsonTypeName("CampaignServiceBudget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceBudget {
   public static final String JSON_PROPERTY_AMOUNT = "amount";
   private Long amount;
 
-  public CampaignServiceBudget() { 
+  public CampaignServiceBudget() {
   }
 
   public CampaignServiceBudget amount(Long amount) {
@@ -51,8 +47,7 @@ public class CampaignServiceBudget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンの一日あたりの予算（一日単位の利用金額）です。&lt;br&gt; ADD時、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The daily budget.&lt;br&gt; In ADD operation, this field is required. &lt;/div&gt; 
    * @return amount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの一日あたりの予算（一日単位の利用金額）です。<br> ADD時、このフィールドは必須となります。 </div> <div lang=\"en\"> The daily budget.<br> In ADD operation, this field is required. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class CampaignServiceBudget {
   public void setAmount(Long amount) {
     this.amount = amount;
   }
-
 
   @Override
   public boolean equals(Object o) {

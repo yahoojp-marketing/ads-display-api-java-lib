@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceButtonText;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceCustomParameters;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceDisplayUrlLevel;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceDynamicAdオブジェクトは、動的ディスプレイ広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがDYNAMIC_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceDynamicAd object describes information regarding dynamic ads for display.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is DYNAMIC_AD, this field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceDynamicAdオブジェクトは、動的ディスプレイ広告の情報を表します。<br> このフィールドは、省略可能となります。<br> ※ADD時、adTypeがDYNAMIC_ADの場合は必須です。 </div> <div lang=\"en\"> AdGroupAdServiceDynamicAd object describes information regarding dynamic ads for display.<br> This field is optional.<br> *If adType is DYNAMIC_AD, this field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceDynamicAd.JSON_PROPERTY_BRAND_COLOR,
   AdGroupAdServiceDynamicAd.JSON_PROPERTY_BUTTON_TEXT,
@@ -65,8 +62,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceDynamicAd.JSON_PROPERTY_IS_REMOVE_SUFFIX,
   AdGroupAdServiceDynamicAd.JSON_PROPERTY_IS_REMOVE_BRAND_COLOR
 })
-@JsonTypeName("AdGroupAdServiceDynamicAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceDynamicAd {
   public static final String JSON_PROPERTY_BRAND_COLOR = "brandColor";
   private String brandColor;
@@ -158,7 +154,7 @@ public class AdGroupAdServiceDynamicAd {
   public static final String JSON_PROPERTY_IS_REMOVE_BRAND_COLOR = "isRemoveBrandColor";
   private AdGroupAdServiceIsRemoveFlg isRemoveBrandColor;
 
-  public AdGroupAdServiceDynamicAd() { 
+  public AdGroupAdServiceDynamicAd() {
   }
 
   public AdGroupAdServiceDynamicAd brandColor(String brandColor) {
@@ -171,8 +167,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ブランドカラーです。&lt;br&gt; ※RGB、HEX指定です。&lt;br&gt; 設定例：#FFFFFF&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Brand color.&lt;br&gt; Format :RGB or HEX&lt;br&gt; e.g.：#FFFFFF&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return brandColor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ブランドカラーです。<br> ※RGB、HEX指定です。<br> 設定例：#FFFFFF<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Brand color.<br> Format :RGB or HEX<br> e.g.：#FFFFFF<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BRAND_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -198,8 +193,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get buttonText
    * @return buttonText
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,8 +219,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアIDです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンバナー画像のメディアIDです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Campaign banner media ID.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -252,8 +245,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアID 2です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID 2.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンバナー画像のメディアID 2です。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Campaign banner media ID 2.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -279,8 +271,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアID 3です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID 3.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId3
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンバナー画像のメディアID 3です。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Campaign banner media ID 3.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID3)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -306,8 +297,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアID 4です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID 4.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId4
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンバナー画像のメディアID 4です。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Campaign banner media ID 4.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID4)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -333,8 +323,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナーURLです。&lt;br&gt; このフィールドは省略可能となります。&lt;br&gt; ADD時、設定する場合は以下のいずれかの指定が必要となります。&lt;br&gt; - campaignBannerMediaId&lt;br&gt; - campaignBannerMediaId2&lt;br&gt; - campaignBannerMediaId3&lt;br&gt; - campaignBannerMediaId4 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner URL.&lt;br&gt; This field is optional.&lt;br&gt; For setting in ADD operation, one of the following is required:&lt;br&gt; - campaignBannerMediaId&lt;br&gt; - campaignBannerMediaId2&lt;br&gt; - campaignBannerMediaId3&lt;br&gt; - campaignBannerMediaId4 &lt;/div&gt; 
    * @return campaignBannerUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンバナーURLです。<br> このフィールドは省略可能となります。<br> ADD時、設定する場合は以下のいずれかの指定が必要となります。<br> - campaignBannerMediaId<br> - campaignBannerMediaId2<br> - campaignBannerMediaId3<br> - campaignBannerMediaId4 </div> <div lang=\"en\"> Campaign banner URL.<br> This field is optional.<br> For setting in ADD operation, one of the following is required:<br> - campaignBannerMediaId<br> - campaignBannerMediaId2<br> - campaignBannerMediaId3<br> - campaignBannerMediaId4 </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -360,8 +349,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -387,8 +375,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 表示URLです。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt; ADD時にurlを指定する場合、このフィールドは必須です。&lt;br&gt; ADD時にfinalUrlを指定する場合、このフィールドを指定することはできません。代わりにfinalUrlから生成された値が自動で設定されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Display URL.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; If you specify url in ADD operation, this field is required.&lt;br&gt; When finalUrl is specified in ADD operation, this field cannot be specified. Instead, the value generated from finalUrl will be set automatically. &lt;/div&gt; 
    * @return displayUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 表示URLです。<br> SET時、このフィールドは省略可能となります。<br> ADD時にurlを指定する場合、このフィールドは必須です。<br> ADD時にfinalUrlを指定する場合、このフィールドを指定することはできません。代わりにfinalUrlから生成された値が自動で設定されます。 </div> <div lang=\"en\"> Display URL.<br> This field is optional in SET operation.<br> If you specify url in ADD operation, this field is required.<br> When finalUrl is specified in ADD operation, this field cannot be specified. Instead, the value generated from finalUrl will be set automatically. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -414,8 +401,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get displayUrlLevel
    * @return displayUrlLevel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -441,8 +427,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt; ADD時、finalUrlフィールドとurlフィールドは同時に設定することはできず、どちらか片方の設定が必須となります。&lt;br&gt; finalUrlフィールドを設定する場合、smartphoneFinalUrl、trackingUrl、customParametersは任意になります。&lt;br&gt; SET時にurlを指定する場合、このフィールドの値はクリアされます。&lt;br&gt; キャンペーン目的「アプリ訴求」の場合は、このフィールドには以下のURLのみ設定できます。&lt;br&gt; - iOSの場合：itunes.apple.com, apps.apple.com&lt;br&gt; - Androidの場合：play.google.com &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; In ADD operation, finalUrl field and url field cannot be set at the same time, and one of them must be set.&lt;br&gt; If you specify finalUrl, smartphoneFinalUrl, trackingUrl and customParameters will be optional.&lt;br&gt; If url is specified in SET operation, the value in this field will be cleared.&lt;br&gt; If campaignGoal is APP_PROMOTION, only the following URL can be set in this field.&lt;br&gt; - For iOS : itunes.apple.com, apps.apple.com&lt;br&gt; - For Android : play.google.com &lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> SET時、このフィールドは省略可能となります。<br> ADD時、finalUrlフィールドとurlフィールドは同時に設定することはできず、どちらか片方の設定が必須となります。<br> finalUrlフィールドを設定する場合、smartphoneFinalUrl、trackingUrl、customParametersは任意になります。<br> SET時にurlを指定する場合、このフィールドの値はクリアされます。<br> キャンペーン目的「アプリ訴求」の場合は、このフィールドには以下のURLのみ設定できます。<br> - iOSの場合：itunes.apple.com, apps.apple.com<br> - Androidの場合：play.google.com </div> <div lang=\"en\">Final URL.<br> This field is optional in SET operation.<br> In ADD operation, finalUrl field and url field cannot be set at the same time, and one of them must be set.<br> If you specify finalUrl, smartphoneFinalUrl, trackingUrl and customParameters will be optional.<br> If url is specified in SET operation, the value in this field will be cleared.<br> If campaignGoal is APP_PROMOTION, only the following URL can be set in this field.<br> - For iOS : itunes.apple.com, apps.apple.com<br> - For Android : play.google.com </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -468,8 +453,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;スマートフォン向けURLです。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。&lt;br&gt; キャンペーン目的「アプリ訴求」の場合は、ADD、SETのどちらも指定できません。&lt;br&gt; SET時にurlを指定する場合、このフィールドの値はクリアされます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL (smartphone).&lt;br&gt; This field can be optionally specified only when specifying finalUrl.&lt;br&gt; Not allowed for ADD and SET when a campaign goal is \&quot;app promotion\&quot;.&lt;br&gt; If url is specified in SET operation, the value in this field will be cleared. &lt;/div&gt; 
    * @return smartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">スマートフォン向けURLです。<br> finalUrlを指定するときのみ、任意で指定できます。<br> キャンペーン目的「アプリ訴求」の場合は、ADD、SETのどちらも指定できません。<br> SET時にurlを指定する場合、このフィールドの値はクリアされます。 </div> <div lang=\"en\">Final URL (smartphone).<br> This field can be optionally specified only when specifying finalUrl.<br> Not allowed for ADD and SET when a campaign goal is \"app promotion\".<br> If url is specified in SET operation, the value in this field will be cleared. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -495,8 +479,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveCampaignBannerMediaId
    * @return isRemoveCampaignBannerMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -522,8 +505,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveCampaignBannerMediaId2
    * @return isRemoveCampaignBannerMediaId2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -549,8 +531,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveCampaignBannerMediaId3
    * @return isRemoveCampaignBannerMediaId3
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID3)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -576,8 +557,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveCampaignBannerMediaId4
    * @return isRemoveCampaignBannerMediaId4
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID4)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -603,8 +583,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveCampaignBannerUrl
    * @return isRemoveCampaignBannerUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -630,8 +609,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveSmartphoneFinalUrl
    * @return isRemoveSmartphoneFinalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -657,8 +635,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -684,8 +661,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴ画像のメディアIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of logo image.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return logoMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ロゴ画像のメディアIDです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Media ID of logo image.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -711,8 +687,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴ画像のメディアID 2です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of logo image 2.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return logoMediaId2
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ロゴ画像のメディアID 2です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Media ID of logo image 2.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID2)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -738,8 +713,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴ画像のメディアID 3です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of logo image 3.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return logoMediaId3
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ロゴ画像のメディアID 3です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Media ID of logo image 3.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID3)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -765,8 +739,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; プレフィックスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Prefix.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return prefix
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> プレフィックスです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Prefix.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PREFIX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -792,8 +765,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告の主体者表記です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Advertiser Indication.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return principal
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告の主体者表記です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Advertiser Indication.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PRINCIPAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -819,8 +791,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サフィックスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Suffix.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return suffix
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サフィックスです。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> Suffix.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SUFFIX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -846,8 +817,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。&lt;br&gt; SET時にurlを指定する場合、このフィールドの値はクリアされます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; This field can be optionally specified only when specifying finalUrl.&lt;br&gt; If url is specified in SET operation, the value in this field will be cleared. &lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> ADD時、このフィールドは省略可能となります。<br> finalUrlを指定するときのみ、任意で指定できます。<br> SET時にurlを指定する場合、このフィールドの値はクリアされます。 </div> <div lang=\"en\">Tracking URL.<br> This field is optional in ADD operation.<br> This field can be optionally specified only when specifying finalUrl.<br> If url is specified in SET operation, the value in this field will be cleared. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -873,8 +843,7 @@ public class AdGroupAdServiceDynamicAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンク先URLです。&lt;br&gt; アプリ訴求キャンペーンで設定可能なリンク先URLについては&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan&#x3D;ja&amp;aid&#x3D;61528\&quot;&gt;こちら&lt;/a&gt;をご参照ください。&lt;br&gt; SET時、このフィールドは省略可能となります。&lt;br&gt; ADD時、urlフィールドとfinalUrlフィールドは同時に設定することはできず、どちらか片方の設定が必須となります。&lt;br&gt; urlフィールドを設定する場合、displayUrlの指定が必須になります。またその際は、finalUrl、smartphoneFinalUrl、trackingUrl、customParametersは指定不可です。&lt;br&gt; SET時にfinalUrlを指定する場合、このフィールドの値はクリアされます。&lt;br&gt; ※現在は指定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Destination URL.&lt;br&gt; For information about the destination URL that can be set with campaigns for \&quot;app promotion\&quot;, refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan&#x3D;en&amp;aid&#x3D;39261\&quot;&gt;this page&lt;/a&gt;.&lt;br&gt; This field is optional in SET operation.&lt;br&gt; In ADD operation, url field and finalUrl field cannot be set at the same time, and one of them must be set.&lt;br&gt; When url field is specified, displayUrl must be specified. In that case, finalUrl, smartphoneFinalUrl, trackingUrl and customParameters cannot be specified.&lt;br&gt; If finalUrl is specified in SET operation, the value in this field will be cleared.&lt;br&gt; ※Not available. &lt;/div&gt; 
    * @return url
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リンク先URLです。<br> アプリ訴求キャンペーンで設定可能なリンク先URLについては<a href=\"https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan=ja&aid=61528\">こちら</a>をご参照ください。<br> SET時、このフィールドは省略可能となります。<br> ADD時、urlフィールドとfinalUrlフィールドは同時に設定することはできず、どちらか片方の設定が必須となります。<br> urlフィールドを設定する場合、displayUrlの指定が必須になります。またその際は、finalUrl、smartphoneFinalUrl、trackingUrl、customParametersは指定不可です。<br> SET時にfinalUrlを指定する場合、このフィールドの値はクリアされます。<br> ※現在は指定できません。 </div> <div lang=\"en\"> Destination URL.<br> For information about the destination URL that can be set with campaigns for \"app promotion\", refer to <a href=\"https://ads-help.yahoo.co.jp/yahooads/display/articledetail?lan=en&aid=39261\">this page</a>.<br> This field is optional in SET operation.<br> In ADD operation, url field and finalUrl field cannot be set at the same time, and one of them must be set.<br> When url field is specified, displayUrl must be specified. In that case, finalUrl, smartphoneFinalUrl, trackingUrl and customParameters cannot be specified.<br> If finalUrl is specified in SET operation, the value in this field will be cleared.<br> ※Not available. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -900,8 +869,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemovePrefix
    * @return isRemovePrefix
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_PREFIX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -927,8 +895,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveSuffix
    * @return isRemoveSuffix
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_SUFFIX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -954,8 +921,7 @@ public class AdGroupAdServiceDynamicAd {
    * Get isRemoveBrandColor
    * @return isRemoveBrandColor
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_BRAND_COLOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -969,7 +935,6 @@ public class AdGroupAdServiceDynamicAd {
   public void setIsRemoveBrandColor(AdGroupAdServiceIsRemoveFlg isRemoveBrandColor) {
     this.isRemoveBrandColor = isRemoveBrandColor;
   }
-
 
   @Override
   public boolean equals(Object o) {

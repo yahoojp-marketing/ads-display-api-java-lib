@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AudienceListServiceData;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceCombinationオブジェクトは、オーディエンスリストの組み合わせに関する情報を格納するコンテナです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceCombination object is a container for storing combination of audience list information. &lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceCombinationオブジェクトは、オーディエンスリストの組み合わせに関する情報を格納するコンテナです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> AudienceListServiceCombination object is a container for storing combination of audience list information. <br> This field is required in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceCombination.JSON_PROPERTY_LOGICAL_OPERATOR,
   AudienceListServiceCombination.JSON_PROPERTY_AUDIENCE_LISTS
 })
-@JsonTypeName("AudienceListServiceCombination")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceCombination {
   public static final String JSON_PROPERTY_LOGICAL_OPERATOR = "logicalOperator";
   private AudienceListServiceLogicalOperator logicalOperator;
 
   public static final String JSON_PROPERTY_AUDIENCE_LISTS = "audienceLists";
-  private List<AudienceListServiceData> audienceLists = null;
+  private List<AudienceListServiceData> audienceLists;
 
-  public AudienceListServiceCombination() { 
+  public AudienceListServiceCombination() {
   }
 
   public AudienceListServiceCombination logicalOperator(AudienceListServiceLogicalOperator logicalOperator) {
@@ -59,8 +55,7 @@ public class AudienceListServiceCombination {
    * Get logicalOperator
    * @return logicalOperator
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOGICAL_OPERATOR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AudienceListServiceCombination {
    * Get audienceLists
    * @return audienceLists
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LISTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class AudienceListServiceCombination {
   public void setAudienceLists(List<AudienceListServiceData> audienceLists) {
     this.audienceLists = audienceLists;
   }
-
 
   @Override
   public boolean equals(Object o) {

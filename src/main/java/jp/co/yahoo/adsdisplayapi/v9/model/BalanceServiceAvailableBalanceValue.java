@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AvailableBalance;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BalanceServiceAvailableBalanceValueオブジェクトは、選択したアカウントの推定現金残高を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BalanceServiceAvailableBalanceValue object describes estimated cash balance for the selected account.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">BalanceServiceAvailableBalanceValueオブジェクトは、選択したアカウントの推定現金残高を表します。</div> <div lang=\"en\">BalanceServiceAvailableBalanceValue object describes estimated cash balance for the selected account.</div> ")
 @JsonPropertyOrder({
   BalanceServiceAvailableBalanceValue.JSON_PROPERTY_AVAILABLE_BALANCE,
   BalanceServiceAvailableBalanceValue.JSON_PROPERTY_ERRORS,
   BalanceServiceAvailableBalanceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("BalanceServiceAvailableBalanceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class BalanceServiceAvailableBalanceValue {
   public static final String JSON_PROPERTY_AVAILABLE_BALANCE = "availableBalance";
   private AvailableBalance availableBalance;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public BalanceServiceAvailableBalanceValue() { 
+  public BalanceServiceAvailableBalanceValue() {
   }
 
   public BalanceServiceAvailableBalanceValue availableBalance(AvailableBalance availableBalance) {
@@ -63,8 +59,7 @@ public class BalanceServiceAvailableBalanceValue {
    * Get availableBalance
    * @return availableBalance
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVAILABLE_BALANCE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class BalanceServiceAvailableBalanceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class BalanceServiceAvailableBalanceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;A result of operation.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。</div> <div lang=\"en\">A result of operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class BalanceServiceAvailableBalanceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

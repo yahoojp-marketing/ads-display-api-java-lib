@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServiceDayOfWeek;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,14 +27,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAdScheduleTargetオブジェクトは、時間帯ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceAdScheduleTargetオブジェクトは、時間帯ターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.</div> ")
 @JsonPropertyOrder({
   StatsServiceAdScheduleTarget.JSON_PROPERTY_DAY_OF_WEEK,
   StatsServiceAdScheduleTarget.JSON_PROPERTY_END_HOUR,
   StatsServiceAdScheduleTarget.JSON_PROPERTY_START_HOUR
 })
-@JsonTypeName("StatsServiceAdScheduleTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceAdScheduleTarget {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
   private StatsServiceDayOfWeek dayOfWeek;
@@ -47,7 +43,7 @@ public class StatsServiceAdScheduleTarget {
   public static final String JSON_PROPERTY_START_HOUR = "startHour";
   private Integer startHour;
 
-  public StatsServiceAdScheduleTarget() { 
+  public StatsServiceAdScheduleTarget() {
   }
 
   public StatsServiceAdScheduleTarget dayOfWeek(StatsServiceDayOfWeek dayOfWeek) {
@@ -60,8 +56,7 @@ public class StatsServiceAdScheduleTarget {
    * Get dayOfWeek
    * @return dayOfWeek
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -87,8 +82,7 @@ public class StatsServiceAdScheduleTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了時間(時のみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End time (hour only)&lt;/div&gt; 
    * @return endHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">終了時間(時のみ)</div> <div lang=\"en\">End time (hour only)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -114,8 +108,7 @@ public class StatsServiceAdScheduleTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始時間(時のみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start time (hour only)&lt;/div&gt; 
    * @return startHour
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">開始時間(時のみ)</div> <div lang=\"en\">Start time (hour only)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_HOUR)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,7 +122,6 @@ public class StatsServiceAdScheduleTarget {
   public void setStartHour(Integer startHour) {
     this.startHour = startHour;
   }
-
 
   @Override
   public boolean equals(Object o) {

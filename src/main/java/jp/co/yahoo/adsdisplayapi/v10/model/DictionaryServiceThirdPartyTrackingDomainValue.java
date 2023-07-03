@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceThirdPartyTrackingDomain;
@@ -32,25 +30,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceThirdPartyTrackingDomainValueオブジェクトは、getThirdPartyTrackingDomainメソッドの実行結果（１Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceThirdPartyTrackingDomainValue object contains the result (1 Entity) of getThirdPartyTrackingDomain method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceThirdPartyTrackingDomainValueオブジェクトは、getThirdPartyTrackingDomainメソッドの実行結果（１Entity）を保持します。</div> <div lang=\"en\">DictionaryServiceThirdPartyTrackingDomainValue object contains the result (1 Entity) of getThirdPartyTrackingDomain method.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceThirdPartyTrackingDomainValue.JSON_PROPERTY_ERRORS,
   DictionaryServiceThirdPartyTrackingDomainValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   DictionaryServiceThirdPartyTrackingDomainValue.JSON_PROPERTY_THIRD_PARTY_TRACKING_DOMAIN
 })
-@JsonTypeName("DictionaryServiceThirdPartyTrackingDomainValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceThirdPartyTrackingDomainValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
   public static final String JSON_PROPERTY_THIRD_PARTY_TRACKING_DOMAIN = "thirdPartyTrackingDomain";
-  private List<DictionaryServiceThirdPartyTrackingDomain> thirdPartyTrackingDomain = null;
+  private List<DictionaryServiceThirdPartyTrackingDomain> thirdPartyTrackingDomain;
 
-  public DictionaryServiceThirdPartyTrackingDomainValue() { 
+  public DictionaryServiceThirdPartyTrackingDomainValue() {
   }
 
   public DictionaryServiceThirdPartyTrackingDomainValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class DictionaryServiceThirdPartyTrackingDomainValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class DictionaryServiceThirdPartyTrackingDomainValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -133,8 +127,7 @@ public class DictionaryServiceThirdPartyTrackingDomainValue {
    * Get thirdPartyTrackingDomain
    * @return thirdPartyTrackingDomain
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_THIRD_PARTY_TRACKING_DOMAIN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,7 +141,6 @@ public class DictionaryServiceThirdPartyTrackingDomainValue {
   public void setThirdPartyTrackingDomain(List<DictionaryServiceThirdPartyTrackingDomain> thirdPartyTrackingDomain) {
     this.thirdPartyTrackingDomain = thirdPartyTrackingDomain;
   }
-
 
   @Override
   public boolean equals(Object o) {

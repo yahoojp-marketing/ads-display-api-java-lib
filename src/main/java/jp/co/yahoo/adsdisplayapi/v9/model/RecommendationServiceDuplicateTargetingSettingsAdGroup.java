@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceAdGroup;
@@ -31,15 +29,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDuplicateTargetingSettingsAdGroupオブジェクトは、ターゲティング設定が重複している広告グループに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDuplicateTargetingSettingsAdGroup object describes detailed information of recommendations about the ad group with duplicate targeting settings.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceDuplicateTargetingSettingsAdGroupオブジェクトは、ターゲティング設定が重複している広告グループに関する最適化提案の詳細情報を表します。</div> <div lang=\"en\">RecommendationServiceDuplicateTargetingSettingsAdGroup object describes detailed information of recommendations about the ad group with duplicate targeting settings.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceDuplicateTargetingSettingsAdGroup.JSON_PROPERTY_RECOMMENDATION_ID,
   RecommendationServiceDuplicateTargetingSettingsAdGroup.JSON_PROPERTY_CAMPAIGN_ID,
   RecommendationServiceDuplicateTargetingSettingsAdGroup.JSON_PROPERTY_CAMPAIGN_NAME,
   RecommendationServiceDuplicateTargetingSettingsAdGroup.JSON_PROPERTY_AD_GROUP_LIST
 })
-@JsonTypeName("RecommendationServiceDuplicateTargetingSettingsAdGroup")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
   private Long recommendationId;
@@ -51,9 +47,9 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   private String campaignName;
 
   public static final String JSON_PROPERTY_AD_GROUP_LIST = "adGroupList";
-  private List<RecommendationServiceAdGroup> adGroupList = null;
+  private List<RecommendationServiceAdGroup> adGroupList;
 
-  public RecommendationServiceDuplicateTargetingSettingsAdGroup() { 
+  public RecommendationServiceDuplicateTargetingSettingsAdGroup() {
   }
 
   public RecommendationServiceDuplicateTargetingSettingsAdGroup recommendationId(Long recommendationId) {
@@ -66,8 +62,7 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 最適化提案IDです。<br> optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 </div> <div lang=\"en\"> Recommendation ID.<br> When optimizationScoreLift isn't null, the system will assign a common recommendation ID to the suggestion for the campaign. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> </div> <div lang=\"en\"> Campaign ID.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,8 +114,7 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign Name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> </div> <div lang=\"en\"> Campaign Name.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -155,8 +148,7 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
    * Get adGroupList
    * @return adGroupList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -170,7 +162,6 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   public void setAdGroupList(List<RecommendationServiceAdGroup> adGroupList) {
     this.adGroupList = adGroupList;
   }
-
 
   @Override
   public boolean equals(Object o) {

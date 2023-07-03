@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.ConversionTrackerServiceStatus;
 import jp.co.yahoo.adsdisplayapi.v11.model.ConversionTrackerServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceConversion object shows ConversionTracker settings such as ConversionTag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョン設定を表します。</div> <div lang=\"en\">ConversionGroupServiceConversion object shows ConversionTracker settings such as ConversionTag.</div> ")
 @JsonPropertyOrder({
   ConversionGroupServiceConversion.JSON_PROPERTY_CONVERSION_TRACKER_ID,
   ConversionGroupServiceConversion.JSON_PROPERTY_CONVERSION_TRACKER_TYPE,
@@ -38,8 +35,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionGroupServiceConversion.JSON_PROPERTY_CONVERSION_TAG_NAME,
   ConversionGroupServiceConversion.JSON_PROPERTY_STATUS
 })
-@JsonTypeName("ConversionGroupServiceConversion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionGroupServiceConversion {
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_ID = "conversionTrackerId";
   private Long conversionTrackerId;
@@ -56,7 +52,7 @@ public class ConversionGroupServiceConversion {
   public static final String JSON_PROPERTY_STATUS = "status";
   private ConversionTrackerServiceStatus status;
 
-  public ConversionGroupServiceConversion() { 
+  public ConversionGroupServiceConversion() {
   }
 
   public ConversionGroupServiceConversion conversionTrackerId(Long conversionTrackerId) {
@@ -69,8 +65,7 @@ public class ConversionGroupServiceConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカーIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion Tracker ID.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return conversionTrackerId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョントラッカーIDです。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Conversion Tracker ID.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -96,8 +91,7 @@ public class ConversionGroupServiceConversion {
    * Get conversionTrackerType
    * @return conversionTrackerType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -123,8 +117,7 @@ public class ConversionGroupServiceConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンタグIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion Tag ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionTagId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンタグIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversion Tag ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TAG_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -150,8 +143,7 @@ public class ConversionGroupServiceConversion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンタグ名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion Tag Name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionTagName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンタグ名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversion Tag Name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TAG_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +169,7 @@ public class ConversionGroupServiceConversion {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,7 +183,6 @@ public class ConversionGroupServiceConversion {
   public void setStatus(ConversionTrackerServiceStatus status) {
     this.status = status;
   }
-
 
   @Override
   public boolean equals(Object o) {

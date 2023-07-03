@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpServiceScheduleHourlyオブジェクトは、定期アップロードを何時間ごとに実行するかを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceScheduleHourly object displays hourly interval of execution time for Periodic Upload.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedFtpServiceScheduleHourlyオブジェクトは、定期アップロードを何時間ごとに実行するかを表します。</div> <div lang=\"en\">FeedFtpServiceScheduleHourly object displays hourly interval of execution time for Periodic Upload.</div> ")
 @JsonPropertyOrder({
   FeedFtpServiceScheduleHourly.JSON_PROPERTY_INTERVAL
 })
-@JsonTypeName("FeedFtpServiceScheduleHourly")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpServiceScheduleHourly {
   public static final String JSON_PROPERTY_INTERVAL = "interval";
   private Integer interval;
 
-  public FeedFtpServiceScheduleHourly() { 
+  public FeedFtpServiceScheduleHourly() {
   }
 
   public FeedFtpServiceScheduleHourly interval(Integer interval) {
@@ -51,8 +47,7 @@ public class FeedFtpServiceScheduleHourly {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 何時間ごとに実行するかの間隔です。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Interval of the execution time.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return interval
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 何時間ごとに実行するかの間隔です。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Interval of the execution time.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INTERVAL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class FeedFtpServiceScheduleHourly {
   public void setInterval(Integer interval) {
     this.interval = interval;
   }
-
 
   @Override
   public boolean equals(Object o) {

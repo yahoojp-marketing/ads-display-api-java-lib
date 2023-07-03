@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedDataServiceFileUploadDateRange;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceSelector object retains search condition of get operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">get操作の検索条件を保持するオブジェクト</div> <div lang=\"en\">FeedDataServiceSelector object retains search condition of get operation.</div> ")
 @JsonPropertyOrder({
   FeedDataServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   FeedDataServiceSelector.JSON_PROPERTY_FEED_IDS,
@@ -42,20 +39,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedDataServiceSelector.JSON_PROPERTY_START_INDEX,
   FeedDataServiceSelector.JSON_PROPERTY_UPLOAD_STATUSES
 })
-@JsonTypeName("FeedDataServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedDataServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
-  private List<Long> feedIds = null;
+  private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE = "fileUploadDateRange";
   private FeedDataServiceFileUploadDateRange fileUploadDateRange;
 
   public static final String JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS = "itemListUploadIds";
-  private List<Long> itemListUploadIds = null;
+  private List<Long> itemListUploadIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 20;
@@ -64,9 +60,9 @@ public class FeedDataServiceSelector {
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_UPLOAD_STATUSES = "uploadStatuses";
-  private List<FeedDataServiceFileUploadStatus> uploadStatuses = null;
+  private List<FeedDataServiceFileUploadStatus> uploadStatuses;
 
-  public FeedDataServiceSelector() { 
+  public FeedDataServiceSelector() {
   }
 
   public FeedDataServiceSelector accountId(Long accountId) {
@@ -79,8 +75,7 @@ public class FeedDataServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -114,8 +109,7 @@ public class FeedDataServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedID&lt;/div&gt; 
    * @return feedIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィードID</div> <div lang=\"en\">FeedID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -141,8 +135,7 @@ public class FeedDataServiceSelector {
    * Get fileUploadDateRange
    * @return fileUploadDateRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +169,7 @@ public class FeedDataServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードした商品情報ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Uploaded item list ID.&lt;/div&gt; 
    * @return itemListUploadIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロードした商品情報ID</div> <div lang=\"en\">Uploaded item list ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -205,8 +197,7 @@ public class FeedDataServiceSelector {
    * maximum: 500
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -233,8 +224,7 @@ public class FeedDataServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -268,8 +258,7 @@ public class FeedDataServiceSelector {
    * Get uploadStatuses
    * @return uploadStatuses
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_STATUSES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -283,7 +272,6 @@ public class FeedDataServiceSelector {
   public void setUploadStatuses(List<FeedDataServiceFileUploadStatus> uploadStatuses) {
     this.uploadStatuses = uploadStatuses;
   }
-
 
   @Override
   public boolean equals(Object o) {

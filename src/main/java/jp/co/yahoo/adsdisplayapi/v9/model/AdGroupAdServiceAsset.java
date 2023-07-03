@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceDescriptionAsset;
@@ -33,25 +31,23 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAssetオブジェクトは、レスポンシブディスプレイ広告の情報を表します。&lt;br&gt; 詳細は&lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan&#x3D;ja&amp;aid&#x3D;51344\&quot; target&#x3D;\&quot;_blank\&quot;&gt;レスポンシブ（画像）&lt;/a&gt;を参照してください。&lt;br&gt; このフィールドは、省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceAsset object describes the Responsive Display Ad information.&lt;br&gt; More details are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan&#x3D;en&amp;aid&#x3D;28655\&quot;&gt;Responsive（Image）&lt;/a&gt;.&lt;br&gt; This field is optional.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceAssetオブジェクトは、レスポンシブディスプレイ広告の情報を表します。<br> 詳細は<a href=\"https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan=ja&aid=51344\" target=\"_blank\">レスポンシブ（画像）</a>を参照してください。<br> このフィールドは、省略可能となります。</div> <div lang=\"en\"> AdGroupAdServiceAsset object describes the Responsive Display Ad information.<br> More details are described on <a href=\"https://ads-help.yahoo.co.jp/yahooads/guideline/articledetail?lan=en&aid=28655\">Responsive（Image）</a>.<br> This field is optional.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceAsset.JSON_PROPERTY_MEDIA_ASSETS,
   AdGroupAdServiceAsset.JSON_PROPERTY_HEADLINE_ASSETS,
   AdGroupAdServiceAsset.JSON_PROPERTY_DESCRIPTION_ASSETS
 })
-@JsonTypeName("AdGroupAdServiceAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceAsset {
   public static final String JSON_PROPERTY_MEDIA_ASSETS = "mediaAssets";
-  private List<AdGroupAdServiceMediaAsset> mediaAssets = null;
+  private List<AdGroupAdServiceMediaAsset> mediaAssets;
 
   public static final String JSON_PROPERTY_HEADLINE_ASSETS = "headlineAssets";
-  private List<AdGroupAdServiceHeadlineAsset> headlineAssets = null;
+  private List<AdGroupAdServiceHeadlineAsset> headlineAssets;
 
   public static final String JSON_PROPERTY_DESCRIPTION_ASSETS = "descriptionAssets";
-  private List<AdGroupAdServiceDescriptionAsset> descriptionAssets = null;
+  private List<AdGroupAdServiceDescriptionAsset> descriptionAssets;
 
-  public AdGroupAdServiceAsset() { 
+  public AdGroupAdServiceAsset() {
   }
 
   public AdGroupAdServiceAsset mediaAssets(List<AdGroupAdServiceMediaAsset> mediaAssets) {
@@ -72,8 +68,7 @@ public class AdGroupAdServiceAsset {
    * Get mediaAssets
    * @return mediaAssets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_ASSETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,8 +102,7 @@ public class AdGroupAdServiceAsset {
    * Get headlineAssets
    * @return headlineAssets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEADLINE_ASSETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -142,8 +136,7 @@ public class AdGroupAdServiceAsset {
    * Get descriptionAssets
    * @return descriptionAssets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION_ASSETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,7 +150,6 @@ public class AdGroupAdServiceAsset {
   public void setDescriptionAssets(List<AdGroupAdServiceDescriptionAsset> descriptionAssets) {
     this.descriptionAssets = descriptionAssets;
   }
-
 
   @Override
   public boolean equals(Object o) {

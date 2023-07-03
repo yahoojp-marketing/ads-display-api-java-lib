@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.RecommendationServiceAdGroupsForAddingAdsList;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceAdGroupForAddingAdsオブジェクトは、入稿を推奨する画像サイズがある広告グループに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceAdGroupForAddingAds objects describes recommendation information about the ad group with recommended image sizes.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceAdGroupForAddingAdsオブジェクトは、入稿を推奨する画像サイズがある広告グループに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceAdGroupForAddingAds objects describes recommendation information about the ad group with recommended image sizes.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceAdGroupsForAddingAds.JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST
 })
-@JsonTypeName("RecommendationServiceAdGroupsForAddingAds")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceAdGroupsForAddingAds {
   public static final String JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST = "adGroupsForAddingAdsList";
-  private List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList = null;
+  private List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList;
 
-  public RecommendationServiceAdGroupsForAddingAds() { 
+  public RecommendationServiceAdGroupsForAddingAds() {
   }
 
   public RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAdsList(List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceAdGroupsForAddingAds {
    * Get adGroupsForAddingAdsList
    * @return adGroupsForAddingAdsList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceAdGroupsForAddingAds {
   public void setAdGroupsForAddingAdsList(List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList) {
     this.adGroupsForAddingAdsList = adGroupsForAddingAdsList;
   }
-
 
   @Override
   public boolean equals(Object o) {

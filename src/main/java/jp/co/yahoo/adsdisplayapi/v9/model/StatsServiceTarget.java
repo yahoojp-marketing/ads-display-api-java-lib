@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.StatsServiceAdScheduleTarget;
 import jp.co.yahoo.adsdisplayapi.v9.model.StatsServiceAgeTarget;
 import jp.co.yahoo.adsdisplayapi.v9.model.StatsServiceAppTarget;
@@ -45,7 +43,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceTargetオブジェクトは、ターゲット設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTarget object holds configuration information of StatsServiceTargeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceTargetオブジェクトは、ターゲット設定情報を保持します。</div> <div lang=\"en\">StatsServiceTarget object holds configuration information of StatsServiceTargeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceTarget.JSON_PROPERTY_AD_SCHEDULE_TARGET,
   StatsServiceTarget.JSON_PROPERTY_AGE_TARGET,
@@ -66,8 +63,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceTarget.JSON_PROPERTY_TARGET_SETTING,
   StatsServiceTarget.JSON_PROPERTY_TARGET_TYPE
 })
-@JsonTypeName("StatsServiceTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceTarget {
   public static final String JSON_PROPERTY_AD_SCHEDULE_TARGET = "adScheduleTarget";
   private StatsServiceAdScheduleTarget adScheduleTarget;
@@ -123,7 +119,7 @@ public class StatsServiceTarget {
   public static final String JSON_PROPERTY_TARGET_TYPE = "targetType";
   private StatsServiceTargetType targetType;
 
-  public StatsServiceTarget() { 
+  public StatsServiceTarget() {
   }
 
   public StatsServiceTarget adScheduleTarget(StatsServiceAdScheduleTarget adScheduleTarget) {
@@ -136,8 +132,7 @@ public class StatsServiceTarget {
    * Get adScheduleTarget
    * @return adScheduleTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_SCHEDULE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,8 +158,7 @@ public class StatsServiceTarget {
    * Get ageTarget
    * @return ageTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AGE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -190,8 +184,7 @@ public class StatsServiceTarget {
    * Get appTarget
    * @return appTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -217,8 +210,7 @@ public class StatsServiceTarget {
    * Get audienceCategoryTarget
    * @return audienceCategoryTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_CATEGORY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -244,8 +236,7 @@ public class StatsServiceTarget {
    * Get deviceTarget
    * @return deviceTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -271,8 +262,7 @@ public class StatsServiceTarget {
    * Get genderTarget
    * @return genderTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GENDER_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -298,8 +288,7 @@ public class StatsServiceTarget {
    * Get geoTarget
    * @return geoTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -325,8 +314,7 @@ public class StatsServiceTarget {
    * Get osTarget
    * @return osTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -352,8 +340,7 @@ public class StatsServiceTarget {
    * Get osVersionTarget
    * @return osVersionTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_VERSION_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -379,8 +366,7 @@ public class StatsServiceTarget {
    * Get placementTarget
    * @return placementTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -406,8 +392,7 @@ public class StatsServiceTarget {
    * Get searchTarget
    * @return searchTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -433,8 +418,7 @@ public class StatsServiceTarget {
    * Get siteCategoryTarget
    * @return siteCategoryTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SITE_CATEGORY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -460,8 +444,7 @@ public class StatsServiceTarget {
    * Get audienceListTarget
    * @return audienceListTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -487,8 +470,7 @@ public class StatsServiceTarget {
    * Get placementCategoryDetailTarget
    * @return placementCategoryDetailTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -514,8 +496,7 @@ public class StatsServiceTarget {
    * Get contentsTarget
    * @return contentsTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -541,8 +522,7 @@ public class StatsServiceTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTarget ID&lt;/div&gt; 
    * @return targetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ターゲットID</div> <div lang=\"en\">StatsServiceTarget ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -568,8 +548,7 @@ public class StatsServiceTarget {
    * Get targetSetting
    * @return targetSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -595,8 +574,7 @@ public class StatsServiceTarget {
    * Get targetType
    * @return targetType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -610,7 +588,6 @@ public class StatsServiceTarget {
   public void setTargetType(StatsServiceTargetType targetType) {
     this.targetType = targetType;
   }
-
 
   @Override
   public boolean equals(Object o) {

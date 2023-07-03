@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.CampaignServiceBiddingStrategyType;
 import jp.co.yahoo.adsdisplayapi.v11.model.CampaignServiceCpcBiddingScheme;
 import jp.co.yahoo.adsdisplayapi.v11.model.CampaignServiceCpvBiddingScheme;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceBiddingSchemeオブジェクトは、キャンペーン入札戦略の詳細情報を表します。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; REMOVE時、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceBiddingScheme object displays　the details of campaign bidding strategy.&lt;br&gt; In ADD and SET operation, this field is required.&lt;br&gt; This field will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceBiddingSchemeオブジェクトは、キャンペーン入札戦略の詳細情報を表します。<br> ADDおよびSET時、このフィールドは必須となります。<br> REMOVE時、このフィールドは無視されます。 </div> <div lang=\"en\"> CampaignServiceBiddingScheme object displays　the details of campaign bidding strategy.<br> In ADD and SET operation, this field is required.<br> This field will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   CampaignServiceBiddingScheme.JSON_PROPERTY_BIDDING_STRATEGY_TYPE,
   CampaignServiceBiddingScheme.JSON_PROPERTY_CPC_BIDDING_SCHEME,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceBiddingScheme.JSON_PROPERTY_VCPM_BIDDING_SCHEME,
   CampaignServiceBiddingScheme.JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME
 })
-@JsonTypeName("CampaignServiceBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceBiddingScheme {
   public static final String JSON_PROPERTY_BIDDING_STRATEGY_TYPE = "biddingStrategyType";
   private CampaignServiceBiddingStrategyType biddingStrategyType;
@@ -59,7 +55,7 @@ public class CampaignServiceBiddingScheme {
   public static final String JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME = "maximizeConversionsBiddingScheme";
   private CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme;
 
-  public CampaignServiceBiddingScheme() { 
+  public CampaignServiceBiddingScheme() {
   }
 
   public CampaignServiceBiddingScheme biddingStrategyType(CampaignServiceBiddingStrategyType biddingStrategyType) {
@@ -72,8 +68,7 @@ public class CampaignServiceBiddingScheme {
    * Get biddingStrategyType
    * @return biddingStrategyType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class CampaignServiceBiddingScheme {
    * Get cpcBiddingScheme
    * @return cpcBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class CampaignServiceBiddingScheme {
    * Get cpvBiddingScheme
    * @return cpvBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPV_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +146,7 @@ public class CampaignServiceBiddingScheme {
    * Get vcpmBiddingScheme
    * @return vcpmBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VCPM_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,8 +172,7 @@ public class CampaignServiceBiddingScheme {
    * Get maximizeConversionsBiddingScheme
    * @return maximizeConversionsBiddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -195,7 +186,6 @@ public class CampaignServiceBiddingScheme {
   public void setMaximizeConversionsBiddingScheme(CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme) {
     this.maximizeConversionsBiddingScheme = maximizeConversionsBiddingScheme;
   }
-
 
   @Override
   public boolean equals(Object o) {

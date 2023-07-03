@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feed情報の審査否認理由をダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download the disapproval reason list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">Feed情報の審査否認理由をダウンロードします。</div> <div lang=\"en\">Download the disapproval reason list.</div> ")
 @JsonPropertyOrder({
   FeedServiceDownloadDisApprovalReasonListSelector.JSON_PROPERTY_ACCOUNT_ID,
   FeedServiceDownloadDisApprovalReasonListSelector.JSON_PROPERTY_FEED_ID
 })
-@JsonTypeName("FeedServiceDownloadDisApprovalReasonListSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedServiceDownloadDisApprovalReasonListSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -42,7 +38,7 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
   private Long feedId;
 
-  public FeedServiceDownloadDisApprovalReasonListSelector() { 
+  public FeedServiceDownloadDisApprovalReasonListSelector() {
   }
 
   public FeedServiceDownloadDisApprovalReasonListSelector accountId(Long accountId) {
@@ -55,8 +51,7 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,8 +77,7 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：フィードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Feed ID.&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：フィードIDです。</div> <div lang=\"en\">Search condition: Feed ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,7 +91,6 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
   public void setFeedId(Long feedId) {
     this.feedId = feedId;
   }
-
 
   @Override
   public boolean equals(Object o) {

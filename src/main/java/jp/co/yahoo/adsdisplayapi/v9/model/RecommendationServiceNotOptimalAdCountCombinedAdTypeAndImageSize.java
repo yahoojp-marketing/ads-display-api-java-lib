@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeオブジェクトは、特定の広告タイプと画像サイズを組み合わせた広告が3～5つ以外の広告グループに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize objects describes recommendation information about the ad group that have other than 3-5 ads that combine a specific ad type and image size.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeオブジェクトは、特定の広告タイプと画像サイズを組み合わせた広告が3～5つ以外の広告グループに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize objects describes recommendation information about the ad group that have other than 3-5 ads that combine a specific ad type and image size.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize.JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST
 })
-@JsonTypeName("RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
   public static final String JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST = "notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList";
-  private List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList = null;
+  private List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList;
 
-  public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize() { 
+  public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize() {
   }
 
   public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList(List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
    * Get notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList
    * @return notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
   public void setNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList(List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList) {
     this.notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList = notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList;
   }
-
 
   @Override
   public boolean equals(Object o) {

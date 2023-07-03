@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceDisapprovalReasonオブジェクトは、 EditorialReason一覧を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceDisapprovalReason object is a container of EditorialReason list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceDisapprovalReasonオブジェクトは、 EditorialReason一覧を格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceDisapprovalReason object is a container of EditorialReason list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceDisapprovalReason.JSON_PROPERTY_DESCRIPTION,
   DictionaryServiceDisapprovalReason.JSON_PROPERTY_DISAPPROVAL_REASON_CODE,
@@ -37,8 +34,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceDisapprovalReason.JSON_PROPERTY_RECOMMENDATION,
   DictionaryServiceDisapprovalReason.JSON_PROPERTY_TITLE
 })
-@JsonTypeName("DictionaryServiceDisapprovalReason")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceDisapprovalReason {
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
   private String description;
@@ -55,7 +51,7 @@ public class DictionaryServiceDisapprovalReason {
   public static final String JSON_PROPERTY_TITLE = "title";
   private String title;
 
-  public DictionaryServiceDisapprovalReason() { 
+  public DictionaryServiceDisapprovalReason() {
   }
 
   public DictionaryServiceDisapprovalReason description(String description) {
@@ -68,8 +64,7 @@ public class DictionaryServiceDisapprovalReason {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由の内容です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of disapproval reason.&lt;/div&gt; 
    * @return description
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由の内容です。</div> <div lang=\"en\">Description of disapproval reason.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,8 +90,7 @@ public class DictionaryServiceDisapprovalReason {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Disapproval reason code.&lt;/div&gt; 
    * @return disapprovalReasonCode
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査コードです。</div> <div lang=\"en\">Disapproval reason code.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -122,8 +116,7 @@ public class DictionaryServiceDisapprovalReason {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -149,8 +142,7 @@ public class DictionaryServiceDisapprovalReason {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;推奨する対応方法です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description of recommendation.&lt;/div&gt; 
    * @return recommendation
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">推奨する対応方法です。</div> <div lang=\"en\">Description of recommendation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RECOMMENDATION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -176,8 +168,7 @@ public class DictionaryServiceDisapprovalReason {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由のタイトルです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Title of disapproval reason.&lt;/div&gt; 
    * @return title
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">審査否認理由のタイトルです。</div> <div lang=\"en\">Title of disapproval reason.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TITLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -191,7 +182,6 @@ public class DictionaryServiceDisapprovalReason {
   public void setTitle(String title) {
     this.title = title;
   }
-
 
   @Override
   public boolean equals(Object o) {

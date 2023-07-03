@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceAttributionModel;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceIncludeVideoInteractionFlg;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceIncludeViewInteractionFlg;
@@ -32,7 +30,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceModelComparisonReportConditionオブジェクトは、アトリビューションモデル比較レポートの作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、reportTypeが&lt;code&gt;MODEL_COMPARISON&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceModelComparisonReportCondition describes the condition to create Attribution Model Comparison Report. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;   *If reportType is &lt;code&gt;MODEL_COMPARISON&lt;/code&gt;, this field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceModelComparisonReportConditionオブジェクトは、アトリビューションモデル比較レポートの作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、reportTypeが<code>MODEL_COMPARISON</code>の場合は必須です。 </div> <div lang=\"en\">   ReportDefinitionServiceModelComparisonReportCondition describes the condition to create Attribution Model Comparison Report. <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>   *If reportType is <code>MODEL_COMPARISON</code>, this field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceModelComparisonReportCondition.JSON_PROPERTY_LOOKBACK_WINDOW,
   ReportDefinitionServiceModelComparisonReportCondition.JSON_PROPERTY_INCLUDE_VIEW_INTERACTION,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceModelComparisonReportCondition.JSON_PROPERTY_COMPARATIVE_MODEL,
   ReportDefinitionServiceModelComparisonReportCondition.JSON_PROPERTY_MODEL_COMPARISON_ACCOUNT_SETTING
 })
-@JsonTypeName("ReportDefinitionServiceModelComparisonReportCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceModelComparisonReportCondition {
   public static final String JSON_PROPERTY_LOOKBACK_WINDOW = "lookbackWindow";
   private Long lookbackWindow;
@@ -62,7 +58,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
   public static final String JSON_PROPERTY_MODEL_COMPARISON_ACCOUNT_SETTING = "modelComparisonAccountSetting";
   private ReportDefinitionServiceModelComparisonAccountSetting modelComparisonAccountSetting;
 
-  public ReportDefinitionServiceModelComparisonReportCondition() { 
+  public ReportDefinitionServiceModelComparisonReportCondition() {
   }
 
   public ReportDefinitionServiceModelComparisonReportCondition lookbackWindow(Long lookbackWindow) {
@@ -75,8 +71,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ルックバック期間（日数）です。&lt;br&gt;   指定できる値の下限は0、上限は90です。&lt;br&gt;   このフィールドは、ADDに必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Look back period (number of days). &lt;br&gt;   The lower limit of the value that can be specified is 0, and the upper limit is 90.&lt;br&gt;   This field is required in ADD operation.  &lt;/div&gt; 
    * @return lookbackWindow
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   ルックバック期間（日数）です。<br>   指定できる値の下限は0、上限は90です。<br>   このフィールドは、ADDに必須となります。 </div> <div lang=\"en\">   Look back period (number of days). <br>   The lower limit of the value that can be specified is 0, and the upper limit is 90.<br>   This field is required in ADD operation.  </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOOKBACK_WINDOW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -102,8 +97,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
    * Get includeViewInteraction
    * @return includeViewInteraction
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INCLUDE_VIEW_INTERACTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -129,8 +123,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
    * Get includeVideoInteraction
    * @return includeVideoInteraction
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INCLUDE_VIDEO_INTERACTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -156,8 +149,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
    * Get baseModel
    * @return baseModel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BASE_MODEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -183,8 +175,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
    * Get comparativeModel
    * @return comparativeModel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COMPARATIVE_MODEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -210,8 +201,7 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
    * Get modelComparisonAccountSetting
    * @return modelComparisonAccountSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MODEL_COMPARISON_ACCOUNT_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -225,7 +215,6 @@ public class ReportDefinitionServiceModelComparisonReportCondition {
   public void setModelComparisonAccountSetting(ReportDefinitionServiceModelComparisonAccountSetting modelComparisonAccountSetting) {
     this.modelComparisonAccountSetting = modelComparisonAccountSetting;
   }
-
 
   @Override
   public boolean equals(Object o) {

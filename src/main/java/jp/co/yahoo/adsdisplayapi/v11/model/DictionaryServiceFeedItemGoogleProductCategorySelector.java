@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceFeedItemGoogleProductCategorySelectorオブジェクトは、取得するGoogleProductCategoryの言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceFeedItemGoogleProductCategorySelector object indicates the language of an obtained Google Product Category.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceFeedItemGoogleProductCategorySelectorオブジェクトは、取得するGoogleProductCategoryの言語を表します。</div> <div lang=\"en\">DictionaryServiceFeedItemGoogleProductCategorySelector object indicates the language of an obtained Google Product Category.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceFeedItemGoogleProductCategorySelector.JSON_PROPERTY_LANG
 })
-@JsonTypeName("DictionaryServiceFeedItemGoogleProductCategorySelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceFeedItemGoogleProductCategorySelector {
   public static final String JSON_PROPERTY_LANG = "lang";
   private DictionaryServiceLang lang;
 
-  public DictionaryServiceFeedItemGoogleProductCategorySelector() { 
+  public DictionaryServiceFeedItemGoogleProductCategorySelector() {
   }
 
   public DictionaryServiceFeedItemGoogleProductCategorySelector lang(DictionaryServiceLang lang) {
@@ -52,8 +48,7 @@ public class DictionaryServiceFeedItemGoogleProductCategorySelector {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -67,7 +62,6 @@ public class DictionaryServiceFeedItemGoogleProductCategorySelector {
   public void setLang(DictionaryServiceLang lang) {
     this.lang = lang;
   }
-
 
   @Override
   public boolean equals(Object o) {

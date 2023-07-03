@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceSize;
@@ -32,14 +30,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 類似ユーザーターゲットの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがSIMILARITYの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceSimilarityAudienceList object is a container for storing the information of Targeting information of users (similar).&lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If audienceListType is SIMILARITY, this field is required in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> 類似ユーザーターゲットの情報を保持するオブジェクトです。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※audienceListTypeがSIMILARITYの場合は、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> AudienceListServiceSimilarityAudienceList object is a container for storing the information of Targeting information of users (similar).<br> This field is optional in ADD and SET operation. <br> *If audienceListType is SIMILARITY, this field is required in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceSimilarityAudienceList.JSON_PROPERTY_AUDIENCE_LIST_ID,
   AudienceListServiceSimilarityAudienceList.JSON_PROPERTY_AUDIENCE_LIST_SIZE,
   AudienceListServiceSimilarityAudienceList.JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES
 })
-@JsonTypeName("AudienceListServiceSimilarityAudienceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceSimilarityAudienceList {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
   private Long audienceListId;
@@ -48,9 +44,9 @@ public class AudienceListServiceSimilarityAudienceList {
   private AudienceListServiceSize audienceListSize;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES = "audienceListSizeReaches";
-  private List<AudienceListServiceSizeReaches> audienceListSizeReaches = null;
+  private List<AudienceListServiceSizeReaches> audienceListSizeReaches;
 
-  public AudienceListServiceSimilarityAudienceList() { 
+  public AudienceListServiceSimilarityAudienceList() {
   }
 
   public AudienceListServiceSimilarityAudienceList audienceListId(Long audienceListId) {
@@ -63,8 +59,7 @@ public class AudienceListServiceSimilarityAudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト（類似ユーザー）を作成する基となるオーディエンスリストIDです。&lt;br&gt; このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list ID that is the basis for creating the audience list (similar users).&lt;br&gt; This field is required in ADD operation, and will be ignored in SET and REMOVE operation. &lt;/div&gt; 
    * @return audienceListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリスト（類似ユーザー）を作成する基となるオーディエンスリストIDです。<br> このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。 </div> <div lang=\"en\"> Audience list ID that is the basis for creating the audience list (similar users).<br> This field is required in ADD operation, and will be ignored in SET and REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class AudienceListServiceSimilarityAudienceList {
    * Get audienceListSize
    * @return audienceListSize
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class AudienceListServiceSimilarityAudienceList {
    * Get audienceListSizeReaches
    * @return audienceListSizeReaches
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class AudienceListServiceSimilarityAudienceList {
   public void setAudienceListSizeReaches(List<AudienceListServiceSizeReaches> audienceListSizeReaches) {
     this.audienceListSizeReaches = audienceListSizeReaches;
   }
-
 
   @Override
   public boolean equals(Object o) {

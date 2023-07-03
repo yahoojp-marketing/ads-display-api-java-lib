@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.CampaignServiceEnhancedCpcEnabled;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceCpcBiddingSchemeオブジェクトは、キャンペーン最大入札価格(CPC)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがCPCの場合、指定必須となります。     &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceCpcBiddingScheme object holds configuration information of Max bid of campaign (CPC).&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *If BiddingStrategyType is CPC, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceCpcBiddingSchemeオブジェクトは、キャンペーン最大入札価格(CPC)の設定情報を表します。<br> このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。<br> ※BiddingStrategyTypeがCPCの場合、指定必須となります。     </div> <div lang=\"en\"> CampaignServiceCpcBiddingScheme object holds configuration information of Max bid of campaign (CPC).<br> This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.<br> *If BiddingStrategyType is CPC, this field is required. </div> ")
 @JsonPropertyOrder({
   CampaignServiceCpcBiddingScheme.JSON_PROPERTY_CPC,
   CampaignServiceCpcBiddingScheme.JSON_PROPERTY_ENHANCED_CPC_ENABLED
 })
-@JsonTypeName("CampaignServiceCpcBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceCpcBiddingScheme {
   public static final String JSON_PROPERTY_CPC = "cpc";
   private Long cpc;
@@ -43,7 +39,7 @@ public class CampaignServiceCpcBiddingScheme {
   public static final String JSON_PROPERTY_ENHANCED_CPC_ENABLED = "enhancedCpcEnabled";
   private CampaignServiceEnhancedCpcEnabled enhancedCpcEnabled;
 
-  public CampaignServiceCpcBiddingScheme() { 
+  public CampaignServiceCpcBiddingScheme() {
   }
 
   public CampaignServiceCpcBiddingScheme cpc(Long cpc) {
@@ -56,8 +52,7 @@ public class CampaignServiceCpcBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン最大入札価格(CPC)です。&lt;br&gt; このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of campaign (CPC). &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン最大入札価格(CPC)です。<br> このフィールドはADDおよびSET時に必須となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> Max bid of campaign (CPC). <br> This field is required in ADD and SET operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class CampaignServiceCpcBiddingScheme {
    * Get enhancedCpcEnabled
    * @return enhancedCpcEnabled
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ENHANCED_CPC_ENABLED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class CampaignServiceCpcBiddingScheme {
   public void setEnhancedCpcEnabled(CampaignServiceEnhancedCpcEnabled enhancedCpcEnabled) {
     this.enhancedCpcEnabled = enhancedCpcEnabled;
   }
-
 
   @Override
   public boolean equals(Object o) {

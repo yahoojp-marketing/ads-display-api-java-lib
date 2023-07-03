@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTargetServiceAudienceListType;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTargetServiceDeliverType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceAudienceListTargetオブジェクトは、オーディエンスリストターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAUDIENCE_LIST_TARGETの場合、任意で指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceAudienceListTarget object is a container for storing audience list targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is AUDIENCE_LIST_TARGET, this field can be optionally specified. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceAudienceListTargetオブジェクトは、オーディエンスリストターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがAUDIENCE_LIST_TARGETの場合、任意で指定できます。 </div> <div lang=\"en\"> AdGroupTargetServiceAudienceListTarget object is a container for storing audience list targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is AUDIENCE_LIST_TARGET, this field can be optionally specified. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceAudienceListTarget.JSON_PROPERTY_DELIVER_TYPE,
   AdGroupTargetServiceAudienceListTarget.JSON_PROPERTY_AUDIENCE_LIST_NAME,
   AdGroupTargetServiceAudienceListTarget.JSON_PROPERTY_AUDIENCE_LIST_TYPE
 })
-@JsonTypeName("AdGroupTargetServiceAudienceListTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceAudienceListTarget {
   public static final String JSON_PROPERTY_DELIVER_TYPE = "deliverType";
   private AdGroupTargetServiceDeliverType deliverType;
@@ -48,7 +44,7 @@ public class AdGroupTargetServiceAudienceListTarget {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPE = "audienceListType";
   private AdGroupTargetServiceAudienceListType audienceListType;
 
-  public AdGroupTargetServiceAudienceListTarget() { 
+  public AdGroupTargetServiceAudienceListTarget() {
   }
 
   public AdGroupTargetServiceAudienceListTarget deliverType(AdGroupTargetServiceDeliverType deliverType) {
@@ -61,8 +57,7 @@ public class AdGroupTargetServiceAudienceListTarget {
    * Get deliverType
    * @return deliverType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,8 +83,7 @@ public class AdGroupTargetServiceAudienceListTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience List name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return audienceListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> オーディエンスリスト名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Audience List name.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,8 +109,7 @@ public class AdGroupTargetServiceAudienceListTarget {
    * Get audienceListType
    * @return audienceListType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,7 +123,6 @@ public class AdGroupTargetServiceAudienceListTarget {
   public void setAudienceListType(AdGroupTargetServiceAudienceListType audienceListType) {
     this.audienceListType = audienceListType;
   }
-
 
   @Override
   public boolean equals(Object o) {

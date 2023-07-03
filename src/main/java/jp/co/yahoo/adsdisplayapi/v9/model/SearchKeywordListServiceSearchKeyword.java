@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; SearchKeywordListServiceSearchKeywordオブジェクトは、サーチキーワードを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; SearchKeywordListServiceSearchKeyword is an object to display the search keyword.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> SearchKeywordListServiceSearchKeywordオブジェクトは、サーチキーワードを表します。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> SearchKeywordListServiceSearchKeyword is an object to display the search keyword.<br> This field is required in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   SearchKeywordListServiceSearchKeyword.JSON_PROPERTY_SEARCH_KEYWORD_ID
 })
-@JsonTypeName("SearchKeywordListServiceSearchKeyword")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchKeywordListServiceSearchKeyword {
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_ID = "searchKeywordId";
   private Long searchKeywordId;
 
-  public SearchKeywordListServiceSearchKeyword() { 
+  public SearchKeywordListServiceSearchKeyword() {
   }
 
   public SearchKeywordListServiceSearchKeyword searchKeywordId(Long searchKeywordId) {
@@ -51,8 +47,7 @@ public class SearchKeywordListServiceSearchKeyword {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードIDです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword ID.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return searchKeywordId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードIDです。<br> このフィールドは、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> Search keyword ID.<br> This field is required in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class SearchKeywordListServiceSearchKeyword {
   public void setSearchKeywordId(Long searchKeywordId) {
     this.searchKeywordId = searchKeywordId;
   }
-
 
   @Override
   public boolean equals(Object o) {

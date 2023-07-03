@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceMaximizeConversionsCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMaximizeConversionsオブジェクトは、自動入札（コンバージョン数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMaximizeConversions objects describes recommendation information about the campaign that is suitable for using autobidding (Maximize Conversions).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceMaximizeConversionsオブジェクトは、自動入札（コンバージョン数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceMaximizeConversions objects describes recommendation information about the campaign that is suitable for using autobidding (Maximize Conversions).</div> ")
 @JsonPropertyOrder({
   RecommendationServiceMaximizeConversions.JSON_PROPERTY_MAXIMIZE_CONVERSIONS_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceMaximizeConversions")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceMaximizeConversions {
   public static final String JSON_PROPERTY_MAXIMIZE_CONVERSIONS_CAMPAIGN_LIST = "maximizeConversionsCampaignList";
-  private List<RecommendationServiceMaximizeConversionsCampaign> maximizeConversionsCampaignList = null;
+  private List<RecommendationServiceMaximizeConversionsCampaign> maximizeConversionsCampaignList;
 
-  public RecommendationServiceMaximizeConversions() { 
+  public RecommendationServiceMaximizeConversions() {
   }
 
   public RecommendationServiceMaximizeConversions maximizeConversionsCampaignList(List<RecommendationServiceMaximizeConversionsCampaign> maximizeConversionsCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceMaximizeConversions {
    * Get maximizeConversionsCampaignList
    * @return maximizeConversionsCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceMaximizeConversions {
   public void setMaximizeConversionsCampaignList(List<RecommendationServiceMaximizeConversionsCampaign> maximizeConversionsCampaignList) {
     this.maximizeConversionsCampaignList = maximizeConversionsCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceSharedAudienceListMasterSelectorオブジェクトは、取得する共通オーディエンスリストマスタの言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListMasterSelector object displays the language of retrieved shared audience list master.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceSharedAudienceListMasterSelectorオブジェクトは、取得する共通オーディエンスリストマスタの言語を表します。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListMasterSelector object displays the language of retrieved shared audience list master.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceSharedAudienceListMasterSelector.JSON_PROPERTY_LANG
 })
-@JsonTypeName("DictionaryServiceSharedAudienceListMasterSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceSharedAudienceListMasterSelector {
   public static final String JSON_PROPERTY_LANG = "lang";
   private DictionaryServiceLang lang;
 
-  public DictionaryServiceSharedAudienceListMasterSelector() { 
+  public DictionaryServiceSharedAudienceListMasterSelector() {
   }
 
   public DictionaryServiceSharedAudienceListMasterSelector lang(DictionaryServiceLang lang) {
@@ -52,8 +48,7 @@ public class DictionaryServiceSharedAudienceListMasterSelector {
    * Get lang
    * @return lang
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LANG)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -67,7 +62,6 @@ public class DictionaryServiceSharedAudienceListMasterSelector {
   public void setLang(DictionaryServiceLang lang) {
     this.lang = lang;
   }
-
 
   @Override
   public boolean equals(Object o) {

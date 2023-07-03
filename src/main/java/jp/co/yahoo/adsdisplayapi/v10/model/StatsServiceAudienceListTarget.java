@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.StatsServiceDeliverType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAudienceListTargetオブジェクトは、オーディエンスリストターゲティングの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAudienceListTarget object holds configuration information of Audience list targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceAudienceListTargetオブジェクトは、オーディエンスリストターゲティングの設定情報を保持します。</div> <div lang=\"en\">StatsServiceAudienceListTarget object holds configuration information of Audience list targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceAudienceListTarget.JSON_PROPERTY_DELIVER_TYPE,
   StatsServiceAudienceListTarget.JSON_PROPERTY_AUDIENCE_LIST_NAME
 })
-@JsonTypeName("StatsServiceAudienceListTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceAudienceListTarget {
   public static final String JSON_PROPERTY_DELIVER_TYPE = "deliverType";
   private StatsServiceDeliverType deliverType;
@@ -43,7 +39,7 @@ public class StatsServiceAudienceListTarget {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
   private String audienceListName;
 
-  public StatsServiceAudienceListTarget() { 
+  public StatsServiceAudienceListTarget() {
   }
 
   public StatsServiceAudienceListTarget deliverType(StatsServiceDeliverType deliverType) {
@@ -56,8 +52,7 @@ public class StatsServiceAudienceListTarget {
    * Get deliverType
    * @return deliverType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class StatsServiceAudienceListTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリスト名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name&lt;/div&gt; 
    * @return audienceListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">オーディエンスリスト名</div> <div lang=\"en\">Audience list name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class StatsServiceAudienceListTarget {
   public void setAudienceListName(String audienceListName) {
     this.audienceListName = audienceListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

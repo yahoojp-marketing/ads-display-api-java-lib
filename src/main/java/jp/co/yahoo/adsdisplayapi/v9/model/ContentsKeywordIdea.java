@@ -20,23 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaオブジェクトは、コンテンツターゲティング対象キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdea object is keyword for contents targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ContentsKeywordIdeaオブジェクトは、コンテンツターゲティング対象キーワードです。</div> <div lang=\"en\">ContentsKeywordIdea object is keyword for contents targeting.</div> ")
 @JsonPropertyOrder({
   ContentsKeywordIdea.JSON_PROPERTY_VOLUME,
   ContentsKeywordIdea.JSON_PROPERTY_CREATED_DATE,
   ContentsKeywordIdea.JSON_PROPERTY_CONTENTS_KEYWORD,
   ContentsKeywordIdea.JSON_PROPERTY_CONTENTS_KEYWORD_ID
 })
-@JsonTypeName("ContentsKeywordIdea")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ContentsKeywordIdea {
   public static final String JSON_PROPERTY_VOLUME = "volume";
   private Long volume;
@@ -50,7 +46,7 @@ public class ContentsKeywordIdea {
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_ID = "contentsKeywordId";
   private Long contentsKeywordId;
 
-  public ContentsKeywordIdea() { 
+  public ContentsKeywordIdea() {
   }
 
   public ContentsKeywordIdea volume(Long volume) {
@@ -63,8 +59,7 @@ public class ContentsKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; インプレッション数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of impressions. &lt;/div&gt; 
    * @return volume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> インプレッション数です。 </div> <div lang=\"en\"> Number of impressions. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class ContentsKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツキーワード作成日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Created date of keyword.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンテンツキーワード作成日です。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\"> Created date of keyword.<br> * Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CREATED_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,8 +111,7 @@ public class ContentsKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツキーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contents keyword.&lt;/div&gt; 
    * @return contentsKeyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンテンツキーワードです。</div> <div lang=\"en\">Contents keyword.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +137,7 @@ public class ContentsKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツキーワードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contents keyword ID.&lt;/div&gt; 
    * @return contentsKeywordId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンテンツキーワードIDです。</div> <div lang=\"en\">Contents keyword ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,7 +151,6 @@ public class ContentsKeywordIdea {
   public void setContentsKeywordId(Long contentsKeywordId) {
     this.contentsKeywordId = contentsKeywordId;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceCrossCampaignBuying;
@@ -34,29 +32,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceCrossCampaignReachesReportConditionオブジェクトは、横断リーチレポートの作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、reportTypeが&lt;code&gt;CROSS_CAMPAIGN_REACHES&lt;/code&gt;の場合は必須です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには少なくとも2件の要素が必要です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには最大で3件の要素を指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceCrossCampaignReachesReportCondition describes the condition to create Cross-campaign Reach Report. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;   *If reportType is &lt;code&gt;CROSS_CAMPAIGN_REACHES&lt;/code&gt;, this field is required in ADD operation.   * At least two elements are required for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes.   * Up to 3 elements can be specified for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceCrossCampaignReachesReportConditionオブジェクトは、横断リーチレポートの作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、reportTypeが<code>CROSS_CAMPAIGN_REACHES</code>の場合は必須です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには少なくとも2件の要素が必要です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには最大で3件の要素を指定できます。 </div> <div lang=\"en\">   ReportDefinitionServiceCrossCampaignReachesReportCondition describes the condition to create Cross-campaign Reach Report. <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>   *If reportType is <code>CROSS_CAMPAIGN_REACHES</code>, this field is required in ADD operation.   * At least two elements are required for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes.   * Up to 3 elements can be specified for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceCrossCampaignReachesReportCondition.JSON_PROPERTY_CROSS_CAMPAIGN_TYPE,
   ReportDefinitionServiceCrossCampaignReachesReportCondition.JSON_PROPERTY_CROSS_CAMPAIGN_IDS,
   ReportDefinitionServiceCrossCampaignReachesReportCondition.JSON_PROPERTY_CROSS_CAMPAIGN_GOALS,
   ReportDefinitionServiceCrossCampaignReachesReportCondition.JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES
 })
-@JsonTypeName("ReportDefinitionServiceCrossCampaignReachesReportCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_TYPE = "crossCampaignType";
   private ReportDefinitionServiceCrossCampaignType crossCampaignType;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_IDS = "crossCampaignIds";
-  private List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds = null;
+  private List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_GOALS = "crossCampaignGoals";
-  private List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals = null;
+  private List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES = "crossCampaignBuyingTypes";
-  private List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes = null;
+  private List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes;
 
-  public ReportDefinitionServiceCrossCampaignReachesReportCondition() { 
+  public ReportDefinitionServiceCrossCampaignReachesReportCondition() {
   }
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignType(ReportDefinitionServiceCrossCampaignType crossCampaignType) {
@@ -69,8 +65,7 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
    * Get crossCampaignType
    * @return crossCampaignType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -104,8 +99,7 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
    * Get crossCampaignIds
    * @return crossCampaignIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,8 +133,7 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
    * Get crossCampaignGoals
    * @return crossCampaignGoals
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_GOALS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -174,8 +167,7 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
    * Get crossCampaignBuyingTypes
    * @return crossCampaignBuyingTypes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,7 +181,6 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   public void setCrossCampaignBuyingTypes(List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
     this.crossCampaignBuyingTypes = crossCampaignBuyingTypes;
   }
-
 
   @Override
   public boolean equals(Object o) {

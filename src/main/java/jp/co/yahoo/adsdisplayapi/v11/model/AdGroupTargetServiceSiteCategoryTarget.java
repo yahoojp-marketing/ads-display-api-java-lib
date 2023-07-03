@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceSiteCategoryTargetオブジェクトは、サイトカテゴリーターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSITE_CATEGORYの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceSiteCategoryTarget object is a container for storing site category targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is SITE_CATEGORY, this field is required. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceSiteCategoryTargetオブジェクトは、サイトカテゴリーターゲティングの設定情報を保持します。<br> ADD、SETおよびREPLACE時、このフィールドは省略可能となります。<br> ※targetTypeがSITE_CATEGORYの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceSiteCategoryTarget object is a container for storing site category targeting settings.<br> This field is optional in ADD, SET and REPLACE operation.<br> ∗If targetType is SITE_CATEGORY, this field is required. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceSiteCategoryTarget.JSON_PROPERTY_CATEGORY_FULL_NAME_EN,
   AdGroupTargetServiceSiteCategoryTarget.JSON_PROPERTY_CATEGORY_FULL_NAME_JA
 })
-@JsonTypeName("AdGroupTargetServiceSiteCategoryTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceSiteCategoryTarget {
   public static final String JSON_PROPERTY_CATEGORY_FULL_NAME_EN = "categoryFullNameEn";
   private String categoryFullNameEn;
@@ -42,7 +38,7 @@ public class AdGroupTargetServiceSiteCategoryTarget {
   public static final String JSON_PROPERTY_CATEGORY_FULL_NAME_JA = "categoryFullNameJa";
   private String categoryFullNameJa;
 
-  public AdGroupTargetServiceSiteCategoryTarget() { 
+  public AdGroupTargetServiceSiteCategoryTarget() {
   }
 
   public AdGroupTargetServiceSiteCategoryTarget categoryFullNameEn(String categoryFullNameEn) {
@@ -55,8 +51,7 @@ public class AdGroupTargetServiceSiteCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリー名（英語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Site category name (English).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return categoryFullNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリー名（英語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Site category name (English).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_FULL_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class AdGroupTargetServiceSiteCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリー名（日本語）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Site category name (Japanese).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return categoryFullNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリー名（日本語）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Site category name (Japanese).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_FULL_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class AdGroupTargetServiceSiteCategoryTarget {
   public void setCategoryFullNameJa(String categoryFullNameJa) {
     this.categoryFullNameJa = categoryFullNameJa;
   }
-
 
   @Override
   public boolean equals(Object o) {

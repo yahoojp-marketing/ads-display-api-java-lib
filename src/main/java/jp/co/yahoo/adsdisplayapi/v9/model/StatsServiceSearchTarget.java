@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSearchTargetオブジェクトは、サーチターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSearchTarget object holds configuration information of search targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceSearchTargetオブジェクトは、サーチターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceSearchTarget object holds configuration information of search targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceSearchTarget.JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME
 })
-@JsonTypeName("StatsServiceSearchTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceSearchTarget {
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME = "searchKeywordListName";
   private String searchKeywordListName;
 
-  public StatsServiceSearchTarget() { 
+  public StatsServiceSearchTarget() {
   }
 
   public StatsServiceSearchTarget searchKeywordListName(String searchKeywordListName) {
@@ -51,8 +47,7 @@ public class StatsServiceSearchTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワードリスト名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Keyword List name&lt;/div&gt; 
    * @return searchKeywordListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードリスト名</div> <div lang=\"en\">Search Keyword List name</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class StatsServiceSearchTarget {
   public void setSearchKeywordListName(String searchKeywordListName) {
     this.searchKeywordListName = searchKeywordListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

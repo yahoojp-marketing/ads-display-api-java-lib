@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.VideoServiceValue;
@@ -31,21 +29,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;VideoServicePage object is a container that includes the execution result (list of all entities) of get methods.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">VideoServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">VideoServicePage object is a container that includes the execution result (list of all entities) of get methods.</div> ")
 @JsonPropertyOrder({
   VideoServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   VideoServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("VideoServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VideoServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<VideoServiceValue> values = null;
+  private List<VideoServiceValue> values;
 
-  public VideoServicePage() { 
+  public VideoServicePage() {
   }
 
   public VideoServicePage totalNumEntries(Integer totalNumEntries) {
@@ -58,8 +54,7 @@ public class VideoServicePage {
    * Get totalNumEntries
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class VideoServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,7 +102,6 @@ public class VideoServicePage {
   public void setValues(List<VideoServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

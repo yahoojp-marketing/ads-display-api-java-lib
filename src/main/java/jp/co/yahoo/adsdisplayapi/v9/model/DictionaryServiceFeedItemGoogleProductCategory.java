@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceFeedItemGoogleProductCategoryオブジェクトは、DictionaryServiceFeedItemGoogleProductCategoryを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceFeedItemGoogleProductCategory object contains information about Google Product Category.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceFeedItemGoogleProductCategoryオブジェクトは、DictionaryServiceFeedItemGoogleProductCategoryを格納するコンテナです。</div> <div lang=\"en\">DictionaryServiceFeedItemGoogleProductCategory object contains information about Google Product Category.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceFeedItemGoogleProductCategory.JSON_PROPERTY_CHILD,
   DictionaryServiceFeedItemGoogleProductCategory.JSON_PROPERTY_FULL_NAME,
@@ -39,11 +36,10 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceFeedItemGoogleProductCategory.JSON_PROPERTY_ORDER,
   DictionaryServiceFeedItemGoogleProductCategory.JSON_PROPERTY_PARENT
 })
-@JsonTypeName("DictionaryServiceFeedItemGoogleProductCategory")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceFeedItemGoogleProductCategory {
   public static final String JSON_PROPERTY_CHILD = "child";
-  private List<DictionaryServiceFeedItemGoogleProductCategory> child = null;
+  private List<DictionaryServiceFeedItemGoogleProductCategory> child;
 
   public static final String JSON_PROPERTY_FULL_NAME = "fullName";
   private String fullName;
@@ -60,7 +56,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
   public static final String JSON_PROPERTY_PARENT = "parent";
   private String parent;
 
-  public DictionaryServiceFeedItemGoogleProductCategory() { 
+  public DictionaryServiceFeedItemGoogleProductCategory() {
   }
 
   public DictionaryServiceFeedItemGoogleProductCategory child(List<DictionaryServiceFeedItemGoogleProductCategory> child) {
@@ -81,8 +77,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;子要素としてDictionaryServiceFeedItemGoogleProductCategoryオブジェクトを使用します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceFeedItemGoogleProductCategory object is used.&lt;/div&gt; 
    * @return child
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">子要素としてDictionaryServiceFeedItemGoogleProductCategoryオブジェクトを使用します。</div> <div lang=\"en\">DictionaryServiceFeedItemGoogleProductCategory object is used.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CHILD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -108,8 +103,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上位階層を含むGoogle商品カテゴリの名称です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of Google Product Category including parent&lt;/div&gt; 
    * @return fullName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">上位階層を含むGoogle商品カテゴリの名称です。</div> <div lang=\"en\">Name of Google Product Category including parent</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FULL_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,8 +129,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Google商品カテゴリのIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Google Product Category ID&lt;/div&gt; 
    * @return id
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Google商品カテゴリのIDです。</div> <div lang=\"en\">Google Product Category ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,8 +155,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Google商品カテゴリの名前です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of Google Product Category&lt;/div&gt; 
    * @return name
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Google商品カテゴリの名前です。</div> <div lang=\"en\">Name of Google Product Category</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,8 +181,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;並び順を示す番号です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number that indicates the sequence&lt;/div&gt; 
    * @return order
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">並び順を示す番号です。</div> <div lang=\"en\">Number that indicates the sequence</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ORDER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -216,8 +207,7 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上位のGoogle商品カテゴリIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Parent Google Product Category ID&lt;/div&gt; 
    * @return parent
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">上位のGoogle商品カテゴリIDです。</div> <div lang=\"en\">Parent Google Product Category ID</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARENT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -231,7 +221,6 @@ public class DictionaryServiceFeedItemGoogleProductCategory {
   public void setParent(String parent) {
     this.parent = parent;
   }
-
 
   @Override
   public boolean equals(Object o) {

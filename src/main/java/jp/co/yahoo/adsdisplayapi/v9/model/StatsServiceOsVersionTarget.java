@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceOsVersionTargetオブジェクトは、OSバージョンターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceOsVersionTarget object holds configuration information of OS version targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceOsVersionTargetオブジェクトは、OSバージョンターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceOsVersionTarget object holds configuration information of OS version targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceOsVersionTarget.JSON_PROPERTY_OS_VERSION
 })
-@JsonTypeName("StatsServiceOsVersionTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceOsVersionTarget {
   public static final String JSON_PROPERTY_OS_VERSION = "osVersion";
   private String osVersion;
 
-  public StatsServiceOsVersionTarget() { 
+  public StatsServiceOsVersionTarget() {
   }
 
   public StatsServiceOsVersionTarget osVersion(String osVersion) {
@@ -51,8 +47,7 @@ public class StatsServiceOsVersionTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;OSバージョン&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;OS Version&lt;/div&gt; 
    * @return osVersion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">OSバージョン</div> <div lang=\"en\">OS Version</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class StatsServiceOsVersionTarget {
   public void setOsVersion(String osVersion) {
     this.osVersion = osVersion;
   }
-
 
   @Override
   public boolean equals(Object o) {

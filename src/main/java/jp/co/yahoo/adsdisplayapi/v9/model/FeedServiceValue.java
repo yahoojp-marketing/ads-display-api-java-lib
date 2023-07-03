@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.Error;
@@ -33,29 +31,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceValueオブジェクトは、操作結果を含むFeed情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceValue object describes Feed information including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedServiceValueオブジェクトは、操作結果を含むFeed情報を表します。</div> <div lang=\"en\">FeedServiceValue object describes Feed information including operation result.</div> ")
 @JsonPropertyOrder({
   FeedServiceValue.JSON_PROPERTY_FEED,
   FeedServiceValue.JSON_PROPERTY_UPLOAD_LIMITS,
   FeedServiceValue.JSON_PROPERTY_ERRORS,
   FeedServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@JsonTypeName("FeedServiceValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedServiceValue {
   public static final String JSON_PROPERTY_FEED = "feed";
   private Feed feed;
 
   public static final String JSON_PROPERTY_UPLOAD_LIMITS = "uploadLimits";
-  private List<FeedServiceUploadLimit> uploadLimits = null;
+  private List<FeedServiceUploadLimit> uploadLimits;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
 
-  public FeedServiceValue() { 
+  public FeedServiceValue() {
   }
 
   public FeedServiceValue feed(Feed feed) {
@@ -68,8 +64,7 @@ public class FeedServiceValue {
    * Get feed
    * @return feed
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,8 +98,7 @@ public class FeedServiceValue {
    * Get uploadLimits
    * @return uploadLimits
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_LIMITS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -138,8 +132,7 @@ public class FeedServiceValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -165,8 +158,7 @@ public class FeedServiceValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Result of operation&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果</div> <div lang=\"en\">Result of operation</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -180,7 +172,6 @@ public class FeedServiceValue {
   public void setOperationSucceeded(Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.ReportDefinitionServiceConversionPathAccountSetting;
@@ -33,15 +31,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceConversionPathReportConditionオブジェクトは、コンバージョン経路レポートの作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、reportTypeが&lt;code&gt;CONVERSION_PATH&lt;/code&gt;の場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceConversionPathReportCondition describes the condition to create Conversion Path Report. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;   *If reportType is &lt;code&gt;CONVERSION_PATH&lt;/code&gt;, this field is required in ADD operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">   ReportDefinitionServiceConversionPathReportConditionオブジェクトは、コンバージョン経路レポートの作成条件を表します。<br>   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。<br>   ※ADD時、reportTypeが<code>CONVERSION_PATH</code>の場合は必須です。 </div> <div lang=\"en\">   ReportDefinitionServiceConversionPathReportCondition describes the condition to create Conversion Path Report. <br>   This field is optional in ADD operation, and will be ignored in REMOVE operation. <br>   *If reportType is <code>CONVERSION_PATH</code>, this field is required in ADD operation. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceConversionPathReportCondition.JSON_PROPERTY_LOOKBACK_WINDOW,
   ReportDefinitionServiceConversionPathReportCondition.JSON_PROPERTY_INCLUDE_VIEW_INTERACTION,
   ReportDefinitionServiceConversionPathReportCondition.JSON_PROPERTY_CONVERSION_PATH_FILTERS,
   ReportDefinitionServiceConversionPathReportCondition.JSON_PROPERTY_CONVERSION_PATH_ACCOUNT_SETTING
 })
-@JsonTypeName("ReportDefinitionServiceConversionPathReportCondition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceConversionPathReportCondition {
   public static final String JSON_PROPERTY_LOOKBACK_WINDOW = "lookbackWindow";
   private Long lookbackWindow;
@@ -50,12 +46,12 @@ public class ReportDefinitionServiceConversionPathReportCondition {
   private ReportDefinitionServiceIncludeViewInteractionFlg includeViewInteraction;
 
   public static final String JSON_PROPERTY_CONVERSION_PATH_FILTERS = "conversionPathFilters";
-  private List<ReportDefinitionServiceConversionPathFilter> conversionPathFilters = null;
+  private List<ReportDefinitionServiceConversionPathFilter> conversionPathFilters;
 
   public static final String JSON_PROPERTY_CONVERSION_PATH_ACCOUNT_SETTING = "conversionPathAccountSetting";
   private ReportDefinitionServiceConversionPathAccountSetting conversionPathAccountSetting;
 
-  public ReportDefinitionServiceConversionPathReportCondition() { 
+  public ReportDefinitionServiceConversionPathReportCondition() {
   }
 
   public ReportDefinitionServiceConversionPathReportCondition lookbackWindow(Long lookbackWindow) {
@@ -68,8 +64,7 @@ public class ReportDefinitionServiceConversionPathReportCondition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ルックバック期間（日数）です。&lt;br&gt;   指定できる値の下限は0、上限は90です。&lt;br&gt;   このフィールドは、ADDに必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Look back period (number of days). &lt;br&gt;   The lower limit of the value that can be specified is 0, and the upper limit is 90.&lt;br&gt;   This field is required in ADD operation.  &lt;/div&gt; 
    * @return lookbackWindow
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   ルックバック期間（日数）です。<br>   指定できる値の下限は0、上限は90です。<br>   このフィールドは、ADDに必須となります。 </div> <div lang=\"en\">   Look back period (number of days). <br>   The lower limit of the value that can be specified is 0, and the upper limit is 90.<br>   This field is required in ADD operation.  </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LOOKBACK_WINDOW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -95,8 +90,7 @@ public class ReportDefinitionServiceConversionPathReportCondition {
    * Get includeViewInteraction
    * @return includeViewInteraction
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INCLUDE_VIEW_INTERACTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +124,7 @@ public class ReportDefinitionServiceConversionPathReportCondition {
    * Get conversionPathFilters
    * @return conversionPathFilters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +150,7 @@ public class ReportDefinitionServiceConversionPathReportCondition {
    * Get conversionPathAccountSetting
    * @return conversionPathAccountSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_ACCOUNT_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -172,7 +164,6 @@ public class ReportDefinitionServiceConversionPathReportCondition {
   public void setConversionPathAccountSetting(ReportDefinitionServiceConversionPathAccountSetting conversionPathAccountSetting) {
     this.conversionPathAccountSetting = conversionPathAccountSetting;
   }
-
 
   @Override
   public boolean equals(Object o) {

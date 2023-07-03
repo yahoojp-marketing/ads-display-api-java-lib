@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -39,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceFieldAttribute.JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS,
   ReportDefinitionServiceFieldAttribute.JSON_PROPERTY_XML_ATTRIBUTE_NAME
 })
-@JsonTypeName("ReportDefinitionServiceFieldAttribute")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinitionServiceFieldAttribute {
   public static final String JSON_PROPERTY_DISPLAY_FIELD_NAME_EN = "displayFieldNameEn";
   private String displayFieldNameEn;
@@ -58,12 +55,12 @@ public class ReportDefinitionServiceFieldAttribute {
   private Boolean filterable;
 
   public static final String JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS = "impossibleCombinationFields";
-  private List<String> impossibleCombinationFields = null;
+  private List<String> impossibleCombinationFields;
 
   public static final String JSON_PROPERTY_XML_ATTRIBUTE_NAME = "xmlAttributeName";
   private String xmlAttributeName;
 
-  public ReportDefinitionServiceFieldAttribute() { 
+  public ReportDefinitionServiceFieldAttribute() {
   }
 
   public ReportDefinitionServiceFieldAttribute displayFieldNameEn(String displayFieldNameEn) {
@@ -76,8 +73,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードされたレポートに表示されるフィールド名（英語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field Name for the Downloaded Report (English).&lt;/div&gt; 
    * @return displayFieldNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードされたレポートに表示されるフィールド名（英語）です。</div> <div lang=\"en\">Field Name for the Downloaded Report (English).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -103,8 +99,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードされたレポートに表示されるフィールド名（日本語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field Name for the Downloaded Report (Japanese).&lt;/div&gt; 
    * @return displayFieldNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードされたレポートに表示されるフィールド名（日本語）です。</div> <div lang=\"en\">Field Name for the Downloaded Report (Japanese).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +125,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールド名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field Name.&lt;/div&gt; 
    * @return fieldName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィールド名です。</div> <div lang=\"en\">Field Name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FIELD_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +151,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドタイプ（数字、文字列、ENUM値など）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field type (number, string, ENUM, etc.)&lt;/div&gt; 
    * @return fieldType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィールドタイプ（数字、文字列、ENUM値など）です。</div> <div lang=\"en\">Field type (number, string, ENUM, etc.)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FIELD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,8 +177,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドのフィルター指定可否（true：フィルター指定可能なフィールド）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Whether the field filter can be specified or not (true: Filter can be specified).&lt;/div&gt; 
    * @return filterable
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">フィールドのフィルター指定可否（true：フィルター指定可能なフィールド）です。</div> <div lang=\"en\">Whether the field filter can be specified or not (true: Filter can be specified).</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FILTERABLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,8 +211,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;組み合わせ不可フィールドです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Invalid field combinations.&lt;/div&gt; 
    * @return impossibleCombinationFields
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">組み合わせ不可フィールドです。</div> <div lang=\"en\">Invalid field combinations.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -246,8 +237,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードしたレポートのXML属性です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;XML attribute for the Downloaded Report.&lt;/div&gt; 
    * @return xmlAttributeName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ダウンロードしたレポートのXML属性です。</div> <div lang=\"en\">XML attribute for the Downloaded Report.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_XML_ATTRIBUTE_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -261,7 +251,6 @@ public class ReportDefinitionServiceFieldAttribute {
   public void setXmlAttributeName(String xmlAttributeName) {
     this.xmlAttributeName = xmlAttributeName;
   }
-
 
   @Override
   public boolean equals(Object o) {

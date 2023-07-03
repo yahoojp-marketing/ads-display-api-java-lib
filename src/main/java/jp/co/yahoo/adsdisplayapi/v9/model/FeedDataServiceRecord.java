@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedDataServiceFileUploadSrc;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedDataServiceFileUploadStatus;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedDataServiceItemListUploadType;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedDataServiceRecordオブジェクトは、アップロードした商品情報(ファイル形式)の状態を保持する。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceRecord object retains status of uploaded item list(file format).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedDataServiceRecordオブジェクトは、アップロードした商品情報(ファイル形式)の状態を保持する。</div> <div lang=\"en\">FeedDataServiceRecord object retains status of uploaded item list(file format).</div> ")
 @JsonPropertyOrder({
   FeedDataServiceRecord.JSON_PROPERTY_ACCOUNT_ID,
   FeedDataServiceRecord.JSON_PROPERTY_COMPLETE_DATE,
@@ -45,8 +42,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedDataServiceRecord.JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE,
   FeedDataServiceRecord.JSON_PROPERTY_UPLOAD_DATE
 })
-@JsonTypeName("FeedDataServiceRecord")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedDataServiceRecord {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -81,7 +77,7 @@ public class FeedDataServiceRecord {
   public static final String JSON_PROPERTY_UPLOAD_DATE = "uploadDate";
   private String uploadDate;
 
-  public FeedDataServiceRecord() { 
+  public FeedDataServiceRecord() {
   }
 
   public FeedDataServiceRecord accountId(Long accountId) {
@@ -94,8 +90,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントID</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,8 +116,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取り込み完了日(yyyyMMdd)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Complete date.&lt;br&gt; Format: yyyyMMdd &lt;/div&gt; 
    * @return completeDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取り込み完了日(yyyyMMdd)</div> <div lang=\"en\"> Complete date.<br> Format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COMPLETE_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +142,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;不備がある商品情報の件数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of item list with error.&lt;/div&gt; 
    * @return errorCount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">不備がある商品情報の件数</div> <div lang=\"en\">Number of item list with error.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERROR_COUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -175,8 +168,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エラー率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Error rate.&lt;/div&gt; 
    * @return errorRate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">エラー率</div> <div lang=\"en\">Error rate.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERROR_RATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -202,8 +194,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feedを識別するId&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;/div&gt; 
    * @return feedId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">Feedを識別するId</div> <div lang=\"en\">Feed ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FEED_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -229,8 +220,7 @@ public class FeedDataServiceRecord {
    * Get fileUploadSrc
    * @return fileUploadSrc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FILE_UPLOAD_SRC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -256,8 +246,7 @@ public class FeedDataServiceRecord {
    * Get fileUploadStatus
    * @return fileUploadStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FILE_UPLOAD_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -283,8 +272,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;trueはデバッグモードでの実行を意味します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;&amp;#34;true&amp;#34; means to run in debug mode.&lt;/div&gt; 
    * @return isDebug
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">trueはデバッグモードでの実行を意味します。</div> <div lang=\"en\">&#34;true&#34; means to run in debug mode.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_DEBUG)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -310,8 +298,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードした商品情報を識別するID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Uploaded item list ID.&lt;/div&gt; 
    * @return itemListUploadId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロードした商品情報を識別するID</div> <div lang=\"en\">Uploaded item list ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -337,8 +324,7 @@ public class FeedDataServiceRecord {
    * Get itemListUploadType
    * @return itemListUploadType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -364,8 +350,7 @@ public class FeedDataServiceRecord {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード日(yyyyMMdd)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Upload date.&lt;br&gt; Format: yyyyMMdd &lt;/div&gt; 
    * @return uploadDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アップロード日(yyyyMMdd)</div> <div lang=\"en\"> Upload date.<br> Format: yyyyMMdd </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_UPLOAD_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -379,7 +364,6 @@ public class FeedDataServiceRecord {
   public void setUploadDate(String uploadDate) {
     this.uploadDate = uploadDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

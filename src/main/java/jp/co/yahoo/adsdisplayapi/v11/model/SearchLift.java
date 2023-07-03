@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.SearchLiftServiceKeyword;
@@ -31,15 +29,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchLiftオブジェクトは、サーチリフトの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchLift object describes information about the search lift.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchLiftオブジェクトは、サーチリフトの情報を表します。</div> <div lang=\"en\">SearchLift object describes information about the search lift.</div> ")
 @JsonPropertyOrder({
   SearchLift.JSON_PROPERTY_ACCOUNT_ID,
   SearchLift.JSON_PROPERTY_CAMPAIGN_ID,
   SearchLift.JSON_PROPERTY_SEARCH_LIFT_ID,
   SearchLift.JSON_PROPERTY_KEYWORDS
 })
-@JsonTypeName("SearchLift")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchLift {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -51,9 +47,9 @@ public class SearchLift {
   private Long searchLiftId;
 
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
-  private List<SearchLiftServiceKeyword> keywords = null;
+  private List<SearchLiftServiceKeyword> keywords;
 
-  public SearchLift() { 
+  public SearchLift() {
   }
 
   public SearchLift accountId(Long accountId) {
@@ -66,8 +62,7 @@ public class SearchLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -93,8 +88,7 @@ public class SearchLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID. &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キャンペーンIDです。</div> <div lang=\"en\">Campaign ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -120,8 +114,7 @@ public class SearchLift {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチリフト調査IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchLift ID. &lt;/div&gt; 
    * @return searchLiftId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サーチリフト調査IDです。</div> <div lang=\"en\">SearchLift ID. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_LIFT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -155,8 +148,7 @@ public class SearchLift {
    * Get keywords
    * @return keywords
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -170,7 +162,6 @@ public class SearchLift {
   public void setKeywords(List<SearchLiftServiceKeyword> keywords) {
     this.keywords = keywords;
   }
-
 
   @Override
   public boolean equals(Object o) {

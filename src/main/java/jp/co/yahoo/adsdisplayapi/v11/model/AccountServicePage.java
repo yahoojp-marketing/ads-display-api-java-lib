@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AccountServiceValue;
@@ -31,14 +29,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountServicePageオブジェクトは、取得されるアカウント情報に関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AccountServicePage object is a container for storing account information entry.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountServicePageオブジェクトは、取得されるアカウント情報に関するエントリーを表します。</div> <div lang=\"en\">The AccountServicePage object is a container for storing account information entry.</div> ")
 @JsonPropertyOrder({
   AccountServicePage.JSON_PROPERTY_AUTHORIZATION_BUSINESS_ID,
   AccountServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   AccountServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AccountServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountServicePage {
   public static final String JSON_PROPERTY_AUTHORIZATION_BUSINESS_ID = "authorizationBusinessId";
   private String authorizationBusinessId;
@@ -47,9 +43,9 @@ public class AccountServicePage {
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<AccountServiceValue> values = null;
+  private List<AccountServiceValue> values;
 
-  public AccountServicePage() { 
+  public AccountServicePage() {
   }
 
   public AccountServicePage authorizationBusinessId(String authorizationBusinessId) {
@@ -62,8 +58,7 @@ public class AccountServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションによるYahoo!広告へのアクセスを認可したYahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Yahoo! JAPAN Business ID that authorized access to Yahoo! JAPAN Ads via application.&lt;/div&gt; 
    * @return authorizationBusinessId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションによるYahoo!広告へのアクセスを認可したYahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Yahoo! JAPAN Business ID that authorized access to Yahoo! JAPAN Ads via application.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUTHORIZATION_BUSINESS_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -89,8 +84,7 @@ public class AccountServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +118,7 @@ public class AccountServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +132,6 @@ public class AccountServicePage {
   public void setValues(List<AccountServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

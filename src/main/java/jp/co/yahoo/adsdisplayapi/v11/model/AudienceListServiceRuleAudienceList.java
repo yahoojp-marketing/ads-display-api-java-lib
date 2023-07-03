@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AudienceListServiceIsOpen;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceRuleAudienceListオブジェクトは、ルール設定のリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがDEFAULT_LISTまたはRULEの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceRuleAudienceList object displays the list of rule settings.&lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If audienceListType is DEFAULT_LIST, this field is required in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceRuleAudienceListオブジェクトは、ルール設定のリストを表します。<br> このフィールドは、ADDおよびSET時に省略可能となります。<br> ※audienceListTypeがDEFAULT_LISTまたはRULEの場合は、ADDおよびSET時に必須となります。 </div> <div lang=\"en\"> AudienceListServiceRuleAudienceList object displays the list of rule settings.<br> This field is optional in ADD and SET operation. <br> *If audienceListType is DEFAULT_LIST, this field is required in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   AudienceListServiceRuleAudienceList.JSON_PROPERTY_IS_OPEN,
   AudienceListServiceRuleAudienceList.JSON_PROPERTY_IS_PRESET,
@@ -41,8 +38,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceRuleAudienceList.JSON_PROPERTY_RETARGETING_TAG_ID,
   AudienceListServiceRuleAudienceList.JSON_PROPERTY_RULES
 })
-@JsonTypeName("AudienceListServiceRuleAudienceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceRuleAudienceList {
   public static final String JSON_PROPERTY_IS_OPEN = "isOpen";
   private AudienceListServiceIsOpen isOpen;
@@ -57,9 +53,9 @@ public class AudienceListServiceRuleAudienceList {
   private String retargetingTagId;
 
   public static final String JSON_PROPERTY_RULES = "rules";
-  private List<AudienceListServiceRule> rules = null;
+  private List<AudienceListServiceRule> rules;
 
-  public AudienceListServiceRuleAudienceList() { 
+  public AudienceListServiceRuleAudienceList() {
   }
 
   public AudienceListServiceRuleAudienceList isOpen(AudienceListServiceIsOpen isOpen) {
@@ -72,8 +68,7 @@ public class AudienceListServiceRuleAudienceList {
    * Get isOpen
    * @return isOpen
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_OPEN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -99,8 +94,7 @@ public class AudienceListServiceRuleAudienceList {
    * Get isPreset
    * @return isPreset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_PRESET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -126,8 +120,7 @@ public class AudienceListServiceRuleAudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リーチの蓄積期間（1日～540日）です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Cookies validation period. (1 - 540 days) &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return reachPeriod
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リーチの蓄積期間（1日～540日）です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Cookies validation period. (1 - 540 days) <br> This field is required in ADD operation, and is optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -153,8 +146,7 @@ public class AudienceListServiceRuleAudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リターゲティングタグIDです。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ID of Retargeting Tag. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return retargetingTagId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リターゲティングタグIDです。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> ID of Retargeting Tag. <br> This field is required in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -188,8 +180,7 @@ public class AudienceListServiceRuleAudienceList {
    * Get rules
    * @return rules
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -203,7 +194,6 @@ public class AudienceListServiceRuleAudienceList {
   public void setRules(List<AudienceListServiceRule> rules) {
     this.rules = rules;
   }
-
 
   @Override
   public boolean equals(Object o) {

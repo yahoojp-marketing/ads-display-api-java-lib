@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.SearchKeywordListServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListServiceReturnValueオブジェクトは、サーチキーワードリスト設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordListServiceReturnValue object displays the setting of search keyword list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchKeywordListServiceReturnValueオブジェクトは、サーチキーワードリスト設定を表します。</div> <div lang=\"en\">SearchKeywordListServiceReturnValue object displays the setting of search keyword list.</div> ")
 @JsonPropertyOrder({
   SearchKeywordListServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("SearchKeywordListServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchKeywordListServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<SearchKeywordListServiceValue> values = null;
+  private List<SearchKeywordListServiceValue> values;
 
-  public SearchKeywordListServiceReturnValue() { 
+  public SearchKeywordListServiceReturnValue() {
   }
 
   public SearchKeywordListServiceReturnValue values(List<SearchKeywordListServiceValue> values) {
@@ -62,8 +58,7 @@ public class SearchKeywordListServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class SearchKeywordListServiceReturnValue {
   public void setValues(List<SearchKeywordListServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupTargetServiceDeviceAppType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceAppTargetオブジェクトは、アプリターゲティングの設定情報を保持します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceAppTarget object is a container for storing app targeting settings.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceAppTargetオブジェクトは、アプリターゲティングの設定情報を保持します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> AdGroupTargetServiceAppTarget object is a container for storing app targeting settings.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceAppTarget.JSON_PROPERTY_DEVICE_APP_TYPE
 })
-@JsonTypeName("AdGroupTargetServiceAppTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceAppTarget {
   public static final String JSON_PROPERTY_DEVICE_APP_TYPE = "deviceAppType";
   private AdGroupTargetServiceDeviceAppType deviceAppType;
 
-  public AdGroupTargetServiceAppTarget() { 
+  public AdGroupTargetServiceAppTarget() {
   }
 
   public AdGroupTargetServiceAppTarget deviceAppType(AdGroupTargetServiceDeviceAppType deviceAppType) {
@@ -52,8 +48,7 @@ public class AdGroupTargetServiceAppTarget {
    * Get deviceAppType
    * @return deviceAppType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_APP_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AdGroupTargetServiceAppTarget {
   public void setDeviceAppType(AdGroupTargetServiceDeviceAppType deviceAppType) {
     this.deviceAppType = deviceAppType;
   }
-
 
   @Override
   public boolean equals(Object o) {

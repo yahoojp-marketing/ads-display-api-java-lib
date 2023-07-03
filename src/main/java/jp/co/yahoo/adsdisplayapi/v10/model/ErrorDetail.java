@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ErrorDetailオブジェクトは、エラーの詳細な内容を表します。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;Detailed information of error.&lt;/div&gt;
  */
-@ApiModel(description = "<div lang=\"ja\">ErrorDetailオブジェクトは、エラーの詳細な内容を表します。</div><div lang=\"en\">Detailed information of error.</div>")
 @JsonPropertyOrder({
   ErrorDetail.JSON_PROPERTY_REQUEST_KEY,
   ErrorDetail.JSON_PROPERTY_REQUEST_VALUE
 })
-@JsonTypeName("ErrorDetail")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ErrorDetail {
   public static final String JSON_PROPERTY_REQUEST_KEY = "requestKey";
   private String requestKey;
@@ -42,7 +38,7 @@ public class ErrorDetail {
   public static final String JSON_PROPERTY_REQUEST_VALUE = "requestValue";
   private String requestValue;
 
-  public ErrorDetail() { 
+  public ErrorDetail() {
   }
 
   public ErrorDetail requestKey(String requestKey) {
@@ -55,8 +51,7 @@ public class ErrorDetail {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エラーが発生したフィールドです。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;The file that occured the error.&lt;/div&gt;
    * @return requestKey
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">エラーが発生したフィールドです。</div><div lang=\"en\">The file that occured the error.</div>")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REQUEST_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class ErrorDetail {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エラーが発生した値です。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;The data that caused the error.&lt;/div&gt;
    * @return requestValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">エラーが発生した値です。</div><div lang=\"en\">The data that caused the error.</div>")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REQUEST_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class ErrorDetail {
   public void setRequestValue(String requestValue) {
     this.requestValue = requestValue;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch;
@@ -33,7 +31,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAdオブジェクトは、ブランドパネル パノラマ パネルスイッチ広告の情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd object describes the information of Brand Panel Panorama Panel-switch ad.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; * Not Available. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAdオブジェクトは、ブランドパネル パノラマ パネルスイッチ広告の情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> ※現在利用できません </div> <div lang=\"en\"> GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd object describes the information of Brand Panel Panorama Panel-switch ad.<br> This field will be returned in the response, it will be ignored on input.<br> * Not Available. </div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd.JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID,
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd.JSON_PROPERTY_PANELS,
@@ -42,14 +39,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd.JSON_PROPERTY_CUSTOM_PARAMETERS,
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd.JSON_PROPERTY_TRACKING_URL
 })
-@JsonTypeName("GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   public static final String JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID = "adShrinkMainMediaId";
   private Long adShrinkMainMediaId;
 
   public static final String JSON_PROPERTY_PANELS = "panels";
-  private List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels = null;
+  private List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
   private String finalUrl;
@@ -63,7 +59,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
   private String trackingUrl;
 
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd() { 
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd() {
   }
 
   public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd adShrinkMainMediaId(Long adShrinkMainMediaId) {
@@ -76,8 +72,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 縮小メイン画像です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reduced main image.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adShrinkMainMediaId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 縮小メイン画像です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reduced main image.<br> This field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -111,8 +106,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * Get panels
    * @return panels
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PANELS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -138,8 +132,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return finalUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">最終リンク先URLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\">Final URL.<br> This field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FINAL_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -165,8 +158,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * Get displayUrlLevel
    * @return displayUrlLevel
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,8 +184,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * Get customParameters
    * @return customParameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,8 +210,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; &lt;/div&gt; 
    * @return trackingUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">トラッキングURLです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> </div> <div lang=\"en\">Tracking URL.<br> This field will be returned in the response, it will be ignored on input.<br> </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TRACKING_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -234,7 +224,6 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   public void setTrackingUrl(String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
-
 
   @Override
   public boolean equals(Object o) {

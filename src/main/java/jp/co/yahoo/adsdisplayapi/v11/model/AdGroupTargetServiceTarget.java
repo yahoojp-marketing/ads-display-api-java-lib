@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupTargetServiceAdScheduleTarget;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupTargetServiceAgeTarget;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupTargetServiceAppTarget;
@@ -47,7 +45,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceTargetオブジェクトは、ターゲティング設定情報を保持します。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceTarget object is a container for storing targeting settings.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupTargetServiceTargetオブジェクトは、ターゲティング設定情報を保持します。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> AdGroupTargetServiceTarget object is a container for storing targeting settings.<br> This field is required in requests. </div> ")
 @JsonPropertyOrder({
   AdGroupTargetServiceTarget.JSON_PROPERTY_AD_SCHEDULE_TARGET,
   AdGroupTargetServiceTarget.JSON_PROPERTY_AGE_TARGET,
@@ -71,8 +68,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTargetServiceTarget.JSON_PROPERTY_TARGET_SETTING,
   AdGroupTargetServiceTarget.JSON_PROPERTY_TARGET_TYPE
 })
-@JsonTypeName("AdGroupTargetServiceTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupTargetServiceTarget {
   public static final String JSON_PROPERTY_AD_SCHEDULE_TARGET = "adScheduleTarget";
   private AdGroupTargetServiceAdScheduleTarget adScheduleTarget;
@@ -137,7 +133,7 @@ public class AdGroupTargetServiceTarget {
   public static final String JSON_PROPERTY_TARGET_TYPE = "targetType";
   private AdGroupTargetServiceTargetType targetType;
 
-  public AdGroupTargetServiceTarget() { 
+  public AdGroupTargetServiceTarget() {
   }
 
   public AdGroupTargetServiceTarget adScheduleTarget(AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
@@ -150,8 +146,7 @@ public class AdGroupTargetServiceTarget {
    * Get adScheduleTarget
    * @return adScheduleTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_SCHEDULE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -177,8 +172,7 @@ public class AdGroupTargetServiceTarget {
    * Get ageTarget
    * @return ageTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AGE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,8 +198,7 @@ public class AdGroupTargetServiceTarget {
    * Get appTarget
    * @return appTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -231,8 +224,7 @@ public class AdGroupTargetServiceTarget {
    * Get audienceCategoryTarget
    * @return audienceCategoryTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_CATEGORY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -258,8 +250,7 @@ public class AdGroupTargetServiceTarget {
    * Get deviceTarget
    * @return deviceTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -285,8 +276,7 @@ public class AdGroupTargetServiceTarget {
    * Get genderTarget
    * @return genderTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GENDER_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -312,8 +302,7 @@ public class AdGroupTargetServiceTarget {
    * Get geoTarget
    * @return geoTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_GEO_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -339,8 +328,7 @@ public class AdGroupTargetServiceTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; trueの場合、ターゲティング種別をすべて削除します。&lt;br&gt; このフィールドは、ADD、SETおよびREMOVE時は無視され、REPLACE時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; If true, delete all targeting types.&lt;br&gt; This field will be ignored in ADD, SET and REMOVE operation, and will be optional in REPLACE operation. &lt;/div&gt; 
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> trueの場合、ターゲティング種別をすべて削除します。<br> このフィールドは、ADD、SETおよびREMOVE時は無視され、REPLACE時は省略可能となります。 </div> <div lang=\"en\"> If true, delete all targeting types.<br> This field will be ignored in ADD, SET and REMOVE operation, and will be optional in REPLACE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -366,8 +354,7 @@ public class AdGroupTargetServiceTarget {
    * Get osTarget
    * @return osTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -393,8 +380,7 @@ public class AdGroupTargetServiceTarget {
    * Get osVersionTarget
    * @return osVersionTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OS_VERSION_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -420,8 +406,7 @@ public class AdGroupTargetServiceTarget {
    * Get placementTarget
    * @return placementTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -447,8 +432,7 @@ public class AdGroupTargetServiceTarget {
    * Get searchTarget
    * @return searchTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -474,8 +458,7 @@ public class AdGroupTargetServiceTarget {
    * Get siteCategoryTarget
    * @return siteCategoryTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SITE_CATEGORY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -501,8 +484,7 @@ public class AdGroupTargetServiceTarget {
    * Get audienceListTarget
    * @return audienceListTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -528,8 +510,7 @@ public class AdGroupTargetServiceTarget {
    * Get positionTarget
    * @return positionTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_POSITION_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -555,8 +536,7 @@ public class AdGroupTargetServiceTarget {
    * Get placementCategoryTarget
    * @return placementCategoryTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -582,8 +562,7 @@ public class AdGroupTargetServiceTarget {
    * Get placementCategoryDetailTarget
    * @return placementCategoryDetailTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -609,8 +588,7 @@ public class AdGroupTargetServiceTarget {
    * Get contentsTarget
    * @return contentsTarget
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_TARGET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -636,8 +614,7 @@ public class AdGroupTargetServiceTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ターゲットIDです。&lt;br&gt; このフィールドは、ADDおよびREPLACE時は省略可能となり、SETおよびREMOVE時は必須となります。&lt;br&gt; ※ADD時、targetTypeが以下のいずれかの場合は必須です。&lt;br&gt; ‐AUDIENCE_LIST_TARGET&lt;br&gt; ‐PLACEMENT_TARGET&lt;br&gt; ‐SEARCH_TARGET&lt;br&gt; ‐GEO_TARGET(AdGroupTargetServiceGeoTarget.areaSearchTypeが&#x60;GEO&#x60;（地域指定）の場合)&lt;br&gt; ‐SITE_CATEGORY&lt;br&gt; ‐AUDIENCE_CATEGORY_TARGET&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET&lt;br&gt; -CONTENTS_TARGET&lt;br&gt; ※REPLACE時、isRemoveがtrueの場合は設定不要です。&lt;br&gt; &lt;br&gt; ‐AUDIENCE_LIST_TARGET: audienceListId&lt;br&gt; ‐PLACEMENT_TARGET: placementUrlListId&lt;br&gt; ‐SEARCH_TARGET: searchKeywordListId&lt;br&gt; ‐GEO_TARGET: IM地域コード(geo)&lt;br&gt; *When AdGroupTargetServiceGeoTarget.areaSearchType is &#x60;GEO&#x60; (regional specification)&lt;br&gt; ‐SITE_CATEGORY: カテゴリーコード(category)&lt;br&gt; ‐OS_VERSION_TARGET: osVersion&lt;br&gt; ‐AUDIENCE_CATEGORY_TARGET: オーディエンスカテゴリーコード(audience category)&lt;br&gt; ‐POSITION_TARGET: PositionTypeのコード値&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId&lt;br&gt; -CONTENTS_TARGET: contentsKeywordListId &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ID.&lt;br&gt; This field is optional in ADD and REPLACE operation, and is required in SET and REMOVE operation.&lt;br&gt; *If targetType is any of the following, this field is required in ADD operation.&lt;br&gt; ‐AUDIENCE_LIST_TARGET&lt;br&gt; ‐PLACEMENT_TARGET&lt;br&gt; ‐SEARCH_TARGET&lt;br&gt; ‐GEO_TARGET&lt;br&gt; ‐SITE_CATEGORY&lt;br&gt; ‐AUDIENCE_CATEGORY_TARGET&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET&lt;br&gt; -CONTENTS_TARGET&lt;br&gt; *If isRemove is true, this field does not need to be set in REPLACE operation.&lt;br&gt; &lt;br&gt; ‐AUDIENCE_LIST_TARGET: audienceListId&lt;br&gt; ‐PLACEMENT_TARGET: placementUrlListId&lt;br&gt; ‐SEARCH_TARGET: searchKeywordListId&lt;br&gt; ‐GEO_TARGET: IM area code(geo)&lt;br&gt; ‐SITE_CATEGORY: category code(category)&lt;br&gt; ‐OS_VERSION_TARGET: osVersion&lt;br&gt; ‐AUDIENCE_CATEGORY_TARGET: audience category code(audience category)&lt;br&gt; ‐POSITION_TARGET: PositionType code.&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId&lt;br&gt; -CONTENTS_TARGET: contentsKeywordListId &lt;/div&gt; 
    * @return targetId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ターゲットIDです。<br> このフィールドは、ADDおよびREPLACE時は省略可能となり、SETおよびREMOVE時は必須となります。<br> ※ADD時、targetTypeが以下のいずれかの場合は必須です。<br> ‐AUDIENCE_LIST_TARGET<br> ‐PLACEMENT_TARGET<br> ‐SEARCH_TARGET<br> ‐GEO_TARGET(AdGroupTargetServiceGeoTarget.areaSearchTypeが`GEO`（地域指定）の場合)<br> ‐SITE_CATEGORY<br> ‐AUDIENCE_CATEGORY_TARGET<br> ‐PLACEMENT_CATEGORY_TARGET<br> -PLACEMENT_CATEGORY_DETAIL_TARGET<br> -CONTENTS_TARGET<br> ※REPLACE時、isRemoveがtrueの場合は設定不要です。<br> <br> ‐AUDIENCE_LIST_TARGET: audienceListId<br> ‐PLACEMENT_TARGET: placementUrlListId<br> ‐SEARCH_TARGET: searchKeywordListId<br> ‐GEO_TARGET: IM地域コード(geo)<br> *When AdGroupTargetServiceGeoTarget.areaSearchType is `GEO` (regional specification)<br> ‐SITE_CATEGORY: カテゴリーコード(category)<br> ‐OS_VERSION_TARGET: osVersion<br> ‐AUDIENCE_CATEGORY_TARGET: オーディエンスカテゴリーコード(audience category)<br> ‐POSITION_TARGET: PositionTypeのコード値<br> ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId<br> -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId<br> -CONTENTS_TARGET: contentsKeywordListId </div> <div lang=\"en\"> Target ID.<br> This field is optional in ADD and REPLACE operation, and is required in SET and REMOVE operation.<br> *If targetType is any of the following, this field is required in ADD operation.<br> ‐AUDIENCE_LIST_TARGET<br> ‐PLACEMENT_TARGET<br> ‐SEARCH_TARGET<br> ‐GEO_TARGET<br> ‐SITE_CATEGORY<br> ‐AUDIENCE_CATEGORY_TARGET<br> ‐PLACEMENT_CATEGORY_TARGET<br> -PLACEMENT_CATEGORY_DETAIL_TARGET<br> -CONTENTS_TARGET<br> *If isRemove is true, this field does not need to be set in REPLACE operation.<br> <br> ‐AUDIENCE_LIST_TARGET: audienceListId<br> ‐PLACEMENT_TARGET: placementUrlListId<br> ‐SEARCH_TARGET: searchKeywordListId<br> ‐GEO_TARGET: IM area code(geo)<br> ‐SITE_CATEGORY: category code(category)<br> ‐OS_VERSION_TARGET: osVersion<br> ‐AUDIENCE_CATEGORY_TARGET: audience category code(audience category)<br> ‐POSITION_TARGET: PositionType code.<br> ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId<br> -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId<br> -CONTENTS_TARGET: contentsKeywordListId </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -663,8 +640,7 @@ public class AdGroupTargetServiceTarget {
    * Get targetSetting
    * @return targetSetting
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_SETTING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -690,8 +666,7 @@ public class AdGroupTargetServiceTarget {
    * Get targetType
    * @return targetType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -705,7 +680,6 @@ public class AdGroupTargetServiceTarget {
   public void setTargetType(AdGroupTargetServiceTargetType targetType) {
     this.targetType = targetType;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,25 +20,21 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCpvBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPV)の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpvBiddingScheme object holds configuration information of Max bid of ad group (CPV). &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceCpvBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPV)の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceCpvBiddingScheme object holds configuration information of Max bid of ad group (CPV). </div> ")
 @JsonPropertyOrder({
   AdGroupServiceCpvBiddingScheme.JSON_PROPERTY_CPV
 })
-@JsonTypeName("AdGroupServiceCpvBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceCpvBiddingScheme {
   public static final String JSON_PROPERTY_CPV = "cpv";
   private Long cpv;
 
-  public AdGroupServiceCpvBiddingScheme() { 
+  public AdGroupServiceCpvBiddingScheme() {
   }
 
   public AdGroupServiceCpvBiddingScheme cpv(Long cpv) {
@@ -51,8 +47,7 @@ public class AdGroupServiceCpvBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格（CPV）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがCPVの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (CPV).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is CPV. &lt;/div&gt; 
    * @return cpv
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ最大入札価格（CPV）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※campaignBiddingStrategyTypeがCPVの場合のみ指定可能です。 </div> <div lang=\"en\"> Max bid of ad group (CPV).<br> This field is optional in ADD and SET operation.<br> *This can only be specified when campaignBiddingStrategyType is CPV. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPV)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -66,7 +61,6 @@ public class AdGroupServiceCpvBiddingScheme {
   public void setCpv(Long cpv) {
     this.cpv = cpv;
   }
-
 
   @Override
   public boolean equals(Object o) {

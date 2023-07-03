@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,7 +28,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceSelector object contains a set of criteria (parameters) for get method.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionGroupServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。</div> <div lang=\"en\">ConversionGroupServiceSelector object contains a set of criteria (parameters) for get method.</div> ")
 @JsonPropertyOrder({
   ConversionGroupServiceSelector.JSON_PROPERTY_ACCOUNT_ID,
   ConversionGroupServiceSelector.JSON_PROPERTY_CONVERSION_GROUP_IDS,
@@ -39,20 +36,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionGroupServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   ConversionGroupServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@JsonTypeName("ConversionGroupServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionGroupServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
 
   public static final String JSON_PROPERTY_CONVERSION_GROUP_IDS = "conversionGroupIds";
-  private List<Long> conversionGroupIds = null;
+  private List<Long> conversionGroupIds;
 
   public static final String JSON_PROPERTY_CONVERSION_GROUP_NAME = "conversionGroupName";
   private String conversionGroupName;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_IDS = "conversionTrackerIds";
-  private List<Long> conversionTrackerIds = null;
+  private List<Long> conversionTrackerIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
   private Integer numberResults = 500;
@@ -60,7 +56,7 @@ public class ConversionGroupServiceSelector {
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
   private Integer startIndex = 1;
 
-  public ConversionGroupServiceSelector() { 
+  public ConversionGroupServiceSelector() {
   }
 
   public ConversionGroupServiceSelector accountId(Long accountId) {
@@ -73,8 +69,7 @@ public class ConversionGroupServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントID。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -108,8 +103,7 @@ public class ConversionGroupServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョングループのID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Group ID.&lt;/div&gt; 
    * @return conversionGroupIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョングループのID。</div> <div lang=\"en\">Conversion Group ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -135,8 +129,7 @@ public class ConversionGroupServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョングループ名。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Group Name.&lt;/div&gt; 
    * @return conversionGroupName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョングループ名。</div> <div lang=\"en\">Conversion Group Name.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -170,8 +163,7 @@ public class ConversionGroupServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョントラッカーのID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Tracker ID.&lt;/div&gt; 
    * @return conversionTrackerIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョントラッカーのID。</div> <div lang=\"en\">Conversion Tracker ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -199,8 +191,7 @@ public class ConversionGroupServiceSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -227,8 +218,7 @@ public class ConversionGroupServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -242,7 +232,6 @@ public class ConversionGroupServiceSelector {
   public void setStartIndex(Integer startIndex) {
     this.startIndex = startIndex;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceVcpmBiddingSchemeオブジェクトは、広告グループ最大入札価格(vCPM)の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceVcpmBiddingScheme object holds configuration information of Max bid of ad group (vCPM). &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceVcpmBiddingSchemeオブジェクトは、広告グループ最大入札価格(vCPM)の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceVcpmBiddingScheme object holds configuration information of Max bid of ad group (vCPM). </div> ")
 @JsonPropertyOrder({
   AdGroupServiceVcpmBiddingScheme.JSON_PROPERTY_VCPM,
   AdGroupServiceVcpmBiddingScheme.JSON_PROPERTY_IS_REMOVE_VCPM
 })
-@JsonTypeName("AdGroupServiceVcpmBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceVcpmBiddingScheme {
   public static final String JSON_PROPERTY_VCPM = "vcpm";
   private Long vcpm;
@@ -43,7 +39,7 @@ public class AdGroupServiceVcpmBiddingScheme {
   public static final String JSON_PROPERTY_IS_REMOVE_VCPM = "isRemoveVcpm";
   private AdGroupServiceIsRemoveFlg isRemoveVcpm;
 
-  public AdGroupServiceVcpmBiddingScheme() { 
+  public AdGroupServiceVcpmBiddingScheme() {
   }
 
   public AdGroupServiceVcpmBiddingScheme vcpm(Long vcpm) {
@@ -56,8 +52,7 @@ public class AdGroupServiceVcpmBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格（vCPM）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがvCPMの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (vCPM).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is vCPM. &lt;/div&gt; 
    * @return vcpm
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ最大入札価格（vCPM）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※campaignBiddingStrategyTypeがvCPMの場合のみ指定可能です。 </div> <div lang=\"en\"> Max bid of ad group (vCPM).<br> This field is optional in ADD and SET operation.<br> *This can only be specified when campaignBiddingStrategyType is vCPM. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VCPM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AdGroupServiceVcpmBiddingScheme {
    * Get isRemoveVcpm
    * @return isRemoveVcpm
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_VCPM)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AdGroupServiceVcpmBiddingScheme {
   public void setIsRemoveVcpm(AdGroupServiceIsRemoveFlg isRemoveVcpm) {
     this.isRemoveVcpm = isRemoveVcpm;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionsBiddingSchemeオブジェクトは、広告グループ目標単価（tCPA）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionsBiddingScheme object holds configuration information of Target CPA (tCPA) of ad group. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceMaximizeConversionsBiddingSchemeオブジェクトは、広告グループ目標単価（tCPA）の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceMaximizeConversionsBiddingScheme object holds configuration information of Target CPA (tCPA) of ad group. </div> ")
 @JsonPropertyOrder({
   AdGroupServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_TARGET_CPA,
   AdGroupServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPA
 })
-@JsonTypeName("AdGroupServiceMaximizeConversionsBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
   private Long targetCpa;
@@ -43,7 +39,7 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_CPA = "isRemoveTargetCpa";
   private AdGroupServiceIsRemoveFlg isRemoveTargetCpa;
 
-  public AdGroupServiceMaximizeConversionsBiddingScheme() { 
+  public AdGroupServiceMaximizeConversionsBiddingScheme() {
   }
 
   public AdGroupServiceMaximizeConversionsBiddingScheme targetCpa(Long targetCpa) {
@@ -56,8 +52,7 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ目標単価（tCPA）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target CPA (tCPA) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSIONS. &lt;/div&gt; 
    * @return targetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ目標単価（tCPA）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合のみ指定可能です。 </div> <div lang=\"en\"> Target CPA (tCPA) of ad group.<br> This field is optional in ADD and SET operation.<br> *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSIONS. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
    * Get isRemoveTargetCpa
    * @return isRemoveTargetCpa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
   public void setIsRemoveTargetCpa(AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
     this.isRemoveTargetCpa = isRemoveTargetCpa;
   }
-
 
   @Override
   public boolean equals(Object o) {

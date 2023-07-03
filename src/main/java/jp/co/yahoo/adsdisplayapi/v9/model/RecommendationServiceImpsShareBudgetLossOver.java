@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.RecommendationServiceImpsShareBudgetLossOverCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceImpsShareBudgetLossOverオブジェクトは、インプレッションシェア損失率（予算）が大きいキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceImpsShareBudgetLossOver object describes the Recommendations information of campaigns that have a large lost impression share (budget).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceImpsShareBudgetLossOverオブジェクトは、インプレッションシェア損失率（予算）が大きいキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceImpsShareBudgetLossOver object describes the Recommendations information of campaigns that have a large lost impression share (budget).</div> ")
 @JsonPropertyOrder({
   RecommendationServiceImpsShareBudgetLossOver.JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceImpsShareBudgetLossOver")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceImpsShareBudgetLossOver {
   public static final String JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER_CAMPAIGN_LIST = "impsShareBudgetLossOverCampaignList";
-  private List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList = null;
+  private List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList;
 
-  public RecommendationServiceImpsShareBudgetLossOver() { 
+  public RecommendationServiceImpsShareBudgetLossOver() {
   }
 
   public RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOverCampaignList(List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceImpsShareBudgetLossOver {
    * Get impsShareBudgetLossOverCampaignList
    * @return impsShareBudgetLossOverCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceImpsShareBudgetLossOver {
   public void setImpsShareBudgetLossOverCampaignList(List<RecommendationServiceImpsShareBudgetLossOverCampaign> impsShareBudgetLossOverCampaignList) {
     this.impsShareBudgetLossOverCampaignList = impsShareBudgetLossOverCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

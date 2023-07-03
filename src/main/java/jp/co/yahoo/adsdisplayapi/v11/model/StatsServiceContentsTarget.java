@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.StatsServiceDeliverType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; StatsServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; StatsServiceContentsTarget object is a container for storing contents settings. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> StatsServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。 </div> <div lang=\"en\"> StatsServiceContentsTarget object is a container for storing contents settings. </div> ")
 @JsonPropertyOrder({
   StatsServiceContentsTarget.JSON_PROPERTY_DELIVER_TYPE,
   StatsServiceContentsTarget.JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME
 })
-@JsonTypeName("StatsServiceContentsTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceContentsTarget {
   public static final String JSON_PROPERTY_DELIVER_TYPE = "deliverType";
   private StatsServiceDeliverType deliverType;
@@ -43,7 +39,7 @@ public class StatsServiceContentsTarget {
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME = "contentsKeywordListName";
   private String contentsKeywordListName;
 
-  public StatsServiceContentsTarget() { 
+  public StatsServiceContentsTarget() {
   }
 
   public StatsServiceContentsTarget deliverType(StatsServiceDeliverType deliverType) {
@@ -56,8 +52,7 @@ public class StatsServiceContentsTarget {
    * Get deliverType
    * @return deliverType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class StatsServiceContentsTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリスト名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contents Keyword List name. &lt;/div&gt; 
    * @return contentsKeywordListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンテンツキーワードリスト名です。 </div> <div lang=\"en\"> Contents Keyword List name. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class StatsServiceContentsTarget {
   public void setContentsKeywordListName(String contentsKeywordListName) {
     this.contentsKeywordListName = contentsKeywordListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

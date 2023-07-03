@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.SearchKeywordIdeaServiceAvailabilityStatus;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordIdeaServiceSelectorオブジェクトは、サーチターゲティング対象キーワードのリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordIdeaServiceSelector object displays the list of keyword for search targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchKeywordIdeaServiceSelectorオブジェクトは、サーチターゲティング対象キーワードのリストを表します。</div> <div lang=\"en\">SearchKeywordIdeaServiceSelector object displays the list of keyword for search targeting.</div> ")
 @JsonPropertyOrder({
   SearchKeywordIdeaServiceSelector.JSON_PROPERTY_KEYWORD_FREQUENCY,
   SearchKeywordIdeaServiceSelector.JSON_PROPERTY_KEYWORD_IDS,
@@ -49,20 +46,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SearchKeywordIdeaServiceSelector.JSON_PROPERTY_START_INDEX,
   SearchKeywordIdeaServiceSelector.JSON_PROPERTY_AVAILABILITY_STATUS
 })
-@JsonTypeName("SearchKeywordIdeaServiceSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchKeywordIdeaServiceSelector {
   public static final String JSON_PROPERTY_KEYWORD_FREQUENCY = "keywordFrequency";
   private SearchKeywordIdeaServiceKeywordFrequency keywordFrequency;
 
   public static final String JSON_PROPERTY_KEYWORD_IDS = "keywordIds";
-  private List<Long> keywordIds = null;
+  private List<Long> keywordIds;
 
   public static final String JSON_PROPERTY_KEYWORD_RECENCY = "keywordRecency";
   private SearchKeywordIdeaServiceKeywordRecency keywordRecency;
 
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
-  private List<String> keywords = null;
+  private List<String> keywords;
 
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
   private SearchKeywordIdeaServiceMatchType matchType;
@@ -82,7 +78,7 @@ public class SearchKeywordIdeaServiceSelector {
   public static final String JSON_PROPERTY_AVAILABILITY_STATUS = "availabilityStatus";
   private SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus;
 
-  public SearchKeywordIdeaServiceSelector() { 
+  public SearchKeywordIdeaServiceSelector() {
   }
 
   public SearchKeywordIdeaServiceSelector keywordFrequency(SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
@@ -95,8 +91,7 @@ public class SearchKeywordIdeaServiceSelector {
    * Get keywordFrequency
    * @return keywordFrequency
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_FREQUENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +125,7 @@ public class SearchKeywordIdeaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索条件：キーワードID&lt;br&gt; ※キーワード検索用&lt;br&gt; ※キーワード、キーワードIDの同時指定はできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition : Keyword ID.&lt;br&gt; *Keyword for searching.&lt;br&gt; *Can not specify Keyword and Keyword ID at the same time. &lt;/div&gt; 
    * @return keywordIds
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：キーワードID<br> ※キーワード検索用<br> ※キーワード、キーワードIDの同時指定はできません。 </div> <div lang=\"en\">Search condition : Keyword ID.<br> *Keyword for searching.<br> *Can not specify Keyword and Keyword ID at the same time. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +151,7 @@ public class SearchKeywordIdeaServiceSelector {
    * Get keywordRecency
    * @return keywordRecency
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_RECENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -192,8 +185,7 @@ public class SearchKeywordIdeaServiceSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索条件：キーワード&lt;br&gt; ※キーワード提案用&lt;br&gt; ※キーワード、キーワードIDの同時指定はできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search condition : Keyword.&lt;br&gt; *Keyword for suggesting.&lt;br&gt; *Can not specify Keyword and Keyword ID at the same time. &lt;/div&gt; 
    * @return keywords
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索条件：キーワード<br> ※キーワード提案用<br> ※キーワード、キーワードIDの同時指定はできません。 </div> <div lang=\"en\"> Search condition : Keyword.<br> *Keyword for suggesting.<br> *Can not specify Keyword and Keyword ID at the same time. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -219,8 +211,7 @@ public class SearchKeywordIdeaServiceSelector {
    * Get matchType
    * @return matchType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -248,8 +239,7 @@ public class SearchKeywordIdeaServiceSelector {
    * maximum: 1000
    * @return numberResults
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの最大件数です。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Maximum number of results to return in this page. This field must be greater than or equal to 1. Also see Entity Limits per operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -275,8 +265,7 @@ public class SearchKeywordIdeaServiceSelector {
    * Get sortField
    * @return sortField
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SORT_FIELD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -302,8 +291,7 @@ public class SearchKeywordIdeaServiceSelector {
    * Get sortType
    * @return sortType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SORT_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -330,8 +318,7 @@ public class SearchKeywordIdeaServiceSelector {
    * minimum: 1
    * @return startIndex
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ページの先頭のインデックスです。このフィールドは、1以上を指定する必要があります。</div> <div lang=\"en\">Index of the first result to return in this page. This field must be greater than or equal to 1.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_INDEX)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -357,8 +344,7 @@ public class SearchKeywordIdeaServiceSelector {
    * Get availabilityStatus
    * @return availabilityStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVAILABILITY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -372,7 +358,6 @@ public class SearchKeywordIdeaServiceSelector {
   public void setAvailabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     this.availabilityStatus = availabilityStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

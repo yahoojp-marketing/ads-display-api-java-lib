@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.StatsServicePeriod;
@@ -32,14 +30,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePage object is a container that includes the execution result of get methods (list of all entities).&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。</div> <div lang=\"en\">StatsServicePage object is a container that includes the execution result of get methods (list of all entities).</div> ")
 @JsonPropertyOrder({
   StatsServicePage.JSON_PROPERTY_PERIOD,
   StatsServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   StatsServicePage.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("StatsServicePage")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServicePage {
   public static final String JSON_PROPERTY_PERIOD = "period";
   private StatsServicePeriod period;
@@ -48,9 +44,9 @@ public class StatsServicePage {
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<StatsServiceValue> values = null;
+  private List<StatsServiceValue> values;
 
-  public StatsServicePage() { 
+  public StatsServicePage() {
   }
 
   public StatsServicePage period(StatsServicePeriod period) {
@@ -63,8 +59,7 @@ public class StatsServicePage {
    * Get period
    * @return period
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class StatsServicePage {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">取得される項目の総件数です。</div> <div lang=\"en\">Total number of items to be retrieved.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class StatsServicePage {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class StatsServicePage {
   public void setValues(List<StatsServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

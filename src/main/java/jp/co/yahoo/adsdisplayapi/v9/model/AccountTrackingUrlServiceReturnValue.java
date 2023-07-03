@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.AccountTrackingUrlServiceValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountTrackingUrlServiceReturnValueオブジェクトは、トラッキング情報を含む結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountTrackingUrlServiceReturnValue obaject describes tracking details.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AccountTrackingUrlServiceReturnValueオブジェクトは、トラッキング情報を含む結果として戻される値を表します。</div> <div lang=\"en\">AccountTrackingUrlServiceReturnValue obaject describes tracking details.</div> ")
 @JsonPropertyOrder({
   AccountTrackingUrlServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("AccountTrackingUrlServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AccountTrackingUrlServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
   private AccountTrackingUrlServiceValue values;
 
-  public AccountTrackingUrlServiceReturnValue() { 
+  public AccountTrackingUrlServiceReturnValue() {
   }
 
   public AccountTrackingUrlServiceReturnValue values(AccountTrackingUrlServiceValue values) {
@@ -52,8 +48,7 @@ public class AccountTrackingUrlServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class AccountTrackingUrlServiceReturnValue {
   public void setValues(AccountTrackingUrlServiceValue values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

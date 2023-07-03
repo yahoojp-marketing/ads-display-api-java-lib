@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.FeedServiceControlType;
 import jp.co.yahoo.adsdisplayapi.v10.model.FeedServiceSourceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
@@ -30,14 +28,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceUploadLimitオブジェクトは、Feedファイルの制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceUploadLimit object contains feed file restriction information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedServiceUploadLimitオブジェクトは、Feedファイルの制限情報を保持します。</div> <div lang=\"en\">FeedServiceUploadLimit object contains feed file restriction information.</div> ")
 @JsonPropertyOrder({
   FeedServiceUploadLimit.JSON_PROPERTY_SOURCE_TYPE,
   FeedServiceUploadLimit.JSON_PROPERTY_CONTROL_TYPE,
   FeedServiceUploadLimit.JSON_PROPERTY_LIMIT_VALUE
 })
-@JsonTypeName("FeedServiceUploadLimit")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedServiceUploadLimit {
   public static final String JSON_PROPERTY_SOURCE_TYPE = "sourceType";
   private FeedServiceSourceType sourceType;
@@ -48,7 +44,7 @@ public class FeedServiceUploadLimit {
   public static final String JSON_PROPERTY_LIMIT_VALUE = "limitValue";
   private Integer limitValue;
 
-  public FeedServiceUploadLimit() { 
+  public FeedServiceUploadLimit() {
   }
 
   public FeedServiceUploadLimit sourceType(FeedServiceSourceType sourceType) {
@@ -61,8 +57,7 @@ public class FeedServiceUploadLimit {
    * Get sourceType
    * @return sourceType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -88,8 +83,7 @@ public class FeedServiceUploadLimit {
    * Get controlType
    * @return controlType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONTROL_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -115,8 +109,7 @@ public class FeedServiceUploadLimit {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上限数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of limit.&lt;/div&gt; 
    * @return limitValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">上限数です。</div> <div lang=\"en\">Number of limit.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LIMIT_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,7 +123,6 @@ public class FeedServiceUploadLimit {
   public void setLimitValue(Integer limitValue) {
     this.limitValue = limitValue;
   }
-
 
   @Override
   public boolean equals(Object o) {

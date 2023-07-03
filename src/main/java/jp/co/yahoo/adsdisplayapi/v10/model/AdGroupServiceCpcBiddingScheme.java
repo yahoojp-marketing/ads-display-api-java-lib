@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCpcBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPC)の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpcBiddingScheme object holds configuration information of Max bid of ad group (CPC). &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceCpcBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPC)の設定情報を表します。 </div> <div lang=\"en\"> AdGroupServiceCpcBiddingScheme object holds configuration information of Max bid of ad group (CPC). </div> ")
 @JsonPropertyOrder({
   AdGroupServiceCpcBiddingScheme.JSON_PROPERTY_CPC,
   AdGroupServiceCpcBiddingScheme.JSON_PROPERTY_IS_REMOVE_CPC
 })
-@JsonTypeName("AdGroupServiceCpcBiddingScheme")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupServiceCpcBiddingScheme {
   public static final String JSON_PROPERTY_CPC = "cpc";
   private Long cpc;
@@ -43,7 +39,7 @@ public class AdGroupServiceCpcBiddingScheme {
   public static final String JSON_PROPERTY_IS_REMOVE_CPC = "isRemoveCpc";
   private AdGroupServiceIsRemoveFlg isRemoveCpc;
 
-  public AdGroupServiceCpcBiddingScheme() { 
+  public AdGroupServiceCpcBiddingScheme() {
   }
 
   public AdGroupServiceCpcBiddingScheme cpc(Long cpc) {
@@ -56,8 +52,7 @@ public class AdGroupServiceCpcBiddingScheme {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格（CPC）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがCPCの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (CPC).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is CPC. &lt;/div&gt; 
    * @return cpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ最大入札価格（CPC）です。<br> ADDおよびSET時、このフィールドは省略可能となります。<br> ※campaignBiddingStrategyTypeがCPCの場合のみ指定可能です。 </div> <div lang=\"en\"> Max bid of ad group (CPC).<br> This field is optional in ADD and SET operation.<br> *This can only be specified when campaignBiddingStrategyType is CPC. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class AdGroupServiceCpcBiddingScheme {
    * Get isRemoveCpc
    * @return isRemoveCpc
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CPC)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class AdGroupServiceCpcBiddingScheme {
   public void setIsRemoveCpc(AdGroupServiceIsRemoveFlg isRemoveCpc) {
     this.isRemoveCpc = isRemoveCpc;
   }
-
 
   @Override
   public boolean equals(Object o) {

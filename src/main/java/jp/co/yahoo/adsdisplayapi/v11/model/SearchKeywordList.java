@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.SearchKeywordListServiceDeliveryStatus;
@@ -35,7 +33,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListオブジェクトは、サーチキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordList object displays the search list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchKeywordListオブジェクトは、サーチキーワードリストを表します。</div> <div lang=\"en\">SearchKeywordList object displays the search list.</div> ")
 @JsonPropertyOrder({
   SearchKeywordList.JSON_PROPERTY_ACCOUNT_ID,
   SearchKeywordList.JSON_PROPERTY_DELIVERY_STATUS,
@@ -47,8 +44,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SearchKeywordList.JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID,
   SearchKeywordList.JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME
 })
-@JsonTypeName("SearchKeywordList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchKeywordList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -63,7 +59,7 @@ public class SearchKeywordList {
   private SearchKeywordListServiceKeywordRecency keywordRecency;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD = "searchKeyword";
-  private List<SearchKeywordListServiceSearchKeyword> searchKeyword = null;
+  private List<SearchKeywordListServiceSearchKeyword> searchKeyword;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION = "searchKeywordListDescription";
   private String searchKeywordListDescription;
@@ -77,7 +73,7 @@ public class SearchKeywordList {
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME = "searchKeywordListName";
   private String searchKeywordListName;
 
-  public SearchKeywordList() { 
+  public SearchKeywordList() {
   }
 
   public SearchKeywordList accountId(Long accountId) {
@@ -90,8 +86,7 @@ public class SearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Account ID.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,8 +112,7 @@ public class SearchKeywordList {
    * Get deliveryStatus
    * @return deliveryStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +138,7 @@ public class SearchKeywordList {
    * Get keywordFrequency
    * @return keywordFrequency
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_FREQUENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -171,8 +164,7 @@ public class SearchKeywordList {
    * Get keywordRecency
    * @return keywordRecency
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD_RECENCY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -206,8 +198,7 @@ public class SearchKeywordList {
    * Get searchKeyword
    * @return searchKeyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -233,8 +224,7 @@ public class SearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリストの説明文です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description of Search keyword list.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return searchKeywordListDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリストの説明文です。<br> このフィールドは、ADDおよびSET時に省略可能となります。 </div> <div lang=\"en\"> Description of Search keyword list.<br> This field is optional in ADD and SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -260,8 +250,7 @@ public class SearchKeywordList {
    * Get isRemoveSearchKeywordListDescription
    * @return isRemoveSearchKeywordListDescription
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_SEARCH_KEYWORD_LIST_DESCRIPTION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -287,8 +276,7 @@ public class SearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリストIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword list ID.&lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return searchKeywordListId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリストIDです。<br> このフィールドは、SETおよびREMOVE時に必須となります。 </div> <div lang=\"en\"> Search keyword list ID.<br> This field is required in SET and REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -314,8 +302,7 @@ public class SearchKeywordList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリスト名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Name of Search keyword list.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return searchKeywordListName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> サーチキーワードリスト名です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Name of Search keyword list.<br> This field is required in ADD operation, and is optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -329,7 +316,6 @@ public class SearchKeywordList {
   public void setSearchKeywordListName(String searchKeywordListName) {
     this.searchKeywordListName = searchKeywordListName;
   }
-
 
   @Override
   public boolean equals(Object o) {

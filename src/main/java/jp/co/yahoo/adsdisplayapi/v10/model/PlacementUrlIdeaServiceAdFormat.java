@@ -20,23 +20,19 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServiceAdFormatは、広告のフォーマットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad Format.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServiceAdFormatは、広告のフォーマットを表します。</div> <div lang=\"en\">Ad Format.</div> ")
 @JsonPropertyOrder({
   PlacementUrlIdeaServiceAdFormat.JSON_PROPERTY_MAIN_MEDIA_FORMAT,
   PlacementUrlIdeaServiceAdFormat.JSON_PROPERTY_AD_TYPE,
   PlacementUrlIdeaServiceAdFormat.JSON_PROPERTY_WIDTH,
   PlacementUrlIdeaServiceAdFormat.JSON_PROPERTY_HEIGHT
 })
-@JsonTypeName("PlacementUrlIdeaServiceAdFormat")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlIdeaServiceAdFormat {
   public static final String JSON_PROPERTY_MAIN_MEDIA_FORMAT = "mainMediaFormat";
   private String mainMediaFormat;
@@ -50,7 +46,7 @@ public class PlacementUrlIdeaServiceAdFormat {
   public static final String JSON_PROPERTY_HEIGHT = "height";
   private Long height;
 
-  public PlacementUrlIdeaServiceAdFormat() { 
+  public PlacementUrlIdeaServiceAdFormat() {
   }
 
   public PlacementUrlIdeaServiceAdFormat mainMediaFormat(String mainMediaFormat) {
@@ -63,8 +59,7 @@ public class PlacementUrlIdeaServiceAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告のスタイルです。&lt;br&gt;IMAGE、VIDEO、NONEのみ指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad Style of image.&lt;br&gt;This field can be specified only IMAGE, VIDEO, NONE.&lt;/div&gt; 
    * @return mainMediaFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告のスタイルです。<br>IMAGE、VIDEO、NONEのみ指定できます。</div> <div lang=\"en\">Ad Style of image.<br>This field can be specified only IMAGE, VIDEO, NONE.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MAIN_MEDIA_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -90,8 +85,7 @@ public class PlacementUrlIdeaServiceAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告のタイプです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad Type of image.&lt;/div&gt; 
    * @return adType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告のタイプです。</div> <div lang=\"en\">Ad Type of image.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -117,8 +111,7 @@ public class PlacementUrlIdeaServiceAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像の幅です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Width of the image.&lt;/div&gt; 
    * @return width
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像の幅です。</div> <div lang=\"en\">Width of the image.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WIDTH)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -144,8 +137,7 @@ public class PlacementUrlIdeaServiceAdFormat {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像の高さです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Height of the image.&lt;/div&gt; 
    * @return height
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">画像の高さです。</div> <div lang=\"en\">Height of the image.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_HEIGHT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,7 +151,6 @@ public class PlacementUrlIdeaServiceAdFormat {
   public void setHeight(Long height) {
     this.height = height;
   }
-
 
   @Override
   public boolean equals(Object o) {

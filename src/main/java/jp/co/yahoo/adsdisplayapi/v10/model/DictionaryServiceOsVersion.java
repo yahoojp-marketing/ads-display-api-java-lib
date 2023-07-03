@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceDeviceOsType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceOsVersionオブジェクトは、OSバージョンを保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceOsVersion object contains OS version.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceOsVersionオブジェクトは、OSバージョンを保持します。</div> <div lang=\"en\">DictionaryServiceOsVersion object contains OS version.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceOsVersion.JSON_PROPERTY_DEVICE_OS_TYPE,
   DictionaryServiceOsVersion.JSON_PROPERTY_VERSION
 })
-@JsonTypeName("DictionaryServiceOsVersion")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceOsVersion {
   public static final String JSON_PROPERTY_DEVICE_OS_TYPE = "deviceOsType";
   private DictionaryServiceDeviceOsType deviceOsType;
@@ -43,7 +39,7 @@ public class DictionaryServiceOsVersion {
   public static final String JSON_PROPERTY_VERSION = "version";
   private String version;
 
-  public DictionaryServiceOsVersion() { 
+  public DictionaryServiceOsVersion() {
   }
 
   public DictionaryServiceOsVersion deviceOsType(DictionaryServiceDeviceOsType deviceOsType) {
@@ -56,8 +52,7 @@ public class DictionaryServiceOsVersion {
    * Get deviceOsType
    * @return deviceOsType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_OS_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class DictionaryServiceOsVersion {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;OSバージョンです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;OS Version&lt;/div&gt; 
    * @return version
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">OSバージョンです。</div> <div lang=\"en\">OS Version</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class DictionaryServiceOsVersion {
   public void setVersion(String version) {
     this.version = version;
   }
-
 
   @Override
   public boolean equals(Object o) {

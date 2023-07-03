@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.ConversionTrackerServiceAdvancedMatchingEnabled;
 import jp.co.yahoo.adsdisplayapi.v10.model.ConversionTrackerServiceAppConversion;
 import jp.co.yahoo.adsdisplayapi.v10.model.ConversionTrackerServiceCategory;
@@ -37,7 +35,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker object shows ConversionTracker settings such as ConversionTag and performance data by tag.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョン設定を表します。</div> <div lang=\"en\">ConversionTracker object shows ConversionTracker settings such as ConversionTag and performance data by tag.</div> ")
 @JsonPropertyOrder({
   ConversionTracker.JSON_PROPERTY_ACCOUNT_ID,
   ConversionTracker.JSON_PROPERTY_ALL_CONVERSION_VALUE,
@@ -64,8 +61,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTracker.JSON_PROPERTY_IS_PREVIOUS_CONVERSION,
   ConversionTracker.JSON_PROPERTY_ADVANCED_MATCHING_ENABLED
 })
-@JsonTypeName("ConversionTracker")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTracker {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -139,7 +135,7 @@ public class ConversionTracker {
   public static final String JSON_PROPERTY_ADVANCED_MATCHING_ENABLED = "advancedMatchingEnabled";
   private ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled;
 
-  public ConversionTracker() { 
+  public ConversionTracker() {
   }
 
   public ConversionTracker accountId(Long accountId) {
@@ -152,8 +148,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -179,8 +174,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの価値（全て）です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conv. value (all). &lt;/div&gt; 
    * @return allConversionValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの価値（全て）です。 </div> <div lang=\"en\"> Conv. value (all). </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONVERSION_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -206,8 +200,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョン数（全て）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversions (all).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return allConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン数（全て）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversions (all).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ALL_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -233,8 +226,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビュースルーコンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;View through conversions&lt;/div&gt; 
    * @return viewThroughConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ビュースルーコンバージョン数</div> <div lang=\"en\">View through conversions</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VIEW_THROUGH_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -260,8 +252,7 @@ public class ConversionTracker {
    * Get appConversion
    * @return appConversion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_CONVERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -287,8 +278,7 @@ public class ConversionTracker {
    * Get category
    * @return category
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -314,8 +304,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカーIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SET時は必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion Tracker ID.&lt;br&gt; This field will be ignored in ADD operation, and will be required in SET operation. &lt;/div&gt; 
    * @return conversionTrackerId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョントラッカーIDです。<br> このフィールドは、ADD時は無視され、SET時は必須となります。 </div> <div lang=\"en\"> Conversion Tracker ID.<br> This field will be ignored in ADD operation, and will be required in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -341,8 +330,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカー名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion Tracker Name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return conversionTrackerName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョントラッカー名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Conversion Tracker Name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -368,8 +356,7 @@ public class ConversionTracker {
    * Get conversionTrackerType
    * @return conversionTrackerType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -395,8 +382,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの価値/コンバージョン数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conv. value/conv.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの価値/コンバージョン数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conv. value/conv.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -422,8 +408,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの価値（クリック経由）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conv. value (via click).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionValueViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの価値（クリック経由）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conv. value (via click).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -449,8 +434,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョン数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversions.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversions.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -476,8 +460,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョン数（クリック経由）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversions (via click).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionsViaAdClick
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョン数（クリック経由）です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Conversions (via click).<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -503,8 +486,7 @@ public class ConversionTracker {
    * Get countingType
    * @return countingType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COUNTING_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -530,8 +512,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; クロスデバイスコンバージョン数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Cross-device conv.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return crossDeviceConversions
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> クロスデバイスコンバージョン数です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Cross-device conv.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -557,8 +538,7 @@ public class ConversionTracker {
    * Get excludeFromBidding
    * @return excludeFromBidding
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDING)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -584,8 +564,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 計測期間（単位：日）です。&lt;br&gt; ※7～90の範囲内で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は30となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (Unit: Day).&lt;br&gt; ∗ Can be specified within the range of 7 to 90 days.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 30. &lt;/div&gt; 
    * @return measurementPeriod
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 計測期間（単位：日）です。<br> ※7～90の範囲内で指定可能です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は30となります。 </div> <div lang=\"en\"> Counting period (Unit: Day).<br> ∗ Can be specified within the range of 7 to 90 days.<br> This field is optional in requests. The default value in ADD operation will be 30. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -611,8 +590,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 測定期間（動画視聴）&lt;br&gt; ※1-30の範囲で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は3となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (Video view).&lt;br&gt; ∗ Can be specified within the range of 1 to 30.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 3. &lt;/div&gt; 
    * @return measurementPeriodView
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 測定期間（動画視聴）<br> ※1-30の範囲で指定可能です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は3となります。 </div> <div lang=\"en\"> Counting period (Video view).<br> ∗ Can be specified within the range of 1 to 30.<br> This field is optional in requests. The default value in ADD operation will be 3. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -638,8 +616,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンが発生した直近の日付です。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date of the most recent conversion.&lt;br&gt; ∗ Format: YYYYMMDD.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return mostRecentConversionDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンが発生した直近の日付です。<br> ※YYYYMMDD形式です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The date of the most recent conversion.<br> ∗ Format: YYYYMMDD.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -665,8 +642,7 @@ public class ConversionTracker {
    * Get status
    * @return status
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -692,8 +668,7 @@ public class ConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの収益値です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Revenue value for Conversions.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 0. &lt;/div&gt; 
    * @return userRevenueValue
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョンの収益値です。<br> このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は0となります。 </div> <div lang=\"en\"> Revenue value for Conversions.<br> This field is optional in requests. The default value in ADD operation will be 0. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_REVENUE_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -719,8 +694,7 @@ public class ConversionTracker {
    * Get webConversion
    * @return webConversion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_WEB_CONVERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -746,8 +720,7 @@ public class ConversionTracker {
    * Get isPreviousConversion
    * @return isPreviousConversion
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_PREVIOUS_CONVERSION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -773,8 +746,7 @@ public class ConversionTracker {
    * Get advancedMatchingEnabled
    * @return advancedMatchingEnabled
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ADVANCED_MATCHING_ENABLED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -788,7 +760,6 @@ public class ConversionTracker {
   public void setAdvancedMatchingEnabled(ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled) {
     this.advancedMatchingEnabled = advancedMatchingEnabled;
   }
-
 
   @Override
   public boolean equals(Object o) {

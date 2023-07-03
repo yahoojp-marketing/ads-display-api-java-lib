@@ -20,22 +20,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAudienceCategoryTarget object contains configuration information of Audience Category targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">StatsServiceAudienceCategoryTargetオブジェクトは、オーディエンスカテゴリターゲットの設定情報を保持します。</div> <div lang=\"en\">StatsServiceAudienceCategoryTarget object contains configuration information of Audience Category targeting.</div> ")
 @JsonPropertyOrder({
   StatsServiceAudienceCategoryTarget.JSON_PROPERTY_AUDIENCE_CATEGORY_TYPE,
   StatsServiceAudienceCategoryTarget.JSON_PROPERTY_CATEGORY_NAME_EN,
   StatsServiceAudienceCategoryTarget.JSON_PROPERTY_CATEGORY_NAME_JA
 })
-@JsonTypeName("StatsServiceAudienceCategoryTarget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class StatsServiceAudienceCategoryTarget {
   public static final String JSON_PROPERTY_AUDIENCE_CATEGORY_TYPE = "audienceCategoryType";
   private String audienceCategoryType;
@@ -46,7 +42,7 @@ public class StatsServiceAudienceCategoryTarget {
   public static final String JSON_PROPERTY_CATEGORY_NAME_JA = "categoryNameJa";
   private String categoryNameJa;
 
-  public StatsServiceAudienceCategoryTarget() { 
+  public StatsServiceAudienceCategoryTarget() {
   }
 
   public StatsServiceAudienceCategoryTarget audienceCategoryType(String audienceCategoryType) {
@@ -59,8 +55,7 @@ public class StatsServiceAudienceCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 提供されるカテゴリの種別を表します。&lt;br&gt; *返却される値の詳細については、DictionaryServiceで取得されるDictionaryServiceAudienceCategoryオブジェクトのaudienceCategoryTypeフィールドをご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience category information.&lt;br&gt; *For details of the returned value, refer to the audienceCategoryType field of DictionaryServiceAudienceCategory object obtained via DictionaryService. &lt;/div&gt; 
    * @return audienceCategoryType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 提供されるカテゴリの種別を表します。<br> *返却される値の詳細については、DictionaryServiceで取得されるDictionaryServiceAudienceCategoryオブジェクトのaudienceCategoryTypeフィールドをご参照ください。 </div> <div lang=\"en\"> Audience category information.<br> *For details of the returned value, refer to the audienceCategoryType field of DictionaryServiceAudienceCategory object obtained via DictionaryService. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AUDIENCE_CATEGORY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -86,8 +81,7 @@ public class StatsServiceAudienceCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カテゴリ名（英語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Category name (English)&lt;/div&gt; 
    * @return categoryNameEn
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（英語）です。</div> <div lang=\"en\">Category name (English)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_NAME_EN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -113,8 +107,7 @@ public class StatsServiceAudienceCategoryTarget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カテゴリ名（日本語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Category name (Japanese)&lt;/div&gt; 
    * @return categoryNameJa
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">カテゴリ名（日本語）です。</div> <div lang=\"en\">Category name (Japanese)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CATEGORY_NAME_JA)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -128,7 +121,6 @@ public class StatsServiceAudienceCategoryTarget {
   public void setCategoryNameJa(String categoryNameJa) {
     this.categoryNameJa = categoryNameJa;
   }
-
 
   @Override
   public boolean equals(Object o) {

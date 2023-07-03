@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.RecommendationServiceInsufficientVideoViewsCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceInsufficientVideoViewsオブジェクトは、動画再生数が少ないキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceInsufficientVideoViews objects describes recommendation information about the campaign that need to increase video views&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceInsufficientVideoViewsオブジェクトは、動画再生数が少ないキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceInsufficientVideoViews objects describes recommendation information about the campaign that need to increase video views</div> ")
 @JsonPropertyOrder({
   RecommendationServiceInsufficientVideoViews.JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceInsufficientVideoViews")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceInsufficientVideoViews {
   public static final String JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST = "insufficientVideoViewsCampaignList";
-  private List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList = null;
+  private List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList;
 
-  public RecommendationServiceInsufficientVideoViews() { 
+  public RecommendationServiceInsufficientVideoViews() {
   }
 
   public RecommendationServiceInsufficientVideoViews insufficientVideoViewsCampaignList(List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceInsufficientVideoViews {
    * Get insufficientVideoViewsCampaignList
    * @return insufficientVideoViewsCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceInsufficientVideoViews {
   public void setInsufficientVideoViewsCampaignList(List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList) {
     this.insufficientVideoViewsCampaignList = insufficientVideoViewsCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

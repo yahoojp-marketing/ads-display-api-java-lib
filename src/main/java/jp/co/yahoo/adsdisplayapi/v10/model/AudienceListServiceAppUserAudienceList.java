@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.AudienceListServiceAppLink;
@@ -34,7 +32,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceAppUserAudienceListオブジェクトは、アプリユーザー情報を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceAppUserAudienceList object describes audience list (app users data.)&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AudienceListServiceAppUserAudienceListオブジェクトは、アプリユーザー情報を表します。<br> </div> <div lang=\"en\"> AudienceListServiceAppUserAudienceList object describes audience list (app users data.)<br> </div> ")
 @JsonPropertyOrder({
   AudienceListServiceAppUserAudienceList.JSON_PROPERTY_IS_OPEN,
   AudienceListServiceAppUserAudienceList.JSON_PROPERTY_IS_PRESET,
@@ -42,8 +39,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAppUserAudienceList.JSON_PROPERTY_RULES,
   AudienceListServiceAppUserAudienceList.JSON_PROPERTY_APP_LINK
 })
-@JsonTypeName("AudienceListServiceAppUserAudienceList")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceAppUserAudienceList {
   public static final String JSON_PROPERTY_IS_OPEN = "isOpen";
   private AudienceListServiceIsOpen isOpen;
@@ -55,12 +51,12 @@ public class AudienceListServiceAppUserAudienceList {
   private Integer reachPeriod;
 
   public static final String JSON_PROPERTY_RULES = "rules";
-  private List<AudienceListServiceRule> rules = null;
+  private List<AudienceListServiceRule> rules;
 
   public static final String JSON_PROPERTY_APP_LINK = "appLink";
   private AudienceListServiceAppLink appLink;
 
-  public AudienceListServiceAppUserAudienceList() { 
+  public AudienceListServiceAppUserAudienceList() {
   }
 
   public AudienceListServiceAppUserAudienceList isOpen(AudienceListServiceIsOpen isOpen) {
@@ -73,8 +69,7 @@ public class AudienceListServiceAppUserAudienceList {
    * Get isOpen
    * @return isOpen
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_OPEN)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -100,8 +95,7 @@ public class AudienceListServiceAppUserAudienceList {
    * Get isPreset
    * @return isPreset
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_PRESET)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -127,8 +121,7 @@ public class AudienceListServiceAppUserAudienceList {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リーチの蓄積期間（1日～540日）です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Cookies validation period. (1 - 540 days) &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return reachPeriod
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リーチの蓄積期間（1日～540日）です。<br> このフィールドは、ADD時に必須となり、SET時に省略可能となります。 </div> <div lang=\"en\"> Cookies validation period. (1 - 540 days) <br> This field is required in ADD operation, and is optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REACH_PERIOD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -162,8 +155,7 @@ public class AudienceListServiceAppUserAudienceList {
    * Get rules
    * @return rules
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RULES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -189,8 +181,7 @@ public class AudienceListServiceAppUserAudienceList {
    * Get appLink
    * @return appLink
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APP_LINK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -204,7 +195,6 @@ public class AudienceListServiceAppUserAudienceList {
   public void setAppLink(AudienceListServiceAppLink appLink) {
     this.appLink = appLink;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.VideoServiceUploadValue;
@@ -34,13 +32,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   VideoServiceUploadReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("VideoServiceUploadReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class VideoServiceUploadReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<VideoServiceUploadValue> values = null;
+  private List<VideoServiceUploadValue> values;
 
-  public VideoServiceUploadReturnValue() { 
+  public VideoServiceUploadReturnValue() {
   }
 
   public VideoServiceUploadReturnValue values(List<VideoServiceUploadValue> values) {
@@ -61,8 +58,7 @@ public class VideoServiceUploadReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -76,7 +72,6 @@ public class VideoServiceUploadReturnValue {
   public void setValues(List<VideoServiceUploadValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

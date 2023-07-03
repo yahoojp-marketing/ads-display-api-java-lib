@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceReturnValueオブジェクトは、操作結果を含むFeed情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceReturnValue object contains Feed information including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedServiceReturnValueオブジェクトは、操作結果を含むFeed情報を保持します。</div> <div lang=\"en\">FeedServiceReturnValue object contains Feed information including operation result.</div> ")
 @JsonPropertyOrder({
   FeedServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("FeedServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<FeedServiceValue> values = null;
+  private List<FeedServiceValue> values;
 
-  public FeedServiceReturnValue() { 
+  public FeedServiceReturnValue() {
   }
 
   public FeedServiceReturnValue values(List<FeedServiceValue> values) {
@@ -62,8 +58,7 @@ public class FeedServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class FeedServiceReturnValue {
   public void setValues(List<FeedServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

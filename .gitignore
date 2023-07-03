@@ -3,6 +3,7 @@ target/
 logs/
 jdbc.properties
 .DS_Store
+openapitools.json
 
 ### STS ###
 .apt_generated

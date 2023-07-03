@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServiceAdFormatConditionsオブジェクトは、広告掲載フォーマットの情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;PlacementUrlIdeaServiceAdFormatConditions stores Ad Distribution format information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaServiceAdFormatConditionsオブジェクトは、広告掲載フォーマットの情報を保持するオブジェクトです。</div> <div lang=\"en\">PlacementUrlIdeaServiceAdFormatConditions stores Ad Distribution format information.</div> ")
 @JsonPropertyOrder({
   PlacementUrlIdeaServiceAdFormatConditions.JSON_PROPERTY_AD_STYLE,
   PlacementUrlIdeaServiceAdFormatConditions.JSON_PROPERTY_MEDIA_AD_FORMAT
 })
-@JsonTypeName("PlacementUrlIdeaServiceAdFormatConditions")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlIdeaServiceAdFormatConditions {
   public static final String JSON_PROPERTY_AD_STYLE = "adStyle";
   private String adStyle;
@@ -42,7 +38,7 @@ public class PlacementUrlIdeaServiceAdFormatConditions {
   public static final String JSON_PROPERTY_MEDIA_AD_FORMAT = "mediaAdFormat";
   private String mediaAdFormat;
 
-  public PlacementUrlIdeaServiceAdFormatConditions() { 
+  public PlacementUrlIdeaServiceAdFormatConditions() {
   }
 
   public PlacementUrlIdeaServiceAdFormatConditions adStyle(String adStyle) {
@@ -55,8 +51,7 @@ public class PlacementUrlIdeaServiceAdFormatConditions {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告スタイルです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad style.&lt;/div&gt; 
    * @return adStyle
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">広告スタイルです。</div> <div lang=\"en\">Ad style.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_STYLE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class PlacementUrlIdeaServiceAdFormatConditions {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディアフォーマットです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media format.&lt;/div&gt; 
    * @return mediaAdFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">メディアフォーマットです。</div> <div lang=\"en\">Media format.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_MEDIA_AD_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class PlacementUrlIdeaServiceAdFormatConditions {
   public void setMediaAdFormat(String mediaAdFormat) {
     this.mediaAdFormat = mediaAdFormat;
   }
-
 
   @Override
   public boolean equals(Object o) {

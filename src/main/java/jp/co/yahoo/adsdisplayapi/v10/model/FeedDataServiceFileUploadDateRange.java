@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FileUploadDataRangeオブジェクトは、アップロードした日付を範囲指定する情報を保持する&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FileUploadDataRange object retains specific term of file upload date information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FileUploadDataRangeオブジェクトは、アップロードした日付を範囲指定する情報を保持する</div> <div lang=\"en\">FileUploadDataRange object retains specific term of file upload date information.</div> ")
 @JsonPropertyOrder({
   FeedDataServiceFileUploadDateRange.JSON_PROPERTY_END_DATE,
   FeedDataServiceFileUploadDateRange.JSON_PROPERTY_START_DATE
 })
-@JsonTypeName("FeedDataServiceFileUploadDateRange")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedDataServiceFileUploadDateRange {
   public static final String JSON_PROPERTY_END_DATE = "endDate";
   private String endDate;
@@ -42,7 +38,7 @@ public class FeedDataServiceFileUploadDateRange {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
   private String startDate;
 
-  public FeedDataServiceFileUploadDateRange() { 
+  public FeedDataServiceFileUploadDateRange() {
   }
 
   public FeedDataServiceFileUploadDateRange endDate(String endDate) {
@@ -55,8 +51,7 @@ public class FeedDataServiceFileUploadDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了日 yyyyMMdd形式&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End Date.&lt;br&gt;Format: yyyyMMdd&lt;/div&gt; 
    * @return endDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">終了日 yyyyMMdd形式</div> <div lang=\"en\">End Date.<br>Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class FeedDataServiceFileUploadDateRange {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始日 yyyyMMdd形式&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start date.&lt;br&gt;Format: yyyyMMdd&lt;/div&gt; 
    * @return startDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">開始日 yyyyMMdd形式</div> <div lang=\"en\">Start date.<br>Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class FeedDataServiceFileUploadDateRange {
   public void setStartDate(String startDate) {
     this.startDate = startDate;
   }
-
 
   @Override
   public boolean equals(Object o) {

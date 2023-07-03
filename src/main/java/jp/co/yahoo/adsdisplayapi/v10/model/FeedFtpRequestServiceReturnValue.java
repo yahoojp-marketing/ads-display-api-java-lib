@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.FeedFtpRequestServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpRequestServiceReturnValueオブジェクトは、操作結果を含む即時アップロードリクエスト情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpRequestServiceReturnValue object contains Upload (Upload now) request information including operation result.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedFtpRequestServiceReturnValueオブジェクトは、操作結果を含む即時アップロードリクエスト情報を保持します。</div> <div lang=\"en\">FeedFtpRequestServiceReturnValue object contains Upload (Upload now) request information including operation result.</div> ")
 @JsonPropertyOrder({
   FeedFtpRequestServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("FeedFtpRequestServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpRequestServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<FeedFtpRequestServiceValue> values = null;
+  private List<FeedFtpRequestServiceValue> values;
 
-  public FeedFtpRequestServiceReturnValue() { 
+  public FeedFtpRequestServiceReturnValue() {
   }
 
   public FeedFtpRequestServiceReturnValue values(List<FeedFtpRequestServiceValue> values) {
@@ -62,8 +58,7 @@ public class FeedFtpRequestServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class FeedFtpRequestServiceReturnValue {
   public void setValues(List<FeedFtpRequestServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

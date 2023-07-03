@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.RecommendationServiceInsufficientClicksCampaign;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceInsufficientClicksオブジェクトは、クリック数が少ないキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceInsufficientClicks objects describes recommendation information about the campaign that need to increase clicks.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">RecommendationServiceInsufficientClicksオブジェクトは、クリック数が少ないキャンペーンに関する最適化提案の情報を表します。</div> <div lang=\"en\">RecommendationServiceInsufficientClicks objects describes recommendation information about the campaign that need to increase clicks.</div> ")
 @JsonPropertyOrder({
   RecommendationServiceInsufficientClicks.JSON_PROPERTY_INSUFFICIENT_CLICKS_CAMPAIGN_LIST
 })
-@JsonTypeName("RecommendationServiceInsufficientClicks")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class RecommendationServiceInsufficientClicks {
   public static final String JSON_PROPERTY_INSUFFICIENT_CLICKS_CAMPAIGN_LIST = "insufficientClicksCampaignList";
-  private List<RecommendationServiceInsufficientClicksCampaign> insufficientClicksCampaignList = null;
+  private List<RecommendationServiceInsufficientClicksCampaign> insufficientClicksCampaignList;
 
-  public RecommendationServiceInsufficientClicks() { 
+  public RecommendationServiceInsufficientClicks() {
   }
 
   public RecommendationServiceInsufficientClicks insufficientClicksCampaignList(List<RecommendationServiceInsufficientClicksCampaign> insufficientClicksCampaignList) {
@@ -62,8 +58,7 @@ public class RecommendationServiceInsufficientClicks {
    * Get insufficientClicksCampaignList
    * @return insufficientClicksCampaignList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CLICKS_CAMPAIGN_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class RecommendationServiceInsufficientClicks {
   public void setInsufficientClicksCampaignList(List<RecommendationServiceInsufficientClicksCampaign> insufficientClicksCampaignList) {
     this.insufficientClicksCampaignList = insufficientClicksCampaignList;
   }
-
 
   @Override
   public boolean equals(Object o) {

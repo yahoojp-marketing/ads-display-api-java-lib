@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.FeedFtpServiceScheduleWeek;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,13 +27,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpServiceScheduleWeeklyオブジェクトは、定期アップロードを何曜日の何時に実行するかを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtpServiceScheduleWeekly object displays what day of the week and what time of the day the Periodic Upload runs.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">FeedFtpServiceScheduleWeeklyオブジェクトは、定期アップロードを何曜日の何時に実行するかを表します。</div> <div lang=\"en\">FeedFtpServiceScheduleWeekly object displays what day of the week and what time of the day the Periodic Upload runs.</div> ")
 @JsonPropertyOrder({
   FeedFtpServiceScheduleWeekly.JSON_PROPERTY_SCHEDULE_WEEK,
   FeedFtpServiceScheduleWeekly.JSON_PROPERTY_TIME
 })
-@JsonTypeName("FeedFtpServiceScheduleWeekly")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpServiceScheduleWeekly {
   public static final String JSON_PROPERTY_SCHEDULE_WEEK = "scheduleWeek";
   private FeedFtpServiceScheduleWeek scheduleWeek;
@@ -43,7 +39,7 @@ public class FeedFtpServiceScheduleWeekly {
   public static final String JSON_PROPERTY_TIME = "time";
   private Integer time;
 
-  public FeedFtpServiceScheduleWeekly() { 
+  public FeedFtpServiceScheduleWeekly() {
   }
 
   public FeedFtpServiceScheduleWeekly scheduleWeek(FeedFtpServiceScheduleWeek scheduleWeek) {
@@ -56,8 +52,7 @@ public class FeedFtpServiceScheduleWeekly {
    * Get scheduleWeek
    * @return scheduleWeek
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULE_WEEK)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -83,8 +78,7 @@ public class FeedFtpServiceScheduleWeekly {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 何時に実行するかを表します。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Execution time.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return time
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 何時に実行するかを表します。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Execution time.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,7 +92,6 @@ public class FeedFtpServiceScheduleWeekly {
   public void setTime(Integer time) {
     this.time = time;
   }
-
 
   @Override
   public boolean equals(Object o) {

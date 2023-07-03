@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.ReportDefinitionServiceDateRange;
@@ -43,7 +41,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionオブジェクトは、レポート定義を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The ReportDefinition object serves report definitions.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ReportDefinitionオブジェクトは、レポート定義を表します。</div> <div lang=\"en\">The ReportDefinition object serves report definitions.</div> ")
 @JsonPropertyOrder({
   ReportDefinition.JSON_PROPERTY_ACCOUNT_ID,
   ReportDefinition.JSON_PROPERTY_COMPLETE_TIME,
@@ -66,8 +63,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinition.JSON_PROPERTY_REPORT_TYPE_CONDITION,
   ReportDefinition.JSON_PROPERTY_SORT_FIELDS
 })
-@JsonTypeName("ReportDefinition")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ReportDefinition {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -79,10 +75,10 @@ public class ReportDefinition {
   private ReportDefinitionServiceDateRange dateRange;
 
   public static final String JSON_PROPERTY_FIELDS = "fields";
-  private List<String> fields = null;
+  private List<String> fields;
 
   public static final String JSON_PROPERTY_FILTERS = "filters";
-  private List<ReportDefinitionServiceFilter> filters = null;
+  private List<ReportDefinitionServiceFilter> filters;
 
   public static final String JSON_PROPERTY_REPORT_COMPRESS_TYPE = "reportCompressType";
   private ReportDefinitionServiceReportCompressType reportCompressType;
@@ -127,9 +123,9 @@ public class ReportDefinition {
   private ReportDefinitionServiceReportTypeCondition reportTypeCondition;
 
   public static final String JSON_PROPERTY_SORT_FIELDS = "sortFields";
-  private List<ReportDefinitionServiceReportSortField> sortFields = null;
+  private List<ReportDefinitionServiceReportSortField> sortFields;
 
-  public ReportDefinition() { 
+  public ReportDefinition() {
   }
 
   public ReportDefinition accountId(Long accountId) {
@@ -142,8 +138,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -169,8 +164,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ジョブ完了日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date and time of Job completion. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return completeTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ジョブ完了日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The date and time of Job completion. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_COMPLETE_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -196,8 +190,7 @@ public class ReportDefinition {
    * Get dateRange
    * @return dateRange
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DATE_RANGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -231,8 +224,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 表示項目です。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;br&gt; 指定可能な値は、ReportDefinitionServiceのgetReportFieldsで取得されるfieldNameをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Select the fields. &lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;br&gt; * Available values can be referred to fieldName field of fields object obtained by getReportFields operation of ReportDefinitionService. &lt;/div&gt; 
    * @return fields
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 表示項目です。<br> このフィールドは、ADD時に必須となり、REMOVE時に無視されます。<br> 指定可能な値は、ReportDefinitionServiceのgetReportFieldsで取得されるfieldNameをご確認ください。 </div> <div lang=\"en\"> Select the fields. <br> This field is required in ADD operation, and will be ignored in REMOVE operation.<br> * Available values can be referred to fieldName field of fields object obtained by getReportFields operation of ReportDefinitionService. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -266,8 +258,7 @@ public class ReportDefinition {
    * Get filters
    * @return filters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_FILTERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -293,8 +284,7 @@ public class ReportDefinition {
    * Get reportCompressType
    * @return reportCompressType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_COMPRESS_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -320,8 +310,7 @@ public class ReportDefinition {
    * Get reportDateRangeType
    * @return reportDateRangeType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_DATE_RANGE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -347,8 +336,7 @@ public class ReportDefinition {
    * Get reportDownloadEncode
    * @return reportDownloadEncode
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_DOWNLOAD_ENCODE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -374,8 +362,7 @@ public class ReportDefinition {
    * Get reportDownloadFormat
    * @return reportDownloadFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_DOWNLOAD_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -401,8 +388,7 @@ public class ReportDefinition {
    * Get reportJobStatus
    * @return reportJobStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_JOB_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -428,8 +414,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ジョブエラー詳細です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; 「Over limit of file size.」が返される場合は、レポートのサイズが小さくなるようにレポート作成時の条件を変更してください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Job Error Detail. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; If the message \&quot;Over limit of file size.\&quot; is returned, change the report creation conditions to reduce the size of the report. &lt;/div&gt; 
    * @return reportJobErrorDetail
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ジョブエラー詳細です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> 「Over limit of file size.」が返される場合は、レポートのサイズが小さくなるようにレポート作成時の条件を変更してください。 </div> <div lang=\"en\"> Job Error Detail. <br> Although this field will be returned in the response, it will be ignored on input.<br> If the message \"Over limit of file size.\" is returned, change the report creation conditions to reduce the size of the report. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_JOB_ERROR_DETAIL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -455,8 +440,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; レポートジョブIDです。&lt;br&gt; このフィールドは、REMOVE時に必須となり、ADD時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Report Job Id. &lt;br&gt; This field is required in REMOVE operation, and will be ignored in ADD operation. &lt;/div&gt; 
    * @return reportJobId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> レポートジョブIDです。<br> このフィールドは、REMOVE時に必須となり、ADD時に無視されます。 </div> <div lang=\"en\"> Report Job Id. <br> This field is required in REMOVE operation, and will be ignored in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_JOB_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -482,8 +466,7 @@ public class ReportDefinition {
    * Get reportLanguage
    * @return reportLanguage
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_LANGUAGE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -509,8 +492,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; レポート名です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Report name. &lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return reportName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> レポート名です。<br> このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 </div> <div lang=\"en\"> Report name. <br> This field is optional in ADD operation, and will be ignored in REMOVE operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -536,8 +518,7 @@ public class ReportDefinition {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ジョブ依頼日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date and time of Job request. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return requestTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> ジョブ依頼日時です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> The date and time of Job request. <br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REQUEST_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -563,8 +544,7 @@ public class ReportDefinition {
    * Get reportSkipColumnHeader
    * @return reportSkipColumnHeader
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_SKIP_COLUMN_HEADER)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -590,8 +570,7 @@ public class ReportDefinition {
    * Get reportSkipReportSummary
    * @return reportSkipReportSummary
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_SKIP_REPORT_SUMMARY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -617,8 +596,7 @@ public class ReportDefinition {
    * Get reportDecimalPartDisplayType
    * @return reportDecimalPartDisplayType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_DECIMAL_PART_DISPLAY_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -644,8 +622,7 @@ public class ReportDefinition {
    * Get reportTypeCondition
    * @return reportTypeCondition
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_REPORT_TYPE_CONDITION)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -679,8 +656,7 @@ public class ReportDefinition {
    * Get sortFields
    * @return sortFields
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SORT_FIELDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -694,7 +670,6 @@ public class ReportDefinition {
   public void setSortFields(List<ReportDefinitionServiceReportSortField> sortFields) {
     this.sortFields = sortFields;
   }
-
 
   @Override
   public boolean equals(Object o) {

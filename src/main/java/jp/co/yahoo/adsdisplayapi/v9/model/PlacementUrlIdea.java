@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.PlacementUrlIdeaServiceAdFormat;
@@ -31,7 +29,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;An object that holds the placement Url information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">PlacementUrlIdeaオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。</div> <div lang=\"en\">An object that holds the placement Url information.</div> ")
 @JsonPropertyOrder({
   PlacementUrlIdea.JSON_PROPERTY_KEYWORD,
   PlacementUrlIdea.JSON_PROPERTY_SITE_CATEGORY,
@@ -44,20 +41,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlacementUrlIdea.JSON_PROPERTY_TABLET_REACHES,
   PlacementUrlIdea.JSON_PROPERTY_TABLET_AD_REQUESTS
 })
-@JsonTypeName("PlacementUrlIdea")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class PlacementUrlIdea {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
   private String keyword;
 
   public static final String JSON_PROPERTY_SITE_CATEGORY = "siteCategory";
-  private List<String> siteCategory = null;
+  private List<String> siteCategory;
 
   public static final String JSON_PROPERTY_SEARCH_URL = "searchUrl";
   private String searchUrl;
 
   public static final String JSON_PROPERTY_AD_FORMAT = "adFormat";
-  private List<PlacementUrlIdeaServiceAdFormat> adFormat = null;
+  private List<PlacementUrlIdeaServiceAdFormat> adFormat;
 
   public static final String JSON_PROPERTY_DESKTOP_REACHES = "desktopReaches";
   private Long desktopReaches;
@@ -77,7 +73,7 @@ public class PlacementUrlIdea {
   public static final String JSON_PROPERTY_TABLET_AD_REQUESTS = "tabletAdRequests";
   private Long tabletAdRequests;
 
-  public PlacementUrlIdea() { 
+  public PlacementUrlIdea() {
   }
 
   public PlacementUrlIdea keyword(String keyword) {
@@ -90,8 +86,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Keyword&lt;/div&gt; 
    * @return keyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索キーワードです。</div> <div lang=\"en\">Search Keyword</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +120,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索カテゴリです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Category&lt;/div&gt; 
    * @return siteCategory
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索カテゴリです。</div> <div lang=\"en\">Search Category</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SITE_CATEGORY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -152,8 +146,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 取得URLです。&lt;br&gt; 不明なURLの場合　UNKNOWN_URLが入ります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;URL&lt;/div&gt; 
    * @return searchUrl
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 取得URLです。<br> 不明なURLの場合　UNKNOWN_URLが入ります。 </div> <div lang=\"en\">URL</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_URL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -187,8 +180,7 @@ public class PlacementUrlIdea {
    * Get adFormat
    * @return adFormat
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_FORMAT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -214,8 +206,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PC でのリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reach Number of PC(1000 In the case of 0)&lt;/div&gt; 
    * @return desktopReaches
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> PC でのリーチ数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">Reach Number of PC(1000 In the case of 0)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESKTOP_REACHES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -241,8 +232,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PC でのADリクエスト数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AD Number of PC(1000 In the case of 0)&lt;/div&gt; 
    * @return desktopAdRequests
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> PC でのADリクエスト数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">AD Number of PC(1000 In the case of 0)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESKTOP_AD_REQUESTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -268,8 +258,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; SmartPhone でのリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reach Number of SmartPhone (1000 In the case of 0)&lt;/div&gt; 
    * @return smartPhoneReaches
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> SmartPhone でのリーチ数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">Reach Number of SmartPhone (1000 In the case of 0)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMART_PHONE_REACHES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -295,8 +284,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; SmartPhone でのADリクエスト数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AD Number of SmartPhone(1000 In the case of 0)&lt;/div&gt; 
    * @return smartPhoneAdRequests
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> SmartPhone でのADリクエスト数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">AD Number of SmartPhone(1000 In the case of 0)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMART_PHONE_AD_REQUESTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -322,8 +310,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; Tablet でのリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tablet(1000 In the case of 0)&lt;/div&gt; 
    * @return tabletReaches
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> Tablet でのリーチ数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">Tablet(1000 In the case of 0)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TABLET_REACHES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -349,8 +336,7 @@ public class PlacementUrlIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; TabletでのADリクエスト数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AD Number of Tablet (1000 In the case of 0)&lt;/div&gt; 
    * @return tabletAdRequests
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> TabletでのADリクエスト数です。<br> ・1000未満の時は0が取得されます。 </div> <div lang=\"en\">AD Number of Tablet (1000 In the case of 0)</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TABLET_AD_REQUESTS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -364,7 +350,6 @@ public class PlacementUrlIdea {
   public void setTabletAdRequests(Long tabletAdRequests) {
     this.tabletAdRequests = tabletAdRequests;
   }
-
 
   @Override
   public boolean equals(Object o) {

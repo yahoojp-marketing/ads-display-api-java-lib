@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePeriodDatetimeオブジェクトは、統計情報の処理を開始/完了した日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePeriodDatetime object describes date and time when stats information processing started or completed.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">ConversionTrackerServicePeriodDatetimeオブジェクトは、統計情報の処理を開始/完了した日時です。</div> <div lang=\"en\">ConversionTrackerServicePeriodDatetime object describes date and time when stats information processing started or completed.</div> ")
 @JsonPropertyOrder({
   ConversionTrackerServicePeriodDatetime.JSON_PROPERTY_PERIOD_DATE,
   ConversionTrackerServicePeriodDatetime.JSON_PROPERTY_PERIOD_TIME
 })
-@JsonTypeName("ConversionTrackerServicePeriodDatetime")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class ConversionTrackerServicePeriodDatetime {
   public static final String JSON_PROPERTY_PERIOD_DATE = "periodDate";
   private String periodDate;
@@ -42,7 +38,7 @@ public class ConversionTrackerServicePeriodDatetime {
   public static final String JSON_PROPERTY_PERIOD_TIME = "periodTime";
   private String periodTime;
 
-  public ConversionTrackerServicePeriodDatetime() { 
+  public ConversionTrackerServicePeriodDatetime() {
   }
 
   public ConversionTrackerServicePeriodDatetime periodDate(String periodDate) {
@@ -55,8 +51,7 @@ public class ConversionTrackerServicePeriodDatetime {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;日です。&lt;br&gt;※yyyyMMdd形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date.&lt;br&gt;∗ Format: yyyyMMdd&lt;/div&gt; 
    * @return periodDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">日です。<br>※yyyyMMdd形式です。</div> <div lang=\"en\">Date.<br>∗ Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class ConversionTrackerServicePeriodDatetime {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;時分です。&lt;br&gt;※HHmmss形式です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Hours and minutes.&lt;br&gt;∗ Format: HHmmss&lt;/div&gt; 
    * @return periodTime
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">時分です。<br>※HHmmss形式です。</div> <div lang=\"en\">Hours and minutes.<br>∗ Format: HHmmss</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PERIOD_TIME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class ConversionTrackerServicePeriodDatetime {
   public void setPeriodTime(String periodTime) {
     this.periodTime = periodTime;
   }
-
 
   @Override
   public boolean equals(Object o) {

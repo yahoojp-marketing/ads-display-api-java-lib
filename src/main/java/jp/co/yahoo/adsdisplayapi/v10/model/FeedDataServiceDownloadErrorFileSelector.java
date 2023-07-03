@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品情報のエラーファイルダウンロード処理を実施します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceDownloadErrorFileSelector object retains search condition of downloadErrorFile operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">商品情報のエラーファイルダウンロード処理を実施します。</div> <div lang=\"en\">FeedDataServiceDownloadErrorFileSelector object retains search condition of downloadErrorFile operation.</div> ")
 @JsonPropertyOrder({
   FeedDataServiceDownloadErrorFileSelector.JSON_PROPERTY_ACCOUNT_ID,
   FeedDataServiceDownloadErrorFileSelector.JSON_PROPERTY_ITEM_LIST_UPLOAD_ID
 })
-@JsonTypeName("FeedDataServiceDownloadErrorFileSelector")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedDataServiceDownloadErrorFileSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -42,7 +38,7 @@ public class FeedDataServiceDownloadErrorFileSelector {
   public static final String JSON_PROPERTY_ITEM_LIST_UPLOAD_ID = "itemListUploadId";
   private Long itemListUploadId;
 
-  public FeedDataServiceDownloadErrorFileSelector() { 
+  public FeedDataServiceDownloadErrorFileSelector() {
   }
 
   public FeedDataServiceDownloadErrorFileSelector accountId(Long accountId) {
@@ -55,8 +51,7 @@ public class FeedDataServiceDownloadErrorFileSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アカウントIDです。</div> <div lang=\"en\">Search condition: Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,8 +77,7 @@ public class FeedDataServiceDownloadErrorFileSelector {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アップロードした商品情報を識別するID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Uploaded item list ID.&lt;/div&gt; 
    * @return itemListUploadId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">検索条件：アップロードした商品情報を識別するID</div> <div lang=\"en\">Search condition: Uploaded item list ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -97,7 +91,6 @@ public class FeedDataServiceDownloadErrorFileSelector {
   public void setItemListUploadId(Long itemListUploadId) {
     this.itemListUploadId = itemListUploadId;
   }
-
 
   @Override
   public boolean equals(Object o) {

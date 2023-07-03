@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceCustomParameterは、カスタムパラメータの内容を表します。&lt;br&gt;ADD時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AdGroupAdServiceCustomParameter displays the element of custom parameters.&lt;br&gt;This field is required in ADD operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceCustomParameterは、カスタムパラメータの内容を表します。<br>ADD時、このフィールドは必須となります。</div> <div lang=\"en\">AdGroupAdServiceCustomParameter displays the element of custom parameters.<br>This field is required in ADD operation.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceCustomParameter.JSON_PROPERTY_KEY,
   AdGroupAdServiceCustomParameter.JSON_PROPERTY_VALUE
 })
-@JsonTypeName("AdGroupAdServiceCustomParameter")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceCustomParameter {
   public static final String JSON_PROPERTY_KEY = "key";
   private String key;
@@ -42,7 +38,7 @@ public class AdGroupAdServiceCustomParameter {
   public static final String JSON_PROPERTY_VALUE = "value";
   private String value;
 
-  public AdGroupAdServiceCustomParameter() { 
+  public AdGroupAdServiceCustomParameter() {
   }
 
   public AdGroupAdServiceCustomParameter key(String key) {
@@ -55,8 +51,7 @@ public class AdGroupAdServiceCustomParameter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キーです。&lt;br&gt;ADDおよびSET時、このフィールドは必須となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Key of parameter.&lt;br&gt;This field is required in ADD and SET operation.&lt;/div&gt; 
    * @return key
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">キーです。<br>ADDおよびSET時、このフィールドは必須となります。</div> <div lang=\"en\">Key of parameter.<br>This field is required in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_KEY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class AdGroupAdServiceCustomParameter {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;値です。&lt;br&gt;ADDおよびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Value of parameter.&lt;br&gt;This field is optional in ADD and SET operation.&lt;/div&gt; 
    * @return value
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">値です。<br>ADDおよびSET時、このフィールドは省略可能となります。</div> <div lang=\"en\">Value of parameter.<br>This field is optional in ADD and SET operation.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class AdGroupAdServiceCustomParameter {
   public void setValue(String value) {
     this.value = value;
   }
-
 
   @Override
   public boolean equals(Object o) {

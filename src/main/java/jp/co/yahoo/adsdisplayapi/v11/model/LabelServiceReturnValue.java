@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.LabelServiceValue;
@@ -31,17 +29,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;LabelServiceReturnValueオブジェクトは、ラベルの情報を含む操作結果として戻される値を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;LabelServiceReturnValue object is the value returned as the operation result including the label information.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">LabelServiceReturnValueオブジェクトは、ラベルの情報を含む操作結果として戻される値を表します。</div> <div lang=\"en\">LabelServiceReturnValue object is the value returned as the operation result including the label information.</div> ")
 @JsonPropertyOrder({
   LabelServiceReturnValue.JSON_PROPERTY_VALUES
 })
-@JsonTypeName("LabelServiceReturnValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class LabelServiceReturnValue {
   public static final String JSON_PROPERTY_VALUES = "values";
-  private List<LabelServiceValue> values = null;
+  private List<LabelServiceValue> values;
 
-  public LabelServiceReturnValue() { 
+  public LabelServiceReturnValue() {
   }
 
   public LabelServiceReturnValue values(List<LabelServiceValue> values) {
@@ -62,8 +58,7 @@ public class LabelServiceReturnValue {
    * Get values
    * @return values
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_VALUES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -77,7 +72,6 @@ public class LabelServiceReturnValue {
   public void setValues(List<LabelServiceValue> values) {
     this.values = values;
   }
-
 
   @Override
   public boolean equals(Object o) {

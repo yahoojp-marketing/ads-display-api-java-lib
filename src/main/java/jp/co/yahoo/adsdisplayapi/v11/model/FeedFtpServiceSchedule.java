@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.FeedFtpServiceScheduleDaily;
 import jp.co.yahoo.adsdisplayapi.v11.model.FeedFtpServiceScheduleHourly;
 import jp.co.yahoo.adsdisplayapi.v11.model.FeedFtpServiceScheduleType;
@@ -32,15 +30,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedFtpServiceScheduleオブジェクトは、定期アップロードのスケジュールを表します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedFtpServiceSchedule object displays Periodic Upload schedule.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> FeedFtpServiceScheduleオブジェクトは、定期アップロードのスケジュールを表します。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> FeedFtpServiceSchedule object displays Periodic Upload schedule.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
 @JsonPropertyOrder({
   FeedFtpServiceSchedule.JSON_PROPERTY_SCHEDULE_DAILY,
   FeedFtpServiceSchedule.JSON_PROPERTY_SCHEDULE_HOURLY,
   FeedFtpServiceSchedule.JSON_PROPERTY_SCHEDULE_TYPE,
   FeedFtpServiceSchedule.JSON_PROPERTY_SCHEDULE_WEEKLY
 })
-@JsonTypeName("FeedFtpServiceSchedule")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class FeedFtpServiceSchedule {
   public static final String JSON_PROPERTY_SCHEDULE_DAILY = "scheduleDaily";
   private FeedFtpServiceScheduleDaily scheduleDaily;
@@ -54,7 +50,7 @@ public class FeedFtpServiceSchedule {
   public static final String JSON_PROPERTY_SCHEDULE_WEEKLY = "scheduleWeekly";
   private FeedFtpServiceScheduleWeekly scheduleWeekly;
 
-  public FeedFtpServiceSchedule() { 
+  public FeedFtpServiceSchedule() {
   }
 
   public FeedFtpServiceSchedule scheduleDaily(FeedFtpServiceScheduleDaily scheduleDaily) {
@@ -67,8 +63,7 @@ public class FeedFtpServiceSchedule {
    * Get scheduleDaily
    * @return scheduleDaily
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULE_DAILY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class FeedFtpServiceSchedule {
    * Get scheduleHourly
    * @return scheduleHourly
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULE_HOURLY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -121,8 +115,7 @@ public class FeedFtpServiceSchedule {
    * Get scheduleType
    * @return scheduleType
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULE_TYPE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -148,8 +141,7 @@ public class FeedFtpServiceSchedule {
    * Get scheduleWeekly
    * @return scheduleWeekly
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SCHEDULE_WEEKLY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -163,7 +155,6 @@ public class FeedFtpServiceSchedule {
   public void setScheduleWeekly(FeedFtpServiceScheduleWeekly scheduleWeekly) {
     this.scheduleWeekly = scheduleWeekly;
   }
-
 
   @Override
   public boolean equals(Object o) {

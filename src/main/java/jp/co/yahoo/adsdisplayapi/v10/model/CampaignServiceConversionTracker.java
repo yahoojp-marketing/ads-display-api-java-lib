@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v10.model.CampaignServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,15 +27,13 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 紐づけられているコンバージョントラッカー設定情報を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionTracker object describes conversion tracking information to be associated.&lt;br&gt; &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> 紐づけられているコンバージョントラッカー設定情報を表します。<br> </div> <div lang=\"en\"> CampaignServiceConversionTracker object describes conversion tracking information to be associated.<br> </div> ")
 @JsonPropertyOrder({
   CampaignServiceConversionTracker.JSON_PROPERTY_CONVERSION_GROUP_ID,
   CampaignServiceConversionTracker.JSON_PROPERTY_CONVERSION_TRACKER_ID,
   CampaignServiceConversionTracker.JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID,
   CampaignServiceConversionTracker.JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID
 })
-@JsonTypeName("CampaignServiceConversionTracker")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceConversionTracker {
   public static final String JSON_PROPERTY_CONVERSION_GROUP_ID = "conversionGroupId";
   private Long conversionGroupId;
@@ -51,7 +47,7 @@ public class CampaignServiceConversionTracker {
   public static final String JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID = "isRemoveConversionTrackerId";
   private CampaignServiceIsRemoveFlg isRemoveConversionTrackerId;
 
-  public CampaignServiceConversionTracker() { 
+  public CampaignServiceConversionTracker() {
   }
 
   public CampaignServiceConversionTracker conversionGroupId(Long conversionGroupId) {
@@ -64,8 +60,7 @@ public class CampaignServiceConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョングループIDです。&lt;br&gt; ※conversionGroupId, conversionTrackerIdは同時に設定することができません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionGroup ID.&lt;br&gt; *conversionGroupId and conversionTrackerIds cannot be set at the same time. &lt;/div&gt; 
    * @return conversionGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョングループIDです。<br> ※conversionGroupId, conversionTrackerIdは同時に設定することができません。 </div> <div lang=\"en\"> CampaignServiceConversionGroup ID.<br> *conversionGroupId and conversionTrackerIds cannot be set at the same time. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -91,8 +86,7 @@ public class CampaignServiceConversionTracker {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカーIDです。&lt;br&gt; ※conversionGroupId, conversionTrackerIdは同時に設定することができません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionTracker ID.&lt;br&gt; *conversionGroupId and conversionTrackerIds cannot be set at the same time. &lt;/div&gt; 
    * @return conversionTrackerId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> コンバージョントラッカーIDです。<br> ※conversionGroupId, conversionTrackerIdは同時に設定することができません。 </div> <div lang=\"en\"> CampaignServiceConversionTracker ID.<br> *conversionGroupId and conversionTrackerIds cannot be set at the same time. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -118,8 +112,7 @@ public class CampaignServiceConversionTracker {
    * Get isRemoveConversionGroupId
    * @return isRemoveConversionGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -145,8 +138,7 @@ public class CampaignServiceConversionTracker {
    * Get isRemoveConversionTrackerId
    * @return isRemoveConversionTrackerId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -160,7 +152,6 @@ public class CampaignServiceConversionTracker {
   public void setIsRemoveConversionTrackerId(CampaignServiceIsRemoveFlg isRemoveConversionTrackerId) {
     this.isRemoveConversionTrackerId = isRemoveConversionTrackerId;
   }
-
 
   @Override
   public boolean equals(Object o) {

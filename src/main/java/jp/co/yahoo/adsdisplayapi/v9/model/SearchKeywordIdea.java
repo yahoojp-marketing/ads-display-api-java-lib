@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v9.model.SearchKeywordIdeaServiceAvailabilityStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,7 +27,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordIdeaオブジェクトは、サーチターゲティング対象キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordIdea object is keyword for search targeting.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">SearchKeywordIdeaオブジェクトは、サーチターゲティング対象キーワードです。</div> <div lang=\"en\">SearchKeywordIdea object is keyword for search targeting.</div> ")
 @JsonPropertyOrder({
   SearchKeywordIdea.JSON_PROPERTY_DESKTOP_SEARCH_VOLUME,
   SearchKeywordIdea.JSON_PROPERTY_RELEASE_DATE,
@@ -40,8 +37,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SearchKeywordIdea.JSON_PROPERTY_CLOSE_DATE,
   SearchKeywordIdea.JSON_PROPERTY_AVAILABILITY_STATUS
 })
-@JsonTypeName("SearchKeywordIdea")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class SearchKeywordIdea {
   public static final String JSON_PROPERTY_DESKTOP_SEARCH_VOLUME = "desktopSearchVolume";
   private Long desktopSearchVolume;
@@ -67,7 +63,7 @@ public class SearchKeywordIdea {
   public static final String JSON_PROPERTY_AVAILABILITY_STATUS = "availabilityStatus";
   private SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus;
 
-  public SearchKeywordIdea() { 
+  public SearchKeywordIdea() {
   }
 
   public SearchKeywordIdea desktopSearchVolume(Long desktopSearchVolume) {
@@ -80,8 +76,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PCでのリーチ数です。&lt;br&gt; ※1000件未満の場合は&lt;br&gt; 0が取得されます。&lt;br&gt; ※サーチキーワードの停止日以降はnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reach numbers on PC.&lt;br&gt; *If it is less than 1000 times, the value &amp;#34;0&amp;#34; will be responded.&lt;br&gt; *After the stop date of search keyword, null will be returned. &lt;/div&gt; 
    * @return desktopSearchVolume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> PCでのリーチ数です。<br> ※1000件未満の場合は<br> 0が取得されます。<br> ※サーチキーワードの停止日以降はnullが返却されます。 </div> <div lang=\"en\"> Reach numbers on PC.<br> *If it is less than 1000 times, the value &#34;0&#34; will be responded.<br> *After the stop date of search keyword, null will be returned. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DESKTOP_SEARCH_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -107,8 +102,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワード追加日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Additional date of keyword.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return releaseDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワード追加日です。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\"> Additional date of keyword.<br> * Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_RELEASE_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -134,8 +128,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search keyword.&lt;/div&gt; 
    * @return searchKeyword
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードです。</div> <div lang=\"en\">Search keyword.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -161,8 +154,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search keyword ID.&lt;/div&gt; 
    * @return searchKeywordId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワードIDです。</div> <div lang=\"en\">Search keyword ID.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -188,8 +180,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; スマートフォンでのリーチ数です。&lt;br&gt; ※1000件未満の場合は&lt;br&gt; 0が取得されます。&lt;br&gt; ※サーチキーワードの停止日以降はnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reach numbers on Smartphone.&lt;br&gt; *If it is less than 1000 times, the value &amp;#34;0&amp;#34; will be responded.&lt;br&gt; *After the stop date of search keyword, null will be returned. &lt;/div&gt; 
    * @return smartPhoneSearchVolume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> スマートフォンでのリーチ数です。<br> ※1000件未満の場合は<br> 0が取得されます。<br> ※サーチキーワードの停止日以降はnullが返却されます。 </div> <div lang=\"en\"> Reach numbers on Smartphone.<br> *If it is less than 1000 times, the value &#34;0&#34; will be responded.<br> *After the stop date of search keyword, null will be returned. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -215,8 +206,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; タブレットでのリーチ数です。&lt;br&gt; ※1000件未満の場合は&lt;br&gt; 0が取得されます。&lt;br&gt; ※サーチキーワードの停止日以降はnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reach numbers on Tablet.&lt;br&gt; *If it is less than 1000 times, the value &amp;#34;0&amp;#34; will be responded.&lt;br&gt; *After the stop date of search keyword, null will be returned. &lt;/div&gt; 
    * @return tabletSearchVolume
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> タブレットでのリーチ数です。<br> ※1000件未満の場合は<br> 0が取得されます。<br> ※サーチキーワードの停止日以降はnullが返却されます。 </div> <div lang=\"en\"> Reach numbers on Tablet.<br> *If it is less than 1000 times, the value &#34;0&#34; will be responded.<br> *After the stop date of search keyword, null will be returned. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TABLET_SEARCH_VOLUME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -242,8 +232,7 @@ public class SearchKeywordIdea {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワード停止日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Stop date of keyword.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return closeDate
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">サーチキーワード停止日です。<br> ※フォーマット：yyyyMMdd</div> <div lang=\"en\"> Stop date of keyword.<br> * Format: yyyyMMdd</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CLOSE_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -269,8 +258,7 @@ public class SearchKeywordIdea {
    * Get availabilityStatus
    * @return availabilityStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AVAILABILITY_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -284,7 +272,6 @@ public class SearchKeywordIdea {
   public void setAvailabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     this.availabilityStatus = availabilityStatus;
   }
-
 
   @Override
   public boolean equals(Object o) {

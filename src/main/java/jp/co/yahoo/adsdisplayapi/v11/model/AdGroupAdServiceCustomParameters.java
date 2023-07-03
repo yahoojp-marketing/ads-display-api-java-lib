@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v11.model.AdGroupAdServiceCustomParameter;
@@ -32,21 +30,19 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupAdServiceCustomParametersは、カスタムパラメータの設定を表します。<br> ADDおよびSET時、このフィールドは省略可能となります。 </div> <div lang=\"en\"> AdGroupAdServiceCustomParameters displays the setting of custom parameters.<br> This field is optional in ADD and SET operation. </div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   AdGroupAdServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@JsonTypeName("AdGroupAdServiceCustomParameters")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
   private AdGroupAdServiceIsRemoveFlg isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
-  private List<AdGroupAdServiceCustomParameter> parameters = null;
+  private List<AdGroupAdServiceCustomParameter> parameters;
 
-  public AdGroupAdServiceCustomParameters() { 
+  public AdGroupAdServiceCustomParameters() {
   }
 
   public AdGroupAdServiceCustomParameters isRemove(AdGroupAdServiceIsRemoveFlg isRemove) {
@@ -59,8 +55,7 @@ public class AdGroupAdServiceCustomParameters {
    * Get isRemove
    * @return isRemove
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_REMOVE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -94,8 +89,7 @@ public class AdGroupAdServiceCustomParameters {
    * Get parameters
    * @return parameters
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PARAMETERS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -109,7 +103,6 @@ public class AdGroupAdServiceCustomParameters {
   public void setParameters(List<AdGroupAdServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v10.model.DictionaryServiceSharedAudienceListInfo;
@@ -32,17 +30,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceSharedAudienceListInfoValueオブジェクトは、共通オーディエンスリスト情報を取得するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceSharedAudienceListInfoValue object is a container that retrieves shared audience list.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">DictionaryServiceSharedAudienceListInfoValueオブジェクトは、共通オーディエンスリスト情報を取得するコンテナです。</div> <div lang=\"en\">DictionaryServiceSharedAudienceListInfoValue object is a container that retrieves shared audience list.</div> ")
 @JsonPropertyOrder({
   DictionaryServiceSharedAudienceListInfoValue.JSON_PROPERTY_ERRORS,
   DictionaryServiceSharedAudienceListInfoValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   DictionaryServiceSharedAudienceListInfoValue.JSON_PROPERTY_SHARED_AUDIENCE_LIST
 })
-@JsonTypeName("DictionaryServiceSharedAudienceListInfoValue")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DictionaryServiceSharedAudienceListInfoValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
-  private List<Error> errors = null;
+  private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
   private Boolean operationSucceeded;
@@ -50,7 +46,7 @@ public class DictionaryServiceSharedAudienceListInfoValue {
   public static final String JSON_PROPERTY_SHARED_AUDIENCE_LIST = "sharedAudienceList";
   private DictionaryServiceSharedAudienceListInfo sharedAudienceList;
 
-  public DictionaryServiceSharedAudienceListInfoValue() { 
+  public DictionaryServiceSharedAudienceListInfoValue() {
   }
 
   public DictionaryServiceSharedAudienceListInfoValue errors(List<Error> errors) {
@@ -71,8 +67,7 @@ public class DictionaryServiceSharedAudienceListInfoValue {
    * Get errors
    * @return errors
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ERRORS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -98,8 +93,7 @@ public class DictionaryServiceSharedAudienceListInfoValue {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。</div> <div lang=\"en\">The process results. If true, the process succeeded. If false, the process failed.</div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -125,8 +119,7 @@ public class DictionaryServiceSharedAudienceListInfoValue {
    * Get sharedAudienceList
    * @return sharedAudienceList
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_SHARED_AUDIENCE_LIST)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -140,7 +133,6 @@ public class DictionaryServiceSharedAudienceListInfoValue {
   public void setSharedAudienceList(DictionaryServiceSharedAudienceListInfo sharedAudienceList) {
     this.sharedAudienceList = sharedAudienceList;
   }
-
 
   @Override
   public boolean equals(Object o) {

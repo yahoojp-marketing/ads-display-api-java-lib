@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import jp.co.yahoo.adsdisplayapi.v11.model.CampaignServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
@@ -29,17 +27,15 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceBiddingStrategyConfigurationオブジェクトは、キャンペーン入札戦略です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; REMOVE時、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceBiddingStrategyConfiguration object describes campaign bidding strategy.&lt;br&gt; In ADD and SET operation, this field is required.&lt;br&gt; This field will be ignored in REMOVE operation. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> CampaignServiceBiddingStrategyConfigurationオブジェクトは、キャンペーン入札戦略です。<br> ADDおよびSET時、このフィールドは必須となります。<br> REMOVE時、このフィールドは無視されます。 </div> <div lang=\"en\"> CampaignServiceBiddingStrategyConfiguration object describes campaign bidding strategy.<br> In ADD and SET operation, this field is required.<br> This field will be ignored in REMOVE operation. </div> ")
 @JsonPropertyOrder({
   CampaignServiceBiddingStrategyConfiguration.JSON_PROPERTY_BIDDING_SCHEME
 })
-@JsonTypeName("CampaignServiceBiddingStrategyConfiguration")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class CampaignServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
   private CampaignServiceBiddingScheme biddingScheme;
 
-  public CampaignServiceBiddingStrategyConfiguration() { 
+  public CampaignServiceBiddingStrategyConfiguration() {
   }
 
   public CampaignServiceBiddingStrategyConfiguration biddingScheme(CampaignServiceBiddingScheme biddingScheme) {
@@ -52,8 +48,7 @@ public class CampaignServiceBiddingStrategyConfiguration {
    * Get biddingScheme
    * @return biddingScheme
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -67,7 +62,6 @@ public class CampaignServiceBiddingStrategyConfiguration {
   public void setBiddingScheme(CampaignServiceBiddingScheme biddingScheme) {
     this.biddingScheme = biddingScheme;
   }
-
 
   @Override
   public boolean equals(Object o) {

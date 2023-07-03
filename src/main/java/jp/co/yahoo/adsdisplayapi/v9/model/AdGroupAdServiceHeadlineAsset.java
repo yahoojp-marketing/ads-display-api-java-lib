@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupAdServiceApprovalStatus;
@@ -31,14 +29,12 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupAdServiceHeadlineAssetオブジェクトは、レスポンシブディスプレイ広告で指定するタイトルアセットを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupAdServiceHeadlineAsset object represents a headline asset to specify in responsive display ads.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AdGroupAdServiceHeadlineAssetオブジェクトは、レスポンシブディスプレイ広告で指定するタイトルアセットを表します。</div> <div lang=\"en\">The AdGroupAdServiceHeadlineAsset object represents a headline asset to specify in responsive display ads.</div> ")
 @JsonPropertyOrder({
   AdGroupAdServiceHeadlineAsset.JSON_PROPERTY_TEXT,
   AdGroupAdServiceHeadlineAsset.JSON_PROPERTY_APPROVAL_STATUS,
   AdGroupAdServiceHeadlineAsset.JSON_PROPERTY_DISAPPROVAL_REASON_CODES
 })
-@JsonTypeName("AdGroupAdServiceHeadlineAsset")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AdGroupAdServiceHeadlineAsset {
   public static final String JSON_PROPERTY_TEXT = "text";
   private String text;
@@ -47,9 +43,9 @@ public class AdGroupAdServiceHeadlineAsset {
   private AdGroupAdServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
-  private List<String> disapprovalReasonCodes = null;
+  private List<String> disapprovalReasonCodes;
 
-  public AdGroupAdServiceHeadlineAsset() { 
+  public AdGroupAdServiceHeadlineAsset() {
   }
 
   public AdGroupAdServiceHeadlineAsset text(String text) {
@@ -62,8 +58,7 @@ public class AdGroupAdServiceHeadlineAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; タイトルテキストです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。&lt;br&gt; 最大20文字まで指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Title text.&lt;br&gt; This field is required in ADD and SET operation.&lt;br&gt; Up to 20 characters can be specified. &lt;/div&gt; 
    * @return text
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> タイトルテキストです。<br> このフィールドは、ADDおよびSET時に必須となります。<br> 最大20文字まで指定できます。 </div> <div lang=\"en\"> Title text.<br> This field is required in ADD and SET operation.<br> Up to 20 characters can be specified. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_TEXT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -89,8 +84,7 @@ public class AdGroupAdServiceHeadlineAsset {
    * Get approvalStatus
    * @return approvalStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -124,8 +118,7 @@ public class AdGroupAdServiceHeadlineAsset {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 掲載拒否の理由です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reject reason on editorial review.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return disapprovalReasonCodes
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 掲載拒否の理由です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Reject reason on editorial review.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -139,7 +132,6 @@ public class AdGroupAdServiceHeadlineAsset {
   public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
-
 
   @Override
   public boolean equals(Object o) {

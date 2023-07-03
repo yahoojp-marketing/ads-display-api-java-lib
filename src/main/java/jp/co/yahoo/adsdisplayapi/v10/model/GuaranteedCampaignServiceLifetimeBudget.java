@@ -20,21 +20,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServiceLifetimeBudgetオブジェクトは、キャンペーンの通期予算に関する情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceLifetimeBudget object describes the information of campaign&#39;s lifetime budget.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> GuaranteedCampaignServiceLifetimeBudgetオブジェクトは、キャンペーンの通期予算に関する情報を表します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> GuaranteedCampaignServiceLifetimeBudget object describes the information of campaign's lifetime budget.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
 @JsonPropertyOrder({
   GuaranteedCampaignServiceLifetimeBudget.JSON_PROPERTY_AMOUNT,
   GuaranteedCampaignServiceLifetimeBudget.JSON_PROPERTY_PRICE
 })
-@JsonTypeName("GuaranteedCampaignServiceLifetimeBudget")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedCampaignServiceLifetimeBudget {
   public static final String JSON_PROPERTY_AMOUNT = "amount";
   private Long amount;
@@ -42,7 +38,7 @@ public class GuaranteedCampaignServiceLifetimeBudget {
   public static final String JSON_PROPERTY_PRICE = "price";
   private Long price;
 
-  public GuaranteedCampaignServiceLifetimeBudget() { 
+  public GuaranteedCampaignServiceLifetimeBudget() {
   }
 
   public GuaranteedCampaignServiceLifetimeBudget amount(Long amount) {
@@ -55,8 +51,7 @@ public class GuaranteedCampaignServiceLifetimeBudget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンの通期予算額です。&lt;br&gt; ※この「通期予算」は、キャンペーンの全期間を通じて消費される予算を意味します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; An amount of campaign&#39;s lifetime budget.&lt;br&gt; * \&quot;lifetime budget\&quot; means the total budget that is spent throughout the entire duration of the campaign.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return amount
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンの通期予算額です。<br> ※この「通期予算」は、キャンペーンの全期間を通じて消費される予算を意味します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> An amount of campaign's lifetime budget.<br> * \"lifetime budget\" means the total budget that is spent throughout the entire duration of the campaign.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AMOUNT)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -82,8 +77,7 @@ public class GuaranteedCampaignServiceLifetimeBudget {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 支払額です。&lt;br&gt; ※この「支払額」は、予算から手数料を引いた額を意味します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Price.&lt;br&gt; *The \&quot;price\&quot; means the budget minus the fees.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return price
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 支払額です。<br> ※この「支払額」は、予算から手数料を引いた額を意味します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Price.<br> *The \"price\" means the budget minus the fees.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_PRICE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -97,7 +91,6 @@ public class GuaranteedCampaignServiceLifetimeBudget {
   public void setPrice(Long price) {
     this.price = price;
   }
-
 
   @Override
   public boolean equals(Object o) {

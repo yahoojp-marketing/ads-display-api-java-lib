@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AdGroupTarget;
@@ -36,7 +34,6 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedAdGroupオブジェクトは、予約型の広告グループ情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The Guaranteed Ad Group object is a container for storing ad group information of guaranteed campaign.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">GuaranteedAdGroupオブジェクトは、予約型の広告グループ情報を保持します。</div> <div lang=\"en\">The Guaranteed Ad Group object is a container for storing ad group information of guaranteed campaign.</div> ")
 @JsonPropertyOrder({
   GuaranteedAdGroup.JSON_PROPERTY_ACCOUNT_ID,
   GuaranteedAdGroup.JSON_PROPERTY_AD_GROUP_ID,
@@ -51,8 +48,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroup.JSON_PROPERTY_AD_GROUP_TARGETS,
   GuaranteedAdGroup.JSON_PROPERTY_IS_CREATIVE_PROFILE
 })
-@JsonTypeName("GuaranteedAdGroup")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class GuaranteedAdGroup {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -70,27 +66,27 @@ public class GuaranteedAdGroup {
   private String campaignName;
 
   public static final String JSON_PROPERTY_DEVICE = "device";
-  private List<GuaranteedAdGroupServiceDeviceType> device = null;
+  private List<GuaranteedAdGroupServiceDeviceType> device;
 
   public static final String JSON_PROPERTY_DEVICE_APP = "deviceApp";
-  private List<GuaranteedAdGroupServiceDeviceAppType> deviceApp = null;
+  private List<GuaranteedAdGroupServiceDeviceAppType> deviceApp;
 
   public static final String JSON_PROPERTY_DEVICE_OS = "deviceOs";
-  private List<GuaranteedAdGroupServiceDeviceOsType> deviceOs = null;
+  private List<GuaranteedAdGroupServiceDeviceOsType> deviceOs;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
-  private List<GuaranteedAdGroupServiceLabel> labels = null;
+  private List<GuaranteedAdGroupServiceLabel> labels;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
   private GuaranteedAdGroupServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_AD_GROUP_TARGETS = "adGroupTargets";
-  private List<AdGroupTarget> adGroupTargets = null;
+  private List<AdGroupTarget> adGroupTargets;
 
   public static final String JSON_PROPERTY_IS_CREATIVE_PROFILE = "isCreativeProfile";
   private Boolean isCreativeProfile;
 
-  public GuaranteedAdGroup() { 
+  public GuaranteedAdGroup() {
   }
 
   public GuaranteedAdGroup accountId(Long accountId) {
@@ -103,8 +99,7 @@ public class GuaranteedAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウントIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Account ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -130,8 +125,7 @@ public class GuaranteedAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adGroupId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Ad group ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -157,8 +151,7 @@ public class GuaranteedAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return adGroupName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 広告グループ名です。<br> このフィールドは、ADD時は必須となり、SET時は省略可能となります。 </div> <div lang=\"en\"> Ad group name.<br> This field is required in ADD operation, and will be optional in SET operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -184,8 +177,7 @@ public class GuaranteedAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return campaignId
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーンIDです。<br> このフィールドは、リクエストの場合は必須です。 </div> <div lang=\"en\"> Campaign ID.<br> This field is required in requests. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -211,8 +203,7 @@ public class GuaranteedAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; *ADD時、このフィールドは返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; *This field will not be returned in ADD operation. &lt;/div&gt; 
    * @return campaignName
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> キャンペーン名です。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。<br> *ADD時、このフィールドは返却されません。 </div> <div lang=\"en\"> Campaign name.<br> Although this field will be returned in the response, it will be ignored on input.<br> *This field will not be returned in ADD operation. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -246,8 +237,7 @@ public class GuaranteedAdGroup {
    * Get device
    * @return device
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -281,8 +271,7 @@ public class GuaranteedAdGroup {
    * Get deviceApp
    * @return deviceApp
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_APP)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -316,8 +305,7 @@ public class GuaranteedAdGroup {
    * Get deviceOs
    * @return deviceOs
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_DEVICE_OS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -351,8 +339,7 @@ public class GuaranteedAdGroup {
    * Get labels
    * @return labels
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_LABELS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -378,8 +365,7 @@ public class GuaranteedAdGroup {
    * Get userStatus
    * @return userStatus
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_USER_STATUS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -413,8 +399,7 @@ public class GuaranteedAdGroup {
    * Get adGroupTargets
    * @return adGroupTargets
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_AD_GROUP_TARGETS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -440,8 +425,7 @@ public class GuaranteedAdGroup {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; trueの場合、クリエイティブプロファイルで追加された広告グループであることを示します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; If the value of this field is true, it indicates that the ad group was added using a creative profile.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return isCreativeProfile
   **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> trueの場合、クリエイティブプロファイルで追加された広告グループであることを示します。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> If the value of this field is true, it indicates that the ad group was added using a creative profile.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @jakarta.annotation.Nullable
   @JsonProperty(JSON_PROPERTY_IS_CREATIVE_PROFILE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -455,7 +439,6 @@ public class GuaranteedAdGroup {
   public void setIsCreativeProfile(Boolean isCreativeProfile) {
     this.isCreativeProfile = isCreativeProfile;
   }
-
 
   @Override
   public boolean equals(Object o) {

@@ -20,8 +20,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
-import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v9.model.AudienceList;
@@ -31,13 +29,11 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceOperationオブジェクトは、操作対象となるオーディエンスリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceOperation object describes information of audience list that is subject to operation.&lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\">AudienceListServiceOperationオブジェクトは、操作対象となるオーディエンスリストの情報を表します。</div> <div lang=\"en\">AudienceListServiceOperation object describes information of audience list that is subject to operation.</div> ")
 @JsonPropertyOrder({
   AudienceListServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AudienceListServiceOperation.JSON_PROPERTY_OPERAND
 })
-@JsonTypeName("AudienceListServiceOperation")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class AudienceListServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
   private Long accountId;
@@ -45,7 +41,7 @@ public class AudienceListServiceOperation {
   public static final String JSON_PROPERTY_OPERAND = "operand";
   private List<AudienceList> operand = new ArrayList<>();
 
-  public AudienceListServiceOperation() { 
+  public AudienceListServiceOperation() {
   }
 
   public AudienceListServiceOperation accountId(Long accountId) {
@@ -58,8 +54,7 @@ public class AudienceListServiceOperation {
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "<div lang=\"ja\">アカウントIDです。</div> <div lang=\"en\">Account ID.</div> ")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -82,6 +77,9 @@ public class AudienceListServiceOperation {
   }
 
   public AudienceListServiceOperation addOperandItem(AudienceList operandItem) {
+    if (this.operand == null) {
+      this.operand = new ArrayList<>();
+    }
     this.operand.add(operandItem);
     return this;
   }
@@ -90,8 +88,7 @@ public class AudienceListServiceOperation {
    * Get operand
    * @return operand
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @jakarta.annotation.Nonnull
   @JsonProperty(JSON_PROPERTY_OPERAND)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
@@ -105,7 +102,6 @@ public class AudienceListServiceOperation {
   public void setOperand(List<AudienceList> operand) {
     this.operand = operand;
   }
-
 
   @Override
   public boolean equals(Object o) {
