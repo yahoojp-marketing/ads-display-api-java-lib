@@ -126,7 +126,7 @@ public class ConversionGroupServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョングループ名。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion group name.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   コンバージョングループ名。&lt;br&gt;   この検索条件では、大文字と小文字は区別されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Conversion group name.&lt;br&gt;   This searching condition is case-insensitive. &lt;/div&gt; 
    * @return conversionGroupName
   **/
   @jakarta.annotation.Nullable
