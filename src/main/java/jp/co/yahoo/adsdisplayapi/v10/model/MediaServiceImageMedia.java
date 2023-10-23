@@ -298,11 +298,11 @@ public class MediaServiceImageMedia {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; MediaServiceUpscaleImageEnabledは画像の自動アップコンバートの設定フラグを表します。&lt;br&gt; このフィールドは、ADD時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; MediaServiceUpscaleImageEnabled displays the flag settings of automatic image up-conversion. &lt;br&gt; This field is optional in ADD operation. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; MediaServiceUpscaleImageEnabledは画像の自動アップコンバートの設定フラグを表します。&lt;br&gt; このフィールドは、ADD時に省略可能となります。その際、デフォルト値はtrueになります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; MediaServiceUpscaleImageEnabled displays the flag settings of automatic image up-conversion. &lt;br&gt; This field is optional in ADD operation. The default value will be true. &lt;/div&gt; 
    * @return upscaleImageEnabled
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> MediaServiceUpscaleImageEnabledは画像の自動アップコンバートの設定フラグを表します。<br> このフィールドは、ADD時に省略可能となります。 </div> <div lang=\"en\"> MediaServiceUpscaleImageEnabled displays the flag settings of automatic image up-conversion. <br> This field is optional in ADD operation. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> MediaServiceUpscaleImageEnabledは画像の自動アップコンバートの設定フラグを表します。<br> このフィールドは、ADD時に省略可能となります。その際、デフォルト値はtrueになります。 </div> <div lang=\"en\"> MediaServiceUpscaleImageEnabled displays the flag settings of automatic image up-conversion. <br> This field is optional in ADD operation. The default value will be true. </div> ")
   @JsonProperty(JSON_PROPERTY_UPSCALE_IMAGE_ENABLED)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
