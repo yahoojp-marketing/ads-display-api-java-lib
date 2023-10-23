@@ -132,11 +132,11 @@ public class ConversionGroupServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョングループ名。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion Group Name.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   コンバージョングループ名。&lt;br&gt;   この検索条件では、大文字と小文字は区別されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Conversion group name.&lt;br&gt;   This searching condition is case-insensitive. &lt;/div&gt; 
    * @return conversionGroupName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">コンバージョングループ名。</div> <div lang=\"en\">Conversion Group Name.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">   コンバージョングループ名。<br>   この検索条件では、大文字と小文字は区別されません。 </div> <div lang=\"en\">   Conversion group name.<br>   This searching condition is case-insensitive. </div> ")
   @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
