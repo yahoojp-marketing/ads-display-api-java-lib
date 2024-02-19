@@ -117,11 +117,11 @@ public class AccountServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;br&gt; This field is optional.&lt;br&gt; &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; この検索条件では、大文字と小文字は区別されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;br&gt; This field is optional.&lt;br&gt; This searching condition is case-insensitive. &lt;/div&gt; 
    * @return accountName
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アカウント名です。<br> このフィールドは、省略可能となります。<br> </div> <div lang=\"en\">Account name.<br> This field is optional.<br> </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">アカウント名です。<br> このフィールドは、省略可能となります。<br> この検索条件では、大文字と小文字は区別されません。 </div> <div lang=\"en\">Account name.<br> This field is optional.<br> This searching condition is case-insensitive. </div> ")
   @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
