@@ -117,7 +117,7 @@ public class AccountServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;br&gt; This field is optional.&lt;br&gt; &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; この検索条件では、大文字と小文字は区別されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;br&gt; This field is optional.&lt;br&gt; This searching condition is case-insensitive. &lt;/div&gt; 
    * @return accountName
   **/
   @jakarta.annotation.Nullable
