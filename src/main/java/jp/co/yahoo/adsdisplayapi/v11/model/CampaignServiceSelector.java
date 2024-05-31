@@ -127,7 +127,7 @@ public class CampaignServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Condition: Campaign ID&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   検索条件 : キャンペーンID&lt;br&gt;   現在、上限を200件までしか設定できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Search Condition: Campaign ID&lt;br&gt;   Currently, the limit can only be set to a maximum of 200 items. &lt;/div&gt; 
    * @return campaignIds
   **/
   @jakarta.annotation.Nullable
