@@ -597,7 +597,7 @@ public class AdGroup {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループが作成された日時です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Ad Group made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループが作成された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Ad Group made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
   **/
   @jakarta.annotation.Nullable

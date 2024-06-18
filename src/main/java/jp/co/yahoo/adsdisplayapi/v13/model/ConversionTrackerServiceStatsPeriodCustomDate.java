@@ -48,7 +48,7 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日時です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
    * @return statsEndDate
   **/
   @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日時です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
    * @return statsStartDate
   **/
   @jakarta.annotation.Nullable
