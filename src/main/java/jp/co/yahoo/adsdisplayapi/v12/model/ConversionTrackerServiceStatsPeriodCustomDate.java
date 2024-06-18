@@ -52,11 +52,11 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日時です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
    * @return statsEndDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得終了日時です。<br> ※yyyyMMdd形式です。 </div> <div lang=\"en\"> Acquisition end date of stats information.<br> ∗ Format: yyyyMMdd. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得終了日です。<br> ※yyyyMMdd形式です。 </div> <div lang=\"en\"> Acquisition end date of stats information.<br> ∗ Format: yyyyMMdd. </div> ")
   @JsonProperty(JSON_PROPERTY_STATS_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -79,11 +79,11 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日時です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
    * @return statsStartDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得開始日時です。<br> ※yyyyMMdd形式です。 </div> <div lang=\"en\"> Acquisition start date of stats information.<br> ∗ Format: yyyyMMdd. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得開始日です。<br> ※yyyyMMdd形式です。 </div> <div lang=\"en\"> Acquisition start date of stats information.<br> ∗ Format: yyyyMMdd. </div> ")
   @JsonProperty(JSON_PROPERTY_STATS_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

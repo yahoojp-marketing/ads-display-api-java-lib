@@ -26,9 +26,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCreatedDateRangeは、作成日時による検索対象期間を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCreatedDateRange represents the search target period by the creation date. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCreatedDateRangeは、作成日による検索対象期間を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCreatedDateRange represents the search target period by the creation date. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceCreatedDateRangeは、作成日時による検索対象期間を表します。 </div> <div lang=\"en\"> AdGroupServiceCreatedDateRange represents the search target period by the creation date. </div> ")
+@ApiModel(description = "<div lang=\"ja\"> AdGroupServiceCreatedDateRangeは、作成日による検索対象期間を表します。 </div> <div lang=\"en\"> AdGroupServiceCreatedDateRange represents the search target period by the creation date. </div> ")
 @JsonPropertyOrder({
   AdGroupServiceCreatedDateRange.JSON_PROPERTY_START_DATE,
   AdGroupServiceCreatedDateRange.JSON_PROPERTY_END_DATE
@@ -52,11 +52,11 @@ public class AdGroupServiceCreatedDateRange {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の開始日時です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the start date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の開始日です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the start date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索対象期間の開始日時です。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> This is the start date of the search target period.<br> * Format: yyyyMMdd </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 検索対象期間の開始日です。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> This is the start date of the search target period.<br> * Format: yyyyMMdd </div> ")
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -79,11 +79,11 @@ public class AdGroupServiceCreatedDateRange {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の終了日時です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the end date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の終了日です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the end date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 検索対象期間の終了日時です。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> This is the end date of the search target period.<br> * Format: yyyyMMdd </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 検索対象期間の終了日です。<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> This is the end date of the search target period.<br> * Format: yyyyMMdd </div> ")
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

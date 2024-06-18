@@ -27,9 +27,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 紐づけられているコンバージョントラッカー設定情報を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionTracker object describes conversion tracking information to be associated.&lt;br&gt; &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 紐づけられているコンバージョントラッカー設定情報を表します。&lt;br&gt; コンバージョングループID及びコンバージョントラッカーIDが共に指定されていない場合は、アカウントレベルのコンバージョン設定が適用されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceConversionTracker object describes conversion tracking information to be associated.&lt;br&gt; If neither the conversionGroupId nor the conversionTrackerId is specified, the account-level conversion settings are applied. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> 紐づけられているコンバージョントラッカー設定情報を表します。<br> </div> <div lang=\"en\"> CampaignServiceConversionTracker object describes conversion tracking information to be associated.<br> </div> ")
+@ApiModel(description = "<div lang=\"ja\"> 紐づけられているコンバージョントラッカー設定情報を表します。<br> コンバージョングループID及びコンバージョントラッカーIDが共に指定されていない場合は、アカウントレベルのコンバージョン設定が適用されます。 </div> <div lang=\"en\"> CampaignServiceConversionTracker object describes conversion tracking information to be associated.<br> If neither the conversionGroupId nor the conversionTrackerId is specified, the account-level conversion settings are applied. </div> ")
 @JsonPropertyOrder({
   CampaignServiceConversionTracker.JSON_PROPERTY_CONVERSION_GROUP_ID,
   CampaignServiceConversionTracker.JSON_PROPERTY_CONVERSION_TRACKER_ID,
