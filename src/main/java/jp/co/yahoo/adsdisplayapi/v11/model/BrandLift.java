@@ -342,7 +342,7 @@ public class BrandLift {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン配信開始日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign Start Date. &lt;/div&gt; &lt;br&gt;Format: yyyyMMdd 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン配信開始日です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign Start Date. &lt;/div&gt; &lt;br&gt;Format: yyyyMMdd 
    * @return campaignStartDate
   **/
   @jakarta.annotation.Nullable

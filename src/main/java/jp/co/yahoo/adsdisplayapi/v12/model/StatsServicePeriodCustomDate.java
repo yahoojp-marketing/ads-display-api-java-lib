@@ -48,7 +48,7 @@ public class StatsServicePeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日時&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
   @jakarta.annotation.Nullable
@@ -74,7 +74,7 @@ public class StatsServicePeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日時&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
   @jakarta.annotation.Nullable
