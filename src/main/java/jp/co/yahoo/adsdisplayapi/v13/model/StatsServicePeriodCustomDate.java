@@ -52,11 +52,11 @@ public class StatsServicePeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日時&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得終了日時<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Acquisition end date of stats information<br> ∗ Format: yyyyMMdd </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得終了日<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Acquisition end date of stats information<br> ∗ Format: yyyyMMdd </div> ")
   @JsonProperty(JSON_PROPERTY_END_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -79,11 +79,11 @@ public class StatsServicePeriodCustomDate {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日時&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information&lt;br&gt; ∗ Format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得開始日時<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Acquisition start date of stats information<br> ∗ Format: yyyyMMdd </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> 統計情報取得開始日<br> ※フォーマット：yyyyMMdd </div> <div lang=\"en\"> Acquisition start date of stats information<br> ∗ Format: yyyyMMdd </div> ")
   @JsonProperty(JSON_PROPERTY_START_DATE)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

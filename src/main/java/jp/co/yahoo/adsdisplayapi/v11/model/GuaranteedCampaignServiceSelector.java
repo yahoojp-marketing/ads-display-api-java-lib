@@ -113,11 +113,11 @@ public class GuaranteedCampaignServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search Condition: Campaign ID&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   検索条件 : キャンペーンID&lt;br&gt;   現在、上限を200件までしか設定できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Search Condition: Campaign ID&lt;br&gt;   Currently, the limit can only be set to a maximum of 200 items. &lt;/div&gt; 
    * @return campaignIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索条件 : キャンペーンID</div> <div lang=\"en\">Search Condition: Campaign ID</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">   検索条件 : キャンペーンID<br>   現在、上限を200件までしか設定できません </div> <div lang=\"en\">   Search Condition: Campaign ID<br>   Currently, the limit can only be set to a maximum of 200 items. </div> ")
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
