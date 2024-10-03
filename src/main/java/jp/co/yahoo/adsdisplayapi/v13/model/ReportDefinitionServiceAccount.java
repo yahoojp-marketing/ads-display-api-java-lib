@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceAccountオブジェクトはアカウントと、そのアカウントのプロダクトタイプを表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceAccount object describes account and its product type. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceAccountオブジェクトはアカウントと、そのアカウントのプロダクトタイプを表します。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceAccount object describes account and its product type.&lt;br&gt; * Not Available. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   ReportDefinitionServiceAccount.JSON_PROPERTY_ACCOUNT_ID,

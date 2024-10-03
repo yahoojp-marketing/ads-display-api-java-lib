@@ -265,7 +265,7 @@ public class AdGroupAdServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベルID取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label ID.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベル情報取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label information.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
    * @return containsLabel
   **/
   @jakarta.annotation.Nullable

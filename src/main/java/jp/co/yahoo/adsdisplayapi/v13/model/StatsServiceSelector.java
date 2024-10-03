@@ -124,7 +124,7 @@ public class StatsServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンID&lt;br&gt; typeで「CAMPAIGN」または「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。&lt;br&gt; 現在、上限を200件までしか設定できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; Available only when &amp;#34;CAMPAIGN&amp;#34; or &amp;#34;ADGROUP&amp;#34; or &amp;#34;AD&amp;#34; or &amp;#34;TARGET&amp;#34; is specified for type.&lt;br&gt; Currently, the limit can only be set to a maximum of 200 items. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンID&lt;br&gt; typeで「CAMPAIGN」または「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; Available only when &amp;#34;CAMPAIGN&amp;#34; or &amp;#34;ADGROUP&amp;#34; or &amp;#34;AD&amp;#34; or &amp;#34;TARGET&amp;#34; is specified for type. &lt;/div&gt; 
    * @return campaignIds
   **/
   @jakarta.annotation.Nullable
