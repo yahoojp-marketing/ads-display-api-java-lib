@@ -132,11 +132,11 @@ public class CampaignServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   検索条件 : キャンペーンID&lt;br&gt;   現在、上限を200件までしか設定できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Search Condition: Campaign ID&lt;br&gt;   Currently, the limit can only be set to a maximum of 200 items. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   検索条件 : キャンペーンID &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Search Condition: Campaign ID &lt;/div&gt; 
    * @return campaignIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">   検索条件 : キャンペーンID<br>   現在、上限を200件までしか設定できません </div> <div lang=\"en\">   Search Condition: Campaign ID<br>   Currently, the limit can only be set to a maximum of 200 items. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">   検索条件 : キャンペーンID </div> <div lang=\"en\">   Search Condition: Campaign ID </div> ")
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
@@ -159,11 +159,11 @@ public class CampaignServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベルID取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label ID.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベル情報取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label information.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
    * @return containsLabel
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ラベルID取得フラグです。<br> このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 </div> <div lang=\"en\">Flag of contains label ID.<br> This field is optional. The default value will be false. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ラベル情報取得フラグです。<br> このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 </div> <div lang=\"en\">Flag of contains label information.<br> This field is optional. The default value will be false. </div> ")
   @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

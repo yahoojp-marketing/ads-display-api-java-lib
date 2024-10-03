@@ -274,11 +274,11 @@ public class AdGroupAdServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベルID取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label ID.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベル情報取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label information.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
    * @return containsLabel
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">ラベルID取得フラグです。<br> このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 </div> <div lang=\"en\">Flag of contains label ID.<br> This field is optional. The default value will be false. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">ラベル情報取得フラグです。<br> このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 </div> <div lang=\"en\">Flag of contains label information.<br> This field is optional. The default value will be false. </div> ")
   @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
