@@ -85,7 +85,7 @@ public class AudienceListServiceAdActionDataSource {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告アクションデータソースのIdです。キャンペーンの場合は1つまで指定できます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Id of ad action data source. For campaign, the max number of Ids is 1.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告アクションデータソースのIdです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Id of ad action data source.&lt;/div&gt; 
    * @return ids
   **/
   @jakarta.annotation.Nullable

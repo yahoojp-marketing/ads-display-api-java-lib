@@ -27,7 +27,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceModelComparisonAccountSettingオブジェクトは、アトリビューションモデル比較の対象アカウント設定を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceModelComparisonAccountSetting object describes account setting that is subject to the attribution model comparison. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceModelComparisonAccountSettingオブジェクトは、アトリビューションモデル比較の対象アカウント設定を表します。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceModelComparisonAccountSetting object describes account setting that is subject to the attribution model comparison.&lt;br&gt; * Not Available. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   ReportDefinitionServiceModelComparisonAccountSetting.JSON_PROPERTY_BASE_ACCOUNT,

@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceLabelは、紐づけられているラベル情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceLabel object describes label information to be associated.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceLabelは、紐づけられているラベル情報を表します。&lt;br&gt; このフィールドは、リクエストの際は無視され、GET時のリクエストでcontainsLabelをtrueに指定した場合のみレスポンスされます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceLabel object describes label information to be associated.&lt;br&gt; This field is ignored in the request and is only included in the response if containsLabel is specified as true in the GET request. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AdGroupAdServiceLabel.JSON_PROPERTY_COLOR,
