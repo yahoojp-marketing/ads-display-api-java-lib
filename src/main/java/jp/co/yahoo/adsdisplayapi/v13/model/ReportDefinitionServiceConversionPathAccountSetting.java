@@ -29,9 +29,9 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path.&lt;br&gt; * Not Available. &lt;/div&gt; 
  */
-@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。 </div> <div lang=\"en\"> ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path. </div> ")
+@ApiModel(description = "<div lang=\"ja\"> ReportDefinitionServiceConversionPathAccountSettingオブジェクトは、コンバージョン経路の対象アカウント設定を表します。<br> ※現在利用できません </div> <div lang=\"en\"> ReportDefinitionServiceConversionPathAccountSetting object describes account setting that is subject to the conversion path.<br> * Not Available. </div> ")
 @JsonPropertyOrder({
   ReportDefinitionServiceConversionPathAccountSetting.JSON_PROPERTY_BASE_ACCOUNT,
   ReportDefinitionServiceConversionPathAccountSetting.JSON_PROPERTY_SUB_ACCOUNTS
