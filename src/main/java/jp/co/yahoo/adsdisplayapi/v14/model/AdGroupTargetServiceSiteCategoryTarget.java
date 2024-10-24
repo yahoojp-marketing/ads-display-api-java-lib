@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceSiteCategoryTargetオブジェクトは、サイトカテゴリーターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSITE_CATEGORYの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceSiteCategoryTarget object is a container for storing site category targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is SITE_CATEGORY, this field is required. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceSiteCategoryTargetオブジェクトは、サイトカテゴリーターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがSITE_CATEGORYの場合は必須です。&lt;br&gt; ※ADD、SET、REPLACEでは現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceSiteCategoryTarget object is a container for storing site category targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is SITE_CATEGORY, this field is required.&lt;br&gt; *Not available in ADD, SET and REPLACE operation. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AdGroupTargetServiceSiteCategoryTarget.JSON_PROPERTY_CATEGORY_FULL_NAME_EN,
