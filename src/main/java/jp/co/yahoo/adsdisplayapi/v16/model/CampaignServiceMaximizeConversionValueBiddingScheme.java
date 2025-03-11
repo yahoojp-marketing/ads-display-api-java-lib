@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、指定可能となります。&lt;br&gt; ※現在利用できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceMaximizeConversionValueBiddingScheme object displays bidding setting for Target ROAS.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSION_VALUE.&lt;br&gt; * Not Available. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、指定可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceMaximizeConversionValueBiddingScheme object displays bidding setting for Target ROAS.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS
