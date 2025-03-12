@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の設定情報を表します。&lt;br&gt; ※現在利用できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingScheme object displays bidding setting for Target ROAS.&lt;br&gt; * Not Available. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingScheme object displays bidding setting for Target ROAS. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS,
