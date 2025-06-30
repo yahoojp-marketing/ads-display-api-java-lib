@@ -112,7 +112,7 @@ public class PlacementUrlIdea {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索カテゴリです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search category&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索カテゴリです。※現在利用できません&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search category * Not Available.&lt;/div&gt; 
    * @return siteCategory
   **/
   @jakarta.annotation.Nullable
