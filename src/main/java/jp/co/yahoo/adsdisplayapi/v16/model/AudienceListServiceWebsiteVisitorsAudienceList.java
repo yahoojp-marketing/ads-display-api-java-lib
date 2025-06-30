@@ -143,7 +143,7 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リターゲティングタグIDです。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ID of retargeting tag. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リターゲティングタグIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ID of retargeting tag. &lt;/div&gt; 
    * @return retargetingTagId
   **/
   @jakarta.annotation.Nullable
