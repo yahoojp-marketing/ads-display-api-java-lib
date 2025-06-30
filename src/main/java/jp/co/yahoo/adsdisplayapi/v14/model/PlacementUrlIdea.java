@@ -117,11 +117,11 @@ public class PlacementUrlIdea {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索カテゴリです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search category&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索カテゴリです。※現在利用できません&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search category * Not Available.&lt;/div&gt; 
    * @return siteCategory
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">検索カテゴリです。</div> <div lang=\"en\">Search category</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">検索カテゴリです。※現在利用できません</div> <div lang=\"en\">Search category * Not Available.</div> ")
   @JsonProperty(JSON_PROPERTY_SITE_CATEGORY)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
