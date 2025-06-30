@@ -83,11 +83,11 @@ public class CampaignServiceBudget {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.&lt;br&gt; * Not Available. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount. &lt;/div&gt; 
    * @return campaignBudgetId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">共有予算IDです。<br> ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。<br> ※現在利用できません </div> <div lang=\"en\">CampaignBudget ID.<br> In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount.<br> * Not Available. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">共有予算IDです。<br> ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。 </div> <div lang=\"en\">CampaignBudget ID.<br> In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount. </div> ")
   @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

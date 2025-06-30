@@ -150,11 +150,11 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リターゲティングタグIDです。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ID of retargeting tag. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リターゲティングタグIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ID of retargeting tag. &lt;/div&gt; 
    * @return retargetingTagId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> リターゲティングタグIDです。<br> このフィールドは、ADD時に必須となります。 </div> <div lang=\"en\"> ID of retargeting tag. <br> This field is required in ADD operation. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> リターゲティングタグIDです。 </div> <div lang=\"en\"> ID of retargeting tag. </div> ")
   @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

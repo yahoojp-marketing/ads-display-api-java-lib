@@ -97,11 +97,11 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリの配列です。&lt;br&gt; ・URLのカテゴリです。&lt;br&gt; ・完全一致です。&lt;br&gt; ・複数指定でOR検索です。&lt;br&gt; ・TC-SC-xxxxxxで現される規定値です。&lt;br&gt; ・DicitonaryServiceから返ってくるTC-SC-xxxxxxをそのまま指定です。&lt;br&gt; ・最大50件です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Array of categories.&lt;br&gt; ・Category of URL&lt;br&gt; ・Exact match&lt;br&gt; ・Search multiple specific keywords (OR)&lt;br&gt; ・From value: TC-SC-xxxxxx&lt;br&gt; ・Choose the TC-SC-xxxxxx value from DictionaryService&lt;br&gt; ・Maximum of 50 cases &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリの配列です。&lt;br&gt; ・URLのカテゴリです。&lt;br&gt; ・完全一致です。&lt;br&gt; ・複数指定でOR検索です。&lt;br&gt; ・TC-SC-xxxxxxで現される規定値です。&lt;br&gt; ・DicitonaryServiceから返ってくるTC-SC-xxxxxxをそのまま指定です。&lt;br&gt; ・最大50件です。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Array of categories.&lt;br&gt; ・Category of URL&lt;br&gt; ・Exact match&lt;br&gt; ・Search multiple specific keywords (OR)&lt;br&gt; ・From value: TC-SC-xxxxxx&lt;br&gt; ・Choose the TC-SC-xxxxxx value from DictionaryService&lt;br&gt; ・Maximum of 50 cases&lt;br&gt; * Not Available. &lt;/div&gt; 
    * @return siteCategories
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリの配列です。<br> ・URLのカテゴリです。<br> ・完全一致です。<br> ・複数指定でOR検索です。<br> ・TC-SC-xxxxxxで現される規定値です。<br> ・DicitonaryServiceから返ってくるTC-SC-xxxxxxをそのまま指定です。<br> ・最大50件です。 </div> <div lang=\"en\"> Array of categories.<br> ・Category of URL<br> ・Exact match<br> ・Search multiple specific keywords (OR)<br> ・From value: TC-SC-xxxxxx<br> ・Choose the TC-SC-xxxxxx value from DictionaryService<br> ・Maximum of 50 cases </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> カテゴリの配列です。<br> ・URLのカテゴリです。<br> ・完全一致です。<br> ・複数指定でOR検索です。<br> ・TC-SC-xxxxxxで現される規定値です。<br> ・DicitonaryServiceから返ってくるTC-SC-xxxxxxをそのまま指定です。<br> ・最大50件です。<br> ※現在利用できません </div> <div lang=\"en\"> Array of categories.<br> ・Category of URL<br> ・Exact match<br> ・Search multiple specific keywords (OR)<br> ・From value: TC-SC-xxxxxx<br> ・Choose the TC-SC-xxxxxx value from DictionaryService<br> ・Maximum of 50 cases<br> * Not Available. </div> ")
   @JsonProperty(JSON_PROPERTY_SITE_CATEGORIES)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
