@@ -385,7 +385,7 @@ public class Account {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のYahoo! JAPANビジネスIDです。&lt;br&gt; MCCアカウントの場合、このフィールドは返却されず、リクエストの際も無視されます。&lt;br&gt; テストアカウントの場合、このフィールドは更新できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact business ID.&lt;br&gt; If isManagerAccount is \&quot;TRUE\&quot;, this field will not be returned and will be ignored on request.&lt;br&gt; If isTestAccount is \&quot;TRUE\&quot;, this field cannot be updated.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント管理者のビジネスIDです。&lt;br&gt; MCCアカウントの場合、このフィールドは返却されず、リクエストの際も無視されます。&lt;br&gt; テストアカウントの場合、このフィールドは更新できません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contact business ID.&lt;br&gt; If isManagerAccount is \&quot;TRUE\&quot;, this field will not be returned and will be ignored on request.&lt;br&gt; If isTestAccount is \&quot;TRUE\&quot;, this field cannot be updated.&lt;/div&gt; 
    * @return contactBizId
   **/
   @jakarta.annotation.Nullable

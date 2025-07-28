@@ -55,7 +55,7 @@ public class BaseAccountServicePage {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションによるYahoo!広告へのアクセスを認可したYahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Yahoo! JAPAN Business ID that authorized access to Yahoo! JAPAN Ads via application.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションによるYahoo!広告へのアクセスを認可したビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Business ID that authorized access to Yahoo! JAPAN Ads via application.&lt;/div&gt; 
    * @return authorizationBusinessId
   **/
   @jakarta.annotation.Nullable
