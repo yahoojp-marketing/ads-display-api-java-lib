@@ -324,11 +324,11 @@ public class AccountManagement {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウント管理者のYahoo! JAPANビジネスIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contact business ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウント管理者のビジネスIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contact business ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return contactBizId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\"> アカウント管理者のYahoo! JAPANビジネスIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Contact business ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\"> アカウント管理者のビジネスIDです。<br> このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 </div> <div lang=\"en\"> Contact business ID.<br> Although this field will be returned in the response, it will be ignored on input. </div> ")
   @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

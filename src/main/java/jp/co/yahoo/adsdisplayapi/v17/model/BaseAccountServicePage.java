@@ -59,11 +59,11 @@ public class BaseAccountServicePage {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションによるYahoo!広告へのアクセスを認可したYahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Yahoo! JAPAN Business ID that authorized access to Yahoo! JAPAN Ads via application.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリケーションによるYahoo!広告へのアクセスを認可したビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Business ID that authorized access to Yahoo! JAPAN Ads via application.&lt;/div&gt; 
    * @return authorizationBusinessId
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションによるYahoo!広告へのアクセスを認可したYahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Yahoo! JAPAN Business ID that authorized access to Yahoo! JAPAN Ads via application.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">アプリケーションによるYahoo!広告へのアクセスを認可したビジネスIDです。</div> <div lang=\"en\">Business ID that authorized access to Yahoo! JAPAN Ads via application.</div> ")
   @JsonProperty(JSON_PROPERTY_AUTHORIZATION_BUSINESS_ID)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 

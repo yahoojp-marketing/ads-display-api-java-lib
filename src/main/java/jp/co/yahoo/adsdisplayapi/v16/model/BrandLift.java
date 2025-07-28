@@ -417,11 +417,11 @@ public class BrandLift {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;連絡先Yahoo! JAPANビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Yahoo! JAPAN Business ID to send notifications.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;連絡先ビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Business ID to send notifications.&lt;/div&gt; 
    * @return notificationBusinessIds
   **/
   @javax.annotation.Nullable
-  @ApiModelProperty(value = "<div lang=\"ja\">連絡先Yahoo! JAPANビジネスIDです。</div> <div lang=\"en\">Yahoo! JAPAN Business ID to send notifications.</div> ")
+  @ApiModelProperty(value = "<div lang=\"ja\">連絡先ビジネスIDです。</div> <div lang=\"en\">Business ID to send notifications.</div> ")
   @JsonProperty(JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
