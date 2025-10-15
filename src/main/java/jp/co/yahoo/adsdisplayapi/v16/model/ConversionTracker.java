@@ -561,7 +561,7 @@ public class ConversionTracker {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 計測期間（単位：日）です。&lt;br&gt; ※7～90の範囲内で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は30となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (unit: day).&lt;br&gt; ∗ Can be specified within the range of 7 to 90 days.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 30. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 計測期間（単位：日）です。&lt;br&gt; ※1～90の範囲内で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は30となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (unit: day).&lt;br&gt; ∗ Can be specified within the range of 1 to 90 days.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 30. &lt;/div&gt; 
    * @return measurementPeriod
   **/
   @jakarta.annotation.Nullable

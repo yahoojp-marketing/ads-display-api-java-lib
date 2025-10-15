@@ -776,7 +776,7 @@ public class Campaign {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン掲載タイプです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; CampaignDeliveryTypeを指定してのキャンペーン作成は、一部の利用者向けの機能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign delivery type.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; Creating a campaign with the CampaignDeliveryType specified is a function for some users. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン掲載タイプです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; CampaignDeliveryTypeを指定してのキャンペーン作成は、一部の利用者向けの機能となります。&lt;br&gt; ※キャンペーン掲載タイプ PRIVATE_MARKET_PLACE はレスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign delivery type.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; Creating a campaign with the CampaignDeliveryType specified is a function for some users.&lt;br&gt; *Campaign delivery type PRIVATE_MARKET_PLACE will be returned in the response, but will be ignored in the request. &lt;/div&gt; 
    * @return campaignDeliveryType
   **/
   @jakarta.annotation.Nullable

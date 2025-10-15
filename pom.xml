@@ -4,7 +4,7 @@
 
   <groupId>jp.co.yahoo.api-ads</groupId>
   <artifactId>ads-display-api-lib</artifactId>
-  <version>11.1.0</version>
+  <version>12.0.0</version>
 
   <name>ads-display-api-lib</name>
   <description>Yahoo! JAPAN Ads Display Ads API library for Java</description>
@@ -57,12 +57,12 @@
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>6.2.3</version>
+      <version>6.2.11</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>6.2.3</version>
+      <version>6.2.11</version>
     </dependency>
     <dependency>
       <groupId>org.springframework.retry</groupId>
