@@ -292,7 +292,7 @@ public class ConversionTrackerServicePage {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
   **/
   @jakarta.annotation.Nullable
