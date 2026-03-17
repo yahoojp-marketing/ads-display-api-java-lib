@@ -670,7 +670,7 @@ public class ConversionTracker {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの収益値です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は0.0となります。 2026年3月を目処に、本項目のレスポンスにて小数点以下が0以外の値が返却されるようになります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Revenue value for conversions.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 0.0. Starting around March 2026, the response for this field will return values with non-zero decimal places. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの収益値です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は0.0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Revenue value for conversions.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 0.0. &lt;/div&gt; 
    * @return userRevenueValue
   **/
   @jakarta.annotation.Nullable
