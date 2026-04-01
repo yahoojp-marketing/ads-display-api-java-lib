@@ -1,4 +1,4 @@
-# Yahoo! JAPAN Ads Display Ads API Client Library for Java
+# LY Ads Display Ads API Client Library for Java
 
 ## 概要
 
@@ -136,7 +136,7 @@ System.setProperty("jp.co.yahoo.adsdisplayapi.oauth2.retry.max_interval", "2000"
 System.setProperty("jp.co.yahoo.adsdisplayapi.oauth2.retry.max_attempts", "1");
 ```
 
-## ご注意：Yahoo!広告 ディスプレイ広告 API - ライブラリの利用に関して
+## ご注意：LINEヤフー広告 ディスプレイ広告 API - ライブラリの利用に関して
 
 LINEヤフー株式会社の提供するAPIに関するライブラリは、別途LINEヤフー株式会社との間で締結いただいた当該APIの提供に関する契約に基づき、APIユーザー様に提供されるものであり、LINEヤフー株式会社との間で当該契約を締結いただいていない場合は、ライブラリをご利用いただけません。  
 また、APIユーザー様に予め通知することなく、ライブラリの内容や仕様の変更または提供の停止もしくは中止をする場合があります。ご了承のうえご利用ください。  
