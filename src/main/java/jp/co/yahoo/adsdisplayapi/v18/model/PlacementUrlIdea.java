@@ -318,7 +318,7 @@ public class PlacementUrlIdea {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デバイス合算のリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total reach number of Device (1000 in the case of 0) *Not available&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デバイス合算のリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total reach number of Device (1000 in the case of 0)&lt;/div&gt; 
    * @return reaches
   **/
   @jakarta.annotation.Nullable
@@ -344,7 +344,7 @@ public class PlacementUrlIdea {
   }
 
    /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デバイス合算のADリクエスト数。&lt;br&gt; ・1000未満の時は0が取得されます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total AD number of Device (1000 in the case of 0) *Not available&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デバイス合算のADリクエスト数。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total AD number of Device (1000 in the case of 0)&lt;/div&gt; 
    * @return adRequests
   **/
   @jakarta.annotation.Nullable
