@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.RecommendationServiceAdGroup;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceDuplicateTargetingSettingsAdGroupオブジェクトは、ターゲティング設定が重複している広告グループに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceDuplicateTargetingSettingsAdGroup object describes detailed information of recommendations about the ad group with duplicate targeting settings.&lt;/div&gt; 
@@ -35,35 +36,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceDuplicateTargetingSettingsAdGroup.JSON_PROPERTY_CAMPAIGN_NAME,
   RecommendationServiceDuplicateTargetingSettingsAdGroup.JSON_PROPERTY_AD_GROUP_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
+  @jakarta.annotation.Nullable
   private Long recommendationId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_AD_GROUP_LIST = "adGroupList";
+  @jakarta.annotation.Nullable
   private List<RecommendationServiceAdGroup> adGroupList;
 
   public RecommendationServiceDuplicateTargetingSettingsAdGroup() {
   }
 
-  public RecommendationServiceDuplicateTargetingSettingsAdGroup recommendationId(Long recommendationId) {
+  public RecommendationServiceDuplicateTargetingSettingsAdGroup recommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     
     this.recommendationId = recommendationId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendationId() {
@@ -71,25 +76,24 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendationId(Long recommendationId) {
+  public void setRecommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
-
-  public RecommendationServiceDuplicateTargetingSettingsAdGroup campaignId(Long campaignId) {
+  public RecommendationServiceDuplicateTargetingSettingsAdGroup campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -97,25 +101,24 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public RecommendationServiceDuplicateTargetingSettingsAdGroup campaignName(String campaignName) {
+  public RecommendationServiceDuplicateTargetingSettingsAdGroup campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -123,14 +126,13 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public RecommendationServiceDuplicateTargetingSettingsAdGroup adGroupList(List<RecommendationServiceAdGroup> adGroupList) {
+  public RecommendationServiceDuplicateTargetingSettingsAdGroup adGroupList(@jakarta.annotation.Nullable List<RecommendationServiceAdGroup> adGroupList) {
     
     this.adGroupList = adGroupList;
     return this;
@@ -144,12 +146,12 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
     return this;
   }
 
-   /**
+  /**
    * Get adGroupList
    * @return adGroupList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_LIST)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RecommendationServiceAdGroup> getAdGroupList() {
@@ -157,11 +159,12 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_LIST)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupList(List<RecommendationServiceAdGroup> adGroupList) {
+  public void setAdGroupList(@jakarta.annotation.Nullable List<RecommendationServiceAdGroup> adGroupList) {
     this.adGroupList = adGroupList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -200,10 +203,7 @@ public class RecommendationServiceDuplicateTargetingSettingsAdGroup {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

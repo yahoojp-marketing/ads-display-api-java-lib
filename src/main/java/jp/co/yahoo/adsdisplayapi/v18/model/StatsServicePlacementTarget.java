@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.StatsServicePlacementUrlListType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServicePlacementTargetオブジェクトは、プレイスメントターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServicePlacementTarget object holds configuration information of placement targeting.&lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServicePlacementTarget.JSON_PROPERTY_PLACEMENT_URL_LIST_NAME,
   StatsServicePlacementTarget.JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServicePlacementTarget {
   public static final String JSON_PROPERTY_PLACEMENT_URL_LIST_NAME = "placementUrlListName";
+  @jakarta.annotation.Nullable
   private String placementUrlListName;
 
   public static final String JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE = "placementUrlListType";
+  @jakarta.annotation.Nullable
   private StatsServicePlacementUrlListType placementUrlListType;
 
   public StatsServicePlacementTarget() {
   }
 
-  public StatsServicePlacementTarget placementUrlListName(String placementUrlListName) {
+  public StatsServicePlacementTarget placementUrlListName(@jakarta.annotation.Nullable String placementUrlListName) {
     
     this.placementUrlListName = placementUrlListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;プレイスメントURLリスト名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Placement Url List Name&lt;/div&gt; 
    * @return placementUrlListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_URL_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPlacementUrlListName() {
@@ -61,25 +63,24 @@ public class StatsServicePlacementTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_URL_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementUrlListName(String placementUrlListName) {
+  public void setPlacementUrlListName(@jakarta.annotation.Nullable String placementUrlListName) {
     this.placementUrlListName = placementUrlListName;
   }
 
-
-  public StatsServicePlacementTarget placementUrlListType(StatsServicePlacementUrlListType placementUrlListType) {
+  public StatsServicePlacementTarget placementUrlListType(@jakarta.annotation.Nullable StatsServicePlacementUrlListType placementUrlListType) {
     
     this.placementUrlListType = placementUrlListType;
     return this;
   }
 
-   /**
+  /**
    * Get placementUrlListType
    * @return placementUrlListType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServicePlacementUrlListType getPlacementUrlListType() {
@@ -87,11 +88,12 @@ public class StatsServicePlacementTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_URL_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementUrlListType(StatsServicePlacementUrlListType placementUrlListType) {
+  public void setPlacementUrlListType(@jakarta.annotation.Nullable StatsServicePlacementUrlListType placementUrlListType) {
     this.placementUrlListType = placementUrlListType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class StatsServicePlacementTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

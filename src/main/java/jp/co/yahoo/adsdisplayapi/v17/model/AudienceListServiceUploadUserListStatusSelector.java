@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceJobStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceUploadUserListStatusSelectorオブジェクトは、ユーザーリストのアップロード情報の検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AudienceListServiceUploadUserListStatusSelector object is a container for storing a set of criteria (parameters) for upload jobs of user list.&lt;/div&gt; 
@@ -36,38 +37,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceUploadUserListStatusSelector.JSON_PROPERTY_UPLOAD_JOB_IDS,
   AudienceListServiceUploadUserListStatusSelector.JSON_PROPERTY_JOB_STATUSES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceUploadUserListStatusSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 10;
 
   public static final String JSON_PROPERTY_UPLOAD_JOB_IDS = "uploadJobIds";
+  @jakarta.annotation.Nullable
   private List<String> uploadJobIds;
 
   public static final String JSON_PROPERTY_JOB_STATUSES = "jobStatuses";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceJobStatus> jobStatuses;
 
   public AudienceListServiceUploadUserListStatusSelector() {
   }
 
-  public AudienceListServiceUploadUserListStatusSelector accountId(Long accountId) {
+  public AudienceListServiceUploadUserListStatusSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -75,25 +81,24 @@ public class AudienceListServiceUploadUserListStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AudienceListServiceUploadUserListStatusSelector audienceListId(Long audienceListId) {
+  public AudienceListServiceUploadUserListStatusSelector audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAudienceListId() {
@@ -101,27 +106,26 @@ public class AudienceListServiceUploadUserListStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceListServiceUploadUserListStatusSelector numberResults(Integer numberResults) {
+  public AudienceListServiceUploadUserListStatusSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ページの最大件数です。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Maximum number of results to return in this page. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 100
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -129,14 +133,13 @@ public class AudienceListServiceUploadUserListStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public AudienceListServiceUploadUserListStatusSelector uploadJobIds(List<String> uploadJobIds) {
+  public AudienceListServiceUploadUserListStatusSelector uploadJobIds(@jakarta.annotation.Nullable List<String> uploadJobIds) {
     
     this.uploadJobIds = uploadJobIds;
     return this;
@@ -150,12 +153,12 @@ public class AudienceListServiceUploadUserListStatusSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload job ID.&lt;/div&gt; 
    * @return uploadJobIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_IDS)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_JOB_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getUploadJobIds() {
@@ -163,14 +166,13 @@ public class AudienceListServiceUploadUserListStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_IDS)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_JOB_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadJobIds(List<String> uploadJobIds) {
+  public void setUploadJobIds(@jakarta.annotation.Nullable List<String> uploadJobIds) {
     this.uploadJobIds = uploadJobIds;
   }
 
-
-  public AudienceListServiceUploadUserListStatusSelector jobStatuses(List<AudienceListServiceJobStatus> jobStatuses) {
+  public AudienceListServiceUploadUserListStatusSelector jobStatuses(@jakarta.annotation.Nullable List<AudienceListServiceJobStatus> jobStatuses) {
     
     this.jobStatuses = jobStatuses;
     return this;
@@ -184,12 +186,12 @@ public class AudienceListServiceUploadUserListStatusSelector {
     return this;
   }
 
-   /**
+  /**
    * Get jobStatuses
    * @return jobStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceJobStatus> getJobStatuses() {
@@ -197,11 +199,12 @@ public class AudienceListServiceUploadUserListStatusSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobStatuses(List<AudienceListServiceJobStatus> jobStatuses) {
+  public void setJobStatuses(@jakarta.annotation.Nullable List<AudienceListServiceJobStatus> jobStatuses) {
     this.jobStatuses = jobStatuses;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -242,10 +245,7 @@ public class AudienceListServiceUploadUserListStatusSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

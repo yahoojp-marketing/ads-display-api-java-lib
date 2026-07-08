@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceJobStatus;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceUploadUserListUploadSource;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceUploadUserListUploadType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceUploadUserListJobオブジェクトは、ユーザーリストのアップロードジョブの処理状況を示すオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceUploadUserListJob object indicates the processing status of user list upload.&lt;/div&gt; 
@@ -38,44 +38,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceUploadUserListJob.JSON_PROPERTY_JOB_STATUS,
   AudienceListServiceUploadUserListJob.JSON_PROPERTY_UPLOAD_SOURCE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceUploadUserListJob {
   public static final String JSON_PROPERTY_UPLOAD_JOB_ID = "uploadJobId";
+  @jakarta.annotation.Nullable
   private String uploadJobId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_UPLOAD_TYPE = "uploadType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceUploadUserListUploadType uploadType;
 
   public static final String JSON_PROPERTY_UPLOAD_SUBMIT_DATE = "uploadSubmitDate";
+  @jakarta.annotation.Nullable
   private String uploadSubmitDate;
 
   public static final String JSON_PROPERTY_RECEIVED_DATE = "receivedDate";
+  @jakarta.annotation.Nullable
   private String receivedDate;
 
   public static final String JSON_PROPERTY_JOB_STATUS = "jobStatus";
+  @jakarta.annotation.Nullable
   private AudienceListServiceJobStatus jobStatus;
 
   public static final String JSON_PROPERTY_UPLOAD_SOURCE = "uploadSource";
+  @jakarta.annotation.Nullable
   private AudienceListServiceUploadUserListUploadSource uploadSource;
 
   public AudienceListServiceUploadUserListJob() {
   }
 
-  public AudienceListServiceUploadUserListJob uploadJobId(String uploadJobId) {
+  public AudienceListServiceUploadUserListJob uploadJobId(@jakarta.annotation.Nullable String uploadJobId) {
     
     this.uploadJobId = uploadJobId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードジョブIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload job ID.&lt;/div&gt; 
    * @return uploadJobId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUploadJobId() {
@@ -83,25 +90,24 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadJobId(String uploadJobId) {
+  public void setUploadJobId(@jakarta.annotation.Nullable String uploadJobId) {
     this.uploadJobId = uploadJobId;
   }
 
-
-  public AudienceListServiceUploadUserListJob audienceListId(Long audienceListId) {
+  public AudienceListServiceUploadUserListJob audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -109,25 +115,24 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceListServiceUploadUserListJob uploadType(AudienceListServiceUploadUserListUploadType uploadType) {
+  public AudienceListServiceUploadUserListJob uploadType(@jakarta.annotation.Nullable AudienceListServiceUploadUserListUploadType uploadType) {
     
     this.uploadType = uploadType;
     return this;
   }
 
-   /**
+  /**
    * Get uploadType
    * @return uploadType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceUploadUserListUploadType getUploadType() {
@@ -135,25 +140,24 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadType(AudienceListServiceUploadUserListUploadType uploadType) {
+  public void setUploadType(@jakarta.annotation.Nullable AudienceListServiceUploadUserListUploadType uploadType) {
     this.uploadType = uploadType;
   }
 
-
-  public AudienceListServiceUploadUserListJob uploadSubmitDate(String uploadSubmitDate) {
+  public AudienceListServiceUploadUserListJob uploadSubmitDate(@jakarta.annotation.Nullable String uploadSubmitDate) {
     
     this.uploadSubmitDate = uploadSubmitDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード日時&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload date and time.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return uploadSubmitDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_SUBMIT_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_SUBMIT_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUploadSubmitDate() {
@@ -161,25 +165,24 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_SUBMIT_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_SUBMIT_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadSubmitDate(String uploadSubmitDate) {
+  public void setUploadSubmitDate(@jakarta.annotation.Nullable String uploadSubmitDate) {
     this.uploadSubmitDate = uploadSubmitDate;
   }
 
-
-  public AudienceListServiceUploadUserListJob receivedDate(String receivedDate) {
+  public AudienceListServiceUploadUserListJob receivedDate(@jakarta.annotation.Nullable String receivedDate) {
     
     this.receivedDate = receivedDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード受付完了日時&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload job completion date and time.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return receivedDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECEIVED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_RECEIVED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReceivedDate() {
@@ -187,25 +190,24 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECEIVED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_RECEIVED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReceivedDate(String receivedDate) {
+  public void setReceivedDate(@jakarta.annotation.Nullable String receivedDate) {
     this.receivedDate = receivedDate;
   }
 
-
-  public AudienceListServiceUploadUserListJob jobStatus(AudienceListServiceJobStatus jobStatus) {
+  public AudienceListServiceUploadUserListJob jobStatus(@jakarta.annotation.Nullable AudienceListServiceJobStatus jobStatus) {
     
     this.jobStatus = jobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get jobStatus
    * @return jobStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceJobStatus getJobStatus() {
@@ -213,25 +215,24 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobStatus(AudienceListServiceJobStatus jobStatus) {
+  public void setJobStatus(@jakarta.annotation.Nullable AudienceListServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
-
-  public AudienceListServiceUploadUserListJob uploadSource(AudienceListServiceUploadUserListUploadSource uploadSource) {
+  public AudienceListServiceUploadUserListJob uploadSource(@jakarta.annotation.Nullable AudienceListServiceUploadUserListUploadSource uploadSource) {
     
     this.uploadSource = uploadSource;
     return this;
   }
 
-   /**
+  /**
    * Get uploadSource
    * @return uploadSource
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceUploadUserListUploadSource getUploadSource() {
@@ -239,11 +240,12 @@ public class AudienceListServiceUploadUserListJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadSource(AudienceListServiceUploadUserListUploadSource uploadSource) {
+  public void setUploadSource(@jakarta.annotation.Nullable AudienceListServiceUploadUserListUploadSource uploadSource) {
     this.uploadSource = uploadSource;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -288,10 +290,7 @@ public class AudienceListServiceUploadUserListJob {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupServiceEnhancedCpcEnabled;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCpcBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPC)の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpcBiddingScheme object holds configuration information of Max bid of ad group (CPC). &lt;/div&gt; 
@@ -33,32 +33,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceCpcBiddingScheme.JSON_PROPERTY_ENHANCED_CPC_ENABLED,
   AdGroupServiceCpcBiddingScheme.JSON_PROPERTY_IS_REMOVE_CPC
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceCpcBiddingScheme {
   public static final String JSON_PROPERTY_CPC = "cpc";
+  @jakarta.annotation.Nullable
   private Long cpc;
 
   public static final String JSON_PROPERTY_ENHANCED_CPC_ENABLED = "enhancedCpcEnabled";
+  @jakarta.annotation.Nullable
   private AdGroupServiceEnhancedCpcEnabled enhancedCpcEnabled;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CPC = "isRemoveCpc";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveCpc;
 
   public AdGroupServiceCpcBiddingScheme() {
   }
 
-  public AdGroupServiceCpcBiddingScheme cpc(Long cpc) {
+  public AdGroupServiceCpcBiddingScheme cpc(@jakarta.annotation.Nullable Long cpc) {
     
     this.cpc = cpc;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格（CPC）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがCPCの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (CPC).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is CPC. &lt;/div&gt; 
    * @return cpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPC)
+  @JsonProperty(value = JSON_PROPERTY_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCpc() {
@@ -66,25 +69,24 @@ public class AdGroupServiceCpcBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPC)
+  @JsonProperty(value = JSON_PROPERTY_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpc(Long cpc) {
+  public void setCpc(@jakarta.annotation.Nullable Long cpc) {
     this.cpc = cpc;
   }
 
-
-  public AdGroupServiceCpcBiddingScheme enhancedCpcEnabled(AdGroupServiceEnhancedCpcEnabled enhancedCpcEnabled) {
+  public AdGroupServiceCpcBiddingScheme enhancedCpcEnabled(@jakarta.annotation.Nullable AdGroupServiceEnhancedCpcEnabled enhancedCpcEnabled) {
     
     this.enhancedCpcEnabled = enhancedCpcEnabled;
     return this;
   }
 
-   /**
+  /**
    * Get enhancedCpcEnabled
    * @return enhancedCpcEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENHANCED_CPC_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ENHANCED_CPC_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceEnhancedCpcEnabled getEnhancedCpcEnabled() {
@@ -92,25 +94,24 @@ public class AdGroupServiceCpcBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENHANCED_CPC_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ENHANCED_CPC_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEnhancedCpcEnabled(AdGroupServiceEnhancedCpcEnabled enhancedCpcEnabled) {
+  public void setEnhancedCpcEnabled(@jakarta.annotation.Nullable AdGroupServiceEnhancedCpcEnabled enhancedCpcEnabled) {
     this.enhancedCpcEnabled = enhancedCpcEnabled;
   }
 
-
-  public AdGroupServiceCpcBiddingScheme isRemoveCpc(AdGroupServiceIsRemoveFlg isRemoveCpc) {
+  public AdGroupServiceCpcBiddingScheme isRemoveCpc(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveCpc) {
     
     this.isRemoveCpc = isRemoveCpc;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCpc
    * @return isRemoveCpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CPC)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveCpc() {
@@ -118,11 +119,12 @@ public class AdGroupServiceCpcBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CPC)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCpc(AdGroupServiceIsRemoveFlg isRemoveCpc) {
+  public void setIsRemoveCpc(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveCpc) {
     this.isRemoveCpc = isRemoveCpc;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -159,10 +161,7 @@ public class AdGroupServiceCpcBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceStatus;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupServiceConversionオブジェクトは、コンバージョン測定タグなどのコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroupServiceConversion object shows ConversionTracker settings such as ConversionTag.&lt;/div&gt; 
@@ -35,38 +35,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionGroupServiceConversion.JSON_PROPERTY_CONVERSION_TAG_NAME,
   ConversionGroupServiceConversion.JSON_PROPERTY_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionGroupServiceConversion {
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_ID = "conversionTrackerId";
+  @jakarta.annotation.Nullable
   private Long conversionTrackerId;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_TYPE = "conversionTrackerType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceType conversionTrackerType;
 
   public static final String JSON_PROPERTY_CONVERSION_TAG_ID = "conversionTagId";
+  @jakarta.annotation.Nullable
   private Long conversionTagId;
 
   public static final String JSON_PROPERTY_CONVERSION_TAG_NAME = "conversionTagName";
+  @jakarta.annotation.Nullable
   private String conversionTagName;
 
   public static final String JSON_PROPERTY_STATUS = "status";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceStatus status;
 
   public ConversionGroupServiceConversion() {
   }
 
-  public ConversionGroupServiceConversion conversionTrackerId(Long conversionTrackerId) {
+  public ConversionGroupServiceConversion conversionTrackerId(@jakarta.annotation.Nullable Long conversionTrackerId) {
     
     this.conversionTrackerId = conversionTrackerId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカーIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion tracker ID.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return conversionTrackerId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionTrackerId() {
@@ -74,25 +79,24 @@ public class ConversionGroupServiceConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerId(Long conversionTrackerId) {
+  public void setConversionTrackerId(@jakarta.annotation.Nullable Long conversionTrackerId) {
     this.conversionTrackerId = conversionTrackerId;
   }
 
-
-  public ConversionGroupServiceConversion conversionTrackerType(ConversionTrackerServiceType conversionTrackerType) {
+  public ConversionGroupServiceConversion conversionTrackerType(@jakarta.annotation.Nullable ConversionTrackerServiceType conversionTrackerType) {
     
     this.conversionTrackerType = conversionTrackerType;
     return this;
   }
 
-   /**
+  /**
    * Get conversionTrackerType
    * @return conversionTrackerType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceType getConversionTrackerType() {
@@ -100,25 +104,24 @@ public class ConversionGroupServiceConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerType(ConversionTrackerServiceType conversionTrackerType) {
+  public void setConversionTrackerType(@jakarta.annotation.Nullable ConversionTrackerServiceType conversionTrackerType) {
     this.conversionTrackerType = conversionTrackerType;
   }
 
-
-  public ConversionGroupServiceConversion conversionTagId(Long conversionTagId) {
+  public ConversionGroupServiceConversion conversionTagId(@jakarta.annotation.Nullable Long conversionTagId) {
     
     this.conversionTagId = conversionTagId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンタグIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion tag ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionTagId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionTagId() {
@@ -126,25 +129,24 @@ public class ConversionGroupServiceConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTagId(Long conversionTagId) {
+  public void setConversionTagId(@jakarta.annotation.Nullable Long conversionTagId) {
     this.conversionTagId = conversionTagId;
   }
 
-
-  public ConversionGroupServiceConversion conversionTagName(String conversionTagName) {
+  public ConversionGroupServiceConversion conversionTagName(@jakarta.annotation.Nullable String conversionTagName) {
     
     this.conversionTagName = conversionTagName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンタグ名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion tag name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return conversionTagName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TAG_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TAG_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConversionTagName() {
@@ -152,25 +154,24 @@ public class ConversionGroupServiceConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TAG_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TAG_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTagName(String conversionTagName) {
+  public void setConversionTagName(@jakarta.annotation.Nullable String conversionTagName) {
     this.conversionTagName = conversionTagName;
   }
 
-
-  public ConversionGroupServiceConversion status(ConversionTrackerServiceStatus status) {
+  public ConversionGroupServiceConversion status(@jakarta.annotation.Nullable ConversionTrackerServiceStatus status) {
     
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceStatus getStatus() {
@@ -178,11 +179,12 @@ public class ConversionGroupServiceConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatus(ConversionTrackerServiceStatus status) {
+  public void setStatus(@jakarta.annotation.Nullable ConversionTrackerServiceStatus status) {
     this.status = status;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -223,10 +225,7 @@ public class ConversionGroupServiceConversion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

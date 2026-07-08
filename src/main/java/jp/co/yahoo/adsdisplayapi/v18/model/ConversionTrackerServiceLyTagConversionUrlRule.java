@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceLyTagConversionCompareOperator;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; このフィールドは、計測タグのURLフィルター条件を表します。&lt;br&gt; ADDおよびSET時は省略可能となります。ADDおよびSET時、ruleTypeがURLの場合、必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This field describes the URL filter condition for the tracking tag.&lt;br&gt; This field is optional in ADD and SET operation. If ruleType is URL, this field is required in ADD and SET operation. &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceLyTagConversionUrlRule.JSON_PROPERTY_COMPARE_OPERATOR,
   ConversionTrackerServiceLyTagConversionUrlRule.JSON_PROPERTY_URL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceLyTagConversionUrlRule {
   public static final String JSON_PROPERTY_COMPARE_OPERATOR = "compareOperator";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceLyTagConversionCompareOperator compareOperator;
 
   public static final String JSON_PROPERTY_URL = "url";
+  @jakarta.annotation.Nullable
   private String url;
 
   public ConversionTrackerServiceLyTagConversionUrlRule() {
   }
 
-  public ConversionTrackerServiceLyTagConversionUrlRule compareOperator(ConversionTrackerServiceLyTagConversionCompareOperator compareOperator) {
+  public ConversionTrackerServiceLyTagConversionUrlRule compareOperator(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversionCompareOperator compareOperator) {
     
     this.compareOperator = compareOperator;
     return this;
   }
 
-   /**
+  /**
    * Get compareOperator
    * @return compareOperator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMPARE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_COMPARE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceLyTagConversionCompareOperator getCompareOperator() {
@@ -61,25 +63,24 @@ public class ConversionTrackerServiceLyTagConversionUrlRule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMPARE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_COMPARE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCompareOperator(ConversionTrackerServiceLyTagConversionCompareOperator compareOperator) {
+  public void setCompareOperator(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversionCompareOperator compareOperator) {
     this.compareOperator = compareOperator;
   }
 
-
-  public ConversionTrackerServiceLyTagConversionUrlRule url(String url) {
+  public ConversionTrackerServiceLyTagConversionUrlRule url(@jakarta.annotation.Nullable String url) {
     
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ルールで評価するURLです。&lt;br&gt; ADDおよびSET時は省略可能となります。ADDおよびSET時、ruleTypeがURLの場合、必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This field describes the URL to be evaluated by the rule.&lt;br&gt; This field is optional in ADD and SET operation. If ruleType is URL, this field is required in ADD and SET operation. &lt;/div&gt; 
    * @return url
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonProperty(value = JSON_PROPERTY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUrl() {
@@ -87,11 +88,12 @@ public class ConversionTrackerServiceLyTagConversionUrlRule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonProperty(value = JSON_PROPERTY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrl(String url) {
+  public void setUrl(@jakarta.annotation.Nullable String url) {
     this.url = url;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class ConversionTrackerServiceLyTagConversionUrlRule {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

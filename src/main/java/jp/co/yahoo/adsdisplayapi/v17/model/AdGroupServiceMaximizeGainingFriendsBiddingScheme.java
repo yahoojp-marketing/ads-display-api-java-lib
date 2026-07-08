@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeGainingFriendsBiddingSchemeオブジェクトは、広告グループ目標単価（tCPF）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeGainingFriendsBiddingScheme object holds configuration information of Target CPF (tCPF) of ad group. &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceMaximizeGainingFriendsBiddingScheme.JSON_PROPERTY_TARGET_CPF,
   AdGroupServiceMaximizeGainingFriendsBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPF
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceMaximizeGainingFriendsBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPF = "targetCpf";
+  @jakarta.annotation.Nullable
   private Long targetCpf;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_CPF = "isRemoveTargetCpf";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveTargetCpf;
 
   public AdGroupServiceMaximizeGainingFriendsBiddingScheme() {
   }
 
-  public AdGroupServiceMaximizeGainingFriendsBiddingScheme targetCpf(Long targetCpf) {
+  public AdGroupServiceMaximizeGainingFriendsBiddingScheme targetCpf(@jakarta.annotation.Nullable Long targetCpf) {
     
     this.targetCpf = targetCpf;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ目標単価（tCPF）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_GAINING_FRIENDSの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target CPF (tCPF) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_GAINING_FRIENDS. &lt;/div&gt; 
    * @return targetCpf
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_CPF)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetCpf() {
@@ -61,25 +63,24 @@ public class AdGroupServiceMaximizeGainingFriendsBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_CPF)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetCpf(Long targetCpf) {
+  public void setTargetCpf(@jakarta.annotation.Nullable Long targetCpf) {
     this.targetCpf = targetCpf;
   }
 
-
-  public AdGroupServiceMaximizeGainingFriendsBiddingScheme isRemoveTargetCpf(AdGroupServiceIsRemoveFlg isRemoveTargetCpf) {
+  public AdGroupServiceMaximizeGainingFriendsBiddingScheme isRemoveTargetCpf(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetCpf) {
     
     this.isRemoveTargetCpf = isRemoveTargetCpf;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTargetCpf
    * @return isRemoveTargetCpf
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPF)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveTargetCpf() {
@@ -87,11 +88,12 @@ public class AdGroupServiceMaximizeGainingFriendsBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPF)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTargetCpf(AdGroupServiceIsRemoveFlg isRemoveTargetCpf) {
+  public void setIsRemoveTargetCpf(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetCpf) {
     this.isRemoveTargetCpf = isRemoveTargetCpf;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class AdGroupServiceMaximizeGainingFriendsBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

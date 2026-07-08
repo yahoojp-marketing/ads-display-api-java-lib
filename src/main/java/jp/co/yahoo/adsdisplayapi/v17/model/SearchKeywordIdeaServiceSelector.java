@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordIdeaServiceAvailabilityStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordIdeaServiceKeywordFrequency;
@@ -30,6 +30,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordIdeaServiceSortField;
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordIdeaServiceSortType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordIdeaServiceSelectorオブジェクトは、サーチターゲティング対象キーワードのリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordIdeaServiceSelector object displays the list of keyword for search targeting.&lt;/div&gt; 
@@ -46,53 +47,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SearchKeywordIdeaServiceSelector.JSON_PROPERTY_START_INDEX,
   SearchKeywordIdeaServiceSelector.JSON_PROPERTY_AVAILABILITY_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class SearchKeywordIdeaServiceSelector {
   public static final String JSON_PROPERTY_KEYWORD_FREQUENCY = "keywordFrequency";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceKeywordFrequency keywordFrequency;
 
   public static final String JSON_PROPERTY_KEYWORD_IDS = "keywordIds";
+  @jakarta.annotation.Nullable
   private List<Long> keywordIds;
 
   public static final String JSON_PROPERTY_KEYWORD_RECENCY = "keywordRecency";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceKeywordRecency keywordRecency;
 
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
+  @jakarta.annotation.Nullable
   private List<String> keywords;
 
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceMatchType matchType;
 
   public static final String JSON_PROPERTY_SORT_FIELD = "sortField";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceSortField sortField;
 
   public static final String JSON_PROPERTY_SORT_TYPE = "sortType";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceSortType sortType;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 1000;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_AVAILABILITY_STATUS = "availabilityStatus";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus;
 
   public SearchKeywordIdeaServiceSelector() {
   }
 
-  public SearchKeywordIdeaServiceSelector keywordFrequency(SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
+  public SearchKeywordIdeaServiceSelector keywordFrequency(@jakarta.annotation.Nullable SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
     
     this.keywordFrequency = keywordFrequency;
     return this;
   }
 
-   /**
+  /**
    * Get keywordFrequency
    * @return keywordFrequency
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_FREQUENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_FREQUENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceKeywordFrequency getKeywordFrequency() {
@@ -100,14 +111,13 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_FREQUENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_FREQUENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordFrequency(SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
+  public void setKeywordFrequency(@jakarta.annotation.Nullable SearchKeywordIdeaServiceKeywordFrequency keywordFrequency) {
     this.keywordFrequency = keywordFrequency;
   }
 
-
-  public SearchKeywordIdeaServiceSelector keywordIds(List<Long> keywordIds) {
+  public SearchKeywordIdeaServiceSelector keywordIds(@jakarta.annotation.Nullable List<Long> keywordIds) {
     
     this.keywordIds = keywordIds;
     return this;
@@ -121,12 +131,12 @@ public class SearchKeywordIdeaServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索条件：キーワードID&lt;br&gt; ※キーワード検索用&lt;br&gt; ※キーワード、キーワードIDの同時指定はできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition : Keyword ID.&lt;br&gt; *Keyword for searching.&lt;br&gt; *Can not specify Keyword and Keyword ID at the same time. &lt;/div&gt; 
    * @return keywordIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_IDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getKeywordIds() {
@@ -134,25 +144,24 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_IDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordIds(List<Long> keywordIds) {
+  public void setKeywordIds(@jakarta.annotation.Nullable List<Long> keywordIds) {
     this.keywordIds = keywordIds;
   }
 
-
-  public SearchKeywordIdeaServiceSelector keywordRecency(SearchKeywordIdeaServiceKeywordRecency keywordRecency) {
+  public SearchKeywordIdeaServiceSelector keywordRecency(@jakarta.annotation.Nullable SearchKeywordIdeaServiceKeywordRecency keywordRecency) {
     
     this.keywordRecency = keywordRecency;
     return this;
   }
 
-   /**
+  /**
    * Get keywordRecency
    * @return keywordRecency
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_RECENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_RECENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceKeywordRecency getKeywordRecency() {
@@ -160,14 +169,13 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_RECENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_RECENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordRecency(SearchKeywordIdeaServiceKeywordRecency keywordRecency) {
+  public void setKeywordRecency(@jakarta.annotation.Nullable SearchKeywordIdeaServiceKeywordRecency keywordRecency) {
     this.keywordRecency = keywordRecency;
   }
 
-
-  public SearchKeywordIdeaServiceSelector keywords(List<String> keywords) {
+  public SearchKeywordIdeaServiceSelector keywords(@jakarta.annotation.Nullable List<String> keywords) {
     
     this.keywords = keywords;
     return this;
@@ -181,12 +189,12 @@ public class SearchKeywordIdeaServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索条件：キーワード&lt;br&gt; ※キーワード提案用&lt;br&gt; ※キーワード、キーワードIDの同時指定はできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search condition : Keyword.&lt;br&gt; *Keyword for suggesting.&lt;br&gt; *Can not specify Keyword and Keyword ID at the same time. &lt;/div&gt; 
    * @return keywords
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getKeywords() {
@@ -194,25 +202,24 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywords(List<String> keywords) {
+  public void setKeywords(@jakarta.annotation.Nullable List<String> keywords) {
     this.keywords = keywords;
   }
 
-
-  public SearchKeywordIdeaServiceSelector matchType(SearchKeywordIdeaServiceMatchType matchType) {
+  public SearchKeywordIdeaServiceSelector matchType(@jakarta.annotation.Nullable SearchKeywordIdeaServiceMatchType matchType) {
     
     this.matchType = matchType;
     return this;
   }
 
-   /**
+  /**
    * Get matchType
    * @return matchType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceMatchType getMatchType() {
@@ -220,25 +227,24 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMatchType(SearchKeywordIdeaServiceMatchType matchType) {
+  public void setMatchType(@jakarta.annotation.Nullable SearchKeywordIdeaServiceMatchType matchType) {
     this.matchType = matchType;
   }
 
-
-  public SearchKeywordIdeaServiceSelector sortField(SearchKeywordIdeaServiceSortField sortField) {
+  public SearchKeywordIdeaServiceSelector sortField(@jakarta.annotation.Nullable SearchKeywordIdeaServiceSortField sortField) {
     
     this.sortField = sortField;
     return this;
   }
 
-   /**
+  /**
    * Get sortField
    * @return sortField
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceSortField getSortField() {
@@ -246,25 +252,24 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortField(SearchKeywordIdeaServiceSortField sortField) {
+  public void setSortField(@jakarta.annotation.Nullable SearchKeywordIdeaServiceSortField sortField) {
     this.sortField = sortField;
   }
 
-
-  public SearchKeywordIdeaServiceSelector sortType(SearchKeywordIdeaServiceSortType sortType) {
+  public SearchKeywordIdeaServiceSelector sortType(@jakarta.annotation.Nullable SearchKeywordIdeaServiceSortType sortType) {
     
     this.sortType = sortType;
     return this;
   }
 
-   /**
+  /**
    * Get sortType
    * @return sortType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceSortType getSortType() {
@@ -272,27 +277,26 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortType(SearchKeywordIdeaServiceSortType sortType) {
+  public void setSortType(@jakarta.annotation.Nullable SearchKeywordIdeaServiceSortType sortType) {
     this.sortType = sortType;
   }
 
-
-  public SearchKeywordIdeaServiceSelector numberResults(Integer numberResults) {
+  public SearchKeywordIdeaServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 1000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -300,26 +304,25 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public SearchKeywordIdeaServiceSelector startIndex(Integer startIndex) {
+  public SearchKeywordIdeaServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -327,25 +330,24 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public SearchKeywordIdeaServiceSelector availabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
+  public SearchKeywordIdeaServiceSelector availabilityStatus(@jakarta.annotation.Nullable SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     
     this.availabilityStatus = availabilityStatus;
     return this;
   }
 
-   /**
+  /**
    * Get availabilityStatus
    * @return availabilityStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVAILABILITY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_AVAILABILITY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceAvailabilityStatus getAvailabilityStatus() {
@@ -353,11 +355,12 @@ public class SearchKeywordIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVAILABILITY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_AVAILABILITY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvailabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
+  public void setAvailabilityStatus(@jakarta.annotation.Nullable SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     this.availabilityStatus = availabilityStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -408,10 +411,7 @@ public class SearchKeywordIdeaServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

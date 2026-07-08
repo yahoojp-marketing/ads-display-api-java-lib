@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceConversionPathReportCondition;
 import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceCrossCampaignReachesReportCondition;
@@ -27,6 +26,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceReachReportCon
 import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceReportType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceReportTypeConditionオブジェクトは、各レポートタイプごとのレポート作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceReportTypeCondition describes the condition to create each report type.   This field is optional in ADD operation, and will be ignored in REMOVE operation.  &lt;/div&gt; 
@@ -38,38 +38,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceReportTypeCondition.JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION,
   ReportDefinitionServiceReportTypeCondition.JSON_PROPERTY_REPORT_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceReportTypeCondition {
   public static final String JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION = "conversionPathReportCondition";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION = "crossCampaignReachesReportCondition";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition;
 
   public static final String JSON_PROPERTY_REACH_REPORT_CONDITION = "reachReportCondition";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReachReportCondition reachReportCondition;
 
   public static final String JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION = "modelComparisonReportCondition";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceModelComparisonReportCondition modelComparisonReportCondition;
 
   public static final String JSON_PROPERTY_REPORT_TYPE = "reportType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportType reportType;
 
   public ReportDefinitionServiceReportTypeCondition() {
   }
 
-  public ReportDefinitionServiceReportTypeCondition conversionPathReportCondition(ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
+  public ReportDefinitionServiceReportTypeCondition conversionPathReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
     
     this.conversionPathReportCondition = conversionPathReportCondition;
     return this;
   }
 
-   /**
+  /**
    * Get conversionPathReportCondition
    * @return conversionPathReportCondition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceConversionPathReportCondition getConversionPathReportCondition() {
@@ -77,25 +82,24 @@ public class ReportDefinitionServiceReportTypeCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_PATH_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionPathReportCondition(ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
+  public void setConversionPathReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceConversionPathReportCondition conversionPathReportCondition) {
     this.conversionPathReportCondition = conversionPathReportCondition;
   }
 
-
-  public ReportDefinitionServiceReportTypeCondition crossCampaignReachesReportCondition(ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition) {
+  public ReportDefinitionServiceReportTypeCondition crossCampaignReachesReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition) {
     
     this.crossCampaignReachesReportCondition = crossCampaignReachesReportCondition;
     return this;
   }
 
-   /**
+  /**
    * Get crossCampaignReachesReportCondition
    * @return crossCampaignReachesReportCondition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition getCrossCampaignReachesReportCondition() {
@@ -103,25 +107,24 @@ public class ReportDefinitionServiceReportTypeCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_REACHES_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossCampaignReachesReportCondition(ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition) {
+  public void setCrossCampaignReachesReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignReachesReportCondition) {
     this.crossCampaignReachesReportCondition = crossCampaignReachesReportCondition;
   }
 
-
-  public ReportDefinitionServiceReportTypeCondition reachReportCondition(ReportDefinitionServiceReachReportCondition reachReportCondition) {
+  public ReportDefinitionServiceReportTypeCondition reachReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceReachReportCondition reachReportCondition) {
     
     this.reachReportCondition = reachReportCondition;
     return this;
   }
 
-   /**
+  /**
    * Get reachReportCondition
    * @return reachReportCondition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_REACH_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReachReportCondition getReachReportCondition() {
@@ -129,25 +132,24 @@ public class ReportDefinitionServiceReportTypeCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_REACH_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReachReportCondition(ReportDefinitionServiceReachReportCondition reachReportCondition) {
+  public void setReachReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceReachReportCondition reachReportCondition) {
     this.reachReportCondition = reachReportCondition;
   }
 
-
-  public ReportDefinitionServiceReportTypeCondition modelComparisonReportCondition(ReportDefinitionServiceModelComparisonReportCondition modelComparisonReportCondition) {
+  public ReportDefinitionServiceReportTypeCondition modelComparisonReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceModelComparisonReportCondition modelComparisonReportCondition) {
     
     this.modelComparisonReportCondition = modelComparisonReportCondition;
     return this;
   }
 
-   /**
+  /**
    * Get modelComparisonReportCondition
    * @return modelComparisonReportCondition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceModelComparisonReportCondition getModelComparisonReportCondition() {
@@ -155,25 +157,24 @@ public class ReportDefinitionServiceReportTypeCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_MODEL_COMPARISON_REPORT_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setModelComparisonReportCondition(ReportDefinitionServiceModelComparisonReportCondition modelComparisonReportCondition) {
+  public void setModelComparisonReportCondition(@jakarta.annotation.Nullable ReportDefinitionServiceModelComparisonReportCondition modelComparisonReportCondition) {
     this.modelComparisonReportCondition = modelComparisonReportCondition;
   }
 
-
-  public ReportDefinitionServiceReportTypeCondition reportType(ReportDefinitionServiceReportType reportType) {
+  public ReportDefinitionServiceReportTypeCondition reportType(@jakarta.annotation.Nullable ReportDefinitionServiceReportType reportType) {
     
     this.reportType = reportType;
     return this;
   }
 
-   /**
+  /**
    * Get reportType
    * @return reportType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportType getReportType() {
@@ -181,11 +182,12 @@ public class ReportDefinitionServiceReportTypeCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportType(ReportDefinitionServiceReportType reportType) {
+  public void setReportType(@jakarta.annotation.Nullable ReportDefinitionServiceReportType reportType) {
     this.reportType = reportType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -226,10 +228,7 @@ public class ReportDefinitionServiceReportTypeCondition {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

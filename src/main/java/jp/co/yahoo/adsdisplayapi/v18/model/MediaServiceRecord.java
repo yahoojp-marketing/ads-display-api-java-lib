@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.MediaServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v18.model.MediaServiceCampaignBannerFlg;
@@ -31,6 +31,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.MediaServiceThumbnailFlg;
 import jp.co.yahoo.adsdisplayapi.v18.model.MediaServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MediaServiceRecordオブジェクトは、画像の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The MediaServiceRecord object is a container for the information of media (image data).&lt;/div&gt; 
@@ -51,65 +52,79 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MediaServiceRecord.JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG,
   MediaServiceRecord.JSON_PROPERTY_CREATED_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class MediaServiceRecord {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private MediaServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BANNER_FLG = "campaignBannerFlg";
+  @jakarta.annotation.Nullable
   private MediaServiceCampaignBannerFlg campaignBannerFlg;
 
   public static final String JSON_PROPERTY_REVIEW_APPLICATION_DATE = "reviewApplicationDate";
+  @jakarta.annotation.Nullable
   private String reviewApplicationDate;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_LOGO_FLG = "logoFlg";
+  @jakarta.annotation.Nullable
   private MediaServiceLogoFlg logoFlg;
 
   public static final String JSON_PROPERTY_IMAGE_MEDIA = "imageMedia";
+  @jakarta.annotation.Nullable
   private MediaServiceImageMedia imageMedia;
 
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
+  @jakarta.annotation.Nullable
   private Long mediaId;
 
   public static final String JSON_PROPERTY_MEDIA_NAME = "mediaName";
+  @jakarta.annotation.Nullable
   private String mediaName;
 
   public static final String JSON_PROPERTY_MEDIA_TITLE = "mediaTitle";
+  @jakarta.annotation.Nullable
   private String mediaTitle;
 
   public static final String JSON_PROPERTY_THUMBNAIL_FLG = "thumbnailFlg";
+  @jakarta.annotation.Nullable
   private MediaServiceThumbnailFlg thumbnailFlg;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private MediaServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG = "mediaRichFormatFlg";
+  @jakarta.annotation.Nullable
   private MediaServiceRichFormatFlg mediaRichFormatFlg;
 
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
+  @jakarta.annotation.Nullable
   private String createdDate;
 
   public MediaServiceRecord() {
   }
 
-  public MediaServiceRecord accountId(Long accountId) {
+  public MediaServiceRecord accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -117,25 +132,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public MediaServiceRecord approvalStatus(MediaServiceApprovalStatus approvalStatus) {
+  public MediaServiceRecord approvalStatus(@jakarta.annotation.Nullable MediaServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceApprovalStatus getApprovalStatus() {
@@ -143,25 +157,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(MediaServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable MediaServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public MediaServiceRecord campaignBannerFlg(MediaServiceCampaignBannerFlg campaignBannerFlg) {
+  public MediaServiceRecord campaignBannerFlg(@jakarta.annotation.Nullable MediaServiceCampaignBannerFlg campaignBannerFlg) {
     
     this.campaignBannerFlg = campaignBannerFlg;
     return this;
   }
 
-   /**
+  /**
    * Get campaignBannerFlg
    * @return campaignBannerFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_FLG)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceCampaignBannerFlg getCampaignBannerFlg() {
@@ -169,25 +182,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_FLG)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBannerFlg(MediaServiceCampaignBannerFlg campaignBannerFlg) {
+  public void setCampaignBannerFlg(@jakarta.annotation.Nullable MediaServiceCampaignBannerFlg campaignBannerFlg) {
     this.campaignBannerFlg = campaignBannerFlg;
   }
 
-
-  public MediaServiceRecord reviewApplicationDate(String reviewApplicationDate) {
+  public MediaServiceRecord reviewApplicationDate(@jakarta.annotation.Nullable String reviewApplicationDate) {
     
     this.reviewApplicationDate = reviewApplicationDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像の審査を申し込んだ日です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※フォーマット: yyyyMMddHHmmss &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date when you submitted the image for the review appears.&lt;br&gt; Although this field will be returned in the response, it will be ignored on request.&lt;br&gt; *Format: yyyyMMddHHmmss &lt;/div&gt; 
    * @return reviewApplicationDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_APPLICATION_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_APPLICATION_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewApplicationDate() {
@@ -195,14 +207,13 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_APPLICATION_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_APPLICATION_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewApplicationDate(String reviewApplicationDate) {
+  public void setReviewApplicationDate(@jakarta.annotation.Nullable String reviewApplicationDate) {
     this.reviewApplicationDate = reviewApplicationDate;
   }
 
-
-  public MediaServiceRecord disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public MediaServiceRecord disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -216,12 +227,12 @@ public class MediaServiceRecord {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;掲載拒否の理由です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reason code why it&amp;#39;s disapproved on the review.&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -229,25 +240,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public MediaServiceRecord logoFlg(MediaServiceLogoFlg logoFlg) {
+  public MediaServiceRecord logoFlg(@jakarta.annotation.Nullable MediaServiceLogoFlg logoFlg) {
     
     this.logoFlg = logoFlg;
     return this;
   }
 
-   /**
+  /**
    * Get logoFlg
    * @return logoFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGO_FLG)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceLogoFlg getLogoFlg() {
@@ -255,25 +265,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGO_FLG)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogoFlg(MediaServiceLogoFlg logoFlg) {
+  public void setLogoFlg(@jakarta.annotation.Nullable MediaServiceLogoFlg logoFlg) {
     this.logoFlg = logoFlg;
   }
 
-
-  public MediaServiceRecord imageMedia(MediaServiceImageMedia imageMedia) {
+  public MediaServiceRecord imageMedia(@jakarta.annotation.Nullable MediaServiceImageMedia imageMedia) {
     
     this.imageMedia = imageMedia;
     return this;
   }
 
-   /**
+  /**
    * Get imageMedia
    * @return imageMedia
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMAGE_MEDIA)
+  @JsonProperty(value = JSON_PROPERTY_IMAGE_MEDIA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceImageMedia getImageMedia() {
@@ -281,25 +290,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMAGE_MEDIA)
+  @JsonProperty(value = JSON_PROPERTY_IMAGE_MEDIA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImageMedia(MediaServiceImageMedia imageMedia) {
+  public void setImageMedia(@jakarta.annotation.Nullable MediaServiceImageMedia imageMedia) {
     this.imageMedia = imageMedia;
   }
 
-
-  public MediaServiceRecord mediaId(Long mediaId) {
+  public MediaServiceRecord mediaId(@jakarta.annotation.Nullable Long mediaId) {
     
     this.mediaId = mediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像IDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID (image ID). &lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return mediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMediaId() {
@@ -307,25 +315,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaId(Long mediaId) {
+  public void setMediaId(@jakarta.annotation.Nullable Long mediaId) {
     this.mediaId = mediaId;
   }
 
-
-  public MediaServiceRecord mediaName(String mediaName) {
+  public MediaServiceRecord mediaName(@jakarta.annotation.Nullable String mediaName) {
     
     this.mediaName = mediaName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 実ファイル名です。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;File name. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return mediaName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_NAME)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMediaName() {
@@ -333,25 +340,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_NAME)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaName(String mediaName) {
+  public void setMediaName(@jakarta.annotation.Nullable String mediaName) {
     this.mediaName = mediaName;
   }
 
-
-  public MediaServiceRecord mediaTitle(String mediaTitle) {
+  public MediaServiceRecord mediaTitle(@jakarta.annotation.Nullable String mediaTitle) {
     
     this.mediaTitle = mediaTitle;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Image name. &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return mediaTitle
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMediaTitle() {
@@ -359,25 +365,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaTitle(String mediaTitle) {
+  public void setMediaTitle(@jakarta.annotation.Nullable String mediaTitle) {
     this.mediaTitle = mediaTitle;
   }
 
-
-  public MediaServiceRecord thumbnailFlg(MediaServiceThumbnailFlg thumbnailFlg) {
+  public MediaServiceRecord thumbnailFlg(@jakarta.annotation.Nullable MediaServiceThumbnailFlg thumbnailFlg) {
     
     this.thumbnailFlg = thumbnailFlg;
     return this;
   }
 
-   /**
+  /**
    * Get thumbnailFlg
    * @return thumbnailFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_THUMBNAIL_FLG)
+  @JsonProperty(value = JSON_PROPERTY_THUMBNAIL_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceThumbnailFlg getThumbnailFlg() {
@@ -385,25 +390,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_THUMBNAIL_FLG)
+  @JsonProperty(value = JSON_PROPERTY_THUMBNAIL_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setThumbnailFlg(MediaServiceThumbnailFlg thumbnailFlg) {
+  public void setThumbnailFlg(@jakarta.annotation.Nullable MediaServiceThumbnailFlg thumbnailFlg) {
     this.thumbnailFlg = thumbnailFlg;
   }
 
-
-  public MediaServiceRecord userStatus(MediaServiceUserStatus userStatus) {
+  public MediaServiceRecord userStatus(@jakarta.annotation.Nullable MediaServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceUserStatus getUserStatus() {
@@ -411,25 +415,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(MediaServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable MediaServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public MediaServiceRecord mediaRichFormatFlg(MediaServiceRichFormatFlg mediaRichFormatFlg) {
+  public MediaServiceRecord mediaRichFormatFlg(@jakarta.annotation.Nullable MediaServiceRichFormatFlg mediaRichFormatFlg) {
     
     this.mediaRichFormatFlg = mediaRichFormatFlg;
     return this;
   }
 
-   /**
+  /**
    * Get mediaRichFormatFlg
    * @return mediaRichFormatFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceRichFormatFlg getMediaRichFormatFlg() {
@@ -437,25 +440,24 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_RICH_FORMAT_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaRichFormatFlg(MediaServiceRichFormatFlg mediaRichFormatFlg) {
+  public void setMediaRichFormatFlg(@jakarta.annotation.Nullable MediaServiceRichFormatFlg mediaRichFormatFlg) {
     this.mediaRichFormatFlg = mediaRichFormatFlg;
   }
 
-
-  public MediaServiceRecord createdDate(String createdDate) {
+  public MediaServiceRecord createdDate(@jakarta.annotation.Nullable String createdDate) {
     
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;データが作成された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Media made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCreatedDate() {
@@ -463,11 +465,12 @@ public class MediaServiceRecord {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDate(String createdDate) {
+  public void setCreatedDate(@jakarta.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -526,10 +529,7 @@ public class MediaServiceRecord {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

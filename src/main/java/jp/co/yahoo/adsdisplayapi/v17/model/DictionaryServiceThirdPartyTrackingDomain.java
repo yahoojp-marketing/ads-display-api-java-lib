@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceThirdPartyTrackingDomainオブジェクトは第三者計測スクリプトタグのsrcで利用可能なドメインを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceThirdPartyTrackingDomain object indicates the domain that can be used for the src of third party tracking scripting tag.&lt;/div&gt; 
@@ -31,32 +31,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceThirdPartyTrackingDomain.JSON_PROPERTY_VENDOR,
   DictionaryServiceThirdPartyTrackingDomain.JSON_PROPERTY_VENDOR_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class DictionaryServiceThirdPartyTrackingDomain {
   public static final String JSON_PROPERTY_DOMAIN = "domain";
+  @jakarta.annotation.Nullable
   private String domain;
 
   public static final String JSON_PROPERTY_VENDOR = "vendor";
+  @jakarta.annotation.Nullable
   private String vendor;
 
   public static final String JSON_PROPERTY_VENDOR_NAME = "vendorName";
+  @jakarta.annotation.Nullable
   private String vendorName;
 
   public DictionaryServiceThirdPartyTrackingDomain() {
   }
 
-  public DictionaryServiceThirdPartyTrackingDomain domain(String domain) {
+  public DictionaryServiceThirdPartyTrackingDomain domain(@jakarta.annotation.Nullable String domain) {
     
     this.domain = domain;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ドメイン&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Domain&lt;/div&gt; 
    * @return domain
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DOMAIN)
+  @JsonProperty(value = JSON_PROPERTY_DOMAIN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDomain() {
@@ -64,25 +67,24 @@ public class DictionaryServiceThirdPartyTrackingDomain {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DOMAIN)
+  @JsonProperty(value = JSON_PROPERTY_DOMAIN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDomain(String domain) {
+  public void setDomain(@jakarta.annotation.Nullable String domain) {
     this.domain = domain;
   }
 
-
-  public DictionaryServiceThirdPartyTrackingDomain vendor(String vendor) {
+  public DictionaryServiceThirdPartyTrackingDomain vendor(@jakarta.annotation.Nullable String vendor) {
     
     this.vendor = vendor;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;第三者計測ベンダー&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Third party tracking vendor&lt;/div&gt; 
    * @return vendor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVendor() {
@@ -90,25 +92,24 @@ public class DictionaryServiceThirdPartyTrackingDomain {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVendor(String vendor) {
+  public void setVendor(@jakarta.annotation.Nullable String vendor) {
     this.vendor = vendor;
   }
 
-
-  public DictionaryServiceThirdPartyTrackingDomain vendorName(String vendorName) {
+  public DictionaryServiceThirdPartyTrackingDomain vendorName(@jakarta.annotation.Nullable String vendorName) {
     
     this.vendorName = vendorName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;第三者計測ベンダーの論理名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Logical name of third party tracking vendor&lt;/div&gt; 
    * @return vendorName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VENDOR_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVendorName() {
@@ -116,11 +117,12 @@ public class DictionaryServiceThirdPartyTrackingDomain {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VENDOR_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVendorName(String vendorName) {
+  public void setVendorName(@jakarta.annotation.Nullable String vendorName) {
     this.vendorName = vendorName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +159,7 @@ public class DictionaryServiceThirdPartyTrackingDomain {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

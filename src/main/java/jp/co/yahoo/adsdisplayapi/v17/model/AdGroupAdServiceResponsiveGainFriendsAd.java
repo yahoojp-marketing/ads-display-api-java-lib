@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupAdServiceButtonText;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupAdServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceResponsiveGainFriendsAdオブジェクトは、レスポンシブ（友だち追加）広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがRESPONSIVE_GAIN_FRIENDS_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceResponsiveGainFriendsAd object displays Responsive (Gain friends) Ads information.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is RESPONSIVE_GAIN_FRIENDS_AD, this field is required in ADD operation. &lt;/div&gt; 
@@ -50,77 +51,95 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceResponsiveGainFriendsAd.JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS,
   AdGroupAdServiceResponsiveGainFriendsAd.JSON_PROPERTY_VIDEO_START_BEACON_URLS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceResponsiveGainFriendsAd {
   public static final String JSON_PROPERTY_BUTTON_TEXT = "buttonText";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceButtonText buttonText;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_HEADLINE = "headline";
+  @jakarta.annotation.Nullable
   private String headline;
 
   public static final String JSON_PROPERTY_THUMBNAIL_MEDIA_ID = "thumbnailMediaId";
+  @jakarta.annotation.Nullable
   private Long thumbnailMediaId;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS = "isRemoveVideo10SecBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS = "isRemoveVideo25PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO3_SEC_BEACON_URLS = "isRemoveVideo3SecBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideo3SecBeaconUrls;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS = "isRemoveVideo50PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS = "isRemoveVideo75PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS = "isRemoveVideoCompleteBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls;
 
   public static final String JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS = "isRemoveVideoStartBeaconUrls";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS = "video10SecBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video10SecBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS = "video25PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video25PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS = "video3SecBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video3SecBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS = "video50PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video50PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS = "video75PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video75PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS = "videoCompleteBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> videoCompleteBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_START_BEACON_URLS = "videoStartBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> videoStartBeaconUrls;
 
   public AdGroupAdServiceResponsiveGainFriendsAd() {
   }
 
-  public AdGroupAdServiceResponsiveGainFriendsAd buttonText(AdGroupAdServiceButtonText buttonText) {
+  public AdGroupAdServiceResponsiveGainFriendsAd buttonText(@jakarta.annotation.Nullable AdGroupAdServiceButtonText buttonText) {
     
     this.buttonText = buttonText;
     return this;
   }
 
-   /**
+  /**
    * Get buttonText
    * @return buttonText
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_BUTTON_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceButtonText getButtonText() {
@@ -128,25 +147,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_BUTTON_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setButtonText(AdGroupAdServiceButtonText buttonText) {
+  public void setButtonText(@jakarta.annotation.Nullable AdGroupAdServiceButtonText buttonText) {
     this.buttonText = buttonText;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd description(String description) {
+  public AdGroupAdServiceResponsiveGainFriendsAd description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告の説明文です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad description.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -154,25 +172,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd headline(String headline) {
+  public AdGroupAdServiceResponsiveGainFriendsAd headline(@jakarta.annotation.Nullable String headline) {
     
     this.headline = headline;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告のタイトルです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad title.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return headline
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEADLINE)
+  @JsonProperty(value = JSON_PROPERTY_HEADLINE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getHeadline() {
@@ -180,25 +197,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEADLINE)
+  @JsonProperty(value = JSON_PROPERTY_HEADLINE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeadline(String headline) {
+  public void setHeadline(@jakarta.annotation.Nullable String headline) {
     this.headline = headline;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd thumbnailMediaId(Long thumbnailMediaId) {
+  public AdGroupAdServiceResponsiveGainFriendsAd thumbnailMediaId(@jakarta.annotation.Nullable Long thumbnailMediaId) {
     
     this.thumbnailMediaId = thumbnailMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サムネイルIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Thumbnail ID.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return thumbnailMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_THUMBNAIL_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_THUMBNAIL_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getThumbnailMediaId() {
@@ -206,25 +222,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_THUMBNAIL_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_THUMBNAIL_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setThumbnailMediaId(Long thumbnailMediaId) {
+  public void setThumbnailMediaId(@jakarta.annotation.Nullable Long thumbnailMediaId) {
     this.thumbnailMediaId = thumbnailMediaId;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo10SecBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo10SecBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls) {
     
     this.isRemoveVideo10SecBeaconUrls = isRemoveVideo10SecBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideo10SecBeaconUrls
    * @return isRemoveVideo10SecBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideo10SecBeaconUrls() {
@@ -232,25 +247,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO10_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideo10SecBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls) {
+  public void setIsRemoveVideo10SecBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo10SecBeaconUrls) {
     this.isRemoveVideo10SecBeaconUrls = isRemoveVideo10SecBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo25PercentBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo25PercentBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls) {
     
     this.isRemoveVideo25PercentBeaconUrls = isRemoveVideo25PercentBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideo25PercentBeaconUrls
    * @return isRemoveVideo25PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideo25PercentBeaconUrls() {
@@ -258,25 +272,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO25_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideo25PercentBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls) {
+  public void setIsRemoveVideo25PercentBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo25PercentBeaconUrls) {
     this.isRemoveVideo25PercentBeaconUrls = isRemoveVideo25PercentBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo3SecBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo3SecBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo3SecBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo3SecBeaconUrls) {
     
     this.isRemoveVideo3SecBeaconUrls = isRemoveVideo3SecBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideo3SecBeaconUrls
    * @return isRemoveVideo3SecBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO3_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO3_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideo3SecBeaconUrls() {
@@ -284,25 +297,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO3_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO3_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideo3SecBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo3SecBeaconUrls) {
+  public void setIsRemoveVideo3SecBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo3SecBeaconUrls) {
     this.isRemoveVideo3SecBeaconUrls = isRemoveVideo3SecBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo50PercentBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo50PercentBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls) {
     
     this.isRemoveVideo50PercentBeaconUrls = isRemoveVideo50PercentBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideo50PercentBeaconUrls
    * @return isRemoveVideo50PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideo50PercentBeaconUrls() {
@@ -310,25 +322,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO50_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideo50PercentBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls) {
+  public void setIsRemoveVideo50PercentBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo50PercentBeaconUrls) {
     this.isRemoveVideo50PercentBeaconUrls = isRemoveVideo50PercentBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo75PercentBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideo75PercentBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls) {
     
     this.isRemoveVideo75PercentBeaconUrls = isRemoveVideo75PercentBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideo75PercentBeaconUrls
    * @return isRemoveVideo75PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideo75PercentBeaconUrls() {
@@ -336,25 +347,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO75_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideo75PercentBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls) {
+  public void setIsRemoveVideo75PercentBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideo75PercentBeaconUrls) {
     this.isRemoveVideo75PercentBeaconUrls = isRemoveVideo75PercentBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideoCompleteBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideoCompleteBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls) {
     
     this.isRemoveVideoCompleteBeaconUrls = isRemoveVideoCompleteBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideoCompleteBeaconUrls
    * @return isRemoveVideoCompleteBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideoCompleteBeaconUrls() {
@@ -362,25 +372,24 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO_COMPLETE_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideoCompleteBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls) {
+  public void setIsRemoveVideoCompleteBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideoCompleteBeaconUrls) {
     this.isRemoveVideoCompleteBeaconUrls = isRemoveVideoCompleteBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideoStartBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd isRemoveVideoStartBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls) {
     
     this.isRemoveVideoStartBeaconUrls = isRemoveVideoStartBeaconUrls;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveVideoStartBeaconUrls
    * @return isRemoveVideoStartBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveVideoStartBeaconUrls() {
@@ -388,14 +397,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_VIDEO_START_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveVideoStartBeaconUrls(AdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls) {
+  public void setIsRemoveVideoStartBeaconUrls(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveVideoStartBeaconUrls) {
     this.isRemoveVideoStartBeaconUrls = isRemoveVideoStartBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd video10SecBeaconUrls(List<String> video10SecBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd video10SecBeaconUrls(@jakarta.annotation.Nullable List<String> video10SecBeaconUrls) {
     
     this.video10SecBeaconUrls = video10SecBeaconUrls;
     return this;
@@ -409,12 +417,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 10秒視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (10 seconds).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video10SecBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo10SecBeaconUrls() {
@@ -422,14 +430,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo10SecBeaconUrls(List<String> video10SecBeaconUrls) {
+  public void setVideo10SecBeaconUrls(@jakarta.annotation.Nullable List<String> video10SecBeaconUrls) {
     this.video10SecBeaconUrls = video10SecBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd video25PercentBeaconUrls(List<String> video25PercentBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd video25PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video25PercentBeaconUrls) {
     
     this.video25PercentBeaconUrls = video25PercentBeaconUrls;
     return this;
@@ -443,12 +450,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 25％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (25%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video25PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo25PercentBeaconUrls() {
@@ -456,14 +463,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo25PercentBeaconUrls(List<String> video25PercentBeaconUrls) {
+  public void setVideo25PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video25PercentBeaconUrls) {
     this.video25PercentBeaconUrls = video25PercentBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd video3SecBeaconUrls(List<String> video3SecBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd video3SecBeaconUrls(@jakarta.annotation.Nullable List<String> video3SecBeaconUrls) {
     
     this.video3SecBeaconUrls = video3SecBeaconUrls;
     return this;
@@ -477,12 +483,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 3秒視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (3 seconds).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video3SecBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo3SecBeaconUrls() {
@@ -490,14 +496,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo3SecBeaconUrls(List<String> video3SecBeaconUrls) {
+  public void setVideo3SecBeaconUrls(@jakarta.annotation.Nullable List<String> video3SecBeaconUrls) {
     this.video3SecBeaconUrls = video3SecBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd video50PercentBeaconUrls(List<String> video50PercentBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd video50PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video50PercentBeaconUrls) {
     
     this.video50PercentBeaconUrls = video50PercentBeaconUrls;
     return this;
@@ -511,12 +516,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 50％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (50%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video50PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo50PercentBeaconUrls() {
@@ -524,14 +529,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo50PercentBeaconUrls(List<String> video50PercentBeaconUrls) {
+  public void setVideo50PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video50PercentBeaconUrls) {
     this.video50PercentBeaconUrls = video50PercentBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd video75PercentBeaconUrls(List<String> video75PercentBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd video75PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video75PercentBeaconUrls) {
     
     this.video75PercentBeaconUrls = video75PercentBeaconUrls;
     return this;
@@ -545,12 +549,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 75％再生視聴ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (75%).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return video75PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo75PercentBeaconUrls() {
@@ -558,14 +562,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo75PercentBeaconUrls(List<String> video75PercentBeaconUrls) {
+  public void setVideo75PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video75PercentBeaconUrls) {
     this.video75PercentBeaconUrls = video75PercentBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd videoCompleteBeaconUrls(List<String> videoCompleteBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd videoCompleteBeaconUrls(@jakarta.annotation.Nullable List<String> videoCompleteBeaconUrls) {
     
     this.videoCompleteBeaconUrls = videoCompleteBeaconUrls;
     return this;
@@ -579,12 +582,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生完了ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (complete).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return videoCompleteBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideoCompleteBeaconUrls() {
@@ -592,14 +595,13 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoCompleteBeaconUrls(List<String> videoCompleteBeaconUrls) {
+  public void setVideoCompleteBeaconUrls(@jakarta.annotation.Nullable List<String> videoCompleteBeaconUrls) {
     this.videoCompleteBeaconUrls = videoCompleteBeaconUrls;
   }
 
-
-  public AdGroupAdServiceResponsiveGainFriendsAd videoStartBeaconUrls(List<String> videoStartBeaconUrls) {
+  public AdGroupAdServiceResponsiveGainFriendsAd videoStartBeaconUrls(@jakarta.annotation.Nullable List<String> videoStartBeaconUrls) {
     
     this.videoStartBeaconUrls = videoStartBeaconUrls;
     return this;
@@ -613,12 +615,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生開始ビーコンURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時はすべて上書きされます。&lt;br&gt; ※httpsのURLのみ設定可能です。&lt;br&gt; ※mainMediaFormatがVIDEOの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (start).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; ∗Replace all URLs in SET operation.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;.&lt;br&gt; *If mainMediaFormat is VIDEO, this field can be specified. &lt;/div&gt; 
    * @return videoStartBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_START_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_START_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideoStartBeaconUrls() {
@@ -626,11 +628,12 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_START_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_START_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoStartBeaconUrls(List<String> videoStartBeaconUrls) {
+  public void setVideoStartBeaconUrls(@jakarta.annotation.Nullable List<String> videoStartBeaconUrls) {
     this.videoStartBeaconUrls = videoStartBeaconUrls;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -697,10 +700,7 @@ public class AdGroupAdServiceResponsiveGainFriendsAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

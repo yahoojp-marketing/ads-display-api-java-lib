@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceReportSortType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceReportSortFieldオブジェクトは、レポート定義のソート詳細を表します。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceReportSortField object describes sort details of report definition.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceReportSortField.JSON_PROPERTY_FIELD,
   ReportDefinitionServiceReportSortField.JSON_PROPERTY_REPORT_SORT_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceReportSortField {
   public static final String JSON_PROPERTY_FIELD = "field";
+  @jakarta.annotation.Nullable
   private String field;
 
   public static final String JSON_PROPERTY_REPORT_SORT_TYPE = "reportSortType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportSortType reportSortType;
 
   public ReportDefinitionServiceReportSortField() {
   }
 
-  public ReportDefinitionServiceReportSortField field(String field) {
+  public ReportDefinitionServiceReportSortField field(@jakarta.annotation.Nullable String field) {
     
     this.field = field;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; レポート定義のソート対象です。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Sort object (field) of report definition.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return field
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getField() {
@@ -61,25 +63,24 @@ public class ReportDefinitionServiceReportSortField {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setField(String field) {
+  public void setField(@jakarta.annotation.Nullable String field) {
     this.field = field;
   }
 
-
-  public ReportDefinitionServiceReportSortField reportSortType(ReportDefinitionServiceReportSortType reportSortType) {
+  public ReportDefinitionServiceReportSortField reportSortType(@jakarta.annotation.Nullable ReportDefinitionServiceReportSortType reportSortType) {
     
     this.reportSortType = reportSortType;
     return this;
   }
 
-   /**
+  /**
    * Get reportSortType
    * @return reportSortType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportSortType getReportSortType() {
@@ -87,11 +88,12 @@ public class ReportDefinitionServiceReportSortField {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportSortType(ReportDefinitionServiceReportSortType reportSortType) {
+  public void setReportSortType(@jakarta.annotation.Nullable ReportDefinitionServiceReportSortType reportSortType) {
     this.reportSortType = reportSortType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class ReportDefinitionServiceReportSortField {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

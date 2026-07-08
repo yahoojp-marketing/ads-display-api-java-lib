@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.RecommendationServiceMaximizeViewableImpressionsCampaign;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMaximizeViewableImpressionsオブジェクトは、自動入札（ビューアブルインプレッション数の最大化）に適しているキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMaximizeViewableImpressions object describes recommendation information about the campaign that is suitable for using autobidding (Maximize Vimps).&lt;/div&gt; 
@@ -32,15 +33,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RecommendationServiceMaximizeViewableImpressions.JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS_CAMPAIGN_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceMaximizeViewableImpressions {
   public static final String JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS_CAMPAIGN_LIST = "maximizeViewableImpressionsCampaignList";
+  @jakarta.annotation.Nullable
   private List<RecommendationServiceMaximizeViewableImpressionsCampaign> maximizeViewableImpressionsCampaignList;
 
   public RecommendationServiceMaximizeViewableImpressions() {
   }
 
-  public RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressionsCampaignList(List<RecommendationServiceMaximizeViewableImpressionsCampaign> maximizeViewableImpressionsCampaignList) {
+  public RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressionsCampaignList(@jakarta.annotation.Nullable List<RecommendationServiceMaximizeViewableImpressionsCampaign> maximizeViewableImpressionsCampaignList) {
     
     this.maximizeViewableImpressionsCampaignList = maximizeViewableImpressionsCampaignList;
     return this;
@@ -54,12 +56,12 @@ public class RecommendationServiceMaximizeViewableImpressions {
     return this;
   }
 
-   /**
+  /**
    * Get maximizeViewableImpressionsCampaignList
    * @return maximizeViewableImpressionsCampaignList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS_CAMPAIGN_LIST)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS_CAMPAIGN_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RecommendationServiceMaximizeViewableImpressionsCampaign> getMaximizeViewableImpressionsCampaignList() {
@@ -67,11 +69,12 @@ public class RecommendationServiceMaximizeViewableImpressions {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS_CAMPAIGN_LIST)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS_CAMPAIGN_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeViewableImpressionsCampaignList(List<RecommendationServiceMaximizeViewableImpressionsCampaign> maximizeViewableImpressionsCampaignList) {
+  public void setMaximizeViewableImpressionsCampaignList(@jakarta.annotation.Nullable List<RecommendationServiceMaximizeViewableImpressionsCampaign> maximizeViewableImpressionsCampaignList) {
     this.maximizeViewableImpressionsCampaignList = maximizeViewableImpressionsCampaignList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +107,7 @@ public class RecommendationServiceMaximizeViewableImpressions {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

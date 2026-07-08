@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceIsZeroOrCurrentlyTotaling;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceBusinessManagerAudienceListオブジェクトは、オーディエンスリスト（ビジネスマネージャー）を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceBusinessManagerAudienceList object is a container for audience list (business manager). &lt;br&gt; This field will be returned in the response, but will be ignored on input. &lt;/div&gt; 
@@ -33,35 +33,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceBusinessManagerAudienceList.JSON_PROPERTY_LINE_AUDIENCE_GROUP_OWNER_TYPE,
   AudienceListServiceBusinessManagerAudienceList.JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceBusinessManagerAudienceList {
   public static final String JSON_PROPERTY_LINE_AUDIENCE_GROUP_ID = "lineAudienceGroupId";
+  @jakarta.annotation.Nullable
   private Long lineAudienceGroupId;
 
   public static final String JSON_PROPERTY_LINE_AUDIENCE_GROUP_TYPE = "lineAudienceGroupType";
+  @jakarta.annotation.Nullable
   private String lineAudienceGroupType;
 
   public static final String JSON_PROPERTY_LINE_AUDIENCE_GROUP_OWNER_TYPE = "lineAudienceGroupOwnerType";
+  @jakarta.annotation.Nullable
   private String lineAudienceGroupOwnerType;
 
   public static final String JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING = "isZeroOrCurrentlyTotaling";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling;
 
   public AudienceListServiceBusinessManagerAudienceList() {
   }
 
-  public AudienceListServiceBusinessManagerAudienceList lineAudienceGroupId(Long lineAudienceGroupId) {
+  public AudienceListServiceBusinessManagerAudienceList lineAudienceGroupId(@jakarta.annotation.Nullable Long lineAudienceGroupId) {
     
     this.lineAudienceGroupId = lineAudienceGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; LINEのオーディエンスグループIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; LINE audience group ID. &lt;br&gt; &lt;/div&gt; 
    * @return lineAudienceGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINE_AUDIENCE_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_LINE_AUDIENCE_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLineAudienceGroupId() {
@@ -69,25 +73,24 @@ public class AudienceListServiceBusinessManagerAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINE_AUDIENCE_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_LINE_AUDIENCE_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLineAudienceGroupId(Long lineAudienceGroupId) {
+  public void setLineAudienceGroupId(@jakarta.annotation.Nullable Long lineAudienceGroupId) {
     this.lineAudienceGroupId = lineAudienceGroupId;
   }
 
-
-  public AudienceListServiceBusinessManagerAudienceList lineAudienceGroupType(String lineAudienceGroupType) {
+  public AudienceListServiceBusinessManagerAudienceList lineAudienceGroupType(@jakarta.annotation.Nullable String lineAudienceGroupType) {
     
     this.lineAudienceGroupType = lineAudienceGroupType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceLineAudienceGroupTypeは、LINEのオーディエンスタイプを表します&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; lineAudienceGroupTypeで返却される値は、以下のとおりです。&lt;br&gt; &lt;table border&#x3D;&#39;1&#39;&gt;   &lt;tr&gt;     &lt;th&gt;lineAudienceGroupType&lt;/th&gt;     &lt;th&gt;説明&lt;/th&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;IDFA_AAID_UPLOAD&lt;/td&gt;     &lt;td&gt;IDFA/AAIDアップロード&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;PHONE_NUMBER_UPLOAD&lt;/td&gt;     &lt;td&gt;電話番号アップロード&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;EMAIL_ADDRESS_UPLOAD&lt;/td&gt;     &lt;td&gt;メールアドレスアップロード&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;MID_UID_UPLOAD&lt;/td&gt;     &lt;td&gt;ユーザーIDアップロード&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;WEB_TRAFFIC_AUDIENCE&lt;/td&gt;     &lt;td&gt;ウェブトラフィックオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;APP_EVENT_AUDIENCE&lt;/td&gt;     &lt;td&gt;モバイルアプリオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;IMAGE_CLICK_AUDIENCE&lt;/td&gt;     &lt;td&gt;画像クリックオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;VIDEO_VIEW_AUDIENCE&lt;/td&gt;     &lt;td&gt;動画視聴オーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;LOOKALIKE_AUDIENCE&lt;/td&gt;     &lt;td&gt;類似オーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;MESSAGE_CLICK_AUDIENCE&lt;/td&gt;     &lt;td&gt;メッセージクリックオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;MESSAGE_IMP_AUDIENCE&lt;/td&gt;     &lt;td&gt;メッセージインプレッションオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;RICHMENU_CLICK_AUDIENCE&lt;/td&gt;     &lt;td&gt;リッチメニュークリックオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;RICHMENU_IMP_AUDIENCE&lt;/td&gt;     &lt;td&gt;リッチメニューインプレッションオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;CHAT_TAG_AUDIENCE&lt;/td&gt;     &lt;td&gt;チャットタグオーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;FRIEND_ROUTE_AUDIENCE&lt;/td&gt;     &lt;td&gt;友だち追加経路オーディエンス&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;RESERVATION_AUDIENCE&lt;/td&gt;     &lt;td&gt;予約オーディエンス&lt;/td&gt;   &lt;/tr&gt; &lt;/table&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceLineAudienceGroupType represents the type of LINE audience.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. Responded values of &#x60;lineAudienceGroupType&#x60; are as follows. &lt;table border&#x3D;&#39;1&#39;&gt;   &lt;tr&gt;     &lt;th&gt;lineAudienceGroupType&lt;/th&gt;     &lt;th&gt;Description&lt;/th&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;IDFA_AAID_UPLOAD&lt;/td&gt;     &lt;td&gt;IDFA/AAID upload&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;PHONE_NUMBER_UPLOAD&lt;/td&gt;     &lt;td&gt;Phone number upload&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;EMAIL_ADDRESS_UPLOAD&lt;/td&gt;     &lt;td&gt;Email address upload&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;MID_UID_UPLOAD&lt;/td&gt;     &lt;td&gt;User ID upload&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;WEB_TRAFFIC_AUDIENCE&lt;/td&gt;     &lt;td&gt;Web traffic audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;APP_EVENT_AUDIENCE&lt;/td&gt;     &lt;td&gt;Mobile app audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;IMAGE_CLICK_AUDIENCE&lt;/td&gt;     &lt;td&gt;Image click audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;VIDEO_VIEW_AUDIENCE&lt;/td&gt;     &lt;td&gt;Video view audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;LOOKALIKE_AUDIENCE&lt;/td&gt;     &lt;td&gt;Lookalike audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;MESSAGE_CLICK_AUDIENCE&lt;/td&gt;     &lt;td&gt;Message click audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;MESSAGE_IMP_AUDIENCE&lt;/td&gt;     &lt;td&gt;Message impression audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;RICHMENU_CLICK_AUDIENCE&lt;/td&gt;     &lt;td&gt;Rich menu click audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;RICHMENU_IMP_AUDIENCE&lt;/td&gt;     &lt;td&gt;Rich menu impression audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;CHAT_TAG_AUDIENCE&lt;/td&gt;     &lt;td&gt;Chat tag audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;FRIEND_ROUTE_AUDIENCE&lt;/td&gt;     &lt;td&gt;Friend path audience&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;RESERVATION_AUDIENCE&lt;/td&gt;     &lt;td&gt;Reservation audience&lt;/td&gt;   &lt;/tr&gt; &lt;/table&gt; &lt;/div&gt; 
    * @return lineAudienceGroupType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINE_AUDIENCE_GROUP_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LINE_AUDIENCE_GROUP_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLineAudienceGroupType() {
@@ -95,25 +98,24 @@ public class AudienceListServiceBusinessManagerAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINE_AUDIENCE_GROUP_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LINE_AUDIENCE_GROUP_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLineAudienceGroupType(String lineAudienceGroupType) {
+  public void setLineAudienceGroupType(@jakarta.annotation.Nullable String lineAudienceGroupType) {
     this.lineAudienceGroupType = lineAudienceGroupType;
   }
 
-
-  public AudienceListServiceBusinessManagerAudienceList lineAudienceGroupOwnerType(String lineAudienceGroupOwnerType) {
+  public AudienceListServiceBusinessManagerAudienceList lineAudienceGroupOwnerType(@jakarta.annotation.Nullable String lineAudienceGroupOwnerType) {
     
     this.lineAudienceGroupOwnerType = lineAudienceGroupOwnerType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceLineAudienceGroupOwnerTypeは、LINEのオーディエンスの作成元を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; lineAudienceGroupOwnerTypeで返却される値は、以下のとおりです。&lt;br&gt; &lt;table border&#x3D;&#39;1&#39;&gt;   &lt;tr&gt;     &lt;th&gt;lineAudienceGroupOwnerType&lt;/th&gt;     &lt;th&gt;説明&lt;/th&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;LINE_ADS&lt;/td&gt;     &lt;td&gt;LINE広告&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;LINE_OA&lt;/td&gt;     &lt;td&gt;LINE公式アカウント&lt;/td&gt;   &lt;/tr&gt; &lt;/table&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceLineAudienceGroupOwnerType represents the owner of LINE audience.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. Responded values of &#x60;lineAudienceGroupOwnerType&#x60; are as follows. &lt;table border&#x3D;&#39;1&#39;&gt;   &lt;tr&gt;     &lt;th&gt;lineAudienceGroupOwnerType&lt;/th&gt;     &lt;th&gt;Description&lt;/th&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;LINE_ADS&lt;/td&gt;     &lt;td&gt;LINE Ads&lt;/td&gt;   &lt;/tr&gt;   &lt;tr&gt;     &lt;td&gt;LINE_OA&lt;/td&gt;     &lt;td&gt;LINE Official Account&lt;/td&gt;   &lt;/tr&gt; &lt;/table&gt; &lt;/div&gt; 
    * @return lineAudienceGroupOwnerType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINE_AUDIENCE_GROUP_OWNER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LINE_AUDIENCE_GROUP_OWNER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLineAudienceGroupOwnerType() {
@@ -121,25 +123,24 @@ public class AudienceListServiceBusinessManagerAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINE_AUDIENCE_GROUP_OWNER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LINE_AUDIENCE_GROUP_OWNER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLineAudienceGroupOwnerType(String lineAudienceGroupOwnerType) {
+  public void setLineAudienceGroupOwnerType(@jakarta.annotation.Nullable String lineAudienceGroupOwnerType) {
     this.lineAudienceGroupOwnerType = lineAudienceGroupOwnerType;
   }
 
-
-  public AudienceListServiceBusinessManagerAudienceList isZeroOrCurrentlyTotaling(AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
+  public AudienceListServiceBusinessManagerAudienceList isZeroOrCurrentlyTotaling(@jakarta.annotation.Nullable AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
     
     this.isZeroOrCurrentlyTotaling = isZeroOrCurrentlyTotaling;
     return this;
   }
 
-   /**
+  /**
    * Get isZeroOrCurrentlyTotaling
    * @return isZeroOrCurrentlyTotaling
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING)
+  @JsonProperty(value = JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsZeroOrCurrentlyTotaling getIsZeroOrCurrentlyTotaling() {
@@ -147,11 +148,12 @@ public class AudienceListServiceBusinessManagerAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING)
+  @JsonProperty(value = JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsZeroOrCurrentlyTotaling(AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
+  public void setIsZeroOrCurrentlyTotaling(@jakarta.annotation.Nullable AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
     this.isZeroOrCurrentlyTotaling = isZeroOrCurrentlyTotaling;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +192,7 @@ public class AudienceListServiceBusinessManagerAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

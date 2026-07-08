@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.AccountLinkServiceAccountStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.AccountLinkServiceOwnerShipType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountLinkオブジェクトは、アカウントリンク情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountLink objects serve account link information.&lt;br&gt; &lt;/div&gt; 
@@ -34,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountLink.JSON_PROPERTY_ACCOUNT_STATUS,
   AccountLink.JSON_PROPERTY_OWNER_SHIP_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AccountLink {
   public static final String JSON_PROPERTY_MCC_ACCOUNT_ID = "mccAccountId";
+  @jakarta.annotation.Nullable
   private Long mccAccountId;
 
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ACCOUNT_STATUS = "accountStatus";
+  @jakarta.annotation.Nullable
   private AccountLinkServiceAccountStatus accountStatus;
 
   public static final String JSON_PROPERTY_OWNER_SHIP_TYPE = "ownerShipType";
+  @jakarta.annotation.Nullable
   private AccountLinkServiceOwnerShipType ownerShipType;
 
   public AccountLink() {
   }
 
-  public AccountLink mccAccountId(Long mccAccountId) {
+  public AccountLink mccAccountId(@jakarta.annotation.Nullable Long mccAccountId) {
     
     this.mccAccountId = mccAccountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;MCCアカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;MCC account ID.&lt;/div&gt; 
    * @return mccAccountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MCC_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_MCC_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMccAccountId() {
@@ -70,25 +74,24 @@ public class AccountLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MCC_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_MCC_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMccAccountId(Long mccAccountId) {
+  public void setMccAccountId(@jakarta.annotation.Nullable Long mccAccountId) {
     this.mccAccountId = mccAccountId;
   }
 
-
-  public AccountLink accountId(Long accountId) {
+  public AccountLink accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -96,25 +99,24 @@ public class AccountLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AccountLink accountStatus(AccountLinkServiceAccountStatus accountStatus) {
+  public AccountLink accountStatus(@jakarta.annotation.Nullable AccountLinkServiceAccountStatus accountStatus) {
     
     this.accountStatus = accountStatus;
     return this;
   }
 
-   /**
+  /**
    * Get accountStatus
    * @return accountStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountLinkServiceAccountStatus getAccountStatus() {
@@ -122,25 +124,24 @@ public class AccountLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountStatus(AccountLinkServiceAccountStatus accountStatus) {
+  public void setAccountStatus(@jakarta.annotation.Nullable AccountLinkServiceAccountStatus accountStatus) {
     this.accountStatus = accountStatus;
   }
 
-
-  public AccountLink ownerShipType(AccountLinkServiceOwnerShipType ownerShipType) {
+  public AccountLink ownerShipType(@jakarta.annotation.Nullable AccountLinkServiceOwnerShipType ownerShipType) {
     
     this.ownerShipType = ownerShipType;
     return this;
   }
 
-   /**
+  /**
    * Get ownerShipType
    * @return ownerShipType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OWNER_SHIP_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_OWNER_SHIP_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountLinkServiceOwnerShipType getOwnerShipType() {
@@ -148,11 +149,12 @@ public class AccountLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OWNER_SHIP_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_OWNER_SHIP_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOwnerShipType(AccountLinkServiceOwnerShipType ownerShipType) {
+  public void setOwnerShipType(@jakarta.annotation.Nullable AccountLinkServiceOwnerShipType ownerShipType) {
     this.ownerShipType = ownerShipType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +193,7 @@ public class AccountLink {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

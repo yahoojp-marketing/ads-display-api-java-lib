@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.BrandLiftServiceApprovalStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BrandLiftServiceSelector object is a container for storing a set of criteria (parameters) for get method.&lt;/div&gt; 
@@ -37,41 +38,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BrandLiftServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   BrandLiftServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BrandLiftServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_BRAND_LIFT_IDS = "brandLiftIds";
+  @jakarta.annotation.Nullable
   private List<Long> brandLiftIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
+  @jakarta.annotation.Nullable
   private List<BrandLiftServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public BrandLiftServiceSelector() {
   }
 
-  public BrandLiftServiceSelector accountId(Long accountId) {
+  public BrandLiftServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -79,14 +86,13 @@ public class BrandLiftServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public BrandLiftServiceSelector brandLiftIds(List<Long> brandLiftIds) {
+  public BrandLiftServiceSelector brandLiftIds(@jakarta.annotation.Nullable List<Long> brandLiftIds) {
     
     this.brandLiftIds = brandLiftIds;
     return this;
@@ -100,12 +106,12 @@ public class BrandLiftServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : ブランドリフト調査ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: BrandLift ID&lt;/div&gt; 
    * @return brandLiftIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_LIFT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_LIFT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getBrandLiftIds() {
@@ -113,14 +119,13 @@ public class BrandLiftServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_LIFT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_LIFT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandLiftIds(List<Long> brandLiftIds) {
+  public void setBrandLiftIds(@jakarta.annotation.Nullable List<Long> brandLiftIds) {
     this.brandLiftIds = brandLiftIds;
   }
 
-
-  public BrandLiftServiceSelector campaignIds(List<Long> campaignIds) {
+  public BrandLiftServiceSelector campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -134,12 +139,12 @@ public class BrandLiftServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign ID&lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -147,14 +152,13 @@ public class BrandLiftServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
-
-  public BrandLiftServiceSelector approvalStatuses(List<BrandLiftServiceApprovalStatus> approvalStatuses) {
+  public BrandLiftServiceSelector approvalStatuses(@jakarta.annotation.Nullable List<BrandLiftServiceApprovalStatus> approvalStatuses) {
     
     this.approvalStatuses = approvalStatuses;
     return this;
@@ -168,12 +172,12 @@ public class BrandLiftServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatuses
    * @return approvalStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<BrandLiftServiceApprovalStatus> getApprovalStatuses() {
@@ -181,27 +185,26 @@ public class BrandLiftServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatuses(List<BrandLiftServiceApprovalStatus> approvalStatuses) {
+  public void setApprovalStatuses(@jakarta.annotation.Nullable List<BrandLiftServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
-
-  public BrandLiftServiceSelector numberResults(Integer numberResults) {
+  public BrandLiftServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -209,26 +212,25 @@ public class BrandLiftServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public BrandLiftServiceSelector startIndex(Integer startIndex) {
+  public BrandLiftServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -236,11 +238,12 @@ public class BrandLiftServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -283,10 +286,7 @@ public class BrandLiftServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

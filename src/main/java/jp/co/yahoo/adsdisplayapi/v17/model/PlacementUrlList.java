@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,15 +18,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.PlacementUrlListServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v17.model.PlacementUrlListServiceUnknownDomainFlg;
 import jp.co.yahoo.adsdisplayapi.v17.model.PlacementUrlListServiceUrlList;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlListオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep Placement Url Information.&lt;/div&gt; 
@@ -41,47 +42,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlacementUrlList.JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG,
   PlacementUrlList.JSON_PROPERTY_URLS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PlacementUrlList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_IS_REMOVE_DESCRIPTION = "isRemoveDescription";
+  @jakarta.annotation.Nullable
   private PlacementUrlListServiceIsRemoveFlg isRemoveDescription;
 
   public static final String JSON_PROPERTY_UNKNOWN_DOMAIN_FLG = "unknownDomainFlg";
+  @jakarta.annotation.Nullable
   private PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg;
 
   public static final String JSON_PROPERTY_URL_LIST_ID = "urlListId";
+  @jakarta.annotation.Nullable
   private Long urlListId;
 
   public static final String JSON_PROPERTY_URL_LIST_NAME = "urlListName";
+  @jakarta.annotation.Nullable
   private String urlListName;
 
   public static final String JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG = "brandSafetyDenyListFlg";
+  @jakarta.annotation.Nullable
   private Boolean brandSafetyDenyListFlg;
 
   public static final String JSON_PROPERTY_URLS = "urls";
+  @jakarta.annotation.Nullable
   private List<PlacementUrlListServiceUrlList> urls;
 
   public PlacementUrlList() {
   }
 
-  public PlacementUrlList accountId(Long accountId) {
+  public PlacementUrlList accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -89,25 +98,24 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public PlacementUrlList description(String description) {
+  public PlacementUrlList description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; urlリストの説明です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Url list description.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -115,25 +123,24 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public PlacementUrlList isRemoveDescription(PlacementUrlListServiceIsRemoveFlg isRemoveDescription) {
+  public PlacementUrlList isRemoveDescription(@jakarta.annotation.Nullable PlacementUrlListServiceIsRemoveFlg isRemoveDescription) {
     
     this.isRemoveDescription = isRemoveDescription;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveDescription
    * @return isRemoveDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlListServiceIsRemoveFlg getIsRemoveDescription() {
@@ -141,25 +148,24 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveDescription(PlacementUrlListServiceIsRemoveFlg isRemoveDescription) {
+  public void setIsRemoveDescription(@jakarta.annotation.Nullable PlacementUrlListServiceIsRemoveFlg isRemoveDescription) {
     this.isRemoveDescription = isRemoveDescription;
   }
 
-
-  public PlacementUrlList unknownDomainFlg(PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg) {
+  public PlacementUrlList unknownDomainFlg(@jakarta.annotation.Nullable PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg) {
     
     this.unknownDomainFlg = unknownDomainFlg;
     return this;
   }
 
-   /**
+  /**
    * Get unknownDomainFlg
    * @return unknownDomainFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UNKNOWN_DOMAIN_FLG)
+  @JsonProperty(value = JSON_PROPERTY_UNKNOWN_DOMAIN_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlListServiceUnknownDomainFlg getUnknownDomainFlg() {
@@ -167,25 +173,24 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UNKNOWN_DOMAIN_FLG)
+  @JsonProperty(value = JSON_PROPERTY_UNKNOWN_DOMAIN_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUnknownDomainFlg(PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg) {
+  public void setUnknownDomainFlg(@jakarta.annotation.Nullable PlacementUrlListServiceUnknownDomainFlg unknownDomainFlg) {
     this.unknownDomainFlg = unknownDomainFlg;
   }
 
-
-  public PlacementUrlList urlListId(Long urlListId) {
+  public PlacementUrlList urlListId(@jakarta.annotation.Nullable Long urlListId) {
     
     this.urlListId = urlListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; urlリストIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Url list ID. &lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return urlListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_URL_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getUrlListId() {
@@ -193,25 +198,24 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_URL_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlListId(Long urlListId) {
+  public void setUrlListId(@jakarta.annotation.Nullable Long urlListId) {
     this.urlListId = urlListId;
   }
 
-
-  public PlacementUrlList urlListName(String urlListName) {
+  public PlacementUrlList urlListName(@jakarta.annotation.Nullable String urlListName) {
     
     this.urlListName = urlListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; urlリスト名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Url list name. &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return urlListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_URL_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUrlListName() {
@@ -219,25 +223,24 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_URL_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlListName(String urlListName) {
+  public void setUrlListName(@jakarta.annotation.Nullable String urlListName) {
     this.urlListName = urlListName;
   }
 
-
-  public PlacementUrlList brandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
+  public PlacementUrlList brandSafetyDenyListFlg(@jakarta.annotation.Nullable Boolean brandSafetyDenyListFlg) {
     
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 除外専用リストかどうかのフラグです。&lt;br&gt; 除外専用リストには下記の制約があります。&lt;br&gt; ・１アカウントにつき1つ作成が可能です。&lt;br&gt; ・除外にのみ紐付け可能です。&lt;br&gt; このフィールドは、ADD時に省略可能(デフォルトの値はFALSE)、SET時に指定不可となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A flag that indicates whether it is an exclusion list. &lt;br&gt; Exclusion list includes the following restrictions: &lt;br&gt; *Only one list can be created per account. &lt;br&gt; *Can be linked only to exclusion. &lt;br&gt; This field is optional in ADD operation (default value will be FALSE), and cannot be specified in SET operation. &lt;/div&gt; &lt;dl class&#x3D;term&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;TRUE&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;除外専用リストです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Exclusion list.&lt;/span&gt;&lt;/dd&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;FALSE&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;通常のurlリストです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Standard URL list.&lt;/span&gt;&lt;/dd&gt; &lt;/dl&gt; 
    * @return brandSafetyDenyListFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getBrandSafetyDenyListFlg() {
@@ -245,14 +248,13 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
+  public void setBrandSafetyDenyListFlg(@jakarta.annotation.Nullable Boolean brandSafetyDenyListFlg) {
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
   }
 
-
-  public PlacementUrlList urls(List<PlacementUrlListServiceUrlList> urls) {
+  public PlacementUrlList urls(@jakarta.annotation.Nullable List<PlacementUrlListServiceUrlList> urls) {
     
     this.urls = urls;
     return this;
@@ -266,12 +268,12 @@ public class PlacementUrlList {
     return this;
   }
 
-   /**
+  /**
    * Get urls
    * @return urls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URLS)
+  @JsonProperty(value = JSON_PROPERTY_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PlacementUrlListServiceUrlList> getUrls() {
@@ -279,11 +281,12 @@ public class PlacementUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URLS)
+  @JsonProperty(value = JSON_PROPERTY_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrls(List<PlacementUrlListServiceUrlList> urls) {
+  public void setUrls(@jakarta.annotation.Nullable List<PlacementUrlListServiceUrlList> urls) {
     this.urls = urls;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -330,10 +333,7 @@ public class PlacementUrlList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

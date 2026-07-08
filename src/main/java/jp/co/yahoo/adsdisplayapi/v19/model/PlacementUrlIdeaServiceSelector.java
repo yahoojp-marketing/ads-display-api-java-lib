@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.PlacementUrlIdeaServiceAdPlaceFilterType;
 import jp.co.yahoo.adsdisplayapi.v19.model.PlacementUrlIdeaServiceAdPlaceGroupFilterType;
@@ -31,6 +31,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.PlacementUrlIdeaServiceSortType;
 import jp.co.yahoo.adsdisplayapi.v19.model.PlacementUrlIdeaServiceUnknownUrlFilterType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The objects to keep get method search conditions (execution parameter).&lt;/div&gt; 
@@ -47,53 +48,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlacementUrlIdeaServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   PlacementUrlIdeaServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PlacementUrlIdeaServiceSelector {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
+  @jakarta.annotation.Nullable
   private String keyword;
 
   public static final String JSON_PROPERTY_KEYWORD_FILTER_TYPES = "keywordFilterTypes";
+  @jakarta.annotation.Nullable
   private List<PlacementUrlIdeaServiceKeywordFilterType> keywordFilterTypes;
 
   public static final String JSON_PROPERTY_AD_PLACE_FILTER_TYPES = "adPlaceFilterTypes";
+  @jakarta.annotation.Nullable
   private List<PlacementUrlIdeaServiceAdPlaceFilterType> adPlaceFilterTypes;
 
   public static final String JSON_PROPERTY_AD_PLACE_GROUP_FILTER_TYPES = "adPlaceGroupFilterTypes";
+  @jakarta.annotation.Nullable
   private List<PlacementUrlIdeaServiceAdPlaceGroupFilterType> adPlaceGroupFilterTypes;
 
   public static final String JSON_PROPERTY_LANG = "lang";
+  @jakarta.annotation.Nullable
   private PlacementUrlIdeaServiceLang lang;
 
   public static final String JSON_PROPERTY_UNKNOWN_URL_FILTER_TYPE = "unknownUrlFilterType";
+  @jakarta.annotation.Nullable
   private PlacementUrlIdeaServiceUnknownUrlFilterType unknownUrlFilterType;
 
   public static final String JSON_PROPERTY_SORT_FIELD = "sortField";
+  @jakarta.annotation.Nullable
   private PlacementUrlIdeaServiceSortField sortField;
 
   public static final String JSON_PROPERTY_SORT_TYPE = "sortType";
+  @jakarta.annotation.Nullable
   private PlacementUrlIdeaServiceSortType sortType;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public PlacementUrlIdeaServiceSelector() {
   }
 
-  public PlacementUrlIdeaServiceSelector keyword(String keyword) {
+  public PlacementUrlIdeaServiceSelector keyword(@jakarta.annotation.Nullable String keyword) {
     
     this.keyword = keyword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索キーワードの配列です。&lt;br&gt; ・URLまたは配信先名を検索するためのキーワードです。&lt;br&gt; ・部分一致です。&lt;br&gt; ・スペース区切りでAND検索です。&lt;br&gt; ・最大文字数250です。&lt;br&gt; ・スペース区切りでの単語数は最大10個です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Array of Search keyword.&lt;br&gt; ・Keyword to search URL or ad place name&lt;br&gt; ・Broad match&lt;br&gt; ・Search all keywords (AND), separated by spaces&lt;br&gt; ・Maximum of 250 characters&lt;br&gt; ・Maximum of 10 spaces to separate the words &lt;/div&gt; 
    * @return keyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getKeyword() {
@@ -101,14 +112,13 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeyword(String keyword) {
+  public void setKeyword(@jakarta.annotation.Nullable String keyword) {
     this.keyword = keyword;
   }
 
-
-  public PlacementUrlIdeaServiceSelector keywordFilterTypes(List<PlacementUrlIdeaServiceKeywordFilterType> keywordFilterTypes) {
+  public PlacementUrlIdeaServiceSelector keywordFilterTypes(@jakarta.annotation.Nullable List<PlacementUrlIdeaServiceKeywordFilterType> keywordFilterTypes) {
     
     this.keywordFilterTypes = keywordFilterTypes;
     return this;
@@ -122,12 +132,12 @@ public class PlacementUrlIdeaServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get keywordFilterTypes
    * @return keywordFilterTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_FILTER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_FILTER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PlacementUrlIdeaServiceKeywordFilterType> getKeywordFilterTypes() {
@@ -135,14 +145,13 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_FILTER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_FILTER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordFilterTypes(List<PlacementUrlIdeaServiceKeywordFilterType> keywordFilterTypes) {
+  public void setKeywordFilterTypes(@jakarta.annotation.Nullable List<PlacementUrlIdeaServiceKeywordFilterType> keywordFilterTypes) {
     this.keywordFilterTypes = keywordFilterTypes;
   }
 
-
-  public PlacementUrlIdeaServiceSelector adPlaceFilterTypes(List<PlacementUrlIdeaServiceAdPlaceFilterType> adPlaceFilterTypes) {
+  public PlacementUrlIdeaServiceSelector adPlaceFilterTypes(@jakarta.annotation.Nullable List<PlacementUrlIdeaServiceAdPlaceFilterType> adPlaceFilterTypes) {
     
     this.adPlaceFilterTypes = adPlaceFilterTypes;
     return this;
@@ -156,12 +165,12 @@ public class PlacementUrlIdeaServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get adPlaceFilterTypes
    * @return adPlaceFilterTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_PLACE_FILTER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AD_PLACE_FILTER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PlacementUrlIdeaServiceAdPlaceFilterType> getAdPlaceFilterTypes() {
@@ -169,14 +178,13 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_PLACE_FILTER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AD_PLACE_FILTER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdPlaceFilterTypes(List<PlacementUrlIdeaServiceAdPlaceFilterType> adPlaceFilterTypes) {
+  public void setAdPlaceFilterTypes(@jakarta.annotation.Nullable List<PlacementUrlIdeaServiceAdPlaceFilterType> adPlaceFilterTypes) {
     this.adPlaceFilterTypes = adPlaceFilterTypes;
   }
 
-
-  public PlacementUrlIdeaServiceSelector adPlaceGroupFilterTypes(List<PlacementUrlIdeaServiceAdPlaceGroupFilterType> adPlaceGroupFilterTypes) {
+  public PlacementUrlIdeaServiceSelector adPlaceGroupFilterTypes(@jakarta.annotation.Nullable List<PlacementUrlIdeaServiceAdPlaceGroupFilterType> adPlaceGroupFilterTypes) {
     
     this.adPlaceGroupFilterTypes = adPlaceGroupFilterTypes;
     return this;
@@ -190,12 +198,12 @@ public class PlacementUrlIdeaServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get adPlaceGroupFilterTypes
    * @return adPlaceGroupFilterTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_PLACE_GROUP_FILTER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AD_PLACE_GROUP_FILTER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<PlacementUrlIdeaServiceAdPlaceGroupFilterType> getAdPlaceGroupFilterTypes() {
@@ -203,25 +211,24 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_PLACE_GROUP_FILTER_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AD_PLACE_GROUP_FILTER_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdPlaceGroupFilterTypes(List<PlacementUrlIdeaServiceAdPlaceGroupFilterType> adPlaceGroupFilterTypes) {
+  public void setAdPlaceGroupFilterTypes(@jakarta.annotation.Nullable List<PlacementUrlIdeaServiceAdPlaceGroupFilterType> adPlaceGroupFilterTypes) {
     this.adPlaceGroupFilterTypes = adPlaceGroupFilterTypes;
   }
 
-
-  public PlacementUrlIdeaServiceSelector lang(PlacementUrlIdeaServiceLang lang) {
+  public PlacementUrlIdeaServiceSelector lang(@jakarta.annotation.Nullable PlacementUrlIdeaServiceLang lang) {
     
     this.lang = lang;
     return this;
   }
 
-   /**
+  /**
    * Get lang
    * @return lang
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlIdeaServiceLang getLang() {
@@ -229,25 +236,24 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLang(PlacementUrlIdeaServiceLang lang) {
+  public void setLang(@jakarta.annotation.Nullable PlacementUrlIdeaServiceLang lang) {
     this.lang = lang;
   }
 
-
-  public PlacementUrlIdeaServiceSelector unknownUrlFilterType(PlacementUrlIdeaServiceUnknownUrlFilterType unknownUrlFilterType) {
+  public PlacementUrlIdeaServiceSelector unknownUrlFilterType(@jakarta.annotation.Nullable PlacementUrlIdeaServiceUnknownUrlFilterType unknownUrlFilterType) {
     
     this.unknownUrlFilterType = unknownUrlFilterType;
     return this;
   }
 
-   /**
+  /**
    * Get unknownUrlFilterType
    * @return unknownUrlFilterType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UNKNOWN_URL_FILTER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_UNKNOWN_URL_FILTER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlIdeaServiceUnknownUrlFilterType getUnknownUrlFilterType() {
@@ -255,25 +261,24 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UNKNOWN_URL_FILTER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_UNKNOWN_URL_FILTER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUnknownUrlFilterType(PlacementUrlIdeaServiceUnknownUrlFilterType unknownUrlFilterType) {
+  public void setUnknownUrlFilterType(@jakarta.annotation.Nullable PlacementUrlIdeaServiceUnknownUrlFilterType unknownUrlFilterType) {
     this.unknownUrlFilterType = unknownUrlFilterType;
   }
 
-
-  public PlacementUrlIdeaServiceSelector sortField(PlacementUrlIdeaServiceSortField sortField) {
+  public PlacementUrlIdeaServiceSelector sortField(@jakarta.annotation.Nullable PlacementUrlIdeaServiceSortField sortField) {
     
     this.sortField = sortField;
     return this;
   }
 
-   /**
+  /**
    * Get sortField
    * @return sortField
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlIdeaServiceSortField getSortField() {
@@ -281,25 +286,24 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortField(PlacementUrlIdeaServiceSortField sortField) {
+  public void setSortField(@jakarta.annotation.Nullable PlacementUrlIdeaServiceSortField sortField) {
     this.sortField = sortField;
   }
 
-
-  public PlacementUrlIdeaServiceSelector sortType(PlacementUrlIdeaServiceSortType sortType) {
+  public PlacementUrlIdeaServiceSelector sortType(@jakarta.annotation.Nullable PlacementUrlIdeaServiceSortType sortType) {
     
     this.sortType = sortType;
     return this;
   }
 
-   /**
+  /**
    * Get sortType
    * @return sortType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlIdeaServiceSortType getSortType() {
@@ -307,27 +311,26 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortType(PlacementUrlIdeaServiceSortType sortType) {
+  public void setSortType(@jakarta.annotation.Nullable PlacementUrlIdeaServiceSortType sortType) {
     this.sortType = sortType;
   }
 
-
-  public PlacementUrlIdeaServiceSelector numberResults(Integer numberResults) {
+  public PlacementUrlIdeaServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -335,26 +338,25 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public PlacementUrlIdeaServiceSelector startIndex(Integer startIndex) {
+  public PlacementUrlIdeaServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -362,11 +364,12 @@ public class PlacementUrlIdeaServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -417,10 +420,7 @@ public class PlacementUrlIdeaServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

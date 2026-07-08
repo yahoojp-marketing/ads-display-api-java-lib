@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.OfflineConversionServiceProcessStatus;
 import jp.co.yahoo.adsdisplayapi.v19.model.OfflineConversionServiceUploadSourceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オフラインコンバージョンデータをアップロードする処理内容を格納します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This object contains contents of offline conversion information for upload.&lt;/div&gt; 
@@ -36,41 +36,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OfflineConversionFile.JSON_PROPERTY_UPLOAD_SOURCE_TYPE,
   OfflineConversionFile.JSON_PROPERTY_PROCESS_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class OfflineConversionFile {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_UPLOAD_ID = "uploadId";
+  @jakarta.annotation.Nullable
   private Long uploadId;
 
   public static final String JSON_PROPERTY_UPLOAD_FILE_NAME = "uploadFileName";
+  @jakarta.annotation.Nullable
   private String uploadFileName;
 
   public static final String JSON_PROPERTY_UPLOADED_DATE = "uploadedDate";
+  @jakarta.annotation.Nullable
   private String uploadedDate;
 
   public static final String JSON_PROPERTY_UPLOAD_SOURCE_TYPE = "uploadSourceType";
+  @jakarta.annotation.Nullable
   private OfflineConversionServiceUploadSourceType uploadSourceType;
 
   public static final String JSON_PROPERTY_PROCESS_STATUS = "processStatus";
+  @jakarta.annotation.Nullable
   private OfflineConversionServiceProcessStatus processStatus;
 
   public OfflineConversionFile() {
   }
 
-  public OfflineConversionFile accountId(Long accountId) {
+  public OfflineConversionFile accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -78,25 +84,24 @@ public class OfflineConversionFile {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public OfflineConversionFile uploadId(Long uploadId) {
+  public OfflineConversionFile uploadId(@jakarta.annotation.Nullable Long uploadId) {
     
     this.uploadId = uploadId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload ID.&lt;/div&gt; 
    * @return uploadId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_ID)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getUploadId() {
@@ -104,25 +109,24 @@ public class OfflineConversionFile {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_ID)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadId(Long uploadId) {
+  public void setUploadId(@jakarta.annotation.Nullable Long uploadId) {
     this.uploadId = uploadId;
   }
 
-
-  public OfflineConversionFile uploadFileName(String uploadFileName) {
+  public OfflineConversionFile uploadFileName(@jakarta.annotation.Nullable String uploadFileName) {
     
     this.uploadFileName = uploadFileName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードファイル名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload file name.&lt;/div&gt; 
    * @return uploadFileName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_FILE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_FILE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUploadFileName() {
@@ -130,25 +134,24 @@ public class OfflineConversionFile {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_FILE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_FILE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadFileName(String uploadFileName) {
+  public void setUploadFileName(@jakarta.annotation.Nullable String uploadFileName) {
     this.uploadFileName = uploadFileName;
   }
 
-
-  public OfflineConversionFile uploadedDate(String uploadedDate) {
+  public OfflineConversionFile uploadedDate(@jakarta.annotation.Nullable String uploadedDate) {
     
     this.uploadedDate = uploadedDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロード日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Upload date and time.&lt;/div&gt; 
    * @return uploadedDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOADED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOADED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUploadedDate() {
@@ -156,25 +159,24 @@ public class OfflineConversionFile {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOADED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOADED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadedDate(String uploadedDate) {
+  public void setUploadedDate(@jakarta.annotation.Nullable String uploadedDate) {
     this.uploadedDate = uploadedDate;
   }
 
-
-  public OfflineConversionFile uploadSourceType(OfflineConversionServiceUploadSourceType uploadSourceType) {
+  public OfflineConversionFile uploadSourceType(@jakarta.annotation.Nullable OfflineConversionServiceUploadSourceType uploadSourceType) {
     
     this.uploadSourceType = uploadSourceType;
     return this;
   }
 
-   /**
+  /**
    * Get uploadSourceType
    * @return uploadSourceType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public OfflineConversionServiceUploadSourceType getUploadSourceType() {
@@ -182,25 +184,24 @@ public class OfflineConversionFile {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadSourceType(OfflineConversionServiceUploadSourceType uploadSourceType) {
+  public void setUploadSourceType(@jakarta.annotation.Nullable OfflineConversionServiceUploadSourceType uploadSourceType) {
     this.uploadSourceType = uploadSourceType;
   }
 
-
-  public OfflineConversionFile processStatus(OfflineConversionServiceProcessStatus processStatus) {
+  public OfflineConversionFile processStatus(@jakarta.annotation.Nullable OfflineConversionServiceProcessStatus processStatus) {
     
     this.processStatus = processStatus;
     return this;
   }
 
-   /**
+  /**
    * Get processStatus
    * @return processStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROCESS_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_PROCESS_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public OfflineConversionServiceProcessStatus getProcessStatus() {
@@ -208,11 +209,12 @@ public class OfflineConversionFile {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROCESS_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_PROCESS_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProcessStatus(OfflineConversionServiceProcessStatus processStatus) {
+  public void setProcessStatus(@jakarta.annotation.Nullable OfflineConversionServiceProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -255,10 +257,7 @@ public class OfflineConversionFile {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

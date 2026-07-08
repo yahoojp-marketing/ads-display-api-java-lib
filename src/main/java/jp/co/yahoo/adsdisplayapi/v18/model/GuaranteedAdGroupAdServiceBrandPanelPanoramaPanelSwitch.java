@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchオブジェクトは、ブランドパネル パノラマ パネルスイッチ広告の詳細情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch object describes detailed information of Brand Panel Panorama Panel-switch ad. &lt;/div&gt; 
@@ -32,35 +32,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch.JSON_PROPERTY_MEDIA_ID,
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch.JSON_PROPERTY_SWITCH_MEDIA_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch {
   public static final String JSON_PROPERTY_DISPLAY_ORDER = "displayOrder";
+  @jakarta.annotation.Nullable
   private Long displayOrder;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
+  @jakarta.annotation.Nullable
   private String finalUrl;
 
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
+  @jakarta.annotation.Nullable
   private Long mediaId;
 
   public static final String JSON_PROPERTY_SWITCH_MEDIA_ID = "switchMediaId";
+  @jakarta.annotation.Nullable
   private Long switchMediaId;
 
   public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch() {
   }
 
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch displayOrder(Long displayOrder) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch displayOrder(@jakarta.annotation.Nullable Long displayOrder) {
     
     this.displayOrder = displayOrder;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; パネルの表示順です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※指定しない場合は自動で設定されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Panel display order.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; *If not specified, it will be set automatically. &lt;/div&gt; 
    * @return displayOrder
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_ORDER)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_ORDER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getDisplayOrder() {
@@ -68,25 +72,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_ORDER)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_ORDER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayOrder(Long displayOrder) {
+  public void setDisplayOrder(@jakarta.annotation.Nullable Long displayOrder) {
     this.displayOrder = displayOrder;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch finalUrl(String finalUrl) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch finalUrl(@jakarta.annotation.Nullable String finalUrl) {
     
     this.finalUrl = finalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return finalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFinalUrl() {
@@ -94,25 +97,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFinalUrl(String finalUrl) {
+  public void setFinalUrl(@jakarta.annotation.Nullable String finalUrl) {
     this.finalUrl = finalUrl;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch mediaId(Long mediaId) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch mediaId(@jakarta.annotation.Nullable Long mediaId) {
     
     this.mediaId = mediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return mediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMediaId() {
@@ -120,25 +122,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaId(Long mediaId) {
+  public void setMediaId(@jakarta.annotation.Nullable Long mediaId) {
     this.mediaId = mediaId;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch switchMediaId(Long switchMediaId) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch switchMediaId(@jakarta.annotation.Nullable Long switchMediaId) {
     
     this.switchMediaId = switchMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; スイッチ画像のメディアIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of switch image.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return switchMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SWITCH_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_SWITCH_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSwitchMediaId() {
@@ -146,11 +147,12 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SWITCH_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_SWITCH_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSwitchMediaId(Long switchMediaId) {
+  public void setSwitchMediaId(@jakarta.annotation.Nullable Long switchMediaId) {
     this.switchMediaId = switchMediaId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -189,10 +191,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

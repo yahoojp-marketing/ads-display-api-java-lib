@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceAdActionUsersAudienceList;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceAdvancedSegmentsAudienceList;
@@ -35,6 +34,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceWebsiteVisitorsAud
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceYahooJapanAudienceDiscoveryAudienceList;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceContentオブジェクトは、オーディエンスリストの詳細情報を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceContent object describes detailed information of audience list.&lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -54,62 +54,75 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceContent.JSON_PROPERTY_LINE_ID_DATA_AUDIENCE_LIST,
   AudienceListServiceContent.JSON_PROPERTY_AUDIENCE_LIST_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceContent {
   public static final String JSON_PROPERTY_COMBINATION_AUDIENCE_LIST = "combinationAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceCombinationAudienceList combinationAudienceList;
 
   public static final String JSON_PROPERTY_SIMILARITY_AUDIENCE_LIST = "similarityAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceSimilarityAudienceList similarityAudienceList;
 
   public static final String JSON_PROPERTY_WEBSITE_VISITORS_AUDIENCE_LIST = "websiteVisitorsAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceWebsiteVisitorsAudienceList websiteVisitorsAudienceList;
 
   public static final String JSON_PROPERTY_CUSTOMER_DATA_AUDIENCE_LIST = "customerDataAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceCustomerDataAudienceList customerDataAudienceList;
 
   public static final String JSON_PROPERTY_APP_USER_AUDIENCE_LIST = "appUserAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAppUserAudienceList appUserAudienceList;
 
   public static final String JSON_PROPERTY_YAHOO_JAPAN_AUDIENCE_DISCOVERY_AUDIENCE_LIST = "yahooJapanAudienceDiscoveryAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceYahooJapanAudienceDiscoveryAudienceList yahooJapanAudienceDiscoveryAudienceList;
 
   public static final String JSON_PROPERTY_ADVANCED_SEGMENTS_AUDIENCE_LIST = "advancedSegmentsAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAdvancedSegmentsAudienceList advancedSegmentsAudienceList;
 
   public static final String JSON_PROPERTY_AD_ACTION_USERS_AUDIENCE_LIST = "adActionUsersAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAdActionUsersAudienceList adActionUsersAudienceList;
 
   public static final String JSON_PROPERTY_LINE_OA_FRIEND_AUDIENCE_LIST = "lineOaFriendAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceLineOaFriendAudienceList lineOaFriendAudienceList;
 
   public static final String JSON_PROPERTY_LINE_OA_BLOCK_AUDIENCE_LIST = "lineOaBlockAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceLineOaBlockAudienceList lineOaBlockAudienceList;
 
   public static final String JSON_PROPERTY_BUSINESS_MANAGER_AUDIENCE_LIST = "businessManagerAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceBusinessManagerAudienceList businessManagerAudienceList;
 
   public static final String JSON_PROPERTY_LINE_ID_DATA_AUDIENCE_LIST = "lineIdDataAudienceList";
+  @jakarta.annotation.Nullable
   private AudienceListServiceLineIdDataAudienceList lineIdDataAudienceList;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPE = "audienceListType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceType audienceListType;
 
   public AudienceListServiceContent() {
   }
 
-  public AudienceListServiceContent combinationAudienceList(AudienceListServiceCombinationAudienceList combinationAudienceList) {
+  public AudienceListServiceContent combinationAudienceList(@jakarta.annotation.Nullable AudienceListServiceCombinationAudienceList combinationAudienceList) {
     
     this.combinationAudienceList = combinationAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get combinationAudienceList
    * @return combinationAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMBINATION_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_COMBINATION_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceCombinationAudienceList getCombinationAudienceList() {
@@ -117,25 +130,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMBINATION_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_COMBINATION_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCombinationAudienceList(AudienceListServiceCombinationAudienceList combinationAudienceList) {
+  public void setCombinationAudienceList(@jakarta.annotation.Nullable AudienceListServiceCombinationAudienceList combinationAudienceList) {
     this.combinationAudienceList = combinationAudienceList;
   }
 
-
-  public AudienceListServiceContent similarityAudienceList(AudienceListServiceSimilarityAudienceList similarityAudienceList) {
+  public AudienceListServiceContent similarityAudienceList(@jakarta.annotation.Nullable AudienceListServiceSimilarityAudienceList similarityAudienceList) {
     
     this.similarityAudienceList = similarityAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get similarityAudienceList
    * @return similarityAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SIMILARITY_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_SIMILARITY_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceSimilarityAudienceList getSimilarityAudienceList() {
@@ -143,25 +155,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SIMILARITY_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_SIMILARITY_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSimilarityAudienceList(AudienceListServiceSimilarityAudienceList similarityAudienceList) {
+  public void setSimilarityAudienceList(@jakarta.annotation.Nullable AudienceListServiceSimilarityAudienceList similarityAudienceList) {
     this.similarityAudienceList = similarityAudienceList;
   }
 
-
-  public AudienceListServiceContent websiteVisitorsAudienceList(AudienceListServiceWebsiteVisitorsAudienceList websiteVisitorsAudienceList) {
+  public AudienceListServiceContent websiteVisitorsAudienceList(@jakarta.annotation.Nullable AudienceListServiceWebsiteVisitorsAudienceList websiteVisitorsAudienceList) {
     
     this.websiteVisitorsAudienceList = websiteVisitorsAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get websiteVisitorsAudienceList
    * @return websiteVisitorsAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEBSITE_VISITORS_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_WEBSITE_VISITORS_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceWebsiteVisitorsAudienceList getWebsiteVisitorsAudienceList() {
@@ -169,25 +180,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WEBSITE_VISITORS_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_WEBSITE_VISITORS_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWebsiteVisitorsAudienceList(AudienceListServiceWebsiteVisitorsAudienceList websiteVisitorsAudienceList) {
+  public void setWebsiteVisitorsAudienceList(@jakarta.annotation.Nullable AudienceListServiceWebsiteVisitorsAudienceList websiteVisitorsAudienceList) {
     this.websiteVisitorsAudienceList = websiteVisitorsAudienceList;
   }
 
-
-  public AudienceListServiceContent customerDataAudienceList(AudienceListServiceCustomerDataAudienceList customerDataAudienceList) {
+  public AudienceListServiceContent customerDataAudienceList(@jakarta.annotation.Nullable AudienceListServiceCustomerDataAudienceList customerDataAudienceList) {
     
     this.customerDataAudienceList = customerDataAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get customerDataAudienceList
    * @return customerDataAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_DATA_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOMER_DATA_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceCustomerDataAudienceList getCustomerDataAudienceList() {
@@ -195,25 +205,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOMER_DATA_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOMER_DATA_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomerDataAudienceList(AudienceListServiceCustomerDataAudienceList customerDataAudienceList) {
+  public void setCustomerDataAudienceList(@jakarta.annotation.Nullable AudienceListServiceCustomerDataAudienceList customerDataAudienceList) {
     this.customerDataAudienceList = customerDataAudienceList;
   }
 
-
-  public AudienceListServiceContent appUserAudienceList(AudienceListServiceAppUserAudienceList appUserAudienceList) {
+  public AudienceListServiceContent appUserAudienceList(@jakarta.annotation.Nullable AudienceListServiceAppUserAudienceList appUserAudienceList) {
     
     this.appUserAudienceList = appUserAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get appUserAudienceList
    * @return appUserAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_USER_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_APP_USER_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAppUserAudienceList getAppUserAudienceList() {
@@ -221,25 +230,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_USER_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_APP_USER_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppUserAudienceList(AudienceListServiceAppUserAudienceList appUserAudienceList) {
+  public void setAppUserAudienceList(@jakarta.annotation.Nullable AudienceListServiceAppUserAudienceList appUserAudienceList) {
     this.appUserAudienceList = appUserAudienceList;
   }
 
-
-  public AudienceListServiceContent yahooJapanAudienceDiscoveryAudienceList(AudienceListServiceYahooJapanAudienceDiscoveryAudienceList yahooJapanAudienceDiscoveryAudienceList) {
+  public AudienceListServiceContent yahooJapanAudienceDiscoveryAudienceList(@jakarta.annotation.Nullable AudienceListServiceYahooJapanAudienceDiscoveryAudienceList yahooJapanAudienceDiscoveryAudienceList) {
     
     this.yahooJapanAudienceDiscoveryAudienceList = yahooJapanAudienceDiscoveryAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get yahooJapanAudienceDiscoveryAudienceList
    * @return yahooJapanAudienceDiscoveryAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_YAHOO_JAPAN_AUDIENCE_DISCOVERY_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_YAHOO_JAPAN_AUDIENCE_DISCOVERY_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceYahooJapanAudienceDiscoveryAudienceList getYahooJapanAudienceDiscoveryAudienceList() {
@@ -247,25 +255,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_YAHOO_JAPAN_AUDIENCE_DISCOVERY_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_YAHOO_JAPAN_AUDIENCE_DISCOVERY_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setYahooJapanAudienceDiscoveryAudienceList(AudienceListServiceYahooJapanAudienceDiscoveryAudienceList yahooJapanAudienceDiscoveryAudienceList) {
+  public void setYahooJapanAudienceDiscoveryAudienceList(@jakarta.annotation.Nullable AudienceListServiceYahooJapanAudienceDiscoveryAudienceList yahooJapanAudienceDiscoveryAudienceList) {
     this.yahooJapanAudienceDiscoveryAudienceList = yahooJapanAudienceDiscoveryAudienceList;
   }
 
-
-  public AudienceListServiceContent advancedSegmentsAudienceList(AudienceListServiceAdvancedSegmentsAudienceList advancedSegmentsAudienceList) {
+  public AudienceListServiceContent advancedSegmentsAudienceList(@jakarta.annotation.Nullable AudienceListServiceAdvancedSegmentsAudienceList advancedSegmentsAudienceList) {
     
     this.advancedSegmentsAudienceList = advancedSegmentsAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get advancedSegmentsAudienceList
    * @return advancedSegmentsAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ADVANCED_SEGMENTS_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_SEGMENTS_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAdvancedSegmentsAudienceList getAdvancedSegmentsAudienceList() {
@@ -273,25 +280,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ADVANCED_SEGMENTS_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_SEGMENTS_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdvancedSegmentsAudienceList(AudienceListServiceAdvancedSegmentsAudienceList advancedSegmentsAudienceList) {
+  public void setAdvancedSegmentsAudienceList(@jakarta.annotation.Nullable AudienceListServiceAdvancedSegmentsAudienceList advancedSegmentsAudienceList) {
     this.advancedSegmentsAudienceList = advancedSegmentsAudienceList;
   }
 
-
-  public AudienceListServiceContent adActionUsersAudienceList(AudienceListServiceAdActionUsersAudienceList adActionUsersAudienceList) {
+  public AudienceListServiceContent adActionUsersAudienceList(@jakarta.annotation.Nullable AudienceListServiceAdActionUsersAudienceList adActionUsersAudienceList) {
     
     this.adActionUsersAudienceList = adActionUsersAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get adActionUsersAudienceList
    * @return adActionUsersAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_ACTION_USERS_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_AD_ACTION_USERS_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAdActionUsersAudienceList getAdActionUsersAudienceList() {
@@ -299,25 +305,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_ACTION_USERS_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_AD_ACTION_USERS_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdActionUsersAudienceList(AudienceListServiceAdActionUsersAudienceList adActionUsersAudienceList) {
+  public void setAdActionUsersAudienceList(@jakarta.annotation.Nullable AudienceListServiceAdActionUsersAudienceList adActionUsersAudienceList) {
     this.adActionUsersAudienceList = adActionUsersAudienceList;
   }
 
-
-  public AudienceListServiceContent lineOaFriendAudienceList(AudienceListServiceLineOaFriendAudienceList lineOaFriendAudienceList) {
+  public AudienceListServiceContent lineOaFriendAudienceList(@jakarta.annotation.Nullable AudienceListServiceLineOaFriendAudienceList lineOaFriendAudienceList) {
     
     this.lineOaFriendAudienceList = lineOaFriendAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get lineOaFriendAudienceList
    * @return lineOaFriendAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINE_OA_FRIEND_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LINE_OA_FRIEND_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceLineOaFriendAudienceList getLineOaFriendAudienceList() {
@@ -325,25 +330,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINE_OA_FRIEND_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LINE_OA_FRIEND_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLineOaFriendAudienceList(AudienceListServiceLineOaFriendAudienceList lineOaFriendAudienceList) {
+  public void setLineOaFriendAudienceList(@jakarta.annotation.Nullable AudienceListServiceLineOaFriendAudienceList lineOaFriendAudienceList) {
     this.lineOaFriendAudienceList = lineOaFriendAudienceList;
   }
 
-
-  public AudienceListServiceContent lineOaBlockAudienceList(AudienceListServiceLineOaBlockAudienceList lineOaBlockAudienceList) {
+  public AudienceListServiceContent lineOaBlockAudienceList(@jakarta.annotation.Nullable AudienceListServiceLineOaBlockAudienceList lineOaBlockAudienceList) {
     
     this.lineOaBlockAudienceList = lineOaBlockAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get lineOaBlockAudienceList
    * @return lineOaBlockAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINE_OA_BLOCK_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LINE_OA_BLOCK_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceLineOaBlockAudienceList getLineOaBlockAudienceList() {
@@ -351,25 +355,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINE_OA_BLOCK_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LINE_OA_BLOCK_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLineOaBlockAudienceList(AudienceListServiceLineOaBlockAudienceList lineOaBlockAudienceList) {
+  public void setLineOaBlockAudienceList(@jakarta.annotation.Nullable AudienceListServiceLineOaBlockAudienceList lineOaBlockAudienceList) {
     this.lineOaBlockAudienceList = lineOaBlockAudienceList;
   }
 
-
-  public AudienceListServiceContent businessManagerAudienceList(AudienceListServiceBusinessManagerAudienceList businessManagerAudienceList) {
+  public AudienceListServiceContent businessManagerAudienceList(@jakarta.annotation.Nullable AudienceListServiceBusinessManagerAudienceList businessManagerAudienceList) {
     
     this.businessManagerAudienceList = businessManagerAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get businessManagerAudienceList
    * @return businessManagerAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUSINESS_MANAGER_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_BUSINESS_MANAGER_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceBusinessManagerAudienceList getBusinessManagerAudienceList() {
@@ -377,25 +380,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUSINESS_MANAGER_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_BUSINESS_MANAGER_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBusinessManagerAudienceList(AudienceListServiceBusinessManagerAudienceList businessManagerAudienceList) {
+  public void setBusinessManagerAudienceList(@jakarta.annotation.Nullable AudienceListServiceBusinessManagerAudienceList businessManagerAudienceList) {
     this.businessManagerAudienceList = businessManagerAudienceList;
   }
 
-
-  public AudienceListServiceContent lineIdDataAudienceList(AudienceListServiceLineIdDataAudienceList lineIdDataAudienceList) {
+  public AudienceListServiceContent lineIdDataAudienceList(@jakarta.annotation.Nullable AudienceListServiceLineIdDataAudienceList lineIdDataAudienceList) {
     
     this.lineIdDataAudienceList = lineIdDataAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get lineIdDataAudienceList
    * @return lineIdDataAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINE_ID_DATA_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LINE_ID_DATA_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceLineIdDataAudienceList getLineIdDataAudienceList() {
@@ -403,25 +405,24 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINE_ID_DATA_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_LINE_ID_DATA_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLineIdDataAudienceList(AudienceListServiceLineIdDataAudienceList lineIdDataAudienceList) {
+  public void setLineIdDataAudienceList(@jakarta.annotation.Nullable AudienceListServiceLineIdDataAudienceList lineIdDataAudienceList) {
     this.lineIdDataAudienceList = lineIdDataAudienceList;
   }
 
-
-  public AudienceListServiceContent audienceListType(AudienceListServiceType audienceListType) {
+  public AudienceListServiceContent audienceListType(@jakarta.annotation.Nullable AudienceListServiceType audienceListType) {
     
     this.audienceListType = audienceListType;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListType
    * @return audienceListType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceType getAudienceListType() {
@@ -429,11 +430,12 @@ public class AudienceListServiceContent {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListType(AudienceListServiceType audienceListType) {
+  public void setAudienceListType(@jakarta.annotation.Nullable AudienceListServiceType audienceListType) {
     this.audienceListType = audienceListType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -490,10 +492,7 @@ public class AudienceListServiceContent {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

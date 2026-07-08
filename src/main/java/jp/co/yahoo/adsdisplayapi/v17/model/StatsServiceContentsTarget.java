@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceDeliverType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; StatsServiceContentsTargetオブジェクトは、コンテンツターゲティングの設定情報を保持します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; StatsServiceContentsTarget object is a container for storing contents settings. &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceContentsTarget.JSON_PROPERTY_DELIVER_TYPE,
   StatsServiceContentsTarget.JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceContentsTarget {
   public static final String JSON_PROPERTY_DELIVER_TYPE = "deliverType";
+  @jakarta.annotation.Nullable
   private StatsServiceDeliverType deliverType;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME = "contentsKeywordListName";
+  @jakarta.annotation.Nullable
   private String contentsKeywordListName;
 
   public StatsServiceContentsTarget() {
   }
 
-  public StatsServiceContentsTarget deliverType(StatsServiceDeliverType deliverType) {
+  public StatsServiceContentsTarget deliverType(@jakarta.annotation.Nullable StatsServiceDeliverType deliverType) {
     
     this.deliverType = deliverType;
     return this;
   }
 
-   /**
+  /**
    * Get deliverType
    * @return deliverType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DELIVER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceDeliverType getDeliverType() {
@@ -61,25 +63,24 @@ public class StatsServiceContentsTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DELIVER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliverType(StatsServiceDeliverType deliverType) {
+  public void setDeliverType(@jakarta.annotation.Nullable StatsServiceDeliverType deliverType) {
     this.deliverType = deliverType;
   }
 
-
-  public StatsServiceContentsTarget contentsKeywordListName(String contentsKeywordListName) {
+  public StatsServiceContentsTarget contentsKeywordListName(@jakarta.annotation.Nullable String contentsKeywordListName) {
     
     this.contentsKeywordListName = contentsKeywordListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリスト名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contents keyword list name. &lt;/div&gt; 
    * @return contentsKeywordListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getContentsKeywordListName() {
@@ -87,11 +88,12 @@ public class StatsServiceContentsTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeywordListName(String contentsKeywordListName) {
+  public void setContentsKeywordListName(@jakarta.annotation.Nullable String contentsKeywordListName) {
     this.contentsKeywordListName = contentsKeywordListName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class StatsServiceContentsTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

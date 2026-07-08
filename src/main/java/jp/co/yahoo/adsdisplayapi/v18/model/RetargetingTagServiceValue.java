@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.Error;
 import jp.co.yahoo.adsdisplayapi.v18.model.RetargetingTag;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagServiceValueオブジェクトは、サイトリターゲティングのタグ情報を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTagServiceValue object is a container for storing tag information for site retargeting.&lt;/div&gt; 
@@ -35,21 +36,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingTagServiceValue.JSON_PROPERTY_OPERATION_SUCCEEDED,
   RetargetingTagServiceValue.JSON_PROPERTY_RETARGETING_TAG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingTagServiceValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
+  @jakarta.annotation.Nullable
   private Boolean operationSucceeded;
 
   public static final String JSON_PROPERTY_RETARGETING_TAG = "retargetingTag";
+  @jakarta.annotation.Nullable
   private RetargetingTag retargetingTag;
 
   public RetargetingTagServiceValue() {
   }
 
-  public RetargetingTagServiceValue errors(List<Error> errors) {
+  public RetargetingTagServiceValue errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -63,12 +67,12 @@ public class RetargetingTagServiceValue {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -76,25 +80,24 @@ public class RetargetingTagServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public RetargetingTagServiceValue operationSucceeded(Boolean operationSucceeded) {
+  public RetargetingTagServiceValue operationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     
     this.operationSucceeded = operationSucceeded;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getOperationSucceeded() {
@@ -102,25 +105,24 @@ public class RetargetingTagServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOperationSucceeded(Boolean operationSucceeded) {
+  public void setOperationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
-
-  public RetargetingTagServiceValue retargetingTag(RetargetingTag retargetingTag) {
+  public RetargetingTagServiceValue retargetingTag(@jakarta.annotation.Nullable RetargetingTag retargetingTag) {
     
     this.retargetingTag = retargetingTag;
     return this;
   }
 
-   /**
+  /**
    * Get retargetingTag
    * @return retargetingTag
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TAG)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TAG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingTag getRetargetingTag() {
@@ -128,11 +130,12 @@ public class RetargetingTagServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TAG)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TAG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingTag(RetargetingTag retargetingTag) {
+  public void setRetargetingTag(@jakarta.annotation.Nullable RetargetingTag retargetingTag) {
     this.retargetingTag = retargetingTag;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +172,7 @@ public class RetargetingTagServiceValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

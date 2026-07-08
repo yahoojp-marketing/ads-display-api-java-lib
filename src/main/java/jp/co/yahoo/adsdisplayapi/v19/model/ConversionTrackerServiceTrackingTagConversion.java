@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.ConversionTrackerServiceTrackingTagConversionRuleType;
 import jp.co.yahoo.adsdisplayapi.v19.model.ConversionTrackerServiceTrackingTagConversionUrlRule;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; このフィールドは、計測タグのコンバージョン設定を表します。&lt;br&gt; ADDおよびSET時は省略可能となります。ADD時、conversionTrackerTypeがTRACKING_TAG_CONVERSIONの場合、必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This field describes the information for the tracking tag.&lt;br&gt; This field is optional in ADD and SET operation. If conversionTrackerType is TRACKING_TAG_CONVERSION, this field is required in ADD operation. &lt;/div&gt; 
@@ -34,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceTrackingTagConversion.JSON_PROPERTY_RULE_TYPE,
   ConversionTrackerServiceTrackingTagConversion.JSON_PROPERTY_URL_RULE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceTrackingTagConversion {
   public static final String JSON_PROPERTY_SNIPPET_ID = "snippetId";
+  @jakarta.annotation.Nullable
   private String snippetId;
 
   public static final String JSON_PROPERTY_TRACKING_TAG_ID = "trackingTagId";
+  @jakarta.annotation.Nullable
   private String trackingTagId;
 
   public static final String JSON_PROPERTY_RULE_TYPE = "ruleType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceTrackingTagConversionRuleType ruleType;
 
   public static final String JSON_PROPERTY_URL_RULE = "urlRule";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceTrackingTagConversionUrlRule urlRule;
 
   public ConversionTrackerServiceTrackingTagConversion() {
   }
 
-  public ConversionTrackerServiceTrackingTagConversion snippetId(String snippetId) {
+  public ConversionTrackerServiceTrackingTagConversion snippetId(@jakarta.annotation.Nullable String snippetId) {
     
     this.snippetId = snippetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; スニペットIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Snippet ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return snippetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SNIPPET_ID)
+  @JsonProperty(value = JSON_PROPERTY_SNIPPET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSnippetId() {
@@ -70,25 +74,24 @@ public class ConversionTrackerServiceTrackingTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SNIPPET_ID)
+  @JsonProperty(value = JSON_PROPERTY_SNIPPET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSnippetId(String snippetId) {
+  public void setSnippetId(@jakarta.annotation.Nullable String snippetId) {
     this.snippetId = snippetId;
   }
 
-
-  public ConversionTrackerServiceTrackingTagConversion trackingTagId(String trackingTagId) {
+  public ConversionTrackerServiceTrackingTagConversion trackingTagId(@jakarta.annotation.Nullable String trackingTagId) {
     
     this.trackingTagId = trackingTagId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 計測タグIDです。&lt;br&gt; このフィールドは、SET時は無視され、ADD時は省略可能となります。&lt;br&gt; ADD時にこのフィールドが未指定の場合、有効な計測タグが1つあれば自動で設定されます。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Tracking tag ID.&lt;br&gt; This field will be ignored in SET operation, and is optional in ADD operation.&lt;br&gt; If this field is not specified in ADD operation, it will be set automatically if there is one valid tracking tag.&lt;br&gt; &lt;div&gt; 
    * @return trackingTagId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingTagId() {
@@ -96,25 +99,24 @@ public class ConversionTrackerServiceTrackingTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingTagId(String trackingTagId) {
+  public void setTrackingTagId(@jakarta.annotation.Nullable String trackingTagId) {
     this.trackingTagId = trackingTagId;
   }
 
-
-  public ConversionTrackerServiceTrackingTagConversion ruleType(ConversionTrackerServiceTrackingTagConversionRuleType ruleType) {
+  public ConversionTrackerServiceTrackingTagConversion ruleType(@jakarta.annotation.Nullable ConversionTrackerServiceTrackingTagConversionRuleType ruleType) {
     
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceTrackingTagConversionRuleType getRuleType() {
@@ -122,25 +124,24 @@ public class ConversionTrackerServiceTrackingTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleType(ConversionTrackerServiceTrackingTagConversionRuleType ruleType) {
+  public void setRuleType(@jakarta.annotation.Nullable ConversionTrackerServiceTrackingTagConversionRuleType ruleType) {
     this.ruleType = ruleType;
   }
 
-
-  public ConversionTrackerServiceTrackingTagConversion urlRule(ConversionTrackerServiceTrackingTagConversionUrlRule urlRule) {
+  public ConversionTrackerServiceTrackingTagConversion urlRule(@jakarta.annotation.Nullable ConversionTrackerServiceTrackingTagConversionUrlRule urlRule) {
     
     this.urlRule = urlRule;
     return this;
   }
 
-   /**
+  /**
    * Get urlRule
    * @return urlRule
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_RULE)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceTrackingTagConversionUrlRule getUrlRule() {
@@ -148,11 +149,12 @@ public class ConversionTrackerServiceTrackingTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_RULE)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlRule(ConversionTrackerServiceTrackingTagConversionUrlRule urlRule) {
+  public void setUrlRule(@jakarta.annotation.Nullable ConversionTrackerServiceTrackingTagConversionUrlRule urlRule) {
     this.urlRule = urlRule;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +193,7 @@ public class ConversionTrackerServiceTrackingTagConversion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceDateRange;
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceFilter;
@@ -38,6 +38,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceReportSortFiel
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceReportTypeCondition;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ReportDefinitionオブジェクトは、レポート定義を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The ReportDefinition object serves report definitions.&lt;/div&gt; 
@@ -65,86 +66,107 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinition.JSON_PROPERTY_REPORT_TYPE_CONDITION,
   ReportDefinition.JSON_PROPERTY_SORT_FIELDS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinition {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_COMPLETE_TIME = "completeTime";
+  @jakarta.annotation.Nullable
   private String completeTime;
 
   public static final String JSON_PROPERTY_DATE_RANGE = "dateRange";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceDateRange dateRange;
 
   public static final String JSON_PROPERTY_FIELDS = "fields";
+  @jakarta.annotation.Nullable
   private List<String> fields;
 
   public static final String JSON_PROPERTY_FILTERS = "filters";
+  @jakarta.annotation.Nullable
   private List<ReportDefinitionServiceFilter> filters;
 
   public static final String JSON_PROPERTY_REPORT_COMPRESS_TYPE = "reportCompressType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportCompressType reportCompressType;
 
   public static final String JSON_PROPERTY_REPORT_DATE_RANGE_TYPE = "reportDateRangeType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportDateRangeType reportDateRangeType;
 
   public static final String JSON_PROPERTY_REPORT_DOWNLOAD_ENCODE = "reportDownloadEncode";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportDownloadEncode reportDownloadEncode;
 
   public static final String JSON_PROPERTY_REPORT_DOWNLOAD_FORMAT = "reportDownloadFormat";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportDownloadFormat reportDownloadFormat;
 
   public static final String JSON_PROPERTY_REPORT_INCLUDE_DELETED = "reportIncludeDeleted";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportIncludeDeleted reportIncludeDeleted;
 
   public static final String JSON_PROPERTY_REPORT_JOB_STATUS = "reportJobStatus";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportJobStatus reportJobStatus;
 
   public static final String JSON_PROPERTY_REPORT_JOB_ERROR_DETAIL = "reportJobErrorDetail";
+  @jakarta.annotation.Nullable
   private String reportJobErrorDetail;
 
   public static final String JSON_PROPERTY_REPORT_JOB_ID = "reportJobId";
+  @jakarta.annotation.Nullable
   private Long reportJobId;
 
   public static final String JSON_PROPERTY_REPORT_LANGUAGE = "reportLanguage";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportLanguage reportLanguage;
 
   public static final String JSON_PROPERTY_REPORT_NAME = "reportName";
+  @jakarta.annotation.Nullable
   private String reportName;
 
   public static final String JSON_PROPERTY_REQUEST_TIME = "requestTime";
+  @jakarta.annotation.Nullable
   private String requestTime;
 
   public static final String JSON_PROPERTY_REPORT_SKIP_COLUMN_HEADER = "reportSkipColumnHeader";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader;
 
   public static final String JSON_PROPERTY_REPORT_SKIP_REPORT_SUMMARY = "reportSkipReportSummary";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary;
 
   public static final String JSON_PROPERTY_REPORT_DECIMAL_PART_DISPLAY_TYPE = "reportDecimalPartDisplayType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType;
 
   public static final String JSON_PROPERTY_REPORT_TYPE_CONDITION = "reportTypeCondition";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportTypeCondition reportTypeCondition;
 
   public static final String JSON_PROPERTY_SORT_FIELDS = "sortFields";
+  @jakarta.annotation.Nullable
   private List<ReportDefinitionServiceReportSortField> sortFields;
 
   public ReportDefinition() {
   }
 
-  public ReportDefinition accountId(Long accountId) {
+  public ReportDefinition accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -152,25 +174,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public ReportDefinition completeTime(String completeTime) {
+  public ReportDefinition completeTime(@jakarta.annotation.Nullable String completeTime) {
     
     this.completeTime = completeTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ジョブ完了日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※フォーマット: yyyy/MM/dd HH:mm:ss &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date and time of Job completion. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; *Format: yyyy/MM/dd HH:mm:ss &lt;/div&gt; 
    * @return completeTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMPLETE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_COMPLETE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCompleteTime() {
@@ -178,25 +199,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMPLETE_TIME)
+  @JsonProperty(value = JSON_PROPERTY_COMPLETE_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCompleteTime(String completeTime) {
+  public void setCompleteTime(@jakarta.annotation.Nullable String completeTime) {
     this.completeTime = completeTime;
   }
 
-
-  public ReportDefinition dateRange(ReportDefinitionServiceDateRange dateRange) {
+  public ReportDefinition dateRange(@jakarta.annotation.Nullable ReportDefinitionServiceDateRange dateRange) {
     
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceDateRange getDateRange() {
@@ -204,14 +224,13 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDateRange(ReportDefinitionServiceDateRange dateRange) {
+  public void setDateRange(@jakarta.annotation.Nullable ReportDefinitionServiceDateRange dateRange) {
     this.dateRange = dateRange;
   }
 
-
-  public ReportDefinition fields(List<String> fields) {
+  public ReportDefinition fields(@jakarta.annotation.Nullable List<String> fields) {
     
     this.fields = fields;
     return this;
@@ -225,12 +244,12 @@ public class ReportDefinition {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 表示項目です。&lt;br&gt; このフィールドは、ADD時に必須となり、REMOVE時に無視されます。&lt;br&gt; 指定可能な値は、ReportDefinitionServiceのgetReportFieldsで取得されるfieldNameをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Select the fields. &lt;br&gt; This field is required in ADD operation, and will be ignored in REMOVE operation.&lt;br&gt; * Available values can be referred to fieldName field of fields object obtained by getReportFields operation of ReportDefinitionService. &lt;/div&gt; 
    * @return fields
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getFields() {
@@ -238,14 +257,13 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFields(List<String> fields) {
+  public void setFields(@jakarta.annotation.Nullable List<String> fields) {
     this.fields = fields;
   }
 
-
-  public ReportDefinition filters(List<ReportDefinitionServiceFilter> filters) {
+  public ReportDefinition filters(@jakarta.annotation.Nullable List<ReportDefinitionServiceFilter> filters) {
     
     this.filters = filters;
     return this;
@@ -259,12 +277,12 @@ public class ReportDefinition {
     return this;
   }
 
-   /**
+  /**
    * Get filters
    * @return filters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILTERS)
+  @JsonProperty(value = JSON_PROPERTY_FILTERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ReportDefinitionServiceFilter> getFilters() {
@@ -272,25 +290,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILTERS)
+  @JsonProperty(value = JSON_PROPERTY_FILTERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFilters(List<ReportDefinitionServiceFilter> filters) {
+  public void setFilters(@jakarta.annotation.Nullable List<ReportDefinitionServiceFilter> filters) {
     this.filters = filters;
   }
 
-
-  public ReportDefinition reportCompressType(ReportDefinitionServiceReportCompressType reportCompressType) {
+  public ReportDefinition reportCompressType(@jakarta.annotation.Nullable ReportDefinitionServiceReportCompressType reportCompressType) {
     
     this.reportCompressType = reportCompressType;
     return this;
   }
 
-   /**
+  /**
    * Get reportCompressType
    * @return reportCompressType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_COMPRESS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_COMPRESS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportCompressType getReportCompressType() {
@@ -298,25 +315,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_COMPRESS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_COMPRESS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportCompressType(ReportDefinitionServiceReportCompressType reportCompressType) {
+  public void setReportCompressType(@jakarta.annotation.Nullable ReportDefinitionServiceReportCompressType reportCompressType) {
     this.reportCompressType = reportCompressType;
   }
 
-
-  public ReportDefinition reportDateRangeType(ReportDefinitionServiceReportDateRangeType reportDateRangeType) {
+  public ReportDefinition reportDateRangeType(@jakarta.annotation.Nullable ReportDefinitionServiceReportDateRangeType reportDateRangeType) {
     
     this.reportDateRangeType = reportDateRangeType;
     return this;
   }
 
-   /**
+  /**
    * Get reportDateRangeType
    * @return reportDateRangeType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_DATE_RANGE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DATE_RANGE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportDateRangeType getReportDateRangeType() {
@@ -324,25 +340,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_DATE_RANGE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DATE_RANGE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportDateRangeType(ReportDefinitionServiceReportDateRangeType reportDateRangeType) {
+  public void setReportDateRangeType(@jakarta.annotation.Nullable ReportDefinitionServiceReportDateRangeType reportDateRangeType) {
     this.reportDateRangeType = reportDateRangeType;
   }
 
-
-  public ReportDefinition reportDownloadEncode(ReportDefinitionServiceReportDownloadEncode reportDownloadEncode) {
+  public ReportDefinition reportDownloadEncode(@jakarta.annotation.Nullable ReportDefinitionServiceReportDownloadEncode reportDownloadEncode) {
     
     this.reportDownloadEncode = reportDownloadEncode;
     return this;
   }
 
-   /**
+  /**
    * Get reportDownloadEncode
    * @return reportDownloadEncode
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_DOWNLOAD_ENCODE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DOWNLOAD_ENCODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportDownloadEncode getReportDownloadEncode() {
@@ -350,25 +365,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_DOWNLOAD_ENCODE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DOWNLOAD_ENCODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportDownloadEncode(ReportDefinitionServiceReportDownloadEncode reportDownloadEncode) {
+  public void setReportDownloadEncode(@jakarta.annotation.Nullable ReportDefinitionServiceReportDownloadEncode reportDownloadEncode) {
     this.reportDownloadEncode = reportDownloadEncode;
   }
 
-
-  public ReportDefinition reportDownloadFormat(ReportDefinitionServiceReportDownloadFormat reportDownloadFormat) {
+  public ReportDefinition reportDownloadFormat(@jakarta.annotation.Nullable ReportDefinitionServiceReportDownloadFormat reportDownloadFormat) {
     
     this.reportDownloadFormat = reportDownloadFormat;
     return this;
   }
 
-   /**
+  /**
    * Get reportDownloadFormat
    * @return reportDownloadFormat
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_DOWNLOAD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DOWNLOAD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportDownloadFormat getReportDownloadFormat() {
@@ -376,25 +390,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_DOWNLOAD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DOWNLOAD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportDownloadFormat(ReportDefinitionServiceReportDownloadFormat reportDownloadFormat) {
+  public void setReportDownloadFormat(@jakarta.annotation.Nullable ReportDefinitionServiceReportDownloadFormat reportDownloadFormat) {
     this.reportDownloadFormat = reportDownloadFormat;
   }
 
-
-  public ReportDefinition reportIncludeDeleted(ReportDefinitionServiceReportIncludeDeleted reportIncludeDeleted) {
+  public ReportDefinition reportIncludeDeleted(@jakarta.annotation.Nullable ReportDefinitionServiceReportIncludeDeleted reportIncludeDeleted) {
     
     this.reportIncludeDeleted = reportIncludeDeleted;
     return this;
   }
 
-   /**
+  /**
    * Get reportIncludeDeleted
    * @return reportIncludeDeleted
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_INCLUDE_DELETED)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_INCLUDE_DELETED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportIncludeDeleted getReportIncludeDeleted() {
@@ -402,25 +415,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_INCLUDE_DELETED)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_INCLUDE_DELETED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportIncludeDeleted(ReportDefinitionServiceReportIncludeDeleted reportIncludeDeleted) {
+  public void setReportIncludeDeleted(@jakarta.annotation.Nullable ReportDefinitionServiceReportIncludeDeleted reportIncludeDeleted) {
     this.reportIncludeDeleted = reportIncludeDeleted;
   }
 
-
-  public ReportDefinition reportJobStatus(ReportDefinitionServiceReportJobStatus reportJobStatus) {
+  public ReportDefinition reportJobStatus(@jakarta.annotation.Nullable ReportDefinitionServiceReportJobStatus reportJobStatus) {
     
     this.reportJobStatus = reportJobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get reportJobStatus
    * @return reportJobStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportJobStatus getReportJobStatus() {
@@ -428,25 +440,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportJobStatus(ReportDefinitionServiceReportJobStatus reportJobStatus) {
+  public void setReportJobStatus(@jakarta.annotation.Nullable ReportDefinitionServiceReportJobStatus reportJobStatus) {
     this.reportJobStatus = reportJobStatus;
   }
 
-
-  public ReportDefinition reportJobErrorDetail(String reportJobErrorDetail) {
+  public ReportDefinition reportJobErrorDetail(@jakarta.annotation.Nullable String reportJobErrorDetail) {
     
     this.reportJobErrorDetail = reportJobErrorDetail;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ジョブエラー詳細です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; 「Over limit of file size.」が返される場合は、レポートのサイズが小さくなるようにレポート作成時の条件を変更してください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Job error detail. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; If the message \&quot;Over limit of file size.\&quot; is returned, change the report creation conditions to reduce the size of the report. &lt;/div&gt; 
    * @return reportJobErrorDetail
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_ERROR_DETAIL)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_ERROR_DETAIL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReportJobErrorDetail() {
@@ -454,25 +465,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_ERROR_DETAIL)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_ERROR_DETAIL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportJobErrorDetail(String reportJobErrorDetail) {
+  public void setReportJobErrorDetail(@jakarta.annotation.Nullable String reportJobErrorDetail) {
     this.reportJobErrorDetail = reportJobErrorDetail;
   }
 
-
-  public ReportDefinition reportJobId(Long reportJobId) {
+  public ReportDefinition reportJobId(@jakarta.annotation.Nullable Long reportJobId) {
     
     this.reportJobId = reportJobId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; レポートジョブIDです。&lt;br&gt; このフィールドは、REMOVE時に必須となり、ADD時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Report job ID. &lt;br&gt; This field is required in REMOVE operation, and will be ignored in ADD operation. &lt;/div&gt; 
    * @return reportJobId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReportJobId() {
@@ -480,25 +490,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportJobId(Long reportJobId) {
+  public void setReportJobId(@jakarta.annotation.Nullable Long reportJobId) {
     this.reportJobId = reportJobId;
   }
 
-
-  public ReportDefinition reportLanguage(ReportDefinitionServiceReportLanguage reportLanguage) {
+  public ReportDefinition reportLanguage(@jakarta.annotation.Nullable ReportDefinitionServiceReportLanguage reportLanguage) {
     
     this.reportLanguage = reportLanguage;
     return this;
   }
 
-   /**
+  /**
    * Get reportLanguage
    * @return reportLanguage
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_LANGUAGE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_LANGUAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportLanguage getReportLanguage() {
@@ -506,25 +515,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_LANGUAGE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_LANGUAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportLanguage(ReportDefinitionServiceReportLanguage reportLanguage) {
+  public void setReportLanguage(@jakarta.annotation.Nullable ReportDefinitionServiceReportLanguage reportLanguage) {
     this.reportLanguage = reportLanguage;
   }
 
-
-  public ReportDefinition reportName(String reportName) {
+  public ReportDefinition reportName(@jakarta.annotation.Nullable String reportName) {
     
     this.reportName = reportName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; レポート名です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Report name. &lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return reportName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReportName() {
@@ -532,25 +540,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportName(String reportName) {
+  public void setReportName(@jakarta.annotation.Nullable String reportName) {
     this.reportName = reportName;
   }
 
-
-  public ReportDefinition requestTime(String requestTime) {
+  public ReportDefinition requestTime(@jakarta.annotation.Nullable String requestTime) {
     
     this.requestTime = requestTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リクエストの到着日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※フォーマット: yyyy/MM/dd HH:mm:ss &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Arrival date and time of your request. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; *Format: yyyy/MM/dd HH:mm:ss &lt;/div&gt; 
    * @return requestTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REQUEST_TIME)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRequestTime() {
@@ -558,25 +565,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REQUEST_TIME)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRequestTime(String requestTime) {
+  public void setRequestTime(@jakarta.annotation.Nullable String requestTime) {
     this.requestTime = requestTime;
   }
 
-
-  public ReportDefinition reportSkipColumnHeader(ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader) {
+  public ReportDefinition reportSkipColumnHeader(@jakarta.annotation.Nullable ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader) {
     
     this.reportSkipColumnHeader = reportSkipColumnHeader;
     return this;
   }
 
-   /**
+  /**
    * Get reportSkipColumnHeader
    * @return reportSkipColumnHeader
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_SKIP_COLUMN_HEADER)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_SKIP_COLUMN_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportSkipColumnHeader getReportSkipColumnHeader() {
@@ -584,25 +590,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_SKIP_COLUMN_HEADER)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_SKIP_COLUMN_HEADER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportSkipColumnHeader(ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader) {
+  public void setReportSkipColumnHeader(@jakarta.annotation.Nullable ReportDefinitionServiceReportSkipColumnHeader reportSkipColumnHeader) {
     this.reportSkipColumnHeader = reportSkipColumnHeader;
   }
 
-
-  public ReportDefinition reportSkipReportSummary(ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary) {
+  public ReportDefinition reportSkipReportSummary(@jakarta.annotation.Nullable ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary) {
     
     this.reportSkipReportSummary = reportSkipReportSummary;
     return this;
   }
 
-   /**
+  /**
    * Get reportSkipReportSummary
    * @return reportSkipReportSummary
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_SKIP_REPORT_SUMMARY)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_SKIP_REPORT_SUMMARY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportSkipReportSummary getReportSkipReportSummary() {
@@ -610,25 +615,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_SKIP_REPORT_SUMMARY)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_SKIP_REPORT_SUMMARY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportSkipReportSummary(ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary) {
+  public void setReportSkipReportSummary(@jakarta.annotation.Nullable ReportDefinitionServiceReportSkipReportSummary reportSkipReportSummary) {
     this.reportSkipReportSummary = reportSkipReportSummary;
   }
 
-
-  public ReportDefinition reportDecimalPartDisplayType(ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType) {
+  public ReportDefinition reportDecimalPartDisplayType(@jakarta.annotation.Nullable ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType) {
     
     this.reportDecimalPartDisplayType = reportDecimalPartDisplayType;
     return this;
   }
 
-   /**
+  /**
    * Get reportDecimalPartDisplayType
    * @return reportDecimalPartDisplayType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_DECIMAL_PART_DISPLAY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DECIMAL_PART_DISPLAY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportDecimalPartDisplayType getReportDecimalPartDisplayType() {
@@ -636,25 +640,24 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_DECIMAL_PART_DISPLAY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_DECIMAL_PART_DISPLAY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportDecimalPartDisplayType(ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType) {
+  public void setReportDecimalPartDisplayType(@jakarta.annotation.Nullable ReportDefinitionServiceReportDecimalPartDisplayType reportDecimalPartDisplayType) {
     this.reportDecimalPartDisplayType = reportDecimalPartDisplayType;
   }
 
-
-  public ReportDefinition reportTypeCondition(ReportDefinitionServiceReportTypeCondition reportTypeCondition) {
+  public ReportDefinition reportTypeCondition(@jakarta.annotation.Nullable ReportDefinitionServiceReportTypeCondition reportTypeCondition) {
     
     this.reportTypeCondition = reportTypeCondition;
     return this;
   }
 
-   /**
+  /**
    * Get reportTypeCondition
    * @return reportTypeCondition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPE_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPE_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceReportTypeCondition getReportTypeCondition() {
@@ -662,14 +665,13 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPE_CONDITION)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPE_CONDITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReportTypeCondition(ReportDefinitionServiceReportTypeCondition reportTypeCondition) {
+  public void setReportTypeCondition(@jakarta.annotation.Nullable ReportDefinitionServiceReportTypeCondition reportTypeCondition) {
     this.reportTypeCondition = reportTypeCondition;
   }
 
-
-  public ReportDefinition sortFields(List<ReportDefinitionServiceReportSortField> sortFields) {
+  public ReportDefinition sortFields(@jakarta.annotation.Nullable List<ReportDefinitionServiceReportSortField> sortFields) {
     
     this.sortFields = sortFields;
     return this;
@@ -683,12 +685,12 @@ public class ReportDefinition {
     return this;
   }
 
-   /**
+  /**
    * Get sortFields
    * @return sortFields
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ReportDefinitionServiceReportSortField> getSortFields() {
@@ -696,11 +698,12 @@ public class ReportDefinition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortFields(List<ReportDefinitionServiceReportSortField> sortFields) {
+  public void setSortFields(@jakarta.annotation.Nullable List<ReportDefinitionServiceReportSortField> sortFields) {
     this.sortFields = sortFields;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -773,10 +776,7 @@ public class ReportDefinition {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

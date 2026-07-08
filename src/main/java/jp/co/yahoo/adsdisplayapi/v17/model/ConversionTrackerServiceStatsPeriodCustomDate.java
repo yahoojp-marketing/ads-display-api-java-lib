@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceStatsPeriodCustomDateは、統計情報の取得日を保持するオブジェクトです。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceStatsPeriodCustomDate object contains date of acquisition of stats information.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
@@ -30,29 +30,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceStatsPeriodCustomDate.JSON_PROPERTY_STATS_END_DATE,
   ConversionTrackerServiceStatsPeriodCustomDate.JSON_PROPERTY_STATS_START_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceStatsPeriodCustomDate {
   public static final String JSON_PROPERTY_STATS_END_DATE = "statsEndDate";
+  @jakarta.annotation.Nullable
   private String statsEndDate;
 
   public static final String JSON_PROPERTY_STATS_START_DATE = "statsStartDate";
+  @jakarta.annotation.Nullable
   private String statsStartDate;
 
   public ConversionTrackerServiceStatsPeriodCustomDate() {
   }
 
-  public ConversionTrackerServiceStatsPeriodCustomDate statsEndDate(String statsEndDate) {
+  public ConversionTrackerServiceStatsPeriodCustomDate statsEndDate(@jakarta.annotation.Nullable String statsEndDate) {
     
     this.statsEndDate = statsEndDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得終了日です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition end date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
    * @return statsEndDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_STATS_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStatsEndDate() {
@@ -60,25 +62,24 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_STATS_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatsEndDate(String statsEndDate) {
+  public void setStatsEndDate(@jakarta.annotation.Nullable String statsEndDate) {
     this.statsEndDate = statsEndDate;
   }
 
-
-  public ConversionTrackerServiceStatsPeriodCustomDate statsStartDate(String statsStartDate) {
+  public ConversionTrackerServiceStatsPeriodCustomDate statsStartDate(@jakarta.annotation.Nullable String statsStartDate) {
     
     this.statsStartDate = statsStartDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 統計情報取得開始日です。&lt;br&gt; ※yyyyMMdd形式です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Acquisition start date of stats information.&lt;br&gt; ∗ Format: yyyyMMdd. &lt;/div&gt; 
    * @return statsStartDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_STATS_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStatsStartDate() {
@@ -86,11 +87,12 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_STATS_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatsStartDate(String statsStartDate) {
+  public void setStatsStartDate(@jakarta.annotation.Nullable String statsStartDate) {
     this.statsStartDate = statsStartDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -125,10 +127,7 @@ public class ConversionTrackerServiceStatsPeriodCustomDate {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

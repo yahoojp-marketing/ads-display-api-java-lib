@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.DictionaryServiceGeographicLocationType;
 import jp.co.yahoo.adsdisplayapi.v19.model.DictionaryServiceLang;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceGeographicLocationSelectorオブジェクトは、取得する地域情報のリスト言語を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceGeographicLocationSelector object displays the language selection for retrieving geographic location list.&lt;/div&gt; 
@@ -32,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceGeographicLocationSelector.JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE,
   DictionaryServiceGeographicLocationSelector.JSON_PROPERTY_LANG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class DictionaryServiceGeographicLocationSelector {
   public static final String JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE = "geographicLocationType";
+  @jakarta.annotation.Nullable
   private DictionaryServiceGeographicLocationType geographicLocationType;
 
   public static final String JSON_PROPERTY_LANG = "lang";
+  @jakarta.annotation.Nullable
   private DictionaryServiceLang lang;
 
   public DictionaryServiceGeographicLocationSelector() {
   }
 
-  public DictionaryServiceGeographicLocationSelector geographicLocationType(DictionaryServiceGeographicLocationType geographicLocationType) {
+  public DictionaryServiceGeographicLocationSelector geographicLocationType(@jakarta.annotation.Nullable DictionaryServiceGeographicLocationType geographicLocationType) {
     
     this.geographicLocationType = geographicLocationType;
     return this;
   }
 
-   /**
+  /**
    * Get geographicLocationType
    * @return geographicLocationType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public DictionaryServiceGeographicLocationType getGeographicLocationType() {
@@ -62,25 +64,24 @@ public class DictionaryServiceGeographicLocationSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_GEOGRAPHIC_LOCATION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeographicLocationType(DictionaryServiceGeographicLocationType geographicLocationType) {
+  public void setGeographicLocationType(@jakarta.annotation.Nullable DictionaryServiceGeographicLocationType geographicLocationType) {
     this.geographicLocationType = geographicLocationType;
   }
 
-
-  public DictionaryServiceGeographicLocationSelector lang(DictionaryServiceLang lang) {
+  public DictionaryServiceGeographicLocationSelector lang(@jakarta.annotation.Nullable DictionaryServiceLang lang) {
     
     this.lang = lang;
     return this;
   }
 
-   /**
+  /**
    * Get lang
    * @return lang
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public DictionaryServiceLang getLang() {
@@ -88,11 +89,12 @@ public class DictionaryServiceGeographicLocationSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLang(DictionaryServiceLang lang) {
+  public void setLang(@jakarta.annotation.Nullable DictionaryServiceLang lang) {
     this.lang = lang;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -127,10 +129,7 @@ public class DictionaryServiceGeographicLocationSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

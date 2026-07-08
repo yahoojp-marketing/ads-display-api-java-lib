@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceAdActionDataSource;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceAdActionRules;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceEligibleFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceAdActionUsersAudienceListオブジェクトは、オーディエンスリスト（広告アクションユーザー）を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがAD_ACTION_USERSの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceAdActionUsersAudienceList object describes the audience list (Ad action users).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If audienceListType is AD_ACTION_USERS, this field is required in ADD and SET operation. &lt;/div&gt; 
@@ -35,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAdActionUsersAudienceList.JSON_PROPERTY_DATA_DURATION,
   AudienceListServiceAdActionUsersAudienceList.JSON_PROPERTY_ELIGIBLE_FLG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceAdActionUsersAudienceList {
   public static final String JSON_PROPERTY_AD_ACTION_RULES = "adActionRules";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAdActionRules adActionRules;
 
   public static final String JSON_PROPERTY_AD_ACTION_DATA_SOURCE = "adActionDataSource";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAdActionDataSource adActionDataSource;
 
   public static final String JSON_PROPERTY_DATA_DURATION = "dataDuration";
+  @jakarta.annotation.Nullable
   private Integer dataDuration;
 
   public static final String JSON_PROPERTY_ELIGIBLE_FLG = "eligibleFlg";
+  @jakarta.annotation.Nullable
   private AudienceListServiceEligibleFlg eligibleFlg;
 
   public AudienceListServiceAdActionUsersAudienceList() {
   }
 
-  public AudienceListServiceAdActionUsersAudienceList adActionRules(AudienceListServiceAdActionRules adActionRules) {
+  public AudienceListServiceAdActionUsersAudienceList adActionRules(@jakarta.annotation.Nullable AudienceListServiceAdActionRules adActionRules) {
     
     this.adActionRules = adActionRules;
     return this;
   }
 
-   /**
+  /**
    * Get adActionRules
    * @return adActionRules
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_ACTION_RULES)
+  @JsonProperty(value = JSON_PROPERTY_AD_ACTION_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAdActionRules getAdActionRules() {
@@ -71,25 +75,24 @@ public class AudienceListServiceAdActionUsersAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_ACTION_RULES)
+  @JsonProperty(value = JSON_PROPERTY_AD_ACTION_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdActionRules(AudienceListServiceAdActionRules adActionRules) {
+  public void setAdActionRules(@jakarta.annotation.Nullable AudienceListServiceAdActionRules adActionRules) {
     this.adActionRules = adActionRules;
   }
 
-
-  public AudienceListServiceAdActionUsersAudienceList adActionDataSource(AudienceListServiceAdActionDataSource adActionDataSource) {
+  public AudienceListServiceAdActionUsersAudienceList adActionDataSource(@jakarta.annotation.Nullable AudienceListServiceAdActionDataSource adActionDataSource) {
     
     this.adActionDataSource = adActionDataSource;
     return this;
   }
 
-   /**
+  /**
    * Get adActionDataSource
    * @return adActionDataSource
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_ACTION_DATA_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_AD_ACTION_DATA_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAdActionDataSource getAdActionDataSource() {
@@ -97,25 +100,24 @@ public class AudienceListServiceAdActionUsersAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_ACTION_DATA_SOURCE)
+  @JsonProperty(value = JSON_PROPERTY_AD_ACTION_DATA_SOURCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdActionDataSource(AudienceListServiceAdActionDataSource adActionDataSource) {
+  public void setAdActionDataSource(@jakarta.annotation.Nullable AudienceListServiceAdActionDataSource adActionDataSource) {
     this.adActionDataSource = adActionDataSource;
   }
 
-
-  public AudienceListServiceAdActionUsersAudienceList dataDuration(Integer dataDuration) {
+  public AudienceListServiceAdActionUsersAudienceList dataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     
     this.dataDuration = dataDuration;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; データの有効期間（1日～90日）です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Data duration. (1 - 90 days) &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return dataDuration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getDataDuration() {
@@ -123,25 +125,24 @@ public class AudienceListServiceAdActionUsersAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataDuration(Integer dataDuration) {
+  public void setDataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     this.dataDuration = dataDuration;
   }
 
-
-  public AudienceListServiceAdActionUsersAudienceList eligibleFlg(AudienceListServiceEligibleFlg eligibleFlg) {
+  public AudienceListServiceAdActionUsersAudienceList eligibleFlg(@jakarta.annotation.Nullable AudienceListServiceEligibleFlg eligibleFlg) {
     
     this.eligibleFlg = eligibleFlg;
     return this;
   }
 
-   /**
+  /**
    * Get eligibleFlg
    * @return eligibleFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ELIGIBLE_FLG)
+  @JsonProperty(value = JSON_PROPERTY_ELIGIBLE_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceEligibleFlg getEligibleFlg() {
@@ -149,11 +150,12 @@ public class AudienceListServiceAdActionUsersAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ELIGIBLE_FLG)
+  @JsonProperty(value = JSON_PROPERTY_ELIGIBLE_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEligibleFlg(AudienceListServiceEligibleFlg eligibleFlg) {
+  public void setEligibleFlg(@jakarta.annotation.Nullable AudienceListServiceEligibleFlg eligibleFlg) {
     this.eligibleFlg = eligibleFlg;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -192,10 +194,7 @@ public class AudienceListServiceAdActionUsersAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.Stats;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAdGroupStatsValueオブジェクトは、広告グループの統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAdGroupStatsValue object contains Ad Group stats information.&lt;/div&gt; 
@@ -34,38 +34,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceAdGroupStatsValue.JSON_PROPERTY_AD_GROUP_NAME,
   StatsServiceAdGroupStatsValue.JSON_PROPERTY_STATS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceAdGroupStatsValue {
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_NAME = "adGroupName";
+  @jakarta.annotation.Nullable
   private String adGroupName;
 
   public static final String JSON_PROPERTY_STATS = "stats";
+  @jakarta.annotation.Nullable
   private Stats stats;
 
   public StatsServiceAdGroupStatsValue() {
   }
 
-  public StatsServiceAdGroupStatsValue campaignId(Long campaignId) {
+  public StatsServiceAdGroupStatsValue campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID&lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -73,25 +78,24 @@ public class StatsServiceAdGroupStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public StatsServiceAdGroupStatsValue campaignName(String campaignName) {
+  public StatsServiceAdGroupStatsValue campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign name&lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -99,25 +103,24 @@ public class StatsServiceAdGroupStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public StatsServiceAdGroupStatsValue adGroupId(Long adGroupId) {
+  public StatsServiceAdGroupStatsValue adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID&lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -125,25 +128,24 @@ public class StatsServiceAdGroupStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public StatsServiceAdGroupStatsValue adGroupName(String adGroupName) {
+  public StatsServiceAdGroupStatsValue adGroupName(@jakarta.annotation.Nullable String adGroupName) {
     
     this.adGroupName = adGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループ名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group name&lt;/div&gt; 
    * @return adGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdGroupName() {
@@ -151,25 +153,24 @@ public class StatsServiceAdGroupStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupName(String adGroupName) {
+  public void setAdGroupName(@jakarta.annotation.Nullable String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
-
-  public StatsServiceAdGroupStatsValue stats(Stats stats) {
+  public StatsServiceAdGroupStatsValue stats(@jakarta.annotation.Nullable Stats stats) {
     
     this.stats = stats;
     return this;
   }
 
-   /**
+  /**
    * Get stats
    * @return stats
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonProperty(value = JSON_PROPERTY_STATS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Stats getStats() {
@@ -177,11 +178,12 @@ public class StatsServiceAdGroupStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonProperty(value = JSON_PROPERTY_STATS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStats(Stats stats) {
+  public void setStats(@jakarta.annotation.Nullable Stats stats) {
     this.stats = stats;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -222,10 +224,7 @@ public class StatsServiceAdGroupStatsValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceContent;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceDataConnectionStopped;
@@ -27,6 +26,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceIsRemoveFlg;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceSourceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListオブジェクトは、オーディエンスリストの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceList object describes information of audience list.&lt;/div&gt; 
@@ -46,62 +46,75 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceList.JSON_PROPERTY_IS_SHARED,
   AudienceList.JSON_PROPERTY_DATA_CONNECTION_STOPPED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_DELIVERY_STATUS = "deliveryStatus";
+  @jakarta.annotation.Nullable
   private AudienceListServiceDeliveryStatus deliveryStatus;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_IS_REMOVE_DESCRIPTION = "isRemoveDescription";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsRemoveFlg isRemoveDescription;
 
   public static final String JSON_PROPERTY_REACH = "reach";
+  @jakarta.annotation.Nullable
   private Long reach;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_CONTENT = "audienceListContent";
+  @jakarta.annotation.Nullable
   private AudienceListServiceContent audienceListContent;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
+  @jakarta.annotation.Nullable
   private String audienceListName;
 
   public static final String JSON_PROPERTY_SOURCE_ACCOUNT_ID = "sourceAccountId";
+  @jakarta.annotation.Nullable
   private Long sourceAccountId;
 
   public static final String JSON_PROPERTY_SOURCE_ACCOUNT_NAME = "sourceAccountName";
+  @jakarta.annotation.Nullable
   private String sourceAccountName;
 
   public static final String JSON_PROPERTY_SOURCE_TYPE = "sourceType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceSourceType sourceType;
 
   public static final String JSON_PROPERTY_IS_SHARED = "isShared";
+  @jakarta.annotation.Nullable
   private Boolean isShared;
 
   public static final String JSON_PROPERTY_DATA_CONNECTION_STOPPED = "dataConnectionStopped";
+  @jakarta.annotation.Nullable
   private AudienceListServiceDataConnectionStopped dataConnectionStopped;
 
   public AudienceList() {
   }
 
-  public AudienceList accountId(Long accountId) {
+  public AudienceList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -109,25 +122,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AudienceList deliveryStatus(AudienceListServiceDeliveryStatus deliveryStatus) {
+  public AudienceList deliveryStatus(@jakarta.annotation.Nullable AudienceListServiceDeliveryStatus deliveryStatus) {
     
     this.deliveryStatus = deliveryStatus;
     return this;
   }
 
-   /**
+  /**
    * Get deliveryStatus
    * @return deliveryStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceDeliveryStatus getDeliveryStatus() {
@@ -135,25 +147,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryStatus(AudienceListServiceDeliveryStatus deliveryStatus) {
+  public void setDeliveryStatus(@jakarta.annotation.Nullable AudienceListServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
-
-  public AudienceList description(String description) {
+  public AudienceList description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストの説明です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description of audience list.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -161,25 +172,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public AudienceList isRemoveDescription(AudienceListServiceIsRemoveFlg isRemoveDescription) {
+  public AudienceList isRemoveDescription(@jakarta.annotation.Nullable AudienceListServiceIsRemoveFlg isRemoveDescription) {
     
     this.isRemoveDescription = isRemoveDescription;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveDescription
    * @return isRemoveDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsRemoveFlg getIsRemoveDescription() {
@@ -187,25 +197,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveDescription(AudienceListServiceIsRemoveFlg isRemoveDescription) {
+  public void setIsRemoveDescription(@jakarta.annotation.Nullable AudienceListServiceIsRemoveFlg isRemoveDescription) {
     this.isRemoveDescription = isRemoveDescription;
   }
 
-
-  public AudienceList reach(Long reach) {
+  public AudienceList reach(@jakarta.annotation.Nullable Long reach) {
     
     this.reach = reach;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リーチ数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of reaches.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return reach
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReach() {
@@ -213,25 +222,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReach(Long reach) {
+  public void setReach(@jakarta.annotation.Nullable Long reach) {
     this.reach = reach;
   }
 
-
-  public AudienceList audienceListContent(AudienceListServiceContent audienceListContent) {
+  public AudienceList audienceListContent(@jakarta.annotation.Nullable AudienceListServiceContent audienceListContent) {
     
     this.audienceListContent = audienceListContent;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListContent
    * @return audienceListContent
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_CONTENT)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_CONTENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceContent getAudienceListContent() {
@@ -239,25 +247,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_CONTENT)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_CONTENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListContent(AudienceListServiceContent audienceListContent) {
+  public void setAudienceListContent(@jakarta.annotation.Nullable AudienceListServiceContent audienceListContent) {
     this.audienceListContent = audienceListContent;
   }
 
-
-  public AudienceList audienceListId(Long audienceListId) {
+  public AudienceList audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となり、ADD時には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation. &lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -265,25 +272,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceList audienceListName(String audienceListName) {
+  public AudienceList audienceListName(@jakarta.annotation.Nullable String audienceListName) {
     
     this.audienceListName = audienceListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名です。&lt;br&gt; このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list name.&lt;br&gt; This field is required in ADD operation, optional in SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return audienceListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListName() {
@@ -291,25 +297,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListName(String audienceListName) {
+  public void setAudienceListName(@jakarta.annotation.Nullable String audienceListName) {
     this.audienceListName = audienceListName;
   }
 
-
-  public AudienceList sourceAccountId(Long sourceAccountId) {
+  public AudienceList sourceAccountId(@jakarta.annotation.Nullable Long sourceAccountId) {
     
     this.sourceAccountId = sourceAccountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   共有元アカウントIDです。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Account ID of the sharing source.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return sourceAccountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSourceAccountId() {
@@ -317,25 +322,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSourceAccountId(Long sourceAccountId) {
+  public void setSourceAccountId(@jakarta.annotation.Nullable Long sourceAccountId) {
     this.sourceAccountId = sourceAccountId;
   }
 
-
-  public AudienceList sourceAccountName(String sourceAccountName) {
+  public AudienceList sourceAccountName(@jakarta.annotation.Nullable String sourceAccountName) {
     
     this.sourceAccountName = sourceAccountName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   共有元アカウント名です。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Account name of the sharing source.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return sourceAccountName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSourceAccountName() {
@@ -343,25 +347,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSourceAccountName(String sourceAccountName) {
+  public void setSourceAccountName(@jakarta.annotation.Nullable String sourceAccountName) {
     this.sourceAccountName = sourceAccountName;
   }
 
-
-  public AudienceList sourceType(AudienceListServiceSourceType sourceType) {
+  public AudienceList sourceType(@jakarta.annotation.Nullable AudienceListServiceSourceType sourceType) {
     
     this.sourceType = sourceType;
     return this;
   }
 
-   /**
+  /**
    * Get sourceType
    * @return sourceType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceSourceType getSourceType() {
@@ -369,25 +372,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSourceType(AudienceListServiceSourceType sourceType) {
+  public void setSourceType(@jakarta.annotation.Nullable AudienceListServiceSourceType sourceType) {
     this.sourceType = sourceType;
   }
 
-
-  public AudienceList isShared(Boolean isShared) {
+  public AudienceList isShared(@jakarta.annotation.Nullable Boolean isShared) {
     
     this.isShared = isShared;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   AudienceListServiceIsSharedは、オーディエンスリストの共有ステータスを示します。&lt;br&gt;   このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   AudienceListServiceIsShared describes the sharing status of the audience list.&lt;br&gt;   Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return isShared
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_SHARED)
+  @JsonProperty(value = JSON_PROPERTY_IS_SHARED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getIsShared() {
@@ -395,25 +397,24 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_SHARED)
+  @JsonProperty(value = JSON_PROPERTY_IS_SHARED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsShared(Boolean isShared) {
+  public void setIsShared(@jakarta.annotation.Nullable Boolean isShared) {
     this.isShared = isShared;
   }
 
-
-  public AudienceList dataConnectionStopped(AudienceListServiceDataConnectionStopped dataConnectionStopped) {
+  public AudienceList dataConnectionStopped(@jakarta.annotation.Nullable AudienceListServiceDataConnectionStopped dataConnectionStopped) {
     
     this.dataConnectionStopped = dataConnectionStopped;
     return this;
   }
 
-   /**
+  /**
    * Get dataConnectionStopped
    * @return dataConnectionStopped
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA_CONNECTION_STOPPED)
+  @JsonProperty(value = JSON_PROPERTY_DATA_CONNECTION_STOPPED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceDataConnectionStopped getDataConnectionStopped() {
@@ -421,11 +422,12 @@ public class AudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA_CONNECTION_STOPPED)
+  @JsonProperty(value = JSON_PROPERTY_DATA_CONNECTION_STOPPED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataConnectionStopped(AudienceListServiceDataConnectionStopped dataConnectionStopped) {
+  public void setDataConnectionStopped(@jakarta.annotation.Nullable AudienceListServiceDataConnectionStopped dataConnectionStopped) {
     this.dataConnectionStopped = dataConnectionStopped;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -482,10 +484,7 @@ public class AudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

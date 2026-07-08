@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupTargetServiceAudienceListType;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupTargetServiceDeliverType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceAudienceListTargetオブジェクトは、オーディエンスリストターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAUDIENCE_LIST_TARGETの場合、任意で指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceAudienceListTarget object is a container for storing audience list targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; ∗If targetType is AUDIENCE_LIST_TARGET, this field can be optionally specified. &lt;/div&gt; 
@@ -34,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTargetServiceAudienceListTarget.JSON_PROPERTY_AUDIENCE_LIST_NAME_EN,
   AdGroupTargetServiceAudienceListTarget.JSON_PROPERTY_AUDIENCE_LIST_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupTargetServiceAudienceListTarget {
   public static final String JSON_PROPERTY_DELIVER_TYPE = "deliverType";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceDeliverType deliverType;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
+  @jakarta.annotation.Nullable
   private String audienceListName;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME_EN = "audienceListNameEn";
+  @jakarta.annotation.Nullable
   private String audienceListNameEn;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPE = "audienceListType";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceAudienceListType audienceListType;
 
   public AdGroupTargetServiceAudienceListTarget() {
   }
 
-  public AdGroupTargetServiceAudienceListTarget deliverType(AdGroupTargetServiceDeliverType deliverType) {
+  public AdGroupTargetServiceAudienceListTarget deliverType(@jakarta.annotation.Nullable AdGroupTargetServiceDeliverType deliverType) {
     
     this.deliverType = deliverType;
     return this;
   }
 
-   /**
+  /**
    * Get deliverType
    * @return deliverType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DELIVER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceDeliverType getDeliverType() {
@@ -70,25 +74,24 @@ public class AdGroupTargetServiceAudienceListTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DELIVER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliverType(AdGroupTargetServiceDeliverType deliverType) {
+  public void setDeliverType(@jakarta.annotation.Nullable AdGroupTargetServiceDeliverType deliverType) {
     this.deliverType = deliverType;
   }
 
-
-  public AdGroupTargetServiceAudienceListTarget audienceListName(String audienceListName) {
+  public AdGroupTargetServiceAudienceListTarget audienceListName(@jakarta.annotation.Nullable String audienceListName) {
     
     this.audienceListName = audienceListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return audienceListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListName() {
@@ -96,25 +99,24 @@ public class AdGroupTargetServiceAudienceListTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListName(String audienceListName) {
+  public void setAudienceListName(@jakarta.annotation.Nullable String audienceListName) {
     this.audienceListName = audienceListName;
   }
 
-
-  public AdGroupTargetServiceAudienceListTarget audienceListNameEn(String audienceListNameEn) {
+  public AdGroupTargetServiceAudienceListTarget audienceListNameEn(@jakarta.annotation.Nullable String audienceListNameEn) {
     
     this.audienceListNameEn = audienceListNameEn;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト名(英語)です。&lt;br&gt; 共通オーディエンスリストの場合のみ返却されます。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name (English).&lt;br&gt; This field is returned when the audience list is shared audience list.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return audienceListNameEn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListNameEn() {
@@ -122,25 +124,24 @@ public class AdGroupTargetServiceAudienceListTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListNameEn(String audienceListNameEn) {
+  public void setAudienceListNameEn(@jakarta.annotation.Nullable String audienceListNameEn) {
     this.audienceListNameEn = audienceListNameEn;
   }
 
-
-  public AdGroupTargetServiceAudienceListTarget audienceListType(AdGroupTargetServiceAudienceListType audienceListType) {
+  public AdGroupTargetServiceAudienceListTarget audienceListType(@jakarta.annotation.Nullable AdGroupTargetServiceAudienceListType audienceListType) {
     
     this.audienceListType = audienceListType;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListType
    * @return audienceListType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceAudienceListType getAudienceListType() {
@@ -148,11 +149,12 @@ public class AdGroupTargetServiceAudienceListTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListType(AdGroupTargetServiceAudienceListType audienceListType) {
+  public void setAudienceListType(@jakarta.annotation.Nullable AdGroupTargetServiceAudienceListType audienceListType) {
     this.audienceListType = audienceListType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +193,7 @@ public class AdGroupTargetServiceAudienceListTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

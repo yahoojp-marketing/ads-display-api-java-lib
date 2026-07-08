@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.BrandLiftServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.BrandLiftServiceQuestion;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftオブジェクトは、ブランドリフトの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLift object describes brand lift information.&lt;/div&gt; 
@@ -44,59 +45,71 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BrandLift.JSON_PROPERTY_CAMPAIGN_NAME,
   BrandLift.JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BrandLift {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_BRAND_LIFT_ID = "brandLiftId";
+  @jakarta.annotation.Nullable
   private Long brandLiftId;
 
   public static final String JSON_PROPERTY_QUESTIONS = "questions";
+  @jakarta.annotation.Nullable
   private List<BrandLiftServiceQuestion> questions;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private BrandLiftServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON = "disapprovalReason";
+  @jakarta.annotation.Nullable
   private String disapprovalReason;
 
   public static final String JSON_PROPERTY_REVIEW_COMPLETE_DATE = "reviewCompleteDate";
+  @jakarta.annotation.Nullable
   private String reviewCompleteDate;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_SUBMIT_DATE = "submitDate";
+  @jakarta.annotation.Nullable
   private String submitDate;
 
   public static final String JSON_PROPERTY_CAMPAIGN_START_DATE = "campaignStartDate";
+  @jakarta.annotation.Nullable
   private String campaignStartDate;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS = "notificationBusinessIds";
+  @jakarta.annotation.Nullable
   private List<String> notificationBusinessIds;
 
   public BrandLift() {
   }
 
-  public BrandLift accountId(Long accountId) {
+  public BrandLift accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -104,25 +117,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public BrandLift campaignId(Long campaignId) {
+  public BrandLift campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID. &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -130,25 +142,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public BrandLift brandLiftId(Long brandLiftId) {
+  public BrandLift brandLiftId(@jakarta.annotation.Nullable Long brandLiftId) {
     
     this.brandLiftId = brandLiftId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ブランドリフト調査IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLift ID. &lt;/div&gt; 
    * @return brandLiftId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_LIFT_ID)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_LIFT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getBrandLiftId() {
@@ -156,14 +167,13 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_LIFT_ID)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_LIFT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandLiftId(Long brandLiftId) {
+  public void setBrandLiftId(@jakarta.annotation.Nullable Long brandLiftId) {
     this.brandLiftId = brandLiftId;
   }
 
-
-  public BrandLift questions(List<BrandLiftServiceQuestion> questions) {
+  public BrandLift questions(@jakarta.annotation.Nullable List<BrandLiftServiceQuestion> questions) {
     
     this.questions = questions;
     return this;
@@ -177,12 +187,12 @@ public class BrandLift {
     return this;
   }
 
-   /**
+  /**
    * Get questions
    * @return questions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_QUESTIONS)
+  @JsonProperty(value = JSON_PROPERTY_QUESTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<BrandLiftServiceQuestion> getQuestions() {
@@ -190,25 +200,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUESTIONS)
+  @JsonProperty(value = JSON_PROPERTY_QUESTIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQuestions(List<BrandLiftServiceQuestion> questions) {
+  public void setQuestions(@jakarta.annotation.Nullable List<BrandLiftServiceQuestion> questions) {
     this.questions = questions;
   }
 
-
-  public BrandLift approvalStatus(BrandLiftServiceApprovalStatus approvalStatus) {
+  public BrandLift approvalStatus(@jakarta.annotation.Nullable BrandLiftServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BrandLiftServiceApprovalStatus getApprovalStatus() {
@@ -216,25 +225,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(BrandLiftServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable BrandLiftServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public BrandLift disapprovalReason(String disapprovalReason) {
+  public BrandLift disapprovalReason(@jakarta.annotation.Nullable String disapprovalReason) {
     
     this.disapprovalReason = disapprovalReason;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Disapproval reason. &lt;/div&gt; 
    * @return disapprovalReason
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisapprovalReason() {
@@ -242,25 +250,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReason(String disapprovalReason) {
+  public void setDisapprovalReason(@jakarta.annotation.Nullable String disapprovalReason) {
     this.disapprovalReason = disapprovalReason;
   }
 
-
-  public BrandLift reviewCompleteDate(String reviewCompleteDate) {
+  public BrandLift reviewCompleteDate(@jakarta.annotation.Nullable String reviewCompleteDate) {
     
     this.reviewCompleteDate = reviewCompleteDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査完了日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Review Complete Date.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return reviewCompleteDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_COMPLETE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_COMPLETE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewCompleteDate() {
@@ -268,14 +275,13 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_COMPLETE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_COMPLETE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewCompleteDate(String reviewCompleteDate) {
+  public void setReviewCompleteDate(@jakarta.annotation.Nullable String reviewCompleteDate) {
     this.reviewCompleteDate = reviewCompleteDate;
   }
 
-
-  public BrandLift disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public BrandLift disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -289,12 +295,12 @@ public class BrandLift {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;審査否認理由コードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Disapproval reason codes&lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -302,25 +308,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public BrandLift submitDate(String submitDate) {
+  public BrandLift submitDate(@jakarta.annotation.Nullable String submitDate) {
     
     this.submitDate = submitDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;入稿日時です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Submit date.&lt;/div&gt; &lt;br&gt;Format: yyyyMMddHHmmss 
    * @return submitDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SUBMIT_DATE)
+  @JsonProperty(value = JSON_PROPERTY_SUBMIT_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSubmitDate() {
@@ -328,25 +333,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SUBMIT_DATE)
+  @JsonProperty(value = JSON_PROPERTY_SUBMIT_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSubmitDate(String submitDate) {
+  public void setSubmitDate(@jakarta.annotation.Nullable String submitDate) {
     this.submitDate = submitDate;
   }
 
-
-  public BrandLift campaignStartDate(String campaignStartDate) {
+  public BrandLift campaignStartDate(@jakarta.annotation.Nullable String campaignStartDate) {
     
     this.campaignStartDate = campaignStartDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン配信開始日です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign start date. &lt;/div&gt; &lt;br&gt;Format: yyyyMMdd 
    * @return campaignStartDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignStartDate() {
@@ -354,25 +358,24 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignStartDate(String campaignStartDate) {
+  public void setCampaignStartDate(@jakarta.annotation.Nullable String campaignStartDate) {
     this.campaignStartDate = campaignStartDate;
   }
 
-
-  public BrandLift campaignName(String campaignName) {
+  public BrandLift campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーン名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign name. &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -380,14 +383,13 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public BrandLift notificationBusinessIds(List<String> notificationBusinessIds) {
+  public BrandLift notificationBusinessIds(@jakarta.annotation.Nullable List<String> notificationBusinessIds) {
     
     this.notificationBusinessIds = notificationBusinessIds;
     return this;
@@ -401,12 +403,12 @@ public class BrandLift {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;連絡先ビジネスIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Business ID to send notifications.&lt;/div&gt; 
    * @return notificationBusinessIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getNotificationBusinessIds() {
@@ -414,11 +416,12 @@ public class BrandLift {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_BUSINESS_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationBusinessIds(List<String> notificationBusinessIds) {
+  public void setNotificationBusinessIds(@jakarta.annotation.Nullable List<String> notificationBusinessIds) {
     this.notificationBusinessIds = notificationBusinessIds;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -473,10 +476,7 @@ public class BrandLift {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

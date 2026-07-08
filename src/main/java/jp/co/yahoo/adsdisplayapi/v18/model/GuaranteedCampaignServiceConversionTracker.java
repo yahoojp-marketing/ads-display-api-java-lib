@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.GuaranteedCampaignServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 紐づけられているコンバージョントラッカー設定情報を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceConversionTracker object describes conversion tracking information to be associated.&lt;br&gt; &lt;/div&gt; 
@@ -33,35 +33,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedCampaignServiceConversionTracker.JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID,
   GuaranteedCampaignServiceConversionTracker.JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedCampaignServiceConversionTracker {
   public static final String JSON_PROPERTY_CONVERSION_GROUP_ID = "conversionGroupId";
+  @jakarta.annotation.Nullable
   private Long conversionGroupId;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_ID = "conversionTrackerId";
+  @jakarta.annotation.Nullable
   private Long conversionTrackerId;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID = "isRemoveConversionGroupId";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionGroupId;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID = "isRemoveConversionTrackerId";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionTrackerId;
 
   public GuaranteedCampaignServiceConversionTracker() {
   }
 
-  public GuaranteedCampaignServiceConversionTracker conversionGroupId(Long conversionGroupId) {
+  public GuaranteedCampaignServiceConversionTracker conversionGroupId(@jakarta.annotation.Nullable Long conversionGroupId) {
     
     this.conversionGroupId = conversionGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョングループIDです。&lt;br&gt; ※conversionGroupId, conversionTrackerIdは同時に設定することができません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceConversionGroup ID.&lt;br&gt; *conversionGroupId and conversionTrackerIds cannot be set at the same time. &lt;/div&gt; 
    * @return conversionGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionGroupId() {
@@ -69,25 +73,24 @@ public class GuaranteedCampaignServiceConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionGroupId(Long conversionGroupId) {
+  public void setConversionGroupId(@jakarta.annotation.Nullable Long conversionGroupId) {
     this.conversionGroupId = conversionGroupId;
   }
 
-
-  public GuaranteedCampaignServiceConversionTracker conversionTrackerId(Long conversionTrackerId) {
+  public GuaranteedCampaignServiceConversionTracker conversionTrackerId(@jakarta.annotation.Nullable Long conversionTrackerId) {
     
     this.conversionTrackerId = conversionTrackerId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカーIDです。&lt;br&gt; ※conversionGroupId, conversionTrackerIdは同時に設定することができません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceConversionTracker ID.&lt;br&gt; *conversionGroupId and conversionTrackerIds cannot be set at the same time. &lt;/div&gt; 
    * @return conversionTrackerId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionTrackerId() {
@@ -95,25 +98,24 @@ public class GuaranteedCampaignServiceConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerId(Long conversionTrackerId) {
+  public void setConversionTrackerId(@jakarta.annotation.Nullable Long conversionTrackerId) {
     this.conversionTrackerId = conversionTrackerId;
   }
 
-
-  public GuaranteedCampaignServiceConversionTracker isRemoveConversionGroupId(GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionGroupId) {
+  public GuaranteedCampaignServiceConversionTracker isRemoveConversionGroupId(@jakarta.annotation.Nullable GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionGroupId) {
     
     this.isRemoveConversionGroupId = isRemoveConversionGroupId;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveConversionGroupId
    * @return isRemoveConversionGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceIsRemoveFlg getIsRemoveConversionGroupId() {
@@ -121,25 +123,24 @@ public class GuaranteedCampaignServiceConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveConversionGroupId(GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionGroupId) {
+  public void setIsRemoveConversionGroupId(@jakarta.annotation.Nullable GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionGroupId) {
     this.isRemoveConversionGroupId = isRemoveConversionGroupId;
   }
 
-
-  public GuaranteedCampaignServiceConversionTracker isRemoveConversionTrackerId(GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionTrackerId) {
+  public GuaranteedCampaignServiceConversionTracker isRemoveConversionTrackerId(@jakarta.annotation.Nullable GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionTrackerId) {
     
     this.isRemoveConversionTrackerId = isRemoveConversionTrackerId;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveConversionTrackerId
    * @return isRemoveConversionTrackerId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceIsRemoveFlg getIsRemoveConversionTrackerId() {
@@ -147,11 +148,12 @@ public class GuaranteedCampaignServiceConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveConversionTrackerId(GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionTrackerId) {
+  public void setIsRemoveConversionTrackerId(@jakarta.annotation.Nullable GuaranteedCampaignServiceIsRemoveFlg isRemoveConversionTrackerId) {
     this.isRemoveConversionTrackerId = isRemoveConversionTrackerId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +192,7 @@ public class GuaranteedCampaignServiceConversionTracker {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

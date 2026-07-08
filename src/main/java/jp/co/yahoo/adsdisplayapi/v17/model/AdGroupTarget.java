@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceTarget;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetオブジェクトは、広告グループに設定されているターゲティング情報を格納します。&lt;br&gt; このオブジェクトは、GuaranteedAdGroupServiceで広告グループを追加する場合は必須です。&lt;br&gt; *GuaranteedAdGroupServiceでGETする際、このフィールドは返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTarget object contains targeting information specified in ad group.&lt;br&gt; This object is required if you are adding ad group via GuaranteedAdGroupService.&lt;br&gt; *This field will not be returned in GET operation via GuaranteedAdGroupService. &lt;/div&gt; 
@@ -34,38 +34,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTarget.JSON_PROPERTY_CAMPAIGN_ID,
   AdGroupTarget.JSON_PROPERTY_TARGET
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupTarget {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_BID_MULTIPLIER = "bidMultiplier";
+  @jakarta.annotation.Nullable
   private Double bidMultiplier;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_TARGET = "target";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceTarget target;
 
   public AdGroupTarget() {
   }
 
-  public AdGroupTarget accountId(Long accountId) {
+  public AdGroupTarget accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -73,25 +78,24 @@ public class AdGroupTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroupTarget adGroupId(Long adGroupId) {
+  public AdGroupTarget adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。&lt;br&gt; ※GuaranteedAdGroupServiceでADDおよびSETする際、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID.&lt;br&gt; This field is required in requests.&lt;br&gt; *This field will be ignored in ADD and SET operation via GuaranteedAdGroupService. &lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -99,25 +103,24 @@ public class AdGroupTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public AdGroupTarget bidMultiplier(Double bidMultiplier) {
+  public AdGroupTarget bidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     
     this.bidMultiplier = bidMultiplier;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 入札価格調整率です。&lt;br&gt; このフィールドは、ADD、SETおよびREPLACE時は省略可能となり、REMOVE時は無視されます。&lt;br&gt; ※入札価格調整率が設定できないターゲティングの場合は返却されません。&lt;br&gt; ※広告グループのターゲティングにAUDIENCE_LIST_TARGET、SEARCH_TARGET、PLACEMENT_TARGETのいずれかを指定し、かつその広告グループがYDNキャンペーンに紐づいている場合にbidMultiplierを指定しなかった時は、nullが代入されます。&lt;br&gt; ※その他の場合でbidMultiplierを指定しなかった時は1.0が代入されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Bid adjustment.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation, and will be ignored in REMOVE operation.&lt;br&gt; ∗If bid adjustment is unable to set targeting, not returned.&lt;br&gt; *If bidMultiplier is not specified when AUDIENCE_LIST_TARGET, SEARCH_TARGET, or PLACEMENT_TARGET is specified for the targeting of the ad group and the ad group is linked to the YDN campaign, null will be assigned for this field.&lt;br&gt; *If bidMultiplier is not specified in other cases, 1.0 will be assigned for this field. &lt;/div&gt; 
    * @return bidMultiplier
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getBidMultiplier() {
@@ -125,25 +128,24 @@ public class AdGroupTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BID_MULTIPLIER)
+  @JsonProperty(value = JSON_PROPERTY_BID_MULTIPLIER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBidMultiplier(Double bidMultiplier) {
+  public void setBidMultiplier(@jakarta.annotation.Nullable Double bidMultiplier) {
     this.bidMultiplier = bidMultiplier;
   }
 
-
-  public AdGroupTarget campaignId(Long campaignId) {
+  public AdGroupTarget campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。&lt;br&gt; ※GuaranteedAdGroupServiceでADDおよびSETする際、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in requests.&lt;br&gt; *This field will be ignored in ADD and SET operation via GuaranteedAdGroupService. &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -151,25 +153,24 @@ public class AdGroupTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public AdGroupTarget target(AdGroupTargetServiceTarget target) {
+  public AdGroupTarget target(@jakarta.annotation.Nullable AdGroupTargetServiceTarget target) {
     
     this.target = target;
     return this;
   }
 
-   /**
+  /**
    * Get target
    * @return target
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceTarget getTarget() {
@@ -177,11 +178,12 @@ public class AdGroupTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTarget(AdGroupTargetServiceTarget target) {
+  public void setTarget(@jakarta.annotation.Nullable AdGroupTargetServiceTarget target) {
     this.target = target;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -222,10 +224,7 @@ public class AdGroupTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; RecommendationServiceUpdateAdCreativeListオブジェクトは、画像・動画の更新を推奨する広告に関する詳細情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; RecommendationServiceUpdateAdCreativeList object describes the detailed information of ads that have recommendations for updating images or videos. &lt;/div&gt; 
@@ -38,53 +38,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceUpdateAdCreativeList.JSON_PROPERTY_LATEST_VIEWABLE_CTR,
   RecommendationServiceUpdateAdCreativeList.JSON_PROPERTY_VIEWABLE_CTR_DECREASE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceUpdateAdCreativeList {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
+  @jakarta.annotation.Nullable
   private Long recommendationId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_NAME = "adGroupName";
+  @jakarta.annotation.Nullable
   private String adGroupName;
 
   public static final String JSON_PROPERTY_AD_ID = "adId";
+  @jakarta.annotation.Nullable
   private Long adId;
 
   public static final String JSON_PROPERTY_AD_NAME = "adName";
+  @jakarta.annotation.Nullable
   private String adName;
 
   public static final String JSON_PROPERTY_PREVIOUS_VIEWABLE_CTR = "previousViewableCtr";
+  @jakarta.annotation.Nullable
   private Double previousViewableCtr;
 
   public static final String JSON_PROPERTY_LATEST_VIEWABLE_CTR = "latestViewableCtr";
+  @jakarta.annotation.Nullable
   private Double latestViewableCtr;
 
   public static final String JSON_PROPERTY_VIEWABLE_CTR_DECREASE = "viewableCtrDecrease";
+  @jakarta.annotation.Nullable
   private Double viewableCtrDecrease;
 
   public RecommendationServiceUpdateAdCreativeList() {
   }
 
-  public RecommendationServiceUpdateAdCreativeList recommendationId(Long recommendationId) {
+  public RecommendationServiceUpdateAdCreativeList recommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     
     this.recommendationId = recommendationId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendationId() {
@@ -92,25 +102,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendationId(Long recommendationId) {
+  public void setRecommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList campaignId(Long campaignId) {
+  public RecommendationServiceUpdateAdCreativeList campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -118,25 +127,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList campaignName(String campaignName) {
+  public RecommendationServiceUpdateAdCreativeList campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -144,25 +152,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList adGroupId(Long adGroupId) {
+  public RecommendationServiceUpdateAdCreativeList adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID. &lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -170,25 +177,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList adGroupName(String adGroupName) {
+  public RecommendationServiceUpdateAdCreativeList adGroupName(@jakarta.annotation.Nullable String adGroupName) {
     
     this.adGroupName = adGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group name. &lt;/div&gt; 
    * @return adGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdGroupName() {
@@ -196,25 +202,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupName(String adGroupName) {
+  public void setAdGroupName(@jakarta.annotation.Nullable String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList adId(Long adId) {
+  public RecommendationServiceUpdateAdCreativeList adId(@jakarta.annotation.Nullable Long adId) {
     
     this.adId = adId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告IDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad ID. &lt;/div&gt; 
    * @return adId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdId() {
@@ -222,25 +227,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdId(Long adId) {
+  public void setAdId(@jakarta.annotation.Nullable Long adId) {
     this.adId = adId;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList adName(String adName) {
+  public RecommendationServiceUpdateAdCreativeList adName(@jakarta.annotation.Nullable String adName) {
     
     this.adName = adName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad name. &lt;/div&gt; 
    * @return adName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdName() {
@@ -248,25 +252,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdName(String adName) {
+  public void setAdName(@jakarta.annotation.Nullable String adName) {
     this.adName = adName;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList previousViewableCtr(Double previousViewableCtr) {
+  public RecommendationServiceUpdateAdCreativeList previousViewableCtr(@jakarta.annotation.Nullable Double previousViewableCtr) {
     
     this.previousViewableCtr = previousViewableCtr;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 30~16日前のビューアブルクリック率(平均)です&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewable CTR 30~16 days ago (average) &lt;/div&gt; 
    * @return previousViewableCtr
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PREVIOUS_VIEWABLE_CTR)
+  @JsonProperty(value = JSON_PROPERTY_PREVIOUS_VIEWABLE_CTR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getPreviousViewableCtr() {
@@ -274,25 +277,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PREVIOUS_VIEWABLE_CTR)
+  @JsonProperty(value = JSON_PROPERTY_PREVIOUS_VIEWABLE_CTR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPreviousViewableCtr(Double previousViewableCtr) {
+  public void setPreviousViewableCtr(@jakarta.annotation.Nullable Double previousViewableCtr) {
     this.previousViewableCtr = previousViewableCtr;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList latestViewableCtr(Double latestViewableCtr) {
+  public RecommendationServiceUpdateAdCreativeList latestViewableCtr(@jakarta.annotation.Nullable Double latestViewableCtr) {
     
     this.latestViewableCtr = latestViewableCtr;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 15~1日前のビューアブルクリック率(平均)です&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Latest viewable CTR 15~1 days ago (average) &lt;/div&gt; 
    * @return latestViewableCtr
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LATEST_VIEWABLE_CTR)
+  @JsonProperty(value = JSON_PROPERTY_LATEST_VIEWABLE_CTR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getLatestViewableCtr() {
@@ -300,25 +302,24 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LATEST_VIEWABLE_CTR)
+  @JsonProperty(value = JSON_PROPERTY_LATEST_VIEWABLE_CTR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLatestViewableCtr(Double latestViewableCtr) {
+  public void setLatestViewableCtr(@jakarta.annotation.Nullable Double latestViewableCtr) {
     this.latestViewableCtr = latestViewableCtr;
   }
 
-
-  public RecommendationServiceUpdateAdCreativeList viewableCtrDecrease(Double viewableCtrDecrease) {
+  public RecommendationServiceUpdateAdCreativeList viewableCtrDecrease(@jakarta.annotation.Nullable Double viewableCtrDecrease) {
     
     this.viewableCtrDecrease = viewableCtrDecrease;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ビューアブルクリック率の減少量です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewable CTR decrease &lt;/div&gt; 
    * @return viewableCtrDecrease
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_CTR_DECREASE)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_CTR_DECREASE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getViewableCtrDecrease() {
@@ -326,11 +327,12 @@ public class RecommendationServiceUpdateAdCreativeList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_CTR_DECREASE)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_CTR_DECREASE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableCtrDecrease(Double viewableCtrDecrease) {
+  public void setViewableCtrDecrease(@jakarta.annotation.Nullable Double viewableCtrDecrease) {
     this.viewableCtrDecrease = viewableCtrDecrease;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -381,10 +383,7 @@ public class RecommendationServiceUpdateAdCreativeList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

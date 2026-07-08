@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceBudgetオブジェクトは、キャンペーン予算に関する情報を表します。&lt;br&gt; このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The CampaignServiceBudget object serves campaign budgets.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -31,32 +31,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceBudget.JSON_PROPERTY_CAMPAIGN_BUDGET_ID,
   CampaignServiceBudget.JSON_PROPERTY_CAMPAIGN_BUDGET_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceBudget {
   public static final String JSON_PROPERTY_AMOUNT = "amount";
+  @jakarta.annotation.Nullable
   private Long amount;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BUDGET_ID = "campaignBudgetId";
+  @jakarta.annotation.Nullable
   private Long campaignBudgetId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BUDGET_NAME = "campaignBudgetName";
+  @jakarta.annotation.Nullable
   private String campaignBudgetName;
 
   public CampaignServiceBudget() {
   }
 
-  public CampaignServiceBudget amount(Long amount) {
+  public CampaignServiceBudget amount(@jakarta.annotation.Nullable Long amount) {
     
     this.amount = amount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンの一日あたりの予算（一日単位の利用金額）です。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは必須となり、共有予算を設定する場合、設定不可となります。また、campaignBudgetIdと同時に設定することはできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The daily budget.&lt;br&gt; In ADD and SET operation, this field is required when setting individual budgets, and is not allowed when setting shared budgets. This field cannot be set at the same time as campaignBudgetId. &lt;/div&gt; 
    * @return amount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAmount() {
@@ -64,25 +67,24 @@ public class CampaignServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAmount(Long amount) {
+  public void setAmount(@jakarta.annotation.Nullable Long amount) {
     this.amount = amount;
   }
 
-
-  public CampaignServiceBudget campaignBudgetId(Long campaignBudgetId) {
+  public CampaignServiceBudget campaignBudgetId(@jakarta.annotation.Nullable Long campaignBudgetId) {
     
     this.campaignBudgetId = campaignBudgetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; ADDおよびSET時、個別予算を設定する場合、このフィールドは設定不可となり、共有予算を設定する場合、必須となります。また、amountと同時に設定することはできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; In ADD and SET operation, this field is not allowed when setting individual budgets, and is required when setting shared budgets. This field cannot be set at the same time as amount. &lt;/div&gt; 
    * @return campaignBudgetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBudgetId() {
@@ -90,25 +92,24 @@ public class CampaignServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBudgetId(Long campaignBudgetId) {
+  public void setCampaignBudgetId(@jakarta.annotation.Nullable Long campaignBudgetId) {
     this.campaignBudgetId = campaignBudgetId;
   }
 
-
-  public CampaignServiceBudget campaignBudgetName(String campaignBudgetName) {
+  public CampaignServiceBudget campaignBudgetName(@jakarta.annotation.Nullable String campaignBudgetName) {
     
     this.campaignBudgetName = campaignBudgetName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算名です。&lt;br&gt; ADDおよびSET時、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget name.&lt;br&gt; This field will be ignored in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBudgetName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignBudgetName() {
@@ -116,11 +117,12 @@ public class CampaignServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBudgetName(String campaignBudgetName) {
+  public void setCampaignBudgetName(@jakarta.annotation.Nullable String campaignBudgetName) {
     this.campaignBudgetName = campaignBudgetName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +159,7 @@ public class CampaignServiceBudget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
