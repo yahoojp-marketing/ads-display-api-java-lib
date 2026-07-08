@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceConversionPathFilterOperator;
 import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceConversionPathFilterType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceConversionPathFilterオブジェクトは、コンバージョン経路レポートのフィルタ条件を表します。&lt;br&gt;   複数指定した場合、AND条件になります。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceConversionPathFilter describes the filter condition of Conversion Path Report. &lt;br&gt;    If multiple values are specified, the condition will be \&quot;AND.\&quot; &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation.  &lt;/div&gt; 
@@ -35,32 +36,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceConversionPathFilter.JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR,
   ReportDefinitionServiceConversionPathFilter.JSON_PROPERTY_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceConversionPathFilter {
   public static final String JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE = "conversionPathFilterType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceConversionPathFilterType conversionPathFilterType;
 
   public static final String JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR = "conversionPathFilterOperator";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceConversionPathFilterOperator conversionPathFilterOperator;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<String> values;
 
   public ReportDefinitionServiceConversionPathFilter() {
   }
 
-  public ReportDefinitionServiceConversionPathFilter conversionPathFilterType(ReportDefinitionServiceConversionPathFilterType conversionPathFilterType) {
+  public ReportDefinitionServiceConversionPathFilter conversionPathFilterType(@jakarta.annotation.Nullable ReportDefinitionServiceConversionPathFilterType conversionPathFilterType) {
     
     this.conversionPathFilterType = conversionPathFilterType;
     return this;
   }
 
-   /**
+  /**
    * Get conversionPathFilterType
    * @return conversionPathFilterType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceConversionPathFilterType getConversionPathFilterType() {
@@ -68,25 +72,24 @@ public class ReportDefinitionServiceConversionPathFilter {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_PATH_FILTER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionPathFilterType(ReportDefinitionServiceConversionPathFilterType conversionPathFilterType) {
+  public void setConversionPathFilterType(@jakarta.annotation.Nullable ReportDefinitionServiceConversionPathFilterType conversionPathFilterType) {
     this.conversionPathFilterType = conversionPathFilterType;
   }
 
-
-  public ReportDefinitionServiceConversionPathFilter conversionPathFilterOperator(ReportDefinitionServiceConversionPathFilterOperator conversionPathFilterOperator) {
+  public ReportDefinitionServiceConversionPathFilter conversionPathFilterOperator(@jakarta.annotation.Nullable ReportDefinitionServiceConversionPathFilterOperator conversionPathFilterOperator) {
     
     this.conversionPathFilterOperator = conversionPathFilterOperator;
     return this;
   }
 
-   /**
+  /**
    * Get conversionPathFilterOperator
    * @return conversionPathFilterOperator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceConversionPathFilterOperator getConversionPathFilterOperator() {
@@ -94,14 +97,13 @@ public class ReportDefinitionServiceConversionPathFilter {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_PATH_FILTER_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionPathFilterOperator(ReportDefinitionServiceConversionPathFilterOperator conversionPathFilterOperator) {
+  public void setConversionPathFilterOperator(@jakarta.annotation.Nullable ReportDefinitionServiceConversionPathFilterOperator conversionPathFilterOperator) {
     this.conversionPathFilterOperator = conversionPathFilterOperator;
   }
 
-
-  public ReportDefinitionServiceConversionPathFilter values(List<String> values) {
+  public ReportDefinitionServiceConversionPathFilter values(@jakarta.annotation.Nullable List<String> values) {
     
     this.values = values;
     return this;
@@ -115,12 +117,12 @@ public class ReportDefinitionServiceConversionPathFilter {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;条件値です。複数指定した場合は、OR条件になります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Condition value. If multiple values are specified, the condition will be \&quot;OR.\&quot; &lt;/div&gt; 
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getValues() {
@@ -128,11 +130,12 @@ public class ReportDefinitionServiceConversionPathFilter {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<String> values) {
+  public void setValues(@jakarta.annotation.Nullable List<String> values) {
     this.values = values;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +172,7 @@ public class ReportDefinitionServiceConversionPathFilter {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

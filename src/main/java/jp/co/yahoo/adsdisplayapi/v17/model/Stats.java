@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Statsオブジェクトは、統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Stats object contains the stats information.&lt;/div&gt; 
@@ -84,191 +84,247 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Stats.JSON_PROPERTY_SKAN_COST_PER_INSTALL,
   Stats.JSON_PROPERTY_SKAN_COST_PER_INSTALL_VIA_CLICK
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class Stats {
   public static final String JSON_PROPERTY_IMPS = "imps";
+  @jakarta.annotation.Nullable
   private Long imps;
 
   public static final String JSON_PROPERTY_CLICKS = "clicks";
+  @jakarta.annotation.Nullable
   private Long clicks;
 
   public static final String JSON_PROPERTY_CLICK_RATE = "clickRate";
+  @jakarta.annotation.Nullable
   private Double clickRate;
 
   public static final String JSON_PROPERTY_COST = "cost";
+  @jakarta.annotation.Nullable
   private Double cost;
 
   public static final String JSON_PROPERTY_AVG_CPC = "avgCpc";
+  @jakarta.annotation.Nullable
   private Double avgCpc;
 
   public static final String JSON_PROPERTY_CONVERSIONS = "conversions";
+  @jakarta.annotation.Nullable
   private Long conversions;
 
   public static final String JSON_PROPERTY_CONV_RATE = "convRate";
+  @jakarta.annotation.Nullable
   private Double convRate;
 
   public static final String JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK = "conversionsViaAdClick";
+  @jakarta.annotation.Nullable
   private Long conversionsViaAdClick;
 
   public static final String JSON_PROPERTY_CONVERSION_RATE_VIA_AD_CLICK = "conversionRateViaAdClick";
+  @jakarta.annotation.Nullable
   private Double conversionRateViaAdClick;
 
   public static final String JSON_PROPERTY_ALL_CONV = "allConv";
+  @jakarta.annotation.Nullable
   private Long allConv;
 
   public static final String JSON_PROPERTY_ALL_CONV_RATE = "allConvRate";
+  @jakarta.annotation.Nullable
   private Double allConvRate;
 
   public static final String JSON_PROPERTY_CPA = "cpa";
+  @jakarta.annotation.Nullable
   private String cpa;
 
   public static final String JSON_PROPERTY_CONV_VALUE = "convValue";
+  @jakarta.annotation.Nullable
   private String convValue;
 
   public static final String JSON_PROPERTY_VALUE_PER_CONV = "valuePerConv";
+  @jakarta.annotation.Nullable
   private String valuePerConv;
 
   public static final String JSON_PROPERTY_CONV_VALUE_PER_COST = "convValuePerCost";
+  @jakarta.annotation.Nullable
   private Double convValuePerCost;
 
   public static final String JSON_PROPERTY_ALL_CONV_VALUE_PER_COST = "allConvValuePerCost";
+  @jakarta.annotation.Nullable
   private Double allConvValuePerCost;
 
   public static final String JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK_PER_COST = "convValueViaAdClickPerCost";
+  @jakarta.annotation.Nullable
   private Double convValueViaAdClickPerCost;
 
   public static final String JSON_PROPERTY_ALL_CONV_VALUE = "allConvValue";
+  @jakarta.annotation.Nullable
   private String allConvValue;
 
   public static final String JSON_PROPERTY_VALUE_PER_ALL_CONV = "valuePerAllConv";
+  @jakarta.annotation.Nullable
   private String valuePerAllConv;
 
   public static final String JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK = "convValueViaAdClick";
+  @jakarta.annotation.Nullable
   private String convValueViaAdClick;
 
   public static final String JSON_PROPERTY_VALUE_PER_CONV_VIA_AD_CLICK = "valuePerConvViaAdClick";
+  @jakarta.annotation.Nullable
   private String valuePerConvViaAdClick;
 
   public static final String JSON_PROPERTY_CPA_VIA_AD_CLICK = "cpaViaAdClick";
+  @jakarta.annotation.Nullable
   private String cpaViaAdClick;
 
   public static final String JSON_PROPERTY_ALL_CPA = "allCpa";
+  @jakarta.annotation.Nullable
   private String allCpa;
 
   public static final String JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS = "crossDeviceConversions";
+  @jakarta.annotation.Nullable
   private Long crossDeviceConversions;
 
   public static final String JSON_PROPERTY_AVG_DELIVER_RANK = "avgDeliverRank";
+  @jakarta.annotation.Nullable
   private Double avgDeliverRank;
 
   public static final String JSON_PROPERTY_MEASURED_IMPS = "measuredImps";
+  @jakarta.annotation.Nullable
   private Long measuredImps;
 
   public static final String JSON_PROPERTY_MEASURED_IMPS_RATE = "measuredImpsRate";
+  @jakarta.annotation.Nullable
   private Double measuredImpsRate;
 
   public static final String JSON_PROPERTY_VIEWABLE_IMPS = "viewableImps";
+  @jakarta.annotation.Nullable
   private Long viewableImps;
 
   public static final String JSON_PROPERTY_VIEWABLE_IMPS_RATE = "viewableImpsRate";
+  @jakarta.annotation.Nullable
   private Double viewableImpsRate;
 
   public static final String JSON_PROPERTY_VIEWABLE_CLICKS = "viewableClicks";
+  @jakarta.annotation.Nullable
   private Long viewableClicks;
 
   public static final String JSON_PROPERTY_VIEWABLE_CLICK_RATE = "viewableClickRate";
+  @jakarta.annotation.Nullable
   private Double viewableClickRate;
 
   public static final String JSON_PROPERTY_PAID_VIDEO_VIEWS = "paidVideoViews";
+  @jakarta.annotation.Nullable
   private Long paidVideoViews;
 
   public static final String JSON_PROPERTY_PAID_VIDEO_VIEW_RATE = "paidVideoViewRate";
+  @jakarta.annotation.Nullable
   private Double paidVideoViewRate;
 
   public static final String JSON_PROPERTY_AVG_CPV = "avgCpv";
+  @jakarta.annotation.Nullable
   private Double avgCpv;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS = "videoViews";
+  @jakarta.annotation.Nullable
   private Long videoViews;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO25 = "videoViewsTo25";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo25;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO50 = "videoViewsTo50";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo50;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO75 = "videoViewsTo75";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo75;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO95 = "videoViewsTo95";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo95;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO100 = "videoViewsTo100";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo100;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO3_SEC = "videoViewsTo3Sec";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo3Sec;
 
   public static final String JSON_PROPERTY_VIDEO_VIEWS_TO10_SEC = "videoViewsTo10Sec";
+  @jakarta.annotation.Nullable
   private Long videoViewsTo10Sec;
 
   public static final String JSON_PROPERTY_AVG_PERCENT_VIDEO_VIEWED = "avgPercentVideoViewed";
+  @jakarta.annotation.Nullable
   private Double avgPercentVideoViewed;
 
   public static final String JSON_PROPERTY_AVG_DURATION_VIDEO_VIEWED = "avgDurationVideoViewed";
+  @jakarta.annotation.Nullable
   private Double avgDurationVideoViewed;
 
   public static final String JSON_PROPERTY_VIDEO_VIEW_THROUGH_RATE = "videoViewThroughRate";
+  @jakarta.annotation.Nullable
   private Double videoViewThroughRate;
 
   public static final String JSON_PROPERTY_IMPRESSION_SHARE = "impressionShare";
+  @jakarta.annotation.Nullable
   private Double impressionShare;
 
   public static final String JSON_PROPERTY_IMPRESSION_SHARE_BUDGET_LOSS = "impressionShareBudgetLoss";
+  @jakarta.annotation.Nullable
   private Double impressionShareBudgetLoss;
 
   public static final String JSON_PROPERTY_IMPRESSION_SHARE_RANK_LOSS = "impressionShareRankLoss";
+  @jakarta.annotation.Nullable
   private Double impressionShareRankLoss;
 
   public static final String JSON_PROPERTY_CONV_VALUE_VIA_VIEW_THROUGH = "convValueViaViewThrough";
+  @jakarta.annotation.Nullable
   private Long convValueViaViewThrough;
 
   public static final String JSON_PROPERTY_AVG_CPM = "avgCpm";
+  @jakarta.annotation.Nullable
   private Double avgCpm;
 
   public static final String JSON_PROPERTY_AVG_VCPM = "avgVcpm";
+  @jakarta.annotation.Nullable
   private Double avgVcpm;
 
   public static final String JSON_PROPERTY_SKAN_INSTALLS = "skanInstalls";
+  @jakarta.annotation.Nullable
   private Long skanInstalls;
 
   public static final String JSON_PROPERTY_SKAN_INSTALLS_VIA_CLICK = "skanInstallsViaClick";
+  @jakarta.annotation.Nullable
   private Long skanInstallsViaClick;
 
   public static final String JSON_PROPERTY_SKAN_INSTALLS_VIEW_THROUGH = "skanInstallsViewThrough";
+  @jakarta.annotation.Nullable
   private Long skanInstallsViewThrough;
 
   public static final String JSON_PROPERTY_SKAN_COST_PER_INSTALL = "skanCostPerInstall";
+  @jakarta.annotation.Nullable
   private Double skanCostPerInstall;
 
   public static final String JSON_PROPERTY_SKAN_COST_PER_INSTALL_VIA_CLICK = "skanCostPerInstallViaClick";
+  @jakarta.annotation.Nullable
   private Double skanCostPerInstallViaClick;
 
   public Stats() {
   }
 
-  public Stats imps(Long imps) {
+  public Stats imps(@jakarta.annotation.Nullable Long imps) {
     
     this.imps = imps;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッション数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of impressions&lt;/div&gt; 
    * @return imps
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getImps() {
@@ -276,25 +332,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImps(Long imps) {
+  public void setImps(@jakarta.annotation.Nullable Long imps) {
     this.imps = imps;
   }
 
-
-  public Stats clicks(Long clicks) {
+  public Stats clicks(@jakarta.annotation.Nullable Long clicks) {
     
     this.clicks = clicks;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クリック数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of clicks&lt;/div&gt; 
    * @return clicks
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getClicks() {
@@ -302,25 +357,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClicks(Long clicks) {
+  public void setClicks(@jakarta.annotation.Nullable Long clicks) {
     this.clicks = clicks;
   }
 
-
-  public Stats clickRate(Double clickRate) {
+  public Stats clickRate(@jakarta.annotation.Nullable Double clickRate) {
     
     this.clickRate = clickRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クリック率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Click through rate&lt;/div&gt; 
    * @return clickRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLICK_RATE)
+  @JsonProperty(value = JSON_PROPERTY_CLICK_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getClickRate() {
@@ -328,25 +382,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLICK_RATE)
+  @JsonProperty(value = JSON_PROPERTY_CLICK_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClickRate(Double clickRate) {
+  public void setClickRate(@jakarta.annotation.Nullable Double clickRate) {
     this.clickRate = clickRate;
   }
 
-
-  public Stats cost(Double cost) {
+  public Stats cost(@jakarta.annotation.Nullable Double cost) {
     
     this.cost = cost;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cost&lt;/div&gt; 
    * @return cost
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COST)
+  @JsonProperty(value = JSON_PROPERTY_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getCost() {
@@ -354,25 +407,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COST)
+  @JsonProperty(value = JSON_PROPERTY_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCost(Double cost) {
+  public void setCost(@jakarta.annotation.Nullable Double cost) {
     this.cost = cost;
   }
 
-
-  public Stats avgCpc(Double avgCpc) {
+  public Stats avgCpc(@jakarta.annotation.Nullable Double avgCpc) {
     
     this.avgCpc = avgCpc;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均CPC&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. CPC&lt;/div&gt; 
    * @return avgCpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_CPC)
+  @JsonProperty(value = JSON_PROPERTY_AVG_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgCpc() {
@@ -380,25 +432,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_CPC)
+  @JsonProperty(value = JSON_PROPERTY_AVG_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgCpc(Double avgCpc) {
+  public void setAvgCpc(@jakarta.annotation.Nullable Double avgCpc) {
     this.avgCpc = avgCpc;
   }
 
-
-  public Stats conversions(Long conversions) {
+  public Stats conversions(@jakarta.annotation.Nullable Long conversions) {
     
     this.conversions = conversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions&lt;/div&gt; 
    * @return conversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversions() {
@@ -406,25 +457,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversions(Long conversions) {
+  public void setConversions(@jakarta.annotation.Nullable Long conversions) {
     this.conversions = conversions;
   }
 
-
-  public Stats convRate(Double convRate) {
+  public Stats convRate(@jakarta.annotation.Nullable Double convRate) {
     
     this.convRate = convRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. rate&lt;/div&gt; 
    * @return convRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONV_RATE)
+  @JsonProperty(value = JSON_PROPERTY_CONV_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getConvRate() {
@@ -432,25 +482,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONV_RATE)
+  @JsonProperty(value = JSON_PROPERTY_CONV_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConvRate(Double convRate) {
+  public void setConvRate(@jakarta.annotation.Nullable Double convRate) {
     this.convRate = convRate;
   }
 
-
-  public Stats conversionsViaAdClick(Long conversionsViaAdClick) {
+  public Stats conversionsViaAdClick(@jakarta.annotation.Nullable Long conversionsViaAdClick) {
     
     this.conversionsViaAdClick = conversionsViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions (via click)&lt;/div&gt; 
    * @return conversionsViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionsViaAdClick() {
@@ -458,25 +507,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionsViaAdClick(Long conversionsViaAdClick) {
+  public void setConversionsViaAdClick(@jakarta.annotation.Nullable Long conversionsViaAdClick) {
     this.conversionsViaAdClick = conversionsViaAdClick;
   }
 
-
-  public Stats conversionRateViaAdClick(Double conversionRateViaAdClick) {
+  public Stats conversionRateViaAdClick(@jakarta.annotation.Nullable Double conversionRateViaAdClick) {
     
     this.conversionRateViaAdClick = conversionRateViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. rate (via click)&lt;/div&gt; 
    * @return conversionRateViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_RATE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_RATE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getConversionRateViaAdClick() {
@@ -484,25 +532,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_RATE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_RATE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionRateViaAdClick(Double conversionRateViaAdClick) {
+  public void setConversionRateViaAdClick(@jakarta.annotation.Nullable Double conversionRateViaAdClick) {
     this.conversionRateViaAdClick = conversionRateViaAdClick;
   }
 
-
-  public Stats allConv(Long allConv) {
+  public Stats allConv(@jakarta.annotation.Nullable Long allConv) {
     
     this.allConv = allConv;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions (all)&lt;/div&gt; 
    * @return allConv
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CONV)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAllConv() {
@@ -510,25 +557,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CONV)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllConv(Long allConv) {
+  public void setAllConv(@jakarta.annotation.Nullable Long allConv) {
     this.allConv = allConv;
   }
 
-
-  public Stats allConvRate(Double allConvRate) {
+  public Stats allConvRate(@jakarta.annotation.Nullable Double allConvRate) {
     
     this.allConvRate = allConvRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン率（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. rate (all)&lt;/div&gt; 
    * @return allConvRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CONV_RATE)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAllConvRate() {
@@ -536,25 +582,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CONV_RATE)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllConvRate(Double allConvRate) {
+  public void setAllConvRate(@jakarta.annotation.Nullable Double allConvRate) {
     this.allConvRate = allConvRate;
   }
 
-
-  public Stats cpa(String cpa) {
+  public Stats cpa(@jakarta.annotation.Nullable String cpa) {
     
     this.cpa = cpa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン単価&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversion cost per acquisition&lt;/div&gt; 
    * @return cpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPA)
+  @JsonProperty(value = JSON_PROPERTY_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCpa() {
@@ -562,25 +607,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPA)
+  @JsonProperty(value = JSON_PROPERTY_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpa(String cpa) {
+  public void setCpa(@jakarta.annotation.Nullable String cpa) {
     this.cpa = cpa;
   }
 
-
-  public Stats convValue(String convValue) {
+  public Stats convValue(@jakarta.annotation.Nullable String convValue) {
     
     this.convValue = convValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value&lt;/div&gt; 
    * @return convValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConvValue() {
@@ -588,25 +632,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConvValue(String convValue) {
+  public void setConvValue(@jakarta.annotation.Nullable String convValue) {
     this.convValue = convValue;
   }
 
-
-  public Stats valuePerConv(String valuePerConv) {
+  public Stats valuePerConv(@jakarta.annotation.Nullable String valuePerConv) {
     
     this.valuePerConv = valuePerConv;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値/コンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value/conv.&lt;/div&gt; 
    * @return valuePerConv
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUE_PER_CONV)
+  @JsonProperty(value = JSON_PROPERTY_VALUE_PER_CONV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getValuePerConv() {
@@ -614,25 +657,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUE_PER_CONV)
+  @JsonProperty(value = JSON_PROPERTY_VALUE_PER_CONV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValuePerConv(String valuePerConv) {
+  public void setValuePerConv(@jakarta.annotation.Nullable String valuePerConv) {
     this.valuePerConv = valuePerConv;
   }
 
-
-  public Stats convValuePerCost(Double convValuePerCost) {
+  public Stats convValuePerCost(@jakarta.annotation.Nullable Double convValuePerCost) {
     
     this.convValuePerCost = convValuePerCost;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）/コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions value/cost&lt;/div&gt; 
    * @return convValuePerCost
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_PER_COST)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_PER_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getConvValuePerCost() {
@@ -640,25 +682,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_PER_COST)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_PER_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConvValuePerCost(Double convValuePerCost) {
+  public void setConvValuePerCost(@jakarta.annotation.Nullable Double convValuePerCost) {
     this.convValuePerCost = convValuePerCost;
   }
 
-
-  public Stats allConvValuePerCost(Double allConvValuePerCost) {
+  public Stats allConvValuePerCost(@jakarta.annotation.Nullable Double allConvValuePerCost) {
     
     this.allConvValuePerCost = allConvValuePerCost;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）/コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (all)/cost All Conv.&lt;/div&gt; 
    * @return allConvValuePerCost
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CONV_VALUE_PER_COST)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV_VALUE_PER_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAllConvValuePerCost() {
@@ -666,25 +707,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CONV_VALUE_PER_COST)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV_VALUE_PER_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllConvValuePerCost(Double allConvValuePerCost) {
+  public void setAllConvValuePerCost(@jakarta.annotation.Nullable Double allConvValuePerCost) {
     this.allConvValuePerCost = allConvValuePerCost;
   }
 
-
-  public Stats convValueViaAdClickPerCost(Double convValueViaAdClickPerCost) {
+  public Stats convValueViaAdClickPerCost(@jakarta.annotation.Nullable Double convValueViaAdClickPerCost) {
     
     this.convValueViaAdClickPerCost = convValueViaAdClickPerCost;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）/コスト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conversions value(via ad clicks)/cost&lt;/div&gt; 
    * @return convValueViaAdClickPerCost
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK_PER_COST)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK_PER_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getConvValueViaAdClickPerCost() {
@@ -692,25 +732,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK_PER_COST)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK_PER_COST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConvValueViaAdClickPerCost(Double convValueViaAdClickPerCost) {
+  public void setConvValueViaAdClickPerCost(@jakarta.annotation.Nullable Double convValueViaAdClickPerCost) {
     this.convValueViaAdClickPerCost = convValueViaAdClickPerCost;
   }
 
-
-  public Stats allConvValue(String allConvValue) {
+  public Stats allConvValue(@jakarta.annotation.Nullable String allConvValue) {
     
     this.allConvValue = allConvValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (all)&lt;/div&gt; 
    * @return allConvValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CONV_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAllConvValue() {
@@ -718,25 +757,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CONV_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONV_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllConvValue(String allConvValue) {
+  public void setAllConvValue(@jakarta.annotation.Nullable String allConvValue) {
     this.allConvValue = allConvValue;
   }
 
-
-  public Stats valuePerAllConv(String valuePerAllConv) {
+  public Stats valuePerAllConv(@jakarta.annotation.Nullable String valuePerAllConv) {
     
     this.valuePerAllConv = valuePerAllConv;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）/コンバージョン数（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (all)/conv. (all)&lt;/div&gt; 
    * @return valuePerAllConv
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUE_PER_ALL_CONV)
+  @JsonProperty(value = JSON_PROPERTY_VALUE_PER_ALL_CONV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getValuePerAllConv() {
@@ -744,25 +782,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUE_PER_ALL_CONV)
+  @JsonProperty(value = JSON_PROPERTY_VALUE_PER_ALL_CONV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValuePerAllConv(String valuePerAllConv) {
+  public void setValuePerAllConv(@jakarta.annotation.Nullable String valuePerAllConv) {
     this.valuePerAllConv = valuePerAllConv;
   }
 
-
-  public Stats convValueViaAdClick(String convValueViaAdClick) {
+  public Stats convValueViaAdClick(@jakarta.annotation.Nullable String convValueViaAdClick) {
     
     this.convValueViaAdClick = convValueViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (via click)&lt;/div&gt; 
    * @return convValueViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConvValueViaAdClick() {
@@ -770,25 +807,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConvValueViaAdClick(String convValueViaAdClick) {
+  public void setConvValueViaAdClick(@jakarta.annotation.Nullable String convValueViaAdClick) {
     this.convValueViaAdClick = convValueViaAdClick;
   }
 
-
-  public Stats valuePerConvViaAdClick(String valuePerConvViaAdClick) {
+  public Stats valuePerConvViaAdClick(@jakarta.annotation.Nullable String valuePerConvViaAdClick) {
     
     this.valuePerConvViaAdClick = valuePerConvViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（クリック経由）/コンバージョン数（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Conv. value (via click)/conv. (via click)&lt;/div&gt; 
    * @return valuePerConvViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUE_PER_CONV_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_VALUE_PER_CONV_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getValuePerConvViaAdClick() {
@@ -796,25 +832,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUE_PER_CONV_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_VALUE_PER_CONV_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValuePerConvViaAdClick(String valuePerConvViaAdClick) {
+  public void setValuePerConvViaAdClick(@jakarta.annotation.Nullable String valuePerConvViaAdClick) {
     this.valuePerConvViaAdClick = valuePerConvViaAdClick;
   }
 
-
-  public Stats cpaViaAdClick(String cpaViaAdClick) {
+  public Stats cpaViaAdClick(@jakarta.annotation.Nullable String cpaViaAdClick) {
     
     this.cpaViaAdClick = cpaViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コスト/コンバージョン数（クリック経由）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cost/conv. (via click)&lt;/div&gt; 
    * @return cpaViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPA_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CPA_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCpaViaAdClick() {
@@ -822,25 +857,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPA_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CPA_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpaViaAdClick(String cpaViaAdClick) {
+  public void setCpaViaAdClick(@jakarta.annotation.Nullable String cpaViaAdClick) {
     this.cpaViaAdClick = cpaViaAdClick;
   }
 
-
-  public Stats allCpa(String allCpa) {
+  public Stats allCpa(@jakarta.annotation.Nullable String allCpa) {
     
     this.allCpa = allCpa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コスト/コンバージョン数（全て）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cost/conv. (all)&lt;/div&gt; 
    * @return allCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CPA)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAllCpa() {
@@ -848,25 +882,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CPA)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllCpa(String allCpa) {
+  public void setAllCpa(@jakarta.annotation.Nullable String allCpa) {
     this.allCpa = allCpa;
   }
 
-
-  public Stats crossDeviceConversions(Long crossDeviceConversions) {
+  public Stats crossDeviceConversions(@jakarta.annotation.Nullable Long crossDeviceConversions) {
     
     this.crossDeviceConversions = crossDeviceConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クロスデバイスコンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Cross-device conv.&lt;/div&gt; 
    * @return crossDeviceConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCrossDeviceConversions() {
@@ -874,25 +907,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossDeviceConversions(Long crossDeviceConversions) {
+  public void setCrossDeviceConversions(@jakarta.annotation.Nullable Long crossDeviceConversions) {
     this.crossDeviceConversions = crossDeviceConversions;
   }
 
-
-  public Stats avgDeliverRank(Double avgDeliverRank) {
+  public Stats avgDeliverRank(@jakarta.annotation.Nullable Double avgDeliverRank) {
     
     this.avgDeliverRank = avgDeliverRank;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均掲載順位（配信された時のeCPM順位の平均）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. position (the average of eCPM rank on ads delivery)&lt;/div&gt; 
    * @return avgDeliverRank
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_DELIVER_RANK)
+  @JsonProperty(value = JSON_PROPERTY_AVG_DELIVER_RANK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgDeliverRank() {
@@ -900,25 +932,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_DELIVER_RANK)
+  @JsonProperty(value = JSON_PROPERTY_AVG_DELIVER_RANK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgDeliverRank(Double avgDeliverRank) {
+  public void setAvgDeliverRank(@jakarta.annotation.Nullable Double avgDeliverRank) {
     this.avgDeliverRank = avgDeliverRank;
   }
 
-
-  public Stats measuredImps(Long measuredImps) {
+  public Stats measuredImps(@jakarta.annotation.Nullable Long measuredImps) {
     
     this.measuredImps = measuredImps;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メジャードインプレッション数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Measured impressions&lt;/div&gt; 
    * @return measuredImps
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEASURED_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_MEASURED_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMeasuredImps() {
@@ -926,25 +957,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEASURED_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_MEASURED_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeasuredImps(Long measuredImps) {
+  public void setMeasuredImps(@jakarta.annotation.Nullable Long measuredImps) {
     this.measuredImps = measuredImps;
   }
 
-
-  public Stats measuredImpsRate(Double measuredImpsRate) {
+  public Stats measuredImpsRate(@jakarta.annotation.Nullable Double measuredImpsRate) {
     
     this.measuredImpsRate = measuredImpsRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メジャードインプレッション測定率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Measured impression rate&lt;/div&gt; 
    * @return measuredImpsRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEASURED_IMPS_RATE)
+  @JsonProperty(value = JSON_PROPERTY_MEASURED_IMPS_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getMeasuredImpsRate() {
@@ -952,25 +982,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEASURED_IMPS_RATE)
+  @JsonProperty(value = JSON_PROPERTY_MEASURED_IMPS_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeasuredImpsRate(Double measuredImpsRate) {
+  public void setMeasuredImpsRate(@jakarta.annotation.Nullable Double measuredImpsRate) {
     this.measuredImpsRate = measuredImpsRate;
   }
 
-
-  public Stats viewableImps(Long viewableImps) {
+  public Stats viewableImps(@jakarta.annotation.Nullable Long viewableImps) {
     
     this.viewableImps = viewableImps;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルインプレッション数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable impressions&lt;/div&gt; 
    * @return viewableImps
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getViewableImps() {
@@ -978,25 +1007,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableImps(Long viewableImps) {
+  public void setViewableImps(@jakarta.annotation.Nullable Long viewableImps) {
     this.viewableImps = viewableImps;
   }
 
-
-  public Stats viewableImpsRate(Double viewableImpsRate) {
+  public Stats viewableImpsRate(@jakarta.annotation.Nullable Double viewableImpsRate) {
     
     this.viewableImpsRate = viewableImpsRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルインプレッション率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable impression rate&lt;/div&gt; 
    * @return viewableImpsRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPS_RATE)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_IMPS_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getViewableImpsRate() {
@@ -1004,25 +1032,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPS_RATE)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_IMPS_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableImpsRate(Double viewableImpsRate) {
+  public void setViewableImpsRate(@jakarta.annotation.Nullable Double viewableImpsRate) {
     this.viewableImpsRate = viewableImpsRate;
   }
 
-
-  public Stats viewableClicks(Long viewableClicks) {
+  public Stats viewableClicks(@jakarta.annotation.Nullable Long viewableClicks) {
     
     this.viewableClicks = viewableClicks;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルクリック数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable clicks&lt;/div&gt; 
    * @return viewableClicks
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getViewableClicks() {
@@ -1030,25 +1057,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableClicks(Long viewableClicks) {
+  public void setViewableClicks(@jakarta.annotation.Nullable Long viewableClicks) {
     this.viewableClicks = viewableClicks;
   }
 
-
-  public Stats viewableClickRate(Double viewableClickRate) {
+  public Stats viewableClickRate(@jakarta.annotation.Nullable Double viewableClickRate) {
     
     this.viewableClickRate = viewableClickRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビューアブルクリック率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Viewable CTR&lt;/div&gt; 
    * @return viewableClickRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_CLICK_RATE)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_CLICK_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getViewableClickRate() {
@@ -1056,25 +1082,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_CLICK_RATE)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_CLICK_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableClickRate(Double viewableClickRate) {
+  public void setViewableClickRate(@jakarta.annotation.Nullable Double viewableClickRate) {
     this.viewableClickRate = viewableClickRate;
   }
 
-
-  public Stats paidVideoViews(Long paidVideoViews) {
+  public Stats paidVideoViews(@jakarta.annotation.Nullable Long paidVideoViews) {
     
     this.paidVideoViews = paidVideoViews;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;課金が発生した動画再生数 (CPV課金キャンペーンのみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Paid video views (CPV)&lt;/div&gt; 
    * @return paidVideoViews
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAID_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_PAID_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPaidVideoViews() {
@@ -1082,25 +1107,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAID_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_PAID_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPaidVideoViews(Long paidVideoViews) {
+  public void setPaidVideoViews(@jakarta.annotation.Nullable Long paidVideoViews) {
     this.paidVideoViews = paidVideoViews;
   }
 
-
-  public Stats paidVideoViewRate(Double paidVideoViewRate) {
+  public Stats paidVideoViewRate(@jakarta.annotation.Nullable Double paidVideoViewRate) {
     
     this.paidVideoViewRate = paidVideoViewRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;課金が発生した動画再生率 (CPV課金キャンペーンのみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Paid video view rate (CPV)&lt;/div&gt; 
    * @return paidVideoViewRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PAID_VIDEO_VIEW_RATE)
+  @JsonProperty(value = JSON_PROPERTY_PAID_VIDEO_VIEW_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getPaidVideoViewRate() {
@@ -1108,25 +1132,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PAID_VIDEO_VIEW_RATE)
+  @JsonProperty(value = JSON_PROPERTY_PAID_VIDEO_VIEW_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPaidVideoViewRate(Double paidVideoViewRate) {
+  public void setPaidVideoViewRate(@jakarta.annotation.Nullable Double paidVideoViewRate) {
     this.paidVideoViewRate = paidVideoViewRate;
   }
 
-
-  public Stats avgCpv(Double avgCpv) {
+  public Stats avgCpv(@jakarta.annotation.Nullable Double avgCpv) {
     
     this.avgCpv = avgCpv;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均CPV&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. CPV&lt;/div&gt; 
    * @return avgCpv
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_CPV)
+  @JsonProperty(value = JSON_PROPERTY_AVG_CPV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgCpv() {
@@ -1134,25 +1157,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_CPV)
+  @JsonProperty(value = JSON_PROPERTY_AVG_CPV, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgCpv(Double avgCpv) {
+  public void setAvgCpv(@jakarta.annotation.Nullable Double avgCpv) {
     this.avgCpv = avgCpv;
   }
 
-
-  public Stats videoViews(Long videoViews) {
+  public Stats videoViews(@jakarta.annotation.Nullable Long videoViews) {
     
     this.videoViews = videoViews;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の再生開始数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video views&lt;/div&gt; 
    * @return videoViews
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViews() {
@@ -1160,25 +1182,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViews(Long videoViews) {
+  public void setVideoViews(@jakarta.annotation.Nullable Long videoViews) {
     this.videoViews = videoViews;
   }
 
-
-  public Stats videoViewsTo25(Long videoViewsTo25) {
+  public Stats videoViewsTo25(@jakarta.annotation.Nullable Long videoViewsTo25) {
     
     this.videoViewsTo25 = videoViewsTo25;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の25％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;25% video views&lt;/div&gt; 
    * @return videoViewsTo25
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO25)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO25, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo25() {
@@ -1186,25 +1207,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO25)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO25, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo25(Long videoViewsTo25) {
+  public void setVideoViewsTo25(@jakarta.annotation.Nullable Long videoViewsTo25) {
     this.videoViewsTo25 = videoViewsTo25;
   }
 
-
-  public Stats videoViewsTo50(Long videoViewsTo50) {
+  public Stats videoViewsTo50(@jakarta.annotation.Nullable Long videoViewsTo50) {
     
     this.videoViewsTo50 = videoViewsTo50;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の50％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;50% video views&lt;/div&gt; 
    * @return videoViewsTo50
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO50)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO50, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo50() {
@@ -1212,25 +1232,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO50)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO50, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo50(Long videoViewsTo50) {
+  public void setVideoViewsTo50(@jakarta.annotation.Nullable Long videoViewsTo50) {
     this.videoViewsTo50 = videoViewsTo50;
   }
 
-
-  public Stats videoViewsTo75(Long videoViewsTo75) {
+  public Stats videoViewsTo75(@jakarta.annotation.Nullable Long videoViewsTo75) {
     
     this.videoViewsTo75 = videoViewsTo75;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の75％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;75% video views&lt;/div&gt; 
    * @return videoViewsTo75
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO75)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO75, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo75() {
@@ -1238,25 +1257,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO75)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO75, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo75(Long videoViewsTo75) {
+  public void setVideoViewsTo75(@jakarta.annotation.Nullable Long videoViewsTo75) {
     this.videoViewsTo75 = videoViewsTo75;
   }
 
-
-  public Stats videoViewsTo95(Long videoViewsTo95) {
+  public Stats videoViewsTo95(@jakarta.annotation.Nullable Long videoViewsTo95) {
     
     this.videoViewsTo95 = videoViewsTo95;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の95％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;95% video views&lt;/div&gt; 
    * @return videoViewsTo95
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO95)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO95, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo95() {
@@ -1264,25 +1282,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO95)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO95, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo95(Long videoViewsTo95) {
+  public void setVideoViewsTo95(@jakarta.annotation.Nullable Long videoViewsTo95) {
     this.videoViewsTo95 = videoViewsTo95;
   }
 
-
-  public Stats videoViewsTo100(Long videoViewsTo100) {
+  public Stats videoViewsTo100(@jakarta.annotation.Nullable Long videoViewsTo100) {
     
     this.videoViewsTo100 = videoViewsTo100;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の100％再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;100% video views&lt;/div&gt; 
    * @return videoViewsTo100
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO100)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO100, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo100() {
@@ -1290,25 +1307,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO100)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO100, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo100(Long videoViewsTo100) {
+  public void setVideoViewsTo100(@jakarta.annotation.Nullable Long videoViewsTo100) {
     this.videoViewsTo100 = videoViewsTo100;
   }
 
-
-  public Stats videoViewsTo3Sec(Long videoViewsTo3Sec) {
+  public Stats videoViewsTo3Sec(@jakarta.annotation.Nullable Long videoViewsTo3Sec) {
     
     this.videoViewsTo3Sec = videoViewsTo3Sec;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の3秒再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;3 sec video views&lt;/div&gt; 
    * @return videoViewsTo3Sec
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO3_SEC)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO3_SEC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo3Sec() {
@@ -1316,25 +1332,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO3_SEC)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO3_SEC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo3Sec(Long videoViewsTo3Sec) {
+  public void setVideoViewsTo3Sec(@jakarta.annotation.Nullable Long videoViewsTo3Sec) {
     this.videoViewsTo3Sec = videoViewsTo3Sec;
   }
 
-
-  public Stats videoViewsTo10Sec(Long videoViewsTo10Sec) {
+  public Stats videoViewsTo10Sec(@jakarta.annotation.Nullable Long videoViewsTo10Sec) {
     
     this.videoViewsTo10Sec = videoViewsTo10Sec;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の10秒再生数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;10 sec video views&lt;/div&gt; 
    * @return videoViewsTo10Sec
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO10_SEC)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO10_SEC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVideoViewsTo10Sec() {
@@ -1342,25 +1357,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEWS_TO10_SEC)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEWS_TO10_SEC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewsTo10Sec(Long videoViewsTo10Sec) {
+  public void setVideoViewsTo10Sec(@jakarta.annotation.Nullable Long videoViewsTo10Sec) {
     this.videoViewsTo10Sec = videoViewsTo10Sec;
   }
 
-
-  public Stats avgPercentVideoViewed(Double avgPercentVideoViewed) {
+  public Stats avgPercentVideoViewed(@jakarta.annotation.Nullable Double avgPercentVideoViewed) {
     
     this.avgPercentVideoViewed = avgPercentVideoViewed;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の平均再生率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. video view rate&lt;/div&gt; 
    * @return avgPercentVideoViewed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_PERCENT_VIDEO_VIEWED)
+  @JsonProperty(value = JSON_PROPERTY_AVG_PERCENT_VIDEO_VIEWED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgPercentVideoViewed() {
@@ -1368,25 +1382,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_PERCENT_VIDEO_VIEWED)
+  @JsonProperty(value = JSON_PROPERTY_AVG_PERCENT_VIDEO_VIEWED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgPercentVideoViewed(Double avgPercentVideoViewed) {
+  public void setAvgPercentVideoViewed(@jakarta.annotation.Nullable Double avgPercentVideoViewed) {
     this.avgPercentVideoViewed = avgPercentVideoViewed;
   }
 
-
-  public Stats avgDurationVideoViewed(Double avgDurationVideoViewed) {
+  public Stats avgDurationVideoViewed(@jakarta.annotation.Nullable Double avgDurationVideoViewed) {
     
     this.avgDurationVideoViewed = avgDurationVideoViewed;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の平均再生時間&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. duration of video viewed&lt;/div&gt; 
    * @return avgDurationVideoViewed
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_DURATION_VIDEO_VIEWED)
+  @JsonProperty(value = JSON_PROPERTY_AVG_DURATION_VIDEO_VIEWED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgDurationVideoViewed() {
@@ -1394,25 +1407,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_DURATION_VIDEO_VIEWED)
+  @JsonProperty(value = JSON_PROPERTY_AVG_DURATION_VIDEO_VIEWED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgDurationVideoViewed(Double avgDurationVideoViewed) {
+  public void setAvgDurationVideoViewed(@jakarta.annotation.Nullable Double avgDurationVideoViewed) {
     this.avgDurationVideoViewed = avgDurationVideoViewed;
   }
 
-
-  public Stats videoViewThroughRate(Double videoViewThroughRate) {
+  public Stats videoViewThroughRate(@jakarta.annotation.Nullable Double videoViewThroughRate) {
     
     this.videoViewThroughRate = videoViewThroughRate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の再生完了率&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video view through rate&lt;/div&gt; 
    * @return videoViewThroughRate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEW_THROUGH_RATE)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEW_THROUGH_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getVideoViewThroughRate() {
@@ -1420,25 +1432,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_VIEW_THROUGH_RATE)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_VIEW_THROUGH_RATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoViewThroughRate(Double videoViewThroughRate) {
+  public void setVideoViewThroughRate(@jakarta.annotation.Nullable Double videoViewThroughRate) {
     this.videoViewThroughRate = videoViewThroughRate;
   }
 
-
-  public Stats impressionShare(Double impressionShare) {
+  public Stats impressionShare(@jakarta.annotation.Nullable Double impressionShare) {
     
     this.impressionShare = impressionShare;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッションシェア&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Impression share&lt;/div&gt; 
    * @return impressionShare
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_SHARE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getImpressionShare() {
@@ -1446,25 +1457,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_SHARE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpressionShare(Double impressionShare) {
+  public void setImpressionShare(@jakarta.annotation.Nullable Double impressionShare) {
     this.impressionShare = impressionShare;
   }
 
-
-  public Stats impressionShareBudgetLoss(Double impressionShareBudgetLoss) {
+  public Stats impressionShareBudgetLoss(@jakarta.annotation.Nullable Double impressionShareBudgetLoss) {
     
     this.impressionShareBudgetLoss = impressionShareBudgetLoss;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッションシェア損失率（予算）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Impression share lost rate(budget)&lt;/div&gt; 
    * @return impressionShareBudgetLoss
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE_BUDGET_LOSS)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_SHARE_BUDGET_LOSS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getImpressionShareBudgetLoss() {
@@ -1472,25 +1482,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE_BUDGET_LOSS)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_SHARE_BUDGET_LOSS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpressionShareBudgetLoss(Double impressionShareBudgetLoss) {
+  public void setImpressionShareBudgetLoss(@jakarta.annotation.Nullable Double impressionShareBudgetLoss) {
     this.impressionShareBudgetLoss = impressionShareBudgetLoss;
   }
 
-
-  public Stats impressionShareRankLoss(Double impressionShareRankLoss) {
+  public Stats impressionShareRankLoss(@jakarta.annotation.Nullable Double impressionShareRankLoss) {
     
     this.impressionShareRankLoss = impressionShareRankLoss;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インプレッションシェア損失率（ランク）&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Impression share lost rate(rank)&lt;/div&gt; 
    * @return impressionShareRankLoss
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE_RANK_LOSS)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_SHARE_RANK_LOSS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getImpressionShareRankLoss() {
@@ -1498,25 +1507,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_SHARE_RANK_LOSS)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_SHARE_RANK_LOSS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpressionShareRankLoss(Double impressionShareRankLoss) {
+  public void setImpressionShareRankLoss(@jakarta.annotation.Nullable Double impressionShareRankLoss) {
     this.impressionShareRankLoss = impressionShareRankLoss;
   }
 
-
-  public Stats convValueViaViewThrough(Long convValueViaViewThrough) {
+  public Stats convValueViaViewThrough(@jakarta.annotation.Nullable Long convValueViaViewThrough) {
     
     this.convValueViaViewThrough = convValueViaViewThrough;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビュースルーコンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;View through conversions&lt;/div&gt; 
    * @return convValueViaViewThrough
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_VIEW_THROUGH)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_VIA_VIEW_THROUGH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConvValueViaViewThrough() {
@@ -1524,25 +1532,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONV_VALUE_VIA_VIEW_THROUGH)
+  @JsonProperty(value = JSON_PROPERTY_CONV_VALUE_VIA_VIEW_THROUGH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConvValueViaViewThrough(Long convValueViaViewThrough) {
+  public void setConvValueViaViewThrough(@jakarta.annotation.Nullable Long convValueViaViewThrough) {
     this.convValueViaViewThrough = convValueViaViewThrough;
   }
 
-
-  public Stats avgCpm(Double avgCpm) {
+  public Stats avgCpm(@jakarta.annotation.Nullable Double avgCpm) {
     
     this.avgCpm = avgCpm;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均CPM&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. CPM&lt;/div&gt; 
    * @return avgCpm
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_CPM)
+  @JsonProperty(value = JSON_PROPERTY_AVG_CPM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgCpm() {
@@ -1550,25 +1557,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_CPM)
+  @JsonProperty(value = JSON_PROPERTY_AVG_CPM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgCpm(Double avgCpm) {
+  public void setAvgCpm(@jakarta.annotation.Nullable Double avgCpm) {
     this.avgCpm = avgCpm;
   }
 
-
-  public Stats avgVcpm(Double avgVcpm) {
+  public Stats avgVcpm(@jakarta.annotation.Nullable Double avgVcpm) {
     
     this.avgVcpm = avgVcpm;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;平均vCPM&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Avg. vCPM&lt;/div&gt; 
    * @return avgVcpm
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVG_VCPM)
+  @JsonProperty(value = JSON_PROPERTY_AVG_VCPM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getAvgVcpm() {
@@ -1576,25 +1582,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVG_VCPM)
+  @JsonProperty(value = JSON_PROPERTY_AVG_VCPM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvgVcpm(Double avgVcpm) {
+  public void setAvgVcpm(@jakarta.annotation.Nullable Double avgVcpm) {
     this.avgVcpm = avgVcpm;
   }
 
-
-  public Stats skanInstalls(Long skanInstalls) {
+  public Stats skanInstalls(@jakarta.annotation.Nullable Long skanInstalls) {
     
     this.skanInstalls = skanInstalls;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インストール数(SKAN)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Installs(SKAN)&lt;/div&gt; 
    * @return skanInstalls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SKAN_INSTALLS)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_INSTALLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSkanInstalls() {
@@ -1602,25 +1607,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SKAN_INSTALLS)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_INSTALLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSkanInstalls(Long skanInstalls) {
+  public void setSkanInstalls(@jakarta.annotation.Nullable Long skanInstalls) {
     this.skanInstalls = skanInstalls;
   }
 
-
-  public Stats skanInstallsViaClick(Long skanInstallsViaClick) {
+  public Stats skanInstallsViaClick(@jakarta.annotation.Nullable Long skanInstallsViaClick) {
     
     this.skanInstallsViaClick = skanInstallsViaClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インストール数(SKANクリック)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Installs(SKAN click)&lt;/div&gt; 
    * @return skanInstallsViaClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SKAN_INSTALLS_VIA_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_INSTALLS_VIA_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSkanInstallsViaClick() {
@@ -1628,25 +1632,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SKAN_INSTALLS_VIA_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_INSTALLS_VIA_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSkanInstallsViaClick(Long skanInstallsViaClick) {
+  public void setSkanInstallsViaClick(@jakarta.annotation.Nullable Long skanInstallsViaClick) {
     this.skanInstallsViaClick = skanInstallsViaClick;
   }
 
-
-  public Stats skanInstallsViewThrough(Long skanInstallsViewThrough) {
+  public Stats skanInstallsViewThrough(@jakarta.annotation.Nullable Long skanInstallsViewThrough) {
     
     this.skanInstallsViewThrough = skanInstallsViewThrough;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インストール数(SKANビュー)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Installs(SKAN view)&lt;/div&gt; 
    * @return skanInstallsViewThrough
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SKAN_INSTALLS_VIEW_THROUGH)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_INSTALLS_VIEW_THROUGH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSkanInstallsViewThrough() {
@@ -1654,25 +1657,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SKAN_INSTALLS_VIEW_THROUGH)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_INSTALLS_VIEW_THROUGH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSkanInstallsViewThrough(Long skanInstallsViewThrough) {
+  public void setSkanInstallsViewThrough(@jakarta.annotation.Nullable Long skanInstallsViewThrough) {
     this.skanInstallsViewThrough = skanInstallsViewThrough;
   }
 
-
-  public Stats skanCostPerInstall(Double skanCostPerInstall) {
+  public Stats skanCostPerInstall(@jakarta.annotation.Nullable Double skanCostPerInstall) {
     
     this.skanCostPerInstall = skanCostPerInstall;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インストール単価(SKAN)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Install costs(SKAN)&lt;/div&gt; 
    * @return skanCostPerInstall
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SKAN_COST_PER_INSTALL)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_COST_PER_INSTALL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getSkanCostPerInstall() {
@@ -1680,25 +1682,24 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SKAN_COST_PER_INSTALL)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_COST_PER_INSTALL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSkanCostPerInstall(Double skanCostPerInstall) {
+  public void setSkanCostPerInstall(@jakarta.annotation.Nullable Double skanCostPerInstall) {
     this.skanCostPerInstall = skanCostPerInstall;
   }
 
-
-  public Stats skanCostPerInstallViaClick(Double skanCostPerInstallViaClick) {
+  public Stats skanCostPerInstallViaClick(@jakarta.annotation.Nullable Double skanCostPerInstallViaClick) {
     
     this.skanCostPerInstallViaClick = skanCostPerInstallViaClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;インストール単価(SKANクリック)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Install costs(SKAN click)&lt;/div&gt; 
    * @return skanCostPerInstallViaClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SKAN_COST_PER_INSTALL_VIA_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_COST_PER_INSTALL_VIA_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getSkanCostPerInstallViaClick() {
@@ -1706,11 +1707,12 @@ public class Stats {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SKAN_COST_PER_INSTALL_VIA_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_COST_PER_INSTALL_VIA_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSkanCostPerInstallViaClick(Double skanCostPerInstallViaClick) {
+  public void setSkanCostPerInstallViaClick(@jakarta.annotation.Nullable Double skanCostPerInstallViaClick) {
     this.skanCostPerInstallViaClick = skanCostPerInstallViaClick;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -1853,10 +1855,7 @@ public class Stats {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

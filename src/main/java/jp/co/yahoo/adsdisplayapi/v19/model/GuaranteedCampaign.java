@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedCampaignServiceAdCategoryStatus;
 import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedCampaignServiceCampaignBiddingStrategy;
@@ -33,6 +33,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedCampaignServiceUserStatus;
 import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedCampaignServiceViewableFrequencyCap;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedCampaignオブジェクトは、予約型のキャンペーン情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedCampaign object describes guaranteed campaign information. &lt;/div&gt; 
@@ -59,83 +60,103 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedCampaign.JSON_PROPERTY_PACKAGE,
   GuaranteedCampaign.JSON_PROPERTY_CONVERSION_TRACKER
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedCampaign {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_LIFETIME_BUDGET = "lifetimeBudget";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceLifetimeBudget lifetimeBudget;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY = "campaignBiddingStrategy";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy;
 
   public static final String JSON_PROPERTY_CAMPAIGN_GOAL = "campaignGoal";
+  @jakarta.annotation.Nullable
   private String campaignGoal;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_END_TIME = "endTime";
+  @jakarta.annotation.Nullable
   private String endTime;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
+  @jakarta.annotation.Nullable
   private List<GuaranteedCampaignServiceLabel> labels;
 
   public static final String JSON_PROPERTY_SERVING_STATUS = "servingStatus";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceServingStatus servingStatus;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_START_TIME = "startTime";
+  @jakarta.annotation.Nullable
   private String startTime;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP = "viewableFrequencyCap";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap;
 
   public static final String JSON_PROPERTY_GUARANTEED_SIMULATION_ID = "guaranteedSimulationId";
+  @jakarta.annotation.Nullable
   private Long guaranteedSimulationId;
 
   public static final String JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS = "notificationEmailAddress";
+  @jakarta.annotation.Nullable
   private List<String> notificationEmailAddress;
 
   public static final String JSON_PROPERTY_AD_CATEGORY_STATUS = "adCategoryStatus";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus;
 
   public static final String JSON_PROPERTY_CAMPAIGN_CANCELED_DATE = "campaignCanceledDate";
+  @jakarta.annotation.Nullable
   private String campaignCanceledDate;
 
   public static final String JSON_PROPERTY_PACKAGE = "package";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServicePackage _package;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER = "conversionTracker";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceConversionTracker conversionTracker;
 
   public GuaranteedCampaign() {
   }
 
-  public GuaranteedCampaign accountId(Long accountId) {
+  public GuaranteedCampaign accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -143,25 +164,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public GuaranteedCampaign lifetimeBudget(GuaranteedCampaignServiceLifetimeBudget lifetimeBudget) {
+  public GuaranteedCampaign lifetimeBudget(@jakarta.annotation.Nullable GuaranteedCampaignServiceLifetimeBudget lifetimeBudget) {
     
     this.lifetimeBudget = lifetimeBudget;
     return this;
   }
 
-   /**
+  /**
    * Get lifetimeBudget
    * @return lifetimeBudget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LIFETIME_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_LIFETIME_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceLifetimeBudget getLifetimeBudget() {
@@ -169,25 +189,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LIFETIME_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_LIFETIME_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLifetimeBudget(GuaranteedCampaignServiceLifetimeBudget lifetimeBudget) {
+  public void setLifetimeBudget(@jakarta.annotation.Nullable GuaranteedCampaignServiceLifetimeBudget lifetimeBudget) {
     this.lifetimeBudget = lifetimeBudget;
   }
 
-
-  public GuaranteedCampaign campaignBiddingStrategy(GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy) {
+  public GuaranteedCampaign campaignBiddingStrategy(@jakarta.annotation.Nullable GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy) {
     
     this.campaignBiddingStrategy = campaignBiddingStrategy;
     return this;
   }
 
-   /**
+  /**
    * Get campaignBiddingStrategy
    * @return campaignBiddingStrategy
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceCampaignBiddingStrategy getCampaignBiddingStrategy() {
@@ -195,25 +214,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBiddingStrategy(GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy) {
+  public void setCampaignBiddingStrategy(@jakarta.annotation.Nullable GuaranteedCampaignServiceCampaignBiddingStrategy campaignBiddingStrategy) {
     this.campaignBiddingStrategy = campaignBiddingStrategy;
   }
 
-
-  public GuaranteedCampaign campaignGoal(String campaignGoal) {
+  public GuaranteedCampaign campaignGoal(@jakarta.annotation.Nullable String campaignGoal) {
     
     this.campaignGoal = campaignGoal;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン目的です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign goal.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignGoal
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_GOAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignGoal() {
@@ -221,25 +239,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_GOAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignGoal(String campaignGoal) {
+  public void setCampaignGoal(@jakarta.annotation.Nullable String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
 
-
-  public GuaranteedCampaign campaignId(Long campaignId) {
+  public GuaranteedCampaign campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドはSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in SET operation. &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -247,25 +264,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public GuaranteedCampaign campaignName(String campaignName) {
+  public GuaranteedCampaign campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name. &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -273,25 +289,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public GuaranteedCampaign endDate(String endDate) {
+  public GuaranteedCampaign endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; ∗ Format: yyyyMMdd&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -299,25 +314,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public GuaranteedCampaign endTime(String endTime) {
+  public GuaranteedCampaign endTime(@jakarta.annotation.Nullable String endTime) {
     
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了時刻です。&lt;br&gt; ※フォーマット：HHmm&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End time.&lt;br&gt; * Format: HHmm&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return endTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndTime() {
@@ -325,14 +339,13 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndTime(String endTime) {
+  public void setEndTime(@jakarta.annotation.Nullable String endTime) {
     this.endTime = endTime;
   }
 
-
-  public GuaranteedCampaign labels(List<GuaranteedCampaignServiceLabel> labels) {
+  public GuaranteedCampaign labels(@jakarta.annotation.Nullable List<GuaranteedCampaignServiceLabel> labels) {
     
     this.labels = labels;
     return this;
@@ -346,12 +359,12 @@ public class GuaranteedCampaign {
     return this;
   }
 
-   /**
+  /**
    * Get labels
    * @return labels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<GuaranteedCampaignServiceLabel> getLabels() {
@@ -359,25 +372,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabels(List<GuaranteedCampaignServiceLabel> labels) {
+  public void setLabels(@jakarta.annotation.Nullable List<GuaranteedCampaignServiceLabel> labels) {
     this.labels = labels;
   }
 
-
-  public GuaranteedCampaign servingStatus(GuaranteedCampaignServiceServingStatus servingStatus) {
+  public GuaranteedCampaign servingStatus(@jakarta.annotation.Nullable GuaranteedCampaignServiceServingStatus servingStatus) {
     
     this.servingStatus = servingStatus;
     return this;
   }
 
-   /**
+  /**
    * Get servingStatus
    * @return servingStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_SERVING_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceServingStatus getServingStatus() {
@@ -385,25 +397,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_SERVING_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setServingStatus(GuaranteedCampaignServiceServingStatus servingStatus) {
+  public void setServingStatus(@jakarta.annotation.Nullable GuaranteedCampaignServiceServingStatus servingStatus) {
     this.servingStatus = servingStatus;
   }
 
-
-  public GuaranteedCampaign startDate(String startDate) {
+  public GuaranteedCampaign startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; ∗ Format: yyyyMMdd&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -411,25 +422,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public GuaranteedCampaign startTime(String startTime) {
+  public GuaranteedCampaign startTime(@jakarta.annotation.Nullable String startTime) {
     
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始時刻です。&lt;br&gt; ※フォーマット：HHmm&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start time.&lt;br&gt; * Format: HHmm&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return startTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartTime() {
@@ -437,25 +447,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartTime(String startTime) {
+  public void setStartTime(@jakarta.annotation.Nullable String startTime) {
     this.startTime = startTime;
   }
 
-
-  public GuaranteedCampaign userStatus(GuaranteedCampaignServiceUserStatus userStatus) {
+  public GuaranteedCampaign userStatus(@jakarta.annotation.Nullable GuaranteedCampaignServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceUserStatus getUserStatus() {
@@ -463,25 +472,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(GuaranteedCampaignServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable GuaranteedCampaignServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public GuaranteedCampaign viewableFrequencyCap(GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap) {
+  public GuaranteedCampaign viewableFrequencyCap(@jakarta.annotation.Nullable GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap) {
     
     this.viewableFrequencyCap = viewableFrequencyCap;
     return this;
   }
 
-   /**
+  /**
    * Get viewableFrequencyCap
    * @return viewableFrequencyCap
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceViewableFrequencyCap getViewableFrequencyCap() {
@@ -489,25 +497,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableFrequencyCap(GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap) {
+  public void setViewableFrequencyCap(@jakarta.annotation.Nullable GuaranteedCampaignServiceViewableFrequencyCap viewableFrequencyCap) {
     this.viewableFrequencyCap = viewableFrequencyCap;
   }
 
-
-  public GuaranteedCampaign guaranteedSimulationId(Long guaranteedSimulationId) {
+  public GuaranteedCampaign guaranteedSimulationId(@jakarta.annotation.Nullable Long guaranteedSimulationId) {
     
     this.guaranteedSimulationId = guaranteedSimulationId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; シミュレーションIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Simulation ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return guaranteedSimulationId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GUARANTEED_SIMULATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_GUARANTEED_SIMULATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getGuaranteedSimulationId() {
@@ -515,14 +522,13 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GUARANTEED_SIMULATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_GUARANTEED_SIMULATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGuaranteedSimulationId(Long guaranteedSimulationId) {
+  public void setGuaranteedSimulationId(@jakarta.annotation.Nullable Long guaranteedSimulationId) {
     this.guaranteedSimulationId = guaranteedSimulationId;
   }
 
-
-  public GuaranteedCampaign notificationEmailAddress(List<String> notificationEmailAddress) {
+  public GuaranteedCampaign notificationEmailAddress(@jakarta.annotation.Nullable List<String> notificationEmailAddress) {
     
     this.notificationEmailAddress = notificationEmailAddress;
     return this;
@@ -536,12 +542,12 @@ public class GuaranteedCampaign {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 連絡先メールアドレスです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Email address to send notifications.&lt;br&gt; &lt;/div&gt; 
    * @return notificationEmailAddress
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getNotificationEmailAddress() {
@@ -549,25 +555,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS)
+  @JsonProperty(value = JSON_PROPERTY_NOTIFICATION_EMAIL_ADDRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotificationEmailAddress(List<String> notificationEmailAddress) {
+  public void setNotificationEmailAddress(@jakarta.annotation.Nullable List<String> notificationEmailAddress) {
     this.notificationEmailAddress = notificationEmailAddress;
   }
 
-
-  public GuaranteedCampaign adCategoryStatus(GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus) {
+  public GuaranteedCampaign adCategoryStatus(@jakarta.annotation.Nullable GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus) {
     
     this.adCategoryStatus = adCategoryStatus;
     return this;
   }
 
-   /**
+  /**
    * Get adCategoryStatus
    * @return adCategoryStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_CATEGORY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_AD_CATEGORY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceAdCategoryStatus getAdCategoryStatus() {
@@ -575,25 +580,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_CATEGORY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_AD_CATEGORY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdCategoryStatus(GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus) {
+  public void setAdCategoryStatus(@jakarta.annotation.Nullable GuaranteedCampaignServiceAdCategoryStatus adCategoryStatus) {
     this.adCategoryStatus = adCategoryStatus;
   }
 
-
-  public GuaranteedCampaign campaignCanceledDate(String campaignCanceledDate) {
+  public GuaranteedCampaign campaignCanceledDate(@jakarta.annotation.Nullable String campaignCanceledDate) {
     
     this.campaignCanceledDate = campaignCanceledDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 予約型のキャンペーンをキャンセルした日時です。&lt;br&gt; ※フォーマット：yyyyMMddHHmmss&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A date and time which the guaranteed campaign is cancelled.&lt;br&gt; ∗ Format: yyyyMMddHHmmss&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignCanceledDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CANCELED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_CANCELED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignCanceledDate() {
@@ -601,25 +605,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_CANCELED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_CANCELED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignCanceledDate(String campaignCanceledDate) {
+  public void setCampaignCanceledDate(@jakarta.annotation.Nullable String campaignCanceledDate) {
     this.campaignCanceledDate = campaignCanceledDate;
   }
 
-
-  public GuaranteedCampaign _package(GuaranteedCampaignServicePackage _package) {
+  public GuaranteedCampaign _package(@jakarta.annotation.Nullable GuaranteedCampaignServicePackage _package) {
     
     this._package = _package;
     return this;
   }
 
-   /**
+  /**
    * Get _package
    * @return _package
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PACKAGE)
+  @JsonProperty(value = JSON_PROPERTY_PACKAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServicePackage getPackage() {
@@ -627,25 +630,24 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PACKAGE)
+  @JsonProperty(value = JSON_PROPERTY_PACKAGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPackage(GuaranteedCampaignServicePackage _package) {
+  public void setPackage(@jakarta.annotation.Nullable GuaranteedCampaignServicePackage _package) {
     this._package = _package;
   }
 
-
-  public GuaranteedCampaign conversionTracker(GuaranteedCampaignServiceConversionTracker conversionTracker) {
+  public GuaranteedCampaign conversionTracker(@jakarta.annotation.Nullable GuaranteedCampaignServiceConversionTracker conversionTracker) {
     
     this.conversionTracker = conversionTracker;
     return this;
   }
 
-   /**
+  /**
    * Get conversionTracker
    * @return conversionTracker
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceConversionTracker getConversionTracker() {
@@ -653,11 +655,12 @@ public class GuaranteedCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTracker(GuaranteedCampaignServiceConversionTracker conversionTracker) {
+  public void setConversionTracker(@jakarta.annotation.Nullable GuaranteedCampaignServiceConversionTracker conversionTracker) {
     this.conversionTracker = conversionTracker;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -728,10 +731,7 @@ public class GuaranteedCampaign {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

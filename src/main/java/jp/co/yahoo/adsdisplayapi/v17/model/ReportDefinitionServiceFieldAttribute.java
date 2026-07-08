@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,12 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * ReportDefinitionServiceFieldAttribute
@@ -37,44 +38,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceFieldAttribute.JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS,
   ReportDefinitionServiceFieldAttribute.JSON_PROPERTY_XML_ATTRIBUTE_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceFieldAttribute {
   public static final String JSON_PROPERTY_DISPLAY_FIELD_NAME_EN = "displayFieldNameEn";
+  @jakarta.annotation.Nullable
   private String displayFieldNameEn;
 
   public static final String JSON_PROPERTY_DISPLAY_FIELD_NAME_JA = "displayFieldNameJa";
+  @jakarta.annotation.Nullable
   private String displayFieldNameJa;
 
   public static final String JSON_PROPERTY_FIELD_NAME = "fieldName";
+  @jakarta.annotation.Nullable
   private String fieldName;
 
   public static final String JSON_PROPERTY_FIELD_TYPE = "fieldType";
+  @jakarta.annotation.Nullable
   private String fieldType;
 
   public static final String JSON_PROPERTY_FILTERABLE = "filterable";
+  @jakarta.annotation.Nullable
   private Boolean filterable;
 
   public static final String JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS = "impossibleCombinationFields";
+  @jakarta.annotation.Nullable
   private List<String> impossibleCombinationFields;
 
   public static final String JSON_PROPERTY_XML_ATTRIBUTE_NAME = "xmlAttributeName";
+  @jakarta.annotation.Nullable
   private String xmlAttributeName;
 
   public ReportDefinitionServiceFieldAttribute() {
   }
 
-  public ReportDefinitionServiceFieldAttribute displayFieldNameEn(String displayFieldNameEn) {
+  public ReportDefinitionServiceFieldAttribute displayFieldNameEn(@jakarta.annotation.Nullable String displayFieldNameEn) {
     
     this.displayFieldNameEn = displayFieldNameEn;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードされたレポートに表示されるフィールド名（英語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field name for the downloaded Report (English).&lt;/div&gt; 
    * @return displayFieldNameEn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisplayFieldNameEn() {
@@ -82,25 +90,24 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayFieldNameEn(String displayFieldNameEn) {
+  public void setDisplayFieldNameEn(@jakarta.annotation.Nullable String displayFieldNameEn) {
     this.displayFieldNameEn = displayFieldNameEn;
   }
 
-
-  public ReportDefinitionServiceFieldAttribute displayFieldNameJa(String displayFieldNameJa) {
+  public ReportDefinitionServiceFieldAttribute displayFieldNameJa(@jakarta.annotation.Nullable String displayFieldNameJa) {
     
     this.displayFieldNameJa = displayFieldNameJa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードされたレポートに表示されるフィールド名（日本語）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field name for the downloaded report (Japanese).&lt;/div&gt; 
    * @return displayFieldNameJa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisplayFieldNameJa() {
@@ -108,25 +115,24 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_FIELD_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_FIELD_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayFieldNameJa(String displayFieldNameJa) {
+  public void setDisplayFieldNameJa(@jakarta.annotation.Nullable String displayFieldNameJa) {
     this.displayFieldNameJa = displayFieldNameJa;
   }
 
-
-  public ReportDefinitionServiceFieldAttribute fieldName(String fieldName) {
+  public ReportDefinitionServiceFieldAttribute fieldName(@jakarta.annotation.Nullable String fieldName) {
     
     this.fieldName = fieldName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールド名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field Name.&lt;/div&gt; 
    * @return fieldName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FIELD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFieldName() {
@@ -134,25 +140,24 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FIELD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FIELD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFieldName(String fieldName) {
+  public void setFieldName(@jakarta.annotation.Nullable String fieldName) {
     this.fieldName = fieldName;
   }
 
-
-  public ReportDefinitionServiceFieldAttribute fieldType(String fieldType) {
+  public ReportDefinitionServiceFieldAttribute fieldType(@jakarta.annotation.Nullable String fieldType) {
     
     this.fieldType = fieldType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドタイプ（数字、文字列、ENUM値など）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Field type (number, string, ENUM, etc.)&lt;/div&gt; 
    * @return fieldType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FIELD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FIELD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFieldType() {
@@ -160,25 +165,24 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FIELD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FIELD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFieldType(String fieldType) {
+  public void setFieldType(@jakarta.annotation.Nullable String fieldType) {
     this.fieldType = fieldType;
   }
 
-
-  public ReportDefinitionServiceFieldAttribute filterable(Boolean filterable) {
+  public ReportDefinitionServiceFieldAttribute filterable(@jakarta.annotation.Nullable Boolean filterable) {
     
     this.filterable = filterable;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィールドのフィルター指定可否（true：フィルター指定可能なフィールド）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Whether the field filter can be specified or not (true: Filter can be specified).&lt;/div&gt; 
    * @return filterable
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILTERABLE)
+  @JsonProperty(value = JSON_PROPERTY_FILTERABLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getFilterable() {
@@ -186,14 +190,13 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILTERABLE)
+  @JsonProperty(value = JSON_PROPERTY_FILTERABLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFilterable(Boolean filterable) {
+  public void setFilterable(@jakarta.annotation.Nullable Boolean filterable) {
     this.filterable = filterable;
   }
 
-
-  public ReportDefinitionServiceFieldAttribute impossibleCombinationFields(List<String> impossibleCombinationFields) {
+  public ReportDefinitionServiceFieldAttribute impossibleCombinationFields(@jakarta.annotation.Nullable List<String> impossibleCombinationFields) {
     
     this.impossibleCombinationFields = impossibleCombinationFields;
     return this;
@@ -207,12 +210,12 @@ public class ReportDefinitionServiceFieldAttribute {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;組み合わせ不可フィールドです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Invalid field combinations.&lt;/div&gt; 
    * @return impossibleCombinationFields
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getImpossibleCombinationFields() {
@@ -220,25 +223,24 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS)
+  @JsonProperty(value = JSON_PROPERTY_IMPOSSIBLE_COMBINATION_FIELDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpossibleCombinationFields(List<String> impossibleCombinationFields) {
+  public void setImpossibleCombinationFields(@jakarta.annotation.Nullable List<String> impossibleCombinationFields) {
     this.impossibleCombinationFields = impossibleCombinationFields;
   }
 
-
-  public ReportDefinitionServiceFieldAttribute xmlAttributeName(String xmlAttributeName) {
+  public ReportDefinitionServiceFieldAttribute xmlAttributeName(@jakarta.annotation.Nullable String xmlAttributeName) {
     
     this.xmlAttributeName = xmlAttributeName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ダウンロードしたレポートのXML属性です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;XML attribute for the Downloaded Report.&lt;/div&gt; 
    * @return xmlAttributeName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_XML_ATTRIBUTE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_XML_ATTRIBUTE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getXmlAttributeName() {
@@ -246,11 +248,12 @@ public class ReportDefinitionServiceFieldAttribute {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_XML_ATTRIBUTE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_XML_ATTRIBUTE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setXmlAttributeName(String xmlAttributeName) {
+  public void setXmlAttributeName(@jakarta.annotation.Nullable String xmlAttributeName) {
     this.xmlAttributeName = xmlAttributeName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -295,10 +298,7 @@ public class ReportDefinitionServiceFieldAttribute {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,15 +18,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceAdvancedSegmentsKeyword;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceAdvancedSegmentsUrl;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceIsCurrentlyTotaling;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceAdvancedSegmentsAudienceListオブジェクトは、オーディエンスリスト（高度なセグメント）を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがADVANCED_SEGMENTSの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceAdvancedSegmentsAudienceList object describes the audience list (Advanced segments).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If audienceListType is ADVANCED_SEGMENTS, this field is required in ADD and SET operation. &lt;/div&gt; 
@@ -36,21 +37,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAdvancedSegmentsAudienceList.JSON_PROPERTY_URLS,
   AudienceListServiceAdvancedSegmentsAudienceList.JSON_PROPERTY_IS_CURRENTLY_TOTALING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceAdvancedSegmentsAudienceList {
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceAdvancedSegmentsKeyword> keywords;
 
   public static final String JSON_PROPERTY_URLS = "urls";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceAdvancedSegmentsUrl> urls;
 
   public static final String JSON_PROPERTY_IS_CURRENTLY_TOTALING = "isCurrentlyTotaling";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsCurrentlyTotaling isCurrentlyTotaling;
 
   public AudienceListServiceAdvancedSegmentsAudienceList() {
   }
 
-  public AudienceListServiceAdvancedSegmentsAudienceList keywords(List<AudienceListServiceAdvancedSegmentsKeyword> keywords) {
+  public AudienceListServiceAdvancedSegmentsAudienceList keywords(@jakarta.annotation.Nullable List<AudienceListServiceAdvancedSegmentsKeyword> keywords) {
     
     this.keywords = keywords;
     return this;
@@ -64,12 +68,12 @@ public class AudienceListServiceAdvancedSegmentsAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get keywords
    * @return keywords
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceAdvancedSegmentsKeyword> getKeywords() {
@@ -77,14 +81,13 @@ public class AudienceListServiceAdvancedSegmentsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywords(List<AudienceListServiceAdvancedSegmentsKeyword> keywords) {
+  public void setKeywords(@jakarta.annotation.Nullable List<AudienceListServiceAdvancedSegmentsKeyword> keywords) {
     this.keywords = keywords;
   }
 
-
-  public AudienceListServiceAdvancedSegmentsAudienceList urls(List<AudienceListServiceAdvancedSegmentsUrl> urls) {
+  public AudienceListServiceAdvancedSegmentsAudienceList urls(@jakarta.annotation.Nullable List<AudienceListServiceAdvancedSegmentsUrl> urls) {
     
     this.urls = urls;
     return this;
@@ -98,12 +101,12 @@ public class AudienceListServiceAdvancedSegmentsAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get urls
    * @return urls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URLS)
+  @JsonProperty(value = JSON_PROPERTY_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceAdvancedSegmentsUrl> getUrls() {
@@ -111,25 +114,24 @@ public class AudienceListServiceAdvancedSegmentsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URLS)
+  @JsonProperty(value = JSON_PROPERTY_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrls(List<AudienceListServiceAdvancedSegmentsUrl> urls) {
+  public void setUrls(@jakarta.annotation.Nullable List<AudienceListServiceAdvancedSegmentsUrl> urls) {
     this.urls = urls;
   }
 
-
-  public AudienceListServiceAdvancedSegmentsAudienceList isCurrentlyTotaling(AudienceListServiceIsCurrentlyTotaling isCurrentlyTotaling) {
+  public AudienceListServiceAdvancedSegmentsAudienceList isCurrentlyTotaling(@jakarta.annotation.Nullable AudienceListServiceIsCurrentlyTotaling isCurrentlyTotaling) {
     
     this.isCurrentlyTotaling = isCurrentlyTotaling;
     return this;
   }
 
-   /**
+  /**
    * Get isCurrentlyTotaling
    * @return isCurrentlyTotaling
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_CURRENTLY_TOTALING)
+  @JsonProperty(value = JSON_PROPERTY_IS_CURRENTLY_TOTALING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsCurrentlyTotaling getIsCurrentlyTotaling() {
@@ -137,11 +139,12 @@ public class AudienceListServiceAdvancedSegmentsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_CURRENTLY_TOTALING)
+  @JsonProperty(value = JSON_PROPERTY_IS_CURRENTLY_TOTALING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsCurrentlyTotaling(AudienceListServiceIsCurrentlyTotaling isCurrentlyTotaling) {
+  public void setIsCurrentlyTotaling(@jakarta.annotation.Nullable AudienceListServiceIsCurrentlyTotaling isCurrentlyTotaling) {
     this.isCurrentlyTotaling = isCurrentlyTotaling;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -178,10 +181,7 @@ public class AudienceListServiceAdvancedSegmentsAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

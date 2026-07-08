@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.StatsServicePlacementCategoryType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; StatsServicePlacementCategoryDetailTargetオブジェクトは、プレイスメントカテゴリー詳細ターゲティングの設定情報を保持します。&lt;br&gt; ※targetTypeがPLACEMENT_CATEGORY_DETAIL_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; StatsServicePlacementCategoryDetailTarget object contains information about placement category detail targeting settings.&lt;br&gt; ∗If targetType is PLACEMENT_CATEGORY_DETAIL_TARGET, this field is required. &lt;/div&gt; 
@@ -32,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServicePlacementCategoryDetailTarget.JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN,
   StatsServicePlacementCategoryDetailTarget.JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServicePlacementCategoryDetailTarget {
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA = "placementCategoryNameJa";
+  @jakarta.annotation.Nullable
   private String placementCategoryNameJa;
 
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN = "placementCategoryNameEn";
+  @jakarta.annotation.Nullable
   private String placementCategoryNameEn;
 
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE = "placementCategoryType";
+  @jakarta.annotation.Nullable
   private StatsServicePlacementCategoryType placementCategoryType;
 
   public StatsServicePlacementCategoryDetailTarget() {
   }
 
-  public StatsServicePlacementCategoryDetailTarget placementCategoryNameJa(String placementCategoryNameJa) {
+  public StatsServicePlacementCategoryDetailTarget placementCategoryNameJa(@jakarta.annotation.Nullable String placementCategoryNameJa) {
     
     this.placementCategoryNameJa = placementCategoryNameJa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリ名(日本語)です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Category name (Japanese).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return placementCategoryNameJa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPlacementCategoryNameJa() {
@@ -65,25 +68,24 @@ public class StatsServicePlacementCategoryDetailTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementCategoryNameJa(String placementCategoryNameJa) {
+  public void setPlacementCategoryNameJa(@jakarta.annotation.Nullable String placementCategoryNameJa) {
     this.placementCategoryNameJa = placementCategoryNameJa;
   }
 
-
-  public StatsServicePlacementCategoryDetailTarget placementCategoryNameEn(String placementCategoryNameEn) {
+  public StatsServicePlacementCategoryDetailTarget placementCategoryNameEn(@jakarta.annotation.Nullable String placementCategoryNameEn) {
     
     this.placementCategoryNameEn = placementCategoryNameEn;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; カテゴリ名(英語)です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Category name (English).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return placementCategoryNameEn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPlacementCategoryNameEn() {
@@ -91,25 +93,24 @@ public class StatsServicePlacementCategoryDetailTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementCategoryNameEn(String placementCategoryNameEn) {
+  public void setPlacementCategoryNameEn(@jakarta.annotation.Nullable String placementCategoryNameEn) {
     this.placementCategoryNameEn = placementCategoryNameEn;
   }
 
-
-  public StatsServicePlacementCategoryDetailTarget placementCategoryType(StatsServicePlacementCategoryType placementCategoryType) {
+  public StatsServicePlacementCategoryDetailTarget placementCategoryType(@jakarta.annotation.Nullable StatsServicePlacementCategoryType placementCategoryType) {
     
     this.placementCategoryType = placementCategoryType;
     return this;
   }
 
-   /**
+  /**
    * Get placementCategoryType
    * @return placementCategoryType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServicePlacementCategoryType getPlacementCategoryType() {
@@ -117,11 +118,12 @@ public class StatsServicePlacementCategoryDetailTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementCategoryType(StatsServicePlacementCategoryType placementCategoryType) {
+  public void setPlacementCategoryType(@jakarta.annotation.Nullable StatsServicePlacementCategoryType placementCategoryType) {
     this.placementCategoryType = placementCategoryType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +160,7 @@ public class StatsServicePlacementCategoryDetailTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

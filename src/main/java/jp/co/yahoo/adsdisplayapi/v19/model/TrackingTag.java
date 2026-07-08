@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,10 +18,10 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;TrackingTagオブジェクトは、計測タグ情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;TrackingTag object displays tracking tag information.&lt;/div&gt; 
@@ -32,35 +32,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   TrackingTag.JSON_PROPERTY_GLOBAL_SNIPPET,
   TrackingTag.JSON_PROPERTY_EVENT_SNIPPET
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class TrackingTag {
   public static final String JSON_PROPERTY_TRACKING_TAG_ID = "trackingTagId";
+  @jakarta.annotation.Nullable
   private String trackingTagId;
 
   public static final String JSON_PROPERTY_TRACKING_TAG_NAME = "trackingTagName";
+  @jakarta.annotation.Nullable
   private String trackingTagName;
 
   public static final String JSON_PROPERTY_GLOBAL_SNIPPET = "globalSnippet";
+  @jakarta.annotation.Nullable
   private String globalSnippet;
 
   public static final String JSON_PROPERTY_EVENT_SNIPPET = "eventSnippet";
+  @jakarta.annotation.Nullable
   private String eventSnippet;
 
   public TrackingTag() {
   }
 
-  public TrackingTag trackingTagId(String trackingTagId) {
+  public TrackingTag trackingTagId(@jakarta.annotation.Nullable String trackingTagId) {
     
     this.trackingTagId = trackingTagId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;計測タグIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking tag ID.&lt;/div&gt; 
    * @return trackingTagId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingTagId() {
@@ -68,25 +72,24 @@ public class TrackingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingTagId(String trackingTagId) {
+  public void setTrackingTagId(@jakarta.annotation.Nullable String trackingTagId) {
     this.trackingTagId = trackingTagId;
   }
 
-
-  public TrackingTag trackingTagName(String trackingTagName) {
+  public TrackingTag trackingTagName(@jakarta.annotation.Nullable String trackingTagName) {
     
     this.trackingTagName = trackingTagName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;計測タグ名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking tag name.&lt;/div&gt; 
    * @return trackingTagName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_TAG_NAME)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_TAG_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingTagName() {
@@ -94,25 +97,24 @@ public class TrackingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_TAG_NAME)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_TAG_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingTagName(String trackingTagName) {
+  public void setTrackingTagName(@jakarta.annotation.Nullable String trackingTagName) {
     this.trackingTagName = trackingTagName;
   }
 
-
-  public TrackingTag globalSnippet(String globalSnippet) {
+  public TrackingTag globalSnippet(@jakarta.annotation.Nullable String globalSnippet) {
     
     this.globalSnippet = globalSnippet;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 計測タグを使ったイベント計測の基本となるタグです。&lt;br&gt; ${_useCookie_}: 識別子を cookie に保存する場合はtrue、保存しない場合はfalseを設定します。&lt;br&gt; ${_useLocalStorage_}: 識別子を localStorage に保存する場合はtrue、保存しない場合はfalseを設定します。&lt;br&gt; 詳細は「&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000054772?language&#x3D;ja\&quot; target&#x3D;\&quot;_blank\&quot;&gt;計測タグについて&lt;/a&gt;」を参照してください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The global snippet is the basic tag for event tracking using the tracking tag.&lt;br&gt; ${_useCookie_}: Set to true if you want to store identifiers in cookies, or false if you do not.&lt;br&gt; ${_useLocalStorage_}: Set to true if you want to store identifiers in localStorage, or false if you do not.&lt;br&gt; For more details, see &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000054772?language&#x3D;en_US\&quot; target&#x3D;\&quot;_blank\&quot;&gt;tracking tag&lt;/a&gt;. &lt;/div&gt; 
    * @return globalSnippet
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GLOBAL_SNIPPET)
+  @JsonProperty(value = JSON_PROPERTY_GLOBAL_SNIPPET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getGlobalSnippet() {
@@ -120,25 +122,24 @@ public class TrackingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GLOBAL_SNIPPET)
+  @JsonProperty(value = JSON_PROPERTY_GLOBAL_SNIPPET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGlobalSnippet(String globalSnippet) {
+  public void setGlobalSnippet(@jakarta.annotation.Nullable String globalSnippet) {
     this.globalSnippet = globalSnippet;
   }
 
-
-  public TrackingTag eventSnippet(String eventSnippet) {
+  public TrackingTag eventSnippet(@jakarta.annotation.Nullable String eventSnippet) {
     
     this.eventSnippet = eventSnippet;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ウェブサイトで発生したイベントデータを送信するタグです。&lt;br&gt; ${_eventType_}: 設定可能な値については「&lt;a href&#x3D;\&quot;https://ads-developers.yahoo.co.jp/ja/lytag/post/30590632.html\&quot; target&#x3D;\&quot;_blank\&quot;&gt;計測可能なイベントについて&lt;/a&gt;」を参照してください。&lt;br&gt; 詳細は「&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000054772?language&#x3D;ja\&quot; target&#x3D;\&quot;_blank\&quot;&gt;計測タグについて&lt;/a&gt;」を参照してください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; An event snippet is a tag that sends event data generated on the website.&lt;br&gt; ${_eventType_}: For available values, see &lt;a href&#x3D;\&quot;https://ads-developers.yahoo.co.jp/ja/lytag/post/30590632.html\&quot; target&#x3D;\&quot;_blank\&quot;&gt;trackable events&lt;/a&gt;.&lt;br&gt; For more details, see &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000054772?language&#x3D;en_US\&quot; target&#x3D;\&quot;_blank\&quot;&gt;tracking tag&lt;/a&gt;. &lt;/div&gt; 
    * @return eventSnippet
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EVENT_SNIPPET)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_SNIPPET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEventSnippet() {
@@ -146,11 +147,12 @@ public class TrackingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EVENT_SNIPPET)
+  @JsonProperty(value = JSON_PROPERTY_EVENT_SNIPPET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEventSnippet(String eventSnippet) {
+  public void setEventSnippet(@jakarta.annotation.Nullable String eventSnippet) {
     this.eventSnippet = eventSnippet;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -189,10 +191,7 @@ public class TrackingTag {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

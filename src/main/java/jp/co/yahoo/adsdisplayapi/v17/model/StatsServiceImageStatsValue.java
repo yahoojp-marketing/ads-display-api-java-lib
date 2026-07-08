@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.Stats;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceImageStatsValuesオブジェクトは、画像の統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceImageStatsValues object contains Image stats information.&lt;/div&gt; 
@@ -33,35 +33,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceImageStatsValue.JSON_PROPERTY_MEDIA_TITLE,
   StatsServiceImageStatsValue.JSON_PROPERTY_STATS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceImageStatsValue {
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
+  @jakarta.annotation.Nullable
   private Long mediaId;
 
   public static final String JSON_PROPERTY_MEDIA_NAME = "mediaName";
+  @jakarta.annotation.Nullable
   private String mediaName;
 
   public static final String JSON_PROPERTY_MEDIA_TITLE = "mediaTitle";
+  @jakarta.annotation.Nullable
   private String mediaTitle;
 
   public static final String JSON_PROPERTY_STATS = "stats";
+  @jakarta.annotation.Nullable
   private Stats stats;
 
   public StatsServiceImageStatsValue() {
   }
 
-  public StatsServiceImageStatsValue mediaId(Long mediaId) {
+  public StatsServiceImageStatsValue mediaId(@jakarta.annotation.Nullable Long mediaId) {
     
     this.mediaId = mediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディアID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID&lt;/div&gt; 
    * @return mediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMediaId() {
@@ -69,25 +73,24 @@ public class StatsServiceImageStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaId(Long mediaId) {
+  public void setMediaId(@jakarta.annotation.Nullable Long mediaId) {
     this.mediaId = mediaId;
   }
 
-
-  public StatsServiceImageStatsValue mediaName(String mediaName) {
+  public StatsServiceImageStatsValue mediaName(@jakarta.annotation.Nullable String mediaName) {
     
     this.mediaName = mediaName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;実ファイル名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;File name&lt;/div&gt; 
    * @return mediaName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_NAME)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMediaName() {
@@ -95,25 +98,24 @@ public class StatsServiceImageStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_NAME)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaName(String mediaName) {
+  public void setMediaName(@jakarta.annotation.Nullable String mediaName) {
     this.mediaName = mediaName;
   }
 
-
-  public StatsServiceImageStatsValue mediaTitle(String mediaTitle) {
+  public StatsServiceImageStatsValue mediaTitle(@jakarta.annotation.Nullable String mediaTitle) {
     
     this.mediaTitle = mediaTitle;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディア名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media title&lt;/div&gt; 
    * @return mediaTitle
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMediaTitle() {
@@ -121,25 +123,24 @@ public class StatsServiceImageStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaTitle(String mediaTitle) {
+  public void setMediaTitle(@jakarta.annotation.Nullable String mediaTitle) {
     this.mediaTitle = mediaTitle;
   }
 
-
-  public StatsServiceImageStatsValue stats(Stats stats) {
+  public StatsServiceImageStatsValue stats(@jakarta.annotation.Nullable Stats stats) {
     
     this.stats = stats;
     return this;
   }
 
-   /**
+  /**
    * Get stats
    * @return stats
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonProperty(value = JSON_PROPERTY_STATS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Stats getStats() {
@@ -147,11 +148,12 @@ public class StatsServiceImageStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonProperty(value = JSON_PROPERTY_STATS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStats(Stats stats) {
+  public void setStats(@jakarta.annotation.Nullable Stats stats) {
     this.stats = stats;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +192,7 @@ public class StatsServiceImageStatsValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

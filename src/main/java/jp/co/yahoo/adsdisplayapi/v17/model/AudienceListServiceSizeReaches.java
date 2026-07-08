@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceSize;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストのサイズの各リーチ数を保持するオブジェクトです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceSizeReaches object contains each reaches of audience list size. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceSizeReaches.JSON_PROPERTY_REACH,
   AudienceListServiceSizeReaches.JSON_PROPERTY_AUDIENCE_LIST_SIZE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceSizeReaches {
   public static final String JSON_PROPERTY_REACH = "reach";
+  @jakarta.annotation.Nullable
   private Long reach;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_SIZE = "audienceListSize";
+  @jakarta.annotation.Nullable
   private AudienceListServiceSize audienceListSize;
 
   public AudienceListServiceSizeReaches() {
   }
 
-  public AudienceListServiceSizeReaches reach(Long reach) {
+  public AudienceListServiceSizeReaches reach(@jakarta.annotation.Nullable Long reach) {
     
     this.reach = reach;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリストのサイズのリーチ数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reaches of audience list size. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return reach
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReach() {
@@ -61,25 +63,24 @@ public class AudienceListServiceSizeReaches {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACH)
+  @JsonProperty(value = JSON_PROPERTY_REACH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReach(Long reach) {
+  public void setReach(@jakarta.annotation.Nullable Long reach) {
     this.reach = reach;
   }
 
-
-  public AudienceListServiceSizeReaches audienceListSize(AudienceListServiceSize audienceListSize) {
+  public AudienceListServiceSizeReaches audienceListSize(@jakarta.annotation.Nullable AudienceListServiceSize audienceListSize) {
     
     this.audienceListSize = audienceListSize;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListSize
    * @return audienceListSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceSize getAudienceListSize() {
@@ -87,11 +88,12 @@ public class AudienceListServiceSizeReaches {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListSize(AudienceListServiceSize audienceListSize) {
+  public void setAudienceListSize(@jakarta.annotation.Nullable AudienceListServiceSize audienceListSize) {
     this.audienceListSize = audienceListSize;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class AudienceListServiceSizeReaches {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

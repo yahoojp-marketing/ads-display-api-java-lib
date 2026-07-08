@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,41 +18,43 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceUpdatedDateRangeは、更新日による検索対象期間を表します。&lt;br&gt; このフィールドを指定することで、Yahoo!広告内のシステムによる自動更新やユーザーの操作を含む更新日付を対象にキャンペーンをフィルタリングできます。&lt;br&gt; フィルタリング対象の更新日付については以下をご確認ください。&lt;br&gt; ・Yahoo!広告内のシステムによる自動更新を含むため、ユーザーの操作に起因しない更新であってもフィルタリング対象になることがあります。&lt;br&gt; ・ユーザーの操作とは、CampaignServiceのADD、SET操作による更新を指します。CampaignServiceのフィールドであっても、LabelServiceなどCampaignService以外のサービスのADD、SET操作によるデータの更新は、CampaignServiceUpdatedDateRangeで指定する更新日付のフィルタリング対象にはなりません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceUpdatedDateRange represents the search target period by the update date.&lt;br&gt; By specifying this field, you can filter campaigns based on update dates, which include both automatic updates by the Yahoo! JAPAN Ads system and updates by users. &lt;br&gt; Please note the following points about the update dates that you can filter:&lt;br&gt; * Yahoo! JAPAN Ads system makes automatic updates, so updates that are not caused by user actions may also be subject to filtering.&lt;br&gt; * User actions in this context refer to updates made through ADD and SET operations in CampaignService. Therefore, updates to CampaignService fields made through ADD and SET operations in other services, such as LabelService, can NOT be filtered by the update date specified in CampaignServiceUpdatedDateRange. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceUpdatedDateRangeは、更新日による検索対象期間を表します。&lt;br&gt; このフィールドを指定することで、LINEヤフー広告内のシステムによる自動更新やユーザーの操作を含む更新日付を対象にキャンペーンをフィルタリングできます。&lt;br&gt; フィルタリング対象の更新日付については以下をご確認ください。&lt;br&gt; ・LINEヤフー広告内のシステムによる自動更新を含むため、ユーザーの操作に起因しない更新であってもフィルタリング対象になることがあります。&lt;br&gt; ・ユーザーの操作とは、CampaignServiceのADD、SET操作による更新を指します。CampaignServiceのフィールドであっても、LabelServiceなどCampaignService以外のサービスのADD、SET操作によるデータの更新は、CampaignServiceUpdatedDateRangeで指定する更新日付のフィルタリング対象にはなりません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceUpdatedDateRange represents the search target period by the update date.&lt;br&gt; By specifying this field, you can filter campaigns based on update dates, which include both automatic updates by the LY Ads system and updates by users. &lt;br&gt; Please note the following points about the update dates that you can filter:&lt;br&gt; * LY Ads system makes automatic updates, so updates that are not caused by user actions may also be subject to filtering.&lt;br&gt; * User actions in this context refer to updates made through ADD and SET operations in CampaignService. Therefore, updates to CampaignService fields made through ADD and SET operations in other services, such as LabelService, can NOT be filtered by the update date specified in CampaignServiceUpdatedDateRange. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignServiceUpdatedDateRange.JSON_PROPERTY_START_DATE,
   CampaignServiceUpdatedDateRange.JSON_PROPERTY_END_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceUpdatedDateRange {
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public CampaignServiceUpdatedDateRange() {
   }
 
-  public CampaignServiceUpdatedDateRange startDate(String startDate) {
+  public CampaignServiceUpdatedDateRange startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の開始日です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the start date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -60,25 +62,24 @@ public class CampaignServiceUpdatedDateRange {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public CampaignServiceUpdatedDateRange endDate(String endDate) {
+  public CampaignServiceUpdatedDateRange endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索対象期間の終了日です。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This is the end date of the search target period.&lt;br&gt; * Format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -86,11 +87,12 @@ public class CampaignServiceUpdatedDateRange {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -125,10 +127,7 @@ public class CampaignServiceUpdatedDateRange {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,15 +18,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceCombination;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceContainDataConnectionStopped;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceContainUnavailableAdActionUserListFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceCombinationAudienceListオブジェクトは、オーディエンスリストの組み合わせ情報のリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがCOMBINATIONの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceCombinationAudienceList object is a container for storing list of combination of audience list information. &lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If audienceListType is COMBINATION, this field is required in  ADD and SET operation. &lt;/div&gt; 
@@ -36,21 +37,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceCombinationAudienceList.JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG,
   AudienceListServiceCombinationAudienceList.JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceCombinationAudienceList {
   public static final String JSON_PROPERTY_COMBINATIONS = "combinations";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceCombination> combinations;
 
   public static final String JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG = "containUnavailableAdActionUserListFlg";
+  @jakarta.annotation.Nullable
   private AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg;
 
   public static final String JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED = "containDataConnectionStopped";
+  @jakarta.annotation.Nullable
   private AudienceListServiceContainDataConnectionStopped containDataConnectionStopped;
 
   public AudienceListServiceCombinationAudienceList() {
   }
 
-  public AudienceListServiceCombinationAudienceList combinations(List<AudienceListServiceCombination> combinations) {
+  public AudienceListServiceCombinationAudienceList combinations(@jakarta.annotation.Nullable List<AudienceListServiceCombination> combinations) {
     
     this.combinations = combinations;
     return this;
@@ -64,12 +68,12 @@ public class AudienceListServiceCombinationAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get combinations
    * @return combinations
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMBINATIONS)
+  @JsonProperty(value = JSON_PROPERTY_COMBINATIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceCombination> getCombinations() {
@@ -77,25 +81,24 @@ public class AudienceListServiceCombinationAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMBINATIONS)
+  @JsonProperty(value = JSON_PROPERTY_COMBINATIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCombinations(List<AudienceListServiceCombination> combinations) {
+  public void setCombinations(@jakarta.annotation.Nullable List<AudienceListServiceCombination> combinations) {
     this.combinations = combinations;
   }
 
-
-  public AudienceListServiceCombinationAudienceList containUnavailableAdActionUserListFlg(AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
+  public AudienceListServiceCombinationAudienceList containUnavailableAdActionUserListFlg(@jakarta.annotation.Nullable AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
     
     this.containUnavailableAdActionUserListFlg = containUnavailableAdActionUserListFlg;
     return this;
   }
 
-   /**
+  /**
    * Get containUnavailableAdActionUserListFlg
    * @return containUnavailableAdActionUserListFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceContainUnavailableAdActionUserListFlg getContainUnavailableAdActionUserListFlg() {
@@ -103,25 +106,24 @@ public class AudienceListServiceCombinationAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContainUnavailableAdActionUserListFlg(AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
+  public void setContainUnavailableAdActionUserListFlg(@jakarta.annotation.Nullable AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
     this.containUnavailableAdActionUserListFlg = containUnavailableAdActionUserListFlg;
   }
 
-
-  public AudienceListServiceCombinationAudienceList containDataConnectionStopped(AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
+  public AudienceListServiceCombinationAudienceList containDataConnectionStopped(@jakarta.annotation.Nullable AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
     
     this.containDataConnectionStopped = containDataConnectionStopped;
     return this;
   }
 
-   /**
+  /**
    * Get containDataConnectionStopped
    * @return containDataConnectionStopped
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceContainDataConnectionStopped getContainDataConnectionStopped() {
@@ -129,11 +131,12 @@ public class AudienceListServiceCombinationAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContainDataConnectionStopped(AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
+  public void setContainDataConnectionStopped(@jakarta.annotation.Nullable AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
     this.containDataConnectionStopped = containDataConnectionStopped;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -170,10 +173,7 @@ public class AudienceListServiceCombinationAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

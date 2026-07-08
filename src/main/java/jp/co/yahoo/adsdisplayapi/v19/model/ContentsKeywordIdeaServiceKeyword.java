@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.ContentsKeywordIdeaServiceMatchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaServiceKeywordオブジェクトは、コンテンツターゲティングの検索条件です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdeaServiceKeyword object is search condition for contents targeting.&lt;/div&gt; 
@@ -33,18 +34,20 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ContentsKeywordIdeaServiceKeyword.JSON_PROPERTY_KEYWORDS,
   ContentsKeywordIdeaServiceKeyword.JSON_PROPERTY_MATCH_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ContentsKeywordIdeaServiceKeyword {
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
+  @jakarta.annotation.Nullable
   private List<String> keywords;
 
   public static final String JSON_PROPERTY_MATCH_TYPE = "matchType";
+  @jakarta.annotation.Nullable
   private ContentsKeywordIdeaServiceMatchType matchType;
 
   public ContentsKeywordIdeaServiceKeyword() {
   }
 
-  public ContentsKeywordIdeaServiceKeyword keywords(List<String> keywords) {
+  public ContentsKeywordIdeaServiceKeyword keywords(@jakarta.annotation.Nullable List<String> keywords) {
     
     this.keywords = keywords;
     return this;
@@ -58,12 +61,12 @@ public class ContentsKeywordIdeaServiceKeyword {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 検索条件：キーワード&lt;br&gt; ※キーワード提案用&lt;br&gt; ※キーワード、キーワードIDの同時指定はできません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search condition : Keyword.&lt;br&gt; *Keyword for suggesting.&lt;br&gt; *Can not specify Keyword and Keyword ID at the same time. &lt;/div&gt; 
    * @return keywords
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getKeywords() {
@@ -71,25 +74,24 @@ public class ContentsKeywordIdeaServiceKeyword {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywords(List<String> keywords) {
+  public void setKeywords(@jakarta.annotation.Nullable List<String> keywords) {
     this.keywords = keywords;
   }
 
-
-  public ContentsKeywordIdeaServiceKeyword matchType(ContentsKeywordIdeaServiceMatchType matchType) {
+  public ContentsKeywordIdeaServiceKeyword matchType(@jakarta.annotation.Nullable ContentsKeywordIdeaServiceMatchType matchType) {
     
     this.matchType = matchType;
     return this;
   }
 
-   /**
+  /**
    * Get matchType
    * @return matchType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ContentsKeywordIdeaServiceMatchType getMatchType() {
@@ -97,11 +99,12 @@ public class ContentsKeywordIdeaServiceKeyword {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MATCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MATCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMatchType(ContentsKeywordIdeaServiceMatchType matchType) {
+  public void setMatchType(@jakarta.annotation.Nullable ContentsKeywordIdeaServiceMatchType matchType) {
     this.matchType = matchType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -136,10 +139,7 @@ public class ContentsKeywordIdeaServiceKeyword {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

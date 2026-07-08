@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.RecommendationServiceAdGroupsForAddingAds;
 import jp.co.yahoo.adsdisplayapi.v19.model.RecommendationServiceAudienceListNotAccumulated;
@@ -51,6 +50,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.RecommendationServiceType;
 import jp.co.yahoo.adsdisplayapi.v19.model.RecommendationServiceUpdateAdCreative;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Recommendationオブジェクトは、最適化提案を格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Recommendation object is a container for storing a recommendation.&lt;/div&gt; 
@@ -87,113 +87,143 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Recommendation.JSON_PROPERTY_AUDIENCE_LIST_NOT_ACCUMULATED,
   Recommendation.JSON_PROPERTY_NOT_TARGETING_PROPER_AUDIENCE_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class Recommendation {
   public static final String JSON_PROPERTY_TYPE = "type";
+  @jakarta.annotation.Nullable
   private RecommendationServiceType type;
 
   public static final String JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT = "optimizationScoreLift";
+  @jakarta.annotation.Nullable
   private Double optimizationScoreLift;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA = "campaignBiddingStrategyToTargetCpa";
+  @jakarta.annotation.Nullable
   private RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa;
 
   public static final String JSON_PROPERTY_DAILY_BUDGET_OVER = "dailyBudgetOver";
+  @jakarta.annotation.Nullable
   private RecommendationServiceDailyBudgetOver dailyBudgetOver;
 
   public static final String JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER = "impsShareBudgetLossOver";
+  @jakarta.annotation.Nullable
   private RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver;
 
   public static final String JSON_PROPERTY_MAXIMIZE_CONVERSIONS = "maximizeConversions";
+  @jakarta.annotation.Nullable
   private RecommendationServiceMaximizeConversions maximizeConversions;
 
   public static final String JSON_PROPERTY_MAXIMIZE_CLICKS = "maximizeClicks";
+  @jakarta.annotation.Nullable
   private RecommendationServiceMaximizeClicks maximizeClicks;
 
   public static final String JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS = "maximizeVideoViews";
+  @jakarta.annotation.Nullable
   private RecommendationServiceMaximizeVideoViews maximizeVideoViews;
 
   public static final String JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS = "maximizeViewableImpressions";
+  @jakarta.annotation.Nullable
   private RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressions;
 
   public static final String JSON_PROPERTY_ENHANCED_CPC = "enhancedCpc";
+  @jakarta.annotation.Nullable
   private RecommendationServiceEnhancedCpc enhancedCpc;
 
   public static final String JSON_PROPERTY_UPDATE_AD_CREATIVE = "updateAdCreative";
+  @jakarta.annotation.Nullable
   private RecommendationServiceUpdateAdCreative updateAdCreative;
 
   public static final String JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS = "duplicateTargetingSettings";
+  @jakarta.annotation.Nullable
   private RecommendationServiceDuplicateTargetingSettings duplicateTargetingSettings;
 
   public static final String JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE = "notOptimalAdCountCombinedAdTypeAndImageSize";
+  @jakarta.annotation.Nullable
   private RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSize;
 
   public static final String JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS = "adGroupsForAddingAds";
+  @jakarta.annotation.Nullable
   private RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAds;
 
   public static final String JSON_PROPERTY_DAILY_BUDGET_SMALL = "dailyBudgetSmall";
+  @jakarta.annotation.Nullable
   private RecommendationServiceDailyBudgetSmall dailyBudgetSmall;
 
   public static final String JSON_PROPERTY_INSUFFICIENT_TARGETING = "insufficientTargeting";
+  @jakarta.annotation.Nullable
   private RecommendationServiceInsufficientTargeting insufficientTargeting;
 
   public static final String JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING = "insufficientAdScheduleTargeting";
+  @jakarta.annotation.Nullable
   private RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargeting;
 
   public static final String JSON_PROPERTY_INSUFFICIENT_CONVERSIONS = "insufficientConversions";
+  @jakarta.annotation.Nullable
   private RecommendationServiceInsufficientConversions insufficientConversions;
 
   public static final String JSON_PROPERTY_INSUFFICIENT_CLICKS = "insufficientClicks";
+  @jakarta.annotation.Nullable
   private RecommendationServiceInsufficientClicks insufficientClicks;
 
   public static final String JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS = "insufficientVideoViews";
+  @jakarta.annotation.Nullable
   private RecommendationServiceInsufficientVideoViews insufficientVideoViews;
 
   public static final String JSON_PROPERTY_CREATE_CAMPAIGN = "createCampaign";
+  @jakarta.annotation.Nullable
   private RecommendationServiceCreateCampaign createCampaign;
 
   public static final String JSON_PROPERTY_CREATE_AD_GROUP = "createAdGroup";
+  @jakarta.annotation.Nullable
   private RecommendationServiceCreateAdGroup createAdGroup;
 
   public static final String JSON_PROPERTY_CREATE_AD = "createAd";
+  @jakarta.annotation.Nullable
   private RecommendationServiceCreateAd createAd;
 
   public static final String JSON_PROPERTY_CREATE_RESPONSIVE_DISPLAY_ADS = "createResponsiveDisplayAds";
+  @jakarta.annotation.Nullable
   private RecommendationServiceCreateResponsiveDisplayAds createResponsiveDisplayAds;
 
   public static final String JSON_PROPERTY_TURN_YOUR_ACCOUNT_ON = "turnYourAccountOn";
+  @jakarta.annotation.Nullable
   private RecommendationServiceTurnYourAccountOn turnYourAccountOn;
 
   public static final String JSON_PROPERTY_TURN_YOUR_AD_ON = "turnYourAdOn";
+  @jakarta.annotation.Nullable
   private RecommendationServiceTurnYourAdOn turnYourAdOn;
 
   public static final String JSON_PROPERTY_INSUFFICIENT_ACCOUNT_BALANCE = "insufficientAccountBalance";
+  @jakarta.annotation.Nullable
   private RecommendationServiceInsufficientAccountBalance insufficientAccountBalance;
 
   public static final String JSON_PROPERTY_MISSING_PAYMENT_SETTINGS = "missingPaymentSettings";
+  @jakarta.annotation.Nullable
   private RecommendationServiceMissingPaymentSettings missingPaymentSettings;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NOT_ACCUMULATED = "audienceListNotAccumulated";
+  @jakarta.annotation.Nullable
   private RecommendationServiceAudienceListNotAccumulated audienceListNotAccumulated;
 
   public static final String JSON_PROPERTY_NOT_TARGETING_PROPER_AUDIENCE_LIST = "notTargetingProperAudienceList";
+  @jakarta.annotation.Nullable
   private RecommendationServiceNotTargetingProperAudienceListAdGroup notTargetingProperAudienceList;
 
   public Recommendation() {
   }
 
-  public Recommendation type(RecommendationServiceType type) {
+  public Recommendation type(@jakarta.annotation.Nullable RecommendationServiceType type) {
     
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceType getType() {
@@ -201,25 +231,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(RecommendationServiceType type) {
+  public void setType(@jakarta.annotation.Nullable RecommendationServiceType type) {
     this.type = type;
   }
 
-
-  public Recommendation optimizationScoreLift(Double optimizationScoreLift) {
+  public Recommendation optimizationScoreLift(@jakarta.annotation.Nullable Double optimizationScoreLift) {
     
     this.optimizationScoreLift = optimizationScoreLift;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化スコアの上昇推測値です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Estimated optimization score increase&lt;br&gt; &lt;/div&gt; 
    * @return optimizationScoreLift
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getOptimizationScoreLift() {
@@ -227,25 +256,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZATION_SCORE_LIFT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOptimizationScoreLift(Double optimizationScoreLift) {
+  public void setOptimizationScoreLift(@jakarta.annotation.Nullable Double optimizationScoreLift) {
     this.optimizationScoreLift = optimizationScoreLift;
   }
 
-
-  public Recommendation campaignBiddingStrategyToTargetCpa(RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa) {
+  public Recommendation campaignBiddingStrategyToTargetCpa(@jakarta.annotation.Nullable RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa) {
     
     this.campaignBiddingStrategyToTargetCpa = campaignBiddingStrategyToTargetCpa;
     return this;
   }
 
-   /**
+  /**
    * Get campaignBiddingStrategyToTargetCpa
    * @return campaignBiddingStrategyToTargetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceCampaignBiddingStrategyToTargetCpa getCampaignBiddingStrategyToTargetCpa() {
@@ -253,25 +281,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BIDDING_STRATEGY_TO_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBiddingStrategyToTargetCpa(RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa) {
+  public void setCampaignBiddingStrategyToTargetCpa(@jakarta.annotation.Nullable RecommendationServiceCampaignBiddingStrategyToTargetCpa campaignBiddingStrategyToTargetCpa) {
     this.campaignBiddingStrategyToTargetCpa = campaignBiddingStrategyToTargetCpa;
   }
 
-
-  public Recommendation dailyBudgetOver(RecommendationServiceDailyBudgetOver dailyBudgetOver) {
+  public Recommendation dailyBudgetOver(@jakarta.annotation.Nullable RecommendationServiceDailyBudgetOver dailyBudgetOver) {
     
     this.dailyBudgetOver = dailyBudgetOver;
     return this;
   }
 
-   /**
+  /**
    * Get dailyBudgetOver
    * @return dailyBudgetOver
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_OVER)
+  @JsonProperty(value = JSON_PROPERTY_DAILY_BUDGET_OVER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceDailyBudgetOver getDailyBudgetOver() {
@@ -279,25 +306,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_OVER)
+  @JsonProperty(value = JSON_PROPERTY_DAILY_BUDGET_OVER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDailyBudgetOver(RecommendationServiceDailyBudgetOver dailyBudgetOver) {
+  public void setDailyBudgetOver(@jakarta.annotation.Nullable RecommendationServiceDailyBudgetOver dailyBudgetOver) {
     this.dailyBudgetOver = dailyBudgetOver;
   }
 
-
-  public Recommendation impsShareBudgetLossOver(RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver) {
+  public Recommendation impsShareBudgetLossOver(@jakarta.annotation.Nullable RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver) {
     
     this.impsShareBudgetLossOver = impsShareBudgetLossOver;
     return this;
   }
 
-   /**
+  /**
    * Get impsShareBudgetLossOver
    * @return impsShareBudgetLossOver
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER)
+  @JsonProperty(value = JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceImpsShareBudgetLossOver getImpsShareBudgetLossOver() {
@@ -305,25 +331,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER)
+  @JsonProperty(value = JSON_PROPERTY_IMPS_SHARE_BUDGET_LOSS_OVER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpsShareBudgetLossOver(RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver) {
+  public void setImpsShareBudgetLossOver(@jakarta.annotation.Nullable RecommendationServiceImpsShareBudgetLossOver impsShareBudgetLossOver) {
     this.impsShareBudgetLossOver = impsShareBudgetLossOver;
   }
 
-
-  public Recommendation maximizeConversions(RecommendationServiceMaximizeConversions maximizeConversions) {
+  public Recommendation maximizeConversions(@jakarta.annotation.Nullable RecommendationServiceMaximizeConversions maximizeConversions) {
     
     this.maximizeConversions = maximizeConversions;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeConversions
    * @return maximizeConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceMaximizeConversions getMaximizeConversions() {
@@ -331,25 +356,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeConversions(RecommendationServiceMaximizeConversions maximizeConversions) {
+  public void setMaximizeConversions(@jakarta.annotation.Nullable RecommendationServiceMaximizeConversions maximizeConversions) {
     this.maximizeConversions = maximizeConversions;
   }
 
-
-  public Recommendation maximizeClicks(RecommendationServiceMaximizeClicks maximizeClicks) {
+  public Recommendation maximizeClicks(@jakarta.annotation.Nullable RecommendationServiceMaximizeClicks maximizeClicks) {
     
     this.maximizeClicks = maximizeClicks;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeClicks
    * @return maximizeClicks
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceMaximizeClicks getMaximizeClicks() {
@@ -357,25 +381,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeClicks(RecommendationServiceMaximizeClicks maximizeClicks) {
+  public void setMaximizeClicks(@jakarta.annotation.Nullable RecommendationServiceMaximizeClicks maximizeClicks) {
     this.maximizeClicks = maximizeClicks;
   }
 
-
-  public Recommendation maximizeVideoViews(RecommendationServiceMaximizeVideoViews maximizeVideoViews) {
+  public Recommendation maximizeVideoViews(@jakarta.annotation.Nullable RecommendationServiceMaximizeVideoViews maximizeVideoViews) {
     
     this.maximizeVideoViews = maximizeVideoViews;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeVideoViews
    * @return maximizeVideoViews
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceMaximizeVideoViews getMaximizeVideoViews() {
@@ -383,25 +406,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeVideoViews(RecommendationServiceMaximizeVideoViews maximizeVideoViews) {
+  public void setMaximizeVideoViews(@jakarta.annotation.Nullable RecommendationServiceMaximizeVideoViews maximizeVideoViews) {
     this.maximizeVideoViews = maximizeVideoViews;
   }
 
-
-  public Recommendation maximizeViewableImpressions(RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressions) {
+  public Recommendation maximizeViewableImpressions(@jakarta.annotation.Nullable RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressions) {
     
     this.maximizeViewableImpressions = maximizeViewableImpressions;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeViewableImpressions
    * @return maximizeViewableImpressions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceMaximizeViewableImpressions getMaximizeViewableImpressions() {
@@ -409,25 +431,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_VIEWABLE_IMPRESSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeViewableImpressions(RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressions) {
+  public void setMaximizeViewableImpressions(@jakarta.annotation.Nullable RecommendationServiceMaximizeViewableImpressions maximizeViewableImpressions) {
     this.maximizeViewableImpressions = maximizeViewableImpressions;
   }
 
-
-  public Recommendation enhancedCpc(RecommendationServiceEnhancedCpc enhancedCpc) {
+  public Recommendation enhancedCpc(@jakarta.annotation.Nullable RecommendationServiceEnhancedCpc enhancedCpc) {
     
     this.enhancedCpc = enhancedCpc;
     return this;
   }
 
-   /**
+  /**
    * Get enhancedCpc
    * @return enhancedCpc
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENHANCED_CPC)
+  @JsonProperty(value = JSON_PROPERTY_ENHANCED_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceEnhancedCpc getEnhancedCpc() {
@@ -435,25 +456,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENHANCED_CPC)
+  @JsonProperty(value = JSON_PROPERTY_ENHANCED_CPC, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEnhancedCpc(RecommendationServiceEnhancedCpc enhancedCpc) {
+  public void setEnhancedCpc(@jakarta.annotation.Nullable RecommendationServiceEnhancedCpc enhancedCpc) {
     this.enhancedCpc = enhancedCpc;
   }
 
-
-  public Recommendation updateAdCreative(RecommendationServiceUpdateAdCreative updateAdCreative) {
+  public Recommendation updateAdCreative(@jakarta.annotation.Nullable RecommendationServiceUpdateAdCreative updateAdCreative) {
     
     this.updateAdCreative = updateAdCreative;
     return this;
   }
 
-   /**
+  /**
    * Get updateAdCreative
    * @return updateAdCreative
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPDATE_AD_CREATIVE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATE_AD_CREATIVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceUpdateAdCreative getUpdateAdCreative() {
@@ -461,25 +481,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPDATE_AD_CREATIVE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATE_AD_CREATIVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUpdateAdCreative(RecommendationServiceUpdateAdCreative updateAdCreative) {
+  public void setUpdateAdCreative(@jakarta.annotation.Nullable RecommendationServiceUpdateAdCreative updateAdCreative) {
     this.updateAdCreative = updateAdCreative;
   }
 
-
-  public Recommendation duplicateTargetingSettings(RecommendationServiceDuplicateTargetingSettings duplicateTargetingSettings) {
+  public Recommendation duplicateTargetingSettings(@jakarta.annotation.Nullable RecommendationServiceDuplicateTargetingSettings duplicateTargetingSettings) {
     
     this.duplicateTargetingSettings = duplicateTargetingSettings;
     return this;
   }
 
-   /**
+  /**
    * Get duplicateTargetingSettings
    * @return duplicateTargetingSettings
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS)
+  @JsonProperty(value = JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceDuplicateTargetingSettings getDuplicateTargetingSettings() {
@@ -487,25 +506,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS)
+  @JsonProperty(value = JSON_PROPERTY_DUPLICATE_TARGETING_SETTINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDuplicateTargetingSettings(RecommendationServiceDuplicateTargetingSettings duplicateTargetingSettings) {
+  public void setDuplicateTargetingSettings(@jakarta.annotation.Nullable RecommendationServiceDuplicateTargetingSettings duplicateTargetingSettings) {
     this.duplicateTargetingSettings = duplicateTargetingSettings;
   }
 
-
-  public Recommendation notOptimalAdCountCombinedAdTypeAndImageSize(RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSize) {
+  public Recommendation notOptimalAdCountCombinedAdTypeAndImageSize(@jakarta.annotation.Nullable RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSize) {
     
     this.notOptimalAdCountCombinedAdTypeAndImageSize = notOptimalAdCountCombinedAdTypeAndImageSize;
     return this;
   }
 
-   /**
+  /**
    * Get notOptimalAdCountCombinedAdTypeAndImageSize
    * @return notOptimalAdCountCombinedAdTypeAndImageSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize getNotOptimalAdCountCombinedAdTypeAndImageSize() {
@@ -513,25 +531,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotOptimalAdCountCombinedAdTypeAndImageSize(RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSize) {
+  public void setNotOptimalAdCountCombinedAdTypeAndImageSize(@jakarta.annotation.Nullable RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSize) {
     this.notOptimalAdCountCombinedAdTypeAndImageSize = notOptimalAdCountCombinedAdTypeAndImageSize;
   }
 
-
-  public Recommendation adGroupsForAddingAds(RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAds) {
+  public Recommendation adGroupsForAddingAds(@jakarta.annotation.Nullable RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAds) {
     
     this.adGroupsForAddingAds = adGroupsForAddingAds;
     return this;
   }
 
-   /**
+  /**
    * Get adGroupsForAddingAds
    * @return adGroupsForAddingAds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceAdGroupsForAddingAds getAdGroupsForAddingAds() {
@@ -539,25 +556,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupsForAddingAds(RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAds) {
+  public void setAdGroupsForAddingAds(@jakarta.annotation.Nullable RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAds) {
     this.adGroupsForAddingAds = adGroupsForAddingAds;
   }
 
-
-  public Recommendation dailyBudgetSmall(RecommendationServiceDailyBudgetSmall dailyBudgetSmall) {
+  public Recommendation dailyBudgetSmall(@jakarta.annotation.Nullable RecommendationServiceDailyBudgetSmall dailyBudgetSmall) {
     
     this.dailyBudgetSmall = dailyBudgetSmall;
     return this;
   }
 
-   /**
+  /**
    * Get dailyBudgetSmall
    * @return dailyBudgetSmall
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_SMALL)
+  @JsonProperty(value = JSON_PROPERTY_DAILY_BUDGET_SMALL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceDailyBudgetSmall getDailyBudgetSmall() {
@@ -565,25 +581,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DAILY_BUDGET_SMALL)
+  @JsonProperty(value = JSON_PROPERTY_DAILY_BUDGET_SMALL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDailyBudgetSmall(RecommendationServiceDailyBudgetSmall dailyBudgetSmall) {
+  public void setDailyBudgetSmall(@jakarta.annotation.Nullable RecommendationServiceDailyBudgetSmall dailyBudgetSmall) {
     this.dailyBudgetSmall = dailyBudgetSmall;
   }
 
-
-  public Recommendation insufficientTargeting(RecommendationServiceInsufficientTargeting insufficientTargeting) {
+  public Recommendation insufficientTargeting(@jakarta.annotation.Nullable RecommendationServiceInsufficientTargeting insufficientTargeting) {
     
     this.insufficientTargeting = insufficientTargeting;
     return this;
   }
 
-   /**
+  /**
    * Get insufficientTargeting
    * @return insufficientTargeting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_TARGETING)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_TARGETING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceInsufficientTargeting getInsufficientTargeting() {
@@ -591,25 +606,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_TARGETING)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_TARGETING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientTargeting(RecommendationServiceInsufficientTargeting insufficientTargeting) {
+  public void setInsufficientTargeting(@jakarta.annotation.Nullable RecommendationServiceInsufficientTargeting insufficientTargeting) {
     this.insufficientTargeting = insufficientTargeting;
   }
 
-
-  public Recommendation insufficientAdScheduleTargeting(RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargeting) {
+  public Recommendation insufficientAdScheduleTargeting(@jakarta.annotation.Nullable RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargeting) {
     
     this.insufficientAdScheduleTargeting = insufficientAdScheduleTargeting;
     return this;
   }
 
-   /**
+  /**
    * Get insufficientAdScheduleTargeting
    * @return insufficientAdScheduleTargeting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceInsufficientAdScheduleTargeting getInsufficientAdScheduleTargeting() {
@@ -617,25 +631,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientAdScheduleTargeting(RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargeting) {
+  public void setInsufficientAdScheduleTargeting(@jakarta.annotation.Nullable RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargeting) {
     this.insufficientAdScheduleTargeting = insufficientAdScheduleTargeting;
   }
 
-
-  public Recommendation insufficientConversions(RecommendationServiceInsufficientConversions insufficientConversions) {
+  public Recommendation insufficientConversions(@jakarta.annotation.Nullable RecommendationServiceInsufficientConversions insufficientConversions) {
     
     this.insufficientConversions = insufficientConversions;
     return this;
   }
 
-   /**
+  /**
    * Get insufficientConversions
    * @return insufficientConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceInsufficientConversions getInsufficientConversions() {
@@ -643,25 +656,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientConversions(RecommendationServiceInsufficientConversions insufficientConversions) {
+  public void setInsufficientConversions(@jakarta.annotation.Nullable RecommendationServiceInsufficientConversions insufficientConversions) {
     this.insufficientConversions = insufficientConversions;
   }
 
-
-  public Recommendation insufficientClicks(RecommendationServiceInsufficientClicks insufficientClicks) {
+  public Recommendation insufficientClicks(@jakarta.annotation.Nullable RecommendationServiceInsufficientClicks insufficientClicks) {
     
     this.insufficientClicks = insufficientClicks;
     return this;
   }
 
-   /**
+  /**
    * Get insufficientClicks
    * @return insufficientClicks
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceInsufficientClicks getInsufficientClicks() {
@@ -669,25 +681,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_CLICKS)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_CLICKS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientClicks(RecommendationServiceInsufficientClicks insufficientClicks) {
+  public void setInsufficientClicks(@jakarta.annotation.Nullable RecommendationServiceInsufficientClicks insufficientClicks) {
     this.insufficientClicks = insufficientClicks;
   }
 
-
-  public Recommendation insufficientVideoViews(RecommendationServiceInsufficientVideoViews insufficientVideoViews) {
+  public Recommendation insufficientVideoViews(@jakarta.annotation.Nullable RecommendationServiceInsufficientVideoViews insufficientVideoViews) {
     
     this.insufficientVideoViews = insufficientVideoViews;
     return this;
   }
 
-   /**
+  /**
    * Get insufficientVideoViews
    * @return insufficientVideoViews
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceInsufficientVideoViews getInsufficientVideoViews() {
@@ -695,25 +706,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientVideoViews(RecommendationServiceInsufficientVideoViews insufficientVideoViews) {
+  public void setInsufficientVideoViews(@jakarta.annotation.Nullable RecommendationServiceInsufficientVideoViews insufficientVideoViews) {
     this.insufficientVideoViews = insufficientVideoViews;
   }
 
-
-  public Recommendation createCampaign(RecommendationServiceCreateCampaign createCampaign) {
+  public Recommendation createCampaign(@jakarta.annotation.Nullable RecommendationServiceCreateCampaign createCampaign) {
     
     this.createCampaign = createCampaign;
     return this;
   }
 
-   /**
+  /**
    * Get createCampaign
    * @return createCampaign
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATE_CAMPAIGN)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_CAMPAIGN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceCreateCampaign getCreateCampaign() {
@@ -721,25 +731,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATE_CAMPAIGN)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_CAMPAIGN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreateCampaign(RecommendationServiceCreateCampaign createCampaign) {
+  public void setCreateCampaign(@jakarta.annotation.Nullable RecommendationServiceCreateCampaign createCampaign) {
     this.createCampaign = createCampaign;
   }
 
-
-  public Recommendation createAdGroup(RecommendationServiceCreateAdGroup createAdGroup) {
+  public Recommendation createAdGroup(@jakarta.annotation.Nullable RecommendationServiceCreateAdGroup createAdGroup) {
     
     this.createAdGroup = createAdGroup;
     return this;
   }
 
-   /**
+  /**
    * Get createAdGroup
    * @return createAdGroup
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATE_AD_GROUP)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_AD_GROUP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceCreateAdGroup getCreateAdGroup() {
@@ -747,25 +756,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATE_AD_GROUP)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_AD_GROUP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreateAdGroup(RecommendationServiceCreateAdGroup createAdGroup) {
+  public void setCreateAdGroup(@jakarta.annotation.Nullable RecommendationServiceCreateAdGroup createAdGroup) {
     this.createAdGroup = createAdGroup;
   }
 
-
-  public Recommendation createAd(RecommendationServiceCreateAd createAd) {
+  public Recommendation createAd(@jakarta.annotation.Nullable RecommendationServiceCreateAd createAd) {
     
     this.createAd = createAd;
     return this;
   }
 
-   /**
+  /**
    * Get createAd
    * @return createAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATE_AD)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceCreateAd getCreateAd() {
@@ -773,25 +781,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATE_AD)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreateAd(RecommendationServiceCreateAd createAd) {
+  public void setCreateAd(@jakarta.annotation.Nullable RecommendationServiceCreateAd createAd) {
     this.createAd = createAd;
   }
 
-
-  public Recommendation createResponsiveDisplayAds(RecommendationServiceCreateResponsiveDisplayAds createResponsiveDisplayAds) {
+  public Recommendation createResponsiveDisplayAds(@jakarta.annotation.Nullable RecommendationServiceCreateResponsiveDisplayAds createResponsiveDisplayAds) {
     
     this.createResponsiveDisplayAds = createResponsiveDisplayAds;
     return this;
   }
 
-   /**
+  /**
    * Get createResponsiveDisplayAds
    * @return createResponsiveDisplayAds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATE_RESPONSIVE_DISPLAY_ADS)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_RESPONSIVE_DISPLAY_ADS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceCreateResponsiveDisplayAds getCreateResponsiveDisplayAds() {
@@ -799,25 +806,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATE_RESPONSIVE_DISPLAY_ADS)
+  @JsonProperty(value = JSON_PROPERTY_CREATE_RESPONSIVE_DISPLAY_ADS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreateResponsiveDisplayAds(RecommendationServiceCreateResponsiveDisplayAds createResponsiveDisplayAds) {
+  public void setCreateResponsiveDisplayAds(@jakarta.annotation.Nullable RecommendationServiceCreateResponsiveDisplayAds createResponsiveDisplayAds) {
     this.createResponsiveDisplayAds = createResponsiveDisplayAds;
   }
 
-
-  public Recommendation turnYourAccountOn(RecommendationServiceTurnYourAccountOn turnYourAccountOn) {
+  public Recommendation turnYourAccountOn(@jakarta.annotation.Nullable RecommendationServiceTurnYourAccountOn turnYourAccountOn) {
     
     this.turnYourAccountOn = turnYourAccountOn;
     return this;
   }
 
-   /**
+  /**
    * Get turnYourAccountOn
    * @return turnYourAccountOn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TURN_YOUR_ACCOUNT_ON)
+  @JsonProperty(value = JSON_PROPERTY_TURN_YOUR_ACCOUNT_ON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceTurnYourAccountOn getTurnYourAccountOn() {
@@ -825,25 +831,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TURN_YOUR_ACCOUNT_ON)
+  @JsonProperty(value = JSON_PROPERTY_TURN_YOUR_ACCOUNT_ON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTurnYourAccountOn(RecommendationServiceTurnYourAccountOn turnYourAccountOn) {
+  public void setTurnYourAccountOn(@jakarta.annotation.Nullable RecommendationServiceTurnYourAccountOn turnYourAccountOn) {
     this.turnYourAccountOn = turnYourAccountOn;
   }
 
-
-  public Recommendation turnYourAdOn(RecommendationServiceTurnYourAdOn turnYourAdOn) {
+  public Recommendation turnYourAdOn(@jakarta.annotation.Nullable RecommendationServiceTurnYourAdOn turnYourAdOn) {
     
     this.turnYourAdOn = turnYourAdOn;
     return this;
   }
 
-   /**
+  /**
    * Get turnYourAdOn
    * @return turnYourAdOn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TURN_YOUR_AD_ON)
+  @JsonProperty(value = JSON_PROPERTY_TURN_YOUR_AD_ON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceTurnYourAdOn getTurnYourAdOn() {
@@ -851,25 +856,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TURN_YOUR_AD_ON)
+  @JsonProperty(value = JSON_PROPERTY_TURN_YOUR_AD_ON, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTurnYourAdOn(RecommendationServiceTurnYourAdOn turnYourAdOn) {
+  public void setTurnYourAdOn(@jakarta.annotation.Nullable RecommendationServiceTurnYourAdOn turnYourAdOn) {
     this.turnYourAdOn = turnYourAdOn;
   }
 
-
-  public Recommendation insufficientAccountBalance(RecommendationServiceInsufficientAccountBalance insufficientAccountBalance) {
+  public Recommendation insufficientAccountBalance(@jakarta.annotation.Nullable RecommendationServiceInsufficientAccountBalance insufficientAccountBalance) {
     
     this.insufficientAccountBalance = insufficientAccountBalance;
     return this;
   }
 
-   /**
+  /**
    * Get insufficientAccountBalance
    * @return insufficientAccountBalance
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_ACCOUNT_BALANCE)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_ACCOUNT_BALANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceInsufficientAccountBalance getInsufficientAccountBalance() {
@@ -877,25 +881,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_ACCOUNT_BALANCE)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_ACCOUNT_BALANCE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientAccountBalance(RecommendationServiceInsufficientAccountBalance insufficientAccountBalance) {
+  public void setInsufficientAccountBalance(@jakarta.annotation.Nullable RecommendationServiceInsufficientAccountBalance insufficientAccountBalance) {
     this.insufficientAccountBalance = insufficientAccountBalance;
   }
 
-
-  public Recommendation missingPaymentSettings(RecommendationServiceMissingPaymentSettings missingPaymentSettings) {
+  public Recommendation missingPaymentSettings(@jakarta.annotation.Nullable RecommendationServiceMissingPaymentSettings missingPaymentSettings) {
     
     this.missingPaymentSettings = missingPaymentSettings;
     return this;
   }
 
-   /**
+  /**
    * Get missingPaymentSettings
    * @return missingPaymentSettings
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MISSING_PAYMENT_SETTINGS)
+  @JsonProperty(value = JSON_PROPERTY_MISSING_PAYMENT_SETTINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceMissingPaymentSettings getMissingPaymentSettings() {
@@ -903,25 +906,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MISSING_PAYMENT_SETTINGS)
+  @JsonProperty(value = JSON_PROPERTY_MISSING_PAYMENT_SETTINGS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMissingPaymentSettings(RecommendationServiceMissingPaymentSettings missingPaymentSettings) {
+  public void setMissingPaymentSettings(@jakarta.annotation.Nullable RecommendationServiceMissingPaymentSettings missingPaymentSettings) {
     this.missingPaymentSettings = missingPaymentSettings;
   }
 
-
-  public Recommendation audienceListNotAccumulated(RecommendationServiceAudienceListNotAccumulated audienceListNotAccumulated) {
+  public Recommendation audienceListNotAccumulated(@jakarta.annotation.Nullable RecommendationServiceAudienceListNotAccumulated audienceListNotAccumulated) {
     
     this.audienceListNotAccumulated = audienceListNotAccumulated;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListNotAccumulated
    * @return audienceListNotAccumulated
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NOT_ACCUMULATED)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NOT_ACCUMULATED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceAudienceListNotAccumulated getAudienceListNotAccumulated() {
@@ -929,25 +931,24 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NOT_ACCUMULATED)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NOT_ACCUMULATED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListNotAccumulated(RecommendationServiceAudienceListNotAccumulated audienceListNotAccumulated) {
+  public void setAudienceListNotAccumulated(@jakarta.annotation.Nullable RecommendationServiceAudienceListNotAccumulated audienceListNotAccumulated) {
     this.audienceListNotAccumulated = audienceListNotAccumulated;
   }
 
-
-  public Recommendation notTargetingProperAudienceList(RecommendationServiceNotTargetingProperAudienceListAdGroup notTargetingProperAudienceList) {
+  public Recommendation notTargetingProperAudienceList(@jakarta.annotation.Nullable RecommendationServiceNotTargetingProperAudienceListAdGroup notTargetingProperAudienceList) {
     
     this.notTargetingProperAudienceList = notTargetingProperAudienceList;
     return this;
   }
 
-   /**
+  /**
    * Get notTargetingProperAudienceList
    * @return notTargetingProperAudienceList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOT_TARGETING_PROPER_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_NOT_TARGETING_PROPER_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RecommendationServiceNotTargetingProperAudienceListAdGroup getNotTargetingProperAudienceList() {
@@ -955,11 +956,12 @@ public class Recommendation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NOT_TARGETING_PROPER_AUDIENCE_LIST)
+  @JsonProperty(value = JSON_PROPERTY_NOT_TARGETING_PROPER_AUDIENCE_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotTargetingProperAudienceList(RecommendationServiceNotTargetingProperAudienceListAdGroup notTargetingProperAudienceList) {
+  public void setNotTargetingProperAudienceList(@jakarta.annotation.Nullable RecommendationServiceNotTargetingProperAudienceListAdGroup notTargetingProperAudienceList) {
     this.notTargetingProperAudienceList = notTargetingProperAudienceList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -1050,10 +1052,7 @@ public class Recommendation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

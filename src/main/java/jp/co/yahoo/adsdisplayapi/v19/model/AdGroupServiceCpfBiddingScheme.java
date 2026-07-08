@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceCpfBiddingSchemeオブジェクトは、広告グループ最大入札価格(CPF)の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpfBiddingScheme object holds configuration information of Max bid of ad group (CPF). &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceCpfBiddingScheme.JSON_PROPERTY_CPF,
   AdGroupServiceCpfBiddingScheme.JSON_PROPERTY_IS_REMOVE_CPF
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceCpfBiddingScheme {
   public static final String JSON_PROPERTY_CPF = "cpf";
+  @jakarta.annotation.Nullable
   private Long cpf;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CPF = "isRemoveCpf";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveCpf;
 
   public AdGroupServiceCpfBiddingScheme() {
   }
 
-  public AdGroupServiceCpfBiddingScheme cpf(Long cpf) {
+  public AdGroupServiceCpfBiddingScheme cpf(@jakarta.annotation.Nullable Long cpf) {
     
     this.cpf = cpf;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ最大入札価格(CPF)です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがCPFの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Max bid of ad group (CPF).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is CPF. &lt;/div&gt; 
    * @return cpf
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPF)
+  @JsonProperty(value = JSON_PROPERTY_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCpf() {
@@ -61,25 +63,24 @@ public class AdGroupServiceCpfBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPF)
+  @JsonProperty(value = JSON_PROPERTY_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpf(Long cpf) {
+  public void setCpf(@jakarta.annotation.Nullable Long cpf) {
     this.cpf = cpf;
   }
 
-
-  public AdGroupServiceCpfBiddingScheme isRemoveCpf(AdGroupServiceIsRemoveFlg isRemoveCpf) {
+  public AdGroupServiceCpfBiddingScheme isRemoveCpf(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveCpf) {
     
     this.isRemoveCpf = isRemoveCpf;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCpf
    * @return isRemoveCpf
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CPF)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveCpf() {
@@ -87,11 +88,12 @@ public class AdGroupServiceCpfBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CPF)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CPF, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCpf(AdGroupServiceIsRemoveFlg isRemoveCpf) {
+  public void setIsRemoveCpf(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveCpf) {
     this.isRemoveCpf = isRemoveCpf;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class AdGroupServiceCpfBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

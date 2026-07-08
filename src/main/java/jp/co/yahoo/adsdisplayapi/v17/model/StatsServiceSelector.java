@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServicePeriodCustomDate;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceStatsPeriod;
@@ -28,6 +28,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceTargetType;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceSelector object is a container that includes the search conditions (execution parameters) of get methods.&lt;/div&gt; 
@@ -45,56 +46,67 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   StatsServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
+  @jakarta.annotation.Nullable
   private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_AD_IDS = "adIds";
+  @jakarta.annotation.Nullable
   private List<Long> adIds;
 
   public static final String JSON_PROPERTY_MEDIA_IDS = "mediaIds";
+  @jakarta.annotation.Nullable
   private List<Long> mediaIds;
 
   public static final String JSON_PROPERTY_STATS_PERIOD = "statsPeriod";
+  @jakarta.annotation.Nullable
   private StatsServiceStatsPeriod statsPeriod;
 
   public static final String JSON_PROPERTY_PERIOD_CUSTOM_DATE = "periodCustomDate";
+  @jakarta.annotation.Nullable
   private StatsServicePeriodCustomDate periodCustomDate;
 
   public static final String JSON_PROPERTY_TARGET_TYPES = "targetTypes";
+  @jakarta.annotation.Nullable
   private List<StatsServiceTargetType> targetTypes;
 
   public static final String JSON_PROPERTY_TYPE = "type";
+  @jakarta.annotation.Nullable
   private StatsServiceType type;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public StatsServiceSelector() {
   }
 
-  public StatsServiceSelector accountId(Long accountId) {
+  public StatsServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -102,14 +114,13 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public StatsServiceSelector campaignIds(List<Long> campaignIds) {
+  public StatsServiceSelector campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -123,12 +134,12 @@ public class StatsServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンID&lt;br&gt; typeで「CAMPAIGN」または「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; Available only when &amp;#34;CAMPAIGN&amp;#34; or &amp;#34;ADGROUP&amp;#34; or &amp;#34;AD&amp;#34; or &amp;#34;TARGET&amp;#34; is specified for type. &lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -136,14 +147,13 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
-
-  public StatsServiceSelector adGroupIds(List<Long> adGroupIds) {
+  public StatsServiceSelector adGroupIds(@jakarta.annotation.Nullable List<Long> adGroupIds) {
     
     this.adGroupIds = adGroupIds;
     return this;
@@ -157,12 +167,12 @@ public class StatsServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループID&lt;br&gt; typeで「ADGROUP」または「AD」または「TARGET」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID.&lt;br&gt; Available only when &amp;#34;ADGROUP&amp;#34; or &amp;#34;AD&amp;#34; or &amp;#34;TARGET&amp;#34; is specified for type. &lt;/div&gt; 
    * @return adGroupIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAdGroupIds() {
@@ -170,14 +180,13 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupIds(List<Long> adGroupIds) {
+  public void setAdGroupIds(@jakarta.annotation.Nullable List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
-
-  public StatsServiceSelector adIds(List<Long> adIds) {
+  public StatsServiceSelector adIds(@jakarta.annotation.Nullable List<Long> adIds) {
     
     this.adIds = adIds;
     return this;
@@ -191,12 +200,12 @@ public class StatsServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告ID&lt;br&gt; typeで「AD」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad ID.&lt;br&gt; Available only when &amp;#34;AD&amp;#34; is specified for type. &lt;/div&gt; 
    * @return adIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAdIds() {
@@ -204,14 +213,13 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdIds(List<Long> adIds) {
+  public void setAdIds(@jakarta.annotation.Nullable List<Long> adIds) {
     this.adIds = adIds;
   }
 
-
-  public StatsServiceSelector mediaIds(List<Long> mediaIds) {
+  public StatsServiceSelector mediaIds(@jakarta.annotation.Nullable List<Long> mediaIds) {
     
     this.mediaIds = mediaIds;
     return this;
@@ -225,12 +233,12 @@ public class StatsServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像ID&lt;br&gt; typeで「MEDIA」を指定した場合のみ有効です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; Available only when &amp;#34;MEDIA&amp;#34; is specified for type. &lt;/div&gt; 
    * @return mediaIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_IDS)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getMediaIds() {
@@ -238,25 +246,24 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_IDS)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaIds(List<Long> mediaIds) {
+  public void setMediaIds(@jakarta.annotation.Nullable List<Long> mediaIds) {
     this.mediaIds = mediaIds;
   }
 
-
-  public StatsServiceSelector statsPeriod(StatsServiceStatsPeriod statsPeriod) {
+  public StatsServiceSelector statsPeriod(@jakarta.annotation.Nullable StatsServiceStatsPeriod statsPeriod) {
     
     this.statsPeriod = statsPeriod;
     return this;
   }
 
-   /**
+  /**
    * Get statsPeriod
    * @return statsPeriod
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_STATS_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceStatsPeriod getStatsPeriod() {
@@ -264,25 +271,24 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_STATS_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatsPeriod(StatsServiceStatsPeriod statsPeriod) {
+  public void setStatsPeriod(@jakarta.annotation.Nullable StatsServiceStatsPeriod statsPeriod) {
     this.statsPeriod = statsPeriod;
   }
 
-
-  public StatsServiceSelector periodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
+  public StatsServiceSelector periodCustomDate(@jakarta.annotation.Nullable StatsServicePeriodCustomDate periodCustomDate) {
     
     this.periodCustomDate = periodCustomDate;
     return this;
   }
 
-   /**
+  /**
    * Get periodCustomDate
    * @return periodCustomDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD_CUSTOM_DATE)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD_CUSTOM_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServicePeriodCustomDate getPeriodCustomDate() {
@@ -290,14 +296,13 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PERIOD_CUSTOM_DATE)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD_CUSTOM_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
+  public void setPeriodCustomDate(@jakarta.annotation.Nullable StatsServicePeriodCustomDate periodCustomDate) {
     this.periodCustomDate = periodCustomDate;
   }
 
-
-  public StatsServiceSelector targetTypes(List<StatsServiceTargetType> targetTypes) {
+  public StatsServiceSelector targetTypes(@jakarta.annotation.Nullable List<StatsServiceTargetType> targetTypes) {
     
     this.targetTypes = targetTypes;
     return this;
@@ -311,12 +316,12 @@ public class StatsServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get targetTypes
    * @return targetTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<StatsServiceTargetType> getTargetTypes() {
@@ -324,25 +329,24 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetTypes(List<StatsServiceTargetType> targetTypes) {
+  public void setTargetTypes(@jakarta.annotation.Nullable List<StatsServiceTargetType> targetTypes) {
     this.targetTypes = targetTypes;
   }
 
-
-  public StatsServiceSelector type(StatsServiceType type) {
+  public StatsServiceSelector type(@jakarta.annotation.Nullable StatsServiceType type) {
     
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceType getType() {
@@ -350,27 +354,26 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(StatsServiceType type) {
+  public void setType(@jakarta.annotation.Nullable StatsServiceType type) {
     this.type = type;
   }
 
-
-  public StatsServiceSelector numberResults(Integer numberResults) {
+  public StatsServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -378,26 +381,25 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public StatsServiceSelector startIndex(Integer startIndex) {
+  public StatsServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -405,11 +407,12 @@ public class StatsServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -462,10 +465,7 @@ public class StatsServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

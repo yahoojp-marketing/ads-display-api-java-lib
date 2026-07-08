@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceDayOfWeek;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceAdScheduleTargetオブジェクトは、時間帯ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.&lt;/div&gt; 
@@ -32,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceAdScheduleTarget.JSON_PROPERTY_END_HOUR,
   StatsServiceAdScheduleTarget.JSON_PROPERTY_START_HOUR
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceAdScheduleTarget {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
+  @jakarta.annotation.Nullable
   private StatsServiceDayOfWeek dayOfWeek;
 
   public static final String JSON_PROPERTY_END_HOUR = "endHour";
+  @jakarta.annotation.Nullable
   private Integer endHour;
 
   public static final String JSON_PROPERTY_START_HOUR = "startHour";
+  @jakarta.annotation.Nullable
   private Integer startHour;
 
   public StatsServiceAdScheduleTarget() {
   }
 
-  public StatsServiceAdScheduleTarget dayOfWeek(StatsServiceDayOfWeek dayOfWeek) {
+  public StatsServiceAdScheduleTarget dayOfWeek(@jakarta.annotation.Nullable StatsServiceDayOfWeek dayOfWeek) {
     
     this.dayOfWeek = dayOfWeek;
     return this;
   }
 
-   /**
+  /**
    * Get dayOfWeek
    * @return dayOfWeek
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonProperty(value = JSON_PROPERTY_DAY_OF_WEEK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceDayOfWeek getDayOfWeek() {
@@ -65,25 +68,24 @@ public class StatsServiceAdScheduleTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonProperty(value = JSON_PROPERTY_DAY_OF_WEEK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDayOfWeek(StatsServiceDayOfWeek dayOfWeek) {
+  public void setDayOfWeek(@jakarta.annotation.Nullable StatsServiceDayOfWeek dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
-
-  public StatsServiceAdScheduleTarget endHour(Integer endHour) {
+  public StatsServiceAdScheduleTarget endHour(@jakarta.annotation.Nullable Integer endHour) {
     
     this.endHour = endHour;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;終了時間(時のみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;End time (hour only)&lt;/div&gt; 
    * @return endHour
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_END_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getEndHour() {
@@ -91,25 +93,24 @@ public class StatsServiceAdScheduleTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_END_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndHour(Integer endHour) {
+  public void setEndHour(@jakarta.annotation.Nullable Integer endHour) {
     this.endHour = endHour;
   }
 
-
-  public StatsServiceAdScheduleTarget startHour(Integer startHour) {
+  public StatsServiceAdScheduleTarget startHour(@jakarta.annotation.Nullable Integer startHour) {
     
     this.startHour = startHour;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始時間(時のみ)&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start time (hour only)&lt;/div&gt; 
    * @return startHour
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_START_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartHour() {
@@ -117,11 +118,12 @@ public class StatsServiceAdScheduleTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_START_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartHour(Integer startHour) {
+  public void setStartHour(@jakarta.annotation.Nullable Integer startHour) {
     this.startHour = startHour;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +160,7 @@ public class StatsServiceAdScheduleTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

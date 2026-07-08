@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordIdeaServiceAvailabilityStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordIdeaオブジェクトは、サーチターゲティング対象キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordIdea object is keyword for search targeting.&lt;/div&gt; 
@@ -37,47 +37,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SearchKeywordIdea.JSON_PROPERTY_CLOSE_DATE,
   SearchKeywordIdea.JSON_PROPERTY_AVAILABILITY_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class SearchKeywordIdea {
   public static final String JSON_PROPERTY_DESKTOP_SEARCH_VOLUME = "desktopSearchVolume";
+  @jakarta.annotation.Nullable
   private Long desktopSearchVolume;
 
   public static final String JSON_PROPERTY_RELEASE_DATE = "releaseDate";
+  @jakarta.annotation.Nullable
   private String releaseDate;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD = "searchKeyword";
+  @jakarta.annotation.Nullable
   private String searchKeyword;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_ID = "searchKeywordId";
+  @jakarta.annotation.Nullable
   private Long searchKeywordId;
 
   public static final String JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME = "smartPhoneSearchVolume";
+  @jakarta.annotation.Nullable
   private Long smartPhoneSearchVolume;
 
   public static final String JSON_PROPERTY_TABLET_SEARCH_VOLUME = "tabletSearchVolume";
+  @jakarta.annotation.Nullable
   private Long tabletSearchVolume;
 
   public static final String JSON_PROPERTY_CLOSE_DATE = "closeDate";
+  @jakarta.annotation.Nullable
   private String closeDate;
 
   public static final String JSON_PROPERTY_AVAILABILITY_STATUS = "availabilityStatus";
+  @jakarta.annotation.Nullable
   private SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus;
 
   public SearchKeywordIdea() {
   }
 
-  public SearchKeywordIdea desktopSearchVolume(Long desktopSearchVolume) {
+  public SearchKeywordIdea desktopSearchVolume(@jakarta.annotation.Nullable Long desktopSearchVolume) {
     
     this.desktopSearchVolume = desktopSearchVolume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PCでのリーチ数です。&lt;br&gt; ※1000件未満の場合は&lt;br&gt; 0が取得されます。&lt;br&gt; ※サーチキーワードの停止日以降はnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reach numbers on PC.&lt;br&gt; *If it is less than 1000 times, the value &amp;#34;0&amp;#34; will be responded.&lt;br&gt; *After the stop date of search keyword, null will be returned. &lt;/div&gt; 
    * @return desktopSearchVolume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESKTOP_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getDesktopSearchVolume() {
@@ -85,25 +93,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESKTOP_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDesktopSearchVolume(Long desktopSearchVolume) {
+  public void setDesktopSearchVolume(@jakarta.annotation.Nullable Long desktopSearchVolume) {
     this.desktopSearchVolume = desktopSearchVolume;
   }
 
-
-  public SearchKeywordIdea releaseDate(String releaseDate) {
+  public SearchKeywordIdea releaseDate(@jakarta.annotation.Nullable String releaseDate) {
     
     this.releaseDate = releaseDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワード追加日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Additional date of keyword.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return releaseDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RELEASE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_RELEASE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReleaseDate() {
@@ -111,25 +118,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RELEASE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_RELEASE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReleaseDate(String releaseDate) {
+  public void setReleaseDate(@jakarta.annotation.Nullable String releaseDate) {
     this.releaseDate = releaseDate;
   }
 
-
-  public SearchKeywordIdea searchKeyword(String searchKeyword) {
+  public SearchKeywordIdea searchKeyword(@jakarta.annotation.Nullable String searchKeyword) {
     
     this.searchKeyword = searchKeyword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search keyword.&lt;/div&gt; 
    * @return searchKeyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSearchKeyword() {
@@ -137,25 +143,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchKeyword(String searchKeyword) {
+  public void setSearchKeyword(@jakarta.annotation.Nullable String searchKeyword) {
     this.searchKeyword = searchKeyword;
   }
 
-
-  public SearchKeywordIdea searchKeywordId(Long searchKeywordId) {
+  public SearchKeywordIdea searchKeywordId(@jakarta.annotation.Nullable Long searchKeywordId) {
     
     this.searchKeywordId = searchKeywordId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search keyword ID.&lt;/div&gt; 
    * @return searchKeywordId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_ID)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSearchKeywordId() {
@@ -163,25 +168,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_ID)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchKeywordId(Long searchKeywordId) {
+  public void setSearchKeywordId(@jakarta.annotation.Nullable Long searchKeywordId) {
     this.searchKeywordId = searchKeywordId;
   }
 
-
-  public SearchKeywordIdea smartPhoneSearchVolume(Long smartPhoneSearchVolume) {
+  public SearchKeywordIdea smartPhoneSearchVolume(@jakarta.annotation.Nullable Long smartPhoneSearchVolume) {
     
     this.smartPhoneSearchVolume = smartPhoneSearchVolume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; スマートフォンでのリーチ数です。&lt;br&gt; ※1000件未満の場合は&lt;br&gt; 0が取得されます。&lt;br&gt; ※サーチキーワードの停止日以降はnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reach numbers on Smartphone.&lt;br&gt; *If it is less than 1000 times, the value &amp;#34;0&amp;#34; will be responded.&lt;br&gt; *After the stop date of search keyword, null will be returned. &lt;/div&gt; 
    * @return smartPhoneSearchVolume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSmartPhoneSearchVolume() {
@@ -189,25 +193,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartPhoneSearchVolume(Long smartPhoneSearchVolume) {
+  public void setSmartPhoneSearchVolume(@jakarta.annotation.Nullable Long smartPhoneSearchVolume) {
     this.smartPhoneSearchVolume = smartPhoneSearchVolume;
   }
 
-
-  public SearchKeywordIdea tabletSearchVolume(Long tabletSearchVolume) {
+  public SearchKeywordIdea tabletSearchVolume(@jakarta.annotation.Nullable Long tabletSearchVolume) {
     
     this.tabletSearchVolume = tabletSearchVolume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; タブレットでのリーチ数です。&lt;br&gt; ※1000件未満の場合は&lt;br&gt; 0が取得されます。&lt;br&gt; ※サーチキーワードの停止日以降はnullが返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reach numbers on Tablet.&lt;br&gt; *If it is less than 1000 times, the value &amp;#34;0&amp;#34; will be responded.&lt;br&gt; *After the stop date of search keyword, null will be returned. &lt;/div&gt; 
    * @return tabletSearchVolume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TABLET_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTabletSearchVolume() {
@@ -215,25 +218,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TABLET_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTabletSearchVolume(Long tabletSearchVolume) {
+  public void setTabletSearchVolume(@jakarta.annotation.Nullable Long tabletSearchVolume) {
     this.tabletSearchVolume = tabletSearchVolume;
   }
 
-
-  public SearchKeywordIdea closeDate(String closeDate) {
+  public SearchKeywordIdea closeDate(@jakarta.annotation.Nullable String closeDate) {
     
     this.closeDate = closeDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サーチキーワード停止日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Stop date of keyword.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return closeDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLOSE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CLOSE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCloseDate() {
@@ -241,25 +243,24 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLOSE_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CLOSE_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCloseDate(String closeDate) {
+  public void setCloseDate(@jakarta.annotation.Nullable String closeDate) {
     this.closeDate = closeDate;
   }
 
-
-  public SearchKeywordIdea availabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
+  public SearchKeywordIdea availabilityStatus(@jakarta.annotation.Nullable SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     
     this.availabilityStatus = availabilityStatus;
     return this;
   }
 
-   /**
+  /**
    * Get availabilityStatus
    * @return availabilityStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AVAILABILITY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_AVAILABILITY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordIdeaServiceAvailabilityStatus getAvailabilityStatus() {
@@ -267,11 +268,12 @@ public class SearchKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AVAILABILITY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_AVAILABILITY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAvailabilityStatus(SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
+  public void setAvailabilityStatus(@jakarta.annotation.Nullable SearchKeywordIdeaServiceAvailabilityStatus availabilityStatus) {
     this.availabilityStatus = availabilityStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -318,10 +320,7 @@ public class SearchKeywordIdea {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

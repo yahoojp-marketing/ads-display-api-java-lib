@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceCustomParameter;
 import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field is optional in ADD and SET operation.&lt;/div&gt; 
@@ -34,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   CampaignServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
+  @jakarta.annotation.Nullable
   private CampaignServiceIsRemoveFlg isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
+  @jakarta.annotation.Nullable
   private List<CampaignServiceCustomParameter> parameters;
 
   public CampaignServiceCustomParameters() {
   }
 
-  public CampaignServiceCustomParameters isRemove(CampaignServiceIsRemoveFlg isRemove) {
+  public CampaignServiceCustomParameters isRemove(@jakarta.annotation.Nullable CampaignServiceIsRemoveFlg isRemove) {
     
     this.isRemove = isRemove;
     return this;
   }
 
-   /**
+  /**
    * Get isRemove
    * @return isRemove
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceIsRemoveFlg getIsRemove() {
@@ -64,14 +67,13 @@ public class CampaignServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemove(CampaignServiceIsRemoveFlg isRemove) {
+  public void setIsRemove(@jakarta.annotation.Nullable CampaignServiceIsRemoveFlg isRemove) {
     this.isRemove = isRemove;
   }
 
-
-  public CampaignServiceCustomParameters parameters(List<CampaignServiceCustomParameter> parameters) {
+  public CampaignServiceCustomParameters parameters(@jakarta.annotation.Nullable List<CampaignServiceCustomParameter> parameters) {
     
     this.parameters = parameters;
     return this;
@@ -85,12 +87,12 @@ public class CampaignServiceCustomParameters {
     return this;
   }
 
-   /**
+  /**
    * Get parameters
    * @return parameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<CampaignServiceCustomParameter> getParameters() {
@@ -98,11 +100,12 @@ public class CampaignServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParameters(List<CampaignServiceCustomParameter> parameters) {
+  public void setParameters(@jakarta.annotation.Nullable List<CampaignServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,10 +140,7 @@ public class CampaignServiceCustomParameters {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.FeedFtpServiceActiveStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.FeedFtpServiceItemListUploadType;
 import jp.co.yahoo.adsdisplayapi.v17.model.FeedFtpServiceSchedule;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedFtpオブジェクトは、定期アップロード設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedFtp object retains Periodic Upload setting information.&lt;/div&gt; 
@@ -39,47 +39,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedFtp.JSON_PROPERTY_USER_NAME,
   FeedFtp.JSON_PROPERTY_USER_PASSWORD
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedFtp {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ACTIVE_STATUS = "activeStatus";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceActiveStatus activeStatus;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
+  @jakarta.annotation.Nullable
   private Long feedId;
 
   public static final String JSON_PROPERTY_FEED_URL = "feedUrl";
+  @jakarta.annotation.Nullable
   private String feedUrl;
 
   public static final String JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE = "itemListUploadType";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceItemListUploadType itemListUploadType;
 
   public static final String JSON_PROPERTY_SCHEDULE = "schedule";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceSchedule schedule;
 
   public static final String JSON_PROPERTY_USER_NAME = "userName";
+  @jakarta.annotation.Nullable
   private String userName;
 
   public static final String JSON_PROPERTY_USER_PASSWORD = "userPassword";
+  @jakarta.annotation.Nullable
   private String userPassword;
 
   public FeedFtp() {
   }
 
-  public FeedFtp accountId(Long accountId) {
+  public FeedFtp accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -87,25 +95,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public FeedFtp activeStatus(FeedFtpServiceActiveStatus activeStatus) {
+  public FeedFtp activeStatus(@jakarta.annotation.Nullable FeedFtpServiceActiveStatus activeStatus) {
     
     this.activeStatus = activeStatus;
     return this;
   }
 
-   /**
+  /**
    * Get activeStatus
    * @return activeStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACTIVE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACTIVE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceActiveStatus getActiveStatus() {
@@ -113,25 +120,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACTIVE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_ACTIVE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setActiveStatus(FeedFtpServiceActiveStatus activeStatus) {
+  public void setActiveStatus(@jakarta.annotation.Nullable FeedFtpServiceActiveStatus activeStatus) {
     this.activeStatus = activeStatus;
   }
 
-
-  public FeedFtp feedId(Long feedId) {
+  public FeedFtp feedId(@jakarta.annotation.Nullable Long feedId) {
     
     this.feedId = feedId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; Feedを識別するIdです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Feed ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return feedId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFeedId() {
@@ -139,25 +145,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedId(Long feedId) {
+  public void setFeedId(@jakarta.annotation.Nullable Long feedId) {
     this.feedId = feedId;
   }
 
-
-  public FeedFtp feedUrl(String feedUrl) {
+  public FeedFtp feedUrl(@jakarta.annotation.Nullable String feedUrl) {
     
     this.feedUrl = feedUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品リストファイルのURLです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; URL of item list file.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return feedUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_URL)
+  @JsonProperty(value = JSON_PROPERTY_FEED_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFeedUrl() {
@@ -165,25 +170,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_URL)
+  @JsonProperty(value = JSON_PROPERTY_FEED_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedUrl(String feedUrl) {
+  public void setFeedUrl(@jakarta.annotation.Nullable String feedUrl) {
     this.feedUrl = feedUrl;
   }
 
-
-  public FeedFtp itemListUploadType(FeedFtpServiceItemListUploadType itemListUploadType) {
+  public FeedFtp itemListUploadType(@jakarta.annotation.Nullable FeedFtpServiceItemListUploadType itemListUploadType) {
     
     this.itemListUploadType = itemListUploadType;
     return this;
   }
 
-   /**
+  /**
    * Get itemListUploadType
    * @return itemListUploadType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceItemListUploadType getItemListUploadType() {
@@ -191,25 +195,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_LIST_UPLOAD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setItemListUploadType(FeedFtpServiceItemListUploadType itemListUploadType) {
+  public void setItemListUploadType(@jakarta.annotation.Nullable FeedFtpServiceItemListUploadType itemListUploadType) {
     this.itemListUploadType = itemListUploadType;
   }
 
-
-  public FeedFtp schedule(FeedFtpServiceSchedule schedule) {
+  public FeedFtp schedule(@jakarta.annotation.Nullable FeedFtpServiceSchedule schedule) {
     
     this.schedule = schedule;
     return this;
   }
 
-   /**
+  /**
    * Get schedule
    * @return schedule
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceSchedule getSchedule() {
@@ -217,25 +220,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSchedule(FeedFtpServiceSchedule schedule) {
+  public void setSchedule(@jakarta.annotation.Nullable FeedFtpServiceSchedule schedule) {
     this.schedule = schedule;
   }
 
-
-  public FeedFtp userName(String userName) {
+  public FeedFtp userName(@jakarta.annotation.Nullable String userName) {
     
     this.userName = userName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ユーザー名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; User name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return userName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_USER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUserName() {
@@ -243,25 +245,24 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_USER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserName(String userName) {
+  public void setUserName(@jakarta.annotation.Nullable String userName) {
     this.userName = userName;
   }
 
-
-  public FeedFtp userPassword(String userPassword) {
+  public FeedFtp userPassword(@jakarta.annotation.Nullable String userPassword) {
     
     this.userPassword = userPassword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; パスワードです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Password.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return userPassword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_PASSWORD)
+  @JsonProperty(value = JSON_PROPERTY_USER_PASSWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUserPassword() {
@@ -269,11 +270,12 @@ public class FeedFtp {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_PASSWORD)
+  @JsonProperty(value = JSON_PROPERTY_USER_PASSWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserPassword(String userPassword) {
+  public void setUserPassword(@jakarta.annotation.Nullable String userPassword) {
     this.userPassword = userPassword;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -320,10 +322,7 @@ public class FeedFtp {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

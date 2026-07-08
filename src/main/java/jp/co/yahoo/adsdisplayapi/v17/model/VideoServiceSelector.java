@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceCreatedDateRange;
@@ -28,6 +28,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceProcessStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServiceSelectorオブジェクトは、入稿済みの動画の情報を取得します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The VideoServiceSelector object is a container for storing added video information and filtering condition.&lt;/div&gt; 
@@ -42,47 +43,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   VideoServiceSelector.JSON_PROPERTY_USER_STATUSES,
   VideoServiceSelector.JSON_PROPERTY_CREATED_DATE_RANGE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class VideoServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUSES = "approvalStatuses";
+  @jakarta.annotation.Nullable
   private List<VideoServiceApprovalStatus> approvalStatuses;
 
   public static final String JSON_PROPERTY_MEDIA_IDS = "mediaIds";
+  @jakarta.annotation.Nullable
   private List<Long> mediaIds;
 
   public static final String JSON_PROPERTY_PROCESS_STATUSES = "processStatuses";
+  @jakarta.annotation.Nullable
   private List<VideoServiceProcessStatus> processStatuses;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
+  @jakarta.annotation.Nullable
   private List<VideoServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_CREATED_DATE_RANGE = "createdDateRange";
+  @jakarta.annotation.Nullable
   private VideoServiceCreatedDateRange createdDateRange;
 
   public VideoServiceSelector() {
   }
 
-  public VideoServiceSelector accountId(Long accountId) {
+  public VideoServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -90,14 +99,13 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public VideoServiceSelector approvalStatuses(List<VideoServiceApprovalStatus> approvalStatuses) {
+  public VideoServiceSelector approvalStatuses(@jakarta.annotation.Nullable List<VideoServiceApprovalStatus> approvalStatuses) {
     
     this.approvalStatuses = approvalStatuses;
     return this;
@@ -111,12 +119,12 @@ public class VideoServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatuses
    * @return approvalStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<VideoServiceApprovalStatus> getApprovalStatuses() {
@@ -124,14 +132,13 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatuses(List<VideoServiceApprovalStatus> approvalStatuses) {
+  public void setApprovalStatuses(@jakarta.annotation.Nullable List<VideoServiceApprovalStatus> approvalStatuses) {
     this.approvalStatuses = approvalStatuses;
   }
 
-
-  public VideoServiceSelector mediaIds(List<Long> mediaIds) {
+  public VideoServiceSelector mediaIds(@jakarta.annotation.Nullable List<Long> mediaIds) {
     
     this.mediaIds = mediaIds;
     return this;
@@ -145,12 +152,12 @@ public class VideoServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディアIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID.&lt;/div&gt; 
    * @return mediaIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_IDS)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getMediaIds() {
@@ -158,14 +165,13 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_IDS)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaIds(List<Long> mediaIds) {
+  public void setMediaIds(@jakarta.annotation.Nullable List<Long> mediaIds) {
     this.mediaIds = mediaIds;
   }
 
-
-  public VideoServiceSelector processStatuses(List<VideoServiceProcessStatus> processStatuses) {
+  public VideoServiceSelector processStatuses(@jakarta.annotation.Nullable List<VideoServiceProcessStatus> processStatuses) {
     
     this.processStatuses = processStatuses;
     return this;
@@ -179,12 +185,12 @@ public class VideoServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get processStatuses
    * @return processStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROCESS_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_PROCESS_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<VideoServiceProcessStatus> getProcessStatuses() {
@@ -192,27 +198,26 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROCESS_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_PROCESS_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProcessStatuses(List<VideoServiceProcessStatus> processStatuses) {
+  public void setProcessStatuses(@jakarta.annotation.Nullable List<VideoServiceProcessStatus> processStatuses) {
     this.processStatuses = processStatuses;
   }
 
-
-  public VideoServiceSelector numberResults(Integer numberResults) {
+  public VideoServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -220,26 +225,25 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public VideoServiceSelector startIndex(Integer startIndex) {
+  public VideoServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -247,14 +251,13 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public VideoServiceSelector userStatuses(List<VideoServiceUserStatus> userStatuses) {
+  public VideoServiceSelector userStatuses(@jakarta.annotation.Nullable List<VideoServiceUserStatus> userStatuses) {
     
     this.userStatuses = userStatuses;
     return this;
@@ -268,12 +271,12 @@ public class VideoServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get userStatuses
    * @return userStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<VideoServiceUserStatus> getUserStatuses() {
@@ -281,25 +284,24 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatuses(List<VideoServiceUserStatus> userStatuses) {
+  public void setUserStatuses(@jakarta.annotation.Nullable List<VideoServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
-
-  public VideoServiceSelector createdDateRange(VideoServiceCreatedDateRange createdDateRange) {
+  public VideoServiceSelector createdDateRange(@jakarta.annotation.Nullable VideoServiceCreatedDateRange createdDateRange) {
     
     this.createdDateRange = createdDateRange;
     return this;
   }
 
-   /**
+  /**
    * Get createdDateRange
    * @return createdDateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceCreatedDateRange getCreatedDateRange() {
@@ -307,11 +309,12 @@ public class VideoServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDateRange(VideoServiceCreatedDateRange createdDateRange) {
+  public void setCreatedDateRange(@jakarta.annotation.Nullable VideoServiceCreatedDateRange createdDateRange) {
     this.createdDateRange = createdDateRange;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -358,10 +361,7 @@ public class VideoServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

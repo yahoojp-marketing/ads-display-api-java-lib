@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupAdServiceButtonText;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupAdServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceDynamicDisplayAdオブジェクトは、動的ディスプレイ広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがDYNAMIC_DISPLAY_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceDynamicDisplayAd object describes information regarding dynamic ads for display.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is DYNAMIC_DISPLAY_AD, this field is required in ADD operation. &lt;/div&gt; 
@@ -51,86 +51,107 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceDynamicDisplayAd.JSON_PROPERTY_IS_REMOVE_SUFFIX,
   AdGroupAdServiceDynamicDisplayAd.JSON_PROPERTY_IS_REMOVE_BRAND_COLOR
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceDynamicDisplayAd {
   public static final String JSON_PROPERTY_BRAND_COLOR = "brandColor";
+  @jakarta.annotation.Nullable
   private String brandColor;
 
   public static final String JSON_PROPERTY_BUTTON_TEXT = "buttonText";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceButtonText buttonText;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID = "campaignBannerMediaId";
+  @jakarta.annotation.Nullable
   private Long campaignBannerMediaId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID2 = "campaignBannerMediaId2";
+  @jakarta.annotation.Nullable
   private Long campaignBannerMediaId2;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID3 = "campaignBannerMediaId3";
+  @jakarta.annotation.Nullable
   private Long campaignBannerMediaId3;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID4 = "campaignBannerMediaId4";
+  @jakarta.annotation.Nullable
   private Long campaignBannerMediaId4;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BANNER_URL = "campaignBannerUrl";
+  @jakarta.annotation.Nullable
   private String campaignBannerUrl;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID = "isRemoveCampaignBannerMediaId";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID2 = "isRemoveCampaignBannerMediaId2";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId2;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID3 = "isRemoveCampaignBannerMediaId3";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId3;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID4 = "isRemoveCampaignBannerMediaId4";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId4;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_URL = "isRemoveCampaignBannerUrl";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerUrl;
 
   public static final String JSON_PROPERTY_LOGO_MEDIA_ID = "logoMediaId";
+  @jakarta.annotation.Nullable
   private Long logoMediaId;
 
   public static final String JSON_PROPERTY_LOGO_MEDIA_ID2 = "logoMediaId2";
+  @jakarta.annotation.Nullable
   private Long logoMediaId2;
 
   public static final String JSON_PROPERTY_LOGO_MEDIA_ID3 = "logoMediaId3";
+  @jakarta.annotation.Nullable
   private Long logoMediaId3;
 
   public static final String JSON_PROPERTY_PREFIX = "prefix";
+  @jakarta.annotation.Nullable
   private String prefix;
 
   public static final String JSON_PROPERTY_PRINCIPAL = "principal";
+  @jakarta.annotation.Nullable
   private String principal;
 
   public static final String JSON_PROPERTY_SUFFIX = "suffix";
+  @jakarta.annotation.Nullable
   private String suffix;
 
   public static final String JSON_PROPERTY_IS_REMOVE_PREFIX = "isRemovePrefix";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemovePrefix;
 
   public static final String JSON_PROPERTY_IS_REMOVE_SUFFIX = "isRemoveSuffix";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveSuffix;
 
   public static final String JSON_PROPERTY_IS_REMOVE_BRAND_COLOR = "isRemoveBrandColor";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveBrandColor;
 
   public AdGroupAdServiceDynamicDisplayAd() {
   }
 
-  public AdGroupAdServiceDynamicDisplayAd brandColor(String brandColor) {
+  public AdGroupAdServiceDynamicDisplayAd brandColor(@jakarta.annotation.Nullable String brandColor) {
     
     this.brandColor = brandColor;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ブランドカラーです。&lt;br&gt; ※RGB、HEX指定です。&lt;br&gt; 設定例：#FFFFFF&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Brand color.&lt;br&gt; Format :RGB or HEX&lt;br&gt; e.g.：#FFFFFF&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return brandColor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_COLOR)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_COLOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getBrandColor() {
@@ -138,25 +159,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_COLOR)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_COLOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandColor(String brandColor) {
+  public void setBrandColor(@jakarta.annotation.Nullable String brandColor) {
     this.brandColor = brandColor;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd buttonText(AdGroupAdServiceButtonText buttonText) {
+  public AdGroupAdServiceDynamicDisplayAd buttonText(@jakarta.annotation.Nullable AdGroupAdServiceButtonText buttonText) {
     
     this.buttonText = buttonText;
     return this;
   }
 
-   /**
+  /**
    * Get buttonText
    * @return buttonText
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_BUTTON_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceButtonText getButtonText() {
@@ -164,25 +184,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_BUTTON_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setButtonText(AdGroupAdServiceButtonText buttonText) {
+  public void setButtonText(@jakarta.annotation.Nullable AdGroupAdServiceButtonText buttonText) {
     this.buttonText = buttonText;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId(Long campaignBannerMediaId) {
+  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId(@jakarta.annotation.Nullable Long campaignBannerMediaId) {
     
     this.campaignBannerMediaId = campaignBannerMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアIDです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBannerMediaId() {
@@ -190,25 +209,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBannerMediaId(Long campaignBannerMediaId) {
+  public void setCampaignBannerMediaId(@jakarta.annotation.Nullable Long campaignBannerMediaId) {
     this.campaignBannerMediaId = campaignBannerMediaId;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId2(Long campaignBannerMediaId2) {
+  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId2(@jakarta.annotation.Nullable Long campaignBannerMediaId2) {
     
     this.campaignBannerMediaId2 = campaignBannerMediaId2;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアID 2です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID 2.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID2)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBannerMediaId2() {
@@ -216,25 +234,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID2)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBannerMediaId2(Long campaignBannerMediaId2) {
+  public void setCampaignBannerMediaId2(@jakarta.annotation.Nullable Long campaignBannerMediaId2) {
     this.campaignBannerMediaId2 = campaignBannerMediaId2;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId3(Long campaignBannerMediaId3) {
+  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId3(@jakarta.annotation.Nullable Long campaignBannerMediaId3) {
     
     this.campaignBannerMediaId3 = campaignBannerMediaId3;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアID 3です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID 3.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId3
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID3)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBannerMediaId3() {
@@ -242,25 +259,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID3)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBannerMediaId3(Long campaignBannerMediaId3) {
+  public void setCampaignBannerMediaId3(@jakarta.annotation.Nullable Long campaignBannerMediaId3) {
     this.campaignBannerMediaId3 = campaignBannerMediaId3;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId4(Long campaignBannerMediaId4) {
+  public AdGroupAdServiceDynamicDisplayAd campaignBannerMediaId4(@jakarta.annotation.Nullable Long campaignBannerMediaId4) {
     
     this.campaignBannerMediaId4 = campaignBannerMediaId4;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナー画像のメディアID 4です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner media ID 4.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return campaignBannerMediaId4
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID4)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID4, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBannerMediaId4() {
@@ -268,25 +284,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID4)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_MEDIA_ID4, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBannerMediaId4(Long campaignBannerMediaId4) {
+  public void setCampaignBannerMediaId4(@jakarta.annotation.Nullable Long campaignBannerMediaId4) {
     this.campaignBannerMediaId4 = campaignBannerMediaId4;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd campaignBannerUrl(String campaignBannerUrl) {
+  public AdGroupAdServiceDynamicDisplayAd campaignBannerUrl(@jakarta.annotation.Nullable String campaignBannerUrl) {
     
     this.campaignBannerUrl = campaignBannerUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンバナーURLです。&lt;br&gt; このフィールドは省略可能となります。&lt;br&gt; ADD時、設定する場合は以下のいずれかの指定が必要となります。&lt;br&gt; - campaignBannerMediaId&lt;br&gt; - campaignBannerMediaId2&lt;br&gt; - campaignBannerMediaId3&lt;br&gt; - campaignBannerMediaId4 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign banner URL.&lt;br&gt; This field is optional.&lt;br&gt; For setting in ADD operation, one of the following is required:&lt;br&gt; - campaignBannerMediaId&lt;br&gt; - campaignBannerMediaId2&lt;br&gt; - campaignBannerMediaId3&lt;br&gt; - campaignBannerMediaId4 &lt;/div&gt; 
    * @return campaignBannerUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_URL)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignBannerUrl() {
@@ -294,25 +309,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BANNER_URL)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BANNER_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBannerUrl(String campaignBannerUrl) {
+  public void setCampaignBannerUrl(@jakarta.annotation.Nullable String campaignBannerUrl) {
     this.campaignBannerUrl = campaignBannerUrl;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId) {
     
     this.isRemoveCampaignBannerMediaId = isRemoveCampaignBannerMediaId;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCampaignBannerMediaId
    * @return isRemoveCampaignBannerMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveCampaignBannerMediaId() {
@@ -320,25 +334,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCampaignBannerMediaId(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId) {
+  public void setIsRemoveCampaignBannerMediaId(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId) {
     this.isRemoveCampaignBannerMediaId = isRemoveCampaignBannerMediaId;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId2(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId2) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId2(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId2) {
     
     this.isRemoveCampaignBannerMediaId2 = isRemoveCampaignBannerMediaId2;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCampaignBannerMediaId2
    * @return isRemoveCampaignBannerMediaId2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID2)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveCampaignBannerMediaId2() {
@@ -346,25 +359,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID2)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCampaignBannerMediaId2(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId2) {
+  public void setIsRemoveCampaignBannerMediaId2(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId2) {
     this.isRemoveCampaignBannerMediaId2 = isRemoveCampaignBannerMediaId2;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId3(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId3) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId3(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId3) {
     
     this.isRemoveCampaignBannerMediaId3 = isRemoveCampaignBannerMediaId3;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCampaignBannerMediaId3
    * @return isRemoveCampaignBannerMediaId3
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID3)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveCampaignBannerMediaId3() {
@@ -372,25 +384,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID3)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCampaignBannerMediaId3(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId3) {
+  public void setIsRemoveCampaignBannerMediaId3(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId3) {
     this.isRemoveCampaignBannerMediaId3 = isRemoveCampaignBannerMediaId3;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId4(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId4) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerMediaId4(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId4) {
     
     this.isRemoveCampaignBannerMediaId4 = isRemoveCampaignBannerMediaId4;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCampaignBannerMediaId4
    * @return isRemoveCampaignBannerMediaId4
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID4)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID4, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveCampaignBannerMediaId4() {
@@ -398,25 +409,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID4)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_MEDIA_ID4, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCampaignBannerMediaId4(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId4) {
+  public void setIsRemoveCampaignBannerMediaId4(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerMediaId4) {
     this.isRemoveCampaignBannerMediaId4 = isRemoveCampaignBannerMediaId4;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerUrl(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerUrl) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveCampaignBannerUrl(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerUrl) {
     
     this.isRemoveCampaignBannerUrl = isRemoveCampaignBannerUrl;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCampaignBannerUrl
    * @return isRemoveCampaignBannerUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveCampaignBannerUrl() {
@@ -424,25 +434,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BANNER_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCampaignBannerUrl(AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerUrl) {
+  public void setIsRemoveCampaignBannerUrl(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveCampaignBannerUrl) {
     this.isRemoveCampaignBannerUrl = isRemoveCampaignBannerUrl;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd logoMediaId(Long logoMediaId) {
+  public AdGroupAdServiceDynamicDisplayAd logoMediaId(@jakarta.annotation.Nullable Long logoMediaId) {
     
     this.logoMediaId = logoMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴ画像のメディアIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of logo image.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return logoMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLogoMediaId() {
@@ -450,25 +459,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogoMediaId(Long logoMediaId) {
+  public void setLogoMediaId(@jakarta.annotation.Nullable Long logoMediaId) {
     this.logoMediaId = logoMediaId;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd logoMediaId2(Long logoMediaId2) {
+  public AdGroupAdServiceDynamicDisplayAd logoMediaId2(@jakarta.annotation.Nullable Long logoMediaId2) {
     
     this.logoMediaId2 = logoMediaId2;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴ画像のメディアID 2です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of logo image 2.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return logoMediaId2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID2)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLogoMediaId2() {
@@ -476,25 +484,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID2)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogoMediaId2(Long logoMediaId2) {
+  public void setLogoMediaId2(@jakarta.annotation.Nullable Long logoMediaId2) {
     this.logoMediaId2 = logoMediaId2;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd logoMediaId3(Long logoMediaId3) {
+  public AdGroupAdServiceDynamicDisplayAd logoMediaId3(@jakarta.annotation.Nullable Long logoMediaId3) {
     
     this.logoMediaId3 = logoMediaId3;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴ画像のメディアID 3です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID of logo image 3.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return logoMediaId3
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID3)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLogoMediaId3() {
@@ -502,25 +509,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID3)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogoMediaId3(Long logoMediaId3) {
+  public void setLogoMediaId3(@jakarta.annotation.Nullable Long logoMediaId3) {
     this.logoMediaId3 = logoMediaId3;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd prefix(String prefix) {
+  public AdGroupAdServiceDynamicDisplayAd prefix(@jakarta.annotation.Nullable String prefix) {
     
     this.prefix = prefix;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; プレフィックスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Prefix.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return prefix
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PREFIX)
+  @JsonProperty(value = JSON_PROPERTY_PREFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPrefix() {
@@ -528,25 +534,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PREFIX)
+  @JsonProperty(value = JSON_PROPERTY_PREFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPrefix(String prefix) {
+  public void setPrefix(@jakarta.annotation.Nullable String prefix) {
     this.prefix = prefix;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd principal(String principal) {
+  public AdGroupAdServiceDynamicDisplayAd principal(@jakarta.annotation.Nullable String principal) {
     
     this.principal = principal;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告の主体者表記です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Advertiser indication.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return principal
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRINCIPAL)
+  @JsonProperty(value = JSON_PROPERTY_PRINCIPAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPrincipal() {
@@ -554,25 +559,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PRINCIPAL)
+  @JsonProperty(value = JSON_PROPERTY_PRINCIPAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPrincipal(String principal) {
+  public void setPrincipal(@jakarta.annotation.Nullable String principal) {
     this.principal = principal;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd suffix(String suffix) {
+  public AdGroupAdServiceDynamicDisplayAd suffix(@jakarta.annotation.Nullable String suffix) {
     
     this.suffix = suffix;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サフィックスです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Suffix.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return suffix
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSuffix() {
@@ -580,25 +584,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSuffix(String suffix) {
+  public void setSuffix(@jakarta.annotation.Nullable String suffix) {
     this.suffix = suffix;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemovePrefix(AdGroupAdServiceIsRemoveFlg isRemovePrefix) {
+  public AdGroupAdServiceDynamicDisplayAd isRemovePrefix(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemovePrefix) {
     
     this.isRemovePrefix = isRemovePrefix;
     return this;
   }
 
-   /**
+  /**
    * Get isRemovePrefix
    * @return isRemovePrefix
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_PREFIX)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_PREFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemovePrefix() {
@@ -606,25 +609,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_PREFIX)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_PREFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemovePrefix(AdGroupAdServiceIsRemoveFlg isRemovePrefix) {
+  public void setIsRemovePrefix(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemovePrefix) {
     this.isRemovePrefix = isRemovePrefix;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveSuffix(AdGroupAdServiceIsRemoveFlg isRemoveSuffix) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveSuffix(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveSuffix) {
     
     this.isRemoveSuffix = isRemoveSuffix;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveSuffix
    * @return isRemoveSuffix
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveSuffix() {
@@ -632,25 +634,24 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_SUFFIX)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_SUFFIX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveSuffix(AdGroupAdServiceIsRemoveFlg isRemoveSuffix) {
+  public void setIsRemoveSuffix(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveSuffix) {
     this.isRemoveSuffix = isRemoveSuffix;
   }
 
-
-  public AdGroupAdServiceDynamicDisplayAd isRemoveBrandColor(AdGroupAdServiceIsRemoveFlg isRemoveBrandColor) {
+  public AdGroupAdServiceDynamicDisplayAd isRemoveBrandColor(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveBrandColor) {
     
     this.isRemoveBrandColor = isRemoveBrandColor;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveBrandColor
    * @return isRemoveBrandColor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_BRAND_COLOR)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_BRAND_COLOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveBrandColor() {
@@ -658,11 +659,12 @@ public class AdGroupAdServiceDynamicDisplayAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_BRAND_COLOR)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_BRAND_COLOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveBrandColor(AdGroupAdServiceIsRemoveFlg isRemoveBrandColor) {
+  public void setIsRemoveBrandColor(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveBrandColor) {
     this.isRemoveBrandColor = isRemoveBrandColor;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -735,10 +737,7 @@ public class AdGroupAdServiceDynamicDisplayAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

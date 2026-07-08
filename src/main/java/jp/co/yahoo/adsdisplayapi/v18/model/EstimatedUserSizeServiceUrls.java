@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.EstimatedUserSizeServiceUnavailableUrl;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;EstimatedUserSizeServiceUrlsオブジェクトは、URLの情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;EstimatedUserSizeServiceUrls describes information of url.&lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   EstimatedUserSizeServiceUrls.JSON_PROPERTY_URL,
   EstimatedUserSizeServiceUrls.JSON_PROPERTY_UNAVAILABLE_URL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class EstimatedUserSizeServiceUrls {
   public static final String JSON_PROPERTY_URL = "url";
+  @jakarta.annotation.Nullable
   private String url;
 
   public static final String JSON_PROPERTY_UNAVAILABLE_URL = "unavailableUrl";
+  @jakarta.annotation.Nullable
   private EstimatedUserSizeServiceUnavailableUrl unavailableUrl;
 
   public EstimatedUserSizeServiceUrls() {
   }
 
-  public EstimatedUserSizeServiceUrls url(String url) {
+  public EstimatedUserSizeServiceUrls url(@jakarta.annotation.Nullable String url) {
     
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; URLです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; url. &lt;/div&gt; 
    * @return url
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonProperty(value = JSON_PROPERTY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUrl() {
@@ -61,25 +63,24 @@ public class EstimatedUserSizeServiceUrls {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonProperty(value = JSON_PROPERTY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrl(String url) {
+  public void setUrl(@jakarta.annotation.Nullable String url) {
     this.url = url;
   }
 
-
-  public EstimatedUserSizeServiceUrls unavailableUrl(EstimatedUserSizeServiceUnavailableUrl unavailableUrl) {
+  public EstimatedUserSizeServiceUrls unavailableUrl(@jakarta.annotation.Nullable EstimatedUserSizeServiceUnavailableUrl unavailableUrl) {
     
     this.unavailableUrl = unavailableUrl;
     return this;
   }
 
-   /**
+  /**
    * Get unavailableUrl
    * @return unavailableUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UNAVAILABLE_URL)
+  @JsonProperty(value = JSON_PROPERTY_UNAVAILABLE_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public EstimatedUserSizeServiceUnavailableUrl getUnavailableUrl() {
@@ -87,11 +88,12 @@ public class EstimatedUserSizeServiceUrls {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UNAVAILABLE_URL)
+  @JsonProperty(value = JSON_PROPERTY_UNAVAILABLE_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUnavailableUrl(EstimatedUserSizeServiceUnavailableUrl unavailableUrl) {
+  public void setUnavailableUrl(@jakarta.annotation.Nullable EstimatedUserSizeServiceUnavailableUrl unavailableUrl) {
     this.unavailableUrl = unavailableUrl;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class EstimatedUserSizeServiceUrls {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

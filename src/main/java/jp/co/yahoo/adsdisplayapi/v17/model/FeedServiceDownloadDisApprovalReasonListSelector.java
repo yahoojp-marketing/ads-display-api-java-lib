@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.FeedServiceEncoding;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Feed情報の審査否認理由をダウンロードします。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Download the disapproval reason list.&lt;/div&gt; 
@@ -32,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedServiceDownloadDisApprovalReasonListSelector.JSON_PROPERTY_FEED_ID,
   FeedServiceDownloadDisApprovalReasonListSelector.JSON_PROPERTY_ENCODING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedServiceDownloadDisApprovalReasonListSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
+  @jakarta.annotation.Nonnull
   private Long feedId;
 
   public static final String JSON_PROPERTY_ENCODING = "encoding";
+  @jakarta.annotation.Nullable
   private FeedServiceEncoding encoding;
 
   public FeedServiceDownloadDisApprovalReasonListSelector() {
   }
 
-  public FeedServiceDownloadDisApprovalReasonListSelector accountId(Long accountId) {
+  public FeedServiceDownloadDisApprovalReasonListSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -65,25 +68,24 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public FeedServiceDownloadDisApprovalReasonListSelector feedId(Long feedId) {
+  public FeedServiceDownloadDisApprovalReasonListSelector feedId(@jakarta.annotation.Nonnull Long feedId) {
     
     this.feedId = feedId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：フィードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Feed ID.&lt;/div&gt; 
    * @return feedId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getFeedId() {
@@ -91,25 +93,24 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setFeedId(Long feedId) {
+  public void setFeedId(@jakarta.annotation.Nonnull Long feedId) {
     this.feedId = feedId;
   }
 
-
-  public FeedServiceDownloadDisApprovalReasonListSelector encoding(FeedServiceEncoding encoding) {
+  public FeedServiceDownloadDisApprovalReasonListSelector encoding(@jakarta.annotation.Nullable FeedServiceEncoding encoding) {
     
     this.encoding = encoding;
     return this;
   }
 
-   /**
+  /**
    * Get encoding
    * @return encoding
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedServiceEncoding getEncoding() {
@@ -117,11 +118,12 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEncoding(FeedServiceEncoding encoding) {
+  public void setEncoding(@jakarta.annotation.Nullable FeedServiceEncoding encoding) {
     this.encoding = encoding;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +160,7 @@ public class FeedServiceDownloadDisApprovalReasonListSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

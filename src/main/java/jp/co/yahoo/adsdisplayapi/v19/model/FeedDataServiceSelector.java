@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.FeedDataServiceFileUploadDateRange;
 import jp.co.yahoo.adsdisplayapi.v19.model.FeedDataServiceFileUploadStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceSelector object retains search condition of get operation.&lt;/div&gt; 
@@ -39,44 +40,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedDataServiceSelector.JSON_PROPERTY_START_INDEX,
   FeedDataServiceSelector.JSON_PROPERTY_UPLOAD_STATUSES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedDataServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
+  @jakarta.annotation.Nullable
   private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE = "fileUploadDateRange";
+  @jakarta.annotation.Nullable
   private FeedDataServiceFileUploadDateRange fileUploadDateRange;
 
   public static final String JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS = "itemListUploadIds";
+  @jakarta.annotation.Nullable
   private List<Long> itemListUploadIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 20;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_UPLOAD_STATUSES = "uploadStatuses";
+  @jakarta.annotation.Nullable
   private List<FeedDataServiceFileUploadStatus> uploadStatuses;
 
   public FeedDataServiceSelector() {
   }
 
-  public FeedDataServiceSelector accountId(Long accountId) {
+  public FeedDataServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -84,14 +92,13 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public FeedDataServiceSelector feedIds(List<Long> feedIds) {
+  public FeedDataServiceSelector feedIds(@jakarta.annotation.Nullable List<Long> feedIds) {
     
     this.feedIds = feedIds;
     return this;
@@ -105,12 +112,12 @@ public class FeedDataServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;/div&gt; 
    * @return feedIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getFeedIds() {
@@ -118,25 +125,24 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedIds(List<Long> feedIds) {
+  public void setFeedIds(@jakarta.annotation.Nullable List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
-
-  public FeedDataServiceSelector fileUploadDateRange(FeedDataServiceFileUploadDateRange fileUploadDateRange) {
+  public FeedDataServiceSelector fileUploadDateRange(@jakarta.annotation.Nullable FeedDataServiceFileUploadDateRange fileUploadDateRange) {
     
     this.fileUploadDateRange = fileUploadDateRange;
     return this;
   }
 
-   /**
+  /**
    * Get fileUploadDateRange
    * @return fileUploadDateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedDataServiceFileUploadDateRange getFileUploadDateRange() {
@@ -144,14 +150,13 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_UPLOAD_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFileUploadDateRange(FeedDataServiceFileUploadDateRange fileUploadDateRange) {
+  public void setFileUploadDateRange(@jakarta.annotation.Nullable FeedDataServiceFileUploadDateRange fileUploadDateRange) {
     this.fileUploadDateRange = fileUploadDateRange;
   }
 
-
-  public FeedDataServiceSelector itemListUploadIds(List<Long> itemListUploadIds) {
+  public FeedDataServiceSelector itemListUploadIds(@jakarta.annotation.Nullable List<Long> itemListUploadIds) {
     
     this.itemListUploadIds = itemListUploadIds;
     return this;
@@ -165,12 +170,12 @@ public class FeedDataServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アップロードした商品情報ID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Uploaded item list ID.&lt;/div&gt; 
    * @return itemListUploadIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getItemListUploadIds() {
@@ -178,27 +183,26 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_LIST_UPLOAD_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setItemListUploadIds(List<Long> itemListUploadIds) {
+  public void setItemListUploadIds(@jakarta.annotation.Nullable List<Long> itemListUploadIds) {
     this.itemListUploadIds = itemListUploadIds;
   }
 
-
-  public FeedDataServiceSelector numberResults(Integer numberResults) {
+  public FeedDataServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 500
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -206,26 +210,25 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public FeedDataServiceSelector startIndex(Integer startIndex) {
+  public FeedDataServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -233,14 +236,13 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public FeedDataServiceSelector uploadStatuses(List<FeedDataServiceFileUploadStatus> uploadStatuses) {
+  public FeedDataServiceSelector uploadStatuses(@jakarta.annotation.Nullable List<FeedDataServiceFileUploadStatus> uploadStatuses) {
     
     this.uploadStatuses = uploadStatuses;
     return this;
@@ -254,12 +256,12 @@ public class FeedDataServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get uploadStatuses
    * @return uploadStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<FeedDataServiceFileUploadStatus> getUploadStatuses() {
@@ -267,11 +269,12 @@ public class FeedDataServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadStatuses(List<FeedDataServiceFileUploadStatus> uploadStatuses) {
+  public void setUploadStatuses(@jakarta.annotation.Nullable List<FeedDataServiceFileUploadStatus> uploadStatuses) {
     this.uploadStatuses = uploadStatuses;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -316,10 +319,7 @@ public class FeedDataServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

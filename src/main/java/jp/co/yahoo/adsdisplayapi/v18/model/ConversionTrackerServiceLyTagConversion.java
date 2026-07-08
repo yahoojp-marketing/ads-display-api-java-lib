@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceLyTagConversionRuleType;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceLyTagConversionUrlRule;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; このフィールドは、計測タグのコンバージョン設定を表します。&lt;br&gt; ADDおよびSET時は省略可能となります。ADD時、conversionTrackerTypeがLY_TAG_CONVERSIONの場合、必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; This field describes the information for the tracking tag.&lt;br&gt; This field is optional in ADD and SET operation. If conversionTrackerType is LY_TAG_CONVERSION, this field is required in ADD operation. &lt;/div&gt; 
@@ -33,32 +33,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceLyTagConversion.JSON_PROPERTY_RULE_TYPE,
   ConversionTrackerServiceLyTagConversion.JSON_PROPERTY_URL_RULE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceLyTagConversion {
   public static final String JSON_PROPERTY_SNIPPET_ID = "snippetId";
+  @jakarta.annotation.Nullable
   private String snippetId;
 
   public static final String JSON_PROPERTY_RULE_TYPE = "ruleType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceLyTagConversionRuleType ruleType;
 
   public static final String JSON_PROPERTY_URL_RULE = "urlRule";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceLyTagConversionUrlRule urlRule;
 
   public ConversionTrackerServiceLyTagConversion() {
   }
 
-  public ConversionTrackerServiceLyTagConversion snippetId(String snippetId) {
+  public ConversionTrackerServiceLyTagConversion snippetId(@jakarta.annotation.Nullable String snippetId) {
     
     this.snippetId = snippetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; スニペットIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Snippet ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return snippetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SNIPPET_ID)
+  @JsonProperty(value = JSON_PROPERTY_SNIPPET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSnippetId() {
@@ -66,25 +69,24 @@ public class ConversionTrackerServiceLyTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SNIPPET_ID)
+  @JsonProperty(value = JSON_PROPERTY_SNIPPET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSnippetId(String snippetId) {
+  public void setSnippetId(@jakarta.annotation.Nullable String snippetId) {
     this.snippetId = snippetId;
   }
 
-
-  public ConversionTrackerServiceLyTagConversion ruleType(ConversionTrackerServiceLyTagConversionRuleType ruleType) {
+  public ConversionTrackerServiceLyTagConversion ruleType(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversionRuleType ruleType) {
     
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceLyTagConversionRuleType getRuleType() {
@@ -92,25 +94,24 @@ public class ConversionTrackerServiceLyTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleType(ConversionTrackerServiceLyTagConversionRuleType ruleType) {
+  public void setRuleType(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversionRuleType ruleType) {
     this.ruleType = ruleType;
   }
 
-
-  public ConversionTrackerServiceLyTagConversion urlRule(ConversionTrackerServiceLyTagConversionUrlRule urlRule) {
+  public ConversionTrackerServiceLyTagConversion urlRule(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversionUrlRule urlRule) {
     
     this.urlRule = urlRule;
     return this;
   }
 
-   /**
+  /**
    * Get urlRule
    * @return urlRule
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_RULE)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceLyTagConversionUrlRule getUrlRule() {
@@ -118,11 +119,12 @@ public class ConversionTrackerServiceLyTagConversion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_RULE)
+  @JsonProperty(value = JSON_PROPERTY_URL_RULE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlRule(ConversionTrackerServiceLyTagConversionUrlRule urlRule) {
+  public void setUrlRule(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversionUrlRule urlRule) {
     this.urlRule = urlRule;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -159,10 +161,7 @@ public class ConversionTrackerServiceLyTagConversion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

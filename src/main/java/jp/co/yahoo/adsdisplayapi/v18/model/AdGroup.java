@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupServiceBiddingStrategyConfiguration;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupServiceCustomParameters;
@@ -33,6 +33,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupServiceSmartTargetingEnabled;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupオブジェクトは、広告グループ情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The Ad Group object is a container for storing ad group information.&lt;/div&gt; 
@@ -59,83 +60,103 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroup.JSON_PROPERTY_CREATED_DATE,
   AdGroup.JSON_PROPERTY_UPDATED_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroup {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION = "biddingStrategyConfiguration";
+  @jakarta.annotation.Nullable
   private AdGroupServiceBiddingStrategyConfiguration biddingStrategyConfiguration;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_NAME = "adGroupName";
+  @jakarta.annotation.Nullable
   private String adGroupName;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private AdGroupServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_DEVICE = "device";
+  @jakarta.annotation.Nullable
   private List<AdGroupServiceDeviceType> device;
 
   public static final String JSON_PROPERTY_DEVICE_APP = "deviceApp";
+  @jakarta.annotation.Nullable
   private List<AdGroupServiceDeviceAppType> deviceApp;
 
   public static final String JSON_PROPERTY_DEVICE_OS = "deviceOs";
+  @jakarta.annotation.Nullable
   private List<AdGroupServiceDeviceOsType> deviceOs;
 
   public static final String JSON_PROPERTY_DEVICE_OS_VERSION = "deviceOsVersion";
+  @jakarta.annotation.Nullable
   private String deviceOsVersion;
 
   public static final String JSON_PROPERTY_FEED_SET_ID = "feedSetId";
+  @jakarta.annotation.Nullable
   private Long feedSetId;
 
   public static final String JSON_PROPERTY_EXCLUDE_LINE_OA_FRIEND_AUDIENCE_LIST_ID = "excludeLineOaFriendAudienceListId";
+  @jakarta.annotation.Nullable
   private Long excludeLineOaFriendAudienceListId;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TRACKING_URL = "isRemoveTrackingUrl";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveTrackingUrl;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
+  @jakarta.annotation.Nullable
   private List<AdGroupServiceLabel> labels;
 
   public static final String JSON_PROPERTY_SMART_TARGETING_ENABLED = "smartTargetingEnabled";
+  @jakarta.annotation.Nullable
   private AdGroupServiceSmartTargetingEnabled smartTargetingEnabled;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private AdGroupServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
+  @jakarta.annotation.Nullable
   private String createdDate;
 
   public static final String JSON_PROPERTY_UPDATED_DATE = "updatedDate";
+  @jakarta.annotation.Nullable
   private String updatedDate;
 
   public AdGroup() {
   }
 
-  public AdGroup accountId(Long accountId) {
+  public AdGroup accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -143,25 +164,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroup biddingStrategyConfiguration(AdGroupServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
+  public AdGroup biddingStrategyConfiguration(@jakarta.annotation.Nullable AdGroupServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
     
     this.biddingStrategyConfiguration = biddingStrategyConfiguration;
     return this;
   }
 
-   /**
+  /**
    * Get biddingStrategyConfiguration
    * @return biddingStrategyConfiguration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceBiddingStrategyConfiguration getBiddingStrategyConfiguration() {
@@ -169,25 +189,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingStrategyConfiguration(AdGroupServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
+  public void setBiddingStrategyConfiguration(@jakarta.annotation.Nullable AdGroupServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
     this.biddingStrategyConfiguration = biddingStrategyConfiguration;
   }
 
-
-  public AdGroup adGroupId(Long adGroupId) {
+  public AdGroup adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID.&lt;br&gt; This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. &lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -195,25 +214,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public AdGroup adGroupName(String adGroupName) {
+  public AdGroup adGroupName(@jakarta.annotation.Nullable String adGroupName) {
     
     this.adGroupName = adGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return adGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdGroupName() {
@@ -221,25 +239,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupName(String adGroupName) {
+  public void setAdGroupName(@jakarta.annotation.Nullable String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
-
-  public AdGroup campaignId(Long campaignId) {
+  public AdGroup campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -247,25 +264,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public AdGroup campaignName(String campaignName) {
+  public AdGroup campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -273,25 +289,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public AdGroup customParameters(AdGroupServiceCustomParameters customParameters) {
+  public AdGroup customParameters(@jakarta.annotation.Nullable AdGroupServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceCustomParameters getCustomParameters() {
@@ -299,14 +314,13 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(AdGroupServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable AdGroupServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public AdGroup device(List<AdGroupServiceDeviceType> device) {
+  public AdGroup device(@jakarta.annotation.Nullable List<AdGroupServiceDeviceType> device) {
     
     this.device = device;
     return this;
@@ -320,12 +334,12 @@ public class AdGroup {
     return this;
   }
 
-   /**
+  /**
    * Get device
    * @return device
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupServiceDeviceType> getDevice() {
@@ -333,14 +347,13 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDevice(List<AdGroupServiceDeviceType> device) {
+  public void setDevice(@jakarta.annotation.Nullable List<AdGroupServiceDeviceType> device) {
     this.device = device;
   }
 
-
-  public AdGroup deviceApp(List<AdGroupServiceDeviceAppType> deviceApp) {
+  public AdGroup deviceApp(@jakarta.annotation.Nullable List<AdGroupServiceDeviceAppType> deviceApp) {
     
     this.deviceApp = deviceApp;
     return this;
@@ -354,12 +367,12 @@ public class AdGroup {
     return this;
   }
 
-   /**
+  /**
    * Get deviceApp
    * @return deviceApp
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE_APP)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_APP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupServiceDeviceAppType> getDeviceApp() {
@@ -367,14 +380,13 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE_APP)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_APP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeviceApp(List<AdGroupServiceDeviceAppType> deviceApp) {
+  public void setDeviceApp(@jakarta.annotation.Nullable List<AdGroupServiceDeviceAppType> deviceApp) {
     this.deviceApp = deviceApp;
   }
 
-
-  public AdGroup deviceOs(List<AdGroupServiceDeviceOsType> deviceOs) {
+  public AdGroup deviceOs(@jakarta.annotation.Nullable List<AdGroupServiceDeviceOsType> deviceOs) {
     
     this.deviceOs = deviceOs;
     return this;
@@ -388,12 +400,12 @@ public class AdGroup {
     return this;
   }
 
-   /**
+  /**
    * Get deviceOs
    * @return deviceOs
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE_OS)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_OS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupServiceDeviceOsType> getDeviceOs() {
@@ -401,25 +413,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE_OS)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_OS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeviceOs(List<AdGroupServiceDeviceOsType> deviceOs) {
+  public void setDeviceOs(@jakarta.annotation.Nullable List<AdGroupServiceDeviceOsType> deviceOs) {
     this.deviceOs = deviceOs;
   }
 
-
-  public AdGroup deviceOsVersion(String deviceOsVersion) {
+  public AdGroup deviceOsVersion(@jakarta.annotation.Nullable String deviceOsVersion) {
     
     this.deviceOsVersion = deviceOsVersion;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; OSバージョンです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※設定を解除する場合は、NONEを設定してください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; OS version.&lt;br&gt; ∗To cancel the setting, specify &amp;#34;NONE&amp;#34;.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return deviceOsVersion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE_OS_VERSION)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_OS_VERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDeviceOsVersion() {
@@ -427,25 +438,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE_OS_VERSION)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_OS_VERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeviceOsVersion(String deviceOsVersion) {
+  public void setDeviceOsVersion(@jakarta.annotation.Nullable String deviceOsVersion) {
     this.deviceOsVersion = deviceOsVersion;
   }
 
-
-  public AdGroup feedSetId(Long feedSetId) {
+  public AdGroup feedSetId(@jakarta.annotation.Nullable Long feedSetId) {
     
     this.feedSetId = feedSetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットIDです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; *ADD時に未指定の場合、デフォルトセットを自動で関連付けます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Feed set ID.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; * If feedSetId is not specified in ADD operation, the default set is associated automatically. &lt;/div&gt; 
    * @return feedSetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFeedSetId() {
@@ -453,25 +463,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedSetId(Long feedSetId) {
+  public void setFeedSetId(@jakarta.annotation.Nullable Long feedSetId) {
     this.feedSetId = feedSetId;
   }
 
-
-  public AdGroup excludeLineOaFriendAudienceListId(Long excludeLineOaFriendAudienceListId) {
+  public AdGroup excludeLineOaFriendAudienceListId(@jakarta.annotation.Nullable Long excludeLineOaFriendAudienceListId) {
     
     this.excludeLineOaFriendAudienceListId = excludeLineOaFriendAudienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 除外するLINE公式アカウントの友だちリストのIDです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; ※campaignGoalがCPFの場合、指定必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The ID of the audience list of Friends of LINE Official Account to exclude.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; *If campaignGoal is CPF, this field is required. &lt;/div&gt; 
    * @return excludeLineOaFriendAudienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_LINE_OA_FRIEND_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDE_LINE_OA_FRIEND_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getExcludeLineOaFriendAudienceListId() {
@@ -479,25 +488,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_LINE_OA_FRIEND_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDE_LINE_OA_FRIEND_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludeLineOaFriendAudienceListId(Long excludeLineOaFriendAudienceListId) {
+  public void setExcludeLineOaFriendAudienceListId(@jakarta.annotation.Nullable Long excludeLineOaFriendAudienceListId) {
     this.excludeLineOaFriendAudienceListId = excludeLineOaFriendAudienceListId;
   }
 
-
-  public AdGroup isRemoveTrackingUrl(AdGroupServiceIsRemoveFlg isRemoveTrackingUrl) {
+  public AdGroup isRemoveTrackingUrl(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTrackingUrl) {
     
     this.isRemoveTrackingUrl = isRemoveTrackingUrl;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveTrackingUrl() {
@@ -505,14 +513,13 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTrackingUrl(AdGroupServiceIsRemoveFlg isRemoveTrackingUrl) {
+  public void setIsRemoveTrackingUrl(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTrackingUrl) {
     this.isRemoveTrackingUrl = isRemoveTrackingUrl;
   }
 
-
-  public AdGroup labels(List<AdGroupServiceLabel> labels) {
+  public AdGroup labels(@jakarta.annotation.Nullable List<AdGroupServiceLabel> labels) {
     
     this.labels = labels;
     return this;
@@ -526,12 +533,12 @@ public class AdGroup {
     return this;
   }
 
-   /**
+  /**
    * Get labels
    * @return labels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupServiceLabel> getLabels() {
@@ -539,25 +546,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabels(List<AdGroupServiceLabel> labels) {
+  public void setLabels(@jakarta.annotation.Nullable List<AdGroupServiceLabel> labels) {
     this.labels = labels;
   }
 
-
-  public AdGroup smartTargetingEnabled(AdGroupServiceSmartTargetingEnabled smartTargetingEnabled) {
+  public AdGroup smartTargetingEnabled(@jakarta.annotation.Nullable AdGroupServiceSmartTargetingEnabled smartTargetingEnabled) {
     
     this.smartTargetingEnabled = smartTargetingEnabled;
     return this;
   }
 
-   /**
+  /**
    * Get smartTargetingEnabled
    * @return smartTargetingEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMART_TARGETING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_SMART_TARGETING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceSmartTargetingEnabled getSmartTargetingEnabled() {
@@ -565,25 +571,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMART_TARGETING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_SMART_TARGETING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartTargetingEnabled(AdGroupServiceSmartTargetingEnabled smartTargetingEnabled) {
+  public void setSmartTargetingEnabled(@jakarta.annotation.Nullable AdGroupServiceSmartTargetingEnabled smartTargetingEnabled) {
     this.smartTargetingEnabled = smartTargetingEnabled;
   }
 
-
-  public AdGroup trackingUrl(String trackingUrl) {
+  public AdGroup trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※SET時、こちらが審査中の場合、編集はできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional.&lt;br&gt; *In SET operation, cannot update it when this field is in editorial review.&lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -591,25 +596,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
-
-  public AdGroup userStatus(AdGroupServiceUserStatus userStatus) {
+  public AdGroup userStatus(@jakarta.annotation.Nullable AdGroupServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceUserStatus getUserStatus() {
@@ -617,25 +621,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(AdGroupServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable AdGroupServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public AdGroup createdDate(String createdDate) {
+  public AdGroup createdDate(@jakarta.annotation.Nullable String createdDate) {
     
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループが作成された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Ad Group made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCreatedDate() {
@@ -643,25 +646,24 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDate(String createdDate) {
+  public void setCreatedDate(@jakarta.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
   }
 
-
-  public AdGroup updatedDate(String updatedDate) {
+  public AdGroup updatedDate(@jakarta.annotation.Nullable String updatedDate) {
     
     this.updatedDate = updatedDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループが更新された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of ad group updated.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return updatedDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPDATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUpdatedDate() {
@@ -669,11 +671,12 @@ public class AdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPDATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUpdatedDate(String updatedDate) {
+  public void setUpdatedDate(@jakarta.annotation.Nullable String updatedDate) {
     this.updatedDate = updatedDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -744,10 +747,7 @@ public class AdGroup {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

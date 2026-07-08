@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,13 +18,14 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.FeedSetServiceConditionSet;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedSetオブジェクトは、商品セット情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSet object contains Item Set information.&lt;/div&gt; 
@@ -38,44 +39,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedSet.JSON_PROPERTY_IS_DEFAULT_SET,
   FeedSet.JSON_PROPERTY_ITEM_COUNT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedSet {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CONDITION_SETS = "conditionSets";
+  @jakarta.annotation.Nullable
   private List<FeedSetServiceConditionSet> conditionSets;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
+  @jakarta.annotation.Nullable
   private Long feedId;
 
   public static final String JSON_PROPERTY_FEED_SET_ID = "feedSetId";
+  @jakarta.annotation.Nullable
   private Long feedSetId;
 
   public static final String JSON_PROPERTY_FEED_SET_NAME = "feedSetName";
+  @jakarta.annotation.Nullable
   private String feedSetName;
 
   public static final String JSON_PROPERTY_IS_DEFAULT_SET = "isDefaultSet";
+  @jakarta.annotation.Nullable
   private Boolean isDefaultSet;
 
   public static final String JSON_PROPERTY_ITEM_COUNT = "itemCount";
+  @jakarta.annotation.Nullable
   private Long itemCount;
 
   public FeedSet() {
   }
 
-  public FeedSet accountId(Long accountId) {
+  public FeedSet accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -83,14 +91,13 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public FeedSet conditionSets(List<FeedSetServiceConditionSet> conditionSets) {
+  public FeedSet conditionSets(@jakarta.annotation.Nullable List<FeedSetServiceConditionSet> conditionSets) {
     
     this.conditionSets = conditionSets;
     return this;
@@ -104,12 +111,12 @@ public class FeedSet {
     return this;
   }
 
-   /**
+  /**
    * Get conditionSets
    * @return conditionSets
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONDITION_SETS)
+  @JsonProperty(value = JSON_PROPERTY_CONDITION_SETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<FeedSetServiceConditionSet> getConditionSets() {
@@ -117,25 +124,24 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONDITION_SETS)
+  @JsonProperty(value = JSON_PROPERTY_CONDITION_SETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConditionSets(List<FeedSetServiceConditionSet> conditionSets) {
+  public void setConditionSets(@jakarta.annotation.Nullable List<FeedSetServiceConditionSet> conditionSets) {
     this.conditionSets = conditionSets;
   }
 
-
-  public FeedSet feedId(Long feedId) {
+  public FeedSet feedId(@jakarta.annotation.Nullable Long feedId) {
     
     this.feedId = feedId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; Feedを識別するIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Feed ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return feedId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFeedId() {
@@ -143,25 +149,24 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedId(Long feedId) {
+  public void setFeedId(@jakarta.annotation.Nullable Long feedId) {
     this.feedId = feedId;
   }
 
-
-  public FeedSet feedSetId(Long feedSetId) {
+  public FeedSet feedSetId(@jakarta.annotation.Nullable Long feedSetId) {
     
     this.feedSetId = feedSetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットIDです。&lt;br&gt; REMOVE時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Item set ID.&lt;br&gt; This field is required in REMOVE operation. &lt;/div&gt; 
    * @return feedSetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFeedSetId() {
@@ -169,25 +174,24 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_SET_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedSetId(Long feedSetId) {
+  public void setFeedSetId(@jakarta.annotation.Nullable Long feedSetId) {
     this.feedSetId = feedSetId;
   }
 
-
-  public FeedSet feedSetName(String feedSetName) {
+  public FeedSet feedSetName(@jakarta.annotation.Nullable String feedSetName) {
     
     this.feedSetName = feedSetName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セット名です。&lt;br&gt; ADD時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Item set name.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return feedSetName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_SET_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFeedSetName() {
@@ -195,25 +199,24 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_SET_NAME)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedSetName(String feedSetName) {
+  public void setFeedSetName(@jakarta.annotation.Nullable String feedSetName) {
     this.feedSetName = feedSetName;
   }
 
-
-  public FeedSet isDefaultSet(Boolean isDefaultSet) {
+  public FeedSet isDefaultSet(@jakarta.annotation.Nullable Boolean isDefaultSet) {
     
     this.isDefaultSet = isDefaultSet;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デフォルトセット判定です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Default setting of Item set or not.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return isDefaultSet
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_DEFAULT_SET)
+  @JsonProperty(value = JSON_PROPERTY_IS_DEFAULT_SET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getIsDefaultSet() {
@@ -221,25 +224,24 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_DEFAULT_SET)
+  @JsonProperty(value = JSON_PROPERTY_IS_DEFAULT_SET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsDefaultSet(Boolean isDefaultSet) {
+  public void setIsDefaultSet(@jakarta.annotation.Nullable Boolean isDefaultSet) {
     this.isDefaultSet = isDefaultSet;
   }
 
-
-  public FeedSet itemCount(Long itemCount) {
+  public FeedSet itemCount(@jakarta.annotation.Nullable Long itemCount) {
     
     this.itemCount = itemCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットの条件に含まれるアイテム数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of items included in Item set conditions.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return itemCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ITEM_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getItemCount() {
@@ -247,11 +249,12 @@ public class FeedSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ITEM_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setItemCount(Long itemCount) {
+  public void setItemCount(@jakarta.annotation.Nullable Long itemCount) {
     this.itemCount = itemCount;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -296,10 +299,7 @@ public class FeedSet {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

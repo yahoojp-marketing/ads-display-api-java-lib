@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,15 +18,16 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.AppLinkServiceAppLinkStatus;
 import jp.co.yahoo.adsdisplayapi.v18.model.AppLinkServiceAppPlatform;
 import jp.co.yahoo.adsdisplayapi.v18.model.AppLinkServiceAppVendor;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AppLinkServiceSelector object contains a set of criteria (parameters) for get method.&lt;/div&gt; 
@@ -40,44 +41,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppLinkServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AppLinkServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AppLinkServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_APP_VENDORS = "appVendors";
+  @jakarta.annotation.Nullable
   private List<AppLinkServiceAppVendor> appVendors;
 
   public static final String JSON_PROPERTY_LINK_IDS = "linkIds";
+  @jakarta.annotation.Nullable
   private List<String> linkIds;
 
   public static final String JSON_PROPERTY_APP_PLATFORM = "appPlatform";
+  @jakarta.annotation.Nullable
   private AppLinkServiceAppPlatform appPlatform;
 
   public static final String JSON_PROPERTY_APP_LINK_STATUS = "appLinkStatus";
+  @jakarta.annotation.Nullable
   private AppLinkServiceAppLinkStatus appLinkStatus;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public AppLinkServiceSelector() {
   }
 
-  public AppLinkServiceSelector accountId(Long accountId) {
+  public AppLinkServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -85,14 +93,13 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AppLinkServiceSelector appVendors(List<AppLinkServiceAppVendor> appVendors) {
+  public AppLinkServiceSelector appVendors(@jakarta.annotation.Nullable List<AppLinkServiceAppVendor> appVendors) {
     
     this.appVendors = appVendors;
     return this;
@@ -106,12 +113,12 @@ public class AppLinkServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get appVendors
    * @return appVendors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDORS)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AppLinkServiceAppVendor> getAppVendors() {
@@ -119,14 +126,13 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDORS)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendors(List<AppLinkServiceAppVendor> appVendors) {
+  public void setAppVendors(@jakarta.annotation.Nullable List<AppLinkServiceAppVendor> appVendors) {
     this.appVendors = appVendors;
   }
 
-
-  public AppLinkServiceSelector linkIds(List<String> linkIds) {
+  public AppLinkServiceSelector linkIds(@jakarta.annotation.Nullable List<String> linkIds) {
     
     this.linkIds = linkIds;
     return this;
@@ -140,12 +146,12 @@ public class AppLinkServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リンクID。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Link ID&lt;/div&gt; 
    * @return linkIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINK_IDS)
+  @JsonProperty(value = JSON_PROPERTY_LINK_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getLinkIds() {
@@ -153,25 +159,24 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINK_IDS)
+  @JsonProperty(value = JSON_PROPERTY_LINK_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLinkIds(List<String> linkIds) {
+  public void setLinkIds(@jakarta.annotation.Nullable List<String> linkIds) {
     this.linkIds = linkIds;
   }
 
-
-  public AppLinkServiceSelector appPlatform(AppLinkServiceAppPlatform appPlatform) {
+  public AppLinkServiceSelector appPlatform(@jakarta.annotation.Nullable AppLinkServiceAppPlatform appPlatform) {
     
     this.appPlatform = appPlatform;
     return this;
   }
 
-   /**
+  /**
    * Get appPlatform
    * @return appPlatform
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AppLinkServiceAppPlatform getAppPlatform() {
@@ -179,25 +184,24 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppPlatform(AppLinkServiceAppPlatform appPlatform) {
+  public void setAppPlatform(@jakarta.annotation.Nullable AppLinkServiceAppPlatform appPlatform) {
     this.appPlatform = appPlatform;
   }
 
-
-  public AppLinkServiceSelector appLinkStatus(AppLinkServiceAppLinkStatus appLinkStatus) {
+  public AppLinkServiceSelector appLinkStatus(@jakarta.annotation.Nullable AppLinkServiceAppLinkStatus appLinkStatus) {
     
     this.appLinkStatus = appLinkStatus;
     return this;
   }
 
-   /**
+  /**
    * Get appLinkStatus
    * @return appLinkStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_LINK_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AppLinkServiceAppLinkStatus getAppLinkStatus() {
@@ -205,27 +209,26 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_LINK_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppLinkStatus(AppLinkServiceAppLinkStatus appLinkStatus) {
+  public void setAppLinkStatus(@jakarta.annotation.Nullable AppLinkServiceAppLinkStatus appLinkStatus) {
     this.appLinkStatus = appLinkStatus;
   }
 
-
-  public AppLinkServiceSelector numberResults(Integer numberResults) {
+  public AppLinkServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 1000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -233,26 +236,25 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public AppLinkServiceSelector startIndex(Integer startIndex) {
+  public AppLinkServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -260,11 +262,12 @@ public class AppLinkServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -309,10 +312,7 @@ public class AppLinkServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

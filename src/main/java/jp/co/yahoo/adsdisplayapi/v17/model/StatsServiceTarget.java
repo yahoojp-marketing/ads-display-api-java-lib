@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceAdScheduleTarget;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceAgeTarget;
@@ -37,6 +36,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceTargetSetting;
 import jp.co.yahoo.adsdisplayapi.v17.model.StatsServiceTargetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceTargetオブジェクトは、ターゲット設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTarget object holds configuration information of StatsServiceTargeting.&lt;/div&gt; 
@@ -59,71 +59,87 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceTarget.JSON_PROPERTY_TARGET_SETTING,
   StatsServiceTarget.JSON_PROPERTY_TARGET_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceTarget {
   public static final String JSON_PROPERTY_AD_SCHEDULE_TARGET = "adScheduleTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceAdScheduleTarget adScheduleTarget;
 
   public static final String JSON_PROPERTY_AGE_TARGET = "ageTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceAgeTarget ageTarget;
 
   public static final String JSON_PROPERTY_APP_TARGET = "appTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceAppTarget appTarget;
 
   public static final String JSON_PROPERTY_DEVICE_TARGET = "deviceTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceDeviceTarget deviceTarget;
 
   public static final String JSON_PROPERTY_GENDER_TARGET = "genderTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceGenderTarget genderTarget;
 
   public static final String JSON_PROPERTY_GEO_TARGET = "geoTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceGeoTarget geoTarget;
 
   public static final String JSON_PROPERTY_OS_TARGET = "osTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceOsTarget osTarget;
 
   public static final String JSON_PROPERTY_OS_VERSION_TARGET = "osVersionTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceOsVersionTarget osVersionTarget;
 
   public static final String JSON_PROPERTY_PLACEMENT_TARGET = "placementTarget";
+  @jakarta.annotation.Nullable
   private StatsServicePlacementTarget placementTarget;
 
   public static final String JSON_PROPERTY_SEARCH_TARGET = "searchTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceSearchTarget searchTarget;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TARGET = "audienceListTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceAudienceListTarget audienceListTarget;
 
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET = "placementCategoryDetailTarget";
+  @jakarta.annotation.Nullable
   private StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget;
 
   public static final String JSON_PROPERTY_CONTENTS_TARGET = "contentsTarget";
+  @jakarta.annotation.Nullable
   private StatsServiceContentsTarget contentsTarget;
 
   public static final String JSON_PROPERTY_TARGET_ID = "targetId";
+  @jakarta.annotation.Nullable
   private String targetId;
 
   public static final String JSON_PROPERTY_TARGET_SETTING = "targetSetting";
+  @jakarta.annotation.Nullable
   private StatsServiceTargetSetting targetSetting;
 
   public static final String JSON_PROPERTY_TARGET_TYPE = "targetType";
+  @jakarta.annotation.Nullable
   private StatsServiceTargetType targetType;
 
   public StatsServiceTarget() {
   }
 
-  public StatsServiceTarget adScheduleTarget(StatsServiceAdScheduleTarget adScheduleTarget) {
+  public StatsServiceTarget adScheduleTarget(@jakarta.annotation.Nullable StatsServiceAdScheduleTarget adScheduleTarget) {
     
     this.adScheduleTarget = adScheduleTarget;
     return this;
   }
 
-   /**
+  /**
    * Get adScheduleTarget
    * @return adScheduleTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_SCHEDULE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AD_SCHEDULE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAdScheduleTarget getAdScheduleTarget() {
@@ -131,25 +147,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_SCHEDULE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AD_SCHEDULE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdScheduleTarget(StatsServiceAdScheduleTarget adScheduleTarget) {
+  public void setAdScheduleTarget(@jakarta.annotation.Nullable StatsServiceAdScheduleTarget adScheduleTarget) {
     this.adScheduleTarget = adScheduleTarget;
   }
 
-
-  public StatsServiceTarget ageTarget(StatsServiceAgeTarget ageTarget) {
+  public StatsServiceTarget ageTarget(@jakarta.annotation.Nullable StatsServiceAgeTarget ageTarget) {
     
     this.ageTarget = ageTarget;
     return this;
   }
 
-   /**
+  /**
    * Get ageTarget
    * @return ageTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AGE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AGE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAgeTarget getAgeTarget() {
@@ -157,25 +172,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AGE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AGE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAgeTarget(StatsServiceAgeTarget ageTarget) {
+  public void setAgeTarget(@jakarta.annotation.Nullable StatsServiceAgeTarget ageTarget) {
     this.ageTarget = ageTarget;
   }
 
-
-  public StatsServiceTarget appTarget(StatsServiceAppTarget appTarget) {
+  public StatsServiceTarget appTarget(@jakarta.annotation.Nullable StatsServiceAppTarget appTarget) {
     
     this.appTarget = appTarget;
     return this;
   }
 
-   /**
+  /**
    * Get appTarget
    * @return appTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_APP_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAppTarget getAppTarget() {
@@ -183,25 +197,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_APP_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppTarget(StatsServiceAppTarget appTarget) {
+  public void setAppTarget(@jakarta.annotation.Nullable StatsServiceAppTarget appTarget) {
     this.appTarget = appTarget;
   }
 
-
-  public StatsServiceTarget deviceTarget(StatsServiceDeviceTarget deviceTarget) {
+  public StatsServiceTarget deviceTarget(@jakarta.annotation.Nullable StatsServiceDeviceTarget deviceTarget) {
     
     this.deviceTarget = deviceTarget;
     return this;
   }
 
-   /**
+  /**
    * Get deviceTarget
    * @return deviceTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceDeviceTarget getDeviceTarget() {
@@ -209,25 +222,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeviceTarget(StatsServiceDeviceTarget deviceTarget) {
+  public void setDeviceTarget(@jakarta.annotation.Nullable StatsServiceDeviceTarget deviceTarget) {
     this.deviceTarget = deviceTarget;
   }
 
-
-  public StatsServiceTarget genderTarget(StatsServiceGenderTarget genderTarget) {
+  public StatsServiceTarget genderTarget(@jakarta.annotation.Nullable StatsServiceGenderTarget genderTarget) {
     
     this.genderTarget = genderTarget;
     return this;
   }
 
-   /**
+  /**
    * Get genderTarget
    * @return genderTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GENDER_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GENDER_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceGenderTarget getGenderTarget() {
@@ -235,25 +247,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GENDER_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GENDER_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGenderTarget(StatsServiceGenderTarget genderTarget) {
+  public void setGenderTarget(@jakarta.annotation.Nullable StatsServiceGenderTarget genderTarget) {
     this.genderTarget = genderTarget;
   }
 
-
-  public StatsServiceTarget geoTarget(StatsServiceGeoTarget geoTarget) {
+  public StatsServiceTarget geoTarget(@jakarta.annotation.Nullable StatsServiceGeoTarget geoTarget) {
     
     this.geoTarget = geoTarget;
     return this;
   }
 
-   /**
+  /**
    * Get geoTarget
    * @return geoTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEO_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GEO_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceGeoTarget getGeoTarget() {
@@ -261,25 +272,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEO_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GEO_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeoTarget(StatsServiceGeoTarget geoTarget) {
+  public void setGeoTarget(@jakarta.annotation.Nullable StatsServiceGeoTarget geoTarget) {
     this.geoTarget = geoTarget;
   }
 
-
-  public StatsServiceTarget osTarget(StatsServiceOsTarget osTarget) {
+  public StatsServiceTarget osTarget(@jakarta.annotation.Nullable StatsServiceOsTarget osTarget) {
     
     this.osTarget = osTarget;
     return this;
   }
 
-   /**
+  /**
    * Get osTarget
    * @return osTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceOsTarget getOsTarget() {
@@ -287,25 +297,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOsTarget(StatsServiceOsTarget osTarget) {
+  public void setOsTarget(@jakarta.annotation.Nullable StatsServiceOsTarget osTarget) {
     this.osTarget = osTarget;
   }
 
-
-  public StatsServiceTarget osVersionTarget(StatsServiceOsVersionTarget osVersionTarget) {
+  public StatsServiceTarget osVersionTarget(@jakarta.annotation.Nullable StatsServiceOsVersionTarget osVersionTarget) {
     
     this.osVersionTarget = osVersionTarget;
     return this;
   }
 
-   /**
+  /**
    * Get osVersionTarget
    * @return osVersionTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OS_VERSION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_VERSION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceOsVersionTarget getOsVersionTarget() {
@@ -313,25 +322,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OS_VERSION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_VERSION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOsVersionTarget(StatsServiceOsVersionTarget osVersionTarget) {
+  public void setOsVersionTarget(@jakarta.annotation.Nullable StatsServiceOsVersionTarget osVersionTarget) {
     this.osVersionTarget = osVersionTarget;
   }
 
-
-  public StatsServiceTarget placementTarget(StatsServicePlacementTarget placementTarget) {
+  public StatsServiceTarget placementTarget(@jakarta.annotation.Nullable StatsServicePlacementTarget placementTarget) {
     
     this.placementTarget = placementTarget;
     return this;
   }
 
-   /**
+  /**
    * Get placementTarget
    * @return placementTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServicePlacementTarget getPlacementTarget() {
@@ -339,25 +347,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementTarget(StatsServicePlacementTarget placementTarget) {
+  public void setPlacementTarget(@jakarta.annotation.Nullable StatsServicePlacementTarget placementTarget) {
     this.placementTarget = placementTarget;
   }
 
-
-  public StatsServiceTarget searchTarget(StatsServiceSearchTarget searchTarget) {
+  public StatsServiceTarget searchTarget(@jakarta.annotation.Nullable StatsServiceSearchTarget searchTarget) {
     
     this.searchTarget = searchTarget;
     return this;
   }
 
-   /**
+  /**
    * Get searchTarget
    * @return searchTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceSearchTarget getSearchTarget() {
@@ -365,25 +372,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchTarget(StatsServiceSearchTarget searchTarget) {
+  public void setSearchTarget(@jakarta.annotation.Nullable StatsServiceSearchTarget searchTarget) {
     this.searchTarget = searchTarget;
   }
 
-
-  public StatsServiceTarget audienceListTarget(StatsServiceAudienceListTarget audienceListTarget) {
+  public StatsServiceTarget audienceListTarget(@jakarta.annotation.Nullable StatsServiceAudienceListTarget audienceListTarget) {
     
     this.audienceListTarget = audienceListTarget;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListTarget
    * @return audienceListTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAudienceListTarget getAudienceListTarget() {
@@ -391,25 +397,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListTarget(StatsServiceAudienceListTarget audienceListTarget) {
+  public void setAudienceListTarget(@jakarta.annotation.Nullable StatsServiceAudienceListTarget audienceListTarget) {
     this.audienceListTarget = audienceListTarget;
   }
 
-
-  public StatsServiceTarget placementCategoryDetailTarget(StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
+  public StatsServiceTarget placementCategoryDetailTarget(@jakarta.annotation.Nullable StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
     return this;
   }
 
-   /**
+  /**
    * Get placementCategoryDetailTarget
    * @return placementCategoryDetailTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServicePlacementCategoryDetailTarget getPlacementCategoryDetailTarget() {
@@ -417,25 +422,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementCategoryDetailTarget(StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
+  public void setPlacementCategoryDetailTarget(@jakarta.annotation.Nullable StatsServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
   }
 
-
-  public StatsServiceTarget contentsTarget(StatsServiceContentsTarget contentsTarget) {
+  public StatsServiceTarget contentsTarget(@jakarta.annotation.Nullable StatsServiceContentsTarget contentsTarget) {
     
     this.contentsTarget = contentsTarget;
     return this;
   }
 
-   /**
+  /**
    * Get contentsTarget
    * @return contentsTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceContentsTarget getContentsTarget() {
@@ -443,25 +447,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsTarget(StatsServiceContentsTarget contentsTarget) {
+  public void setContentsTarget(@jakarta.annotation.Nullable StatsServiceContentsTarget contentsTarget) {
     this.contentsTarget = contentsTarget;
   }
 
-
-  public StatsServiceTarget targetId(String targetId) {
+  public StatsServiceTarget targetId(@jakarta.annotation.Nullable String targetId) {
     
     this.targetId = targetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ターゲットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceTarget ID&lt;/div&gt; 
    * @return targetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTargetId() {
@@ -469,25 +472,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetId(String targetId) {
+  public void setTargetId(@jakarta.annotation.Nullable String targetId) {
     this.targetId = targetId;
   }
 
-
-  public StatsServiceTarget targetSetting(StatsServiceTargetSetting targetSetting) {
+  public StatsServiceTarget targetSetting(@jakarta.annotation.Nullable StatsServiceTargetSetting targetSetting) {
     
     this.targetSetting = targetSetting;
     return this;
   }
 
-   /**
+  /**
    * Get targetSetting
    * @return targetSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceTargetSetting getTargetSetting() {
@@ -495,25 +497,24 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetSetting(StatsServiceTargetSetting targetSetting) {
+  public void setTargetSetting(@jakarta.annotation.Nullable StatsServiceTargetSetting targetSetting) {
     this.targetSetting = targetSetting;
   }
 
-
-  public StatsServiceTarget targetType(StatsServiceTargetType targetType) {
+  public StatsServiceTarget targetType(@jakarta.annotation.Nullable StatsServiceTargetType targetType) {
     
     this.targetType = targetType;
     return this;
   }
 
-   /**
+  /**
    * Get targetType
    * @return targetType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceTargetType getTargetType() {
@@ -521,11 +522,12 @@ public class StatsServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetType(StatsServiceTargetType targetType) {
+  public void setTargetType(@jakarta.annotation.Nullable StatsServiceTargetType targetType) {
     this.targetType = targetType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -588,10 +590,7 @@ public class StatsServiceTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

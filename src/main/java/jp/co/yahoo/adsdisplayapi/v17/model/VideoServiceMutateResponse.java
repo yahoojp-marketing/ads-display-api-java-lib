@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.Error;
 import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceReturnValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * VideoServiceMutateResponse
@@ -35,21 +36,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   VideoServiceMutateResponse.JSON_PROPERTY_RID,
   VideoServiceMutateResponse.JSON_PROPERTY_RVAL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class VideoServiceMutateResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
+  @jakarta.annotation.Nullable
   private String rid;
 
   public static final String JSON_PROPERTY_RVAL = "rval";
+  @jakarta.annotation.Nullable
   private VideoServiceReturnValue rval;
 
   public VideoServiceMutateResponse() {
   }
 
-  public VideoServiceMutateResponse errors(List<Error> errors) {
+  public VideoServiceMutateResponse errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -63,12 +67,12 @@ public class VideoServiceMutateResponse {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -76,25 +80,24 @@ public class VideoServiceMutateResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public VideoServiceMutateResponse rid(String rid) {
+  public VideoServiceMutateResponse rid(@jakarta.annotation.Nullable String rid) {
     
     this.rid = rid;
     return this;
   }
 
-   /**
+  /**
    * Get rid
    * @return rid
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RID)
+  @JsonProperty(value = JSON_PROPERTY_RID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRid() {
@@ -102,25 +105,24 @@ public class VideoServiceMutateResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RID)
+  @JsonProperty(value = JSON_PROPERTY_RID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRid(String rid) {
+  public void setRid(@jakarta.annotation.Nullable String rid) {
     this.rid = rid;
   }
 
-
-  public VideoServiceMutateResponse rval(VideoServiceReturnValue rval) {
+  public VideoServiceMutateResponse rval(@jakarta.annotation.Nullable VideoServiceReturnValue rval) {
     
     this.rval = rval;
     return this;
   }
 
-   /**
+  /**
    * Get rval
    * @return rval
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RVAL)
+  @JsonProperty(value = JSON_PROPERTY_RVAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceReturnValue getRval() {
@@ -128,11 +130,12 @@ public class VideoServiceMutateResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RVAL)
+  @JsonProperty(value = JSON_PROPERTY_RVAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRval(VideoServiceReturnValue rval) {
+  public void setRval(@jakarta.annotation.Nullable VideoServiceReturnValue rval) {
     this.rval = rval;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +172,7 @@ public class VideoServiceMutateResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

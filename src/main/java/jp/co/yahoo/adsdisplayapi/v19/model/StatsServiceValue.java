@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.Error;
 import jp.co.yahoo.adsdisplayapi.v19.model.StatsServiceAdGroupStatsValue;
@@ -32,6 +32,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.StatsServiceTargetStatsValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.StatsServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceValueオブジェクトは、統計情報1件あたりの実行結果（1 Entity）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceValue object is container for the execution result (1 entity) per single stats information by method.&lt;/div&gt; 
@@ -48,53 +49,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceValue.JSON_PROPERTY_TARGET_STATS_VALUE,
   StatsServiceValue.JSON_PROPERTY_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceValue {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_STATS_VALUE = "adGroupStatsValue";
+  @jakarta.annotation.Nullable
   private StatsServiceAdGroupStatsValue adGroupStatsValue;
 
   public static final String JSON_PROPERTY_AD_STATS_VALUE = "adStatsValue";
+  @jakarta.annotation.Nullable
   private StatsServiceAdStatsValue adStatsValue;
 
   public static final String JSON_PROPERTY_CAMPAIGN_STATS_VALUE = "campaignStatsValue";
+  @jakarta.annotation.Nullable
   private StatsServiceCampaignStatsValue campaignStatsValue;
 
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
+  @jakarta.annotation.Nullable
   private Boolean operationSucceeded;
 
   public static final String JSON_PROPERTY_PERIOD_CUSTOM_DATE = "periodCustomDate";
+  @jakarta.annotation.Nullable
   private StatsServicePeriodCustomDate periodCustomDate;
 
   public static final String JSON_PROPERTY_STATS_PERIOD = "statsPeriod";
+  @jakarta.annotation.Nullable
   private StatsServiceStatsPeriod statsPeriod;
 
   public static final String JSON_PROPERTY_TARGET_STATS_VALUE = "targetStatsValue";
+  @jakarta.annotation.Nullable
   private StatsServiceTargetStatsValue targetStatsValue;
 
   public static final String JSON_PROPERTY_TYPE = "type";
+  @jakarta.annotation.Nullable
   private StatsServiceType type;
 
   public StatsServiceValue() {
   }
 
-  public StatsServiceValue accountId(Long accountId) {
+  public StatsServiceValue accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -102,25 +113,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public StatsServiceValue adGroupStatsValue(StatsServiceAdGroupStatsValue adGroupStatsValue) {
+  public StatsServiceValue adGroupStatsValue(@jakarta.annotation.Nullable StatsServiceAdGroupStatsValue adGroupStatsValue) {
     
     this.adGroupStatsValue = adGroupStatsValue;
     return this;
   }
 
-   /**
+  /**
    * Get adGroupStatsValue
    * @return adGroupStatsValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAdGroupStatsValue getAdGroupStatsValue() {
@@ -128,25 +138,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupStatsValue(StatsServiceAdGroupStatsValue adGroupStatsValue) {
+  public void setAdGroupStatsValue(@jakarta.annotation.Nullable StatsServiceAdGroupStatsValue adGroupStatsValue) {
     this.adGroupStatsValue = adGroupStatsValue;
   }
 
-
-  public StatsServiceValue adStatsValue(StatsServiceAdStatsValue adStatsValue) {
+  public StatsServiceValue adStatsValue(@jakarta.annotation.Nullable StatsServiceAdStatsValue adStatsValue) {
     
     this.adStatsValue = adStatsValue;
     return this;
   }
 
-   /**
+  /**
    * Get adStatsValue
    * @return adStatsValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_AD_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAdStatsValue getAdStatsValue() {
@@ -154,25 +163,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_AD_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdStatsValue(StatsServiceAdStatsValue adStatsValue) {
+  public void setAdStatsValue(@jakarta.annotation.Nullable StatsServiceAdStatsValue adStatsValue) {
     this.adStatsValue = adStatsValue;
   }
 
-
-  public StatsServiceValue campaignStatsValue(StatsServiceCampaignStatsValue campaignStatsValue) {
+  public StatsServiceValue campaignStatsValue(@jakarta.annotation.Nullable StatsServiceCampaignStatsValue campaignStatsValue) {
     
     this.campaignStatsValue = campaignStatsValue;
     return this;
   }
 
-   /**
+  /**
    * Get campaignStatsValue
    * @return campaignStatsValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceCampaignStatsValue getCampaignStatsValue() {
@@ -180,14 +188,13 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignStatsValue(StatsServiceCampaignStatsValue campaignStatsValue) {
+  public void setCampaignStatsValue(@jakarta.annotation.Nullable StatsServiceCampaignStatsValue campaignStatsValue) {
     this.campaignStatsValue = campaignStatsValue;
   }
 
-
-  public StatsServiceValue errors(List<Error> errors) {
+  public StatsServiceValue errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -201,12 +208,12 @@ public class StatsServiceValue {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -214,25 +221,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public StatsServiceValue operationSucceeded(Boolean operationSucceeded) {
+  public StatsServiceValue operationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     
     this.operationSucceeded = operationSucceeded;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getOperationSucceeded() {
@@ -240,25 +246,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOperationSucceeded(Boolean operationSucceeded) {
+  public void setOperationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
 
-
-  public StatsServiceValue periodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
+  public StatsServiceValue periodCustomDate(@jakarta.annotation.Nullable StatsServicePeriodCustomDate periodCustomDate) {
     
     this.periodCustomDate = periodCustomDate;
     return this;
   }
 
-   /**
+  /**
    * Get periodCustomDate
    * @return periodCustomDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD_CUSTOM_DATE)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD_CUSTOM_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServicePeriodCustomDate getPeriodCustomDate() {
@@ -266,25 +271,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PERIOD_CUSTOM_DATE)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD_CUSTOM_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriodCustomDate(StatsServicePeriodCustomDate periodCustomDate) {
+  public void setPeriodCustomDate(@jakarta.annotation.Nullable StatsServicePeriodCustomDate periodCustomDate) {
     this.periodCustomDate = periodCustomDate;
   }
 
-
-  public StatsServiceValue statsPeriod(StatsServiceStatsPeriod statsPeriod) {
+  public StatsServiceValue statsPeriod(@jakarta.annotation.Nullable StatsServiceStatsPeriod statsPeriod) {
     
     this.statsPeriod = statsPeriod;
     return this;
   }
 
-   /**
+  /**
    * Get statsPeriod
    * @return statsPeriod
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_STATS_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceStatsPeriod getStatsPeriod() {
@@ -292,25 +296,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_STATS_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatsPeriod(StatsServiceStatsPeriod statsPeriod) {
+  public void setStatsPeriod(@jakarta.annotation.Nullable StatsServiceStatsPeriod statsPeriod) {
     this.statsPeriod = statsPeriod;
   }
 
-
-  public StatsServiceValue targetStatsValue(StatsServiceTargetStatsValue targetStatsValue) {
+  public StatsServiceValue targetStatsValue(@jakarta.annotation.Nullable StatsServiceTargetStatsValue targetStatsValue) {
     
     this.targetStatsValue = targetStatsValue;
     return this;
   }
 
-   /**
+  /**
    * Get targetStatsValue
    * @return targetStatsValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceTargetStatsValue getTargetStatsValue() {
@@ -318,25 +321,24 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_STATS_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_STATS_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetStatsValue(StatsServiceTargetStatsValue targetStatsValue) {
+  public void setTargetStatsValue(@jakarta.annotation.Nullable StatsServiceTargetStatsValue targetStatsValue) {
     this.targetStatsValue = targetStatsValue;
   }
 
-
-  public StatsServiceValue type(StatsServiceType type) {
+  public StatsServiceValue type(@jakarta.annotation.Nullable StatsServiceType type) {
     
     this.type = type;
     return this;
   }
 
-   /**
+  /**
    * Get type
    * @return type
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceType getType() {
@@ -344,11 +346,12 @@ public class StatsServiceValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setType(StatsServiceType type) {
+  public void setType(@jakarta.annotation.Nullable StatsServiceType type) {
     this.type = type;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -399,10 +402,7 @@ public class StatsServiceValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

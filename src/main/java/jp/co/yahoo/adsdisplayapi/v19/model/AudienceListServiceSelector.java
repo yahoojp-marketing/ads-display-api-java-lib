@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceSharingStatusFilterType;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceSelectorオブジェクトは、オーディエンスリストを指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceSelector object specifies audience list.&lt;/div&gt; 
@@ -39,44 +40,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceSelector.JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE,
   AudienceListServiceSelector.JSON_PROPERTY_INCLUDE_DETAIL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 1000;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_IDS = "audienceListIds";
+  @jakarta.annotation.Nullable
   private List<Long> audienceListIds;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TYPES = "audienceListTypes";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceType> audienceListTypes;
 
   public static final String JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE = "sharingStatusFilterType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceSharingStatusFilterType sharingStatusFilterType;
 
   public static final String JSON_PROPERTY_INCLUDE_DETAIL = "includeDetail";
+  @jakarta.annotation.Nullable
   private Boolean includeDetail = false;
 
   public AudienceListServiceSelector() {
   }
 
-  public AudienceListServiceSelector accountId(Long accountId) {
+  public AudienceListServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -84,27 +92,26 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AudienceListServiceSelector numberResults(Integer numberResults) {
+  public AudienceListServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 1000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -112,26 +119,25 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public AudienceListServiceSelector startIndex(Integer startIndex) {
+  public AudienceListServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -139,14 +145,13 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public AudienceListServiceSelector audienceListIds(List<Long> audienceListIds) {
+  public AudienceListServiceSelector audienceListIds(@jakarta.annotation.Nullable List<Long> audienceListIds) {
     
     this.audienceListIds = audienceListIds;
     return this;
@@ -160,12 +165,12 @@ public class AudienceListServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;オーディエンスリストIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list ID.&lt;/div&gt; 
    * @return audienceListIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAudienceListIds() {
@@ -173,14 +178,13 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListIds(List<Long> audienceListIds) {
+  public void setAudienceListIds(@jakarta.annotation.Nullable List<Long> audienceListIds) {
     this.audienceListIds = audienceListIds;
   }
 
-
-  public AudienceListServiceSelector audienceListTypes(List<AudienceListServiceType> audienceListTypes) {
+  public AudienceListServiceSelector audienceListTypes(@jakarta.annotation.Nullable List<AudienceListServiceType> audienceListTypes) {
     
     this.audienceListTypes = audienceListTypes;
     return this;
@@ -194,12 +198,12 @@ public class AudienceListServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get audienceListTypes
    * @return audienceListTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceType> getAudienceListTypes() {
@@ -207,25 +211,24 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListTypes(List<AudienceListServiceType> audienceListTypes) {
+  public void setAudienceListTypes(@jakarta.annotation.Nullable List<AudienceListServiceType> audienceListTypes) {
     this.audienceListTypes = audienceListTypes;
   }
 
-
-  public AudienceListServiceSelector sharingStatusFilterType(AudienceListServiceSharingStatusFilterType sharingStatusFilterType) {
+  public AudienceListServiceSelector sharingStatusFilterType(@jakarta.annotation.Nullable AudienceListServiceSharingStatusFilterType sharingStatusFilterType) {
     
     this.sharingStatusFilterType = sharingStatusFilterType;
     return this;
   }
 
-   /**
+  /**
    * Get sharingStatusFilterType
    * @return sharingStatusFilterType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceSharingStatusFilterType getSharingStatusFilterType() {
@@ -233,25 +236,24 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SHARING_STATUS_FILTER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSharingStatusFilterType(AudienceListServiceSharingStatusFilterType sharingStatusFilterType) {
+  public void setSharingStatusFilterType(@jakarta.annotation.Nullable AudienceListServiceSharingStatusFilterType sharingStatusFilterType) {
     this.sharingStatusFilterType = sharingStatusFilterType;
   }
 
-
-  public AudienceListServiceSelector includeDetail(Boolean includeDetail) {
+  public AudienceListServiceSelector includeDetail(@jakarta.annotation.Nullable Boolean includeDetail) {
     
     this.includeDetail = includeDetail;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;詳細情報を含めるかどうかのフラグです。true の場合、各オーディエンスリスト種別の詳細な条件情報が含まれます。デフォルトは false です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag to include detailed information. When true, detailed condition information for each audience list type is included. Default is false.&lt;/div&gt; 
    * @return includeDetail
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INCLUDE_DETAIL)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_DETAIL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getIncludeDetail() {
@@ -259,11 +261,12 @@ public class AudienceListServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INCLUDE_DETAIL)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_DETAIL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIncludeDetail(Boolean includeDetail) {
+  public void setIncludeDetail(@jakarta.annotation.Nullable Boolean includeDetail) {
     this.includeDetail = includeDetail;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -308,10 +311,7 @@ public class AudienceListServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

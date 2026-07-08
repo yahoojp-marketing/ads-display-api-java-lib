@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordListServiceDeliveryStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordListServiceIsRemoveFlg;
@@ -29,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordListServiceKeywordRecenc
 import jp.co.yahoo.adsdisplayapi.v17.model.SearchKeywordListServiceSearchKeyword;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;SearchKeywordListオブジェクトは、サーチキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;SearchKeywordList object displays the search list.&lt;/div&gt; 
@@ -44,50 +45,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   SearchKeywordList.JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID,
   SearchKeywordList.JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class SearchKeywordList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_DELIVERY_STATUS = "deliveryStatus";
+  @jakarta.annotation.Nullable
   private SearchKeywordListServiceDeliveryStatus deliveryStatus;
 
   public static final String JSON_PROPERTY_KEYWORD_FREQUENCY = "keywordFrequency";
+  @jakarta.annotation.Nullable
   private SearchKeywordListServiceKeywordFrequency keywordFrequency;
 
   public static final String JSON_PROPERTY_KEYWORD_RECENCY = "keywordRecency";
+  @jakarta.annotation.Nullable
   private SearchKeywordListServiceKeywordRecency keywordRecency;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD = "searchKeyword";
+  @jakarta.annotation.Nullable
   private List<SearchKeywordListServiceSearchKeyword> searchKeyword;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION = "searchKeywordListDescription";
+  @jakarta.annotation.Nullable
   private String searchKeywordListDescription;
 
   public static final String JSON_PROPERTY_IS_REMOVE_SEARCH_KEYWORD_LIST_DESCRIPTION = "isRemoveSearchKeywordListDescription";
+  @jakarta.annotation.Nullable
   private SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID = "searchKeywordListId";
+  @jakarta.annotation.Nullable
   private Long searchKeywordListId;
 
   public static final String JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME = "searchKeywordListName";
+  @jakarta.annotation.Nullable
   private String searchKeywordListName;
 
   public SearchKeywordList() {
   }
 
-  public SearchKeywordList accountId(Long accountId) {
+  public SearchKeywordList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -95,25 +105,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public SearchKeywordList deliveryStatus(SearchKeywordListServiceDeliveryStatus deliveryStatus) {
+  public SearchKeywordList deliveryStatus(@jakarta.annotation.Nullable SearchKeywordListServiceDeliveryStatus deliveryStatus) {
     
     this.deliveryStatus = deliveryStatus;
     return this;
   }
 
-   /**
+  /**
    * Get deliveryStatus
    * @return deliveryStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordListServiceDeliveryStatus getDeliveryStatus() {
@@ -121,25 +130,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryStatus(SearchKeywordListServiceDeliveryStatus deliveryStatus) {
+  public void setDeliveryStatus(@jakarta.annotation.Nullable SearchKeywordListServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
-
-  public SearchKeywordList keywordFrequency(SearchKeywordListServiceKeywordFrequency keywordFrequency) {
+  public SearchKeywordList keywordFrequency(@jakarta.annotation.Nullable SearchKeywordListServiceKeywordFrequency keywordFrequency) {
     
     this.keywordFrequency = keywordFrequency;
     return this;
   }
 
-   /**
+  /**
    * Get keywordFrequency
    * @return keywordFrequency
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_FREQUENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_FREQUENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordListServiceKeywordFrequency getKeywordFrequency() {
@@ -147,25 +155,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_FREQUENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_FREQUENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordFrequency(SearchKeywordListServiceKeywordFrequency keywordFrequency) {
+  public void setKeywordFrequency(@jakarta.annotation.Nullable SearchKeywordListServiceKeywordFrequency keywordFrequency) {
     this.keywordFrequency = keywordFrequency;
   }
 
-
-  public SearchKeywordList keywordRecency(SearchKeywordListServiceKeywordRecency keywordRecency) {
+  public SearchKeywordList keywordRecency(@jakarta.annotation.Nullable SearchKeywordListServiceKeywordRecency keywordRecency) {
     
     this.keywordRecency = keywordRecency;
     return this;
   }
 
-   /**
+  /**
    * Get keywordRecency
    * @return keywordRecency
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD_RECENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_RECENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordListServiceKeywordRecency getKeywordRecency() {
@@ -173,14 +180,13 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD_RECENCY)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD_RECENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywordRecency(SearchKeywordListServiceKeywordRecency keywordRecency) {
+  public void setKeywordRecency(@jakarta.annotation.Nullable SearchKeywordListServiceKeywordRecency keywordRecency) {
     this.keywordRecency = keywordRecency;
   }
 
-
-  public SearchKeywordList searchKeyword(List<SearchKeywordListServiceSearchKeyword> searchKeyword) {
+  public SearchKeywordList searchKeyword(@jakarta.annotation.Nullable List<SearchKeywordListServiceSearchKeyword> searchKeyword) {
     
     this.searchKeyword = searchKeyword;
     return this;
@@ -194,12 +200,12 @@ public class SearchKeywordList {
     return this;
   }
 
-   /**
+  /**
    * Get searchKeyword
    * @return searchKeyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<SearchKeywordListServiceSearchKeyword> getSearchKeyword() {
@@ -207,25 +213,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchKeyword(List<SearchKeywordListServiceSearchKeyword> searchKeyword) {
+  public void setSearchKeyword(@jakarta.annotation.Nullable List<SearchKeywordListServiceSearchKeyword> searchKeyword) {
     this.searchKeyword = searchKeyword;
   }
 
-
-  public SearchKeywordList searchKeywordListDescription(String searchKeywordListDescription) {
+  public SearchKeywordList searchKeywordListDescription(@jakarta.annotation.Nullable String searchKeywordListDescription) {
     
     this.searchKeywordListDescription = searchKeywordListDescription;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリストの説明文です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description of Search keyword list.&lt;br&gt; &lt;/div&gt; 
    * @return searchKeywordListDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSearchKeywordListDescription() {
@@ -233,25 +238,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchKeywordListDescription(String searchKeywordListDescription) {
+  public void setSearchKeywordListDescription(@jakarta.annotation.Nullable String searchKeywordListDescription) {
     this.searchKeywordListDescription = searchKeywordListDescription;
   }
 
-
-  public SearchKeywordList isRemoveSearchKeywordListDescription(SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription) {
+  public SearchKeywordList isRemoveSearchKeywordListDescription(@jakarta.annotation.Nullable SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription) {
     
     this.isRemoveSearchKeywordListDescription = isRemoveSearchKeywordListDescription;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveSearchKeywordListDescription
    * @return isRemoveSearchKeywordListDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_SEARCH_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_SEARCH_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public SearchKeywordListServiceIsRemoveFlg getIsRemoveSearchKeywordListDescription() {
@@ -259,25 +263,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_SEARCH_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_SEARCH_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveSearchKeywordListDescription(SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription) {
+  public void setIsRemoveSearchKeywordListDescription(@jakarta.annotation.Nullable SearchKeywordListServiceIsRemoveFlg isRemoveSearchKeywordListDescription) {
     this.isRemoveSearchKeywordListDescription = isRemoveSearchKeywordListDescription;
   }
 
-
-  public SearchKeywordList searchKeywordListId(Long searchKeywordListId) {
+  public SearchKeywordList searchKeywordListId(@jakarta.annotation.Nullable Long searchKeywordListId) {
     
     this.searchKeywordListId = searchKeywordListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリストIDです。&lt;br&gt; このフィールドは、REMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword list ID.&lt;br&gt; This field is required in REMOVE operation. &lt;/div&gt; 
    * @return searchKeywordListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSearchKeywordListId() {
@@ -285,25 +288,24 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchKeywordListId(Long searchKeywordListId) {
+  public void setSearchKeywordListId(@jakarta.annotation.Nullable Long searchKeywordListId) {
     this.searchKeywordListId = searchKeywordListId;
   }
 
-
-  public SearchKeywordList searchKeywordListName(String searchKeywordListName) {
+  public SearchKeywordList searchKeywordListName(@jakarta.annotation.Nullable String searchKeywordListName) {
     
     this.searchKeywordListName = searchKeywordListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリスト名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Name of Search keyword list.&lt;br&gt; &lt;/div&gt; 
    * @return searchKeywordListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSearchKeywordListName() {
@@ -311,11 +313,12 @@ public class SearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchKeywordListName(String searchKeywordListName) {
+  public void setSearchKeywordListName(@jakarta.annotation.Nullable String searchKeywordListName) {
     this.searchKeywordListName = searchKeywordListName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -364,10 +367,7 @@ public class SearchKeywordList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

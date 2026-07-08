@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,14 +18,15 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.ConversionTrackerServicePeriod;
 import jp.co.yahoo.adsdisplayapi.v17.model.ConversionTrackerServiceValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerServicePageオブジェクトは、getメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTrackerServicePage object contains the results (a list of all entities) for get method.&lt;/div&gt; 
@@ -42,53 +43,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   ConversionTrackerServicePage.JSON_PROPERTY_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServicePage {
   public static final String JSON_PROPERTY_PERIOD = "period";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServicePeriod period;
 
   public static final String JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE = "totalAllConversionValue";
+  @jakarta.annotation.Nullable
   private String totalAllConversionValue;
 
   public static final String JSON_PROPERTY_TOTAL_ALL_CONVERSIONS = "totalAllConversions";
+  @jakarta.annotation.Nullable
   private Long totalAllConversions;
 
   public static final String JSON_PROPERTY_TOTAL_CONVERSION_VALUE = "totalConversionValue";
+  @jakarta.annotation.Nullable
   private String totalConversionValue;
 
   public static final String JSON_PROPERTY_TOTAL_CONVERSION_VALUE_VIA_AD_CLICK = "totalConversionValueViaAdClick";
+  @jakarta.annotation.Nullable
   private String totalConversionValueViaAdClick;
 
   public static final String JSON_PROPERTY_TOTAL_CONVERSIONS = "totalConversions";
+  @jakarta.annotation.Nullable
   private Long totalConversions;
 
   public static final String JSON_PROPERTY_TOTAL_CONVERSIONS_VIA_AD_CLICK = "totalConversionsViaAdClick";
+  @jakarta.annotation.Nullable
   private Long totalConversionsViaAdClick;
 
   public static final String JSON_PROPERTY_TOTAL_CROSS_DEVICE_CONVERSIONS = "totalCrossDeviceConversions";
+  @jakarta.annotation.Nullable
   private Long totalCrossDeviceConversions;
 
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
+  @jakarta.annotation.Nullable
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<ConversionTrackerServiceValue> values;
 
   public ConversionTrackerServicePage() {
   }
 
-  public ConversionTrackerServicePage period(ConversionTrackerServicePeriod period) {
+  public ConversionTrackerServicePage period(@jakarta.annotation.Nullable ConversionTrackerServicePeriod period) {
     
     this.period = period;
     return this;
   }
 
-   /**
+  /**
    * Get period
    * @return period
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServicePeriod getPeriod() {
@@ -96,25 +107,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPeriod(ConversionTrackerServicePeriod period) {
+  public void setPeriod(@jakarta.annotation.Nullable ConversionTrackerServicePeriod period) {
     this.period = period;
   }
 
-
-  public ConversionTrackerServicePage totalAllConversionValue(String totalAllConversionValue) {
+  public ConversionTrackerServicePage totalAllConversionValue(@jakarta.annotation.Nullable String totalAllConversionValue) {
     
     this.totalAllConversionValue = totalAllConversionValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値（全て）の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conv. value (all).&lt;/div&gt; 
    * @return totalAllConversionValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTotalAllConversionValue() {
@@ -122,25 +132,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_ALL_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalAllConversionValue(String totalAllConversionValue) {
+  public void setTotalAllConversionValue(@jakarta.annotation.Nullable String totalAllConversionValue) {
     this.totalAllConversionValue = totalAllConversionValue;
   }
 
-
-  public ConversionTrackerServicePage totalAllConversions(Long totalAllConversions) {
+  public ConversionTrackerServicePage totalAllConversions(@jakarta.annotation.Nullable Long totalAllConversions) {
     
     this.totalAllConversions = totalAllConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数（全て）の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conversions (all).&lt;/div&gt; 
    * @return totalAllConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_ALL_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_ALL_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTotalAllConversions() {
@@ -148,25 +157,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_ALL_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_ALL_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalAllConversions(Long totalAllConversions) {
+  public void setTotalAllConversions(@jakarta.annotation.Nullable Long totalAllConversions) {
     this.totalAllConversions = totalAllConversions;
   }
 
-
-  public ConversionTrackerServicePage totalConversionValue(String totalConversionValue) {
+  public ConversionTrackerServicePage totalConversionValue(@jakarta.annotation.Nullable String totalConversionValue) {
     
     this.totalConversionValue = totalConversionValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conv. value.&lt;/div&gt; 
    * @return totalConversionValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTotalConversionValue() {
@@ -174,25 +182,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalConversionValue(String totalConversionValue) {
+  public void setTotalConversionValue(@jakarta.annotation.Nullable String totalConversionValue) {
     this.totalConversionValue = totalConversionValue;
   }
 
-
-  public ConversionTrackerServicePage totalConversionValueViaAdClick(String totalConversionValueViaAdClick) {
+  public ConversionTrackerServicePage totalConversionValueViaAdClick(@jakarta.annotation.Nullable String totalConversionValueViaAdClick) {
     
     this.totalConversionValueViaAdClick = totalConversionValueViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョンの価値の合計（クリック経由）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conv. value (via click).&lt;/div&gt; 
    * @return totalConversionValueViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSION_VALUE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSION_VALUE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTotalConversionValueViaAdClick() {
@@ -200,25 +207,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSION_VALUE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSION_VALUE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalConversionValueViaAdClick(String totalConversionValueViaAdClick) {
+  public void setTotalConversionValueViaAdClick(@jakarta.annotation.Nullable String totalConversionValueViaAdClick) {
     this.totalConversionValueViaAdClick = totalConversionValueViaAdClick;
   }
 
-
-  public ConversionTrackerServicePage totalConversions(Long totalConversions) {
+  public ConversionTrackerServicePage totalConversions(@jakarta.annotation.Nullable Long totalConversions) {
     
     this.totalConversions = totalConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conversions.&lt;/div&gt; 
    * @return totalConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTotalConversions() {
@@ -226,25 +232,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalConversions(Long totalConversions) {
+  public void setTotalConversions(@jakarta.annotation.Nullable Long totalConversions) {
     this.totalConversions = totalConversions;
   }
 
-
-  public ConversionTrackerServicePage totalConversionsViaAdClick(Long totalConversionsViaAdClick) {
+  public ConversionTrackerServicePage totalConversionsViaAdClick(@jakarta.annotation.Nullable Long totalConversionsViaAdClick) {
     
     this.totalConversionsViaAdClick = totalConversionsViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンバージョン数の合計（クリック経由）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of conversions (via click).&lt;/div&gt; 
    * @return totalConversionsViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSIONS_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSIONS_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTotalConversionsViaAdClick() {
@@ -252,25 +257,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_CONVERSIONS_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CONVERSIONS_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalConversionsViaAdClick(Long totalConversionsViaAdClick) {
+  public void setTotalConversionsViaAdClick(@jakarta.annotation.Nullable Long totalConversionsViaAdClick) {
     this.totalConversionsViaAdClick = totalConversionsViaAdClick;
   }
 
-
-  public ConversionTrackerServicePage totalCrossDeviceConversions(Long totalCrossDeviceConversions) {
+  public ConversionTrackerServicePage totalCrossDeviceConversions(@jakarta.annotation.Nullable Long totalCrossDeviceConversions) {
     
     this.totalCrossDeviceConversions = totalCrossDeviceConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クロスデバイスコンバージョン数の合計です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total of cross-device conv.&lt;/div&gt; 
    * @return totalCrossDeviceConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_CROSS_DEVICE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CROSS_DEVICE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTotalCrossDeviceConversions() {
@@ -278,25 +282,24 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_CROSS_DEVICE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_CROSS_DEVICE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalCrossDeviceConversions(Long totalCrossDeviceConversions) {
+  public void setTotalCrossDeviceConversions(@jakarta.annotation.Nullable Long totalCrossDeviceConversions) {
     this.totalCrossDeviceConversions = totalCrossDeviceConversions;
   }
 
-
-  public ConversionTrackerServicePage totalNumEntries(Integer totalNumEntries) {
+  public ConversionTrackerServicePage totalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     
     this.totalNumEntries = totalNumEntries;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getTotalNumEntries() {
@@ -304,14 +307,13 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalNumEntries(Integer totalNumEntries) {
+  public void setTotalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
 
-
-  public ConversionTrackerServicePage values(List<ConversionTrackerServiceValue> values) {
+  public ConversionTrackerServicePage values(@jakarta.annotation.Nullable List<ConversionTrackerServiceValue> values) {
     
     this.values = values;
     return this;
@@ -325,12 +327,12 @@ public class ConversionTrackerServicePage {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionTrackerServiceValue> getValues() {
@@ -338,11 +340,12 @@ public class ConversionTrackerServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<ConversionTrackerServiceValue> values) {
+  public void setValues(@jakarta.annotation.Nullable List<ConversionTrackerServiceValue> values) {
     this.values = values;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -393,10 +396,7 @@ public class ConversionTrackerServicePage {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

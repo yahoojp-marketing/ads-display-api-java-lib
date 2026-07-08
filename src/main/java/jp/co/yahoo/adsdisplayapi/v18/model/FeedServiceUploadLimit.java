@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,12 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.FeedServiceControlType;
 import jp.co.yahoo.adsdisplayapi.v18.model.FeedServiceSourceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;FeedServiceUploadLimitオブジェクトは、Feedファイルの制限情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedServiceUploadLimit object contains feed file restriction information.&lt;/div&gt; 
@@ -33,32 +33,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedServiceUploadLimit.JSON_PROPERTY_CONTROL_TYPE,
   FeedServiceUploadLimit.JSON_PROPERTY_LIMIT_VALUE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedServiceUploadLimit {
   public static final String JSON_PROPERTY_SOURCE_TYPE = "sourceType";
+  @jakarta.annotation.Nullable
   private FeedServiceSourceType sourceType;
 
   public static final String JSON_PROPERTY_CONTROL_TYPE = "controlType";
+  @jakarta.annotation.Nullable
   private FeedServiceControlType controlType;
 
   public static final String JSON_PROPERTY_LIMIT_VALUE = "limitValue";
+  @jakarta.annotation.Nullable
   private Long limitValue;
 
   public FeedServiceUploadLimit() {
   }
 
-  public FeedServiceUploadLimit sourceType(FeedServiceSourceType sourceType) {
+  public FeedServiceUploadLimit sourceType(@jakarta.annotation.Nullable FeedServiceSourceType sourceType) {
     
     this.sourceType = sourceType;
     return this;
   }
 
-   /**
+  /**
    * Get sourceType
    * @return sourceType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedServiceSourceType getSourceType() {
@@ -66,25 +69,24 @@ public class FeedServiceUploadLimit {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSourceType(FeedServiceSourceType sourceType) {
+  public void setSourceType(@jakarta.annotation.Nullable FeedServiceSourceType sourceType) {
     this.sourceType = sourceType;
   }
 
-
-  public FeedServiceUploadLimit controlType(FeedServiceControlType controlType) {
+  public FeedServiceUploadLimit controlType(@jakarta.annotation.Nullable FeedServiceControlType controlType) {
     
     this.controlType = controlType;
     return this;
   }
 
-   /**
+  /**
    * Get controlType
    * @return controlType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTROL_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONTROL_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedServiceControlType getControlType() {
@@ -92,25 +94,24 @@ public class FeedServiceUploadLimit {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTROL_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONTROL_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setControlType(FeedServiceControlType controlType) {
+  public void setControlType(@jakarta.annotation.Nullable FeedServiceControlType controlType) {
     this.controlType = controlType;
   }
 
-
-  public FeedServiceUploadLimit limitValue(Long limitValue) {
+  public FeedServiceUploadLimit limitValue(@jakarta.annotation.Nullable Long limitValue) {
     
     this.limitValue = limitValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;上限数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Number of limit.&lt;/div&gt; 
    * @return limitValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LIMIT_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_LIMIT_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLimitValue() {
@@ -118,11 +119,12 @@ public class FeedServiceUploadLimit {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LIMIT_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_LIMIT_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLimitValue(Long limitValue) {
+  public void setLimitValue(@jakarta.annotation.Nullable Long limitValue) {
     this.limitValue = limitValue;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -159,10 +161,7 @@ public class FeedServiceUploadLimit {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

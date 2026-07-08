@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,12 +18,13 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;get操作の検索条件を保持するオブジェクト&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedSetServiceSelector object contains search condition of get operation.&lt;/div&gt; 
@@ -34,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedSetServiceSelector.JSON_PROPERTY_FEED_SET_IDS,
   FeedSetServiceSelector.JSON_PROPERTY_INCLUDE_ITEM_COUNT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedSetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
+  @jakarta.annotation.Nonnull
   private Long feedId;
 
   public static final String JSON_PROPERTY_FEED_SET_IDS = "feedSetIds";
+  @jakarta.annotation.Nullable
   private List<Long> feedSetIds;
 
   public static final String JSON_PROPERTY_INCLUDE_ITEM_COUNT = "includeItemCount";
+  @jakarta.annotation.Nullable
   private Boolean includeItemCount;
 
   public FeedSetServiceSelector() {
   }
 
-  public FeedSetServiceSelector accountId(Long accountId) {
+  public FeedSetServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -70,25 +75,24 @@ public class FeedSetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public FeedSetServiceSelector feedId(Long feedId) {
+  public FeedSetServiceSelector feedId(@jakarta.annotation.Nonnull Long feedId) {
     
     this.feedId = feedId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Feed ID.&lt;/div&gt; 
    * @return feedId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getFeedId() {
@@ -96,14 +100,13 @@ public class FeedSetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setFeedId(Long feedId) {
+  public void setFeedId(@jakarta.annotation.Nonnull Long feedId) {
     this.feedId = feedId;
   }
 
-
-  public FeedSetServiceSelector feedSetIds(List<Long> feedSetIds) {
+  public FeedSetServiceSelector feedSetIds(@jakarta.annotation.Nullable List<Long> feedSetIds) {
     
     this.feedSetIds = feedSetIds;
     return this;
@@ -117,12 +120,12 @@ public class FeedSetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品セットID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Item set ID.&lt;/div&gt; 
    * @return feedSetIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_SET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getFeedSetIds() {
@@ -130,25 +133,24 @@ public class FeedSetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_SET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_SET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedSetIds(List<Long> feedSetIds) {
+  public void setFeedSetIds(@jakarta.annotation.Nullable List<Long> feedSetIds) {
     this.feedSetIds = feedSetIds;
   }
 
-
-  public FeedSetServiceSelector includeItemCount(Boolean includeItemCount) {
+  public FeedSetServiceSelector includeItemCount(@jakarta.annotation.Nullable Boolean includeItemCount) {
     
     this.includeItemCount = includeItemCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 商品セットのアイテム件数を表示&lt;br&gt; trueの場合は、アイテム件数を表示&lt;br&gt; ※デフォルト値はfalse:表示しない。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Describes number of items of Item Set.&lt;br&gt; If true, the number of items is described.&lt;br&gt; ∗ Default is false: Not described. &lt;/div&gt; 
    * @return includeItemCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INCLUDE_ITEM_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_ITEM_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getIncludeItemCount() {
@@ -156,11 +158,12 @@ public class FeedSetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INCLUDE_ITEM_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_ITEM_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIncludeItemCount(Boolean includeItemCount) {
+  public void setIncludeItemCount(@jakarta.annotation.Nullable Boolean includeItemCount) {
     this.includeItemCount = includeItemCount;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -199,10 +202,7 @@ public class FeedSetServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

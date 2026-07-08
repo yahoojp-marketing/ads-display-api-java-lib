@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,11 +18,11 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionsBiddingSchemeオブジェクトは、広告グループ目標単価（tCPA）の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionsBiddingScheme object holds configuration information of Target CPA (tCPA) of ad group. &lt;/div&gt; 
@@ -31,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_TARGET_CPA,
   AdGroupServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_CPA
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceMaximizeConversionsBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_CPA = "targetCpa";
+  @jakarta.annotation.Nullable
   private Long targetCpa;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_CPA = "isRemoveTargetCpa";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveTargetCpa;
 
   public AdGroupServiceMaximizeConversionsBiddingScheme() {
   }
 
-  public AdGroupServiceMaximizeConversionsBiddingScheme targetCpa(Long targetCpa) {
+  public AdGroupServiceMaximizeConversionsBiddingScheme targetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     
     this.targetCpa = targetCpa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ目標単価（tCPA）です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target CPA (tCPA) of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSIONS. &lt;/div&gt; 
    * @return targetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTargetCpa() {
@@ -61,25 +63,24 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetCpa(Long targetCpa) {
+  public void setTargetCpa(@jakarta.annotation.Nullable Long targetCpa) {
     this.targetCpa = targetCpa;
   }
 
-
-  public AdGroupServiceMaximizeConversionsBiddingScheme isRemoveTargetCpa(AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
+  public AdGroupServiceMaximizeConversionsBiddingScheme isRemoveTargetCpa(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
     
     this.isRemoveTargetCpa = isRemoveTargetCpa;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTargetCpa
    * @return isRemoveTargetCpa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveTargetCpa() {
@@ -87,11 +88,12 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_CPA)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_CPA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTargetCpa(AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
+  public void setIsRemoveTargetCpa(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetCpa) {
     this.isRemoveTargetCpa = isRemoveTargetCpa;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +128,7 @@ public class AdGroupServiceMaximizeConversionsBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

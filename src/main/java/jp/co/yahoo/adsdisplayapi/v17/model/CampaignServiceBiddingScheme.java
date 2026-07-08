@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.CampaignServiceBiddingStrategyType;
 import jp.co.yahoo.adsdisplayapi.v17.model.CampaignServiceCpcBiddingScheme;
@@ -30,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.CampaignServiceMaximizeGainingFriends
 import jp.co.yahoo.adsdisplayapi.v17.model.CampaignServiceVcpmBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceBiddingSchemeオブジェクトは、キャンペーン入札戦略の詳細情報を表します。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; REMOVE時、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceBiddingScheme object displays　the details of campaign bidding strategy.&lt;br&gt; In ADD and SET operation, this field is required.&lt;br&gt; This field will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -44,47 +44,55 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceBiddingScheme.JSON_PROPERTY_MAXIMIZE_GAINING_FRIENDS_BIDDING_SCHEME,
   CampaignServiceBiddingScheme.JSON_PROPERTY_MAXIMIZE_CONVERSION_VALUE_BIDDING_SCHEME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceBiddingScheme {
   public static final String JSON_PROPERTY_BIDDING_STRATEGY_TYPE = "biddingStrategyType";
+  @jakarta.annotation.Nullable
   private CampaignServiceBiddingStrategyType biddingStrategyType;
 
   public static final String JSON_PROPERTY_CPC_BIDDING_SCHEME = "cpcBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceCpcBiddingScheme cpcBiddingScheme;
 
   public static final String JSON_PROPERTY_CPV_BIDDING_SCHEME = "cpvBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceCpvBiddingScheme cpvBiddingScheme;
 
   public static final String JSON_PROPERTY_CPF_BIDDING_SCHEME = "cpfBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceCpfBiddingScheme cpfBiddingScheme;
 
   public static final String JSON_PROPERTY_VCPM_BIDDING_SCHEME = "vcpmBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceVcpmBiddingScheme vcpmBiddingScheme;
 
   public static final String JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME = "maximizeConversionsBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme;
 
   public static final String JSON_PROPERTY_MAXIMIZE_GAINING_FRIENDS_BIDDING_SCHEME = "maximizeGainingFriendsBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceMaximizeGainingFriendsBiddingScheme maximizeGainingFriendsBiddingScheme;
 
   public static final String JSON_PROPERTY_MAXIMIZE_CONVERSION_VALUE_BIDDING_SCHEME = "maximizeConversionValueBiddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceMaximizeConversionValueBiddingScheme maximizeConversionValueBiddingScheme;
 
   public CampaignServiceBiddingScheme() {
   }
 
-  public CampaignServiceBiddingScheme biddingStrategyType(CampaignServiceBiddingStrategyType biddingStrategyType) {
+  public CampaignServiceBiddingScheme biddingStrategyType(@jakarta.annotation.Nullable CampaignServiceBiddingStrategyType biddingStrategyType) {
     
     this.biddingStrategyType = biddingStrategyType;
     return this;
   }
 
-   /**
+  /**
    * Get biddingStrategyType
    * @return biddingStrategyType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_STRATEGY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceBiddingStrategyType getBiddingStrategyType() {
@@ -92,25 +100,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_STRATEGY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingStrategyType(CampaignServiceBiddingStrategyType biddingStrategyType) {
+  public void setBiddingStrategyType(@jakarta.annotation.Nullable CampaignServiceBiddingStrategyType biddingStrategyType) {
     this.biddingStrategyType = biddingStrategyType;
   }
 
-
-  public CampaignServiceBiddingScheme cpcBiddingScheme(CampaignServiceCpcBiddingScheme cpcBiddingScheme) {
+  public CampaignServiceBiddingScheme cpcBiddingScheme(@jakarta.annotation.Nullable CampaignServiceCpcBiddingScheme cpcBiddingScheme) {
     
     this.cpcBiddingScheme = cpcBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get cpcBiddingScheme
    * @return cpcBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPC_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_CPC_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceCpcBiddingScheme getCpcBiddingScheme() {
@@ -118,25 +125,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPC_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_CPC_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpcBiddingScheme(CampaignServiceCpcBiddingScheme cpcBiddingScheme) {
+  public void setCpcBiddingScheme(@jakarta.annotation.Nullable CampaignServiceCpcBiddingScheme cpcBiddingScheme) {
     this.cpcBiddingScheme = cpcBiddingScheme;
   }
 
-
-  public CampaignServiceBiddingScheme cpvBiddingScheme(CampaignServiceCpvBiddingScheme cpvBiddingScheme) {
+  public CampaignServiceBiddingScheme cpvBiddingScheme(@jakarta.annotation.Nullable CampaignServiceCpvBiddingScheme cpvBiddingScheme) {
     
     this.cpvBiddingScheme = cpvBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get cpvBiddingScheme
    * @return cpvBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPV_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_CPV_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceCpvBiddingScheme getCpvBiddingScheme() {
@@ -144,25 +150,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPV_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_CPV_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpvBiddingScheme(CampaignServiceCpvBiddingScheme cpvBiddingScheme) {
+  public void setCpvBiddingScheme(@jakarta.annotation.Nullable CampaignServiceCpvBiddingScheme cpvBiddingScheme) {
     this.cpvBiddingScheme = cpvBiddingScheme;
   }
 
-
-  public CampaignServiceBiddingScheme cpfBiddingScheme(CampaignServiceCpfBiddingScheme cpfBiddingScheme) {
+  public CampaignServiceBiddingScheme cpfBiddingScheme(@jakarta.annotation.Nullable CampaignServiceCpfBiddingScheme cpfBiddingScheme) {
     
     this.cpfBiddingScheme = cpfBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get cpfBiddingScheme
    * @return cpfBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CPF_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_CPF_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceCpfBiddingScheme getCpfBiddingScheme() {
@@ -170,25 +175,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CPF_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_CPF_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCpfBiddingScheme(CampaignServiceCpfBiddingScheme cpfBiddingScheme) {
+  public void setCpfBiddingScheme(@jakarta.annotation.Nullable CampaignServiceCpfBiddingScheme cpfBiddingScheme) {
     this.cpfBiddingScheme = cpfBiddingScheme;
   }
 
-
-  public CampaignServiceBiddingScheme vcpmBiddingScheme(CampaignServiceVcpmBiddingScheme vcpmBiddingScheme) {
+  public CampaignServiceBiddingScheme vcpmBiddingScheme(@jakarta.annotation.Nullable CampaignServiceVcpmBiddingScheme vcpmBiddingScheme) {
     
     this.vcpmBiddingScheme = vcpmBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get vcpmBiddingScheme
    * @return vcpmBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VCPM_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_VCPM_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceVcpmBiddingScheme getVcpmBiddingScheme() {
@@ -196,25 +200,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VCPM_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_VCPM_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVcpmBiddingScheme(CampaignServiceVcpmBiddingScheme vcpmBiddingScheme) {
+  public void setVcpmBiddingScheme(@jakarta.annotation.Nullable CampaignServiceVcpmBiddingScheme vcpmBiddingScheme) {
     this.vcpmBiddingScheme = vcpmBiddingScheme;
   }
 
-
-  public CampaignServiceBiddingScheme maximizeConversionsBiddingScheme(CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme) {
+  public CampaignServiceBiddingScheme maximizeConversionsBiddingScheme(@jakarta.annotation.Nullable CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme) {
     
     this.maximizeConversionsBiddingScheme = maximizeConversionsBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeConversionsBiddingScheme
    * @return maximizeConversionsBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceMaximizeConversionsBiddingScheme getMaximizeConversionsBiddingScheme() {
@@ -222,25 +225,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CONVERSIONS_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeConversionsBiddingScheme(CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme) {
+  public void setMaximizeConversionsBiddingScheme(@jakarta.annotation.Nullable CampaignServiceMaximizeConversionsBiddingScheme maximizeConversionsBiddingScheme) {
     this.maximizeConversionsBiddingScheme = maximizeConversionsBiddingScheme;
   }
 
-
-  public CampaignServiceBiddingScheme maximizeGainingFriendsBiddingScheme(CampaignServiceMaximizeGainingFriendsBiddingScheme maximizeGainingFriendsBiddingScheme) {
+  public CampaignServiceBiddingScheme maximizeGainingFriendsBiddingScheme(@jakarta.annotation.Nullable CampaignServiceMaximizeGainingFriendsBiddingScheme maximizeGainingFriendsBiddingScheme) {
     
     this.maximizeGainingFriendsBiddingScheme = maximizeGainingFriendsBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeGainingFriendsBiddingScheme
    * @return maximizeGainingFriendsBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_GAINING_FRIENDS_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_GAINING_FRIENDS_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceMaximizeGainingFriendsBiddingScheme getMaximizeGainingFriendsBiddingScheme() {
@@ -248,25 +250,24 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_GAINING_FRIENDS_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_GAINING_FRIENDS_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeGainingFriendsBiddingScheme(CampaignServiceMaximizeGainingFriendsBiddingScheme maximizeGainingFriendsBiddingScheme) {
+  public void setMaximizeGainingFriendsBiddingScheme(@jakarta.annotation.Nullable CampaignServiceMaximizeGainingFriendsBiddingScheme maximizeGainingFriendsBiddingScheme) {
     this.maximizeGainingFriendsBiddingScheme = maximizeGainingFriendsBiddingScheme;
   }
 
-
-  public CampaignServiceBiddingScheme maximizeConversionValueBiddingScheme(CampaignServiceMaximizeConversionValueBiddingScheme maximizeConversionValueBiddingScheme) {
+  public CampaignServiceBiddingScheme maximizeConversionValueBiddingScheme(@jakarta.annotation.Nullable CampaignServiceMaximizeConversionValueBiddingScheme maximizeConversionValueBiddingScheme) {
     
     this.maximizeConversionValueBiddingScheme = maximizeConversionValueBiddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get maximizeConversionValueBiddingScheme
    * @return maximizeConversionValueBiddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSION_VALUE_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CONVERSION_VALUE_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceMaximizeConversionValueBiddingScheme getMaximizeConversionValueBiddingScheme() {
@@ -274,11 +275,12 @@ public class CampaignServiceBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAXIMIZE_CONVERSION_VALUE_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_MAXIMIZE_CONVERSION_VALUE_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMaximizeConversionValueBiddingScheme(CampaignServiceMaximizeConversionValueBiddingScheme maximizeConversionValueBiddingScheme) {
+  public void setMaximizeConversionValueBiddingScheme(@jakarta.annotation.Nullable CampaignServiceMaximizeConversionValueBiddingScheme maximizeConversionValueBiddingScheme) {
     this.maximizeConversionValueBiddingScheme = maximizeConversionValueBiddingScheme;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -325,10 +327,7 @@ public class CampaignServiceBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

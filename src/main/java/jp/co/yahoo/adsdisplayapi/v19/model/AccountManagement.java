@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -18,7 +18,6 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AccountManagementServiceAutoTaggingEnabled;
 import jp.co.yahoo.adsdisplayapi.v19.model.AccountManagementServiceClient;
@@ -31,6 +30,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.AccountManagementServicePrefectureCod
 import jp.co.yahoo.adsdisplayapi.v19.model.AccountManagementServiceStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AccountManagementオブジェクトは、アカウント情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AccountManagement objects serve account information.&lt;/div&gt; 
@@ -52,68 +52,83 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountManagement.JSON_PROPERTY_START_DATE,
   AccountManagement.JSON_PROPERTY_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AccountManagement {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ACCOUNT_NAME = "accountName";
+  @jakarta.annotation.Nullable
   private String accountName;
 
   public static final String JSON_PROPERTY_ACCOUNT_PAYMENT = "accountPayment";
+  @jakarta.annotation.Nullable
   private AccountManagementServicePayment accountPayment;
 
   public static final String JSON_PROPERTY_AGENCY_PERSON_NAME = "agencyPersonName";
+  @jakarta.annotation.Nullable
   private String agencyPersonName;
 
   public static final String JSON_PROPERTY_AGENCY_PREFECTURE_CODE = "agencyPrefectureCode";
+  @jakarta.annotation.Nullable
   private AccountManagementServicePrefectureCode agencyPrefectureCode;
 
   public static final String JSON_PROPERTY_AUTO_TAGGING_ENABLED = "autoTaggingEnabled";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled;
 
   public static final String JSON_PROPERTY_CLIENT = "client";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceClient client;
 
   public static final String JSON_PROPERTY_CLIENT_TYPE = "clientType";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceClientType clientType;
 
   public static final String JSON_PROPERTY_CONTACT_BIZ_ID = "contactBizId";
+  @jakarta.annotation.Nullable
   private String contactBizId;
 
   public static final String JSON_PROPERTY_DELIVERY_STATUS = "deliveryStatus";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceDeliveryStatus deliveryStatus;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_IS_TEST_ACCOUNT = "isTestAccount";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceIsTestAccount isTestAccount;
 
   public static final String JSON_PROPERTY_IS_CANCELLATION_PENDING = "isCancellationPending";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceIsCancellationPending isCancellationPending;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_STATUS = "status";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceStatus status;
 
   public AccountManagement() {
   }
 
-  public AccountManagement accountId(Long accountId) {
+  public AccountManagement accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -121,25 +136,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AccountManagement accountName(String accountName) {
+  public AccountManagement accountName(@jakarta.annotation.Nullable String accountName) {
     
     this.accountName = accountName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt;このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;br&gt;This field is required in ADD operation, and will be optional in SET operation.&lt;/div&gt; 
    * @return accountName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAccountName() {
@@ -147,25 +161,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountName(String accountName) {
+  public void setAccountName(@jakarta.annotation.Nullable String accountName) {
     this.accountName = accountName;
   }
 
-
-  public AccountManagement accountPayment(AccountManagementServicePayment accountPayment) {
+  public AccountManagement accountPayment(@jakarta.annotation.Nullable AccountManagementServicePayment accountPayment) {
     
     this.accountPayment = accountPayment;
     return this;
   }
 
-   /**
+  /**
    * Get accountPayment
    * @return accountPayment
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_PAYMENT)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_PAYMENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServicePayment getAccountPayment() {
@@ -173,25 +186,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_PAYMENT)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_PAYMENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountPayment(AccountManagementServicePayment accountPayment) {
+  public void setAccountPayment(@jakarta.annotation.Nullable AccountManagementServicePayment accountPayment) {
     this.accountPayment = accountPayment;
   }
 
-
-  public AccountManagement agencyPersonName(String agencyPersonName) {
+  public AccountManagement agencyPersonName(@jakarta.annotation.Nullable String agencyPersonName) {
     
     this.agencyPersonName = agencyPersonName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 代理店担当者名です。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Agency person name.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return agencyPersonName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AGENCY_PERSON_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AGENCY_PERSON_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAgencyPersonName() {
@@ -199,25 +211,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AGENCY_PERSON_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AGENCY_PERSON_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAgencyPersonName(String agencyPersonName) {
+  public void setAgencyPersonName(@jakarta.annotation.Nullable String agencyPersonName) {
     this.agencyPersonName = agencyPersonName;
   }
 
-
-  public AccountManagement agencyPrefectureCode(AccountManagementServicePrefectureCode agencyPrefectureCode) {
+  public AccountManagement agencyPrefectureCode(@jakarta.annotation.Nullable AccountManagementServicePrefectureCode agencyPrefectureCode) {
     
     this.agencyPrefectureCode = agencyPrefectureCode;
     return this;
   }
 
-   /**
+  /**
    * Get agencyPrefectureCode
    * @return agencyPrefectureCode
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AGENCY_PREFECTURE_CODE)
+  @JsonProperty(value = JSON_PROPERTY_AGENCY_PREFECTURE_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServicePrefectureCode getAgencyPrefectureCode() {
@@ -225,25 +236,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AGENCY_PREFECTURE_CODE)
+  @JsonProperty(value = JSON_PROPERTY_AGENCY_PREFECTURE_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAgencyPrefectureCode(AccountManagementServicePrefectureCode agencyPrefectureCode) {
+  public void setAgencyPrefectureCode(@jakarta.annotation.Nullable AccountManagementServicePrefectureCode agencyPrefectureCode) {
     this.agencyPrefectureCode = agencyPrefectureCode;
   }
 
-
-  public AccountManagement autoTaggingEnabled(AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled) {
+  public AccountManagement autoTaggingEnabled(@jakarta.annotation.Nullable AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled) {
     
     this.autoTaggingEnabled = autoTaggingEnabled;
     return this;
   }
 
-   /**
+  /**
    * Get autoTaggingEnabled
    * @return autoTaggingEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUTO_TAGGING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_AUTO_TAGGING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceAutoTaggingEnabled getAutoTaggingEnabled() {
@@ -251,25 +261,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUTO_TAGGING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_AUTO_TAGGING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAutoTaggingEnabled(AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled) {
+  public void setAutoTaggingEnabled(@jakarta.annotation.Nullable AccountManagementServiceAutoTaggingEnabled autoTaggingEnabled) {
     this.autoTaggingEnabled = autoTaggingEnabled;
   }
 
-
-  public AccountManagement client(AccountManagementServiceClient client) {
+  public AccountManagement client(@jakarta.annotation.Nullable AccountManagementServiceClient client) {
     
     this.client = client;
     return this;
   }
 
-   /**
+  /**
    * Get client
    * @return client
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLIENT)
+  @JsonProperty(value = JSON_PROPERTY_CLIENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceClient getClient() {
@@ -277,25 +286,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLIENT)
+  @JsonProperty(value = JSON_PROPERTY_CLIENT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClient(AccountManagementServiceClient client) {
+  public void setClient(@jakarta.annotation.Nullable AccountManagementServiceClient client) {
     this.client = client;
   }
 
-
-  public AccountManagement clientType(AccountManagementServiceClientType clientType) {
+  public AccountManagement clientType(@jakarta.annotation.Nullable AccountManagementServiceClientType clientType) {
     
     this.clientType = clientType;
     return this;
   }
 
-   /**
+  /**
    * Get clientType
    * @return clientType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLIENT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CLIENT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceClientType getClientType() {
@@ -303,25 +311,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLIENT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CLIENT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClientType(AccountManagementServiceClientType clientType) {
+  public void setClientType(@jakarta.annotation.Nullable AccountManagementServiceClientType clientType) {
     this.clientType = clientType;
   }
 
-
-  public AccountManagement contactBizId(String contactBizId) {
+  public AccountManagement contactBizId(@jakarta.annotation.Nullable String contactBizId) {
     
     this.contactBizId = contactBizId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウント管理者のビジネスIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contact business ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return contactBizId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTACT_BIZ_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getContactBizId() {
@@ -329,25 +336,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTACT_BIZ_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTACT_BIZ_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContactBizId(String contactBizId) {
+  public void setContactBizId(@jakarta.annotation.Nullable String contactBizId) {
     this.contactBizId = contactBizId;
   }
 
-
-  public AccountManagement deliveryStatus(AccountManagementServiceDeliveryStatus deliveryStatus) {
+  public AccountManagement deliveryStatus(@jakarta.annotation.Nullable AccountManagementServiceDeliveryStatus deliveryStatus) {
     
     this.deliveryStatus = deliveryStatus;
     return this;
   }
 
-   /**
+  /**
    * Get deliveryStatus
    * @return deliveryStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceDeliveryStatus getDeliveryStatus() {
@@ -355,25 +361,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DELIVERY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_DELIVERY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeliveryStatus(AccountManagementServiceDeliveryStatus deliveryStatus) {
+  public void setDeliveryStatus(@jakarta.annotation.Nullable AccountManagementServiceDeliveryStatus deliveryStatus) {
     this.deliveryStatus = deliveryStatus;
   }
 
-
-  public AccountManagement endDate(String endDate) {
+  public AccountManagement endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日&lt;br&gt; YYYYMMDD形式で指定 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date&lt;br&gt; YYYYMMDD &lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -381,25 +386,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public AccountManagement isTestAccount(AccountManagementServiceIsTestAccount isTestAccount) {
+  public AccountManagement isTestAccount(@jakarta.annotation.Nullable AccountManagementServiceIsTestAccount isTestAccount) {
     
     this.isTestAccount = isTestAccount;
     return this;
   }
 
-   /**
+  /**
    * Get isTestAccount
    * @return isTestAccount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_TEST_ACCOUNT)
+  @JsonProperty(value = JSON_PROPERTY_IS_TEST_ACCOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceIsTestAccount getIsTestAccount() {
@@ -407,25 +411,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_TEST_ACCOUNT)
+  @JsonProperty(value = JSON_PROPERTY_IS_TEST_ACCOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsTestAccount(AccountManagementServiceIsTestAccount isTestAccount) {
+  public void setIsTestAccount(@jakarta.annotation.Nullable AccountManagementServiceIsTestAccount isTestAccount) {
     this.isTestAccount = isTestAccount;
   }
 
-
-  public AccountManagement isCancellationPending(AccountManagementServiceIsCancellationPending isCancellationPending) {
+  public AccountManagement isCancellationPending(@jakarta.annotation.Nullable AccountManagementServiceIsCancellationPending isCancellationPending) {
     
     this.isCancellationPending = isCancellationPending;
     return this;
   }
 
-   /**
+  /**
    * Get isCancellationPending
    * @return isCancellationPending
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_CANCELLATION_PENDING)
+  @JsonProperty(value = JSON_PROPERTY_IS_CANCELLATION_PENDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceIsCancellationPending getIsCancellationPending() {
@@ -433,25 +436,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_CANCELLATION_PENDING)
+  @JsonProperty(value = JSON_PROPERTY_IS_CANCELLATION_PENDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsCancellationPending(AccountManagementServiceIsCancellationPending isCancellationPending) {
+  public void setIsCancellationPending(@jakarta.annotation.Nullable AccountManagementServiceIsCancellationPending isCancellationPending) {
     this.isCancellationPending = isCancellationPending;
   }
 
-
-  public AccountManagement startDate(String startDate) {
+  public AccountManagement startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日（YYYYMMDD形式）&lt;br&gt; 自動でADD時の日付が登録される。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date&lt;br&gt; YYYYMMDD&lt;br&gt; This field is automatically registered in ADD operation &lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -459,25 +461,24 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public AccountManagement status(AccountManagementServiceStatus status) {
+  public AccountManagement status(@jakarta.annotation.Nullable AccountManagementServiceStatus status) {
     
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceStatus getStatus() {
@@ -485,11 +486,12 @@ public class AccountManagement {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatus(AccountManagementServiceStatus status) {
+  public void setStatus(@jakarta.annotation.Nullable AccountManagementServiceStatus status) {
     this.status = status;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -550,10 +552,7 @@ public class AccountManagement {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

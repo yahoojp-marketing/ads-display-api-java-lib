@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -18,9 +18,9 @@ import java.util.Arrays;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.AuditLogServiceDateRange;
 import jp.co.yahoo.adsdisplayapi.v18.model.AuditLogServiceEncoding;
@@ -30,6 +30,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.AuditLogServiceOutput;
 import jp.co.yahoo.adsdisplayapi.v18.model.AuditLogServiceSourceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AuditLogServiceJobは操作履歴のダウンロードジョブの情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceJob object is a container for storing the download operation history job information.&lt;/div&gt; 
@@ -50,65 +51,79 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AuditLogServiceJob.JSON_PROPERTY_PROGRESS,
   AuditLogServiceJob.JSON_PROPERTY_SOURCE_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AuditLogServiceJob {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE = "auditLogJobEndDate";
+  @jakarta.annotation.Nullable
   private String auditLogJobEndDate;
 
   public static final String JSON_PROPERTY_AUDIT_LOG_JOB_ID = "auditLogJobId";
+  @jakarta.annotation.Nullable
   private Long auditLogJobId;
 
   public static final String JSON_PROPERTY_AUDIT_LOG_JOB_NAME = "auditLogJobName";
+  @jakarta.annotation.Nullable
   private String auditLogJobName;
 
   public static final String JSON_PROPERTY_AUDIT_LOG_JOB_START_DATE = "auditLogJobStartDate";
+  @jakarta.annotation.Nullable
   private String auditLogJobStartDate;
 
   public static final String JSON_PROPERTY_AUDIT_LOG_JOB_USER_NAME = "auditLogJobUserName";
+  @jakarta.annotation.Nullable
   private String auditLogJobUserName;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_DATE_RANGE = "dateRange";
+  @jakarta.annotation.Nullable
   private AuditLogServiceDateRange dateRange;
 
   public static final String JSON_PROPERTY_ENCODING = "encoding";
+  @jakarta.annotation.Nullable
   private AuditLogServiceEncoding encoding;
 
   public static final String JSON_PROPERTY_JOB_STATUS = "jobStatus";
+  @jakarta.annotation.Nullable
   private AuditLogServiceJobStatus jobStatus;
 
   public static final String JSON_PROPERTY_LANG = "lang";
+  @jakarta.annotation.Nullable
   private AuditLogServiceLang lang;
 
   public static final String JSON_PROPERTY_OUTPUT = "output";
+  @jakarta.annotation.Nullable
   private AuditLogServiceOutput output;
 
   public static final String JSON_PROPERTY_PROGRESS = "progress";
+  @jakarta.annotation.Nullable
   private Integer progress;
 
   public static final String JSON_PROPERTY_SOURCE_TYPE = "sourceType";
+  @jakarta.annotation.Nullable
   private AuditLogServiceSourceType sourceType;
 
   public AuditLogServiceJob() {
   }
 
-  public AuditLogServiceJob accountId(Long accountId) {
+  public AuditLogServiceJob accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -116,25 +131,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AuditLogServiceJob auditLogJobEndDate(String auditLogJobEndDate) {
+  public AuditLogServiceJob auditLogJobEndDate(@jakarta.annotation.Nullable String auditLogJobEndDate) {
     
     this.auditLogJobEndDate = auditLogJobEndDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴ダウンロードジョブの終了日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The job end date (YYYY-MM-DDTHH:MI:SS+9:00).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobEndDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAuditLogJobEndDate() {
@@ -142,25 +156,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAuditLogJobEndDate(String auditLogJobEndDate) {
+  public void setAuditLogJobEndDate(@jakarta.annotation.Nullable String auditLogJobEndDate) {
     this.auditLogJobEndDate = auditLogJobEndDate;
   }
 
-
-  public AuditLogServiceJob auditLogJobId(Long auditLogJobId) {
+  public AuditLogServiceJob auditLogJobId(@jakarta.annotation.Nullable Long auditLogJobId) {
     
     this.auditLogJobId = auditLogJobId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴のダウンロードジョブIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The operation history job ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAuditLogJobId() {
@@ -168,25 +181,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAuditLogJobId(Long auditLogJobId) {
+  public void setAuditLogJobId(@jakarta.annotation.Nullable Long auditLogJobId) {
     this.auditLogJobId = auditLogJobId;
   }
 
-
-  public AuditLogServiceJob auditLogJobName(String auditLogJobName) {
+  public AuditLogServiceJob auditLogJobName(@jakarta.annotation.Nullable String auditLogJobName) {
     
     this.auditLogJobName = auditLogJobName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴のダウンロードジョブ名です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The operation history job name.&lt;br&gt; This field is optional in requests. &lt;/div&gt; 
    * @return auditLogJobName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAuditLogJobName() {
@@ -194,25 +206,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAuditLogJobName(String auditLogJobName) {
+  public void setAuditLogJobName(@jakarta.annotation.Nullable String auditLogJobName) {
     this.auditLogJobName = auditLogJobName;
   }
 
-
-  public AuditLogServiceJob auditLogJobStartDate(String auditLogJobStartDate) {
+  public AuditLogServiceJob auditLogJobStartDate(@jakarta.annotation.Nullable String auditLogJobStartDate) {
     
     this.auditLogJobStartDate = auditLogJobStartDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴ダウンロードジョブの開始日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The job start date (YYYY-MM-DDTHH:MI:SS+9:00).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobStartDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAuditLogJobStartDate() {
@@ -220,25 +231,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAuditLogJobStartDate(String auditLogJobStartDate) {
+  public void setAuditLogJobStartDate(@jakarta.annotation.Nullable String auditLogJobStartDate) {
     this.auditLogJobStartDate = auditLogJobStartDate;
   }
 
-
-  public AuditLogServiceJob auditLogJobUserName(String auditLogJobUserName) {
+  public AuditLogServiceJob auditLogJobUserName(@jakarta.annotation.Nullable String auditLogJobUserName) {
     
     this.auditLogJobUserName = auditLogJobUserName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 操作履歴ダウンロードジョブの実行ユーザー名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The user name who executes the operation history job.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return auditLogJobUserName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_USER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_USER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAuditLogJobUserName() {
@@ -246,14 +256,13 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIT_LOG_JOB_USER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIT_LOG_JOB_USER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAuditLogJobUserName(String auditLogJobUserName) {
+  public void setAuditLogJobUserName(@jakarta.annotation.Nullable String auditLogJobUserName) {
     this.auditLogJobUserName = auditLogJobUserName;
   }
 
-
-  public AuditLogServiceJob campaignIds(List<Long> campaignIds) {
+  public AuditLogServiceJob campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -267,12 +276,12 @@ public class AuditLogServiceJob {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ダウンロード対象のキャンペーンIDです。&lt;br&gt; このフィールドは、リクエストの場合は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID of the download object.&lt;br&gt; This field is optional in requests. &lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -280,25 +289,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
-
-  public AuditLogServiceJob dateRange(AuditLogServiceDateRange dateRange) {
+  public AuditLogServiceJob dateRange(@jakarta.annotation.Nullable AuditLogServiceDateRange dateRange) {
     
     this.dateRange = dateRange;
     return this;
   }
 
-   /**
+  /**
    * Get dateRange
    * @return dateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceDateRange getDateRange() {
@@ -306,25 +314,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDateRange(AuditLogServiceDateRange dateRange) {
+  public void setDateRange(@jakarta.annotation.Nullable AuditLogServiceDateRange dateRange) {
     this.dateRange = dateRange;
   }
 
-
-  public AuditLogServiceJob encoding(AuditLogServiceEncoding encoding) {
+  public AuditLogServiceJob encoding(@jakarta.annotation.Nullable AuditLogServiceEncoding encoding) {
     
     this.encoding = encoding;
     return this;
   }
 
-   /**
+  /**
    * Get encoding
    * @return encoding
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceEncoding getEncoding() {
@@ -332,25 +339,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEncoding(AuditLogServiceEncoding encoding) {
+  public void setEncoding(@jakarta.annotation.Nullable AuditLogServiceEncoding encoding) {
     this.encoding = encoding;
   }
 
-
-  public AuditLogServiceJob jobStatus(AuditLogServiceJobStatus jobStatus) {
+  public AuditLogServiceJob jobStatus(@jakarta.annotation.Nullable AuditLogServiceJobStatus jobStatus) {
     
     this.jobStatus = jobStatus;
     return this;
   }
 
-   /**
+  /**
    * Get jobStatus
    * @return jobStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceJobStatus getJobStatus() {
@@ -358,25 +364,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_JOB_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_JOB_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setJobStatus(AuditLogServiceJobStatus jobStatus) {
+  public void setJobStatus(@jakarta.annotation.Nullable AuditLogServiceJobStatus jobStatus) {
     this.jobStatus = jobStatus;
   }
 
-
-  public AuditLogServiceJob lang(AuditLogServiceLang lang) {
+  public AuditLogServiceJob lang(@jakarta.annotation.Nullable AuditLogServiceLang lang) {
     
     this.lang = lang;
     return this;
   }
 
-   /**
+  /**
    * Get lang
    * @return lang
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceLang getLang() {
@@ -384,25 +389,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLang(AuditLogServiceLang lang) {
+  public void setLang(@jakarta.annotation.Nullable AuditLogServiceLang lang) {
     this.lang = lang;
   }
 
-
-  public AuditLogServiceJob output(AuditLogServiceOutput output) {
+  public AuditLogServiceJob output(@jakarta.annotation.Nullable AuditLogServiceOutput output) {
     
     this.output = output;
     return this;
   }
 
-   /**
+  /**
    * Get output
    * @return output
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceOutput getOutput() {
@@ -410,25 +414,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOutput(AuditLogServiceOutput output) {
+  public void setOutput(@jakarta.annotation.Nullable AuditLogServiceOutput output) {
     this.output = output;
   }
 
-
-  public AuditLogServiceJob progress(Integer progress) {
+  public AuditLogServiceJob progress(@jakarta.annotation.Nullable Integer progress) {
     
     this.progress = progress;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 処理進捗です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Displays progress in integers from 1 to 100.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return progress
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
+  @JsonProperty(value = JSON_PROPERTY_PROGRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getProgress() {
@@ -436,25 +439,24 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROGRESS)
+  @JsonProperty(value = JSON_PROPERTY_PROGRESS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProgress(Integer progress) {
+  public void setProgress(@jakarta.annotation.Nullable Integer progress) {
     this.progress = progress;
   }
 
-
-  public AuditLogServiceJob sourceType(AuditLogServiceSourceType sourceType) {
+  public AuditLogServiceJob sourceType(@jakarta.annotation.Nullable AuditLogServiceSourceType sourceType) {
     
     this.sourceType = sourceType;
     return this;
   }
 
-   /**
+  /**
    * Get sourceType
    * @return sourceType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AuditLogServiceSourceType getSourceType() {
@@ -462,11 +464,12 @@ public class AuditLogServiceJob {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SOURCE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SOURCE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSourceType(AuditLogServiceSourceType sourceType) {
+  public void setSourceType(@jakarta.annotation.Nullable AuditLogServiceSourceType sourceType) {
     this.sourceType = sourceType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -525,10 +528,7 @@ public class AuditLogServiceJob {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
