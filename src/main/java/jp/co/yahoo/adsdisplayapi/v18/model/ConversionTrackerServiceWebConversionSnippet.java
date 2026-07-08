@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceWebConversionSnippetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ConversionTrackerServiceWebConversionSnippetオブジェクトは、ウェブコンバージョントラッカーのトラッキングスクリプト情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ConversionTrackerServiceWebConversionSnippet object displays the tracking script information of Web Conversion Tracker.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTrackerServiceWebConversionSnippet.JSON_PROPERTY_ADVANCED_TAG,
   ConversionTrackerServiceWebConversionSnippet.JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTrackerServiceWebConversionSnippet {
   public static final String JSON_PROPERTY_ADVANCED_TAG = "advancedTag";
+  @jakarta.annotation.Nullable
   private String advancedTag;
 
   public static final String JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE = "webConversionSnippetType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType;
 
   public ConversionTrackerServiceWebConversionSnippet() {
   }
 
-  public ConversionTrackerServiceWebConversionSnippet advancedTag(String advancedTag) {
+  public ConversionTrackerServiceWebConversionSnippet advancedTag(@jakarta.annotation.Nullable String advancedTag) {
     
     this.advancedTag = advancedTag;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リニューアル版のコンバージョンタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。&lt;br&gt; 詳細は、「&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044362?language&#x3D;ja\&quot;&gt;コンバージョン測定とは&lt;/a&gt;」を参照してください。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The new format of conversion tag avoids the impacts such as changes made to the browser. &lt;br&gt; More details are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044362?language&#x3D;en_US\&quot;&gt;Conversion Analytics&lt;/a&gt;.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return advancedTag
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ADVANCED_TAG)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_TAG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdvancedTag() {
@@ -61,25 +64,24 @@ public class ConversionTrackerServiceWebConversionSnippet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ADVANCED_TAG)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_TAG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdvancedTag(String advancedTag) {
+  public void setAdvancedTag(@jakarta.annotation.Nullable String advancedTag) {
     this.advancedTag = advancedTag;
   }
 
-
-  public ConversionTrackerServiceWebConversionSnippet webConversionSnippetType(ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType) {
+  public ConversionTrackerServiceWebConversionSnippet webConversionSnippetType(@jakarta.annotation.Nullable ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType) {
     
     this.webConversionSnippetType = webConversionSnippetType;
     return this;
   }
 
-   /**
+  /**
    * Get webConversionSnippetType
    * @return webConversionSnippetType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceWebConversionSnippetType getWebConversionSnippetType() {
@@ -87,11 +89,12 @@ public class ConversionTrackerServiceWebConversionSnippet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_WEB_CONVERSION_SNIPPET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWebConversionSnippetType(ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType) {
+  public void setWebConversionSnippetType(@jakarta.annotation.Nullable ConversionTrackerServiceWebConversionSnippetType webConversionSnippetType) {
     this.webConversionSnippetType = webConversionSnippetType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class ConversionTrackerServiceWebConversionSnippet {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceExtraSpecs;
 import jp.co.yahoo.adsdisplayapi.v17.model.VideoServiceFileType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;VideoServiceSettingオブジェクトは、動画の設定内容を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;VideoServiceSetting object stores the setting information of videos.&lt;/div&gt; 
@@ -40,36 +42,44 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   VideoServiceSetting.JSON_PROPERTY_VIDEO_ASPECT_RATIO,
   VideoServiceSetting.JSON_PROPERTY_WIDTH
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class VideoServiceSetting {
   public static final String JSON_PROPERTY_EXTRA_SPECS = "extraSpecs";
+  @jakarta.annotation.Nullable
   private List<VideoServiceExtraSpecs> extraSpecs;
 
   public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
+  @jakarta.annotation.Nullable
   private Long fileSize;
 
   public static final String JSON_PROPERTY_FILE_TYPE = "fileType";
+  @jakarta.annotation.Nullable
   private VideoServiceFileType fileType;
 
   public static final String JSON_PROPERTY_HEIGHT = "height";
+  @jakarta.annotation.Nullable
   private Long height;
 
   public static final String JSON_PROPERTY_PLAYBACK_TIME = "playbackTime";
+  @jakarta.annotation.Nullable
   private Long playbackTime;
 
   public static final String JSON_PROPERTY_VIDEO_AD_FORMAT = "videoAdFormat";
+  @jakarta.annotation.Nullable
   private String videoAdFormat;
 
   public static final String JSON_PROPERTY_VIDEO_ASPECT_RATIO = "videoAspectRatio";
+  @jakarta.annotation.Nullable
   private String videoAspectRatio;
 
   public static final String JSON_PROPERTY_WIDTH = "width";
+  @jakarta.annotation.Nullable
   private Long width;
 
   public VideoServiceSetting() {
   }
 
-  public VideoServiceSetting extraSpecs(List<VideoServiceExtraSpecs> extraSpecs) {
+  public VideoServiceSetting extraSpecs(@jakarta.annotation.Nullable List<VideoServiceExtraSpecs> extraSpecs) {
     
     this.extraSpecs = extraSpecs;
     return this;
@@ -83,12 +93,12 @@ public class VideoServiceSetting {
     return this;
   }
 
-   /**
+  /**
    * Get extraSpecs
    * @return extraSpecs
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXTRA_SPECS)
+  @JsonProperty(value = JSON_PROPERTY_EXTRA_SPECS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<VideoServiceExtraSpecs> getExtraSpecs() {
@@ -96,25 +106,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXTRA_SPECS)
+  @JsonProperty(value = JSON_PROPERTY_EXTRA_SPECS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExtraSpecs(List<VideoServiceExtraSpecs> extraSpecs) {
+  public void setExtraSpecs(@jakarta.annotation.Nullable List<VideoServiceExtraSpecs> extraSpecs) {
     this.extraSpecs = extraSpecs;
   }
 
-
-  public VideoServiceSetting fileSize(Long fileSize) {
+  public VideoServiceSetting fileSize(@jakarta.annotation.Nullable Long fileSize) {
     
     this.fileSize = fileSize;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画のファイルサイズです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;File size of the video.&lt;/div&gt; 
    * @return fileSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFileSize() {
@@ -122,25 +131,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFileSize(Long fileSize) {
+  public void setFileSize(@jakarta.annotation.Nullable Long fileSize) {
     this.fileSize = fileSize;
   }
 
-
-  public VideoServiceSetting fileType(VideoServiceFileType fileType) {
+  public VideoServiceSetting fileType(@jakarta.annotation.Nullable VideoServiceFileType fileType) {
     
     this.fileType = fileType;
     return this;
   }
 
-   /**
+  /**
    * Get fileType
    * @return fileType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceFileType getFileType() {
@@ -148,25 +156,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFileType(VideoServiceFileType fileType) {
+  public void setFileType(@jakarta.annotation.Nullable VideoServiceFileType fileType) {
     this.fileType = fileType;
   }
 
-
-  public VideoServiceSetting height(Long height) {
+  public VideoServiceSetting height(@jakarta.annotation.Nullable Long height) {
     
     this.height = height;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の高さ（縦の長さ）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Height (vertical length) of the video.&lt;/div&gt; 
    * @return height
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonProperty(value = JSON_PROPERTY_HEIGHT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getHeight() {
@@ -174,25 +181,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonProperty(value = JSON_PROPERTY_HEIGHT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeight(Long height) {
+  public void setHeight(@jakarta.annotation.Nullable Long height) {
     this.height = height;
   }
 
-
-  public VideoServiceSetting playbackTime(Long playbackTime) {
+  public VideoServiceSetting playbackTime(@jakarta.annotation.Nullable Long playbackTime) {
     
     this.playbackTime = playbackTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画再生時間（秒）です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Play time (sec) of the video.&lt;/div&gt; 
    * @return playbackTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLAYBACK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_PLAYBACK_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPlaybackTime() {
@@ -200,25 +206,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLAYBACK_TIME)
+  @JsonProperty(value = JSON_PROPERTY_PLAYBACK_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlaybackTime(Long playbackTime) {
+  public void setPlaybackTime(@jakarta.annotation.Nullable Long playbackTime) {
     this.playbackTime = playbackTime;
   }
 
-
-  public VideoServiceSetting videoAdFormat(String videoAdFormat) {
+  public VideoServiceSetting videoAdFormat(@jakarta.annotation.Nullable String videoAdFormat) {
     
     this.videoAdFormat = videoAdFormat;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画広告の種類です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad format type of the video ad.&lt;/div&gt; 
    * @return videoAdFormat
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_AD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_AD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVideoAdFormat() {
@@ -226,25 +231,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_AD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_AD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoAdFormat(String videoAdFormat) {
+  public void setVideoAdFormat(@jakarta.annotation.Nullable String videoAdFormat) {
     this.videoAdFormat = videoAdFormat;
   }
 
-
-  public VideoServiceSetting videoAspectRatio(String videoAspectRatio) {
+  public VideoServiceSetting videoAspectRatio(@jakarta.annotation.Nullable String videoAspectRatio) {
     
     this.videoAspectRatio = videoAspectRatio;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 動画アスペクト比の種類です。&lt;br&gt; ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのaspectRatioフィールドをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Type of aspect ratio.&lt;br&gt; * Available values can be referred to aspectRatio field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. &lt;/div&gt; 
    * @return videoAspectRatio
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_ASPECT_RATIO)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_ASPECT_RATIO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVideoAspectRatio() {
@@ -252,25 +256,24 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_ASPECT_RATIO)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_ASPECT_RATIO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoAspectRatio(String videoAspectRatio) {
+  public void setVideoAspectRatio(@jakarta.annotation.Nullable String videoAspectRatio) {
     this.videoAspectRatio = videoAspectRatio;
   }
 
-
-  public VideoServiceSetting width(Long width) {
+  public VideoServiceSetting width(@jakarta.annotation.Nullable Long width) {
     
     this.width = width;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の横幅です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Width of the video.&lt;/div&gt; 
    * @return width
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonProperty(value = JSON_PROPERTY_WIDTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getWidth() {
@@ -278,11 +281,12 @@ public class VideoServiceSetting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonProperty(value = JSON_PROPERTY_WIDTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWidth(Long width) {
+  public void setWidth(@jakarta.annotation.Nullable Long width) {
     this.width = width;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -329,10 +333,7 @@ public class VideoServiceSetting {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

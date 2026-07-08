@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.FeedDataServiceEncoding;
 import jp.co.yahoo.adsdisplayapi.v18.model.FeedDataServiceOutput;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品情報のエラーファイルダウンロード処理を実施します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;FeedDataServiceDownloadErrorFileSelector object retains search condition of downloadErrorFile operation.&lt;/div&gt; 
@@ -34,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedDataServiceDownloadErrorFileSelector.JSON_PROPERTY_ENCODING,
   FeedDataServiceDownloadErrorFileSelector.JSON_PROPERTY_OUTPUT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedDataServiceDownloadErrorFileSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_ITEM_LIST_UPLOAD_ID = "itemListUploadId";
+  @jakarta.annotation.Nonnull
   private Long itemListUploadId;
 
   public static final String JSON_PROPERTY_ENCODING = "encoding";
+  @jakarta.annotation.Nullable
   private FeedDataServiceEncoding encoding;
 
   public static final String JSON_PROPERTY_OUTPUT = "output";
+  @jakarta.annotation.Nullable
   private FeedDataServiceOutput output;
 
   public FeedDataServiceDownloadErrorFileSelector() {
   }
 
-  public FeedDataServiceDownloadErrorFileSelector accountId(Long accountId) {
+  public FeedDataServiceDownloadErrorFileSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -70,25 +75,24 @@ public class FeedDataServiceDownloadErrorFileSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public FeedDataServiceDownloadErrorFileSelector itemListUploadId(Long itemListUploadId) {
+  public FeedDataServiceDownloadErrorFileSelector itemListUploadId(@jakarta.annotation.Nonnull Long itemListUploadId) {
     
     this.itemListUploadId = itemListUploadId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：アップロードした商品情報を識別するID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Uploaded item list ID.&lt;/div&gt; 
    * @return itemListUploadId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_ID)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_LIST_UPLOAD_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getItemListUploadId() {
@@ -96,25 +100,24 @@ public class FeedDataServiceDownloadErrorFileSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ITEM_LIST_UPLOAD_ID)
+  @JsonProperty(value = JSON_PROPERTY_ITEM_LIST_UPLOAD_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setItemListUploadId(Long itemListUploadId) {
+  public void setItemListUploadId(@jakarta.annotation.Nonnull Long itemListUploadId) {
     this.itemListUploadId = itemListUploadId;
   }
 
-
-  public FeedDataServiceDownloadErrorFileSelector encoding(FeedDataServiceEncoding encoding) {
+  public FeedDataServiceDownloadErrorFileSelector encoding(@jakarta.annotation.Nullable FeedDataServiceEncoding encoding) {
     
     this.encoding = encoding;
     return this;
   }
 
-   /**
+  /**
    * Get encoding
    * @return encoding
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedDataServiceEncoding getEncoding() {
@@ -122,25 +125,24 @@ public class FeedDataServiceDownloadErrorFileSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENCODING)
+  @JsonProperty(value = JSON_PROPERTY_ENCODING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEncoding(FeedDataServiceEncoding encoding) {
+  public void setEncoding(@jakarta.annotation.Nullable FeedDataServiceEncoding encoding) {
     this.encoding = encoding;
   }
 
-
-  public FeedDataServiceDownloadErrorFileSelector output(FeedDataServiceOutput output) {
+  public FeedDataServiceDownloadErrorFileSelector output(@jakarta.annotation.Nullable FeedDataServiceOutput output) {
     
     this.output = output;
     return this;
   }
 
-   /**
+  /**
    * Get output
    * @return output
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedDataServiceOutput getOutput() {
@@ -148,11 +150,12 @@ public class FeedDataServiceDownloadErrorFileSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OUTPUT)
+  @JsonProperty(value = JSON_PROPERTY_OUTPUT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOutput(FeedDataServiceOutput output) {
+  public void setOutput(@jakarta.annotation.Nullable FeedDataServiceOutput output) {
     this.output = output;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +194,7 @@ public class FeedDataServiceDownloadErrorFileSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

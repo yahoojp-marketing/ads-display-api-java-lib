@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.Error;
 import jp.co.yahoo.adsdisplayapi.v19.model.VideoServiceUploadData;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * VideoServiceUploadValue
@@ -35,21 +37,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   VideoServiceUploadValue.JSON_PROPERTY_UPLOAD_DATA,
   VideoServiceUploadValue.JSON_PROPERTY_OPERATION_SUCCEEDED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class VideoServiceUploadValue {
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_UPLOAD_DATA = "uploadData";
+  @jakarta.annotation.Nullable
   private VideoServiceUploadData uploadData;
 
   public static final String JSON_PROPERTY_OPERATION_SUCCEEDED = "operationSucceeded";
+  @jakarta.annotation.Nullable
   private Boolean operationSucceeded;
 
   public VideoServiceUploadValue() {
   }
 
-  public VideoServiceUploadValue errors(List<Error> errors) {
+  public VideoServiceUploadValue errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -63,12 +68,12 @@ public class VideoServiceUploadValue {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -76,25 +81,24 @@ public class VideoServiceUploadValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public VideoServiceUploadValue uploadData(VideoServiceUploadData uploadData) {
+  public VideoServiceUploadValue uploadData(@jakarta.annotation.Nullable VideoServiceUploadData uploadData) {
     
     this.uploadData = uploadData;
     return this;
   }
 
-   /**
+  /**
    * Get uploadData
    * @return uploadData
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPLOAD_DATA)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceUploadData getUploadData() {
@@ -102,25 +106,24 @@ public class VideoServiceUploadValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPLOAD_DATA)
+  @JsonProperty(value = JSON_PROPERTY_UPLOAD_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUploadData(VideoServiceUploadData uploadData) {
+  public void setUploadData(@jakarta.annotation.Nullable VideoServiceUploadData uploadData) {
     this.uploadData = uploadData;
   }
 
-
-  public VideoServiceUploadValue operationSucceeded(Boolean operationSucceeded) {
+  public VideoServiceUploadValue operationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     
     this.operationSucceeded = operationSucceeded;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;処理結果です。trueの場合は、処理は成功しました。falseの場合は処理が失敗しています。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The process results. If true, the process succeeded. If false, the process failed.&lt;/div&gt; 
    * @return operationSucceeded
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getOperationSucceeded() {
@@ -128,11 +131,12 @@ public class VideoServiceUploadValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERATION_SUCCEEDED)
+  @JsonProperty(value = JSON_PROPERTY_OPERATION_SUCCEEDED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOperationSucceeded(Boolean operationSucceeded) {
+  public void setOperationSucceeded(@jakarta.annotation.Nullable Boolean operationSucceeded) {
     this.operationSucceeded = operationSucceeded;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +173,7 @@ public class VideoServiceUploadValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

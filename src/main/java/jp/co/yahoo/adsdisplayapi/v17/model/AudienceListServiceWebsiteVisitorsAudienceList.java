@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,12 +21,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceIsOpen;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceIsPreset;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceRule;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceWebsiteVisitorsAudienceListオブジェクトは、オーディエンスリスト（ウェブサイト訪問ユーザー）を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがWEBSITE_VISITORSの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceWebsiteVisitorsAudienceList object describes the audience list (website visitor).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *If audienceListType is WEBSITE_VISITORS, this field is required in ADD and SET operation. &lt;/div&gt; 
@@ -38,38 +40,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceWebsiteVisitorsAudienceList.JSON_PROPERTY_RETARGETING_TAG_ID,
   AudienceListServiceWebsiteVisitorsAudienceList.JSON_PROPERTY_RULES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceWebsiteVisitorsAudienceList {
   public static final String JSON_PROPERTY_IS_OPEN = "isOpen";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsOpen isOpen;
 
   public static final String JSON_PROPERTY_IS_PRESET = "isPreset";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsPreset isPreset;
 
   public static final String JSON_PROPERTY_DATA_DURATION = "dataDuration";
+  @jakarta.annotation.Nullable
   private Integer dataDuration;
 
   public static final String JSON_PROPERTY_RETARGETING_TAG_ID = "retargetingTagId";
+  @jakarta.annotation.Nullable
   private String retargetingTagId;
 
   public static final String JSON_PROPERTY_RULES = "rules";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceRule> rules;
 
   public AudienceListServiceWebsiteVisitorsAudienceList() {
   }
 
-  public AudienceListServiceWebsiteVisitorsAudienceList isOpen(AudienceListServiceIsOpen isOpen) {
+  public AudienceListServiceWebsiteVisitorsAudienceList isOpen(@jakarta.annotation.Nullable AudienceListServiceIsOpen isOpen) {
     
     this.isOpen = isOpen;
     return this;
   }
 
-   /**
+  /**
    * Get isOpen
    * @return isOpen
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_OPEN)
+  @JsonProperty(value = JSON_PROPERTY_IS_OPEN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsOpen getIsOpen() {
@@ -77,25 +84,24 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_OPEN)
+  @JsonProperty(value = JSON_PROPERTY_IS_OPEN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsOpen(AudienceListServiceIsOpen isOpen) {
+  public void setIsOpen(@jakarta.annotation.Nullable AudienceListServiceIsOpen isOpen) {
     this.isOpen = isOpen;
   }
 
-
-  public AudienceListServiceWebsiteVisitorsAudienceList isPreset(AudienceListServiceIsPreset isPreset) {
+  public AudienceListServiceWebsiteVisitorsAudienceList isPreset(@jakarta.annotation.Nullable AudienceListServiceIsPreset isPreset) {
     
     this.isPreset = isPreset;
     return this;
   }
 
-   /**
+  /**
    * Get isPreset
    * @return isPreset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_PRESET)
+  @JsonProperty(value = JSON_PROPERTY_IS_PRESET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsPreset getIsPreset() {
@@ -103,25 +109,24 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_PRESET)
+  @JsonProperty(value = JSON_PROPERTY_IS_PRESET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsPreset(AudienceListServiceIsPreset isPreset) {
+  public void setIsPreset(@jakarta.annotation.Nullable AudienceListServiceIsPreset isPreset) {
     this.isPreset = isPreset;
   }
 
-
-  public AudienceListServiceWebsiteVisitorsAudienceList dataDuration(Integer dataDuration) {
+  public AudienceListServiceWebsiteVisitorsAudienceList dataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     
     this.dataDuration = dataDuration;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; データの有効期間（1日～540日）です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Data duration. (1 - 540 days) &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return dataDuration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getDataDuration() {
@@ -129,25 +134,24 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataDuration(Integer dataDuration) {
+  public void setDataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     this.dataDuration = dataDuration;
   }
 
-
-  public AudienceListServiceWebsiteVisitorsAudienceList retargetingTagId(String retargetingTagId) {
+  public AudienceListServiceWebsiteVisitorsAudienceList retargetingTagId(@jakarta.annotation.Nullable String retargetingTagId) {
     
     this.retargetingTagId = retargetingTagId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リターゲティングタグIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ID of retargeting tag. &lt;/div&gt; 
    * @return retargetingTagId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRetargetingTagId() {
@@ -155,14 +159,13 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingTagId(String retargetingTagId) {
+  public void setRetargetingTagId(@jakarta.annotation.Nullable String retargetingTagId) {
     this.retargetingTagId = retargetingTagId;
   }
 
-
-  public AudienceListServiceWebsiteVisitorsAudienceList rules(List<AudienceListServiceRule> rules) {
+  public AudienceListServiceWebsiteVisitorsAudienceList rules(@jakarta.annotation.Nullable List<AudienceListServiceRule> rules) {
     
     this.rules = rules;
     return this;
@@ -176,12 +179,12 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULES)
+  @JsonProperty(value = JSON_PROPERTY_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceRule> getRules() {
@@ -189,11 +192,12 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULES)
+  @JsonProperty(value = JSON_PROPERTY_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRules(List<AudienceListServiceRule> rules) {
+  public void setRules(@jakarta.annotation.Nullable List<AudienceListServiceRule> rules) {
     this.rules = rules;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -234,10 +238,7 @@ public class AudienceListServiceWebsiteVisitorsAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

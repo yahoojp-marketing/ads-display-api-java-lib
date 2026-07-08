@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceFilterOperator;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ReportDefinitionServiceFilterオブジェクトは、フィルター定義を表します。&lt;br&gt; フィルタ条件は最大6つまで設定が可能です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; ReportDefinitionServiceFilter object serves filter definitions. &lt;br&gt; Filter condition can set up to 6.&lt;br&gt; This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -34,32 +36,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceFilter.JSON_PROPERTY_FILTER_OPERATOR,
   ReportDefinitionServiceFilter.JSON_PROPERTY_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceFilter {
   public static final String JSON_PROPERTY_FIELD = "field";
+  @jakarta.annotation.Nullable
   private String field;
 
   public static final String JSON_PROPERTY_FILTER_OPERATOR = "filterOperator";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceFilterOperator filterOperator;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<String> values;
 
   public ReportDefinitionServiceFilter() {
   }
 
-  public ReportDefinitionServiceFilter field(String field) {
+  public ReportDefinitionServiceFilter field(@jakarta.annotation.Nullable String field) {
     
     this.field = field;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; フィルター対象となるフィールドです。&lt;br&gt; このフィールドは、ADD時に必須となります。&lt;br&gt; ※getReportFieldsのレスポンスで「filterable&#x3D;true」のフィールドのみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Field to be filtered.&lt;br&gt; This field is required in ADD operation.&lt;br&gt; ※Can be specified for the field with &amp;#34;filterable&#x3D;true&amp;#34; on the response of getReportFields. &lt;/div&gt; 
    * @return field
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getField() {
@@ -67,25 +72,24 @@ public class ReportDefinitionServiceFilter {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setField(String field) {
+  public void setField(@jakarta.annotation.Nullable String field) {
     this.field = field;
   }
 
-
-  public ReportDefinitionServiceFilter filterOperator(ReportDefinitionServiceFilterOperator filterOperator) {
+  public ReportDefinitionServiceFilter filterOperator(@jakarta.annotation.Nullable ReportDefinitionServiceFilterOperator filterOperator) {
     
     this.filterOperator = filterOperator;
     return this;
   }
 
-   /**
+  /**
    * Get filterOperator
    * @return filterOperator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILTER_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_FILTER_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceFilterOperator getFilterOperator() {
@@ -93,14 +97,13 @@ public class ReportDefinitionServiceFilter {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILTER_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_FILTER_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFilterOperator(ReportDefinitionServiceFilterOperator filterOperator) {
+  public void setFilterOperator(@jakarta.annotation.Nullable ReportDefinitionServiceFilterOperator filterOperator) {
     this.filterOperator = filterOperator;
   }
 
-
-  public ReportDefinitionServiceFilter values(List<String> values) {
+  public ReportDefinitionServiceFilter values(@jakarta.annotation.Nullable List<String> values) {
     
     this.values = values;
     return this;
@@ -114,12 +117,12 @@ public class ReportDefinitionServiceFilter {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 条件値です。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Value for condition. &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getValues() {
@@ -127,11 +130,12 @@ public class ReportDefinitionServiceFilter {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<String> values) {
+  public void setValues(@jakarta.annotation.Nullable List<String> values) {
     this.values = values;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -168,10 +172,7 @@ public class ReportDefinitionServiceFilter {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

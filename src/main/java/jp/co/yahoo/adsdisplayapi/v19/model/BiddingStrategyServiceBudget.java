@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.BiddingStrategyServiceIsRemoveCampaignBudgetFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; BiddingStrategyServiceBudgetオブジェクトは、キャンペーン共有予算に関する情報を表します。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The BiddingStrategyServiceBudget object serves campaign budgets.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
@@ -33,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BiddingStrategyServiceBudget.JSON_PROPERTY_AMOUNT,
   BiddingStrategyServiceBudget.JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BUDGET
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BiddingStrategyServiceBudget {
   public static final String JSON_PROPERTY_CAMPAIGN_BUDGET_ID = "campaignBudgetId";
+  @jakarta.annotation.Nullable
   private Long campaignBudgetId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BUDGET_NAME = "campaignBudgetName";
+  @jakarta.annotation.Nullable
   private String campaignBudgetName;
 
   public static final String JSON_PROPERTY_AMOUNT = "amount";
+  @jakarta.annotation.Nullable
   private Long amount;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BUDGET = "isRemoveCampaignBudget";
+  @jakarta.annotation.Nullable
   private BiddingStrategyServiceIsRemoveCampaignBudgetFlg isRemoveCampaignBudget;
 
   public BiddingStrategyServiceBudget() {
   }
 
-  public BiddingStrategyServiceBudget campaignBudgetId(Long campaignBudgetId) {
+  public BiddingStrategyServiceBudget campaignBudgetId(@jakarta.annotation.Nullable Long campaignBudgetId) {
     
     this.campaignBudgetId = campaignBudgetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget ID.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignBudgetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignBudgetId() {
@@ -69,25 +74,24 @@ public class BiddingStrategyServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBudgetId(Long campaignBudgetId) {
+  public void setCampaignBudgetId(@jakarta.annotation.Nullable Long campaignBudgetId) {
     this.campaignBudgetId = campaignBudgetId;
   }
 
-
-  public BiddingStrategyServiceBudget campaignBudgetName(String campaignBudgetName) {
+  public BiddingStrategyServiceBudget campaignBudgetName(@jakarta.annotation.Nullable String campaignBudgetName) {
     
     this.campaignBudgetName = campaignBudgetName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;CampaignBudget name.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignBudgetName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignBudgetName() {
@@ -95,25 +99,24 @@ public class BiddingStrategyServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBudgetName(String campaignBudgetName) {
+  public void setCampaignBudgetName(@jakarta.annotation.Nullable String campaignBudgetName) {
     this.campaignBudgetName = campaignBudgetName;
   }
 
-
-  public BiddingStrategyServiceBudget amount(Long amount) {
+  public BiddingStrategyServiceBudget amount(@jakarta.annotation.Nullable Long amount) {
     
     this.amount = amount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;共有予算の金額です。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;br&gt; ADD時、新規共有予算を作成してポートフォリオに紐づけます&lt;br&gt; SET時、ポートフォリオに共有予算が紐づいていない場合は新規共有予算を作成してポートフォリオに紐づけます&lt;br&gt; SET時、ポートフォリオに共有予算が紐づいている場合は共有予算の金額を更新します &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Amount of budget of Campaign.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; Create a new CampaignBudget and link it in ADD operation.&lt;br&gt; If CampaignBudget is not linked the portfolio, create a new CampaignBudget and link it in SET operation.&lt;br&gt; If CampaignBudget is linked the portfolio, the amount of the CampaignBudget will be updated in SET operation. &lt;/div&gt; 
    * @return amount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAmount() {
@@ -121,25 +124,24 @@ public class BiddingStrategyServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAmount(Long amount) {
+  public void setAmount(@jakarta.annotation.Nullable Long amount) {
     this.amount = amount;
   }
 
-
-  public BiddingStrategyServiceBudget isRemoveCampaignBudget(BiddingStrategyServiceIsRemoveCampaignBudgetFlg isRemoveCampaignBudget) {
+  public BiddingStrategyServiceBudget isRemoveCampaignBudget(@jakarta.annotation.Nullable BiddingStrategyServiceIsRemoveCampaignBudgetFlg isRemoveCampaignBudget) {
     
     this.isRemoveCampaignBudget = isRemoveCampaignBudget;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveCampaignBudget
    * @return isRemoveCampaignBudget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BiddingStrategyServiceIsRemoveCampaignBudgetFlg getIsRemoveCampaignBudget() {
@@ -147,11 +149,12 @@ public class BiddingStrategyServiceBudget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CAMPAIGN_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveCampaignBudget(BiddingStrategyServiceIsRemoveCampaignBudgetFlg isRemoveCampaignBudget) {
+  public void setIsRemoveCampaignBudget(@jakarta.annotation.Nullable BiddingStrategyServiceIsRemoveCampaignBudgetFlg isRemoveCampaignBudget) {
     this.isRemoveCampaignBudget = isRemoveCampaignBudget;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +193,7 @@ public class BiddingStrategyServiceBudget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

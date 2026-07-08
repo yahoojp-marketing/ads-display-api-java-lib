@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AuditLogServiceJob;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AuditLogServiceOperationは addメソッドのダウンロードジョブの実行パラメータを保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AuditLogServiceOperation object is a container for storing the download job information for add method (execution parameter).&lt;/div&gt; 
@@ -33,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AuditLogServiceOperation.JSON_PROPERTY_ACCOUNT_ID,
   AuditLogServiceOperation.JSON_PROPERTY_OPERAND
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AuditLogServiceOperation {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_OPERAND = "operand";
+  @jakarta.annotation.Nonnull
   private List<AuditLogServiceJob> operand = new ArrayList<>();
 
   public AuditLogServiceOperation() {
   }
 
-  public AuditLogServiceOperation accountId(Long accountId) {
+  public AuditLogServiceOperation accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -63,14 +67,13 @@ public class AuditLogServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AuditLogServiceOperation operand(List<AuditLogServiceJob> operand) {
+  public AuditLogServiceOperation operand(@jakarta.annotation.Nonnull List<AuditLogServiceJob> operand) {
     
     this.operand = operand;
     return this;
@@ -84,12 +87,12 @@ public class AuditLogServiceOperation {
     return this;
   }
 
-   /**
+  /**
    * Get operand
    * @return operand
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_OPERAND, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public List<AuditLogServiceJob> getOperand() {
@@ -97,11 +100,12 @@ public class AuditLogServiceOperation {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPERAND)
+  @JsonProperty(value = JSON_PROPERTY_OPERAND, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setOperand(List<AuditLogServiceJob> operand) {
+  public void setOperand(@jakarta.annotation.Nonnull List<AuditLogServiceJob> operand) {
     this.operand = operand;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -136,10 +140,7 @@ public class AuditLogServiceOperation {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.ContentsKeywordListServiceContentsKeyword;
 import jp.co.yahoo.adsdisplayapi.v17.model.ContentsKeywordListServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordListオブジェクトは、コンテンツキーワードリストを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordList object displays the contents keyword list.&lt;/div&gt; 
@@ -39,44 +41,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ContentsKeywordList.JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME,
   ContentsKeywordList.JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ContentsKeywordList {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD = "contentsKeyword";
+  @jakarta.annotation.Nullable
   private List<ContentsKeywordListServiceContentsKeyword> contentsKeyword;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION = "contentsKeywordListDescription";
+  @jakarta.annotation.Nullable
   private String contentsKeywordListDescription;
 
   public static final String JSON_PROPERTY_IS_REMOVE_CONTENTS_KEYWORD_LIST_DESCRIPTION = "isRemoveContentsKeywordListDescription";
+  @jakarta.annotation.Nullable
   private ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_LIST_ID = "contentsKeywordListId";
+  @jakarta.annotation.Nullable
   private Long contentsKeywordListId;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME = "contentsKeywordListName";
+  @jakarta.annotation.Nullable
   private String contentsKeywordListName;
 
   public static final String JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG = "brandSafetyDenyListFlg";
+  @jakarta.annotation.Nullable
   private Boolean brandSafetyDenyListFlg;
 
   public ContentsKeywordList() {
   }
 
-  public ContentsKeywordList accountId(Long accountId) {
+  public ContentsKeywordList accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -84,14 +93,13 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public ContentsKeywordList contentsKeyword(List<ContentsKeywordListServiceContentsKeyword> contentsKeyword) {
+  public ContentsKeywordList contentsKeyword(@jakarta.annotation.Nullable List<ContentsKeywordListServiceContentsKeyword> contentsKeyword) {
     
     this.contentsKeyword = contentsKeyword;
     return this;
@@ -105,12 +113,12 @@ public class ContentsKeywordList {
     return this;
   }
 
-   /**
+  /**
    * Get contentsKeyword
    * @return contentsKeyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ContentsKeywordListServiceContentsKeyword> getContentsKeyword() {
@@ -118,25 +126,24 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeyword(List<ContentsKeywordListServiceContentsKeyword> contentsKeyword) {
+  public void setContentsKeyword(@jakarta.annotation.Nullable List<ContentsKeywordListServiceContentsKeyword> contentsKeyword) {
     this.contentsKeyword = contentsKeyword;
   }
 
-
-  public ContentsKeywordList contentsKeywordListDescription(String contentsKeywordListDescription) {
+  public ContentsKeywordList contentsKeywordListDescription(@jakarta.annotation.Nullable String contentsKeywordListDescription) {
     
     this.contentsKeywordListDescription = contentsKeywordListDescription;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリストの説明文です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Description of Contents keyword list.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
    * @return contentsKeywordListDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getContentsKeywordListDescription() {
@@ -144,25 +151,24 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeywordListDescription(String contentsKeywordListDescription) {
+  public void setContentsKeywordListDescription(@jakarta.annotation.Nullable String contentsKeywordListDescription) {
     this.contentsKeywordListDescription = contentsKeywordListDescription;
   }
 
-
-  public ContentsKeywordList isRemoveContentsKeywordListDescription(ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription) {
+  public ContentsKeywordList isRemoveContentsKeywordListDescription(@jakarta.annotation.Nullable ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription) {
     
     this.isRemoveContentsKeywordListDescription = isRemoveContentsKeywordListDescription;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveContentsKeywordListDescription
    * @return isRemoveContentsKeywordListDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONTENTS_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CONTENTS_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ContentsKeywordListServiceIsRemoveFlg getIsRemoveContentsKeywordListDescription() {
@@ -170,25 +176,24 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_CONTENTS_KEYWORD_LIST_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_CONTENTS_KEYWORD_LIST_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveContentsKeywordListDescription(ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription) {
+  public void setIsRemoveContentsKeywordListDescription(@jakarta.annotation.Nullable ContentsKeywordListServiceIsRemoveFlg isRemoveContentsKeywordListDescription) {
     this.isRemoveContentsKeywordListDescription = isRemoveContentsKeywordListDescription;
   }
 
-
-  public ContentsKeywordList contentsKeywordListId(Long contentsKeywordListId) {
+  public ContentsKeywordList contentsKeywordListId(@jakarta.annotation.Nullable Long contentsKeywordListId) {
     
     this.contentsKeywordListId = contentsKeywordListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリストIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Contents keyword list ID.&lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return contentsKeywordListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getContentsKeywordListId() {
@@ -196,25 +201,24 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeywordListId(Long contentsKeywordListId) {
+  public void setContentsKeywordListId(@jakarta.annotation.Nullable Long contentsKeywordListId) {
     this.contentsKeywordListId = contentsKeywordListId;
   }
 
-
-  public ContentsKeywordList contentsKeywordListName(String contentsKeywordListName) {
+  public ContentsKeywordList contentsKeywordListName(@jakarta.annotation.Nullable String contentsKeywordListName) {
     
     this.contentsKeywordListName = contentsKeywordListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンテンツキーワードリスト名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Name of Contents keyword list.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return contentsKeywordListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getContentsKeywordListName() {
@@ -222,25 +226,24 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeywordListName(String contentsKeywordListName) {
+  public void setContentsKeywordListName(@jakarta.annotation.Nullable String contentsKeywordListName) {
     this.contentsKeywordListName = contentsKeywordListName;
   }
 
-
-  public ContentsKeywordList brandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
+  public ContentsKeywordList brandSafetyDenyListFlg(@jakarta.annotation.Nullable Boolean brandSafetyDenyListFlg) {
     
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 除外専用リストかどうかのフラグです。&lt;br&gt; 除外専用リストには下記の制約があります。&lt;br&gt; ・１アカウントにつき1つ作成が可能です。&lt;br&gt; ・除外にのみ紐付け可能です。&lt;br&gt; このフィールドは、ADD時に省略可能(デフォルトの値はFALSE)、SET時に指定不可となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; A flag that indicates whether it is an exclusion list. &lt;br&gt; Exclusion list includes the following restrictions: &lt;br&gt; *Only one list can be created per account. &lt;br&gt; *Can be linked only to exclusion. &lt;br&gt; This field is optional in ADD operation (default value will be FALSE), and cannot be specified in SET operation. &lt;/div&gt; &lt;dl class&#x3D;term&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;TRUE&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;除外専用リストです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Exclusion list.&lt;/span&gt;&lt;/dd&gt;   &lt;dt class&#x3D;\&quot;term__item\&quot;&gt;FALSE&lt;/dt&gt;   &lt;dd class&#x3D;\&quot;term__desc\&quot;&gt;&lt;span lang&#x3D;\&quot;ja\&quot;&gt;通常のurlリストです。&lt;/span&gt;&lt;span lang&#x3D;\&quot;en\&quot;&gt;Standard URL list.&lt;/span&gt;&lt;/dd&gt; &lt;/dl&gt; 
    * @return brandSafetyDenyListFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getBrandSafetyDenyListFlg() {
@@ -248,11 +251,12 @@ public class ContentsKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_SAFETY_DENY_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandSafetyDenyListFlg(Boolean brandSafetyDenyListFlg) {
+  public void setBrandSafetyDenyListFlg(@jakarta.annotation.Nullable Boolean brandSafetyDenyListFlg) {
     this.brandSafetyDenyListFlg = brandSafetyDenyListFlg;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -297,10 +301,7 @@ public class ContentsKeywordList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

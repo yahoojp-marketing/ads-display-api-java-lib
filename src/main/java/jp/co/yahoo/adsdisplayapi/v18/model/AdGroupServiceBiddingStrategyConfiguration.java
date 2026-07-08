@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceBiddingStrategyConfigurationは、広告グループ入札戦略を表します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceBiddingStrategyConfiguration object describes bidding strategy of ad group.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; &lt;/div&gt; 
@@ -30,26 +31,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   AdGroupServiceBiddingStrategyConfiguration.JSON_PROPERTY_BIDDING_SCHEME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
+  @jakarta.annotation.Nullable
   private AdGroupServiceBiddingScheme biddingScheme;
 
   public AdGroupServiceBiddingStrategyConfiguration() {
   }
 
-  public AdGroupServiceBiddingStrategyConfiguration biddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
+  public AdGroupServiceBiddingStrategyConfiguration biddingScheme(@jakarta.annotation.Nullable AdGroupServiceBiddingScheme biddingScheme) {
     
     this.biddingScheme = biddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get biddingScheme
    * @return biddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceBiddingScheme getBiddingScheme() {
@@ -57,11 +59,12 @@ public class AdGroupServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingScheme(AdGroupServiceBiddingScheme biddingScheme) {
+  public void setBiddingScheme(@jakarta.annotation.Nullable AdGroupServiceBiddingScheme biddingScheme) {
     this.biddingScheme = biddingScheme;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -94,10 +97,7 @@ public class AdGroupServiceBiddingStrategyConfiguration {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

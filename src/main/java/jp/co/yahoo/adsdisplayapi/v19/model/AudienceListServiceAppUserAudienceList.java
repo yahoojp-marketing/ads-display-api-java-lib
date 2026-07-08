@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceAppLink;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceIsOpen;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceIsPreset;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceRule;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceAppUserAudienceListオブジェクトは、アプリユーザー情報を表します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceAppUserAudienceList object describes audience list (app users data.)&lt;br&gt; &lt;/div&gt; 
@@ -39,38 +41,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAppUserAudienceList.JSON_PROPERTY_RULES,
   AudienceListServiceAppUserAudienceList.JSON_PROPERTY_APP_LINK
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceAppUserAudienceList {
   public static final String JSON_PROPERTY_IS_OPEN = "isOpen";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsOpen isOpen;
 
   public static final String JSON_PROPERTY_IS_PRESET = "isPreset";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsPreset isPreset;
 
   public static final String JSON_PROPERTY_DATA_DURATION = "dataDuration";
+  @jakarta.annotation.Nullable
   private Integer dataDuration;
 
   public static final String JSON_PROPERTY_RULES = "rules";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceRule> rules;
 
   public static final String JSON_PROPERTY_APP_LINK = "appLink";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAppLink appLink;
 
   public AudienceListServiceAppUserAudienceList() {
   }
 
-  public AudienceListServiceAppUserAudienceList isOpen(AudienceListServiceIsOpen isOpen) {
+  public AudienceListServiceAppUserAudienceList isOpen(@jakarta.annotation.Nullable AudienceListServiceIsOpen isOpen) {
     
     this.isOpen = isOpen;
     return this;
   }
 
-   /**
+  /**
    * Get isOpen
    * @return isOpen
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_OPEN)
+  @JsonProperty(value = JSON_PROPERTY_IS_OPEN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsOpen getIsOpen() {
@@ -78,25 +85,24 @@ public class AudienceListServiceAppUserAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_OPEN)
+  @JsonProperty(value = JSON_PROPERTY_IS_OPEN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsOpen(AudienceListServiceIsOpen isOpen) {
+  public void setIsOpen(@jakarta.annotation.Nullable AudienceListServiceIsOpen isOpen) {
     this.isOpen = isOpen;
   }
 
-
-  public AudienceListServiceAppUserAudienceList isPreset(AudienceListServiceIsPreset isPreset) {
+  public AudienceListServiceAppUserAudienceList isPreset(@jakarta.annotation.Nullable AudienceListServiceIsPreset isPreset) {
     
     this.isPreset = isPreset;
     return this;
   }
 
-   /**
+  /**
    * Get isPreset
    * @return isPreset
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_PRESET)
+  @JsonProperty(value = JSON_PROPERTY_IS_PRESET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsPreset getIsPreset() {
@@ -104,25 +110,24 @@ public class AudienceListServiceAppUserAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_PRESET)
+  @JsonProperty(value = JSON_PROPERTY_IS_PRESET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsPreset(AudienceListServiceIsPreset isPreset) {
+  public void setIsPreset(@jakarta.annotation.Nullable AudienceListServiceIsPreset isPreset) {
     this.isPreset = isPreset;
   }
 
-
-  public AudienceListServiceAppUserAudienceList dataDuration(Integer dataDuration) {
+  public AudienceListServiceAppUserAudienceList dataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     
     this.dataDuration = dataDuration;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; データの有効期間（1日～540日）です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Data duration. (1 - 540 days) &lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
    * @return dataDuration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getDataDuration() {
@@ -130,14 +135,13 @@ public class AudienceListServiceAppUserAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataDuration(Integer dataDuration) {
+  public void setDataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     this.dataDuration = dataDuration;
   }
 
-
-  public AudienceListServiceAppUserAudienceList rules(List<AudienceListServiceRule> rules) {
+  public AudienceListServiceAppUserAudienceList rules(@jakarta.annotation.Nullable List<AudienceListServiceRule> rules) {
     
     this.rules = rules;
     return this;
@@ -151,12 +155,12 @@ public class AudienceListServiceAppUserAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get rules
    * @return rules
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULES)
+  @JsonProperty(value = JSON_PROPERTY_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceRule> getRules() {
@@ -164,25 +168,24 @@ public class AudienceListServiceAppUserAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULES)
+  @JsonProperty(value = JSON_PROPERTY_RULES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRules(List<AudienceListServiceRule> rules) {
+  public void setRules(@jakarta.annotation.Nullable List<AudienceListServiceRule> rules) {
     this.rules = rules;
   }
 
-
-  public AudienceListServiceAppUserAudienceList appLink(AudienceListServiceAppLink appLink) {
+  public AudienceListServiceAppUserAudienceList appLink(@jakarta.annotation.Nullable AudienceListServiceAppLink appLink) {
     
     this.appLink = appLink;
     return this;
   }
 
-   /**
+  /**
    * Get appLink
    * @return appLink
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_LINK)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAppLink getAppLink() {
@@ -190,11 +193,12 @@ public class AudienceListServiceAppUserAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_LINK)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppLink(AudienceListServiceAppLink appLink) {
+  public void setAppLink(@jakarta.annotation.Nullable AudienceListServiceAppLink appLink) {
     this.appLink = appLink;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -235,10 +239,7 @@ public class AudienceListServiceAppUserAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceDataオブジェクトは、オーディエンスリストを表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceData object displays the audience list. &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -31,32 +32,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceData.JSON_PROPERTY_AUDIENCE_LIST_NAME,
   AudienceListServiceData.JSON_PROPERTY_AUDIENCE_LIST_NAME_EN
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceData {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME = "audienceListName";
+  @jakarta.annotation.Nullable
   private String audienceListName;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_NAME_EN = "audienceListNameEn";
+  @jakarta.annotation.Nullable
   private String audienceListNameEn;
 
   public AudienceListServiceData() {
   }
 
-  public AudienceListServiceData audienceListId(Long audienceListId) {
+  public AudienceListServiceData audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 組み合わせ対象のオーディエンスリストIDです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list ID that is subject to the combination.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -64,25 +68,24 @@ public class AudienceListServiceData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceListServiceData audienceListName(String audienceListName) {
+  public AudienceListServiceData audienceListName(@jakarta.annotation.Nullable String audienceListName) {
     
     this.audienceListName = audienceListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;組み合わせ対象のオーディエンスリストの名前です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name that is subject to the combination.&lt;/div&gt; 
    * @return audienceListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListName() {
@@ -90,25 +93,24 @@ public class AudienceListServiceData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListName(String audienceListName) {
+  public void setAudienceListName(@jakarta.annotation.Nullable String audienceListName) {
     this.audienceListName = audienceListName;
   }
 
-
-  public AudienceListServiceData audienceListNameEn(String audienceListNameEn) {
+  public AudienceListServiceData audienceListNameEn(@jakarta.annotation.Nullable String audienceListNameEn) {
     
     this.audienceListNameEn = audienceListNameEn;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;組み合わせ対象のオーディエンスリストの名前(英語)です。&lt;br&gt; 共通オーディエンスリストの場合のみ返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Audience list name (English) that is subject to the combination.&lt;br&gt; This field is returned when the audience list is shared audience list. &lt;/div&gt; 
    * @return audienceListNameEn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAudienceListNameEn() {
@@ -116,11 +118,12 @@ public class AudienceListServiceData {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListNameEn(String audienceListNameEn) {
+  public void setAudienceListNameEn(@jakarta.annotation.Nullable String audienceListNameEn) {
     this.audienceListNameEn = audienceListNameEn;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -157,10 +160,7 @@ public class AudienceListServiceData {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

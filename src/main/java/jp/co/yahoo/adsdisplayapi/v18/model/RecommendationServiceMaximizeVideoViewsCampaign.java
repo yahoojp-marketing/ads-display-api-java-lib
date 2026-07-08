@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceMaximizeVideoViewsCampaignオブジェクトは、自動入札（動画再生数の最大化）に適しているキャンペーンに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceMaximizeVideoViewsCampaign object describes detailed information of Recommendations about the campaign that is suitable for using autobidding (Maximize video views).&lt;/div&gt; 
@@ -35,44 +36,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceMaximizeVideoViewsCampaign.JSON_PROPERTY_CURRENT_CPV_BID_VALUE,
   RecommendationServiceMaximizeVideoViewsCampaign.JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceMaximizeVideoViewsCampaign {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
+  @jakarta.annotation.Nullable
   private Long recommendationId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_CURRENT_BUDGET = "currentBudget";
+  @jakarta.annotation.Nullable
   private Long currentBudget;
 
   public static final String JSON_PROPERTY_CURRENT_CAMPAIGN_BIDDING_STRATEGY_TYPE = "currentCampaignBiddingStrategyType";
+  @jakarta.annotation.Nullable
   private String currentCampaignBiddingStrategyType;
 
   public static final String JSON_PROPERTY_CURRENT_CPV_BID_VALUE = "currentCpvBidValue";
+  @jakarta.annotation.Nullable
   private Long currentCpvBidValue;
 
   public static final String JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE = "recommendedCampaignBiddingStrategyType";
+  @jakarta.annotation.Nullable
   private String recommendedCampaignBiddingStrategyType;
 
   public RecommendationServiceMaximizeVideoViewsCampaign() {
   }
 
-  public RecommendationServiceMaximizeVideoViewsCampaign recommendationId(Long recommendationId) {
+  public RecommendationServiceMaximizeVideoViewsCampaign recommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     
     this.recommendationId = recommendationId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendationId() {
@@ -80,25 +88,24 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendationId(Long recommendationId) {
+  public void setRecommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
-
-  public RecommendationServiceMaximizeVideoViewsCampaign campaignId(Long campaignId) {
+  public RecommendationServiceMaximizeVideoViewsCampaign campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -106,25 +113,24 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public RecommendationServiceMaximizeVideoViewsCampaign campaignName(String campaignName) {
+  public RecommendationServiceMaximizeVideoViewsCampaign campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -132,25 +138,24 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public RecommendationServiceMaximizeVideoViewsCampaign currentBudget(Long currentBudget) {
+  public RecommendationServiceMaximizeVideoViewsCampaign currentBudget(@jakarta.annotation.Nullable Long currentBudget) {
     
     this.currentBudget = currentBudget;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 現在のキャンペーン予算です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Current campaign budget. &lt;/div&gt; 
    * @return currentBudget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCurrentBudget() {
@@ -158,25 +163,24 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentBudget(Long currentBudget) {
+  public void setCurrentBudget(@jakarta.annotation.Nullable Long currentBudget) {
     this.currentBudget = currentBudget;
   }
 
-
-  public RecommendationServiceMaximizeVideoViewsCampaign currentCampaignBiddingStrategyType(String currentCampaignBiddingStrategyType) {
+  public RecommendationServiceMaximizeVideoViewsCampaign currentCampaignBiddingStrategyType(@jakarta.annotation.Nullable String currentCampaignBiddingStrategyType) {
     
     this.currentCampaignBiddingStrategyType = currentCampaignBiddingStrategyType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 現在のキャンペーン入札戦略タイプです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Current campaign bidding strategy type. &lt;/div&gt; 
    * @return currentCampaignBiddingStrategyType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_CAMPAIGN_BIDDING_STRATEGY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_CAMPAIGN_BIDDING_STRATEGY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCurrentCampaignBiddingStrategyType() {
@@ -184,25 +188,24 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_CAMPAIGN_BIDDING_STRATEGY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_CAMPAIGN_BIDDING_STRATEGY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentCampaignBiddingStrategyType(String currentCampaignBiddingStrategyType) {
+  public void setCurrentCampaignBiddingStrategyType(@jakarta.annotation.Nullable String currentCampaignBiddingStrategyType) {
     this.currentCampaignBiddingStrategyType = currentCampaignBiddingStrategyType;
   }
 
-
-  public RecommendationServiceMaximizeVideoViewsCampaign currentCpvBidValue(Long currentCpvBidValue) {
+  public RecommendationServiceMaximizeVideoViewsCampaign currentCpvBidValue(@jakarta.annotation.Nullable Long currentCpvBidValue) {
     
     this.currentCpvBidValue = currentCpvBidValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 現在のキャンペーン最大入札単価(CPV)です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Current max bid of campaign (CPV). &lt;/div&gt; 
    * @return currentCpvBidValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_CPV_BID_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_CPV_BID_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCurrentCpvBidValue() {
@@ -210,25 +213,24 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_CPV_BID_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_CPV_BID_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentCpvBidValue(Long currentCpvBidValue) {
+  public void setCurrentCpvBidValue(@jakarta.annotation.Nullable Long currentCpvBidValue) {
     this.currentCpvBidValue = currentCpvBidValue;
   }
 
-
-  public RecommendationServiceMaximizeVideoViewsCampaign recommendedCampaignBiddingStrategyType(String recommendedCampaignBiddingStrategyType) {
+  public RecommendationServiceMaximizeVideoViewsCampaign recommendedCampaignBiddingStrategyType(@jakarta.annotation.Nullable String recommendedCampaignBiddingStrategyType) {
     
     this.recommendedCampaignBiddingStrategyType = recommendedCampaignBiddingStrategyType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するキャンペーン入札戦略タイプです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended campaign bidding strategy type. &lt;/div&gt; 
    * @return recommendedCampaignBiddingStrategyType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRecommendedCampaignBiddingStrategyType() {
@@ -236,11 +238,12 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_CAMPAIGN_BIDDING_STRATEGY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendedCampaignBiddingStrategyType(String recommendedCampaignBiddingStrategyType) {
+  public void setRecommendedCampaignBiddingStrategyType(@jakarta.annotation.Nullable String recommendedCampaignBiddingStrategyType) {
     this.recommendedCampaignBiddingStrategyType = recommendedCampaignBiddingStrategyType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -285,10 +288,7 @@ public class RecommendationServiceMaximizeVideoViewsCampaign {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

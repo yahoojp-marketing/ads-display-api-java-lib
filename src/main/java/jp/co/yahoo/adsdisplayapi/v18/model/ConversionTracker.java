@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -32,6 +32,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceType;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionTrackerServiceWebConversion;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionTrackerオブジェクトは、コンバージョン測定タグやタグごとのパフォーマンスデータなどのコンバージョン設定を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionTracker object shows ConversionTracker settings such as ConversionTag and performance data by tag.&lt;/div&gt; 
@@ -63,98 +64,123 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionTracker.JSON_PROPERTY_ADVANCED_MATCHING_ENABLED,
   ConversionTracker.JSON_PROPERTY_LY_TAG_CONVERSION
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionTracker {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ALL_CONVERSION_VALUE = "allConversionValue";
+  @jakarta.annotation.Nullable
   private String allConversionValue;
 
   public static final String JSON_PROPERTY_ALL_CONVERSIONS = "allConversions";
+  @jakarta.annotation.Nullable
   private Long allConversions;
 
   public static final String JSON_PROPERTY_VIEW_THROUGH_CONVERSIONS = "viewThroughConversions";
+  @jakarta.annotation.Nullable
   private Long viewThroughConversions;
 
   public static final String JSON_PROPERTY_APP_CONVERSION = "appConversion";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceAppConversion appConversion;
 
   public static final String JSON_PROPERTY_CATEGORY = "category";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceCategory category;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_ID = "conversionTrackerId";
+  @jakarta.annotation.Nullable
   private Long conversionTrackerId;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_NAME = "conversionTrackerName";
+  @jakarta.annotation.Nullable
   private String conversionTrackerName;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_TYPE = "conversionTrackerType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceType conversionTrackerType;
 
   public static final String JSON_PROPERTY_CONVERSION_VALUE = "conversionValue";
+  @jakarta.annotation.Nullable
   private String conversionValue;
 
   public static final String JSON_PROPERTY_CONVERSION_VALUE_VIA_AD_CLICK = "conversionValueViaAdClick";
+  @jakarta.annotation.Nullable
   private String conversionValueViaAdClick;
 
   public static final String JSON_PROPERTY_CONVERSIONS = "conversions";
+  @jakarta.annotation.Nullable
   private Long conversions;
 
   public static final String JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK = "conversionsViaAdClick";
+  @jakarta.annotation.Nullable
   private Long conversionsViaAdClick;
 
   public static final String JSON_PROPERTY_COUNTING_TYPE = "countingType";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceCountingType countingType;
 
   public static final String JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS = "crossDeviceConversions";
+  @jakarta.annotation.Nullable
   private Long crossDeviceConversions;
 
   public static final String JSON_PROPERTY_EXCLUDE_FROM_BIDDING = "excludeFromBidding";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceExcludeFromBidding excludeFromBidding;
 
   public static final String JSON_PROPERTY_MEASUREMENT_PERIOD = "measurementPeriod";
+  @jakarta.annotation.Nullable
   private Integer measurementPeriod;
 
   public static final String JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW = "measurementPeriodView";
+  @jakarta.annotation.Nullable
   private Integer measurementPeriodView;
 
   public static final String JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE = "mostRecentConversionDate";
+  @jakarta.annotation.Nullable
   private String mostRecentConversionDate;
 
   public static final String JSON_PROPERTY_STATUS = "status";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceStatus status;
 
   public static final String JSON_PROPERTY_USER_REVENUE_VALUE = "userRevenueValue";
+  @jakarta.annotation.Nullable
   private Long userRevenueValue;
 
   public static final String JSON_PROPERTY_WEB_CONVERSION = "webConversion";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceWebConversion webConversion;
 
   public static final String JSON_PROPERTY_IS_PREVIOUS_CONVERSION = "isPreviousConversion";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceIsPreviousConversion isPreviousConversion;
 
   public static final String JSON_PROPERTY_ADVANCED_MATCHING_ENABLED = "advancedMatchingEnabled";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled;
 
   public static final String JSON_PROPERTY_LY_TAG_CONVERSION = "lyTagConversion";
+  @jakarta.annotation.Nullable
   private ConversionTrackerServiceLyTagConversion lyTagConversion;
 
   public ConversionTracker() {
   }
 
-  public ConversionTracker accountId(Long accountId) {
+  public ConversionTracker accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -162,25 +188,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public ConversionTracker allConversionValue(String allConversionValue) {
+  public ConversionTracker allConversionValue(@jakarta.annotation.Nullable String allConversionValue) {
     
     this.allConversionValue = allConversionValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの価値（全て）です。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conv. value (all).&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return allConversionValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAllConversionValue() {
@@ -188,25 +213,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllConversionValue(String allConversionValue) {
+  public void setAllConversionValue(@jakarta.annotation.Nullable String allConversionValue) {
     this.allConversionValue = allConversionValue;
   }
 
-
-  public ConversionTracker allConversions(Long allConversions) {
+  public ConversionTracker allConversions(@jakarta.annotation.Nullable Long allConversions) {
     
     this.allConversions = allConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョン数（全て）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversions (all).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return allConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ALL_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAllConversions() {
@@ -214,25 +238,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ALL_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_ALL_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAllConversions(Long allConversions) {
+  public void setAllConversions(@jakarta.annotation.Nullable Long allConversions) {
     this.allConversions = allConversions;
   }
 
-
-  public ConversionTracker viewThroughConversions(Long viewThroughConversions) {
+  public ConversionTracker viewThroughConversions(@jakarta.annotation.Nullable Long viewThroughConversions) {
     
     this.viewThroughConversions = viewThroughConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビュースルーコンバージョン数&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;View through conversions&lt;/div&gt; 
    * @return viewThroughConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEW_THROUGH_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_VIEW_THROUGH_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getViewThroughConversions() {
@@ -240,25 +263,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEW_THROUGH_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_VIEW_THROUGH_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewThroughConversions(Long viewThroughConversions) {
+  public void setViewThroughConversions(@jakarta.annotation.Nullable Long viewThroughConversions) {
     this.viewThroughConversions = viewThroughConversions;
   }
 
-
-  public ConversionTracker appConversion(ConversionTrackerServiceAppConversion appConversion) {
+  public ConversionTracker appConversion(@jakarta.annotation.Nullable ConversionTrackerServiceAppConversion appConversion) {
     
     this.appConversion = appConversion;
     return this;
   }
 
-   /**
+  /**
    * Get appConversion
    * @return appConversion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_APP_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceAppConversion getAppConversion() {
@@ -266,25 +288,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_APP_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppConversion(ConversionTrackerServiceAppConversion appConversion) {
+  public void setAppConversion(@jakarta.annotation.Nullable ConversionTrackerServiceAppConversion appConversion) {
     this.appConversion = appConversion;
   }
 
-
-  public ConversionTracker category(ConversionTrackerServiceCategory category) {
+  public ConversionTracker category(@jakarta.annotation.Nullable ConversionTrackerServiceCategory category) {
     
     this.category = category;
     return this;
   }
 
-   /**
+  /**
    * Get category
    * @return category
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CATEGORY)
+  @JsonProperty(value = JSON_PROPERTY_CATEGORY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceCategory getCategory() {
@@ -292,25 +313,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CATEGORY)
+  @JsonProperty(value = JSON_PROPERTY_CATEGORY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCategory(ConversionTrackerServiceCategory category) {
+  public void setCategory(@jakarta.annotation.Nullable ConversionTrackerServiceCategory category) {
     this.category = category;
   }
 
-
-  public ConversionTracker conversionTrackerId(Long conversionTrackerId) {
+  public ConversionTracker conversionTrackerId(@jakarta.annotation.Nullable Long conversionTrackerId) {
     
     this.conversionTrackerId = conversionTrackerId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカーIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SET時は必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion tracker ID.&lt;br&gt; This field will be ignored in ADD operation, and will be required in SET operation. &lt;/div&gt; 
    * @return conversionTrackerId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionTrackerId() {
@@ -318,25 +338,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerId(Long conversionTrackerId) {
+  public void setConversionTrackerId(@jakarta.annotation.Nullable Long conversionTrackerId) {
     this.conversionTrackerId = conversionTrackerId;
   }
 
-
-  public ConversionTracker conversionTrackerName(String conversionTrackerName) {
+  public ConversionTracker conversionTrackerName(@jakarta.annotation.Nullable String conversionTrackerName) {
     
     this.conversionTrackerName = conversionTrackerName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョントラッカー名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion tracker name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return conversionTrackerName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConversionTrackerName() {
@@ -344,25 +363,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerName(String conversionTrackerName) {
+  public void setConversionTrackerName(@jakarta.annotation.Nullable String conversionTrackerName) {
     this.conversionTrackerName = conversionTrackerName;
   }
 
-
-  public ConversionTracker conversionTrackerType(ConversionTrackerServiceType conversionTrackerType) {
+  public ConversionTracker conversionTrackerType(@jakarta.annotation.Nullable ConversionTrackerServiceType conversionTrackerType) {
     
     this.conversionTrackerType = conversionTrackerType;
     return this;
   }
 
-   /**
+  /**
    * Get conversionTrackerType
    * @return conversionTrackerType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceType getConversionTrackerType() {
@@ -370,25 +388,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerType(ConversionTrackerServiceType conversionTrackerType) {
+  public void setConversionTrackerType(@jakarta.annotation.Nullable ConversionTrackerServiceType conversionTrackerType) {
     this.conversionTrackerType = conversionTrackerType;
   }
 
-
-  public ConversionTracker conversionValue(String conversionValue) {
+  public ConversionTracker conversionValue(@jakarta.annotation.Nullable String conversionValue) {
     
     this.conversionValue = conversionValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの価値/コンバージョン数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conv. value/conv.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return conversionValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConversionValue() {
@@ -396,25 +413,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionValue(String conversionValue) {
+  public void setConversionValue(@jakarta.annotation.Nullable String conversionValue) {
     this.conversionValue = conversionValue;
   }
 
-
-  public ConversionTracker conversionValueViaAdClick(String conversionValueViaAdClick) {
+  public ConversionTracker conversionValueViaAdClick(@jakarta.annotation.Nullable String conversionValueViaAdClick) {
     
     this.conversionValueViaAdClick = conversionValueViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの価値（クリック経由）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conv. value (via click).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return conversionValueViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_VALUE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConversionValueViaAdClick() {
@@ -422,25 +438,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_VALUE_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_VALUE_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionValueViaAdClick(String conversionValueViaAdClick) {
+  public void setConversionValueViaAdClick(@jakarta.annotation.Nullable String conversionValueViaAdClick) {
     this.conversionValueViaAdClick = conversionValueViaAdClick;
   }
 
-
-  public ConversionTracker conversions(Long conversions) {
+  public ConversionTracker conversions(@jakarta.annotation.Nullable Long conversions) {
     
     this.conversions = conversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョン数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversions.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return conversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversions() {
@@ -448,25 +463,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversions(Long conversions) {
+  public void setConversions(@jakarta.annotation.Nullable Long conversions) {
     this.conversions = conversions;
   }
 
-
-  public ConversionTracker conversionsViaAdClick(Long conversionsViaAdClick) {
+  public ConversionTracker conversionsViaAdClick(@jakarta.annotation.Nullable Long conversionsViaAdClick) {
     
     this.conversionsViaAdClick = conversionsViaAdClick;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョン数（クリック経由）です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversions (via click).&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return conversionsViaAdClick
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionsViaAdClick() {
@@ -474,25 +488,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS_VIA_AD_CLICK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionsViaAdClick(Long conversionsViaAdClick) {
+  public void setConversionsViaAdClick(@jakarta.annotation.Nullable Long conversionsViaAdClick) {
     this.conversionsViaAdClick = conversionsViaAdClick;
   }
 
-
-  public ConversionTracker countingType(ConversionTrackerServiceCountingType countingType) {
+  public ConversionTracker countingType(@jakarta.annotation.Nullable ConversionTrackerServiceCountingType countingType) {
     
     this.countingType = countingType;
     return this;
   }
 
-   /**
+  /**
    * Get countingType
    * @return countingType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COUNTING_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_COUNTING_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceCountingType getCountingType() {
@@ -500,25 +513,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COUNTING_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_COUNTING_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCountingType(ConversionTrackerServiceCountingType countingType) {
+  public void setCountingType(@jakarta.annotation.Nullable ConversionTrackerServiceCountingType countingType) {
     this.countingType = countingType;
   }
 
-
-  public ConversionTracker crossDeviceConversions(Long crossDeviceConversions) {
+  public ConversionTracker crossDeviceConversions(@jakarta.annotation.Nullable Long crossDeviceConversions) {
     
     this.crossDeviceConversions = crossDeviceConversions;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; クロスデバイスコンバージョン数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ADD、SET時のレスポンスではnullで返却されます。必要な場合はGETしてください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Cross-device conv.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;br&gt; ADD and SET responses will return null. Please GET if necessary. &lt;/div&gt; 
    * @return crossDeviceConversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCrossDeviceConversions() {
@@ -526,25 +538,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_DEVICE_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossDeviceConversions(Long crossDeviceConversions) {
+  public void setCrossDeviceConversions(@jakarta.annotation.Nullable Long crossDeviceConversions) {
     this.crossDeviceConversions = crossDeviceConversions;
   }
 
-
-  public ConversionTracker excludeFromBidding(ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
+  public ConversionTracker excludeFromBidding(@jakarta.annotation.Nullable ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
     
     this.excludeFromBidding = excludeFromBidding;
     return this;
   }
 
-   /**
+  /**
    * Get excludeFromBidding
    * @return excludeFromBidding
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDING)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDE_FROM_BIDDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceExcludeFromBidding getExcludeFromBidding() {
@@ -552,25 +563,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_EXCLUDE_FROM_BIDDING)
+  @JsonProperty(value = JSON_PROPERTY_EXCLUDE_FROM_BIDDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setExcludeFromBidding(ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
+  public void setExcludeFromBidding(@jakarta.annotation.Nullable ConversionTrackerServiceExcludeFromBidding excludeFromBidding) {
     this.excludeFromBidding = excludeFromBidding;
   }
 
-
-  public ConversionTracker measurementPeriod(Integer measurementPeriod) {
+  public ConversionTracker measurementPeriod(@jakarta.annotation.Nullable Integer measurementPeriod) {
     
     this.measurementPeriod = measurementPeriod;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 計測期間（単位：日）です。&lt;br&gt; ※1～90の範囲内で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は30となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (unit: day).&lt;br&gt; ∗ Can be specified within the range of 1 to 90 days.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 30. &lt;/div&gt; 
    * @return measurementPeriod
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_MEASUREMENT_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getMeasurementPeriod() {
@@ -578,25 +588,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD)
+  @JsonProperty(value = JSON_PROPERTY_MEASUREMENT_PERIOD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeasurementPeriod(Integer measurementPeriod) {
+  public void setMeasurementPeriod(@jakarta.annotation.Nullable Integer measurementPeriod) {
     this.measurementPeriod = measurementPeriod;
   }
 
-
-  public ConversionTracker measurementPeriodView(Integer measurementPeriodView) {
+  public ConversionTracker measurementPeriodView(@jakarta.annotation.Nullable Integer measurementPeriodView) {
     
     this.measurementPeriodView = measurementPeriodView;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 測定期間（動画視聴）&lt;br&gt; ※1-30の範囲で指定可能です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は3となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Counting period (video view).&lt;br&gt; ∗ Can be specified within the range of 1 to 30.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 3. &lt;/div&gt; 
    * @return measurementPeriodView
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW)
+  @JsonProperty(value = JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getMeasurementPeriodView() {
@@ -604,25 +613,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW)
+  @JsonProperty(value = JSON_PROPERTY_MEASUREMENT_PERIOD_VIEW, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMeasurementPeriodView(Integer measurementPeriodView) {
+  public void setMeasurementPeriodView(@jakarta.annotation.Nullable Integer measurementPeriodView) {
     this.measurementPeriodView = measurementPeriodView;
   }
 
-
-  public ConversionTracker mostRecentConversionDate(String mostRecentConversionDate) {
+  public ConversionTracker mostRecentConversionDate(@jakarta.annotation.Nullable String mostRecentConversionDate) {
     
     this.mostRecentConversionDate = mostRecentConversionDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンが発生した直近の日付です。&lt;br&gt; ※YYYYMMDD形式です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date of the most recent conversion.&lt;br&gt; ∗ Format: YYYYMMDD.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return mostRecentConversionDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE)
+  @JsonProperty(value = JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMostRecentConversionDate() {
@@ -630,25 +638,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE)
+  @JsonProperty(value = JSON_PROPERTY_MOST_RECENT_CONVERSION_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMostRecentConversionDate(String mostRecentConversionDate) {
+  public void setMostRecentConversionDate(@jakarta.annotation.Nullable String mostRecentConversionDate) {
     this.mostRecentConversionDate = mostRecentConversionDate;
   }
 
-
-  public ConversionTracker status(ConversionTrackerServiceStatus status) {
+  public ConversionTracker status(@jakarta.annotation.Nullable ConversionTrackerServiceStatus status) {
     
     this.status = status;
     return this;
   }
 
-   /**
+  /**
    * Get status
    * @return status
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceStatus getStatus() {
@@ -656,25 +663,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStatus(ConversionTrackerServiceStatus status) {
+  public void setStatus(@jakarta.annotation.Nullable ConversionTrackerServiceStatus status) {
     this.status = status;
   }
 
-
-  public ConversionTracker userRevenueValue(Long userRevenueValue) {
+  public ConversionTracker userRevenueValue(@jakarta.annotation.Nullable Long userRevenueValue) {
     
     this.userRevenueValue = userRevenueValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョンの収益値です。&lt;br&gt; このフィールドは、リクエストの場合は省略可能です。ADD時のデフォルト設定値は0となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Revenue value for conversions.&lt;br&gt; This field is optional in requests. The default value in ADD operation will be 0. &lt;/div&gt; 
    * @return userRevenueValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_REVENUE_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_USER_REVENUE_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getUserRevenueValue() {
@@ -682,25 +688,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_REVENUE_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_USER_REVENUE_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserRevenueValue(Long userRevenueValue) {
+  public void setUserRevenueValue(@jakarta.annotation.Nullable Long userRevenueValue) {
     this.userRevenueValue = userRevenueValue;
   }
 
-
-  public ConversionTracker webConversion(ConversionTrackerServiceWebConversion webConversion) {
+  public ConversionTracker webConversion(@jakarta.annotation.Nullable ConversionTrackerServiceWebConversion webConversion) {
     
     this.webConversion = webConversion;
     return this;
   }
 
-   /**
+  /**
    * Get webConversion
    * @return webConversion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WEB_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_WEB_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceWebConversion getWebConversion() {
@@ -708,25 +713,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WEB_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_WEB_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWebConversion(ConversionTrackerServiceWebConversion webConversion) {
+  public void setWebConversion(@jakarta.annotation.Nullable ConversionTrackerServiceWebConversion webConversion) {
     this.webConversion = webConversion;
   }
 
-
-  public ConversionTracker isPreviousConversion(ConversionTrackerServiceIsPreviousConversion isPreviousConversion) {
+  public ConversionTracker isPreviousConversion(@jakarta.annotation.Nullable ConversionTrackerServiceIsPreviousConversion isPreviousConversion) {
     
     this.isPreviousConversion = isPreviousConversion;
     return this;
   }
 
-   /**
+  /**
    * Get isPreviousConversion
    * @return isPreviousConversion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_PREVIOUS_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_IS_PREVIOUS_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceIsPreviousConversion getIsPreviousConversion() {
@@ -734,25 +738,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_PREVIOUS_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_IS_PREVIOUS_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsPreviousConversion(ConversionTrackerServiceIsPreviousConversion isPreviousConversion) {
+  public void setIsPreviousConversion(@jakarta.annotation.Nullable ConversionTrackerServiceIsPreviousConversion isPreviousConversion) {
     this.isPreviousConversion = isPreviousConversion;
   }
 
-
-  public ConversionTracker advancedMatchingEnabled(ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled) {
+  public ConversionTracker advancedMatchingEnabled(@jakarta.annotation.Nullable ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled) {
     
     this.advancedMatchingEnabled = advancedMatchingEnabled;
     return this;
   }
 
-   /**
+  /**
    * Get advancedMatchingEnabled
    * @return advancedMatchingEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ADVANCED_MATCHING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_MATCHING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceAdvancedMatchingEnabled getAdvancedMatchingEnabled() {
@@ -760,25 +763,24 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ADVANCED_MATCHING_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_MATCHING_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdvancedMatchingEnabled(ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled) {
+  public void setAdvancedMatchingEnabled(@jakarta.annotation.Nullable ConversionTrackerServiceAdvancedMatchingEnabled advancedMatchingEnabled) {
     this.advancedMatchingEnabled = advancedMatchingEnabled;
   }
 
-
-  public ConversionTracker lyTagConversion(ConversionTrackerServiceLyTagConversion lyTagConversion) {
+  public ConversionTracker lyTagConversion(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversion lyTagConversion) {
     
     this.lyTagConversion = lyTagConversion;
     return this;
   }
 
-   /**
+  /**
    * Get lyTagConversion
    * @return lyTagConversion
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LY_TAG_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_LY_TAG_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ConversionTrackerServiceLyTagConversion getLyTagConversion() {
@@ -786,11 +788,12 @@ public class ConversionTracker {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LY_TAG_CONVERSION)
+  @JsonProperty(value = JSON_PROPERTY_LY_TAG_CONVERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLyTagConversion(ConversionTrackerServiceLyTagConversion lyTagConversion) {
+  public void setLyTagConversion(@jakarta.annotation.Nullable ConversionTrackerServiceLyTagConversion lyTagConversion) {
     this.lyTagConversion = lyTagConversion;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -871,10 +874,7 @@ public class ConversionTracker {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

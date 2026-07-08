@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;PlacementUrlIdeaオブジェクトは、プレイスメントUrl情報を保持するオブジェクトです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;An object that holds the placement Url information.&lt;/div&gt; 
@@ -39,56 +40,67 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlacementUrlIdea.JSON_PROPERTY_REACHES,
   PlacementUrlIdea.JSON_PROPERTY_AD_REQUESTS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PlacementUrlIdea {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
+  @jakarta.annotation.Nullable
   private String keyword;
 
   public static final String JSON_PROPERTY_SEARCH_URL = "searchUrl";
+  @jakarta.annotation.Nullable
   private String searchUrl;
 
   public static final String JSON_PROPERTY_AD_PLACE_NAME = "adPlaceName";
+  @jakarta.annotation.Nullable
   private String adPlaceName;
 
   public static final String JSON_PROPERTY_DESKTOP_REACHES = "desktopReaches";
+  @jakarta.annotation.Nullable
   private Long desktopReaches;
 
   public static final String JSON_PROPERTY_DESKTOP_AD_REQUESTS = "desktopAdRequests";
+  @jakarta.annotation.Nullable
   private Long desktopAdRequests;
 
   public static final String JSON_PROPERTY_SMART_PHONE_REACHES = "smartPhoneReaches";
+  @jakarta.annotation.Nullable
   private Long smartPhoneReaches;
 
   public static final String JSON_PROPERTY_SMART_PHONE_AD_REQUESTS = "smartPhoneAdRequests";
+  @jakarta.annotation.Nullable
   private Long smartPhoneAdRequests;
 
   public static final String JSON_PROPERTY_TABLET_REACHES = "tabletReaches";
+  @jakarta.annotation.Nullable
   private Long tabletReaches;
 
   public static final String JSON_PROPERTY_TABLET_AD_REQUESTS = "tabletAdRequests";
+  @jakarta.annotation.Nullable
   private Long tabletAdRequests;
 
   public static final String JSON_PROPERTY_REACHES = "reaches";
+  @jakarta.annotation.Nullable
   private Long reaches;
 
   public static final String JSON_PROPERTY_AD_REQUESTS = "adRequests";
+  @jakarta.annotation.Nullable
   private Long adRequests;
 
   public PlacementUrlIdea() {
   }
 
-  public PlacementUrlIdea keyword(String keyword) {
+  public PlacementUrlIdea keyword(@jakarta.annotation.Nullable String keyword) {
     
     this.keyword = keyword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search keyword&lt;/div&gt; 
    * @return keyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getKeyword() {
@@ -96,25 +108,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeyword(String keyword) {
+  public void setKeyword(@jakarta.annotation.Nullable String keyword) {
     this.keyword = keyword;
   }
 
-
-  public PlacementUrlIdea searchUrl(String searchUrl) {
+  public PlacementUrlIdea searchUrl(@jakarta.annotation.Nullable String searchUrl) {
     
     this.searchUrl = searchUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 取得URLです。&lt;br&gt; 不明なURLの場合　UNKNOWN_URLが入ります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;URL&lt;/div&gt; 
    * @return searchUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_URL)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSearchUrl() {
@@ -122,25 +133,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_URL)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchUrl(String searchUrl) {
+  public void setSearchUrl(@jakarta.annotation.Nullable String searchUrl) {
     this.searchUrl = searchUrl;
   }
 
-
-  public PlacementUrlIdea adPlaceName(String adPlaceName) {
+  public PlacementUrlIdea adPlaceName(@jakarta.annotation.Nullable String adPlaceName) {
     
     this.adPlaceName = adPlaceName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;配信先名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad place name&lt;/div&gt; 
    * @return adPlaceName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_PLACE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_PLACE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdPlaceName() {
@@ -148,25 +158,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_PLACE_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_PLACE_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdPlaceName(String adPlaceName) {
+  public void setAdPlaceName(@jakarta.annotation.Nullable String adPlaceName) {
     this.adPlaceName = adPlaceName;
   }
 
-
-  public PlacementUrlIdea desktopReaches(Long desktopReaches) {
+  public PlacementUrlIdea desktopReaches(@jakarta.annotation.Nullable Long desktopReaches) {
     
     this.desktopReaches = desktopReaches;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PC でのリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reach number of PC(1000 in the case of 0)&lt;/div&gt; 
    * @return desktopReaches
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESKTOP_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getDesktopReaches() {
@@ -174,25 +183,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESKTOP_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDesktopReaches(Long desktopReaches) {
+  public void setDesktopReaches(@jakarta.annotation.Nullable Long desktopReaches) {
     this.desktopReaches = desktopReaches;
   }
 
-
-  public PlacementUrlIdea desktopAdRequests(Long desktopAdRequests) {
+  public PlacementUrlIdea desktopAdRequests(@jakarta.annotation.Nullable Long desktopAdRequests) {
     
     this.desktopAdRequests = desktopAdRequests;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PC でのADリクエスト数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AD number of PC(1000 in the case of 0)&lt;/div&gt; 
    * @return desktopAdRequests
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESKTOP_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getDesktopAdRequests() {
@@ -200,25 +208,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESKTOP_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDesktopAdRequests(Long desktopAdRequests) {
+  public void setDesktopAdRequests(@jakarta.annotation.Nullable Long desktopAdRequests) {
     this.desktopAdRequests = desktopAdRequests;
   }
 
-
-  public PlacementUrlIdea smartPhoneReaches(Long smartPhoneReaches) {
+  public PlacementUrlIdea smartPhoneReaches(@jakarta.annotation.Nullable Long smartPhoneReaches) {
     
     this.smartPhoneReaches = smartPhoneReaches;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; SmartPhone でのリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reach number of SmartPhone (1000 in the case of 0)&lt;/div&gt; 
    * @return smartPhoneReaches
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSmartPhoneReaches() {
@@ -226,25 +233,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartPhoneReaches(Long smartPhoneReaches) {
+  public void setSmartPhoneReaches(@jakarta.annotation.Nullable Long smartPhoneReaches) {
     this.smartPhoneReaches = smartPhoneReaches;
   }
 
-
-  public PlacementUrlIdea smartPhoneAdRequests(Long smartPhoneAdRequests) {
+  public PlacementUrlIdea smartPhoneAdRequests(@jakarta.annotation.Nullable Long smartPhoneAdRequests) {
     
     this.smartPhoneAdRequests = smartPhoneAdRequests;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; SmartPhone でのADリクエスト数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AD number of SmartPhone(1000 in the case of 0)&lt;/div&gt; 
    * @return smartPhoneAdRequests
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSmartPhoneAdRequests() {
@@ -252,25 +258,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartPhoneAdRequests(Long smartPhoneAdRequests) {
+  public void setSmartPhoneAdRequests(@jakarta.annotation.Nullable Long smartPhoneAdRequests) {
     this.smartPhoneAdRequests = smartPhoneAdRequests;
   }
 
-
-  public PlacementUrlIdea tabletReaches(Long tabletReaches) {
+  public PlacementUrlIdea tabletReaches(@jakarta.annotation.Nullable Long tabletReaches) {
     
     this.tabletReaches = tabletReaches;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; Tablet でのリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tablet(1000 in the case of 0)&lt;/div&gt; 
    * @return tabletReaches
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TABLET_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTabletReaches() {
@@ -278,25 +283,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TABLET_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTabletReaches(Long tabletReaches) {
+  public void setTabletReaches(@jakarta.annotation.Nullable Long tabletReaches) {
     this.tabletReaches = tabletReaches;
   }
 
-
-  public PlacementUrlIdea tabletAdRequests(Long tabletAdRequests) {
+  public PlacementUrlIdea tabletAdRequests(@jakarta.annotation.Nullable Long tabletAdRequests) {
     
     this.tabletAdRequests = tabletAdRequests;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; TabletでのADリクエスト数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AD number of Tablet (1000 in the case of 0)&lt;/div&gt; 
    * @return tabletAdRequests
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TABLET_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTabletAdRequests() {
@@ -304,25 +308,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TABLET_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTabletAdRequests(Long tabletAdRequests) {
+  public void setTabletAdRequests(@jakarta.annotation.Nullable Long tabletAdRequests) {
     this.tabletAdRequests = tabletAdRequests;
   }
 
-
-  public PlacementUrlIdea reaches(Long reaches) {
+  public PlacementUrlIdea reaches(@jakarta.annotation.Nullable Long reaches) {
     
     this.reaches = reaches;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デバイス合算のリーチ数です。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total reach number of Device (1000 in the case of 0)&lt;/div&gt; 
    * @return reaches
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getReaches() {
@@ -330,25 +333,24 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReaches(Long reaches) {
+  public void setReaches(@jakarta.annotation.Nullable Long reaches) {
     this.reaches = reaches;
   }
 
-
-  public PlacementUrlIdea adRequests(Long adRequests) {
+  public PlacementUrlIdea adRequests(@jakarta.annotation.Nullable Long adRequests) {
     
     this.adRequests = adRequests;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; デバイス合算のADリクエスト数。&lt;br&gt; ・1000未満の時は0が取得されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total AD number of Device (1000 in the case of 0)&lt;/div&gt; 
    * @return adRequests
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdRequests() {
@@ -356,11 +358,12 @@ public class PlacementUrlIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_REQUESTS)
+  @JsonProperty(value = JSON_PROPERTY_AD_REQUESTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdRequests(Long adRequests) {
+  public void setAdRequests(@jakarta.annotation.Nullable Long adRequests) {
     this.adRequests = adRequests;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -413,10 +416,7 @@ public class PlacementUrlIdea {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

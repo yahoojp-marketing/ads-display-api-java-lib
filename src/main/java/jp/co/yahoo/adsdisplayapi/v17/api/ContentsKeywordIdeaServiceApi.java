@@ -1,6 +1,7 @@
 package jp.co.yahoo.adsdisplayapi.v17.api;
 
 import jp.co.yahoo.adsdisplayapi.v17.ApiClient;
+import jp.co.yahoo.adsdisplayapi.v17.BaseApi;
 
 import jp.co.yahoo.adsdisplayapi.v17.model.ContentsKeywordIdeaServiceGetResponse;
 import jp.co.yahoo.adsdisplayapi.v17.model.ContentsKeywordIdeaServiceSelector;
@@ -26,26 +27,17 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 @Component("jp.co.yahoo.adsdisplayapi.v17.api.ContentsKeywordIdeaServiceApi")
-public class ContentsKeywordIdeaServiceApi {
-    private ApiClient apiClient;
+public class ContentsKeywordIdeaServiceApi extends BaseApi {
 
     public ContentsKeywordIdeaServiceApi() {
-        this(new ApiClient());
+        super(new ApiClient());
     }
 
     @Autowired
     public ContentsKeywordIdeaServiceApi(ApiClient apiClient) {
-        this.apiClient = apiClient;
-    }
-
-    public ApiClient getApiClient() {
-        return apiClient;
-    }
-
-    public void setApiClient(ApiClient apiClient) {
-        this.apiClient = apiClient;
+        super(apiClient);
     }
 
     /**
@@ -100,5 +92,30 @@ public class ContentsKeywordIdeaServiceApi {
 
         ParameterizedTypeReference<ContentsKeywordIdeaServiceGetResponse> localReturnType = new ParameterizedTypeReference<ContentsKeywordIdeaServiceGetResponse>() {};
         return apiClient.invokeAPI("/ContentsKeywordIdeaService/get", HttpMethod.POST, Collections.<String, Object>emptyMap(), localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localReturnType);
+    }
+
+    @Override
+    protected <T> ResponseEntity<T> invokeAPI(String url, HttpMethod method, Object request, ParameterizedTypeReference<T> returnType) throws RestClientException {
+        String localVarPath = url.replace(apiClient.getBasePath(), "");
+        Object localVarPostBody = request;
+
+        final Map<String, Object> uriVariables = new HashMap<String, Object>();
+        final MultiValueMap<String, String> localVarQueryParams = new LinkedMultiValueMap<String, String>();
+        final HttpHeaders localVarHeaderParams = new HttpHeaders();
+        final MultiValueMap<String, String> localVarCookieParams = new LinkedMultiValueMap<String, String>();
+        final MultiValueMap<String, Object> localVarFormParams = new LinkedMultiValueMap<String, Object>();
+
+        final String[] localVarAccepts = { 
+            "application/json"
+         };
+        final List<MediaType> localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+        final String[] localVarContentTypes = { 
+            "application/json"
+         };
+        final MediaType localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+        String[] localVarAuthNames = new String[] { "oAuth" };
+
+        return apiClient.invokeAPI(localVarPath, method, uriVariables, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, returnType);
     }
 }

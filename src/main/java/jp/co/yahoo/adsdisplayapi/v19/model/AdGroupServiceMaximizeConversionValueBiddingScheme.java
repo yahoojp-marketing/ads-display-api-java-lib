@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の設定情報を表します。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceMaximizeConversionValueBiddingScheme object displays bidding setting for Target ROAS. &lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS,
   AdGroupServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_IS_REMOVE_TARGET_ROAS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_ROAS = "targetRoas";
+  @jakarta.annotation.Nullable
   private Double targetRoas;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TARGET_ROAS = "isRemoveTargetRoas";
+  @jakarta.annotation.Nullable
   private AdGroupServiceIsRemoveFlg isRemoveTargetRoas;
 
   public AdGroupServiceMaximizeConversionValueBiddingScheme() {
   }
 
-  public AdGroupServiceMaximizeConversionValueBiddingScheme targetRoas(Double targetRoas) {
+  public AdGroupServiceMaximizeConversionValueBiddingScheme targetRoas(@jakarta.annotation.Nullable Double targetRoas) {
     
     this.targetRoas = targetRoas;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告費用対効果の目標値です。&lt;br&gt; ※Return On Advertising Spend(ROAS) ※0.01 〜1000.00（1%〜100000%）の範囲内のみ許容します。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; ※campaignBiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ROAS.&lt;br&gt; * ROAS: Return On Average Spend.&lt;br&gt; * Setting limit: 0.01 〜1000.00（1%〜100000%）.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *This can only be specified when campaignBiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. &lt;/div&gt; 
    * @return targetRoas
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ROAS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getTargetRoas() {
@@ -61,25 +64,24 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ROAS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetRoas(Double targetRoas) {
+  public void setTargetRoas(@jakarta.annotation.Nullable Double targetRoas) {
     this.targetRoas = targetRoas;
   }
 
-
-  public AdGroupServiceMaximizeConversionValueBiddingScheme isRemoveTargetRoas(AdGroupServiceIsRemoveFlg isRemoveTargetRoas) {
+  public AdGroupServiceMaximizeConversionValueBiddingScheme isRemoveTargetRoas(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetRoas) {
     
     this.isRemoveTargetRoas = isRemoveTargetRoas;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTargetRoas
    * @return isRemoveTargetRoas
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_ROAS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_ROAS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupServiceIsRemoveFlg getIsRemoveTargetRoas() {
@@ -87,11 +89,12 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TARGET_ROAS)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TARGET_ROAS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTargetRoas(AdGroupServiceIsRemoveFlg isRemoveTargetRoas) {
+  public void setIsRemoveTargetRoas(@jakarta.annotation.Nullable AdGroupServiceIsRemoveFlg isRemoveTargetRoas) {
     this.isRemoveTargetRoas = isRemoveTargetRoas;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class AdGroupServiceMaximizeConversionValueBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.DictionaryServiceDeviceOsType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceOsVersionオブジェクトは、OSバージョンを保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceOsVersion object contains OS version.&lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceOsVersion.JSON_PROPERTY_DEVICE_OS_TYPE,
   DictionaryServiceOsVersion.JSON_PROPERTY_VERSION
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class DictionaryServiceOsVersion {
   public static final String JSON_PROPERTY_DEVICE_OS_TYPE = "deviceOsType";
+  @jakarta.annotation.Nullable
   private DictionaryServiceDeviceOsType deviceOsType;
 
   public static final String JSON_PROPERTY_VERSION = "version";
+  @jakarta.annotation.Nullable
   private String version;
 
   public DictionaryServiceOsVersion() {
   }
 
-  public DictionaryServiceOsVersion deviceOsType(DictionaryServiceDeviceOsType deviceOsType) {
+  public DictionaryServiceOsVersion deviceOsType(@jakarta.annotation.Nullable DictionaryServiceDeviceOsType deviceOsType) {
     
     this.deviceOsType = deviceOsType;
     return this;
   }
 
-   /**
+  /**
    * Get deviceOsType
    * @return deviceOsType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE_OS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_OS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public DictionaryServiceDeviceOsType getDeviceOsType() {
@@ -61,25 +64,24 @@ public class DictionaryServiceOsVersion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE_OS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_OS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeviceOsType(DictionaryServiceDeviceOsType deviceOsType) {
+  public void setDeviceOsType(@jakarta.annotation.Nullable DictionaryServiceDeviceOsType deviceOsType) {
     this.deviceOsType = deviceOsType;
   }
 
-
-  public DictionaryServiceOsVersion version(String version) {
+  public DictionaryServiceOsVersion version(@jakarta.annotation.Nullable String version) {
     
     this.version = version;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;OSバージョンです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;OS version.&lt;/div&gt; 
    * @return version
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VERSION)
+  @JsonProperty(value = JSON_PROPERTY_VERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVersion() {
@@ -87,11 +89,12 @@ public class DictionaryServiceOsVersion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VERSION)
+  @JsonProperty(value = JSON_PROPERTY_VERSION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVersion(String version) {
+  public void setVersion(@jakarta.annotation.Nullable String version) {
     this.version = version;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class DictionaryServiceOsVersion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

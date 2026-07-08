@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -35,6 +35,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupAdServiceResponsiveGainFriends
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupAdServiceTextAd;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; &lt;br&gt; ※ campaignGoalSubtypeがINSTALLのキャンペーンの配下に広告を作成する場合、以下の制約があります。 &lt;br&gt; (1) viewableImpressionBeaconUrls等、通常であれば配列内に複数指定できるUrls設定であっても、指定できるurlは１つのみです。&lt;br&gt; (2) Urlのパラメータとして\&quot;{ci}\&quot;が含まれている必要があります。また、appsflyerドメインの場合\&quot;{engagementType}\&quot;パラメータも必要です。&lt;br&gt; (3) 広告配信ONのためにはtrackingUrlとviewableImpressionBeaconUrlsの設定が基本的に必須となります。※「skanOptimizeAdDeliveryEnabledがTRUE」かつ「SkanTcpaTargetTypeがSKAN_INSTALLS_VIA_CLICK」の場合のみ、viewableImpressionBeaconUrlsは設定不要です &lt;br&gt; (4) video10SecBeaconUrlsの値は空でリクエストしてください。viewableImpressionBeaconUrlsの値が自動で設定されます &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceAd object is a container for storing ads.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; &lt;br&gt; When creating an ad under a campaign where campaignGoalSubtype is set to INSTALL, the following restrictions apply：&lt;br&gt; (1) For URL settings that normally allow multiple entries in an array (e.g., viewableImpressionBeaconUrls), only one URL can be specified.&lt;br&gt; (2) The URL must include the {ci} parameter. Additionally, if the domain is Appsflyer, the {engagementType} parameter is also required.&lt;br&gt; (3) To enable ad delivery, both trackingUrl and viewableImpressionBeaconUrls are generally required. ※Only when skanOptimizeAdDeliveryEnabled is TRUE and SkanTcpaTargetType is SKAN_INSTALLS_VIA_CLICK, viewableImpressionBeaconUrls is not required.&lt;br&gt; (4) The value for video10SecBeaconUrls should be sent as empty in the request. The value for viewableImpressionBeaconUrls will be automatically set. &lt;/div&gt; 
@@ -59,77 +60,95 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceAd.JSON_PROPERTY_TRACKING_URL,
   AdGroupAdServiceAd.JSON_PROPERTY_IS_REMOVE_TRACKING_URL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceAd {
   public static final String JSON_PROPERTY_AD_TYPE = "adType";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceAdType adType;
 
   public static final String JSON_PROPERTY_MAIN_MEDIA_FORMAT = "mainMediaFormat";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceMainMediaFormat mainMediaFormat;
 
   public static final String JSON_PROPERTY_BANNER_AD = "bannerAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceBannerAd bannerAd;
 
   public static final String JSON_PROPERTY_CAROUSEL_AD = "carouselAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceCarouselAd carouselAd;
 
   public static final String JSON_PROPERTY_DYNAMIC_DISPLAY_AD = "dynamicDisplayAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceDynamicDisplayAd dynamicDisplayAd;
 
   public static final String JSON_PROPERTY_RESPONSIVE_AD = "responsiveAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceResponsiveAd responsiveAd;
 
   public static final String JSON_PROPERTY_TEXT_AD = "textAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceTextAd textAd;
 
   public static final String JSON_PROPERTY_RESPONSIVE_GAIN_FRIENDS_AD = "responsiveGainFriendsAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceResponsiveGainFriendsAd responsiveGainFriendsAd;
 
   public static final String JSON_PROPERTY_CAROUSEL_GAIN_FRIENDS_AD = "carouselGainFriendsAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceCarouselGainFriendsAd carouselGainFriendsAd;
 
   public static final String JSON_PROPERTY_INSTREAM_AD = "instreamAd";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceInstreamAd instreamAd;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_DISPLAY_URL = "displayUrl";
+  @jakarta.annotation.Nullable
   private String displayUrl;
 
   public static final String JSON_PROPERTY_DISPLAY_URL_LEVEL = "displayUrlLevel";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceDisplayUrlLevel displayUrlLevel;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
+  @jakarta.annotation.Nullable
   private String finalUrl;
 
   public static final String JSON_PROPERTY_SMARTPHONE_FINAL_URL = "smartphoneFinalUrl";
+  @jakarta.annotation.Nullable
   private String smartphoneFinalUrl;
 
   public static final String JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL = "isRemoveSmartphoneFinalUrl";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveSmartphoneFinalUrl;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TRACKING_URL = "isRemoveTrackingUrl";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceIsRemoveFlg isRemoveTrackingUrl;
 
   public AdGroupAdServiceAd() {
   }
 
-  public AdGroupAdServiceAd adType(AdGroupAdServiceAdType adType) {
+  public AdGroupAdServiceAd adType(@jakarta.annotation.Nullable AdGroupAdServiceAdType adType) {
     
     this.adType = adType;
     return this;
   }
 
-   /**
+  /**
    * Get adType
    * @return adType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceAdType getAdType() {
@@ -137,25 +156,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdType(AdGroupAdServiceAdType adType) {
+  public void setAdType(@jakarta.annotation.Nullable AdGroupAdServiceAdType adType) {
     this.adType = adType;
   }
 
-
-  public AdGroupAdServiceAd mainMediaFormat(AdGroupAdServiceMainMediaFormat mainMediaFormat) {
+  public AdGroupAdServiceAd mainMediaFormat(@jakarta.annotation.Nullable AdGroupAdServiceMainMediaFormat mainMediaFormat) {
     
     this.mainMediaFormat = mainMediaFormat;
     return this;
   }
 
-   /**
+  /**
    * Get mainMediaFormat
    * @return mainMediaFormat
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAIN_MEDIA_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MAIN_MEDIA_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceMainMediaFormat getMainMediaFormat() {
@@ -163,25 +181,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAIN_MEDIA_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MAIN_MEDIA_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMainMediaFormat(AdGroupAdServiceMainMediaFormat mainMediaFormat) {
+  public void setMainMediaFormat(@jakarta.annotation.Nullable AdGroupAdServiceMainMediaFormat mainMediaFormat) {
     this.mainMediaFormat = mainMediaFormat;
   }
 
-
-  public AdGroupAdServiceAd bannerAd(AdGroupAdServiceBannerAd bannerAd) {
+  public AdGroupAdServiceAd bannerAd(@jakarta.annotation.Nullable AdGroupAdServiceBannerAd bannerAd) {
     
     this.bannerAd = bannerAd;
     return this;
   }
 
-   /**
+  /**
    * Get bannerAd
    * @return bannerAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BANNER_AD)
+  @JsonProperty(value = JSON_PROPERTY_BANNER_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceBannerAd getBannerAd() {
@@ -189,25 +206,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BANNER_AD)
+  @JsonProperty(value = JSON_PROPERTY_BANNER_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBannerAd(AdGroupAdServiceBannerAd bannerAd) {
+  public void setBannerAd(@jakarta.annotation.Nullable AdGroupAdServiceBannerAd bannerAd) {
     this.bannerAd = bannerAd;
   }
 
-
-  public AdGroupAdServiceAd carouselAd(AdGroupAdServiceCarouselAd carouselAd) {
+  public AdGroupAdServiceAd carouselAd(@jakarta.annotation.Nullable AdGroupAdServiceCarouselAd carouselAd) {
     
     this.carouselAd = carouselAd;
     return this;
   }
 
-   /**
+  /**
    * Get carouselAd
    * @return carouselAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAROUSEL_AD)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSEL_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceCarouselAd getCarouselAd() {
@@ -215,25 +231,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAROUSEL_AD)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSEL_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCarouselAd(AdGroupAdServiceCarouselAd carouselAd) {
+  public void setCarouselAd(@jakarta.annotation.Nullable AdGroupAdServiceCarouselAd carouselAd) {
     this.carouselAd = carouselAd;
   }
 
-
-  public AdGroupAdServiceAd dynamicDisplayAd(AdGroupAdServiceDynamicDisplayAd dynamicDisplayAd) {
+  public AdGroupAdServiceAd dynamicDisplayAd(@jakarta.annotation.Nullable AdGroupAdServiceDynamicDisplayAd dynamicDisplayAd) {
     
     this.dynamicDisplayAd = dynamicDisplayAd;
     return this;
   }
 
-   /**
+  /**
    * Get dynamicDisplayAd
    * @return dynamicDisplayAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DYNAMIC_DISPLAY_AD)
+  @JsonProperty(value = JSON_PROPERTY_DYNAMIC_DISPLAY_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceDynamicDisplayAd getDynamicDisplayAd() {
@@ -241,25 +256,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DYNAMIC_DISPLAY_AD)
+  @JsonProperty(value = JSON_PROPERTY_DYNAMIC_DISPLAY_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDynamicDisplayAd(AdGroupAdServiceDynamicDisplayAd dynamicDisplayAd) {
+  public void setDynamicDisplayAd(@jakarta.annotation.Nullable AdGroupAdServiceDynamicDisplayAd dynamicDisplayAd) {
     this.dynamicDisplayAd = dynamicDisplayAd;
   }
 
-
-  public AdGroupAdServiceAd responsiveAd(AdGroupAdServiceResponsiveAd responsiveAd) {
+  public AdGroupAdServiceAd responsiveAd(@jakarta.annotation.Nullable AdGroupAdServiceResponsiveAd responsiveAd) {
     
     this.responsiveAd = responsiveAd;
     return this;
   }
 
-   /**
+  /**
    * Get responsiveAd
    * @return responsiveAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RESPONSIVE_AD)
+  @JsonProperty(value = JSON_PROPERTY_RESPONSIVE_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceResponsiveAd getResponsiveAd() {
@@ -267,25 +281,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RESPONSIVE_AD)
+  @JsonProperty(value = JSON_PROPERTY_RESPONSIVE_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setResponsiveAd(AdGroupAdServiceResponsiveAd responsiveAd) {
+  public void setResponsiveAd(@jakarta.annotation.Nullable AdGroupAdServiceResponsiveAd responsiveAd) {
     this.responsiveAd = responsiveAd;
   }
 
-
-  public AdGroupAdServiceAd textAd(AdGroupAdServiceTextAd textAd) {
+  public AdGroupAdServiceAd textAd(@jakarta.annotation.Nullable AdGroupAdServiceTextAd textAd) {
     
     this.textAd = textAd;
     return this;
   }
 
-   /**
+  /**
    * Get textAd
    * @return textAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TEXT_AD)
+  @JsonProperty(value = JSON_PROPERTY_TEXT_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceTextAd getTextAd() {
@@ -293,25 +306,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TEXT_AD)
+  @JsonProperty(value = JSON_PROPERTY_TEXT_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTextAd(AdGroupAdServiceTextAd textAd) {
+  public void setTextAd(@jakarta.annotation.Nullable AdGroupAdServiceTextAd textAd) {
     this.textAd = textAd;
   }
 
-
-  public AdGroupAdServiceAd responsiveGainFriendsAd(AdGroupAdServiceResponsiveGainFriendsAd responsiveGainFriendsAd) {
+  public AdGroupAdServiceAd responsiveGainFriendsAd(@jakarta.annotation.Nullable AdGroupAdServiceResponsiveGainFriendsAd responsiveGainFriendsAd) {
     
     this.responsiveGainFriendsAd = responsiveGainFriendsAd;
     return this;
   }
 
-   /**
+  /**
    * Get responsiveGainFriendsAd
    * @return responsiveGainFriendsAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RESPONSIVE_GAIN_FRIENDS_AD)
+  @JsonProperty(value = JSON_PROPERTY_RESPONSIVE_GAIN_FRIENDS_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceResponsiveGainFriendsAd getResponsiveGainFriendsAd() {
@@ -319,25 +331,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RESPONSIVE_GAIN_FRIENDS_AD)
+  @JsonProperty(value = JSON_PROPERTY_RESPONSIVE_GAIN_FRIENDS_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setResponsiveGainFriendsAd(AdGroupAdServiceResponsiveGainFriendsAd responsiveGainFriendsAd) {
+  public void setResponsiveGainFriendsAd(@jakarta.annotation.Nullable AdGroupAdServiceResponsiveGainFriendsAd responsiveGainFriendsAd) {
     this.responsiveGainFriendsAd = responsiveGainFriendsAd;
   }
 
-
-  public AdGroupAdServiceAd carouselGainFriendsAd(AdGroupAdServiceCarouselGainFriendsAd carouselGainFriendsAd) {
+  public AdGroupAdServiceAd carouselGainFriendsAd(@jakarta.annotation.Nullable AdGroupAdServiceCarouselGainFriendsAd carouselGainFriendsAd) {
     
     this.carouselGainFriendsAd = carouselGainFriendsAd;
     return this;
   }
 
-   /**
+  /**
    * Get carouselGainFriendsAd
    * @return carouselGainFriendsAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAROUSEL_GAIN_FRIENDS_AD)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSEL_GAIN_FRIENDS_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceCarouselGainFriendsAd getCarouselGainFriendsAd() {
@@ -345,25 +356,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAROUSEL_GAIN_FRIENDS_AD)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSEL_GAIN_FRIENDS_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCarouselGainFriendsAd(AdGroupAdServiceCarouselGainFriendsAd carouselGainFriendsAd) {
+  public void setCarouselGainFriendsAd(@jakarta.annotation.Nullable AdGroupAdServiceCarouselGainFriendsAd carouselGainFriendsAd) {
     this.carouselGainFriendsAd = carouselGainFriendsAd;
   }
 
-
-  public AdGroupAdServiceAd instreamAd(AdGroupAdServiceInstreamAd instreamAd) {
+  public AdGroupAdServiceAd instreamAd(@jakarta.annotation.Nullable AdGroupAdServiceInstreamAd instreamAd) {
     
     this.instreamAd = instreamAd;
     return this;
   }
 
-   /**
+  /**
    * Get instreamAd
    * @return instreamAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSTREAM_AD)
+  @JsonProperty(value = JSON_PROPERTY_INSTREAM_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceInstreamAd getInstreamAd() {
@@ -371,25 +381,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSTREAM_AD)
+  @JsonProperty(value = JSON_PROPERTY_INSTREAM_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInstreamAd(AdGroupAdServiceInstreamAd instreamAd) {
+  public void setInstreamAd(@jakarta.annotation.Nullable AdGroupAdServiceInstreamAd instreamAd) {
     this.instreamAd = instreamAd;
   }
 
-
-  public AdGroupAdServiceAd customParameters(AdGroupAdServiceCustomParameters customParameters) {
+  public AdGroupAdServiceAd customParameters(@jakarta.annotation.Nullable AdGroupAdServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceCustomParameters getCustomParameters() {
@@ -397,25 +406,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(AdGroupAdServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable AdGroupAdServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public AdGroupAdServiceAd displayUrl(String displayUrl) {
+  public AdGroupAdServiceAd displayUrl(@jakarta.annotation.Nullable String displayUrl) {
     
     this.displayUrl = displayUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 表示URLです。&lt;br&gt; このフィールドはリクエストの際には無視されます。代わりにfinalUrlから生成された値が自動で設定されます。&lt;br&gt; ただし、キャンペーン目的「アプリ訴求」の場合は、キャンペーンで指定したDeviceOsTypeに基づき、以下のいずれかのURLが自動で設定されます。&lt;br&gt; - iOSの場合：itunes.apple.com&lt;br&gt; - Androidの場合：play.google.com &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Display URL.&lt;br&gt; This field will be ignored on input. Instead, the value generated from finalUrl will be set automatically.&lt;br&gt; However, When a campaign goal is \&quot;app promotion\&quot;, Based on DeviceOsType specified on the campaign, any of the following URLs will be automatically set.&lt;br&gt; - For iOS : itunes.apple.com&lt;br&gt; - For Android : play.google.com &lt;/div&gt; 
    * @return displayUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisplayUrl() {
@@ -423,25 +431,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayUrl(String displayUrl) {
+  public void setDisplayUrl(@jakarta.annotation.Nullable String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
-
-  public AdGroupAdServiceAd displayUrlLevel(AdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
+  public AdGroupAdServiceAd displayUrlLevel(@jakarta.annotation.Nullable AdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
     
     this.displayUrlLevel = displayUrlLevel;
     return this;
   }
 
-   /**
+  /**
    * Get displayUrlLevel
    * @return displayUrlLevel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceDisplayUrlLevel getDisplayUrlLevel() {
@@ -449,25 +456,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayUrlLevel(AdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
+  public void setDisplayUrlLevel(@jakarta.annotation.Nullable AdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
     this.displayUrlLevel = displayUrlLevel;
   }
 
-
-  public AdGroupAdServiceAd finalUrl(String finalUrl) {
+  public AdGroupAdServiceAd finalUrl(@jakarta.annotation.Nullable String finalUrl) {
     
     this.finalUrl = finalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; adTypeがCAROUSEL_GAIN_FRIENDS_ADの場合、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; If adType is CAROUSEL_GAIN_FRIENDS_AD, this field will be ignored on input. &lt;/div&gt; 
    * @return finalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFinalUrl() {
@@ -475,25 +481,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFinalUrl(String finalUrl) {
+  public void setFinalUrl(@jakarta.annotation.Nullable String finalUrl) {
     this.finalUrl = finalUrl;
   }
 
-
-  public AdGroupAdServiceAd smartphoneFinalUrl(String smartphoneFinalUrl) {
+  public AdGroupAdServiceAd smartphoneFinalUrl(@jakarta.annotation.Nullable String smartphoneFinalUrl) {
     
     this.smartphoneFinalUrl = smartphoneFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;スマートフォン向けURLです。&lt;br&gt; ADDおよびSET時、このフィールドは省略可能となります。&lt;br&gt; キャンペーン目的「アプリ訴求」の場合は、ADD、SETのどちらも指定できません。&lt;br&gt; adTypeがCAROUSEL_GAIN_FRIENDS_ADの場合、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL (smartphone).&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; Not allowed for ADD and SET when a campaign goal is \&quot;app promotion.\&quot;&lt;br&gt; If adType is CAROUSEL_GAIN_FRIENDS_AD, this field will be ignored on input. &lt;/div&gt; 
    * @return smartphoneFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getSmartphoneFinalUrl() {
@@ -501,25 +506,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartphoneFinalUrl(String smartphoneFinalUrl) {
+  public void setSmartphoneFinalUrl(@jakarta.annotation.Nullable String smartphoneFinalUrl) {
     this.smartphoneFinalUrl = smartphoneFinalUrl;
   }
 
-
-  public AdGroupAdServiceAd isRemoveSmartphoneFinalUrl(AdGroupAdServiceIsRemoveFlg isRemoveSmartphoneFinalUrl) {
+  public AdGroupAdServiceAd isRemoveSmartphoneFinalUrl(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveSmartphoneFinalUrl) {
     
     this.isRemoveSmartphoneFinalUrl = isRemoveSmartphoneFinalUrl;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveSmartphoneFinalUrl
    * @return isRemoveSmartphoneFinalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveSmartphoneFinalUrl() {
@@ -527,25 +531,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_SMARTPHONE_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveSmartphoneFinalUrl(AdGroupAdServiceIsRemoveFlg isRemoveSmartphoneFinalUrl) {
+  public void setIsRemoveSmartphoneFinalUrl(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveSmartphoneFinalUrl) {
     this.isRemoveSmartphoneFinalUrl = isRemoveSmartphoneFinalUrl;
   }
 
-
-  public AdGroupAdServiceAd trackingUrl(String trackingUrl) {
+  public AdGroupAdServiceAd trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時、このフィールドは省略可能となります。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。&lt;br&gt; SET時にurlを指定する場合、このフィールドの値はクリアされます。&lt;br&gt; adTypeがCAROUSEL_GAIN_FRIENDS_ADの場合、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD operation.&lt;br&gt; This field can be optionally specified only when specifying finalUrl.&lt;br&gt; If url is specified in SET operation, the value in this field will be cleared.&lt;br&gt; If adType is CAROUSEL_GAIN_FRIENDS_AD, this field will be ignored on input. &lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -553,25 +556,24 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
-
-  public AdGroupAdServiceAd isRemoveTrackingUrl(AdGroupAdServiceIsRemoveFlg isRemoveTrackingUrl) {
+  public AdGroupAdServiceAd isRemoveTrackingUrl(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveTrackingUrl) {
     
     this.isRemoveTrackingUrl = isRemoveTrackingUrl;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceIsRemoveFlg getIsRemoveTrackingUrl() {
@@ -579,11 +581,12 @@ public class AdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTrackingUrl(AdGroupAdServiceIsRemoveFlg isRemoveTrackingUrl) {
+  public void setIsRemoveTrackingUrl(@jakarta.annotation.Nullable AdGroupAdServiceIsRemoveFlg isRemoveTrackingUrl) {
     this.isRemoveTrackingUrl = isRemoveTrackingUrl;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -650,10 +653,7 @@ public class AdGroupAdServiceAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

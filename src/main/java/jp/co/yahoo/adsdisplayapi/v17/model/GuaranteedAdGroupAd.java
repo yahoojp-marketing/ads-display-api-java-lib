@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdLandingPageStatus;
 import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceAd;
@@ -29,6 +30,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceLabel;
 import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdオブジェクトは、予約型の広告の情報を格納するコンテナです。&lt;br&gt; 各広告で設定可能な項目については、&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044147?language&#x3D;ja\&quot;&gt;予約型の広告の種類&lt;/a&gt;をご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The GuaranteedAdGroupAd object is a container for storing ad information of guaranteed campaign.&lt;br&gt; Available fields of each ad are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044147?language&#x3D;ja\&quot;&gt;予約型の広告の種類&lt;/a&gt; (Japanese context only). &lt;/div&gt; 
@@ -56,86 +58,107 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAd.JSON_PROPERTY_PRE_APPROVAL_ID,
   GuaranteedAdGroupAd.JSON_PROPERTY_LANDING_PAGE_UPDATE_SCHEDULED_TIME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedAdGroupAd {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD = "ad";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceAd ad;
 
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_NAME = "adGroupName";
+  @jakarta.annotation.Nullable
   private String adGroupName;
 
   public static final String JSON_PROPERTY_AD_ID = "adId";
+  @jakarta.annotation.Nullable
   private Long adId;
 
   public static final String JSON_PROPERTY_AD_NAME = "adName";
+  @jakarta.annotation.Nullable
   private String adName;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_DESCRIPTION = "disapprovalReasonDescription";
+  @jakarta.annotation.Nullable
   private String disapprovalReasonDescription;
 
   public static final String JSON_PROPERTY_IMPRESSION_BEACON_URLS = "impressionBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> impressionBeaconUrls;
 
   public static final String JSON_PROPERTY_VIEWABLE_IMPRESSION_BEACON_URLS = "viewableImpressionBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> viewableImpressionBeaconUrls;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
+  @jakarta.annotation.Nullable
   private List<GuaranteedAdGroupAdServiceLabel> labels;
 
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
+  @jakarta.annotation.Nullable
   private Long mediaId;
 
   public static final String JSON_PROPERTY_THIRD_PARTY_TRACKING_SCRIPT_URL = "thirdPartyTrackingScriptUrl";
+  @jakarta.annotation.Nullable
   private String thirdPartyTrackingScriptUrl;
 
   public static final String JSON_PROPERTY_THIRD_PARTY_TRACKING_VENDOR = "thirdPartyTrackingVendor";
+  @jakarta.annotation.Nullable
   private String thirdPartyTrackingVendor;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_LANDING_PAGE_STATUS = "landingPageStatus";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdLandingPageStatus landingPageStatus;
 
   public static final String JSON_PROPERTY_PRE_APPROVAL_ID = "preApprovalId";
+  @jakarta.annotation.Nullable
   private String preApprovalId;
 
   public static final String JSON_PROPERTY_LANDING_PAGE_UPDATE_SCHEDULED_TIME = "landingPageUpdateScheduledTime";
+  @jakarta.annotation.Nullable
   private String landingPageUpdateScheduledTime;
 
   public GuaranteedAdGroupAd() {
   }
 
-  public GuaranteedAdGroupAd accountId(Long accountId) {
+  public GuaranteedAdGroupAd accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -143,25 +166,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public GuaranteedAdGroupAd ad(GuaranteedAdGroupAdServiceAd ad) {
+  public GuaranteedAdGroupAd ad(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceAd ad) {
     
     this.ad = ad;
     return this;
   }
 
-   /**
+  /**
    * Get ad
    * @return ad
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD)
+  @JsonProperty(value = JSON_PROPERTY_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceAd getAd() {
@@ -169,25 +191,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD)
+  @JsonProperty(value = JSON_PROPERTY_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAd(GuaranteedAdGroupAdServiceAd ad) {
+  public void setAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceAd ad) {
     this.ad = ad;
   }
 
-
-  public GuaranteedAdGroupAd adGroupId(Long adGroupId) {
+  public GuaranteedAdGroupAd adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -195,25 +216,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public GuaranteedAdGroupAd adGroupName(String adGroupName) {
+  public GuaranteedAdGroupAd adGroupName(@jakarta.annotation.Nullable String adGroupName) {
     
     this.adGroupName = adGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdGroupName() {
@@ -221,25 +241,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupName(String adGroupName) {
+  public void setAdGroupName(@jakarta.annotation.Nullable String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
-
-  public GuaranteedAdGroupAd adId(Long adId) {
+  public GuaranteedAdGroupAd adId(@jakarta.annotation.Nullable Long adId) {
     
     this.adId = adId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告IDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad ID.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdId() {
@@ -247,25 +266,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdId(Long adId) {
+  public void setAdId(@jakarta.annotation.Nullable Long adId) {
     this.adId = adId;
   }
 
-
-  public GuaranteedAdGroupAd adName(String adName) {
+  public GuaranteedAdGroupAd adName(@jakarta.annotation.Nullable String adName) {
     
     this.adName = adName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad name.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdName() {
@@ -273,25 +291,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdName(String adName) {
+  public void setAdName(@jakarta.annotation.Nullable String adName) {
     this.adName = adName;
   }
 
-
-  public GuaranteedAdGroupAd approvalStatus(GuaranteedAdGroupAdServiceApprovalStatus approvalStatus) {
+  public GuaranteedAdGroupAd approvalStatus(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceApprovalStatus getApprovalStatus() {
@@ -299,25 +316,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(GuaranteedAdGroupAdServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public GuaranteedAdGroupAd campaignId(Long campaignId) {
+  public GuaranteedAdGroupAd campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -325,25 +341,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public GuaranteedAdGroupAd campaignName(String campaignName) {
+  public GuaranteedAdGroupAd campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -351,14 +366,13 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public GuaranteedAdGroupAd disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public GuaranteedAdGroupAd disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -372,12 +386,12 @@ public class GuaranteedAdGroupAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 掲載拒否の理由です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reject reason on editorial review.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -385,25 +399,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public GuaranteedAdGroupAd disapprovalReasonDescription(String disapprovalReasonDescription) {
+  public GuaranteedAdGroupAd disapprovalReasonDescription(@jakarta.annotation.Nullable String disapprovalReasonDescription) {
     
     this.disapprovalReasonDescription = disapprovalReasonDescription;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 掲載拒否の理由詳細です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reject reason details on editorial review.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return disapprovalReasonDescription
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisapprovalReasonDescription() {
@@ -411,14 +424,13 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonDescription(String disapprovalReasonDescription) {
+  public void setDisapprovalReasonDescription(@jakarta.annotation.Nullable String disapprovalReasonDescription) {
     this.disapprovalReasonDescription = disapprovalReasonDescription;
   }
 
-
-  public GuaranteedAdGroupAd impressionBeaconUrls(List<String> impressionBeaconUrls) {
+  public GuaranteedAdGroupAd impressionBeaconUrls(@jakarta.annotation.Nullable List<String> impressionBeaconUrls) {
     
     this.impressionBeaconUrls = impressionBeaconUrls;
     return this;
@@ -432,12 +444,12 @@ public class GuaranteedAdGroupAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; インプレッションビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Impression beacon URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return impressionBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getImpressionBeaconUrls() {
@@ -445,14 +457,13 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IMPRESSION_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_IMPRESSION_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setImpressionBeaconUrls(List<String> impressionBeaconUrls) {
+  public void setImpressionBeaconUrls(@jakarta.annotation.Nullable List<String> impressionBeaconUrls) {
     this.impressionBeaconUrls = impressionBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAd viewableImpressionBeaconUrls(List<String> viewableImpressionBeaconUrls) {
+  public GuaranteedAdGroupAd viewableImpressionBeaconUrls(@jakarta.annotation.Nullable List<String> viewableImpressionBeaconUrls) {
     
     this.viewableImpressionBeaconUrls = viewableImpressionBeaconUrls;
     return this;
@@ -466,12 +477,12 @@ public class GuaranteedAdGroupAd {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ビューアブルインプレッションビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewable impression beacon URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return viewableImpressionBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPRESSION_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_IMPRESSION_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getViewableImpressionBeaconUrls() {
@@ -479,14 +490,13 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_IMPRESSION_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_IMPRESSION_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableImpressionBeaconUrls(List<String> viewableImpressionBeaconUrls) {
+  public void setViewableImpressionBeaconUrls(@jakarta.annotation.Nullable List<String> viewableImpressionBeaconUrls) {
     this.viewableImpressionBeaconUrls = viewableImpressionBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAd labels(List<GuaranteedAdGroupAdServiceLabel> labels) {
+  public GuaranteedAdGroupAd labels(@jakarta.annotation.Nullable List<GuaranteedAdGroupAdServiceLabel> labels) {
     
     this.labels = labels;
     return this;
@@ -500,12 +510,12 @@ public class GuaranteedAdGroupAd {
     return this;
   }
 
-   /**
+  /**
    * Get labels
    * @return labels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<GuaranteedAdGroupAdServiceLabel> getLabels() {
@@ -513,25 +523,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabels(List<GuaranteedAdGroupAdServiceLabel> labels) {
+  public void setLabels(@jakarta.annotation.Nullable List<GuaranteedAdGroupAdServiceLabel> labels) {
     this.labels = labels;
   }
 
-
-  public GuaranteedAdGroupAd mediaId(Long mediaId) {
+  public GuaranteedAdGroupAd mediaId(@jakarta.annotation.Nullable Long mediaId) {
     
     this.mediaId = mediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return mediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMediaId() {
@@ -539,25 +548,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaId(Long mediaId) {
+  public void setMediaId(@jakarta.annotation.Nullable Long mediaId) {
     this.mediaId = mediaId;
   }
 
-
-  public GuaranteedAdGroupAd thirdPartyTrackingScriptUrl(String thirdPartyTrackingScriptUrl) {
+  public GuaranteedAdGroupAd thirdPartyTrackingScriptUrl(@jakarta.annotation.Nullable String thirdPartyTrackingScriptUrl) {
     
     this.thirdPartyTrackingScriptUrl = thirdPartyTrackingScriptUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 第三者計測スクリプトURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Third party tracking script URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return thirdPartyTrackingScriptUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_THIRD_PARTY_TRACKING_SCRIPT_URL)
+  @JsonProperty(value = JSON_PROPERTY_THIRD_PARTY_TRACKING_SCRIPT_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getThirdPartyTrackingScriptUrl() {
@@ -565,25 +573,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_THIRD_PARTY_TRACKING_SCRIPT_URL)
+  @JsonProperty(value = JSON_PROPERTY_THIRD_PARTY_TRACKING_SCRIPT_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setThirdPartyTrackingScriptUrl(String thirdPartyTrackingScriptUrl) {
+  public void setThirdPartyTrackingScriptUrl(@jakarta.annotation.Nullable String thirdPartyTrackingScriptUrl) {
     this.thirdPartyTrackingScriptUrl = thirdPartyTrackingScriptUrl;
   }
 
-
-  public GuaranteedAdGroupAd thirdPartyTrackingVendor(String thirdPartyTrackingVendor) {
+  public GuaranteedAdGroupAd thirdPartyTrackingVendor(@jakarta.annotation.Nullable String thirdPartyTrackingVendor) {
     
     this.thirdPartyTrackingVendor = thirdPartyTrackingVendor;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 第三者計測ベンダー（ReadOnly）です。&lt;br&gt; thirdPartyTrackingScriptUrlのドメインに基づく第三者計測ベンダーが設定されます。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Third party tracking vendor (read only).&lt;br&gt; Third party tracking vendor based on domain of thirdPartyTrackingScriptUrl is set.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return thirdPartyTrackingVendor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_THIRD_PARTY_TRACKING_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_THIRD_PARTY_TRACKING_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getThirdPartyTrackingVendor() {
@@ -591,25 +598,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_THIRD_PARTY_TRACKING_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_THIRD_PARTY_TRACKING_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setThirdPartyTrackingVendor(String thirdPartyTrackingVendor) {
+  public void setThirdPartyTrackingVendor(@jakarta.annotation.Nullable String thirdPartyTrackingVendor) {
     this.thirdPartyTrackingVendor = thirdPartyTrackingVendor;
   }
 
-
-  public GuaranteedAdGroupAd userStatus(GuaranteedAdGroupAdServiceUserStatus userStatus) {
+  public GuaranteedAdGroupAd userStatus(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceUserStatus getUserStatus() {
@@ -617,25 +623,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(GuaranteedAdGroupAdServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public GuaranteedAdGroupAd landingPageStatus(GuaranteedAdGroupAdLandingPageStatus landingPageStatus) {
+  public GuaranteedAdGroupAd landingPageStatus(@jakarta.annotation.Nullable GuaranteedAdGroupAdLandingPageStatus landingPageStatus) {
     
     this.landingPageStatus = landingPageStatus;
     return this;
   }
 
-   /**
+  /**
    * Get landingPageStatus
    * @return landingPageStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANDING_PAGE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_LANDING_PAGE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdLandingPageStatus getLandingPageStatus() {
@@ -643,25 +648,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANDING_PAGE_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_LANDING_PAGE_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLandingPageStatus(GuaranteedAdGroupAdLandingPageStatus landingPageStatus) {
+  public void setLandingPageStatus(@jakarta.annotation.Nullable GuaranteedAdGroupAdLandingPageStatus landingPageStatus) {
     this.landingPageStatus = landingPageStatus;
   }
 
-
-  public GuaranteedAdGroupAd preApprovalId(String preApprovalId) {
+  public GuaranteedAdGroupAd preApprovalId(@jakarta.annotation.Nullable String preApprovalId) {
     
     this.preApprovalId = preApprovalId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 事前承認ID（数字のみ）です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Pre-approval ID (only number).&lt;br&gt; &lt;/div&gt; 
    * @return preApprovalId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRE_APPROVAL_ID)
+  @JsonProperty(value = JSON_PROPERTY_PRE_APPROVAL_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPreApprovalId() {
@@ -669,25 +673,24 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PRE_APPROVAL_ID)
+  @JsonProperty(value = JSON_PROPERTY_PRE_APPROVAL_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPreApprovalId(String preApprovalId) {
+  public void setPreApprovalId(@jakarta.annotation.Nullable String preApprovalId) {
     this.preApprovalId = preApprovalId;
   }
 
-
-  public GuaranteedAdGroupAd landingPageUpdateScheduledTime(String landingPageUpdateScheduledTime) {
+  public GuaranteedAdGroupAd landingPageUpdateScheduledTime(@jakarta.annotation.Nullable String landingPageUpdateScheduledTime) {
     
     this.landingPageUpdateScheduledTime = landingPageUpdateScheduledTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンク先更新予定日時です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※フォーマット：yyyyMMddHHmm&lt;br&gt;  &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The scheduled update date and time for the landing page.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; *format: yyyyMMddHHmm&lt;br&gt; &lt;/div&gt; 
    * @return landingPageUpdateScheduledTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANDING_PAGE_UPDATE_SCHEDULED_TIME)
+  @JsonProperty(value = JSON_PROPERTY_LANDING_PAGE_UPDATE_SCHEDULED_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLandingPageUpdateScheduledTime() {
@@ -695,11 +698,12 @@ public class GuaranteedAdGroupAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANDING_PAGE_UPDATE_SCHEDULED_TIME)
+  @JsonProperty(value = JSON_PROPERTY_LANDING_PAGE_UPDATE_SCHEDULED_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLandingPageUpdateScheduledTime(String landingPageUpdateScheduledTime) {
+  public void setLandingPageUpdateScheduledTime(@jakarta.annotation.Nullable String landingPageUpdateScheduledTime) {
     this.landingPageUpdateScheduledTime = landingPageUpdateScheduledTime;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -772,10 +776,7 @@ public class GuaranteedAdGroupAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

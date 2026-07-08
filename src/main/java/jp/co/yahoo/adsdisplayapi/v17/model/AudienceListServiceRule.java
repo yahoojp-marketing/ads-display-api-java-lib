@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceRuleCondition;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceRuleオブジェクトは、オーディエンスリストに設定可能な条件を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceRule object displays the possible conditions for audience list.&lt;br&gt; This field is optional in ADD and SET operation. &lt;/div&gt; 
@@ -32,15 +34,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   AudienceListServiceRule.JSON_PROPERTY_RULE_CONDITIONS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceRule {
   public static final String JSON_PROPERTY_RULE_CONDITIONS = "ruleConditions";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceRuleCondition> ruleConditions;
 
   public AudienceListServiceRule() {
   }
 
-  public AudienceListServiceRule ruleConditions(List<AudienceListServiceRuleCondition> ruleConditions) {
+  public AudienceListServiceRule ruleConditions(@jakarta.annotation.Nullable List<AudienceListServiceRuleCondition> ruleConditions) {
     
     this.ruleConditions = ruleConditions;
     return this;
@@ -54,12 +57,12 @@ public class AudienceListServiceRule {
     return this;
   }
 
-   /**
+  /**
    * Get ruleConditions
    * @return ruleConditions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_CONDITIONS)
+  @JsonProperty(value = JSON_PROPERTY_RULE_CONDITIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceRuleCondition> getRuleConditions() {
@@ -67,11 +70,12 @@ public class AudienceListServiceRule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_CONDITIONS)
+  @JsonProperty(value = JSON_PROPERTY_RULE_CONDITIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleConditions(List<AudienceListServiceRuleCondition> ruleConditions) {
+  public void setRuleConditions(@jakarta.annotation.Nullable List<AudienceListServiceRuleCondition> ruleConditions) {
     this.ruleConditions = ruleConditions;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +108,7 @@ public class AudienceListServiceRule {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

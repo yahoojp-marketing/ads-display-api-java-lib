@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceIsZeroOrCurrentlyTotaling;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceLineIdDataAudienceListオブジェクトは、オーディエンスリスト（Line Id Data）を表します。&lt;br&gt; こちらのパラメータのご利用は、一部お客様に限定しています。&lt;br&gt; このフィールドは、ADD時に無視され、SET時に省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceLineIdDataAudienceList object describes the audience list (Line Id Data).&lt;br&gt; This parameter is limited to certain clients.&lt;br&gt; This field is ignored in ADD and optional in SET operation.&lt;br&gt; &lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceLineIdDataAudienceList.JSON_PROPERTY_DATA_DURATION,
   AudienceListServiceLineIdDataAudienceList.JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceLineIdDataAudienceList {
   public static final String JSON_PROPERTY_DATA_DURATION = "dataDuration";
+  @jakarta.annotation.Nullable
   private Integer dataDuration;
 
   public static final String JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING = "isZeroOrCurrentlyTotaling";
+  @jakarta.annotation.Nullable
   private AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling;
 
   public AudienceListServiceLineIdDataAudienceList() {
   }
 
-  public AudienceListServiceLineIdDataAudienceList dataDuration(Integer dataDuration) {
+  public AudienceListServiceLineIdDataAudienceList dataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     
     this.dataDuration = dataDuration;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; データの有効期間です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Data duration. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return dataDuration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getDataDuration() {
@@ -61,25 +64,24 @@ public class AudienceListServiceLineIdDataAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataDuration(Integer dataDuration) {
+  public void setDataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     this.dataDuration = dataDuration;
   }
 
-
-  public AudienceListServiceLineIdDataAudienceList isZeroOrCurrentlyTotaling(AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
+  public AudienceListServiceLineIdDataAudienceList isZeroOrCurrentlyTotaling(@jakarta.annotation.Nullable AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
     
     this.isZeroOrCurrentlyTotaling = isZeroOrCurrentlyTotaling;
     return this;
   }
 
-   /**
+  /**
    * Get isZeroOrCurrentlyTotaling
    * @return isZeroOrCurrentlyTotaling
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING)
+  @JsonProperty(value = JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceIsZeroOrCurrentlyTotaling getIsZeroOrCurrentlyTotaling() {
@@ -87,11 +89,12 @@ public class AudienceListServiceLineIdDataAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING)
+  @JsonProperty(value = JSON_PROPERTY_IS_ZERO_OR_CURRENTLY_TOTALING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsZeroOrCurrentlyTotaling(AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
+  public void setIsZeroOrCurrentlyTotaling(@jakarta.annotation.Nullable AudienceListServiceIsZeroOrCurrentlyTotaling isZeroOrCurrentlyTotaling) {
     this.isZeroOrCurrentlyTotaling = isZeroOrCurrentlyTotaling;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class AudienceListServiceLineIdDataAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

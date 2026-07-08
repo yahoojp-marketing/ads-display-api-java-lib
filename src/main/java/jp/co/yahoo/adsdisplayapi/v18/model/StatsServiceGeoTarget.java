@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.StatsServiceAreaSearchType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceGeoTargetオブジェクトは、地域ターゲットの設定情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceGeoTarget object holds configuration information of Geo targeting.&lt;/div&gt; 
@@ -36,44 +37,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceGeoTarget.JSON_PROPERTY_GEO_NAME_EN,
   StatsServiceGeoTarget.JSON_PROPERTY_GEO_NAME_JA
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceGeoTarget {
   public static final String JSON_PROPERTY_AREA_SEARCH_TYPE = "areaSearchType";
+  @jakarta.annotation.Nullable
   private StatsServiceAreaSearchType areaSearchType;
 
   public static final String JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES = "latitudeInMicroDegrees";
+  @jakarta.annotation.Nullable
   private Integer latitudeInMicroDegrees;
 
   public static final String JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES = "longitudeInMicroDegrees";
+  @jakarta.annotation.Nullable
   private Integer longitudeInMicroDegrees;
 
   public static final String JSON_PROPERTY_RADIUS = "radius";
+  @jakarta.annotation.Nullable
   private Integer radius;
 
   public static final String JSON_PROPERTY_DESCRIPTION = "description";
+  @jakarta.annotation.Nullable
   private String description;
 
   public static final String JSON_PROPERTY_GEO_NAME_EN = "geoNameEn";
+  @jakarta.annotation.Nullable
   private String geoNameEn;
 
   public static final String JSON_PROPERTY_GEO_NAME_JA = "geoNameJa";
+  @jakarta.annotation.Nullable
   private String geoNameJa;
 
   public StatsServiceGeoTarget() {
   }
 
-  public StatsServiceGeoTarget areaSearchType(StatsServiceAreaSearchType areaSearchType) {
+  public StatsServiceGeoTarget areaSearchType(@jakarta.annotation.Nullable StatsServiceAreaSearchType areaSearchType) {
     
     this.areaSearchType = areaSearchType;
     return this;
   }
 
-   /**
+  /**
    * Get areaSearchType
    * @return areaSearchType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AREA_SEARCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AREA_SEARCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public StatsServiceAreaSearchType getAreaSearchType() {
@@ -81,25 +89,24 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AREA_SEARCH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AREA_SEARCH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAreaSearchType(StatsServiceAreaSearchType areaSearchType) {
+  public void setAreaSearchType(@jakarta.annotation.Nullable StatsServiceAreaSearchType areaSearchType) {
     this.areaSearchType = areaSearchType;
   }
 
-
-  public StatsServiceGeoTarget latitudeInMicroDegrees(Integer latitudeInMicroDegrees) {
+  public StatsServiceGeoTarget latitudeInMicroDegrees(@jakarta.annotation.Nullable Integer latitudeInMicroDegrees) {
     
     this.latitudeInMicroDegrees = latitudeInMicroDegrees;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイクロ表記の緯度です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Micro degrees for the latitude.&lt;/div&gt; 
    * @return latitudeInMicroDegrees
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getLatitudeInMicroDegrees() {
@@ -107,25 +114,24 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LATITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLatitudeInMicroDegrees(Integer latitudeInMicroDegrees) {
+  public void setLatitudeInMicroDegrees(@jakarta.annotation.Nullable Integer latitudeInMicroDegrees) {
     this.latitudeInMicroDegrees = latitudeInMicroDegrees;
   }
 
-
-  public StatsServiceGeoTarget longitudeInMicroDegrees(Integer longitudeInMicroDegrees) {
+  public StatsServiceGeoTarget longitudeInMicroDegrees(@jakarta.annotation.Nullable Integer longitudeInMicroDegrees) {
     
     this.longitudeInMicroDegrees = longitudeInMicroDegrees;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;マイクロ表記の経度です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Micro degrees for the longitude.&lt;/div&gt; 
    * @return longitudeInMicroDegrees
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getLongitudeInMicroDegrees() {
@@ -133,25 +139,24 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES)
+  @JsonProperty(value = JSON_PROPERTY_LONGITUDE_IN_MICRO_DEGREES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLongitudeInMicroDegrees(Integer longitudeInMicroDegrees) {
+  public void setLongitudeInMicroDegrees(@jakarta.annotation.Nullable Integer longitudeInMicroDegrees) {
     this.longitudeInMicroDegrees = longitudeInMicroDegrees;
   }
 
-
-  public StatsServiceGeoTarget radius(Integer radius) {
+  public StatsServiceGeoTarget radius(@jakarta.annotation.Nullable Integer radius) {
     
     this.radius = radius;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;半径(km)です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Radius(km).&lt;/div&gt; 
    * @return radius
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RADIUS)
+  @JsonProperty(value = JSON_PROPERTY_RADIUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getRadius() {
@@ -159,25 +164,24 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RADIUS)
+  @JsonProperty(value = JSON_PROPERTY_RADIUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRadius(Integer radius) {
+  public void setRadius(@jakarta.annotation.Nullable Integer radius) {
     this.radius = radius;
   }
 
-
-  public StatsServiceGeoTarget description(String description) {
+  public StatsServiceGeoTarget description(@jakarta.annotation.Nullable String description) {
     
     this.description = description;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;説明です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Description.&lt;/div&gt; 
    * @return description
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDescription() {
@@ -185,25 +189,24 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescription(String description) {
+  public void setDescription(@jakarta.annotation.Nullable String description) {
     this.description = description;
   }
 
-
-  public StatsServiceGeoTarget geoNameEn(String geoNameEn) {
+  public StatsServiceGeoTarget geoNameEn(@jakarta.annotation.Nullable String geoNameEn) {
     
     this.geoNameEn = geoNameEn;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域名（英語）&lt;br&gt;areaSearchTypeがRADIUSの場合はレスポンスの際に返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Geo name(English)&lt;br&gt;If areaSearchType is RADIUS, it will not be returned.&lt;/div&gt; 
    * @return geoNameEn
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEO_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_GEO_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getGeoNameEn() {
@@ -211,25 +214,24 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEO_NAME_EN)
+  @JsonProperty(value = JSON_PROPERTY_GEO_NAME_EN, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeoNameEn(String geoNameEn) {
+  public void setGeoNameEn(@jakarta.annotation.Nullable String geoNameEn) {
     this.geoNameEn = geoNameEn;
   }
 
-
-  public StatsServiceGeoTarget geoNameJa(String geoNameJa) {
+  public StatsServiceGeoTarget geoNameJa(@jakarta.annotation.Nullable String geoNameJa) {
     
     this.geoNameJa = geoNameJa;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;地域名（日本語）&lt;br&gt;areaSearchTypeがRADIUSの場合はレスポンスの際に返却されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Geo name(Japanese)&lt;br&gt;If areaSearchType is RADIUS, it will not be returned.&lt;/div&gt; 
    * @return geoNameJa
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEO_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_GEO_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getGeoNameJa() {
@@ -237,11 +239,12 @@ public class StatsServiceGeoTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEO_NAME_JA)
+  @JsonProperty(value = JSON_PROPERTY_GEO_NAME_JA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeoNameJa(String geoNameJa) {
+  public void setGeoNameJa(@jakarta.annotation.Nullable String geoNameJa) {
     this.geoNameJa = geoNameJa;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -286,10 +289,7 @@ public class StatsServiceGeoTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

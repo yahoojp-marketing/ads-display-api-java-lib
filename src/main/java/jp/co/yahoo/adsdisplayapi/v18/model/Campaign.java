@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceAppOsType;
 import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceBiddingOption;
@@ -38,6 +39,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceUserStatus;
 import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceViewableFrequencyCap;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Campaignオブジェクトは、キャンペーン情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign object describes campaign information.&lt;/div&gt; 
@@ -75,116 +77,147 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Campaign.JSON_PROPERTY_SKAN_OPTIMIZE_AD_DELIVERY_ENABLED,
   Campaign.JSON_PROPERTY_CONVERSION_TRACKER
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class Campaign {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_APP_ID = "appId";
+  @jakarta.annotation.Nullable
   private String appId;
 
   public static final String JSON_PROPERTY_APP_NAME = "appName";
+  @jakarta.annotation.Nullable
   private String appName;
 
   public static final String JSON_PROPERTY_BUDGET = "budget";
+  @jakarta.annotation.Nullable
   private CampaignServiceBudget budget;
 
   public static final String JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION = "biddingStrategyConfiguration";
+  @jakarta.annotation.Nullable
   private CampaignServiceBiddingStrategyConfiguration biddingStrategyConfiguration;
 
   public static final String JSON_PROPERTY_CAMPAIGN_GOAL = "campaignGoal";
+  @jakarta.annotation.Nullable
   private String campaignGoal;
 
   public static final String JSON_PROPERTY_CAMPAIGN_GOAL_SUBTYPE = "campaignGoalSubtype";
+  @jakarta.annotation.Nullable
   private CampaignServiceCampaignGoalSubtype campaignGoalSubtype;
 
   public static final String JSON_PROPERTY_BIDDING_OPTION = "biddingOption";
+  @jakarta.annotation.Nullable
   private CampaignServiceBiddingOption biddingOption;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_OPTIMIZER = "optimizer";
+  @jakarta.annotation.Nullable
   private CampaignServiceOptimizer optimizer;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private CampaignServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_APP_OS_TYPE = "appOsType";
+  @jakarta.annotation.Nullable
   private CampaignServiceAppOsType appOsType;
 
   public static final String JSON_PROPERTY_END_DATE = "endDate";
+  @jakarta.annotation.Nullable
   private String endDate;
 
   public static final String JSON_PROPERTY_END_TIME = "endTime";
+  @jakarta.annotation.Nullable
   private String endTime;
 
   public static final String JSON_PROPERTY_FEED_ID = "feedId";
+  @jakarta.annotation.Nullable
   private Long feedId;
 
   public static final String JSON_PROPERTY_IS_REMOVE_TRACKING_URL = "isRemoveTrackingUrl";
+  @jakarta.annotation.Nullable
   private CampaignServiceIsRemoveFlg isRemoveTrackingUrl;
 
   public static final String JSON_PROPERTY_LABELS = "labels";
+  @jakarta.annotation.Nullable
   private List<CampaignServiceLabel> labels;
 
   public static final String JSON_PROPERTY_OPTIMIZATION_SCORE = "optimizationScore";
+  @jakarta.annotation.Nullable
   private Double optimizationScore;
 
   public static final String JSON_PROPERTY_SERVING_STATUS = "servingStatus";
+  @jakarta.annotation.Nullable
   private CampaignServiceServingStatus servingStatus;
 
   public static final String JSON_PROPERTY_START_DATE = "startDate";
+  @jakarta.annotation.Nullable
   private String startDate;
 
   public static final String JSON_PROPERTY_START_TIME = "startTime";
+  @jakarta.annotation.Nullable
   private String startTime;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private CampaignServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP = "viewableFrequencyCap";
+  @jakarta.annotation.Nullable
   private CampaignServiceViewableFrequencyCap viewableFrequencyCap;
 
   public static final String JSON_PROPERTY_CAMPAIGN_DELIVERY_TYPE = "campaignDeliveryType";
+  @jakarta.annotation.Nullable
   private String campaignDeliveryType;
 
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
+  @jakarta.annotation.Nullable
   private String createdDate;
 
   public static final String JSON_PROPERTY_UPDATED_DATE = "updatedDate";
+  @jakarta.annotation.Nullable
   private String updatedDate;
 
   public static final String JSON_PROPERTY_VENDOR_NAME = "vendorName";
+  @jakarta.annotation.Nullable
   private String vendorName;
 
   public static final String JSON_PROPERTY_SKAN_OPTIMIZE_AD_DELIVERY_ENABLED = "skanOptimizeAdDeliveryEnabled";
+  @jakarta.annotation.Nullable
   private CampaignServiceSkanOptimizeAdDeliveryEnabled skanOptimizeAdDeliveryEnabled;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER = "conversionTracker";
+  @jakarta.annotation.Nullable
   private CampaignServiceConversionTracker conversionTracker;
 
   public Campaign() {
   }
 
-  public Campaign accountId(Long accountId) {
+  public Campaign accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID. &lt;br&gt; This field is required in requests. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -192,25 +225,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public Campaign appId(String appId) {
+  public Campaign appId(@jakarta.annotation.Nullable String appId) {
     
     this.appId = appId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; iOS:アプリIDです。&lt;br&gt; Android:パッケージ名です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時は無視されます。&lt;br&gt; ※campaignGoalが「APP_PROMOTION」の場合、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; iOS: APP ID.&lt;br&gt; Android: Package name. &lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.&lt;br&gt; *If campaignGoal is APP_PROMOTION, this field is required in ADD operation. &lt;/div&gt; 
    * @return appId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppId() {
@@ -218,25 +250,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppId(String appId) {
+  public void setAppId(@jakarta.annotation.Nullable String appId) {
     this.appId = appId;
   }
 
-
-  public Campaign appName(String appName) {
+  public Campaign appName(@jakarta.annotation.Nullable String appName) {
     
     this.appName = appName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アプリの名称です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時は無視されます。&lt;br&gt; ※campaignGoalが「APP_PROMOTION」の場合、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; App name. &lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation.&lt;br&gt; *If campaignGoal is APP_PROMOTION, this field is required in ADD operation. &lt;/div&gt; 
    * @return appName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_APP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppName() {
@@ -244,25 +275,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_APP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppName(String appName) {
+  public void setAppName(@jakarta.annotation.Nullable String appName) {
     this.appName = appName;
   }
 
-
-  public Campaign budget(CampaignServiceBudget budget) {
+  public Campaign budget(@jakarta.annotation.Nullable CampaignServiceBudget budget) {
     
     this.budget = budget;
     return this;
   }
 
-   /**
+  /**
    * Get budget
    * @return budget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceBudget getBudget() {
@@ -270,25 +300,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBudget(CampaignServiceBudget budget) {
+  public void setBudget(@jakarta.annotation.Nullable CampaignServiceBudget budget) {
     this.budget = budget;
   }
 
-
-  public Campaign biddingStrategyConfiguration(CampaignServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
+  public Campaign biddingStrategyConfiguration(@jakarta.annotation.Nullable CampaignServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
     
     this.biddingStrategyConfiguration = biddingStrategyConfiguration;
     return this;
   }
 
-   /**
+  /**
    * Get biddingStrategyConfiguration
    * @return biddingStrategyConfiguration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceBiddingStrategyConfiguration getBiddingStrategyConfiguration() {
@@ -296,25 +325,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_STRATEGY_CONFIGURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingStrategyConfiguration(CampaignServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
+  public void setBiddingStrategyConfiguration(@jakarta.annotation.Nullable CampaignServiceBiddingStrategyConfiguration biddingStrategyConfiguration) {
     this.biddingStrategyConfiguration = biddingStrategyConfiguration;
   }
 
-
-  public Campaign campaignGoal(String campaignGoal) {
+  public Campaign campaignGoal(@jakarta.annotation.Nullable String campaignGoal) {
     
     this.campaignGoal = campaignGoal;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン目的です。&lt;br&gt; ADD時、このフィールドは必須となります。&lt;br&gt; SETおよびREMOVE時、このフィールドは無視されます。&lt;br&gt; ※指定可能な値は、AccountAuthorityServiceのGET操作で得られるAccountAuthorityのauthoritiesフィールドをご確認ください。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign goal.&lt;br&gt; In ADD operation, this field is required.&lt;br&gt; In SET and REMOVE operation, this field will be ignored.&lt;br&gt; * Available values can be referred to authorities field of AccountAuthority object obtained by GET operation of AccountAuthorityService.&lt;br&gt; &lt;/div&gt; 
    * @return campaignGoal
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_GOAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignGoal() {
@@ -322,25 +350,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_GOAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignGoal(String campaignGoal) {
+  public void setCampaignGoal(@jakarta.annotation.Nullable String campaignGoal) {
     this.campaignGoal = campaignGoal;
   }
 
-
-  public Campaign campaignGoalSubtype(CampaignServiceCampaignGoalSubtype campaignGoalSubtype) {
+  public Campaign campaignGoalSubtype(@jakarta.annotation.Nullable CampaignServiceCampaignGoalSubtype campaignGoalSubtype) {
     
     this.campaignGoalSubtype = campaignGoalSubtype;
     return this;
   }
 
-   /**
+  /**
    * Get campaignGoalSubtype
    * @return campaignGoalSubtype
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL_SUBTYPE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_GOAL_SUBTYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceCampaignGoalSubtype getCampaignGoalSubtype() {
@@ -348,25 +375,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_GOAL_SUBTYPE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_GOAL_SUBTYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignGoalSubtype(CampaignServiceCampaignGoalSubtype campaignGoalSubtype) {
+  public void setCampaignGoalSubtype(@jakarta.annotation.Nullable CampaignServiceCampaignGoalSubtype campaignGoalSubtype) {
     this.campaignGoalSubtype = campaignGoalSubtype;
   }
 
-
-  public Campaign biddingOption(CampaignServiceBiddingOption biddingOption) {
+  public Campaign biddingOption(@jakarta.annotation.Nullable CampaignServiceBiddingOption biddingOption) {
     
     this.biddingOption = biddingOption;
     return this;
   }
 
-   /**
+  /**
    * Get biddingOption
    * @return biddingOption
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_OPTION)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_OPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceBiddingOption getBiddingOption() {
@@ -374,25 +400,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_OPTION)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_OPTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingOption(CampaignServiceBiddingOption biddingOption) {
+  public void setBiddingOption(@jakarta.annotation.Nullable CampaignServiceBiddingOption biddingOption) {
     this.biddingOption = biddingOption;
   }
 
-
-  public Campaign campaignId(Long campaignId) {
+  public Campaign campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; このフィールドはSETおよびREMOVE時に必須となり、ADD時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; This field is required in SET and REMOVE operation, and will be ignored in ADD operation. &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -400,25 +425,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public Campaign campaignName(String campaignName) {
+  public Campaign campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; このフィールドは、ADD時は必須、SET時は省略可能となり、REMOVE時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; This field is required in ADD operation, is optional in SET operation, and will be ignored in REMOVE operation. &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -426,25 +450,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public Campaign optimizer(CampaignServiceOptimizer optimizer) {
+  public Campaign optimizer(@jakarta.annotation.Nullable CampaignServiceOptimizer optimizer) {
     
     this.optimizer = optimizer;
     return this;
   }
 
-   /**
+  /**
    * Get optimizer
    * @return optimizer
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPTIMIZER)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceOptimizer getOptimizer() {
@@ -452,25 +475,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPTIMIZER)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOptimizer(CampaignServiceOptimizer optimizer) {
+  public void setOptimizer(@jakarta.annotation.Nullable CampaignServiceOptimizer optimizer) {
     this.optimizer = optimizer;
   }
 
-
-  public Campaign customParameters(CampaignServiceCustomParameters customParameters) {
+  public Campaign customParameters(@jakarta.annotation.Nullable CampaignServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceCustomParameters getCustomParameters() {
@@ -478,25 +500,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(CampaignServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable CampaignServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public Campaign appOsType(CampaignServiceAppOsType appOsType) {
+  public Campaign appOsType(@jakarta.annotation.Nullable CampaignServiceAppOsType appOsType) {
     
     this.appOsType = appOsType;
     return this;
   }
 
-   /**
+  /**
    * Get appOsType
    * @return appOsType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_OS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_APP_OS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceAppOsType getAppOsType() {
@@ -504,25 +525,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_OS_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_APP_OS_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppOsType(CampaignServiceAppOsType appOsType) {
+  public void setAppOsType(@jakarta.annotation.Nullable CampaignServiceAppOsType appOsType) {
     this.appOsType = appOsType;
   }
 
-
-  public Campaign endDate(String endDate) {
+  public Campaign endDate(@jakarta.annotation.Nullable String endDate) {
     
     this.endDate = endDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了日です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※endTimeが指定されている場合、ADDおよびSET時に必須となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End date.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; If endTime is specified, This field is required in ADD and SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return endDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndDate() {
@@ -530,25 +550,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_DATE)
+  @JsonProperty(value = JSON_PROPERTY_END_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndDate(String endDate) {
+  public void setEndDate(@jakarta.annotation.Nullable String endDate) {
     this.endDate = endDate;
   }
 
-
-  public Campaign endTime(String endTime) {
+  public Campaign endTime(@jakarta.annotation.Nullable String endTime) {
     
     this.endTime = endTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了時刻です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※フォーマット：HHmm &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End time.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; * Format: HHmm &lt;/div&gt; 
    * @return endTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEndTime() {
@@ -556,25 +575,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_TIME)
+  @JsonProperty(value = JSON_PROPERTY_END_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndTime(String endTime) {
+  public void setEndTime(@jakarta.annotation.Nullable String endTime) {
     this.endTime = endTime;
   }
 
-
-  public Campaign feedId(Long feedId) {
+  public Campaign feedId(@jakarta.annotation.Nullable Long feedId) {
     
     this.feedId = feedId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; フィードIDです。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SETおよびREMOVE時に無視されます。&lt;br&gt; ※campaignGoalが「ITEM_LIST」の場合、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Feed ID.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET and REMOVE operation. &lt;br&gt; *If campaignGoal is ITEM_LIST, this field is required in ADD operation. &lt;/div&gt; 
    * @return feedId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFeedId() {
@@ -582,25 +600,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_ID)
+  @JsonProperty(value = JSON_PROPERTY_FEED_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedId(Long feedId) {
+  public void setFeedId(@jakarta.annotation.Nullable Long feedId) {
     this.feedId = feedId;
   }
 
-
-  public Campaign isRemoveTrackingUrl(CampaignServiceIsRemoveFlg isRemoveTrackingUrl) {
+  public Campaign isRemoveTrackingUrl(@jakarta.annotation.Nullable CampaignServiceIsRemoveFlg isRemoveTrackingUrl) {
     
     this.isRemoveTrackingUrl = isRemoveTrackingUrl;
     return this;
   }
 
-   /**
+  /**
    * Get isRemoveTrackingUrl
    * @return isRemoveTrackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceIsRemoveFlg getIsRemoveTrackingUrl() {
@@ -608,14 +625,13 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemoveTrackingUrl(CampaignServiceIsRemoveFlg isRemoveTrackingUrl) {
+  public void setIsRemoveTrackingUrl(@jakarta.annotation.Nullable CampaignServiceIsRemoveFlg isRemoveTrackingUrl) {
     this.isRemoveTrackingUrl = isRemoveTrackingUrl;
   }
 
-
-  public Campaign labels(List<CampaignServiceLabel> labels) {
+  public Campaign labels(@jakarta.annotation.Nullable List<CampaignServiceLabel> labels) {
     
     this.labels = labels;
     return this;
@@ -629,12 +645,12 @@ public class Campaign {
     return this;
   }
 
-   /**
+  /**
    * Get labels
    * @return labels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<CampaignServiceLabel> getLabels() {
@@ -642,25 +658,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABELS)
+  @JsonProperty(value = JSON_PROPERTY_LABELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabels(List<CampaignServiceLabel> labels) {
+  public void setLabels(@jakarta.annotation.Nullable List<CampaignServiceLabel> labels) {
     this.labels = labels;
   }
 
-
-  public Campaign optimizationScore(Double optimizationScore) {
+  public Campaign optimizationScore(@jakarta.annotation.Nullable Double optimizationScore) {
     
     this.optimizationScore = optimizationScore;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最適化スコアです。&lt;br&gt; 最適化スコアは、0.0から1.0の範囲の値を返却します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Optimization score.&lt;br&gt; Optimization score returns a value ranging from 0.0 to 1.0.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return optimizationScore
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZATION_SCORE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getOptimizationScore() {
@@ -668,25 +683,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPTIMIZATION_SCORE)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZATION_SCORE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOptimizationScore(Double optimizationScore) {
+  public void setOptimizationScore(@jakarta.annotation.Nullable Double optimizationScore) {
     this.optimizationScore = optimizationScore;
   }
 
-
-  public Campaign servingStatus(CampaignServiceServingStatus servingStatus) {
+  public Campaign servingStatus(@jakarta.annotation.Nullable CampaignServiceServingStatus servingStatus) {
     
     this.servingStatus = servingStatus;
     return this;
   }
 
-   /**
+  /**
    * Get servingStatus
    * @return servingStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_SERVING_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceServingStatus getServingStatus() {
@@ -694,25 +708,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SERVING_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_SERVING_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setServingStatus(CampaignServiceServingStatus servingStatus) {
+  public void setServingStatus(@jakarta.annotation.Nullable CampaignServiceServingStatus servingStatus) {
     this.servingStatus = servingStatus;
   }
 
-
-  public Campaign startDate(String startDate) {
+  public Campaign startDate(@jakarta.annotation.Nullable String startDate) {
     
     this.startDate = startDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始日です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※startTimeが指定されている場合、ADDおよびSET時に必須となります。&lt;br&gt; ※フォーマット：yyyyMMdd &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start date.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; If startTime is specified, This field is required in ADD and SET operation.&lt;br&gt; *format: yyyyMMdd &lt;/div&gt; 
    * @return startDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartDate() {
@@ -720,25 +733,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_DATE)
+  @JsonProperty(value = JSON_PROPERTY_START_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartDate(String startDate) {
+  public void setStartDate(@jakarta.annotation.Nullable String startDate) {
     this.startDate = startDate;
   }
 
-
-  public Campaign startTime(String startTime) {
+  public Campaign startTime(@jakarta.annotation.Nullable String startTime) {
     
     this.startTime = startTime;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始時刻です。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※フォーマット：HHmm &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start time.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; * Format: HHmm &lt;/div&gt; 
    * @return startTime
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStartTime() {
@@ -746,25 +758,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_TIME)
+  @JsonProperty(value = JSON_PROPERTY_START_TIME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartTime(String startTime) {
+  public void setStartTime(@jakarta.annotation.Nullable String startTime) {
     this.startTime = startTime;
   }
 
-
-  public Campaign trackingUrl(String trackingUrl) {
+  public Campaign trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; ADD時およびSET時、このフィールドは省略可能となります。&lt;br&gt; ※SET時、こちらが審査中の場合、編集はできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field is optional in ADD and SET operation.&lt;br&gt; *In SET operation, cannot update it when this field is in editorial review.&lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -772,25 +783,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
-
-  public Campaign userStatus(CampaignServiceUserStatus userStatus) {
+  public Campaign userStatus(@jakarta.annotation.Nullable CampaignServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceUserStatus getUserStatus() {
@@ -798,25 +808,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(CampaignServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable CampaignServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public Campaign viewableFrequencyCap(CampaignServiceViewableFrequencyCap viewableFrequencyCap) {
+  public Campaign viewableFrequencyCap(@jakarta.annotation.Nullable CampaignServiceViewableFrequencyCap viewableFrequencyCap) {
     
     this.viewableFrequencyCap = viewableFrequencyCap;
     return this;
   }
 
-   /**
+  /**
    * Get viewableFrequencyCap
    * @return viewableFrequencyCap
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceViewableFrequencyCap getViewableFrequencyCap() {
@@ -824,25 +833,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP)
+  @JsonProperty(value = JSON_PROPERTY_VIEWABLE_FREQUENCY_CAP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setViewableFrequencyCap(CampaignServiceViewableFrequencyCap viewableFrequencyCap) {
+  public void setViewableFrequencyCap(@jakarta.annotation.Nullable CampaignServiceViewableFrequencyCap viewableFrequencyCap) {
     this.viewableFrequencyCap = viewableFrequencyCap;
   }
 
-
-  public Campaign campaignDeliveryType(String campaignDeliveryType) {
+  public Campaign campaignDeliveryType(@jakarta.annotation.Nullable String campaignDeliveryType) {
     
     this.campaignDeliveryType = campaignDeliveryType;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン掲載タイプです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; CampaignDeliveryTypeを指定してのキャンペーン作成は、一部の利用者向けの機能となります。&lt;br&gt; ※キャンペーン掲載タイプ PRIVATE_MARKET_PLACE はレスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign delivery type.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; Creating a campaign with the CampaignDeliveryType specified is a function for some users.&lt;br&gt; *Campaign delivery type PRIVATE_MARKET_PLACE will be returned in the response, but will be ignored in the request. &lt;/div&gt; 
    * @return campaignDeliveryType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_DELIVERY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_DELIVERY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignDeliveryType() {
@@ -850,25 +858,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_DELIVERY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_DELIVERY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignDeliveryType(String campaignDeliveryType) {
+  public void setCampaignDeliveryType(@jakarta.annotation.Nullable String campaignDeliveryType) {
     this.campaignDeliveryType = campaignDeliveryType;
   }
 
-
-  public Campaign createdDate(String createdDate) {
+  public Campaign createdDate(@jakarta.annotation.Nullable String createdDate) {
     
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンが作成された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Campaign made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCreatedDate() {
@@ -876,25 +883,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDate(String createdDate) {
+  public void setCreatedDate(@jakarta.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
   }
 
-
-  public Campaign updatedDate(String updatedDate) {
+  public Campaign updatedDate(@jakarta.annotation.Nullable String updatedDate) {
     
     this.updatedDate = updatedDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンが更新された日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date of Campaign updated.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return updatedDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPDATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUpdatedDate() {
@@ -902,25 +908,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPDATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUpdatedDate(String updatedDate) {
+  public void setUpdatedDate(@jakarta.annotation.Nullable String updatedDate) {
     this.updatedDate = updatedDate;
   }
 
-
-  public Campaign vendorName(String vendorName) {
+  public Campaign vendorName(@jakarta.annotation.Nullable String vendorName) {
     
     this.vendorName = vendorName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンの広告効果測定ツールのベンダー名です。キャンペーン目的「アプリ訴求」の場合にのみ設定されます。&lt;br&gt; このフィールドはキャンペーン作成後、最初にリンク先URLを設定した広告が作成された時に設定されます。&lt;br&gt; キャンペーンに紐づく広告のリンク先URLには、このベンダー名に対応する広告効果測定ツールのURLのみが指定できます。&lt;br&gt; ADD時およびSET時、&lt;code&gt;APPSFLYER&lt;/code&gt;, &lt;code&gt;ADJUST&lt;/code&gt;, &lt;code&gt;SINGULAR&lt;/code&gt;, &lt;code&gt;KOCHAVA&lt;/code&gt;, および &lt;code&gt;NONE&lt;/code&gt; のみ指定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Vendor name of tracking tool for the campaign. It will be set only when the campaign goal is \&quot;app promotion.\&quot;&lt;br&gt; This field will be set when the first ad with destination URL is created after creating the campaign.&lt;br&gt; Only the tracking tool URL corresponds to this tool vendor name can be specified for the destination URL of the ad linked to the campaign.&lt;br&gt; Only &lt;code&gt;APPSFLYER&lt;/code&gt;, &lt;code&gt;ADJUST&lt;/code&gt;, &lt;code&gt;SINGULAR&lt;/code&gt;, &lt;code&gt;KOCHAVA&lt;/code&gt;, and &lt;code&gt;NONE&lt;/code&gt; can be specified in ADD and SET operation. &lt;/div&gt; 
    * @return vendorName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VENDOR_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVendorName() {
@@ -928,25 +933,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VENDOR_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VENDOR_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVendorName(String vendorName) {
+  public void setVendorName(@jakarta.annotation.Nullable String vendorName) {
     this.vendorName = vendorName;
   }
 
-
-  public Campaign skanOptimizeAdDeliveryEnabled(CampaignServiceSkanOptimizeAdDeliveryEnabled skanOptimizeAdDeliveryEnabled) {
+  public Campaign skanOptimizeAdDeliveryEnabled(@jakarta.annotation.Nullable CampaignServiceSkanOptimizeAdDeliveryEnabled skanOptimizeAdDeliveryEnabled) {
     
     this.skanOptimizeAdDeliveryEnabled = skanOptimizeAdDeliveryEnabled;
     return this;
   }
 
-   /**
+  /**
    * Get skanOptimizeAdDeliveryEnabled
    * @return skanOptimizeAdDeliveryEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SKAN_OPTIMIZE_AD_DELIVERY_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_OPTIMIZE_AD_DELIVERY_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceSkanOptimizeAdDeliveryEnabled getSkanOptimizeAdDeliveryEnabled() {
@@ -954,25 +958,24 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SKAN_OPTIMIZE_AD_DELIVERY_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_SKAN_OPTIMIZE_AD_DELIVERY_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSkanOptimizeAdDeliveryEnabled(CampaignServiceSkanOptimizeAdDeliveryEnabled skanOptimizeAdDeliveryEnabled) {
+  public void setSkanOptimizeAdDeliveryEnabled(@jakarta.annotation.Nullable CampaignServiceSkanOptimizeAdDeliveryEnabled skanOptimizeAdDeliveryEnabled) {
     this.skanOptimizeAdDeliveryEnabled = skanOptimizeAdDeliveryEnabled;
   }
 
-
-  public Campaign conversionTracker(CampaignServiceConversionTracker conversionTracker) {
+  public Campaign conversionTracker(@jakarta.annotation.Nullable CampaignServiceConversionTracker conversionTracker) {
     
     this.conversionTracker = conversionTracker;
     return this;
   }
 
-   /**
+  /**
    * Get conversionTracker
    * @return conversionTracker
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceConversionTracker getConversionTracker() {
@@ -980,11 +983,12 @@ public class Campaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTracker(CampaignServiceConversionTracker conversionTracker) {
+  public void setConversionTracker(@jakarta.annotation.Nullable CampaignServiceConversionTracker conversionTracker) {
     this.conversionTracker = conversionTracker;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -1077,10 +1081,7 @@ public class Campaign {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

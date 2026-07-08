@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.MediaServiceFileType;
 import jp.co.yahoo.adsdisplayapi.v19.model.MediaServiceType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; MediaServiceImageMediaオブジェクトは、画像を格納するコンテナです。&lt;br&gt; このフィールドは、SET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The MediaServiceImageMedia object is a container for storing image. &lt;br&gt; This field is required in SET operation. &lt;/div&gt; 
@@ -39,50 +40,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   MediaServiceImageMedia.JSON_PROPERTY_WIDTH,
   MediaServiceImageMedia.JSON_PROPERTY_UPSCALE_IMAGE_ENABLED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class MediaServiceImageMedia {
   public static final String JSON_PROPERTY_MEDIA_TYPE = "mediaType";
+  @jakarta.annotation.Nullable
   private MediaServiceType mediaType;
 
   public static final String JSON_PROPERTY_ASPECT_RATIO = "aspectRatio";
+  @jakarta.annotation.Nullable
   private String aspectRatio;
 
   public static final String JSON_PROPERTY_DATA = "data";
+  @jakarta.annotation.Nullable
   private byte[] data;
 
   public static final String JSON_PROPERTY_FILE_SIZE = "fileSize";
+  @jakarta.annotation.Nullable
   private Long fileSize;
 
   public static final String JSON_PROPERTY_HEIGHT = "height";
+  @jakarta.annotation.Nullable
   private Long height;
 
   public static final String JSON_PROPERTY_MEDIA_AD_FORMAT = "mediaAdFormat";
+  @jakarta.annotation.Nullable
   private String mediaAdFormat;
 
   public static final String JSON_PROPERTY_MEDIA_FILE_TYPE = "mediaFileType";
+  @jakarta.annotation.Nullable
   private MediaServiceFileType mediaFileType;
 
   public static final String JSON_PROPERTY_WIDTH = "width";
+  @jakarta.annotation.Nullable
   private Long width;
 
   public static final String JSON_PROPERTY_UPSCALE_IMAGE_ENABLED = "upscaleImageEnabled";
+  @jakarta.annotation.Nullable
   private Boolean upscaleImageEnabled;
 
   public MediaServiceImageMedia() {
   }
 
-  public MediaServiceImageMedia mediaType(MediaServiceType mediaType) {
+  public MediaServiceImageMedia mediaType(@jakarta.annotation.Nullable MediaServiceType mediaType) {
     
     this.mediaType = mediaType;
     return this;
   }
 
-   /**
+  /**
    * Get mediaType
    * @return mediaType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceType getMediaType() {
@@ -90,25 +100,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaType(MediaServiceType mediaType) {
+  public void setMediaType(@jakarta.annotation.Nullable MediaServiceType mediaType) {
     this.mediaType = mediaType;
   }
 
-
-  public MediaServiceImageMedia aspectRatio(String aspectRatio) {
+  public MediaServiceImageMedia aspectRatio(@jakarta.annotation.Nullable String aspectRatio) {
     
     this.aspectRatio = aspectRatio;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像アスペクト比の種類です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのaspectRatioフィールドをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The type of aspect ratio.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;br&gt; * Available values can be referred to aspectRatio field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. &lt;/div&gt; 
    * @return aspectRatio
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ASPECT_RATIO)
+  @JsonProperty(value = JSON_PROPERTY_ASPECT_RATIO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAspectRatio() {
@@ -116,25 +125,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ASPECT_RATIO)
+  @JsonProperty(value = JSON_PROPERTY_ASPECT_RATIO, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAspectRatio(String aspectRatio) {
+  public void setAspectRatio(@jakarta.annotation.Nullable String aspectRatio) {
     this.aspectRatio = aspectRatio;
   }
 
-
-  public MediaServiceImageMedia data(byte[] data) {
+  public MediaServiceImageMedia data(@jakarta.annotation.Nullable byte[] data) {
     
     this.data = data;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;画像ファイルのbase64エンコードです。ADD時のみ指定可能で、GET時のレスポンスでは値は取得されません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The image file in base64 encode. It can be specified on ADD, however no value returns on the response of GET.&lt;/div&gt; 
    * @return data
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonProperty(value = JSON_PROPERTY_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public byte[] getData() {
@@ -142,25 +150,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA)
+  @JsonProperty(value = JSON_PROPERTY_DATA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setData(byte[] data) {
+  public void setData(@jakarta.annotation.Nullable byte[] data) {
     this.data = data;
   }
 
-
-  public MediaServiceImageMedia fileSize(Long fileSize) {
+  public MediaServiceImageMedia fileSize(@jakarta.annotation.Nullable Long fileSize) {
     
     this.fileSize = fileSize;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ファイルサイズです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The file size of image. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return fileSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getFileSize() {
@@ -168,25 +175,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FILE_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_FILE_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFileSize(Long fileSize) {
+  public void setFileSize(@jakarta.annotation.Nullable Long fileSize) {
     this.fileSize = fileSize;
   }
 
-
-  public MediaServiceImageMedia height(Long height) {
+  public MediaServiceImageMedia height(@jakarta.annotation.Nullable Long height) {
     
     this.height = height;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 縦の長さです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The height of image. &lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return height
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonProperty(value = JSON_PROPERTY_HEIGHT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getHeight() {
@@ -194,25 +200,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEIGHT)
+  @JsonProperty(value = JSON_PROPERTY_HEIGHT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeight(Long height) {
+  public void setHeight(@jakarta.annotation.Nullable Long height) {
     this.height = height;
   }
 
-
-  public MediaServiceImageMedia mediaAdFormat(String mediaAdFormat) {
+  public MediaServiceImageMedia mediaAdFormat(@jakarta.annotation.Nullable String mediaAdFormat) {
     
     this.mediaAdFormat = mediaAdFormat;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像フォーマットの種類です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのadFormatフィールドをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The type of image format.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;br&gt; * Available values can be referred to adFormat field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. &lt;/div&gt; 
    * @return mediaAdFormat
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_AD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_AD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMediaAdFormat() {
@@ -220,25 +225,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_AD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_AD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaAdFormat(String mediaAdFormat) {
+  public void setMediaAdFormat(@jakarta.annotation.Nullable String mediaAdFormat) {
     this.mediaAdFormat = mediaAdFormat;
   }
 
-
-  public MediaServiceImageMedia mediaFileType(MediaServiceFileType mediaFileType) {
+  public MediaServiceImageMedia mediaFileType(@jakarta.annotation.Nullable MediaServiceFileType mediaFileType) {
     
     this.mediaFileType = mediaFileType;
     return this;
   }
 
-   /**
+  /**
    * Get mediaFileType
    * @return mediaFileType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_FILE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_FILE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public MediaServiceFileType getMediaFileType() {
@@ -246,25 +250,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_FILE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_FILE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaFileType(MediaServiceFileType mediaFileType) {
+  public void setMediaFileType(@jakarta.annotation.Nullable MediaServiceFileType mediaFileType) {
     this.mediaFileType = mediaFileType;
   }
 
-
-  public MediaServiceImageMedia width(Long width) {
+  public MediaServiceImageMedia width(@jakarta.annotation.Nullable Long width) {
     
     this.width = width;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 横幅です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The width of image.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return width
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonProperty(value = JSON_PROPERTY_WIDTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getWidth() {
@@ -272,25 +275,24 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_WIDTH)
+  @JsonProperty(value = JSON_PROPERTY_WIDTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setWidth(Long width) {
+  public void setWidth(@jakarta.annotation.Nullable Long width) {
     this.width = width;
   }
 
-
-  public MediaServiceImageMedia upscaleImageEnabled(Boolean upscaleImageEnabled) {
+  public MediaServiceImageMedia upscaleImageEnabled(@jakarta.annotation.Nullable Boolean upscaleImageEnabled) {
     
     this.upscaleImageEnabled = upscaleImageEnabled;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; MediaServiceUpscaleImageEnabledは画像の自動アップコンバートの設定フラグを表します。&lt;br&gt; このフィールドは、ADD時に省略可能となります。その際、デフォルト値はtrueになります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; MediaServiceUpscaleImageEnabled displays the flag settings of automatic image up-conversion. &lt;br&gt; This field is optional in ADD operation. The default value will be true. &lt;/div&gt; 
    * @return upscaleImageEnabled
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPSCALE_IMAGE_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_UPSCALE_IMAGE_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getUpscaleImageEnabled() {
@@ -298,11 +300,12 @@ public class MediaServiceImageMedia {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPSCALE_IMAGE_ENABLED)
+  @JsonProperty(value = JSON_PROPERTY_UPSCALE_IMAGE_ENABLED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUpscaleImageEnabled(Boolean upscaleImageEnabled) {
+  public void setUpscaleImageEnabled(@jakarta.annotation.Nullable Boolean upscaleImageEnabled) {
     this.upscaleImageEnabled = upscaleImageEnabled;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -351,10 +354,7 @@ public class MediaServiceImageMedia {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

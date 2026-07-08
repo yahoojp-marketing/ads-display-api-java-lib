@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.RecommendationServiceInsufficientVideoViewsCampaign;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceInsufficientVideoViewsオブジェクトは、動画再生数が少ないキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceInsufficientVideoViews object describes recommendation information about the campaign that need to increase video views&lt;/div&gt; 
@@ -32,15 +34,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RecommendationServiceInsufficientVideoViews.JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceInsufficientVideoViews {
   public static final String JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST = "insufficientVideoViewsCampaignList";
+  @jakarta.annotation.Nullable
   private List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList;
 
   public RecommendationServiceInsufficientVideoViews() {
   }
 
-  public RecommendationServiceInsufficientVideoViews insufficientVideoViewsCampaignList(List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList) {
+  public RecommendationServiceInsufficientVideoViews insufficientVideoViewsCampaignList(@jakarta.annotation.Nullable List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList) {
     
     this.insufficientVideoViewsCampaignList = insufficientVideoViewsCampaignList;
     return this;
@@ -54,12 +57,12 @@ public class RecommendationServiceInsufficientVideoViews {
     return this;
   }
 
-   /**
+  /**
    * Get insufficientVideoViewsCampaignList
    * @return insufficientVideoViewsCampaignList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RecommendationServiceInsufficientVideoViewsCampaign> getInsufficientVideoViewsCampaignList() {
@@ -67,11 +70,12 @@ public class RecommendationServiceInsufficientVideoViews {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_VIDEO_VIEWS_CAMPAIGN_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientVideoViewsCampaignList(List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList) {
+  public void setInsufficientVideoViewsCampaignList(@jakarta.annotation.Nullable List<RecommendationServiceInsufficientVideoViewsCampaign> insufficientVideoViewsCampaignList) {
     this.insufficientVideoViewsCampaignList = insufficientVideoViewsCampaignList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +108,7 @@ public class RecommendationServiceInsufficientVideoViews {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

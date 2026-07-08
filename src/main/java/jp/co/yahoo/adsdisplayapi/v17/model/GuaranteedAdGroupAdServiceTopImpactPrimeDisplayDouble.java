@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceCustomParameters;
 import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceDisplayUrlLevel;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDoubleオブジェクトは、トップインパクト プライムディスプレイ ダブル広告の情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble object describes information of Top Impact Prime Display Double ad.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; &lt;/div&gt; 
@@ -47,68 +49,83 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble.JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS,
   GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble.JSON_PROPERTY_VIDEO_START_BEACON_URLS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   public static final String JSON_PROPERTY_DISPLAY_URL = "displayUrl";
+  @jakarta.annotation.Nullable
   private String displayUrl;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_DISPLAY_URL_LEVEL = "displayUrlLevel";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
+  @jakarta.annotation.Nullable
   private String finalUrl;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public static final String JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID = "adLeftSideMediaId";
+  @jakarta.annotation.Nullable
   private Long adLeftSideMediaId;
 
   public static final String JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID = "adRightSideMediaId";
+  @jakarta.annotation.Nullable
   private Long adRightSideMediaId;
 
   public static final String JSON_PROPERTY_THUMBNAIL_MEDIA_ID = "thumbnailMediaId";
+  @jakarta.annotation.Nullable
   private Long thumbnailMediaId;
 
   public static final String JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS = "video3SecBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video3SecBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS = "video25PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video25PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS = "video50PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video50PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS = "video75PercentBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video75PercentBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS = "video10SecBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> video10SecBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS = "videoCompleteBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> videoCompleteBeaconUrls;
 
   public static final String JSON_PROPERTY_VIDEO_START_BEACON_URLS = "videoStartBeaconUrls";
+  @jakarta.annotation.Nullable
   private List<String> videoStartBeaconUrls;
 
   public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble() {
   }
 
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble displayUrl(String displayUrl) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble displayUrl(@jakarta.annotation.Nullable String displayUrl) {
     
     this.displayUrl = displayUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 表示URLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Display URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return displayUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getDisplayUrl() {
@@ -116,25 +133,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayUrl(String displayUrl) {
+  public void setDisplayUrl(@jakarta.annotation.Nullable String displayUrl) {
     this.displayUrl = displayUrl;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble customParameters(GuaranteedAdGroupAdServiceCustomParameters customParameters) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble customParameters(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceCustomParameters getCustomParameters() {
@@ -142,25 +158,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(GuaranteedAdGroupAdServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble displayUrlLevel(GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble displayUrlLevel(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
     
     this.displayUrlLevel = displayUrlLevel;
     return this;
   }
 
-   /**
+  /**
    * Get displayUrlLevel
    * @return displayUrlLevel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceDisplayUrlLevel getDisplayUrlLevel() {
@@ -168,25 +183,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayUrlLevel(GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
+  public void setDisplayUrlLevel(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
     this.displayUrlLevel = displayUrlLevel;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble finalUrl(String finalUrl) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble finalUrl(@jakarta.annotation.Nullable String finalUrl) {
     
     this.finalUrl = finalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; finalUrlフィールドを設定する場合、trackingUrl、customParametersは任意になります。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; If you specify finalUrl, trackingUrl and customParameters will be optional.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; * Not Available. &lt;/div&gt; 
    * @return finalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFinalUrl() {
@@ -194,25 +208,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFinalUrl(String finalUrl) {
+  public void setFinalUrl(@jakarta.annotation.Nullable String finalUrl) {
     this.finalUrl = finalUrl;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble trackingUrl(String trackingUrl) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; This field can be optionally specified only when specifying finalUrl.&lt;br&gt; * Not Available. &lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -220,25 +233,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble adLeftSideMediaId(Long adLeftSideMediaId) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble adLeftSideMediaId(@jakarta.annotation.Nullable Long adLeftSideMediaId) {
     
     this.adLeftSideMediaId = adLeftSideMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 左サイド画像です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Left side image.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adLeftSideMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdLeftSideMediaId() {
@@ -246,25 +258,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_LEFT_SIDE_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdLeftSideMediaId(Long adLeftSideMediaId) {
+  public void setAdLeftSideMediaId(@jakarta.annotation.Nullable Long adLeftSideMediaId) {
     this.adLeftSideMediaId = adLeftSideMediaId;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble adRightSideMediaId(Long adRightSideMediaId) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble adRightSideMediaId(@jakarta.annotation.Nullable Long adRightSideMediaId) {
     
     this.adRightSideMediaId = adRightSideMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 右サイド画像です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Right side image.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adRightSideMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdRightSideMediaId() {
@@ -272,25 +283,24 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_RIGHT_SIDE_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdRightSideMediaId(Long adRightSideMediaId) {
+  public void setAdRightSideMediaId(@jakarta.annotation.Nullable Long adRightSideMediaId) {
     this.adRightSideMediaId = adRightSideMediaId;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble thumbnailMediaId(Long thumbnailMediaId) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble thumbnailMediaId(@jakarta.annotation.Nullable Long thumbnailMediaId) {
     
     this.thumbnailMediaId = thumbnailMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サムネイルIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Thumbnail ID.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return thumbnailMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_THUMBNAIL_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_THUMBNAIL_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getThumbnailMediaId() {
@@ -298,14 +308,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_THUMBNAIL_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_THUMBNAIL_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setThumbnailMediaId(Long thumbnailMediaId) {
+  public void setThumbnailMediaId(@jakarta.annotation.Nullable Long thumbnailMediaId) {
     this.thumbnailMediaId = thumbnailMediaId;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video3SecBeaconUrls(List<String> video3SecBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video3SecBeaconUrls(@jakarta.annotation.Nullable List<String> video3SecBeaconUrls) {
     
     this.video3SecBeaconUrls = video3SecBeaconUrls;
     return this;
@@ -319,12 +328,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 3秒視聴ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (3 seconds).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video3SecBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo3SecBeaconUrls() {
@@ -332,14 +341,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO3_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo3SecBeaconUrls(List<String> video3SecBeaconUrls) {
+  public void setVideo3SecBeaconUrls(@jakarta.annotation.Nullable List<String> video3SecBeaconUrls) {
     this.video3SecBeaconUrls = video3SecBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video25PercentBeaconUrls(List<String> video25PercentBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video25PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video25PercentBeaconUrls) {
     
     this.video25PercentBeaconUrls = video25PercentBeaconUrls;
     return this;
@@ -353,12 +361,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 25％再生視聴ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (25%).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video25PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo25PercentBeaconUrls() {
@@ -366,14 +374,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO25_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo25PercentBeaconUrls(List<String> video25PercentBeaconUrls) {
+  public void setVideo25PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video25PercentBeaconUrls) {
     this.video25PercentBeaconUrls = video25PercentBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video50PercentBeaconUrls(List<String> video50PercentBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video50PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video50PercentBeaconUrls) {
     
     this.video50PercentBeaconUrls = video50PercentBeaconUrls;
     return this;
@@ -387,12 +394,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 50％再生視聴ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (50%).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video50PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo50PercentBeaconUrls() {
@@ -400,14 +407,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO50_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo50PercentBeaconUrls(List<String> video50PercentBeaconUrls) {
+  public void setVideo50PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video50PercentBeaconUrls) {
     this.video50PercentBeaconUrls = video50PercentBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video75PercentBeaconUrls(List<String> video75PercentBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video75PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video75PercentBeaconUrls) {
     
     this.video75PercentBeaconUrls = video75PercentBeaconUrls;
     return this;
@@ -421,12 +427,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 75％再生視聴ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Playback viewing beacon URL (75%).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video75PercentBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo75PercentBeaconUrls() {
@@ -434,14 +440,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO75_PERCENT_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo75PercentBeaconUrls(List<String> video75PercentBeaconUrls) {
+  public void setVideo75PercentBeaconUrls(@jakarta.annotation.Nullable List<String> video75PercentBeaconUrls) {
     this.video75PercentBeaconUrls = video75PercentBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video10SecBeaconUrls(List<String> video10SecBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble video10SecBeaconUrls(@jakarta.annotation.Nullable List<String> video10SecBeaconUrls) {
     
     this.video10SecBeaconUrls = video10SecBeaconUrls;
     return this;
@@ -455,12 +460,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 10秒視聴ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (10 seconds).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return video10SecBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideo10SecBeaconUrls() {
@@ -468,14 +473,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO10_SEC_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideo10SecBeaconUrls(List<String> video10SecBeaconUrls) {
+  public void setVideo10SecBeaconUrls(@jakarta.annotation.Nullable List<String> video10SecBeaconUrls) {
     this.video10SecBeaconUrls = video10SecBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble videoCompleteBeaconUrls(List<String> videoCompleteBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble videoCompleteBeaconUrls(@jakarta.annotation.Nullable List<String> videoCompleteBeaconUrls) {
     
     this.videoCompleteBeaconUrls = videoCompleteBeaconUrls;
     return this;
@@ -489,12 +493,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生完了ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (complete).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return videoCompleteBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideoCompleteBeaconUrls() {
@@ -502,14 +506,13 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_COMPLETE_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoCompleteBeaconUrls(List<String> videoCompleteBeaconUrls) {
+  public void setVideoCompleteBeaconUrls(@jakarta.annotation.Nullable List<String> videoCompleteBeaconUrls) {
     this.videoCompleteBeaconUrls = videoCompleteBeaconUrls;
   }
 
-
-  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble videoStartBeaconUrls(List<String> videoStartBeaconUrls) {
+  public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble videoStartBeaconUrls(@jakarta.annotation.Nullable List<String> videoStartBeaconUrls) {
     
     this.videoStartBeaconUrls = videoStartBeaconUrls;
     return this;
@@ -523,12 +526,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 再生開始ビーコンURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※httpsのURLのみ設定可能です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Viewing beacon URL (start).&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; ∗Available URL is only &amp;#34;https&amp;#34;. &lt;/div&gt; 
    * @return videoStartBeaconUrls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_START_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_START_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getVideoStartBeaconUrls() {
@@ -536,11 +539,12 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_START_BEACON_URLS)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_START_BEACON_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoStartBeaconUrls(List<String> videoStartBeaconUrls) {
+  public void setVideoStartBeaconUrls(@jakarta.annotation.Nullable List<String> videoStartBeaconUrls) {
     this.videoStartBeaconUrls = videoStartBeaconUrls;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -601,10 +605,7 @@ public class GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

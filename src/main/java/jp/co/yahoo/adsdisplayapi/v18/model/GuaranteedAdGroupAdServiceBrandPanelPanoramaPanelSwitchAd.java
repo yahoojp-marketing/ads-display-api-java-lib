@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -21,12 +21,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch;
 import jp.co.yahoo.adsdisplayapi.v18.model.GuaranteedAdGroupAdServiceCustomParameters;
 import jp.co.yahoo.adsdisplayapi.v18.model.GuaranteedAdGroupAdServiceDisplayUrlLevel;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAdオブジェクトは、ブランドパネル パノラマ パネルスイッチ広告の情報を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd object describes the information of Brand Panel Panorama Panel-switch ad.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; * Not Available. &lt;/div&gt; 
@@ -39,41 +41,47 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd.JSON_PROPERTY_CUSTOM_PARAMETERS,
   GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd.JSON_PROPERTY_TRACKING_URL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   public static final String JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID = "adShrinkMainMediaId";
+  @jakarta.annotation.Nullable
   private Long adShrinkMainMediaId;
 
   public static final String JSON_PROPERTY_PANELS = "panels";
+  @jakarta.annotation.Nullable
   private List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels;
 
   public static final String JSON_PROPERTY_FINAL_URL = "finalUrl";
+  @jakarta.annotation.Nullable
   private String finalUrl;
 
   public static final String JSON_PROPERTY_DISPLAY_URL_LEVEL = "displayUrlLevel";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel;
 
   public static final String JSON_PROPERTY_CUSTOM_PARAMETERS = "customParameters";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceCustomParameters customParameters;
 
   public static final String JSON_PROPERTY_TRACKING_URL = "trackingUrl";
+  @jakarta.annotation.Nullable
   private String trackingUrl;
 
   public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd() {
   }
 
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd adShrinkMainMediaId(Long adShrinkMainMediaId) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd adShrinkMainMediaId(@jakarta.annotation.Nullable Long adShrinkMainMediaId) {
     
     this.adShrinkMainMediaId = adShrinkMainMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 縮小メイン画像です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Reduced main image.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return adShrinkMainMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdShrinkMainMediaId() {
@@ -81,14 +89,13 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_SHRINK_MAIN_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdShrinkMainMediaId(Long adShrinkMainMediaId) {
+  public void setAdShrinkMainMediaId(@jakarta.annotation.Nullable Long adShrinkMainMediaId) {
     this.adShrinkMainMediaId = adShrinkMainMediaId;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd panels(List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd panels(@jakarta.annotation.Nullable List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels) {
     
     this.panels = panels;
     return this;
@@ -102,12 +109,12 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
     return this;
   }
 
-   /**
+  /**
    * Get panels
    * @return panels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PANELS)
+  @JsonProperty(value = JSON_PROPERTY_PANELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> getPanels() {
@@ -115,25 +122,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PANELS)
+  @JsonProperty(value = JSON_PROPERTY_PANELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPanels(List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels) {
+  public void setPanels(@jakarta.annotation.Nullable List<GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitch> panels) {
     this.panels = panels;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd finalUrl(String finalUrl) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd finalUrl(@jakarta.annotation.Nullable String finalUrl) {
     
     this.finalUrl = finalUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;最終リンク先URLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Final URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return finalUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getFinalUrl() {
@@ -141,25 +147,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FINAL_URL)
+  @JsonProperty(value = JSON_PROPERTY_FINAL_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFinalUrl(String finalUrl) {
+  public void setFinalUrl(@jakarta.annotation.Nullable String finalUrl) {
     this.finalUrl = finalUrl;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd displayUrlLevel(GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd displayUrlLevel(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
     
     this.displayUrlLevel = displayUrlLevel;
     return this;
   }
 
-   /**
+  /**
    * Get displayUrlLevel
    * @return displayUrlLevel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceDisplayUrlLevel getDisplayUrlLevel() {
@@ -167,25 +172,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISPLAY_URL_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_DISPLAY_URL_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisplayUrlLevel(GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
+  public void setDisplayUrlLevel(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceDisplayUrlLevel displayUrlLevel) {
     this.displayUrlLevel = displayUrlLevel;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd customParameters(GuaranteedAdGroupAdServiceCustomParameters customParameters) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd customParameters(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceCustomParameters customParameters) {
     
     this.customParameters = customParameters;
     return this;
   }
 
-   /**
+  /**
    * Get customParameters
    * @return customParameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceCustomParameters getCustomParameters() {
@@ -193,25 +197,24 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CUSTOM_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_CUSTOM_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCustomParameters(GuaranteedAdGroupAdServiceCustomParameters customParameters) {
+  public void setCustomParameters(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceCustomParameters customParameters) {
     this.customParameters = customParameters;
   }
 
-
-  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd trackingUrl(String trackingUrl) {
+  public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd trackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     
     this.trackingUrl = trackingUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;トラッキングURLです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tracking URL.&lt;br&gt; This field will be returned in the response, it will be ignored on input.&lt;br&gt; &lt;/div&gt; 
    * @return trackingUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTrackingUrl() {
@@ -219,11 +222,12 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TRACKING_URL)
+  @JsonProperty(value = JSON_PROPERTY_TRACKING_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTrackingUrl(String trackingUrl) {
+  public void setTrackingUrl(@jakarta.annotation.Nullable String trackingUrl) {
     this.trackingUrl = trackingUrl;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -266,10 +270,7 @@ public class GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

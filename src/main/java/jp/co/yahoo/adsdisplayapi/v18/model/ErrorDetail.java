@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ErrorDetailオブジェクトは、エラーの詳細な内容を表します。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;Detailed information of error.&lt;/div&gt;
@@ -30,29 +31,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ErrorDetail.JSON_PROPERTY_REQUEST_KEY,
   ErrorDetail.JSON_PROPERTY_REQUEST_VALUE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ErrorDetail {
   public static final String JSON_PROPERTY_REQUEST_KEY = "requestKey";
+  @jakarta.annotation.Nullable
   private String requestKey;
 
   public static final String JSON_PROPERTY_REQUEST_VALUE = "requestValue";
+  @jakarta.annotation.Nullable
   private String requestValue;
 
   public ErrorDetail() {
   }
 
-  public ErrorDetail requestKey(String requestKey) {
+  public ErrorDetail requestKey(@jakarta.annotation.Nullable String requestKey) {
     
     this.requestKey = requestKey;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エラーが発生したフィールドです。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;The file that occured the error.&lt;/div&gt;
    * @return requestKey
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REQUEST_KEY)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_KEY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRequestKey() {
@@ -60,25 +63,24 @@ public class ErrorDetail {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REQUEST_KEY)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_KEY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRequestKey(String requestKey) {
+  public void setRequestKey(@jakarta.annotation.Nullable String requestKey) {
     this.requestKey = requestKey;
   }
 
-
-  public ErrorDetail requestValue(String requestValue) {
+  public ErrorDetail requestValue(@jakarta.annotation.Nullable String requestValue) {
     
     this.requestValue = requestValue;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;エラーが発生した値です。&lt;/div&gt;&lt;div lang&#x3D;\&quot;en\&quot;&gt;The data that caused the error.&lt;/div&gt;
    * @return requestValue
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REQUEST_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRequestValue() {
@@ -86,11 +88,12 @@ public class ErrorDetail {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REQUEST_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_REQUEST_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRequestValue(String requestValue) {
+  public void setRequestValue(@jakarta.annotation.Nullable String requestValue) {
     this.requestValue = requestValue;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -125,10 +128,7 @@ public class ErrorDetail {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

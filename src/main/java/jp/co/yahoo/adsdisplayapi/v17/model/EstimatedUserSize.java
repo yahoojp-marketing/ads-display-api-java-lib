@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.EstimatedUserSizeServiceKeywords;
 import jp.co.yahoo.adsdisplayapi.v17.model.EstimatedUserSizeServiceUrls;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;EstimatedUserSizeオブジェクトは、推定ユーザサイズを格納するコンテナです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;EstimatedUserSize object is a container for storing a estimated user size.&lt;/div&gt; 
@@ -35,32 +37,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   EstimatedUserSize.JSON_PROPERTY_KEYWORDS,
   EstimatedUserSize.JSON_PROPERTY_URLS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class EstimatedUserSize {
   public static final String JSON_PROPERTY_ESTIMATED_USER_SIZE = "estimatedUserSize";
+  @jakarta.annotation.Nullable
   private String estimatedUserSize;
 
   public static final String JSON_PROPERTY_KEYWORDS = "keywords";
+  @jakarta.annotation.Nullable
   private List<EstimatedUserSizeServiceKeywords> keywords;
 
   public static final String JSON_PROPERTY_URLS = "urls";
+  @jakarta.annotation.Nullable
   private List<EstimatedUserSizeServiceUrls> urls;
 
   public EstimatedUserSize() {
   }
 
-  public EstimatedUserSize estimatedUserSize(String estimatedUserSize) {
+  public EstimatedUserSize estimatedUserSize(@jakarta.annotation.Nullable String estimatedUserSize) {
     
     this.estimatedUserSize = estimatedUserSize;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   キーワードから推定されるユーザサイズです。&lt;br&gt;   &lt;table border&#x3D;&#39;1&#39;&gt;     &lt;tr&gt;       &lt;th&gt;estimatedUserSize&lt;/th&gt;       &lt;th&gt;説明&lt;/th&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;ZERO&lt;/td&gt;       &lt;td&gt;0&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;LESS_THAN_10K&lt;/td&gt;       &lt;td&gt;1万未満です。&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_10K_TO_100K&lt;/td&gt;       &lt;td&gt;1万以上、10万未満です。&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_100K_TO_500K&lt;/td&gt;       &lt;td&gt;10万以上、50万未満です。&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_500K_TO_1M&lt;/td&gt;       &lt;td&gt;50万以上、100万未満です。&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_1M_TO_5M&lt;/td&gt;       &lt;td&gt;100万以上、500万未満です。&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_5M_TO_10M&lt;/td&gt;       &lt;td&gt;500万以上、1,000万未満です。&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;GREATER_THAN_10M&lt;/td&gt;       &lt;td&gt;1,000万以上です。&lt;/td&gt;     &lt;/tr&gt;   &lt;/table&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Estimated user size from keywords.&lt;br&gt;   &lt;table border&#x3D;&#39;1&#39;&gt;     &lt;tr&gt;       &lt;th&gt;estimatedUserSize&lt;/th&gt;       &lt;th&gt;description&lt;/th&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;ZERO&lt;/td&gt;       &lt;td&gt;0&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;LESS_THAN_10K&lt;/td&gt;       &lt;td&gt;Less than 10,000.&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_10K_TO_100K&lt;/td&gt;       &lt;td&gt;Between 10,000 to 100,000.&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_100K_TO_500K&lt;/td&gt;       &lt;td&gt;Between 100,000 to 500,000.&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_500K_TO_1M&lt;/td&gt;       &lt;td&gt;Between 500,000 to 1 million.&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_1M_TO_5M&lt;/td&gt;       &lt;td&gt;Between 1 million to 5 million.&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;BETWEEN_5M_TO_10M&lt;/td&gt;       &lt;td&gt;Between 5 million to 10 million.&lt;/td&gt;     &lt;/tr&gt;     &lt;tr&gt;       &lt;td&gt;GREATER_THAN_10M&lt;/td&gt;       &lt;td&gt;Greater than 10 million.&lt;/td&gt;     &lt;/tr&gt;   &lt;/table&gt; &lt;/div&gt; 
    * @return estimatedUserSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ESTIMATED_USER_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_ESTIMATED_USER_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getEstimatedUserSize() {
@@ -68,14 +73,13 @@ public class EstimatedUserSize {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ESTIMATED_USER_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_ESTIMATED_USER_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEstimatedUserSize(String estimatedUserSize) {
+  public void setEstimatedUserSize(@jakarta.annotation.Nullable String estimatedUserSize) {
     this.estimatedUserSize = estimatedUserSize;
   }
 
-
-  public EstimatedUserSize keywords(List<EstimatedUserSizeServiceKeywords> keywords) {
+  public EstimatedUserSize keywords(@jakarta.annotation.Nullable List<EstimatedUserSizeServiceKeywords> keywords) {
     
     this.keywords = keywords;
     return this;
@@ -89,12 +93,12 @@ public class EstimatedUserSize {
     return this;
   }
 
-   /**
+  /**
    * Get keywords
    * @return keywords
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<EstimatedUserSizeServiceKeywords> getKeywords() {
@@ -102,14 +106,13 @@ public class EstimatedUserSize {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORDS)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeywords(List<EstimatedUserSizeServiceKeywords> keywords) {
+  public void setKeywords(@jakarta.annotation.Nullable List<EstimatedUserSizeServiceKeywords> keywords) {
     this.keywords = keywords;
   }
 
-
-  public EstimatedUserSize urls(List<EstimatedUserSizeServiceUrls> urls) {
+  public EstimatedUserSize urls(@jakarta.annotation.Nullable List<EstimatedUserSizeServiceUrls> urls) {
     
     this.urls = urls;
     return this;
@@ -123,12 +126,12 @@ public class EstimatedUserSize {
     return this;
   }
 
-   /**
+  /**
    * Get urls
    * @return urls
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URLS)
+  @JsonProperty(value = JSON_PROPERTY_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<EstimatedUserSizeServiceUrls> getUrls() {
@@ -136,11 +139,12 @@ public class EstimatedUserSize {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URLS)
+  @JsonProperty(value = JSON_PROPERTY_URLS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrls(List<EstimatedUserSizeServiceUrls> urls) {
+  public void setUrls(@jakarta.annotation.Nullable List<EstimatedUserSizeServiceUrls> urls) {
     this.urls = urls;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -177,10 +181,7 @@ public class EstimatedUserSize {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

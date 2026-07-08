@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -26,6 +26,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.FeedFtpServiceScheduleType;
 import jp.co.yahoo.adsdisplayapi.v19.model.FeedFtpServiceScheduleWeekly;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedFtpServiceScheduleオブジェクトは、定期アップロードのスケジュールを表します。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedFtpServiceSchedule object displays Periodic Upload schedule.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
@@ -36,35 +37,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedFtpServiceSchedule.JSON_PROPERTY_SCHEDULE_TYPE,
   FeedFtpServiceSchedule.JSON_PROPERTY_SCHEDULE_WEEKLY
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedFtpServiceSchedule {
   public static final String JSON_PROPERTY_SCHEDULE_DAILY = "scheduleDaily";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceScheduleDaily scheduleDaily;
 
   public static final String JSON_PROPERTY_SCHEDULE_HOURLY = "scheduleHourly";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceScheduleHourly scheduleHourly;
 
   public static final String JSON_PROPERTY_SCHEDULE_TYPE = "scheduleType";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceScheduleType scheduleType;
 
   public static final String JSON_PROPERTY_SCHEDULE_WEEKLY = "scheduleWeekly";
+  @jakarta.annotation.Nullable
   private FeedFtpServiceScheduleWeekly scheduleWeekly;
 
   public FeedFtpServiceSchedule() {
   }
 
-  public FeedFtpServiceSchedule scheduleDaily(FeedFtpServiceScheduleDaily scheduleDaily) {
+  public FeedFtpServiceSchedule scheduleDaily(@jakarta.annotation.Nullable FeedFtpServiceScheduleDaily scheduleDaily) {
     
     this.scheduleDaily = scheduleDaily;
     return this;
   }
 
-   /**
+  /**
    * Get scheduleDaily
    * @return scheduleDaily
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_DAILY)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_DAILY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceScheduleDaily getScheduleDaily() {
@@ -72,25 +77,24 @@ public class FeedFtpServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_DAILY)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_DAILY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setScheduleDaily(FeedFtpServiceScheduleDaily scheduleDaily) {
+  public void setScheduleDaily(@jakarta.annotation.Nullable FeedFtpServiceScheduleDaily scheduleDaily) {
     this.scheduleDaily = scheduleDaily;
   }
 
-
-  public FeedFtpServiceSchedule scheduleHourly(FeedFtpServiceScheduleHourly scheduleHourly) {
+  public FeedFtpServiceSchedule scheduleHourly(@jakarta.annotation.Nullable FeedFtpServiceScheduleHourly scheduleHourly) {
     
     this.scheduleHourly = scheduleHourly;
     return this;
   }
 
-   /**
+  /**
    * Get scheduleHourly
    * @return scheduleHourly
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_HOURLY)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_HOURLY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceScheduleHourly getScheduleHourly() {
@@ -98,25 +102,24 @@ public class FeedFtpServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_HOURLY)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_HOURLY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setScheduleHourly(FeedFtpServiceScheduleHourly scheduleHourly) {
+  public void setScheduleHourly(@jakarta.annotation.Nullable FeedFtpServiceScheduleHourly scheduleHourly) {
     this.scheduleHourly = scheduleHourly;
   }
 
-
-  public FeedFtpServiceSchedule scheduleType(FeedFtpServiceScheduleType scheduleType) {
+  public FeedFtpServiceSchedule scheduleType(@jakarta.annotation.Nullable FeedFtpServiceScheduleType scheduleType) {
     
     this.scheduleType = scheduleType;
     return this;
   }
 
-   /**
+  /**
    * Get scheduleType
    * @return scheduleType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceScheduleType getScheduleType() {
@@ -124,25 +127,24 @@ public class FeedFtpServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setScheduleType(FeedFtpServiceScheduleType scheduleType) {
+  public void setScheduleType(@jakarta.annotation.Nullable FeedFtpServiceScheduleType scheduleType) {
     this.scheduleType = scheduleType;
   }
 
-
-  public FeedFtpServiceSchedule scheduleWeekly(FeedFtpServiceScheduleWeekly scheduleWeekly) {
+  public FeedFtpServiceSchedule scheduleWeekly(@jakarta.annotation.Nullable FeedFtpServiceScheduleWeekly scheduleWeekly) {
     
     this.scheduleWeekly = scheduleWeekly;
     return this;
   }
 
-   /**
+  /**
    * Get scheduleWeekly
    * @return scheduleWeekly
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_WEEKLY)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_WEEKLY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedFtpServiceScheduleWeekly getScheduleWeekly() {
@@ -150,11 +152,12 @@ public class FeedFtpServiceSchedule {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SCHEDULE_WEEKLY)
+  @JsonProperty(value = JSON_PROPERTY_SCHEDULE_WEEKLY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setScheduleWeekly(FeedFtpServiceScheduleWeekly scheduleWeekly) {
+  public void setScheduleWeekly(@jakarta.annotation.Nullable FeedFtpServiceScheduleWeekly scheduleWeekly) {
     this.scheduleWeekly = scheduleWeekly;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -193,10 +196,7 @@ public class FeedFtpServiceSchedule {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

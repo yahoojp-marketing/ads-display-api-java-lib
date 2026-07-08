@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;追加を推奨するサーチキーワードに関する詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This describes the detailed information of recommended search keyword to add.&lt;/div&gt; 
@@ -38,53 +39,63 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceSearchKeywordIdeaSearchKeywordList.JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME,
   RecommendationServiceSearchKeywordIdeaSearchKeywordList.JSON_PROPERTY_TABLET_SEARCH_VOLUME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
+  @jakarta.annotation.Nullable
   private Long recommendationId;
 
   public static final String JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID = "currentSearchKeywordListId";
+  @jakarta.annotation.Nullable
   private Long currentSearchKeywordListId;
 
   public static final String JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_NAME = "currentSearchKeywordListName";
+  @jakarta.annotation.Nullable
   private String currentSearchKeywordListName;
 
   public static final String JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_RECENCY = "currentSearchKeywordRecency";
+  @jakarta.annotation.Nullable
   private String currentSearchKeywordRecency;
 
   public static final String JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_FREQUENCY = "currentSearchKeywordFrequency";
+  @jakarta.annotation.Nullable
   private String currentSearchKeywordFrequency;
 
   public static final String JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD_ID = "recommendedSearchKeywordId";
+  @jakarta.annotation.Nullable
   private Long recommendedSearchKeywordId;
 
   public static final String JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD = "recommendedSearchKeyword";
+  @jakarta.annotation.Nullable
   private String recommendedSearchKeyword;
 
   public static final String JSON_PROPERTY_DESKTOP_SEARCH_VOLUME = "desktopSearchVolume";
+  @jakarta.annotation.Nullable
   private Long desktopSearchVolume;
 
   public static final String JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME = "smartPhoneSearchVolume";
+  @jakarta.annotation.Nullable
   private Long smartPhoneSearchVolume;
 
   public static final String JSON_PROPERTY_TABLET_SEARCH_VOLUME = "tabletSearchVolume";
+  @jakarta.annotation.Nullable
   private Long tabletSearchVolume;
 
   public RecommendationServiceSearchKeywordIdeaSearchKeywordList() {
   }
 
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendationId(Long recommendationId) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     
     this.recommendationId = recommendationId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendationId() {
@@ -92,25 +103,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendationId(Long recommendationId) {
+  public void setRecommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordListId(Long currentSearchKeywordListId) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordListId(@jakarta.annotation.Nullable Long currentSearchKeywordListId) {
     
     this.currentSearchKeywordListId = currentSearchKeywordListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリストIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword list ID. &lt;/div&gt; 
    * @return currentSearchKeywordListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCurrentSearchKeywordListId() {
@@ -118,25 +128,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentSearchKeywordListId(Long currentSearchKeywordListId) {
+  public void setCurrentSearchKeywordListId(@jakarta.annotation.Nullable Long currentSearchKeywordListId) {
     this.currentSearchKeywordListId = currentSearchKeywordListId;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordListName(String currentSearchKeywordListName) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordListName(@jakarta.annotation.Nullable String currentSearchKeywordListName) {
     
     this.currentSearchKeywordListName = currentSearchKeywordListName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードリスト名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Search keyword list name. &lt;/div&gt; 
    * @return currentSearchKeywordListName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCurrentSearchKeywordListName() {
@@ -144,25 +153,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_LIST_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentSearchKeywordListName(String currentSearchKeywordListName) {
+  public void setCurrentSearchKeywordListName(@jakarta.annotation.Nullable String currentSearchKeywordListName) {
     this.currentSearchKeywordListName = currentSearchKeywordListName;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordRecency(String currentSearchKeywordRecency) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordRecency(@jakarta.annotation.Nullable String currentSearchKeywordRecency) {
     
     this.currentSearchKeywordRecency = currentSearchKeywordRecency;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードの有効期間を表します。&lt;br&gt; 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordRecencyオブジェクトをご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recency of search keyword list.&lt;br&gt; See the SearchKeywordListServiceKeywordRecency in SearchKeywordListService to learn about return value. &lt;/div&gt; 
    * @return currentSearchKeywordRecency
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_RECENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_RECENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCurrentSearchKeywordRecency() {
@@ -170,25 +178,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_RECENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_RECENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentSearchKeywordRecency(String currentSearchKeywordRecency) {
+  public void setCurrentSearchKeywordRecency(@jakarta.annotation.Nullable String currentSearchKeywordRecency) {
     this.currentSearchKeywordRecency = currentSearchKeywordRecency;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordFrequency(String currentSearchKeywordFrequency) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList currentSearchKeywordFrequency(@jakarta.annotation.Nullable String currentSearchKeywordFrequency) {
     
     this.currentSearchKeywordFrequency = currentSearchKeywordFrequency;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; サーチキーワードの検索回数を表します。&lt;br&gt; 返却される値については、SearchKeywordListServiceのSearchKeywordListServiceKeywordFrequencyオブジェクトをご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Frequency of search keyword list.&lt;br&gt; See the SearchKeywordListServiceKeywordFrequency in SearchKeywordListService to learn about return value. &lt;/div&gt; 
    * @return currentSearchKeywordFrequency
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_FREQUENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_FREQUENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCurrentSearchKeywordFrequency() {
@@ -196,25 +203,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_FREQUENCY)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_SEARCH_KEYWORD_FREQUENCY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentSearchKeywordFrequency(String currentSearchKeywordFrequency) {
+  public void setCurrentSearchKeywordFrequency(@jakarta.annotation.Nullable String currentSearchKeywordFrequency) {
     this.currentSearchKeywordFrequency = currentSearchKeywordFrequency;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendedSearchKeywordId(Long recommendedSearchKeywordId) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendedSearchKeywordId(@jakarta.annotation.Nullable Long recommendedSearchKeywordId) {
     
     this.recommendedSearchKeywordId = recommendedSearchKeywordId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended search keyword ID. &lt;/div&gt; 
    * @return recommendedSearchKeywordId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendedSearchKeywordId() {
@@ -222,25 +228,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendedSearchKeywordId(Long recommendedSearchKeywordId) {
+  public void setRecommendedSearchKeywordId(@jakarta.annotation.Nullable Long recommendedSearchKeywordId) {
     this.recommendedSearchKeywordId = recommendedSearchKeywordId;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendedSearchKeyword(String recommendedSearchKeyword) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList recommendedSearchKeyword(@jakarta.annotation.Nullable String recommendedSearchKeyword) {
     
     this.recommendedSearchKeyword = recommendedSearchKeyword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended search keyword. &lt;/div&gt; 
    * @return recommendedSearchKeyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRecommendedSearchKeyword() {
@@ -248,25 +253,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_SEARCH_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendedSearchKeyword(String recommendedSearchKeyword) {
+  public void setRecommendedSearchKeyword(@jakarta.annotation.Nullable String recommendedSearchKeyword) {
     this.recommendedSearchKeyword = recommendedSearchKeyword;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList desktopSearchVolume(Long desktopSearchVolume) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList desktopSearchVolume(@jakarta.annotation.Nullable Long desktopSearchVolume) {
     
     this.desktopSearchVolume = desktopSearchVolume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードのPCでのリーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of reach in PC with recommended search keyword. &lt;/div&gt; 
    * @return desktopSearchVolume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESKTOP_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getDesktopSearchVolume() {
@@ -274,25 +278,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESKTOP_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_DESKTOP_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDesktopSearchVolume(Long desktopSearchVolume) {
+  public void setDesktopSearchVolume(@jakarta.annotation.Nullable Long desktopSearchVolume) {
     this.desktopSearchVolume = desktopSearchVolume;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList smartPhoneSearchVolume(Long smartPhoneSearchVolume) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList smartPhoneSearchVolume(@jakarta.annotation.Nullable Long smartPhoneSearchVolume) {
     
     this.smartPhoneSearchVolume = smartPhoneSearchVolume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードのSmartPhoneでのリーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of Reach in SmartPhone with recommended search keyword. &lt;/div&gt; 
    * @return smartPhoneSearchVolume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getSmartPhoneSearchVolume() {
@@ -300,25 +303,24 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_SMART_PHONE_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSmartPhoneSearchVolume(Long smartPhoneSearchVolume) {
+  public void setSmartPhoneSearchVolume(@jakarta.annotation.Nullable Long smartPhoneSearchVolume) {
     this.smartPhoneSearchVolume = smartPhoneSearchVolume;
   }
 
-
-  public RecommendationServiceSearchKeywordIdeaSearchKeywordList tabletSearchVolume(Long tabletSearchVolume) {
+  public RecommendationServiceSearchKeywordIdeaSearchKeywordList tabletSearchVolume(@jakarta.annotation.Nullable Long tabletSearchVolume) {
     
     this.tabletSearchVolume = tabletSearchVolume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するサーチキーワードのTabletでのリーチ数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of Reach in Tablet with recommended search keyword. &lt;/div&gt; 
    * @return tabletSearchVolume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TABLET_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getTabletSearchVolume() {
@@ -326,11 +328,12 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TABLET_SEARCH_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_TABLET_SEARCH_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTabletSearchVolume(Long tabletSearchVolume) {
+  public void setTabletSearchVolume(@jakarta.annotation.Nullable Long tabletSearchVolume) {
     this.tabletSearchVolume = tabletSearchVolume;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -381,10 +384,7 @@ public class RecommendationServiceSearchKeywordIdeaSearchKeywordList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

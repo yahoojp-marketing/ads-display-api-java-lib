@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceImpsShareBudgetLossOverCampaignオブジェクトは、インプレッションシェア損失率（予算）が大きいキャンペーンに関する最適化提案の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceImpsShareBudgetLossOverCampaign object describes the detailed information of Recommendations about campaigns that have a large lost impression share (budget).&lt;/div&gt; 
@@ -33,38 +34,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceImpsShareBudgetLossOverCampaign.JSON_PROPERTY_CURRENT_BUDGET,
   RecommendationServiceImpsShareBudgetLossOverCampaign.JSON_PROPERTY_RECOMMENDED_BUDGET
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceImpsShareBudgetLossOverCampaign {
   public static final String JSON_PROPERTY_RECOMMENDATION_ID = "recommendationId";
+  @jakarta.annotation.Nullable
   private Long recommendationId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_ID = "campaignId";
+  @jakarta.annotation.Nullable
   private Long campaignId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_NAME = "campaignName";
+  @jakarta.annotation.Nullable
   private String campaignName;
 
   public static final String JSON_PROPERTY_CURRENT_BUDGET = "currentBudget";
+  @jakarta.annotation.Nullable
   private Long currentBudget;
 
   public static final String JSON_PROPERTY_RECOMMENDED_BUDGET = "recommendedBudget";
+  @jakarta.annotation.Nullable
   private Long recommendedBudget;
 
   public RecommendationServiceImpsShareBudgetLossOverCampaign() {
   }
 
-  public RecommendationServiceImpsShareBudgetLossOverCampaign recommendationId(Long recommendationId) {
+  public RecommendationServiceImpsShareBudgetLossOverCampaign recommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     
     this.recommendationId = recommendationId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 最適化提案IDです。&lt;br&gt; optimizationScoreLiftがnullでない場合は、1つのキャンペーンに関する提案に共通の最適化提案IDが割り当てられます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommendation ID.&lt;br&gt; When optimizationScoreLift isn&#39;t null, the system will assign a common recommendation ID to the suggestion for the campaign. &lt;/div&gt; 
    * @return recommendationId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendationId() {
@@ -72,25 +78,24 @@ public class RecommendationServiceImpsShareBudgetLossOverCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDATION_ID)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDATION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendationId(Long recommendationId) {
+  public void setRecommendationId(@jakarta.annotation.Nullable Long recommendationId) {
     this.recommendationId = recommendationId;
   }
 
-
-  public RecommendationServiceImpsShareBudgetLossOverCampaign campaignId(Long campaignId) {
+  public RecommendationServiceImpsShareBudgetLossOverCampaign campaignId(@jakarta.annotation.Nullable Long campaignId) {
     
     this.campaignId = campaignId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーンIDです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign ID.&lt;br&gt; &lt;/div&gt; 
    * @return campaignId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCampaignId() {
@@ -98,25 +103,24 @@ public class RecommendationServiceImpsShareBudgetLossOverCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_ID)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignId(Long campaignId) {
+  public void setCampaignId(@jakarta.annotation.Nullable Long campaignId) {
     this.campaignId = campaignId;
   }
 
-
-  public RecommendationServiceImpsShareBudgetLossOverCampaign campaignName(String campaignName) {
+  public RecommendationServiceImpsShareBudgetLossOverCampaign campaignName(@jakarta.annotation.Nullable String campaignName) {
     
     this.campaignName = campaignName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キャンペーン名です。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Campaign name.&lt;br&gt; &lt;/div&gt; 
    * @return campaignName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCampaignName() {
@@ -124,25 +128,24 @@ public class RecommendationServiceImpsShareBudgetLossOverCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignName(String campaignName) {
+  public void setCampaignName(@jakarta.annotation.Nullable String campaignName) {
     this.campaignName = campaignName;
   }
 
-
-  public RecommendationServiceImpsShareBudgetLossOverCampaign currentBudget(Long currentBudget) {
+  public RecommendationServiceImpsShareBudgetLossOverCampaign currentBudget(@jakarta.annotation.Nullable Long currentBudget) {
     
     this.currentBudget = currentBudget;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 現在のキャンペーン予算です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Current campaign budget. &lt;/div&gt; 
    * @return currentBudget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CURRENT_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCurrentBudget() {
@@ -150,25 +153,24 @@ public class RecommendationServiceImpsShareBudgetLossOverCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CURRENT_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_CURRENT_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCurrentBudget(Long currentBudget) {
+  public void setCurrentBudget(@jakarta.annotation.Nullable Long currentBudget) {
     this.currentBudget = currentBudget;
   }
 
-
-  public RecommendationServiceImpsShareBudgetLossOverCampaign recommendedBudget(Long recommendedBudget) {
+  public RecommendationServiceImpsShareBudgetLossOverCampaign recommendedBudget(@jakarta.annotation.Nullable Long recommendedBudget) {
     
     this.recommendedBudget = recommendedBudget;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 推奨するキャンペーン予算設定です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Recommended campaign budget setting. &lt;/div&gt; 
    * @return recommendedBudget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getRecommendedBudget() {
@@ -176,11 +178,12 @@ public class RecommendationServiceImpsShareBudgetLossOverCampaign {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RECOMMENDED_BUDGET)
+  @JsonProperty(value = JSON_PROPERTY_RECOMMENDED_BUDGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRecommendedBudget(Long recommendedBudget) {
+  public void setRecommendedBudget(@jakarta.annotation.Nullable Long recommendedBudget) {
     this.recommendedBudget = recommendedBudget;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -221,10 +224,7 @@ public class RecommendationServiceImpsShareBudgetLossOverCampaign {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

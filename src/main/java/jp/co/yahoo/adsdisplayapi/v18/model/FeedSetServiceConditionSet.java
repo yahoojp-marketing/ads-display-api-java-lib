@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.FeedSetServiceCondition;
 import jp.co.yahoo.adsdisplayapi.v18.model.FeedSetServiceConditionType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; FeedSetServiceConditionSetオブジェクトは、商品セット情報の条件を保持します。&lt;br&gt; ADD時、このフィールドは必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; FeedSetServiceConditionSet object contains conditions of Item Set information.&lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
@@ -34,29 +36,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   FeedSetServiceConditionSet.JSON_PROPERTY_CONDITION_TYPE,
   FeedSetServiceConditionSet.JSON_PROPERTY_OR_CONDITIONS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class FeedSetServiceConditionSet {
   public static final String JSON_PROPERTY_CONDITION_TYPE = "conditionType";
+  @jakarta.annotation.Nullable
   private FeedSetServiceConditionType conditionType;
 
   public static final String JSON_PROPERTY_OR_CONDITIONS = "orConditions";
+  @jakarta.annotation.Nullable
   private List<FeedSetServiceCondition> orConditions;
 
   public FeedSetServiceConditionSet() {
   }
 
-  public FeedSetServiceConditionSet conditionType(FeedSetServiceConditionType conditionType) {
+  public FeedSetServiceConditionSet conditionType(@jakarta.annotation.Nullable FeedSetServiceConditionType conditionType) {
     
     this.conditionType = conditionType;
     return this;
   }
 
-   /**
+  /**
    * Get conditionType
    * @return conditionType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONDITION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONDITION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public FeedSetServiceConditionType getConditionType() {
@@ -64,14 +68,13 @@ public class FeedSetServiceConditionSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONDITION_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CONDITION_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConditionType(FeedSetServiceConditionType conditionType) {
+  public void setConditionType(@jakarta.annotation.Nullable FeedSetServiceConditionType conditionType) {
     this.conditionType = conditionType;
   }
 
-
-  public FeedSetServiceConditionSet orConditions(List<FeedSetServiceCondition> orConditions) {
+  public FeedSetServiceConditionSet orConditions(@jakarta.annotation.Nullable List<FeedSetServiceCondition> orConditions) {
     
     this.orConditions = orConditions;
     return this;
@@ -85,12 +88,12 @@ public class FeedSetServiceConditionSet {
     return this;
   }
 
-   /**
+  /**
    * Get orConditions
    * @return orConditions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OR_CONDITIONS)
+  @JsonProperty(value = JSON_PROPERTY_OR_CONDITIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<FeedSetServiceCondition> getOrConditions() {
@@ -98,11 +101,12 @@ public class FeedSetServiceConditionSet {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OR_CONDITIONS)
+  @JsonProperty(value = JSON_PROPERTY_OR_CONDITIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOrConditions(List<FeedSetServiceCondition> orConditions) {
+  public void setOrConditions(@jakarta.annotation.Nullable List<FeedSetServiceCondition> orConditions) {
     this.orConditions = orConditions;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,10 +141,7 @@ public class FeedSetServiceConditionSet {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

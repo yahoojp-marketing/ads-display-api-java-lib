@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.DictionaryServiceMediaAdFormatValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;DictionaryServiceMediaAdFormatPageオブジェクトは、getMediaAdFormatメソッドの実行結果（全Entityのリスト）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;DictionaryServiceMediaAdFormatPage object contains the results (a list of all entities) for getMediaAdFormat method.&lt;/div&gt; 
@@ -33,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   DictionaryServiceMediaAdFormatPage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   DictionaryServiceMediaAdFormatPage.JSON_PROPERTY_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class DictionaryServiceMediaAdFormatPage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
+  @jakarta.annotation.Nullable
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<DictionaryServiceMediaAdFormatValue> values;
 
   public DictionaryServiceMediaAdFormatPage() {
   }
 
-  public DictionaryServiceMediaAdFormatPage totalNumEntries(Integer totalNumEntries) {
+  public DictionaryServiceMediaAdFormatPage totalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     
     this.totalNumEntries = totalNumEntries;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getTotalNumEntries() {
@@ -63,14 +67,13 @@ public class DictionaryServiceMediaAdFormatPage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalNumEntries(Integer totalNumEntries) {
+  public void setTotalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
 
-
-  public DictionaryServiceMediaAdFormatPage values(List<DictionaryServiceMediaAdFormatValue> values) {
+  public DictionaryServiceMediaAdFormatPage values(@jakarta.annotation.Nullable List<DictionaryServiceMediaAdFormatValue> values) {
     
     this.values = values;
     return this;
@@ -84,12 +87,12 @@ public class DictionaryServiceMediaAdFormatPage {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<DictionaryServiceMediaAdFormatValue> getValues() {
@@ -97,11 +100,12 @@ public class DictionaryServiceMediaAdFormatPage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<DictionaryServiceMediaAdFormatValue> values) {
+  public void setValues(@jakarta.annotation.Nullable List<DictionaryServiceMediaAdFormatValue> values) {
     this.values = values;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -136,10 +140,7 @@ public class DictionaryServiceMediaAdFormatPage {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

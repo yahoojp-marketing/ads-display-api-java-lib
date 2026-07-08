@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AudienceListServiceUploadUserListPage;
 import jp.co.yahoo.adsdisplayapi.v17.model.Error;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * AudienceListServiceGetUploadUserListResponse
@@ -35,21 +37,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceGetUploadUserListResponse.JSON_PROPERTY_RID,
   AudienceListServiceGetUploadUserListResponse.JSON_PROPERTY_RVAL
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceGetUploadUserListResponse {
   public static final String JSON_PROPERTY_ERRORS = "errors";
+  @jakarta.annotation.Nullable
   private List<Error> errors;
 
   public static final String JSON_PROPERTY_RID = "rid";
+  @jakarta.annotation.Nullable
   private String rid;
 
   public static final String JSON_PROPERTY_RVAL = "rval";
+  @jakarta.annotation.Nullable
   private AudienceListServiceUploadUserListPage rval;
 
   public AudienceListServiceGetUploadUserListResponse() {
   }
 
-  public AudienceListServiceGetUploadUserListResponse errors(List<Error> errors) {
+  public AudienceListServiceGetUploadUserListResponse errors(@jakarta.annotation.Nullable List<Error> errors) {
     
     this.errors = errors;
     return this;
@@ -63,12 +68,12 @@ public class AudienceListServiceGetUploadUserListResponse {
     return this;
   }
 
-   /**
+  /**
    * Get errors
    * @return errors
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Error> getErrors() {
@@ -76,25 +81,24 @@ public class AudienceListServiceGetUploadUserListResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ERRORS)
+  @JsonProperty(value = JSON_PROPERTY_ERRORS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setErrors(List<Error> errors) {
+  public void setErrors(@jakarta.annotation.Nullable List<Error> errors) {
     this.errors = errors;
   }
 
-
-  public AudienceListServiceGetUploadUserListResponse rid(String rid) {
+  public AudienceListServiceGetUploadUserListResponse rid(@jakarta.annotation.Nullable String rid) {
     
     this.rid = rid;
     return this;
   }
 
-   /**
+  /**
    * Get rid
    * @return rid
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RID)
+  @JsonProperty(value = JSON_PROPERTY_RID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRid() {
@@ -102,25 +106,24 @@ public class AudienceListServiceGetUploadUserListResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RID)
+  @JsonProperty(value = JSON_PROPERTY_RID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRid(String rid) {
+  public void setRid(@jakarta.annotation.Nullable String rid) {
     this.rid = rid;
   }
 
-
-  public AudienceListServiceGetUploadUserListResponse rval(AudienceListServiceUploadUserListPage rval) {
+  public AudienceListServiceGetUploadUserListResponse rval(@jakarta.annotation.Nullable AudienceListServiceUploadUserListPage rval) {
     
     this.rval = rval;
     return this;
   }
 
-   /**
+  /**
    * Get rval
    * @return rval
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RVAL)
+  @JsonProperty(value = JSON_PROPERTY_RVAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceUploadUserListPage getRval() {
@@ -128,11 +131,12 @@ public class AudienceListServiceGetUploadUserListResponse {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RVAL)
+  @JsonProperty(value = JSON_PROPERTY_RVAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRval(AudienceListServiceUploadUserListPage rval) {
+  public void setRval(@jakarta.annotation.Nullable AudienceListServiceUploadUserListPage rval) {
     this.rval = rval;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -169,10 +173,7 @@ public class AudienceListServiceGetUploadUserListResponse {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.ConversionGroupServiceConversion;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ConversionGroupオブジェクトは、コンバージョングループ情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ConversionGroup object shows ConversionGroup information.&lt;/div&gt; 
@@ -35,35 +37,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ConversionGroup.JSON_PROPERTY_CONVERSION_GROUP_NAME,
   ConversionGroup.JSON_PROPERTY_CONVERSIONS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ConversionGroup {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CONVERSION_GROUP_ID = "conversionGroupId";
+  @jakarta.annotation.Nullable
   private Long conversionGroupId;
 
   public static final String JSON_PROPERTY_CONVERSION_GROUP_NAME = "conversionGroupName";
+  @jakarta.annotation.Nullable
   private String conversionGroupName;
 
   public static final String JSON_PROPERTY_CONVERSIONS = "conversions";
+  @jakarta.annotation.Nullable
   private List<ConversionGroupServiceConversion> conversions;
 
   public ConversionGroup() {
   }
 
-  public ConversionGroup accountId(Long accountId) {
+  public ConversionGroup accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -71,25 +77,24 @@ public class ConversionGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public ConversionGroup conversionGroupId(Long conversionGroupId) {
+  public ConversionGroup conversionGroupId(@jakarta.annotation.Nullable Long conversionGroupId) {
     
     this.conversionGroupId = conversionGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョングループIDです。&lt;br&gt; このフィールドは、ADD時は無視され、SETおよびREMOVE時は必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion tracker ID.&lt;br&gt; This field will be ignored in ADD operation, and will be required in SET and REMOVE operation. &lt;/div&gt; 
    * @return conversionGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getConversionGroupId() {
@@ -97,25 +102,24 @@ public class ConversionGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionGroupId(Long conversionGroupId) {
+  public void setConversionGroupId(@jakarta.annotation.Nullable Long conversionGroupId) {
     this.conversionGroupId = conversionGroupId;
   }
 
-
-  public ConversionGroup conversionGroupName(String conversionGroupName) {
+  public ConversionGroup conversionGroupName(@jakarta.annotation.Nullable String conversionGroupName) {
     
     this.conversionGroupName = conversionGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; コンバージョングループ名です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Conversion group name.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation. &lt;/div&gt; 
    * @return conversionGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getConversionGroupName() {
@@ -123,14 +127,13 @@ public class ConversionGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionGroupName(String conversionGroupName) {
+  public void setConversionGroupName(@jakarta.annotation.Nullable String conversionGroupName) {
     this.conversionGroupName = conversionGroupName;
   }
 
-
-  public ConversionGroup conversions(List<ConversionGroupServiceConversion> conversions) {
+  public ConversionGroup conversions(@jakarta.annotation.Nullable List<ConversionGroupServiceConversion> conversions) {
     
     this.conversions = conversions;
     return this;
@@ -144,12 +147,12 @@ public class ConversionGroup {
     return this;
   }
 
-   /**
+  /**
    * Get conversions
    * @return conversions
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ConversionGroupServiceConversion> getConversions() {
@@ -157,11 +160,12 @@ public class ConversionGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSIONS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSIONS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversions(List<ConversionGroupServiceConversion> conversions) {
+  public void setConversions(@jakarta.annotation.Nullable List<ConversionGroupServiceConversion> conversions) {
     this.conversions = conversions;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -200,10 +204,7 @@ public class ConversionGroup {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

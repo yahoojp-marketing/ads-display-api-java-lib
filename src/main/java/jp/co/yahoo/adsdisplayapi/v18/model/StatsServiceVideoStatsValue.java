@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.Stats;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;StatsServiceVideoStatsValueオブジェクトは、動画の統計情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;StatsServiceVideoStatsValue object contains Video stats information.&lt;/div&gt; 
@@ -33,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   StatsServiceVideoStatsValue.JSON_PROPERTY_VIDEO_TITLE,
   StatsServiceVideoStatsValue.JSON_PROPERTY_STATS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class StatsServiceVideoStatsValue {
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
+  @jakarta.annotation.Nullable
   private Long mediaId;
 
   public static final String JSON_PROPERTY_VIDEO_NAME = "videoName";
+  @jakarta.annotation.Nullable
   private String videoName;
 
   public static final String JSON_PROPERTY_VIDEO_TITLE = "videoTitle";
+  @jakarta.annotation.Nullable
   private String videoTitle;
 
   public static final String JSON_PROPERTY_STATS = "stats";
+  @jakarta.annotation.Nullable
   private Stats stats;
 
   public StatsServiceVideoStatsValue() {
   }
 
-  public StatsServiceVideoStatsValue mediaId(Long mediaId) {
+  public StatsServiceVideoStatsValue mediaId(@jakarta.annotation.Nullable Long mediaId) {
     
     this.mediaId = mediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;メディアID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Media ID.&lt;/div&gt; 
    * @return mediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMediaId() {
@@ -69,25 +74,24 @@ public class StatsServiceVideoStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaId(Long mediaId) {
+  public void setMediaId(@jakarta.annotation.Nullable Long mediaId) {
     this.mediaId = mediaId;
   }
 
-
-  public StatsServiceVideoStatsValue videoName(String videoName) {
+  public StatsServiceVideoStatsValue videoName(@jakarta.annotation.Nullable String videoName) {
     
     this.videoName = videoName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;実ファイル名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;File name.&lt;/div&gt; 
    * @return videoName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVideoName() {
@@ -95,25 +99,24 @@ public class StatsServiceVideoStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoName(String videoName) {
+  public void setVideoName(@jakarta.annotation.Nullable String videoName) {
     this.videoName = videoName;
   }
 
-
-  public StatsServiceVideoStatsValue videoTitle(String videoTitle) {
+  public StatsServiceVideoStatsValue videoTitle(@jakarta.annotation.Nullable String videoTitle) {
     
     this.videoTitle = videoTitle;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ビデオ名&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video title.&lt;/div&gt; 
    * @return videoTitle
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVideoTitle() {
@@ -121,25 +124,24 @@ public class StatsServiceVideoStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoTitle(String videoTitle) {
+  public void setVideoTitle(@jakarta.annotation.Nullable String videoTitle) {
     this.videoTitle = videoTitle;
   }
 
-
-  public StatsServiceVideoStatsValue stats(Stats stats) {
+  public StatsServiceVideoStatsValue stats(@jakarta.annotation.Nullable Stats stats) {
     
     this.stats = stats;
     return this;
   }
 
-   /**
+  /**
    * Get stats
    * @return stats
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonProperty(value = JSON_PROPERTY_STATS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Stats getStats() {
@@ -147,11 +149,12 @@ public class StatsServiceVideoStatsValue {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STATS)
+  @JsonProperty(value = JSON_PROPERTY_STATS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStats(Stats stats) {
+  public void setStats(@jakarta.annotation.Nullable Stats stats) {
     this.stats = stats;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +193,7 @@ public class StatsServiceVideoStatsValue {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

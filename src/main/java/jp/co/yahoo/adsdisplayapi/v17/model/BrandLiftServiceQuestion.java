@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.BrandLiftServiceGoal;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BrandLiftServiceQuestionオブジェクトは、ブランドリフト調査項目を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BrandLiftServiceQuestion object describes the brand lift survey contents.&lt;/div&gt; 
@@ -38,50 +39,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BrandLiftServiceQuestion.JSON_PROPERTY_ANSWER_OPTION4,
   BrandLiftServiceQuestion.JSON_PROPERTY_ANSWER_OPTION5
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BrandLiftServiceQuestion {
   public static final String JSON_PROPERTY_QUESTION_ID = "questionId";
+  @jakarta.annotation.Nullable
   private Long questionId;
 
   public static final String JSON_PROPERTY_GOAL = "goal";
+  @jakarta.annotation.Nullable
   private BrandLiftServiceGoal goal;
 
   public static final String JSON_PROPERTY_PRE_APPROVE_ID = "preApproveId";
+  @jakarta.annotation.Nullable
   private String preApproveId;
 
   public static final String JSON_PROPERTY_QUESTION = "question";
+  @jakarta.annotation.Nullable
   private String question;
 
   public static final String JSON_PROPERTY_ANSWER_OPTION1 = "answerOption1";
+  @jakarta.annotation.Nullable
   private String answerOption1;
 
   public static final String JSON_PROPERTY_ANSWER_OPTION2 = "answerOption2";
+  @jakarta.annotation.Nullable
   private String answerOption2;
 
   public static final String JSON_PROPERTY_ANSWER_OPTION3 = "answerOption3";
+  @jakarta.annotation.Nullable
   private String answerOption3;
 
   public static final String JSON_PROPERTY_ANSWER_OPTION4 = "answerOption4";
+  @jakarta.annotation.Nullable
   private String answerOption4;
 
   public static final String JSON_PROPERTY_ANSWER_OPTION5 = "answerOption5";
+  @jakarta.annotation.Nullable
   private String answerOption5;
 
   public BrandLiftServiceQuestion() {
   }
 
-  public BrandLiftServiceQuestion questionId(Long questionId) {
+  public BrandLiftServiceQuestion questionId(@jakarta.annotation.Nullable Long questionId) {
     
     this.questionId = questionId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;調査IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Question ID. &lt;/div&gt; 
    * @return questionId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_QUESTION_ID)
+  @JsonProperty(value = JSON_PROPERTY_QUESTION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getQuestionId() {
@@ -89,25 +99,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUESTION_ID)
+  @JsonProperty(value = JSON_PROPERTY_QUESTION_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQuestionId(Long questionId) {
+  public void setQuestionId(@jakarta.annotation.Nullable Long questionId) {
     this.questionId = questionId;
   }
 
-
-  public BrandLiftServiceQuestion goal(BrandLiftServiceGoal goal) {
+  public BrandLiftServiceQuestion goal(@jakarta.annotation.Nullable BrandLiftServiceGoal goal) {
     
     this.goal = goal;
     return this;
   }
 
-   /**
+  /**
    * Get goal
    * @return goal
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GOAL)
+  @JsonProperty(value = JSON_PROPERTY_GOAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BrandLiftServiceGoal getGoal() {
@@ -115,25 +124,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GOAL)
+  @JsonProperty(value = JSON_PROPERTY_GOAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGoal(BrandLiftServiceGoal goal) {
+  public void setGoal(@jakarta.annotation.Nullable BrandLiftServiceGoal goal) {
     this.goal = goal;
   }
 
-
-  public BrandLiftServiceQuestion preApproveId(String preApproveId) {
+  public BrandLiftServiceQuestion preApproveId(@jakarta.annotation.Nullable String preApproveId) {
     
     this.preApproveId = preApproveId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;事前承認IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Preapprove ID. &lt;/div&gt; 
    * @return preApproveId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRE_APPROVE_ID)
+  @JsonProperty(value = JSON_PROPERTY_PRE_APPROVE_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPreApproveId() {
@@ -141,25 +149,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PRE_APPROVE_ID)
+  @JsonProperty(value = JSON_PROPERTY_PRE_APPROVE_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPreApproveId(String preApproveId) {
+  public void setPreApproveId(@jakarta.annotation.Nullable String preApproveId) {
     this.preApproveId = preApproveId;
   }
 
-
-  public BrandLiftServiceQuestion question(String question) {
+  public BrandLiftServiceQuestion question(@jakarta.annotation.Nullable String question) {
     
     this.question = question;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;設問です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Question. &lt;/div&gt; 
    * @return question
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_QUESTION)
+  @JsonProperty(value = JSON_PROPERTY_QUESTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getQuestion() {
@@ -167,25 +174,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_QUESTION)
+  @JsonProperty(value = JSON_PROPERTY_QUESTION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setQuestion(String question) {
+  public void setQuestion(@jakarta.annotation.Nullable String question) {
     this.question = question;
   }
 
-
-  public BrandLiftServiceQuestion answerOption1(String answerOption1) {
+  public BrandLiftServiceQuestion answerOption1(@jakarta.annotation.Nullable String answerOption1) {
     
     this.answerOption1 = answerOption1;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢1です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer option1. &lt;/div&gt; 
    * @return answerOption1
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION1)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAnswerOption1() {
@@ -193,25 +199,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION1)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAnswerOption1(String answerOption1) {
+  public void setAnswerOption1(@jakarta.annotation.Nullable String answerOption1) {
     this.answerOption1 = answerOption1;
   }
 
-
-  public BrandLiftServiceQuestion answerOption2(String answerOption2) {
+  public BrandLiftServiceQuestion answerOption2(@jakarta.annotation.Nullable String answerOption2) {
     
     this.answerOption2 = answerOption2;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢2です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer option2. &lt;/div&gt; 
    * @return answerOption2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION2)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAnswerOption2() {
@@ -219,25 +224,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION2)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAnswerOption2(String answerOption2) {
+  public void setAnswerOption2(@jakarta.annotation.Nullable String answerOption2) {
     this.answerOption2 = answerOption2;
   }
 
-
-  public BrandLiftServiceQuestion answerOption3(String answerOption3) {
+  public BrandLiftServiceQuestion answerOption3(@jakarta.annotation.Nullable String answerOption3) {
     
     this.answerOption3 = answerOption3;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢3です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer option3. &lt;/div&gt; 
    * @return answerOption3
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION3)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAnswerOption3() {
@@ -245,25 +249,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION3)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION3, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAnswerOption3(String answerOption3) {
+  public void setAnswerOption3(@jakarta.annotation.Nullable String answerOption3) {
     this.answerOption3 = answerOption3;
   }
 
-
-  public BrandLiftServiceQuestion answerOption4(String answerOption4) {
+  public BrandLiftServiceQuestion answerOption4(@jakarta.annotation.Nullable String answerOption4) {
     
     this.answerOption4 = answerOption4;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢4です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer option4. &lt;/div&gt; 
    * @return answerOption4
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION4)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION4, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAnswerOption4() {
@@ -271,25 +274,24 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION4)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION4, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAnswerOption4(String answerOption4) {
+  public void setAnswerOption4(@jakarta.annotation.Nullable String answerOption4) {
     this.answerOption4 = answerOption4;
   }
 
-
-  public BrandLiftServiceQuestion answerOption5(String answerOption5) {
+  public BrandLiftServiceQuestion answerOption5(@jakarta.annotation.Nullable String answerOption5) {
     
     this.answerOption5 = answerOption5;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;回答選択肢5です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Answer option5. &lt;/div&gt; 
    * @return answerOption5
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION5)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION5, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAnswerOption5() {
@@ -297,11 +299,12 @@ public class BrandLiftServiceQuestion {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ANSWER_OPTION5)
+  @JsonProperty(value = JSON_PROPERTY_ANSWER_OPTION5, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAnswerOption5(String answerOption5) {
+  public void setAnswerOption5(@jakarta.annotation.Nullable String answerOption5) {
     this.answerOption5 = answerOption5;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -350,10 +353,7 @@ public class BrandLiftServiceQuestion {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

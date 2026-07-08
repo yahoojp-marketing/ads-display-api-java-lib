@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AdGroupTargetServiceDayOfWeek;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceAdScheduleTargetオブジェクトは、時間帯ターゲティングの設定情報を保持します。&lt;br&gt; ADD、SETおよびREPLACE時、このフィールドは省略可能となります。&lt;br&gt; ※targetTypeがAD_SCHEDULE_TARGETの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceAdScheduleTarget object is a container for storing day of week/hours targeting settings.&lt;br&gt; This field is optional in ADD, SET and REPLACE operation.&lt;br&gt; *If targetType is AD_SCHEDULE_TARGET, this field is required. &lt;/div&gt; 
@@ -32,32 +33,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTargetServiceAdScheduleTarget.JSON_PROPERTY_END_HOUR,
   AdGroupTargetServiceAdScheduleTarget.JSON_PROPERTY_START_HOUR
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupTargetServiceAdScheduleTarget {
   public static final String JSON_PROPERTY_DAY_OF_WEEK = "dayOfWeek";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceDayOfWeek dayOfWeek;
 
   public static final String JSON_PROPERTY_END_HOUR = "endHour";
+  @jakarta.annotation.Nullable
   private Integer endHour;
 
   public static final String JSON_PROPERTY_START_HOUR = "startHour";
+  @jakarta.annotation.Nullable
   private Integer startHour;
 
   public AdGroupTargetServiceAdScheduleTarget() {
   }
 
-  public AdGroupTargetServiceAdScheduleTarget dayOfWeek(AdGroupTargetServiceDayOfWeek dayOfWeek) {
+  public AdGroupTargetServiceAdScheduleTarget dayOfWeek(@jakarta.annotation.Nullable AdGroupTargetServiceDayOfWeek dayOfWeek) {
     
     this.dayOfWeek = dayOfWeek;
     return this;
   }
 
-   /**
+  /**
    * Get dayOfWeek
    * @return dayOfWeek
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonProperty(value = JSON_PROPERTY_DAY_OF_WEEK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceDayOfWeek getDayOfWeek() {
@@ -65,25 +69,24 @@ public class AdGroupTargetServiceAdScheduleTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DAY_OF_WEEK)
+  @JsonProperty(value = JSON_PROPERTY_DAY_OF_WEEK, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDayOfWeek(AdGroupTargetServiceDayOfWeek dayOfWeek) {
+  public void setDayOfWeek(@jakarta.annotation.Nullable AdGroupTargetServiceDayOfWeek dayOfWeek) {
     this.dayOfWeek = dayOfWeek;
   }
 
-
-  public AdGroupTargetServiceAdScheduleTarget endHour(Integer endHour) {
+  public AdGroupTargetServiceAdScheduleTarget endHour(@jakarta.annotation.Nullable Integer endHour) {
     
     this.endHour = endHour;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 終了時間（時のみ）です。&lt;br&gt; このフィールドは、ADD時は必須となり、REPLACE時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; End time (hour only).&lt;br&gt; This field is required in ADD operation, and will be optional in REPLACE operation. &lt;/div&gt; 
    * @return endHour
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_END_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_END_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getEndHour() {
@@ -91,25 +94,24 @@ public class AdGroupTargetServiceAdScheduleTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_END_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_END_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEndHour(Integer endHour) {
+  public void setEndHour(@jakarta.annotation.Nullable Integer endHour) {
     this.endHour = endHour;
   }
 
-
-  public AdGroupTargetServiceAdScheduleTarget startHour(Integer startHour) {
+  public AdGroupTargetServiceAdScheduleTarget startHour(@jakarta.annotation.Nullable Integer startHour) {
     
     this.startHour = startHour;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 開始時間（時のみ）です。&lt;br&gt; このフィールドは、ADD時は必須となり、REPLACE時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Start time (hour only).&lt;br&gt; This field is required in ADD operation, and will be optional in REPLACE operation. &lt;/div&gt; 
    * @return startHour
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_START_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartHour() {
@@ -117,11 +119,12 @@ public class AdGroupTargetServiceAdScheduleTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_HOUR)
+  @JsonProperty(value = JSON_PROPERTY_START_HOUR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartHour(Integer startHour) {
+  public void setStartHour(@jakarta.annotation.Nullable Integer startHour) {
     this.startHour = startHour;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +161,7 @@ public class AdGroupTargetServiceAdScheduleTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
