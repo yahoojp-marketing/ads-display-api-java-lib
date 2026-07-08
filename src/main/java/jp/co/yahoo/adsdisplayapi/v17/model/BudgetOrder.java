@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.BudgetOrderServiceAccountType;
 import jp.co.yahoo.adsdisplayapi.v17.model.BudgetOrderServiceLimitChargeType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BudgetOrderオブジェクトは、アカウント予算情報を示します。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;BudgetOrder object is a container for storing the account budget.&lt;br&gt; &lt;/div&gt; 
@@ -34,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BudgetOrder.JSON_PROPERTY_AMOUNT,
   BudgetOrder.JSON_PROPERTY_LIMIT_CHARGE_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BudgetOrder {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_ACCOUNT_TYPE = "accountType";
+  @jakarta.annotation.Nullable
   private BudgetOrderServiceAccountType accountType;
 
   public static final String JSON_PROPERTY_AMOUNT = "amount";
+  @jakarta.annotation.Nullable
   private Long amount;
 
   public static final String JSON_PROPERTY_LIMIT_CHARGE_TYPE = "limitChargeType";
+  @jakarta.annotation.Nullable
   private BudgetOrderServiceLimitChargeType limitChargeType;
 
   public BudgetOrder() {
   }
 
-  public BudgetOrder accountId(Long accountId) {
+  public BudgetOrder accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; SET時、このフィールドは必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in SET operation. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -70,25 +75,24 @@ public class BudgetOrder {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public BudgetOrder accountType(BudgetOrderServiceAccountType accountType) {
+  public BudgetOrder accountType(@jakarta.annotation.Nullable BudgetOrderServiceAccountType accountType) {
     
     this.accountType = accountType;
     return this;
   }
 
-   /**
+  /**
    * Get accountType
    * @return accountType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BudgetOrderServiceAccountType getAccountType() {
@@ -96,25 +100,24 @@ public class BudgetOrder {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountType(BudgetOrderServiceAccountType accountType) {
+  public void setAccountType(@jakarta.annotation.Nullable BudgetOrderServiceAccountType accountType) {
     this.accountType = accountType;
   }
 
-
-  public BudgetOrder amount(Long amount) {
+  public BudgetOrder amount(@jakarta.annotation.Nullable Long amount) {
     
     this.amount = amount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントの広告予算金額です。&lt;br&gt; SET時、このフィールドは省略可能となります。 月額予算は、accountTypeが&lt;code&gt;POSTPAY&lt;/code&gt;または&lt;code&gt;INVOICE&lt;/code&gt;の場合に変更可能です。 また、予算額は1000円単位で指定する必要があります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Amount of budget.&lt;br&gt; This field is optional in SET operation. The monthly budget can be changed only when accountType is &lt;code&gt;POSTPAY&lt;/code&gt; or &lt;code&gt;INVOICE&lt;/code&gt;. In addition, the budget amount must be specified in units of 1000 yen. &lt;/div&gt; 
    * @return amount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAmount() {
@@ -122,25 +125,24 @@ public class BudgetOrder {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AMOUNT)
+  @JsonProperty(value = JSON_PROPERTY_AMOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAmount(Long amount) {
+  public void setAmount(@jakarta.annotation.Nullable Long amount) {
     this.amount = amount;
   }
 
-
-  public BudgetOrder limitChargeType(BudgetOrderServiceLimitChargeType limitChargeType) {
+  public BudgetOrder limitChargeType(@jakarta.annotation.Nullable BudgetOrderServiceLimitChargeType limitChargeType) {
     
     this.limitChargeType = limitChargeType;
     return this;
   }
 
-   /**
+  /**
    * Get limitChargeType
    * @return limitChargeType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LIMIT_CHARGE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LIMIT_CHARGE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BudgetOrderServiceLimitChargeType getLimitChargeType() {
@@ -148,11 +150,12 @@ public class BudgetOrder {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LIMIT_CHARGE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_LIMIT_CHARGE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLimitChargeType(BudgetOrderServiceLimitChargeType limitChargeType) {
+  public void setLimitChargeType(@jakarta.annotation.Nullable BudgetOrderServiceLimitChargeType limitChargeType) {
     this.limitChargeType = limitChargeType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +194,7 @@ public class BudgetOrder {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.CampaignServiceBudgetAmountRange;
 import jp.co.yahoo.adsdisplayapi.v19.model.CampaignServiceCreatedDateRange;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.CampaignServiceUpdatedDateRange;
 import jp.co.yahoo.adsdisplayapi.v19.model.CampaignServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;CampaignServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The CampaignServiceSelector object is a container for storing a set of criteria (parameters) for get method.&lt;/div&gt; 
@@ -49,68 +51,83 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceSelector.JSON_PROPERTY_CONVERSION_TRACKER_IDS,
   CampaignServiceSelector.JSON_PROPERTY_BUDGET_AMOUNT_RANGE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_BUDGET_IDS = "campaignBudgetIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignBudgetIds;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_IDS = "portfolioBiddingIds";
+  @jakarta.annotation.Nullable
   private List<Long> portfolioBiddingIds;
 
   public static final String JSON_PROPERTY_CONTAINS_LABEL = "containsLabel";
+  @jakarta.annotation.Nullable
   private Boolean containsLabel;
 
   public static final String JSON_PROPERTY_FEED_IDS = "feedIds";
+  @jakarta.annotation.Nullable
   private List<Long> feedIds;
 
   public static final String JSON_PROPERTY_LABEL_IDS = "labelIds";
+  @jakarta.annotation.Nullable
   private List<Long> labelIds;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 500;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public static final String JSON_PROPERTY_USER_STATUSES = "userStatuses";
+  @jakarta.annotation.Nullable
   private List<CampaignServiceUserStatus> userStatuses;
 
   public static final String JSON_PROPERTY_CREATED_DATE_RANGE = "createdDateRange";
+  @jakarta.annotation.Nullable
   private CampaignServiceCreatedDateRange createdDateRange;
 
   public static final String JSON_PROPERTY_UPDATED_DATE_RANGE = "updatedDateRange";
+  @jakarta.annotation.Nullable
   private CampaignServiceUpdatedDateRange updatedDateRange;
 
   public static final String JSON_PROPERTY_CONVERSION_GROUP_IDS = "conversionGroupIds";
+  @jakarta.annotation.Nullable
   private List<Long> conversionGroupIds;
 
   public static final String JSON_PROPERTY_CONVERSION_TRACKER_IDS = "conversionTrackerIds";
+  @jakarta.annotation.Nullable
   private List<Long> conversionTrackerIds;
 
   public static final String JSON_PROPERTY_BUDGET_AMOUNT_RANGE = "budgetAmountRange";
+  @jakarta.annotation.Nullable
   private CampaignServiceBudgetAmountRange budgetAmountRange;
 
   public CampaignServiceSelector() {
   }
 
-  public CampaignServiceSelector accountId(Long accountId) {
+  public CampaignServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : アカウントID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Account ID&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -118,14 +135,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public CampaignServiceSelector campaignIds(List<Long> campaignIds) {
+  public CampaignServiceSelector campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -139,12 +155,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   検索条件 : キャンペーンID &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   Search Condition: Campaign ID &lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -152,14 +168,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
-
-  public CampaignServiceSelector campaignBudgetIds(List<Long> campaignBudgetIds) {
+  public CampaignServiceSelector campaignBudgetIds(@jakarta.annotation.Nullable List<Long> campaignBudgetIds) {
     
     this.campaignBudgetIds = campaignBudgetIds;
     return this;
@@ -173,12 +188,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：共有予算IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Campaign budget ID.&lt;/div&gt; 
    * @return campaignBudgetIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignBudgetIds() {
@@ -186,14 +201,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_BUDGET_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_BUDGET_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignBudgetIds(List<Long> campaignBudgetIds) {
+  public void setCampaignBudgetIds(@jakarta.annotation.Nullable List<Long> campaignBudgetIds) {
     this.campaignBudgetIds = campaignBudgetIds;
   }
 
-
-  public CampaignServiceSelector portfolioBiddingIds(List<Long> portfolioBiddingIds) {
+  public CampaignServiceSelector portfolioBiddingIds(@jakarta.annotation.Nullable List<Long> portfolioBiddingIds) {
     
     this.portfolioBiddingIds = portfolioBiddingIds;
     return this;
@@ -207,12 +221,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件：ポートフォリオ入札IDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Portfolio bidding ID.&lt;/div&gt; 
    * @return portfolioBiddingIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getPortfolioBiddingIds() {
@@ -220,25 +234,24 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_IDS)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPortfolioBiddingIds(List<Long> portfolioBiddingIds) {
+  public void setPortfolioBiddingIds(@jakarta.annotation.Nullable List<Long> portfolioBiddingIds) {
     this.portfolioBiddingIds = portfolioBiddingIds;
   }
 
-
-  public CampaignServiceSelector containsLabel(Boolean containsLabel) {
+  public CampaignServiceSelector containsLabel(@jakarta.annotation.Nullable Boolean containsLabel) {
     
     this.containsLabel = containsLabel;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ラベル情報取得フラグです。&lt;br&gt; このフィールドは省略可能となります。その際、デフォルト値はfalseとなります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Flag of contains label information.&lt;br&gt; This field is optional. The default value will be false. &lt;/div&gt; 
    * @return containsLabel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL)
+  @JsonProperty(value = JSON_PROPERTY_CONTAINS_LABEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getContainsLabel() {
@@ -246,14 +259,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTAINS_LABEL)
+  @JsonProperty(value = JSON_PROPERTY_CONTAINS_LABEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContainsLabel(Boolean containsLabel) {
+  public void setContainsLabel(@jakarta.annotation.Nullable Boolean containsLabel) {
     this.containsLabel = containsLabel;
   }
 
-
-  public CampaignServiceSelector feedIds(List<Long> feedIds) {
+  public CampaignServiceSelector feedIds(@jakarta.annotation.Nullable List<Long> feedIds) {
     
     this.feedIds = feedIds;
     return this;
@@ -267,12 +279,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : フィードID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Feed ID&lt;/div&gt; 
    * @return feedIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getFeedIds() {
@@ -280,14 +292,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FEED_IDS)
+  @JsonProperty(value = JSON_PROPERTY_FEED_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFeedIds(List<Long> feedIds) {
+  public void setFeedIds(@jakarta.annotation.Nullable List<Long> feedIds) {
     this.feedIds = feedIds;
   }
 
-
-  public CampaignServiceSelector labelIds(List<Long> labelIds) {
+  public CampaignServiceSelector labelIds(@jakarta.annotation.Nullable List<Long> labelIds) {
     
     this.labelIds = labelIds;
     return this;
@@ -301,12 +312,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : ラベルID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Label ID&lt;/div&gt; 
    * @return labelIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LABEL_IDS)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getLabelIds() {
@@ -314,27 +325,26 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LABEL_IDS)
+  @JsonProperty(value = JSON_PROPERTY_LABEL_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLabelIds(List<Long> labelIds) {
+  public void setLabelIds(@jakarta.annotation.Nullable List<Long> labelIds) {
     this.labelIds = labelIds;
   }
 
-
-  public CampaignServiceSelector numberResults(Integer numberResults) {
+  public CampaignServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 2000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -342,26 +352,25 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public CampaignServiceSelector startIndex(Integer startIndex) {
+  public CampaignServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -369,14 +378,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
 
-
-  public CampaignServiceSelector userStatuses(List<CampaignServiceUserStatus> userStatuses) {
+  public CampaignServiceSelector userStatuses(@jakarta.annotation.Nullable List<CampaignServiceUserStatus> userStatuses) {
     
     this.userStatuses = userStatuses;
     return this;
@@ -390,12 +398,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get userStatuses
    * @return userStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<CampaignServiceUserStatus> getUserStatuses() {
@@ -403,25 +411,24 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatuses(List<CampaignServiceUserStatus> userStatuses) {
+  public void setUserStatuses(@jakarta.annotation.Nullable List<CampaignServiceUserStatus> userStatuses) {
     this.userStatuses = userStatuses;
   }
 
-
-  public CampaignServiceSelector createdDateRange(CampaignServiceCreatedDateRange createdDateRange) {
+  public CampaignServiceSelector createdDateRange(@jakarta.annotation.Nullable CampaignServiceCreatedDateRange createdDateRange) {
     
     this.createdDateRange = createdDateRange;
     return this;
   }
 
-   /**
+  /**
    * Get createdDateRange
    * @return createdDateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceCreatedDateRange getCreatedDateRange() {
@@ -429,25 +436,24 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDateRange(CampaignServiceCreatedDateRange createdDateRange) {
+  public void setCreatedDateRange(@jakarta.annotation.Nullable CampaignServiceCreatedDateRange createdDateRange) {
     this.createdDateRange = createdDateRange;
   }
 
-
-  public CampaignServiceSelector updatedDateRange(CampaignServiceUpdatedDateRange updatedDateRange) {
+  public CampaignServiceSelector updatedDateRange(@jakarta.annotation.Nullable CampaignServiceUpdatedDateRange updatedDateRange) {
     
     this.updatedDateRange = updatedDateRange;
     return this;
   }
 
-   /**
+  /**
    * Get updatedDateRange
    * @return updatedDateRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UPDATED_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATED_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceUpdatedDateRange getUpdatedDateRange() {
@@ -455,14 +461,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UPDATED_DATE_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_UPDATED_DATE_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUpdatedDateRange(CampaignServiceUpdatedDateRange updatedDateRange) {
+  public void setUpdatedDateRange(@jakarta.annotation.Nullable CampaignServiceUpdatedDateRange updatedDateRange) {
     this.updatedDateRange = updatedDateRange;
   }
 
-
-  public CampaignServiceSelector conversionGroupIds(List<Long> conversionGroupIds) {
+  public CampaignServiceSelector conversionGroupIds(@jakarta.annotation.Nullable List<Long> conversionGroupIds) {
     
     this.conversionGroupIds = conversionGroupIds;
     return this;
@@ -476,12 +481,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : コンバージョングループID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Conversion Group ID&lt;/div&gt; 
    * @return conversionGroupIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getConversionGroupIds() {
@@ -489,14 +494,13 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionGroupIds(List<Long> conversionGroupIds) {
+  public void setConversionGroupIds(@jakarta.annotation.Nullable List<Long> conversionGroupIds) {
     this.conversionGroupIds = conversionGroupIds;
   }
 
-
-  public CampaignServiceSelector conversionTrackerIds(List<Long> conversionTrackerIds) {
+  public CampaignServiceSelector conversionTrackerIds(@jakarta.annotation.Nullable List<Long> conversionTrackerIds) {
     
     this.conversionTrackerIds = conversionTrackerIds;
     return this;
@@ -510,12 +514,12 @@ public class CampaignServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索条件 : コンバージョントラッカーID&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search condition: Conversion Tracking ID&lt;/div&gt; 
    * @return conversionTrackerIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getConversionTrackerIds() {
@@ -523,25 +527,24 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONVERSION_TRACKER_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CONVERSION_TRACKER_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setConversionTrackerIds(List<Long> conversionTrackerIds) {
+  public void setConversionTrackerIds(@jakarta.annotation.Nullable List<Long> conversionTrackerIds) {
     this.conversionTrackerIds = conversionTrackerIds;
   }
 
-
-  public CampaignServiceSelector budgetAmountRange(CampaignServiceBudgetAmountRange budgetAmountRange) {
+  public CampaignServiceSelector budgetAmountRange(@jakarta.annotation.Nullable CampaignServiceBudgetAmountRange budgetAmountRange) {
     
     this.budgetAmountRange = budgetAmountRange;
     return this;
   }
 
-   /**
+  /**
    * Get budgetAmountRange
    * @return budgetAmountRange
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUDGET_AMOUNT_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET_AMOUNT_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceBudgetAmountRange getBudgetAmountRange() {
@@ -549,11 +552,12 @@ public class CampaignServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUDGET_AMOUNT_RANGE)
+  @JsonProperty(value = JSON_PROPERTY_BUDGET_AMOUNT_RANGE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBudgetAmountRange(CampaignServiceBudgetAmountRange budgetAmountRange) {
+  public void setBudgetAmountRange(@jakarta.annotation.Nullable CampaignServiceBudgetAmountRange budgetAmountRange) {
     this.budgetAmountRange = budgetAmountRange;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -614,10 +618,7 @@ public class CampaignServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

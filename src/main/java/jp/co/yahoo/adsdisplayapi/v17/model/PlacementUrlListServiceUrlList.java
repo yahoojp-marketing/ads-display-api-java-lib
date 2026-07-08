@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v17.model.PlacementUrlListServiceUrlActiveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; PlacementUrlListServiceUrlListオブジェクトは、URLを保持するオブジェクトです。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The objects to keep url.&lt;br&gt; This field is required in ADD operation, and is optional in SET operation. &lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   PlacementUrlListServiceUrlList.JSON_PROPERTY_PLACEMENT_URL,
   PlacementUrlListServiceUrlList.JSON_PROPERTY_URL_ACTIVE_FLG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class PlacementUrlListServiceUrlList {
   public static final String JSON_PROPERTY_PLACEMENT_URL = "placementUrl";
+  @jakarta.annotation.Nullable
   private String placementUrl;
 
   public static final String JSON_PROPERTY_URL_ACTIVE_FLG = "urlActiveFlg";
+  @jakarta.annotation.Nullable
   private PlacementUrlListServiceUrlActiveFlg urlActiveFlg;
 
   public PlacementUrlListServiceUrlList() {
   }
 
-  public PlacementUrlListServiceUrlList placementUrl(String placementUrl) {
+  public PlacementUrlListServiceUrlList placementUrl(@jakarta.annotation.Nullable String placementUrl) {
     
     this.placementUrl = placementUrl;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; プレイスメントURLです。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Url.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
    * @return placementUrl
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_URL)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPlacementUrl() {
@@ -61,25 +64,24 @@ public class PlacementUrlListServiceUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_URL)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementUrl(String placementUrl) {
+  public void setPlacementUrl(@jakarta.annotation.Nullable String placementUrl) {
     this.placementUrl = placementUrl;
   }
 
-
-  public PlacementUrlListServiceUrlList urlActiveFlg(PlacementUrlListServiceUrlActiveFlg urlActiveFlg) {
+  public PlacementUrlListServiceUrlList urlActiveFlg(@jakarta.annotation.Nullable PlacementUrlListServiceUrlActiveFlg urlActiveFlg) {
     
     this.urlActiveFlg = urlActiveFlg;
     return this;
   }
 
-   /**
+  /**
    * Get urlActiveFlg
    * @return urlActiveFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_ACTIVE_FLG)
+  @JsonProperty(value = JSON_PROPERTY_URL_ACTIVE_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public PlacementUrlListServiceUrlActiveFlg getUrlActiveFlg() {
@@ -87,11 +89,12 @@ public class PlacementUrlListServiceUrlList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_ACTIVE_FLG)
+  @JsonProperty(value = JSON_PROPERTY_URL_ACTIVE_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlActiveFlg(PlacementUrlListServiceUrlActiveFlg urlActiveFlg) {
+  public void setUrlActiveFlg(@jakarta.annotation.Nullable PlacementUrlListServiceUrlActiveFlg urlActiveFlg) {
     this.urlActiveFlg = urlActiveFlg;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class PlacementUrlListServiceUrlList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

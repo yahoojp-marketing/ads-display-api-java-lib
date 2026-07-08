@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceCustomerDataAudienceListオブジェクトは、オーディエンスリスト（顧客データ）を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがCUSTOMER_DATAの場合は、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceCustomerDataAudienceList object describes audience list (customer data). This field is optional in ADD and SET operation. &lt;br&gt; *If audienceListType is CUSTOMER_DATA, this field is required in ADD operation. &lt;/div&gt; 
@@ -29,26 +30,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   AudienceListServiceCustomerDataAudienceList.JSON_PROPERTY_DATA_DURATION
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceCustomerDataAudienceList {
   public static final String JSON_PROPERTY_DATA_DURATION = "dataDuration";
+  @jakarta.annotation.Nullable
   private Integer dataDuration;
 
   public AudienceListServiceCustomerDataAudienceList() {
   }
 
-  public AudienceListServiceCustomerDataAudienceList dataDuration(Integer dataDuration) {
+  public AudienceListServiceCustomerDataAudienceList dataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     
     this.dataDuration = dataDuration;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 行動履歴の保持期間です（1日～180日）。&lt;br&gt; このフィールドは、ADD時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Data duration for the connected user data, in days (1–180). &lt;br&gt; This field is required in ADD operation. &lt;/div&gt; 
    * @return dataDuration
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getDataDuration() {
@@ -56,11 +58,12 @@ public class AudienceListServiceCustomerDataAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DATA_DURATION)
+  @JsonProperty(value = JSON_PROPERTY_DATA_DURATION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDataDuration(Integer dataDuration) {
+  public void setDataDuration(@jakarta.annotation.Nullable Integer dataDuration) {
     this.dataDuration = dataDuration;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -93,10 +96,7 @@ public class AudienceListServiceCustomerDataAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

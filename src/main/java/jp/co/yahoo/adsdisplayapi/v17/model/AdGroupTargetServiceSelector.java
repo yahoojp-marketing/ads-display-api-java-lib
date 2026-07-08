@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceAreaSearchType;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceSortField;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceSortType;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceTargetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AdGroupTargetServiceSelectorオブジェクトは、getメソッドの検索条件（実行パラメータ）を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The AdGroupTargetServiceSelector object contains a set of criteria (parameters) for get method.&lt;/div&gt; 
@@ -43,50 +45,59 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTargetServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   AdGroupTargetServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupTargetServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nonnull
   private Long accountId;
 
   public static final String JSON_PROPERTY_AD_GROUP_IDS = "adGroupIds";
+  @jakarta.annotation.Nullable
   private List<Long> adGroupIds;
 
   public static final String JSON_PROPERTY_CAMPAIGN_IDS = "campaignIds";
+  @jakarta.annotation.Nullable
   private List<Long> campaignIds;
 
   public static final String JSON_PROPERTY_TARGET_TYPES = "targetTypes";
+  @jakarta.annotation.Nullable
   private List<AdGroupTargetServiceTargetType> targetTypes;
 
   public static final String JSON_PROPERTY_AREA_SEARCH_TYPES = "areaSearchTypes";
+  @jakarta.annotation.Nullable
   private List<AdGroupTargetServiceAreaSearchType> areaSearchTypes;
 
   public static final String JSON_PROPERTY_SORT_FIELD = "sortField";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceSortField sortField;
 
   public static final String JSON_PROPERTY_SORT_TYPE = "sortType";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceSortType sortType;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 1000;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public AdGroupTargetServiceSelector() {
   }
 
-  public AdGroupTargetServiceSelector accountId(Long accountId) {
+  public AdGroupTargetServiceSelector accountId(@jakarta.annotation.Nonnull Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nonnull
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public Long getAccountId() {
@@ -94,14 +105,13 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = true)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nonnull Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AdGroupTargetServiceSelector adGroupIds(List<Long> adGroupIds) {
+  public AdGroupTargetServiceSelector adGroupIds(@jakarta.annotation.Nullable List<Long> adGroupIds) {
     
     this.adGroupIds = adGroupIds;
     return this;
@@ -115,12 +125,12 @@ public class AdGroupTargetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;広告グループIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Ad group ID&lt;/div&gt; 
    * @return adGroupIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAdGroupIds() {
@@ -128,14 +138,13 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_IDS)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupIds(List<Long> adGroupIds) {
+  public void setAdGroupIds(@jakarta.annotation.Nullable List<Long> adGroupIds) {
     this.adGroupIds = adGroupIds;
   }
 
-
-  public AdGroupTargetServiceSelector campaignIds(List<Long> campaignIds) {
+  public AdGroupTargetServiceSelector campaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     
     this.campaignIds = campaignIds;
     return this;
@@ -149,12 +158,12 @@ public class AdGroupTargetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;キャンペーンIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Campaign ID&lt;/div&gt; 
    * @return campaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getCampaignIds() {
@@ -162,14 +171,13 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCampaignIds(List<Long> campaignIds) {
+  public void setCampaignIds(@jakarta.annotation.Nullable List<Long> campaignIds) {
     this.campaignIds = campaignIds;
   }
 
-
-  public AdGroupTargetServiceSelector targetTypes(List<AdGroupTargetServiceTargetType> targetTypes) {
+  public AdGroupTargetServiceSelector targetTypes(@jakarta.annotation.Nullable List<AdGroupTargetServiceTargetType> targetTypes) {
     
     this.targetTypes = targetTypes;
     return this;
@@ -183,12 +191,12 @@ public class AdGroupTargetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get targetTypes
    * @return targetTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupTargetServiceTargetType> getTargetTypes() {
@@ -196,14 +204,13 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetTypes(List<AdGroupTargetServiceTargetType> targetTypes) {
+  public void setTargetTypes(@jakarta.annotation.Nullable List<AdGroupTargetServiceTargetType> targetTypes) {
     this.targetTypes = targetTypes;
   }
 
-
-  public AdGroupTargetServiceSelector areaSearchTypes(List<AdGroupTargetServiceAreaSearchType> areaSearchTypes) {
+  public AdGroupTargetServiceSelector areaSearchTypes(@jakarta.annotation.Nullable List<AdGroupTargetServiceAreaSearchType> areaSearchTypes) {
     
     this.areaSearchTypes = areaSearchTypes;
     return this;
@@ -217,12 +224,12 @@ public class AdGroupTargetServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get areaSearchTypes
    * @return areaSearchTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AREA_SEARCH_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AREA_SEARCH_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupTargetServiceAreaSearchType> getAreaSearchTypes() {
@@ -230,25 +237,24 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AREA_SEARCH_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_AREA_SEARCH_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAreaSearchTypes(List<AdGroupTargetServiceAreaSearchType> areaSearchTypes) {
+  public void setAreaSearchTypes(@jakarta.annotation.Nullable List<AdGroupTargetServiceAreaSearchType> areaSearchTypes) {
     this.areaSearchTypes = areaSearchTypes;
   }
 
-
-  public AdGroupTargetServiceSelector sortField(AdGroupTargetServiceSortField sortField) {
+  public AdGroupTargetServiceSelector sortField(@jakarta.annotation.Nullable AdGroupTargetServiceSortField sortField) {
     
     this.sortField = sortField;
     return this;
   }
 
-   /**
+  /**
    * Get sortField
    * @return sortField
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceSortField getSortField() {
@@ -256,25 +262,24 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortField(AdGroupTargetServiceSortField sortField) {
+  public void setSortField(@jakarta.annotation.Nullable AdGroupTargetServiceSortField sortField) {
     this.sortField = sortField;
   }
 
-
-  public AdGroupTargetServiceSelector sortType(AdGroupTargetServiceSortType sortType) {
+  public AdGroupTargetServiceSelector sortType(@jakarta.annotation.Nullable AdGroupTargetServiceSortType sortType) {
     
     this.sortType = sortType;
     return this;
   }
 
-   /**
+  /**
    * Get sortType
    * @return sortType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceSortType getSortType() {
@@ -282,27 +287,26 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortType(AdGroupTargetServiceSortType sortType) {
+  public void setSortType(@jakarta.annotation.Nullable AdGroupTargetServiceSortType sortType) {
     this.sortType = sortType;
   }
 
-
-  public AdGroupTargetServiceSelector numberResults(Integer numberResults) {
+  public AdGroupTargetServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 10000
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -310,26 +314,25 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public AdGroupTargetServiceSelector startIndex(Integer startIndex) {
+  public AdGroupTargetServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -337,11 +340,12 @@ public class AdGroupTargetServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -390,10 +394,7 @@ public class AdGroupTargetServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

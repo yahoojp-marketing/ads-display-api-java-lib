@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -40,6 +40,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceTopImpactTh
 import jp.co.yahoo.adsdisplayapi.v17.model.GuaranteedAdGroupAdServiceTopPageTopicsPRAd;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdServiceAdオブジェクトは、広告を格納するコンテナです。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedAdGroupAdServiceAd object is a container for storing ads.&lt;br&gt; &lt;/div&gt; 
@@ -64,77 +65,95 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceAd.JSON_PROPERTY_TOP_PAGE_TOPICS_P_R,
   GuaranteedAdGroupAdServiceAd.JSON_PROPERTY_TALK_HEAD_VIEW
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedAdGroupAdServiceAd {
   public static final String JSON_PROPERTY_AD_TYPE = "adType";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceAdType adType;
 
   public static final String JSON_PROPERTY_MAIN_MEDIA_FORMAT = "mainMediaFormat";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceMainMediaFormat mainMediaFormat;
 
   public static final String JSON_PROPERTY_BANNER_AD = "bannerAd";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceBannerAd bannerAd;
 
   public static final String JSON_PROPERTY_CAROUSEL_AD = "carouselAd";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceCarouselAd carouselAd;
 
   public static final String JSON_PROPERTY_INSTREAM_AD = "instreamAd";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceInstreamAd instreamAd;
 
   public static final String JSON_PROPERTY_BRAND_PANEL_QUINTIE = "brandPanelQuintie";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie;
 
   public static final String JSON_PROPERTY_BRAND_PANEL_PANORAMA = "brandPanelPanorama";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama;
 
   public static final String JSON_PROPERTY_BRAND_PANEL_PANORAMA_PANEL_SWITCH = "brandPanelPanoramaPanelSwitch";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd brandPanelPanoramaPanelSwitch;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_SQUARE = "topImpactSquare";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_QUINTIE = "topImpactQuintie";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_THEATER = "topImpactTheater";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactTheater topImpactTheater;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_PRIME_DISPLAY_DOUBLE = "topImpactPrimeDisplayDouble";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_PANORAMA = "topImpactPanorama";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_VISION = "topImpactPanoramaSideVision";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision topImpactPanoramaSideVision;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH = "topImpactPanoramaSideSwitch";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch topImpactPanoramaSideSwitch;
 
   public static final String JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH = "topImpactPanoramaPanelSwitch";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch;
 
   public static final String JSON_PROPERTY_TOP_PAGE_TOPICS_P_R = "topPageTopicsPR";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTopPageTopicsPRAd topPageTopicsPR;
 
   public static final String JSON_PROPERTY_TALK_HEAD_VIEW = "talkHeadView";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceTalkHeadViewAd talkHeadView;
 
   public GuaranteedAdGroupAdServiceAd() {
   }
 
-  public GuaranteedAdGroupAdServiceAd adType(GuaranteedAdGroupAdServiceAdType adType) {
+  public GuaranteedAdGroupAdServiceAd adType(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceAdType adType) {
     
     this.adType = adType;
     return this;
   }
 
-   /**
+  /**
    * Get adType
    * @return adType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceAdType getAdType() {
@@ -142,25 +161,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AD_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdType(GuaranteedAdGroupAdServiceAdType adType) {
+  public void setAdType(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceAdType adType) {
     this.adType = adType;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd mainMediaFormat(GuaranteedAdGroupAdServiceMainMediaFormat mainMediaFormat) {
+  public GuaranteedAdGroupAdServiceAd mainMediaFormat(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceMainMediaFormat mainMediaFormat) {
     
     this.mainMediaFormat = mainMediaFormat;
     return this;
   }
 
-   /**
+  /**
    * Get mainMediaFormat
    * @return mainMediaFormat
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MAIN_MEDIA_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MAIN_MEDIA_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceMainMediaFormat getMainMediaFormat() {
@@ -168,25 +186,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MAIN_MEDIA_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MAIN_MEDIA_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMainMediaFormat(GuaranteedAdGroupAdServiceMainMediaFormat mainMediaFormat) {
+  public void setMainMediaFormat(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceMainMediaFormat mainMediaFormat) {
     this.mainMediaFormat = mainMediaFormat;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd bannerAd(GuaranteedAdGroupAdServiceBannerAd bannerAd) {
+  public GuaranteedAdGroupAdServiceAd bannerAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBannerAd bannerAd) {
     
     this.bannerAd = bannerAd;
     return this;
   }
 
-   /**
+  /**
    * Get bannerAd
    * @return bannerAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BANNER_AD)
+  @JsonProperty(value = JSON_PROPERTY_BANNER_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceBannerAd getBannerAd() {
@@ -194,25 +211,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BANNER_AD)
+  @JsonProperty(value = JSON_PROPERTY_BANNER_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBannerAd(GuaranteedAdGroupAdServiceBannerAd bannerAd) {
+  public void setBannerAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBannerAd bannerAd) {
     this.bannerAd = bannerAd;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd carouselAd(GuaranteedAdGroupAdServiceCarouselAd carouselAd) {
+  public GuaranteedAdGroupAdServiceAd carouselAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceCarouselAd carouselAd) {
     
     this.carouselAd = carouselAd;
     return this;
   }
 
-   /**
+  /**
    * Get carouselAd
    * @return carouselAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAROUSEL_AD)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSEL_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceCarouselAd getCarouselAd() {
@@ -220,25 +236,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAROUSEL_AD)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSEL_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCarouselAd(GuaranteedAdGroupAdServiceCarouselAd carouselAd) {
+  public void setCarouselAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceCarouselAd carouselAd) {
     this.carouselAd = carouselAd;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd instreamAd(GuaranteedAdGroupAdServiceInstreamAd instreamAd) {
+  public GuaranteedAdGroupAdServiceAd instreamAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceInstreamAd instreamAd) {
     
     this.instreamAd = instreamAd;
     return this;
   }
 
-   /**
+  /**
    * Get instreamAd
    * @return instreamAd
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSTREAM_AD)
+  @JsonProperty(value = JSON_PROPERTY_INSTREAM_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceInstreamAd getInstreamAd() {
@@ -246,25 +261,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSTREAM_AD)
+  @JsonProperty(value = JSON_PROPERTY_INSTREAM_AD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInstreamAd(GuaranteedAdGroupAdServiceInstreamAd instreamAd) {
+  public void setInstreamAd(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceInstreamAd instreamAd) {
     this.instreamAd = instreamAd;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd brandPanelQuintie(GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie) {
+  public GuaranteedAdGroupAdServiceAd brandPanelQuintie(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie) {
     
     this.brandPanelQuintie = brandPanelQuintie;
     return this;
   }
 
-   /**
+  /**
    * Get brandPanelQuintie
    * @return brandPanelQuintie
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_PANEL_QUINTIE)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_PANEL_QUINTIE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceBrandPanelQuintie getBrandPanelQuintie() {
@@ -272,25 +286,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_PANEL_QUINTIE)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_PANEL_QUINTIE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandPanelQuintie(GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie) {
+  public void setBrandPanelQuintie(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBrandPanelQuintie brandPanelQuintie) {
     this.brandPanelQuintie = brandPanelQuintie;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd brandPanelPanorama(GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama) {
+  public GuaranteedAdGroupAdServiceAd brandPanelPanorama(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama) {
     
     this.brandPanelPanorama = brandPanelPanorama;
     return this;
   }
 
-   /**
+  /**
    * Get brandPanelPanorama
    * @return brandPanelPanorama
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_PANEL_PANORAMA)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_PANEL_PANORAMA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceBrandPanelPanorama getBrandPanelPanorama() {
@@ -298,25 +311,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_PANEL_PANORAMA)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_PANEL_PANORAMA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandPanelPanorama(GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama) {
+  public void setBrandPanelPanorama(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBrandPanelPanorama brandPanelPanorama) {
     this.brandPanelPanorama = brandPanelPanorama;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd brandPanelPanoramaPanelSwitch(GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd brandPanelPanoramaPanelSwitch) {
+  public GuaranteedAdGroupAdServiceAd brandPanelPanoramaPanelSwitch(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd brandPanelPanoramaPanelSwitch) {
     
     this.brandPanelPanoramaPanelSwitch = brandPanelPanoramaPanelSwitch;
     return this;
   }
 
-   /**
+  /**
    * Get brandPanelPanoramaPanelSwitch
    * @return brandPanelPanoramaPanelSwitch
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BRAND_PANEL_PANORAMA_PANEL_SWITCH)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_PANEL_PANORAMA_PANEL_SWITCH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd getBrandPanelPanoramaPanelSwitch() {
@@ -324,25 +336,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BRAND_PANEL_PANORAMA_PANEL_SWITCH)
+  @JsonProperty(value = JSON_PROPERTY_BRAND_PANEL_PANORAMA_PANEL_SWITCH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBrandPanelPanoramaPanelSwitch(GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd brandPanelPanoramaPanelSwitch) {
+  public void setBrandPanelPanoramaPanelSwitch(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceBrandPanelPanoramaPanelSwitchAd brandPanelPanoramaPanelSwitch) {
     this.brandPanelPanoramaPanelSwitch = brandPanelPanoramaPanelSwitch;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactSquare(GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare) {
+  public GuaranteedAdGroupAdServiceAd topImpactSquare(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare) {
     
     this.topImpactSquare = topImpactSquare;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactSquare
    * @return topImpactSquare
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_SQUARE)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_SQUARE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactSquare getTopImpactSquare() {
@@ -350,25 +361,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_SQUARE)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_SQUARE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactSquare(GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare) {
+  public void setTopImpactSquare(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactSquare topImpactSquare) {
     this.topImpactSquare = topImpactSquare;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactQuintie(GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie) {
+  public GuaranteedAdGroupAdServiceAd topImpactQuintie(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie) {
     
     this.topImpactQuintie = topImpactQuintie;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactQuintie
    * @return topImpactQuintie
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_QUINTIE)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_QUINTIE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactQuintie getTopImpactQuintie() {
@@ -376,25 +386,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_QUINTIE)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_QUINTIE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactQuintie(GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie) {
+  public void setTopImpactQuintie(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactQuintie topImpactQuintie) {
     this.topImpactQuintie = topImpactQuintie;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactTheater(GuaranteedAdGroupAdServiceTopImpactTheater topImpactTheater) {
+  public GuaranteedAdGroupAdServiceAd topImpactTheater(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactTheater topImpactTheater) {
     
     this.topImpactTheater = topImpactTheater;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactTheater
    * @return topImpactTheater
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_THEATER)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_THEATER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactTheater getTopImpactTheater() {
@@ -402,25 +411,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_THEATER)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_THEATER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactTheater(GuaranteedAdGroupAdServiceTopImpactTheater topImpactTheater) {
+  public void setTopImpactTheater(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactTheater topImpactTheater) {
     this.topImpactTheater = topImpactTheater;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactPrimeDisplayDouble(GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble) {
+  public GuaranteedAdGroupAdServiceAd topImpactPrimeDisplayDouble(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble) {
     
     this.topImpactPrimeDisplayDouble = topImpactPrimeDisplayDouble;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactPrimeDisplayDouble
    * @return topImpactPrimeDisplayDouble
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PRIME_DISPLAY_DOUBLE)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PRIME_DISPLAY_DOUBLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble getTopImpactPrimeDisplayDouble() {
@@ -428,25 +436,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PRIME_DISPLAY_DOUBLE)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PRIME_DISPLAY_DOUBLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactPrimeDisplayDouble(GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble) {
+  public void setTopImpactPrimeDisplayDouble(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPrimeDisplayDouble topImpactPrimeDisplayDouble) {
     this.topImpactPrimeDisplayDouble = topImpactPrimeDisplayDouble;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactPanorama(GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama) {
+  public GuaranteedAdGroupAdServiceAd topImpactPanorama(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama) {
     
     this.topImpactPanorama = topImpactPanorama;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactPanorama
    * @return topImpactPanorama
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactPanorama getTopImpactPanorama() {
@@ -454,25 +461,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactPanorama(GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama) {
+  public void setTopImpactPanorama(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanorama topImpactPanorama) {
     this.topImpactPanorama = topImpactPanorama;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactPanoramaSideVision(GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision topImpactPanoramaSideVision) {
+  public GuaranteedAdGroupAdServiceAd topImpactPanoramaSideVision(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision topImpactPanoramaSideVision) {
     
     this.topImpactPanoramaSideVision = topImpactPanoramaSideVision;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactPanoramaSideVision
    * @return topImpactPanoramaSideVision
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_VISION)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_VISION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision getTopImpactPanoramaSideVision() {
@@ -480,25 +486,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_VISION)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_VISION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactPanoramaSideVision(GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision topImpactPanoramaSideVision) {
+  public void setTopImpactPanoramaSideVision(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanoramaSideVision topImpactPanoramaSideVision) {
     this.topImpactPanoramaSideVision = topImpactPanoramaSideVision;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactPanoramaSideSwitch(GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch topImpactPanoramaSideSwitch) {
+  public GuaranteedAdGroupAdServiceAd topImpactPanoramaSideSwitch(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch topImpactPanoramaSideSwitch) {
     
     this.topImpactPanoramaSideSwitch = topImpactPanoramaSideSwitch;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactPanoramaSideSwitch
    * @return topImpactPanoramaSideSwitch
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch getTopImpactPanoramaSideSwitch() {
@@ -506,25 +511,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA_SIDE_SWITCH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactPanoramaSideSwitch(GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch topImpactPanoramaSideSwitch) {
+  public void setTopImpactPanoramaSideSwitch(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanoramaSideSwitch topImpactPanoramaSideSwitch) {
     this.topImpactPanoramaSideSwitch = topImpactPanoramaSideSwitch;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topImpactPanoramaPanelSwitch(GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch) {
+  public GuaranteedAdGroupAdServiceAd topImpactPanoramaPanelSwitch(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch) {
     
     this.topImpactPanoramaPanelSwitch = topImpactPanoramaPanelSwitch;
     return this;
   }
 
-   /**
+  /**
    * Get topImpactPanoramaPanelSwitch
    * @return topImpactPanoramaPanelSwitch
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd getTopImpactPanoramaPanelSwitch() {
@@ -532,25 +536,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH)
+  @JsonProperty(value = JSON_PROPERTY_TOP_IMPACT_PANORAMA_PANEL_SWITCH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopImpactPanoramaPanelSwitch(GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch) {
+  public void setTopImpactPanoramaPanelSwitch(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopImpactPanoramaPanelSwitchAd topImpactPanoramaPanelSwitch) {
     this.topImpactPanoramaPanelSwitch = topImpactPanoramaPanelSwitch;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd topPageTopicsPR(GuaranteedAdGroupAdServiceTopPageTopicsPRAd topPageTopicsPR) {
+  public GuaranteedAdGroupAdServiceAd topPageTopicsPR(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopPageTopicsPRAd topPageTopicsPR) {
     
     this.topPageTopicsPR = topPageTopicsPR;
     return this;
   }
 
-   /**
+  /**
    * Get topPageTopicsPR
    * @return topPageTopicsPR
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOP_PAGE_TOPICS_P_R)
+  @JsonProperty(value = JSON_PROPERTY_TOP_PAGE_TOPICS_P_R, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTopPageTopicsPRAd getTopPageTopicsPR() {
@@ -558,25 +561,24 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOP_PAGE_TOPICS_P_R)
+  @JsonProperty(value = JSON_PROPERTY_TOP_PAGE_TOPICS_P_R, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTopPageTopicsPR(GuaranteedAdGroupAdServiceTopPageTopicsPRAd topPageTopicsPR) {
+  public void setTopPageTopicsPR(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTopPageTopicsPRAd topPageTopicsPR) {
     this.topPageTopicsPR = topPageTopicsPR;
   }
 
-
-  public GuaranteedAdGroupAdServiceAd talkHeadView(GuaranteedAdGroupAdServiceTalkHeadViewAd talkHeadView) {
+  public GuaranteedAdGroupAdServiceAd talkHeadView(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTalkHeadViewAd talkHeadView) {
     
     this.talkHeadView = talkHeadView;
     return this;
   }
 
-   /**
+  /**
    * Get talkHeadView
    * @return talkHeadView
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TALK_HEAD_VIEW)
+  @JsonProperty(value = JSON_PROPERTY_TALK_HEAD_VIEW, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceTalkHeadViewAd getTalkHeadView() {
@@ -584,11 +586,12 @@ public class GuaranteedAdGroupAdServiceAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TALK_HEAD_VIEW)
+  @JsonProperty(value = JSON_PROPERTY_TALK_HEAD_VIEW, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTalkHeadView(GuaranteedAdGroupAdServiceTalkHeadViewAd talkHeadView) {
+  public void setTalkHeadView(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceTalkHeadViewAd talkHeadView) {
     this.talkHeadView = talkHeadView;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -655,10 +658,7 @@ public class GuaranteedAdGroupAdServiceAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

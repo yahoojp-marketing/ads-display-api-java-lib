@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedCampaignServiceValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedCampaignServicePageオブジェクトは、取得される予約型のキャンペーンに関するエントリーを表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The GuaranteedCampaignServicePage object serves retrieved guaranteed campaign entry.&lt;/div&gt; 
@@ -33,29 +35,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedCampaignServicePage.JSON_PROPERTY_TOTAL_NUM_ENTRIES,
   GuaranteedCampaignServicePage.JSON_PROPERTY_VALUES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedCampaignServicePage {
   public static final String JSON_PROPERTY_TOTAL_NUM_ENTRIES = "totalNumEntries";
+  @jakarta.annotation.Nullable
   private Integer totalNumEntries;
 
   public static final String JSON_PROPERTY_VALUES = "values";
+  @jakarta.annotation.Nullable
   private List<GuaranteedCampaignServiceValue> values;
 
   public GuaranteedCampaignServicePage() {
   }
 
-  public GuaranteedCampaignServicePage totalNumEntries(Integer totalNumEntries) {
+  public GuaranteedCampaignServicePage totalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     
     this.totalNumEntries = totalNumEntries;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得される項目の総件数です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Total number of items to be retrieved.&lt;/div&gt; 
    * @return totalNumEntries
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getTotalNumEntries() {
@@ -63,14 +67,13 @@ public class GuaranteedCampaignServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TOTAL_NUM_ENTRIES)
+  @JsonProperty(value = JSON_PROPERTY_TOTAL_NUM_ENTRIES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTotalNumEntries(Integer totalNumEntries) {
+  public void setTotalNumEntries(@jakarta.annotation.Nullable Integer totalNumEntries) {
     this.totalNumEntries = totalNumEntries;
   }
 
-
-  public GuaranteedCampaignServicePage values(List<GuaranteedCampaignServiceValue> values) {
+  public GuaranteedCampaignServicePage values(@jakarta.annotation.Nullable List<GuaranteedCampaignServiceValue> values) {
     
     this.values = values;
     return this;
@@ -84,12 +87,12 @@ public class GuaranteedCampaignServicePage {
     return this;
   }
 
-   /**
+  /**
    * Get values
    * @return values
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<GuaranteedCampaignServiceValue> getValues() {
@@ -97,11 +100,12 @@ public class GuaranteedCampaignServicePage {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUES)
+  @JsonProperty(value = JSON_PROPERTY_VALUES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValues(List<GuaranteedCampaignServiceValue> values) {
+  public void setValues(@jakarta.annotation.Nullable List<GuaranteedCampaignServiceValue> values) {
     this.values = values;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -136,10 +140,7 @@ public class GuaranteedCampaignServicePage {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

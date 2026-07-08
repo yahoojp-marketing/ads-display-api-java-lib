@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.GuaranteedCampaignServiceFrequencyLev
 import jp.co.yahoo.adsdisplayapi.v18.model.GuaranteedCampaignServiceFrequencyTimeUnit;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCapは、ビューアブルフリークエンシー制御を表します。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; GuaranteedCampaignServiceViewableFrequencyCap object describes viewable frequency restriction.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
@@ -33,32 +34,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedCampaignServiceViewableFrequencyCap.JSON_PROPERTY_FREQUENCY_TIME_UNIT,
   GuaranteedCampaignServiceViewableFrequencyCap.JSON_PROPERTY_V_IMPS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedCampaignServiceViewableFrequencyCap {
   public static final String JSON_PROPERTY_FREQUENCY_LEVEL = "frequencyLevel";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceFrequencyLevel frequencyLevel;
 
   public static final String JSON_PROPERTY_FREQUENCY_TIME_UNIT = "frequencyTimeUnit";
+  @jakarta.annotation.Nullable
   private GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit;
 
   public static final String JSON_PROPERTY_V_IMPS = "vImps";
+  @jakarta.annotation.Nullable
   private Long vImps;
 
   public GuaranteedCampaignServiceViewableFrequencyCap() {
   }
 
-  public GuaranteedCampaignServiceViewableFrequencyCap frequencyLevel(GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
+  public GuaranteedCampaignServiceViewableFrequencyCap frequencyLevel(@jakarta.annotation.Nullable GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
     
     this.frequencyLevel = frequencyLevel;
     return this;
   }
 
-   /**
+  /**
    * Get frequencyLevel
    * @return frequencyLevel
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FREQUENCY_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_FREQUENCY_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceFrequencyLevel getFrequencyLevel() {
@@ -66,25 +70,24 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FREQUENCY_LEVEL)
+  @JsonProperty(value = JSON_PROPERTY_FREQUENCY_LEVEL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFrequencyLevel(GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
+  public void setFrequencyLevel(@jakarta.annotation.Nullable GuaranteedCampaignServiceFrequencyLevel frequencyLevel) {
     this.frequencyLevel = frequencyLevel;
   }
 
-
-  public GuaranteedCampaignServiceViewableFrequencyCap frequencyTimeUnit(GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
+  public GuaranteedCampaignServiceViewableFrequencyCap frequencyTimeUnit(@jakarta.annotation.Nullable GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
     
     this.frequencyTimeUnit = frequencyTimeUnit;
     return this;
   }
 
-   /**
+  /**
    * Get frequencyTimeUnit
    * @return frequencyTimeUnit
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_FREQUENCY_TIME_UNIT)
+  @JsonProperty(value = JSON_PROPERTY_FREQUENCY_TIME_UNIT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedCampaignServiceFrequencyTimeUnit getFrequencyTimeUnit() {
@@ -92,25 +95,24 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_FREQUENCY_TIME_UNIT)
+  @JsonProperty(value = JSON_PROPERTY_FREQUENCY_TIME_UNIT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setFrequencyTimeUnit(GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
+  public void setFrequencyTimeUnit(@jakarta.annotation.Nullable GuaranteedCampaignServiceFrequencyTimeUnit frequencyTimeUnit) {
     this.frequencyTimeUnit = frequencyTimeUnit;
   }
 
-
-  public GuaranteedCampaignServiceViewableFrequencyCap vImps(Long vImps) {
+  public GuaranteedCampaignServiceViewableFrequencyCap vImps(@jakarta.annotation.Nullable Long vImps) {
     
     this.vImps = vImps;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 同一ユーザに対する広告の最大ビューアブルインプレッション数です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Maximum number of ad viewable impressions to same user.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return vImps
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_V_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_V_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getvImps() {
@@ -118,11 +120,12 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_V_IMPS)
+  @JsonProperty(value = JSON_PROPERTY_V_IMPS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setvImps(Long vImps) {
+  public void setvImps(@jakarta.annotation.Nullable Long vImps) {
     this.vImps = vImps;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -159,10 +162,7 @@ public class GuaranteedCampaignServiceViewableFrequencyCap {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

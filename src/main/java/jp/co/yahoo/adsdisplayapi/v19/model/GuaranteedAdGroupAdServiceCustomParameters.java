@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedAdGroupAdServiceCustomParameter;
 import jp.co.yahoo.adsdisplayapi.v19.model.GuaranteedAdGroupAdServiceIsRemoveFlg;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;GuaranteedAdGroupAdServiceCustomParametersは、カスタムパラメータの設定を表します。&lt;br&gt; finalUrlを指定するときのみ、任意で指定できます。&lt;br&gt; ※現在利用できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;GuaranteedAdGroupAdServiceCustomParameters displays the setting of custom parameters.&lt;br&gt; This field can be optionally specified only when specifying finalUrl.&lt;br&gt; * Not Available. &lt;/div&gt; 
@@ -34,29 +36,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   GuaranteedAdGroupAdServiceCustomParameters.JSON_PROPERTY_IS_REMOVE,
   GuaranteedAdGroupAdServiceCustomParameters.JSON_PROPERTY_PARAMETERS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class GuaranteedAdGroupAdServiceCustomParameters {
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
+  @jakarta.annotation.Nullable
   private GuaranteedAdGroupAdServiceIsRemoveFlg isRemove;
 
   public static final String JSON_PROPERTY_PARAMETERS = "parameters";
+  @jakarta.annotation.Nullable
   private List<GuaranteedAdGroupAdServiceCustomParameter> parameters;
 
   public GuaranteedAdGroupAdServiceCustomParameters() {
   }
 
-  public GuaranteedAdGroupAdServiceCustomParameters isRemove(GuaranteedAdGroupAdServiceIsRemoveFlg isRemove) {
+  public GuaranteedAdGroupAdServiceCustomParameters isRemove(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceIsRemoveFlg isRemove) {
     
     this.isRemove = isRemove;
     return this;
   }
 
-   /**
+  /**
    * Get isRemove
    * @return isRemove
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public GuaranteedAdGroupAdServiceIsRemoveFlg getIsRemove() {
@@ -64,14 +68,13 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemove(GuaranteedAdGroupAdServiceIsRemoveFlg isRemove) {
+  public void setIsRemove(@jakarta.annotation.Nullable GuaranteedAdGroupAdServiceIsRemoveFlg isRemove) {
     this.isRemove = isRemove;
   }
 
-
-  public GuaranteedAdGroupAdServiceCustomParameters parameters(List<GuaranteedAdGroupAdServiceCustomParameter> parameters) {
+  public GuaranteedAdGroupAdServiceCustomParameters parameters(@jakarta.annotation.Nullable List<GuaranteedAdGroupAdServiceCustomParameter> parameters) {
     
     this.parameters = parameters;
     return this;
@@ -85,12 +88,12 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
     return this;
   }
 
-   /**
+  /**
    * Get parameters
    * @return parameters
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<GuaranteedAdGroupAdServiceCustomParameter> getParameters() {
@@ -98,11 +101,12 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PARAMETERS)
+  @JsonProperty(value = JSON_PROPERTY_PARAMETERS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setParameters(List<GuaranteedAdGroupAdServiceCustomParameter> parameters) {
+  public void setParameters(@jakarta.annotation.Nullable List<GuaranteedAdGroupAdServiceCustomParameter> parameters) {
     this.parameters = parameters;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -137,10 +141,7 @@ public class GuaranteedAdGroupAdServiceCustomParameters {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

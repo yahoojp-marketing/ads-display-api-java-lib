@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,12 +21,14 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupAdServiceDescriptionAsset;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupAdServiceHeadlineAsset;
 import jp.co.yahoo.adsdisplayapi.v19.model.AdGroupAdServiceMediaAsset;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceAssetオブジェクトは、レスポンシブディスプレイ広告の情報を表します。&lt;br&gt; 詳細は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044228?language&#x3D;ja\&quot; target&#x3D;\&quot;_blank\&quot;&gt;レスポンシブ（画像）&lt;/a&gt;を参照してください。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※mainMediaFormatがIMAGEの場合にのみ指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceAsset object describes the responsive display ad information.&lt;br&gt; More details are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044228?language&#x3D;en_US\&quot;&gt;Responsive（Image）&lt;/a&gt;.&lt;br&gt; This field is optional.&lt;br&gt; *If mainMediaFormat is IMAGE, this field can be specified. &lt;/div&gt; 
@@ -36,21 +38,24 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceAsset.JSON_PROPERTY_HEADLINE_ASSETS,
   AdGroupAdServiceAsset.JSON_PROPERTY_DESCRIPTION_ASSETS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceAsset {
   public static final String JSON_PROPERTY_MEDIA_ASSETS = "mediaAssets";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceMediaAsset> mediaAssets;
 
   public static final String JSON_PROPERTY_HEADLINE_ASSETS = "headlineAssets";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceHeadlineAsset> headlineAssets;
 
   public static final String JSON_PROPERTY_DESCRIPTION_ASSETS = "descriptionAssets";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceDescriptionAsset> descriptionAssets;
 
   public AdGroupAdServiceAsset() {
   }
 
-  public AdGroupAdServiceAsset mediaAssets(List<AdGroupAdServiceMediaAsset> mediaAssets) {
+  public AdGroupAdServiceAsset mediaAssets(@jakarta.annotation.Nullable List<AdGroupAdServiceMediaAsset> mediaAssets) {
     
     this.mediaAssets = mediaAssets;
     return this;
@@ -64,12 +69,12 @@ public class AdGroupAdServiceAsset {
     return this;
   }
 
-   /**
+  /**
    * Get mediaAssets
    * @return mediaAssets
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ASSETS)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ASSETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceMediaAsset> getMediaAssets() {
@@ -77,14 +82,13 @@ public class AdGroupAdServiceAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ASSETS)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ASSETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaAssets(List<AdGroupAdServiceMediaAsset> mediaAssets) {
+  public void setMediaAssets(@jakarta.annotation.Nullable List<AdGroupAdServiceMediaAsset> mediaAssets) {
     this.mediaAssets = mediaAssets;
   }
 
-
-  public AdGroupAdServiceAsset headlineAssets(List<AdGroupAdServiceHeadlineAsset> headlineAssets) {
+  public AdGroupAdServiceAsset headlineAssets(@jakarta.annotation.Nullable List<AdGroupAdServiceHeadlineAsset> headlineAssets) {
     
     this.headlineAssets = headlineAssets;
     return this;
@@ -98,12 +102,12 @@ public class AdGroupAdServiceAsset {
     return this;
   }
 
-   /**
+  /**
    * Get headlineAssets
    * @return headlineAssets
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_HEADLINE_ASSETS)
+  @JsonProperty(value = JSON_PROPERTY_HEADLINE_ASSETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceHeadlineAsset> getHeadlineAssets() {
@@ -111,14 +115,13 @@ public class AdGroupAdServiceAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_HEADLINE_ASSETS)
+  @JsonProperty(value = JSON_PROPERTY_HEADLINE_ASSETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setHeadlineAssets(List<AdGroupAdServiceHeadlineAsset> headlineAssets) {
+  public void setHeadlineAssets(@jakarta.annotation.Nullable List<AdGroupAdServiceHeadlineAsset> headlineAssets) {
     this.headlineAssets = headlineAssets;
   }
 
-
-  public AdGroupAdServiceAsset descriptionAssets(List<AdGroupAdServiceDescriptionAsset> descriptionAssets) {
+  public AdGroupAdServiceAsset descriptionAssets(@jakarta.annotation.Nullable List<AdGroupAdServiceDescriptionAsset> descriptionAssets) {
     
     this.descriptionAssets = descriptionAssets;
     return this;
@@ -132,12 +135,12 @@ public class AdGroupAdServiceAsset {
     return this;
   }
 
-   /**
+  /**
    * Get descriptionAssets
    * @return descriptionAssets
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION_ASSETS)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION_ASSETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceDescriptionAsset> getDescriptionAssets() {
@@ -145,11 +148,12 @@ public class AdGroupAdServiceAsset {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DESCRIPTION_ASSETS)
+  @JsonProperty(value = JSON_PROPERTY_DESCRIPTION_ASSETS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDescriptionAssets(List<AdGroupAdServiceDescriptionAsset> descriptionAssets) {
+  public void setDescriptionAssets(@jakarta.annotation.Nullable List<AdGroupAdServiceDescriptionAsset> descriptionAssets) {
     this.descriptionAssets = descriptionAssets;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -186,10 +190,7 @@ public class AdGroupAdServiceAsset {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,11 +21,13 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupAdServiceButtonText;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupAdServiceCarousel;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupAdServiceCarouselAdオブジェクトはカルーセル広告の情報を表します。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; ※ADD時、adTypeがCAROUSEL_ADの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupAdServiceCarouselAd object describes information of carousel ad.&lt;br&gt; This field is optional.&lt;br&gt; *If adType is CAROUSEL_AD, this field is required in ADD operation. &lt;/div&gt; 
@@ -36,35 +38,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupAdServiceCarouselAd.JSON_PROPERTY_PRINCIPAL,
   AdGroupAdServiceCarouselAd.JSON_PROPERTY_CAROUSELS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupAdServiceCarouselAd {
   public static final String JSON_PROPERTY_BUTTON_TEXT = "buttonText";
+  @jakarta.annotation.Nullable
   private AdGroupAdServiceButtonText buttonText;
 
   public static final String JSON_PROPERTY_LOGO_MEDIA_ID = "logoMediaId";
+  @jakarta.annotation.Nullable
   private Long logoMediaId;
 
   public static final String JSON_PROPERTY_PRINCIPAL = "principal";
+  @jakarta.annotation.Nullable
   private String principal;
 
   public static final String JSON_PROPERTY_CAROUSELS = "carousels";
+  @jakarta.annotation.Nullable
   private List<AdGroupAdServiceCarousel> carousels;
 
   public AdGroupAdServiceCarouselAd() {
   }
 
-  public AdGroupAdServiceCarouselAd buttonText(AdGroupAdServiceButtonText buttonText) {
+  public AdGroupAdServiceCarouselAd buttonText(@jakarta.annotation.Nullable AdGroupAdServiceButtonText buttonText) {
     
     this.buttonText = buttonText;
     return this;
   }
 
-   /**
+  /**
    * Get buttonText
    * @return buttonText
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_BUTTON_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupAdServiceButtonText getButtonText() {
@@ -72,25 +78,24 @@ public class AdGroupAdServiceCarouselAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUTTON_TEXT)
+  @JsonProperty(value = JSON_PROPERTY_BUTTON_TEXT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setButtonText(AdGroupAdServiceButtonText buttonText) {
+  public void setButtonText(@jakarta.annotation.Nullable AdGroupAdServiceButtonText buttonText) {
     this.buttonText = buttonText;
   }
 
-
-  public AdGroupAdServiceCarouselAd logoMediaId(Long logoMediaId) {
+  public AdGroupAdServiceCarouselAd logoMediaId(@jakarta.annotation.Nullable Long logoMediaId) {
     
     this.logoMediaId = logoMediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ロゴの画像IDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Logo image ID.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; &lt;/div&gt; 
    * @return logoMediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getLogoMediaId() {
@@ -98,25 +103,24 @@ public class AdGroupAdServiceCarouselAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LOGO_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_LOGO_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLogoMediaId(Long logoMediaId) {
+  public void setLogoMediaId(@jakarta.annotation.Nullable Long logoMediaId) {
     this.logoMediaId = logoMediaId;
   }
 
-
-  public AdGroupAdServiceCarouselAd principal(String principal) {
+  public AdGroupAdServiceCarouselAd principal(@jakarta.annotation.Nullable String principal) {
     
     this.principal = principal;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告の主体者表記です。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は省略可能となります。&lt;br&gt; ただし、キャンペーン目的「アプリ訴求」の場合は、キャンペーンのアプリ名と同一の値が自動的に設定され、アプリ名以外の値は設定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Advertiser indication of the ad.&lt;br&gt; This field is required in ADD operation, and will be optional in SET operation.&lt;br&gt; However, if campaignGoal is APP_PROMOTION, it will automatically be set to the same value as appName of campaign, and it cannot be set to any other value. &lt;/div&gt; 
    * @return principal
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PRINCIPAL)
+  @JsonProperty(value = JSON_PROPERTY_PRINCIPAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPrincipal() {
@@ -124,14 +128,13 @@ public class AdGroupAdServiceCarouselAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PRINCIPAL)
+  @JsonProperty(value = JSON_PROPERTY_PRINCIPAL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPrincipal(String principal) {
+  public void setPrincipal(@jakarta.annotation.Nullable String principal) {
     this.principal = principal;
   }
 
-
-  public AdGroupAdServiceCarouselAd carousels(List<AdGroupAdServiceCarousel> carousels) {
+  public AdGroupAdServiceCarouselAd carousels(@jakarta.annotation.Nullable List<AdGroupAdServiceCarousel> carousels) {
     
     this.carousels = carousels;
     return this;
@@ -145,12 +148,12 @@ public class AdGroupAdServiceCarouselAd {
     return this;
   }
 
-   /**
+  /**
    * Get carousels
    * @return carousels
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CAROUSELS)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AdGroupAdServiceCarousel> getCarousels() {
@@ -158,11 +161,12 @@ public class AdGroupAdServiceCarouselAd {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CAROUSELS)
+  @JsonProperty(value = JSON_PROPERTY_CAROUSELS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCarousels(List<AdGroupAdServiceCarousel> carousels) {
+  public void setCarousels(@jakarta.annotation.Nullable List<AdGroupAdServiceCarousel> carousels) {
     this.carousels = carousels;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -201,10 +205,7 @@ public class AdGroupAdServiceCarouselAd {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

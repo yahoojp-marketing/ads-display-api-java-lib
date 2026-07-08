@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -26,6 +26,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.AppLinkServiceAppVendor;
 import jp.co.yahoo.adsdisplayapi.v18.model.AppLinkServiceCategoryType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AppLinkオブジェクトは、アプリ連携の詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The App Link object is a container for storing app link information.&lt;/div&gt; 
@@ -39,44 +40,51 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AppLink.JSON_PROPERTY_APP_VENDOR,
   AppLink.JSON_PROPERTY_APP_LINK_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AppLink {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_CATEGORY_TYPE = "categoryType";
+  @jakarta.annotation.Nullable
   private AppLinkServiceCategoryType categoryType;
 
   public static final String JSON_PROPERTY_LINK_ID = "linkId";
+  @jakarta.annotation.Nullable
   private String linkId;
 
   public static final String JSON_PROPERTY_APP_PLATFORM = "appPlatform";
+  @jakarta.annotation.Nullable
   private AppLinkServiceAppPlatform appPlatform;
 
   public static final String JSON_PROPERTY_APP_ID = "appId";
+  @jakarta.annotation.Nullable
   private String appId;
 
   public static final String JSON_PROPERTY_APP_VENDOR = "appVendor";
+  @jakarta.annotation.Nullable
   private AppLinkServiceAppVendor appVendor;
 
   public static final String JSON_PROPERTY_APP_LINK_STATUS = "appLinkStatus";
+  @jakarta.annotation.Nullable
   private AppLinkServiceAppLinkStatus appLinkStatus;
 
   public AppLink() {
   }
 
-  public AppLink accountId(Long accountId) {
+  public AppLink accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -84,25 +92,24 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public AppLink categoryType(AppLinkServiceCategoryType categoryType) {
+  public AppLink categoryType(@jakarta.annotation.Nullable AppLinkServiceCategoryType categoryType) {
     
     this.categoryType = categoryType;
     return this;
   }
 
-   /**
+  /**
    * Get categoryType
    * @return categoryType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CATEGORY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CATEGORY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AppLinkServiceCategoryType getCategoryType() {
@@ -110,25 +117,24 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CATEGORY_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CATEGORY_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCategoryType(AppLinkServiceCategoryType categoryType) {
+  public void setCategoryType(@jakarta.annotation.Nullable AppLinkServiceCategoryType categoryType) {
     this.categoryType = categoryType;
   }
 
-
-  public AppLink linkId(String linkId) {
+  public AppLink linkId(@jakarta.annotation.Nullable String linkId) {
     
     this.linkId = linkId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンクIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Link ID. &lt;/div&gt; 
    * @return linkId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINK_ID)
+  @JsonProperty(value = JSON_PROPERTY_LINK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLinkId() {
@@ -136,25 +142,24 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINK_ID)
+  @JsonProperty(value = JSON_PROPERTY_LINK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLinkId(String linkId) {
+  public void setLinkId(@jakarta.annotation.Nullable String linkId) {
     this.linkId = linkId;
   }
 
-
-  public AppLink appPlatform(AppLinkServiceAppPlatform appPlatform) {
+  public AppLink appPlatform(@jakarta.annotation.Nullable AppLinkServiceAppPlatform appPlatform) {
     
     this.appPlatform = appPlatform;
     return this;
   }
 
-   /**
+  /**
    * Get appPlatform
    * @return appPlatform
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AppLinkServiceAppPlatform getAppPlatform() {
@@ -162,25 +167,24 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppPlatform(AppLinkServiceAppPlatform appPlatform) {
+  public void setAppPlatform(@jakarta.annotation.Nullable AppLinkServiceAppPlatform appPlatform) {
     this.appPlatform = appPlatform;
   }
 
-
-  public AppLink appId(String appId) {
+  public AppLink appId(@jakarta.annotation.Nullable String appId) {
     
     this.appId = appId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アプリIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; App ID. &lt;/div&gt; 
    * @return appId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppId() {
@@ -188,25 +192,24 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppId(String appId) {
+  public void setAppId(@jakarta.annotation.Nullable String appId) {
     this.appId = appId;
   }
 
-
-  public AppLink appVendor(AppLinkServiceAppVendor appVendor) {
+  public AppLink appVendor(@jakarta.annotation.Nullable AppLinkServiceAppVendor appVendor) {
     
     this.appVendor = appVendor;
     return this;
   }
 
-   /**
+  /**
    * Get appVendor
    * @return appVendor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AppLinkServiceAppVendor getAppVendor() {
@@ -214,25 +217,24 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendor(AppLinkServiceAppVendor appVendor) {
+  public void setAppVendor(@jakarta.annotation.Nullable AppLinkServiceAppVendor appVendor) {
     this.appVendor = appVendor;
   }
 
-
-  public AppLink appLinkStatus(AppLinkServiceAppLinkStatus appLinkStatus) {
+  public AppLink appLinkStatus(@jakarta.annotation.Nullable AppLinkServiceAppLinkStatus appLinkStatus) {
     
     this.appLinkStatus = appLinkStatus;
     return this;
   }
 
-   /**
+  /**
    * Get appLinkStatus
    * @return appLinkStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_LINK_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AppLinkServiceAppLinkStatus getAppLinkStatus() {
@@ -240,11 +242,12 @@ public class AppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_LINK_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APP_LINK_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppLinkStatus(AppLinkServiceAppLinkStatus appLinkStatus) {
+  public void setAppLinkStatus(@jakarta.annotation.Nullable AppLinkServiceAppLinkStatus appLinkStatus) {
     this.appLinkStatus = appLinkStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -289,10 +292,7 @@ public class AppLink {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

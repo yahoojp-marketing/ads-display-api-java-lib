@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.BaseAccountServiceAccountStatus;
 import jp.co.yahoo.adsdisplayapi.v19.model.BaseAccountServiceAuthType;
@@ -29,6 +30,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.BaseAccountServiceIncludeMccAccount;
 import jp.co.yahoo.adsdisplayapi.v19.model.BaseAccountServiceIncludeTestAccount;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;BaseAccountServiceSelectorオブジェクトは、取得するアカウントを指定します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The BaseAccountServiceSelector object is used to select accounts for acquisition.&lt;/div&gt; 
@@ -44,39 +46,48 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   BaseAccountServiceSelector.JSON_PROPERTY_NUMBER_RESULTS,
   BaseAccountServiceSelector.JSON_PROPERTY_START_INDEX
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class BaseAccountServiceSelector {
   public static final String JSON_PROPERTY_ACCOUNT_IDS = "accountIds";
+  @jakarta.annotation.Nullable
   private List<Long> accountIds;
 
   public static final String JSON_PROPERTY_ACCOUNT_NAME = "accountName";
+  @jakarta.annotation.Nullable
   private String accountName;
 
   public static final String JSON_PROPERTY_ACCOUNT_STATUSES = "accountStatuses";
+  @jakarta.annotation.Nullable
   private List<BaseAccountServiceAccountStatus> accountStatuses;
 
   public static final String JSON_PROPERTY_AUTH_TYPE = "authType";
+  @jakarta.annotation.Nullable
   private BaseAccountServiceAuthType authType;
 
   public static final String JSON_PROPERTY_INCLUDE_ADMIN_AUTH = "includeAdminAuth";
+  @jakarta.annotation.Nullable
   private BaseAccountServiceIncludeAdminAuth includeAdminAuth;
 
   public static final String JSON_PROPERTY_INCLUDE_MCC_ACCOUNT = "includeMccAccount";
+  @jakarta.annotation.Nullable
   private BaseAccountServiceIncludeMccAccount includeMccAccount;
 
   public static final String JSON_PROPERTY_INCLUDE_TEST_ACCOUNT = "includeTestAccount";
+  @jakarta.annotation.Nullable
   private BaseAccountServiceIncludeTestAccount includeTestAccount;
 
   public static final String JSON_PROPERTY_NUMBER_RESULTS = "numberResults";
+  @jakarta.annotation.Nullable
   private Integer numberResults = 200;
 
   public static final String JSON_PROPERTY_START_INDEX = "startIndex";
+  @jakarta.annotation.Nullable
   private Integer startIndex = 1;
 
   public BaseAccountServiceSelector() {
   }
 
-  public BaseAccountServiceSelector accountIds(List<Long> accountIds) {
+  public BaseAccountServiceSelector accountIds(@jakarta.annotation.Nullable List<Long> accountIds) {
     
     this.accountIds = accountIds;
     return this;
@@ -90,12 +101,12 @@ public class BaseAccountServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;指定しない場合は紐づくアカウントをすべて取得します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;If nothing is selected, all accounts are retrieved.&lt;/div&gt; 
    * @return accountIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<Long> getAccountIds() {
@@ -103,25 +114,24 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_IDS)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountIds(List<Long> accountIds) {
+  public void setAccountIds(@jakarta.annotation.Nullable List<Long> accountIds) {
     this.accountIds = accountIds;
   }
 
-
-  public BaseAccountServiceSelector accountName(String accountName) {
+  public BaseAccountServiceSelector accountName(@jakarta.annotation.Nullable String accountName) {
     
     this.accountName = accountName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウント名です。&lt;br&gt; このフィールドは、省略可能となります。&lt;br&gt; この検索条件では、大文字と小文字は区別されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account name.&lt;br&gt; This field is optional.&lt;br&gt; This searching condition is case-insensitive. &lt;/div&gt; 
    * @return accountName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAccountName() {
@@ -129,14 +139,13 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_NAME)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountName(String accountName) {
+  public void setAccountName(@jakarta.annotation.Nullable String accountName) {
     this.accountName = accountName;
   }
 
-
-  public BaseAccountServiceSelector accountStatuses(List<BaseAccountServiceAccountStatus> accountStatuses) {
+  public BaseAccountServiceSelector accountStatuses(@jakarta.annotation.Nullable List<BaseAccountServiceAccountStatus> accountStatuses) {
     
     this.accountStatuses = accountStatuses;
     return this;
@@ -150,12 +159,12 @@ public class BaseAccountServiceSelector {
     return this;
   }
 
-   /**
+  /**
    * Get accountStatuses
    * @return accountStatuses
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<BaseAccountServiceAccountStatus> getAccountStatuses() {
@@ -163,25 +172,24 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_STATUSES)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_STATUSES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountStatuses(List<BaseAccountServiceAccountStatus> accountStatuses) {
+  public void setAccountStatuses(@jakarta.annotation.Nullable List<BaseAccountServiceAccountStatus> accountStatuses) {
     this.accountStatuses = accountStatuses;
   }
 
-
-  public BaseAccountServiceSelector authType(BaseAccountServiceAuthType authType) {
+  public BaseAccountServiceSelector authType(@jakarta.annotation.Nullable BaseAccountServiceAuthType authType) {
     
     this.authType = authType;
     return this;
   }
 
-   /**
+  /**
    * Get authType
    * @return authType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUTH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUTH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BaseAccountServiceAuthType getAuthType() {
@@ -189,25 +197,24 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUTH_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_AUTH_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAuthType(BaseAccountServiceAuthType authType) {
+  public void setAuthType(@jakarta.annotation.Nullable BaseAccountServiceAuthType authType) {
     this.authType = authType;
   }
 
-
-  public BaseAccountServiceSelector includeAdminAuth(BaseAccountServiceIncludeAdminAuth includeAdminAuth) {
+  public BaseAccountServiceSelector includeAdminAuth(@jakarta.annotation.Nullable BaseAccountServiceIncludeAdminAuth includeAdminAuth) {
     
     this.includeAdminAuth = includeAdminAuth;
     return this;
   }
 
-   /**
+  /**
    * Get includeAdminAuth
    * @return includeAdminAuth
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INCLUDE_ADMIN_AUTH)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_ADMIN_AUTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BaseAccountServiceIncludeAdminAuth getIncludeAdminAuth() {
@@ -215,25 +222,24 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INCLUDE_ADMIN_AUTH)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_ADMIN_AUTH, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIncludeAdminAuth(BaseAccountServiceIncludeAdminAuth includeAdminAuth) {
+  public void setIncludeAdminAuth(@jakarta.annotation.Nullable BaseAccountServiceIncludeAdminAuth includeAdminAuth) {
     this.includeAdminAuth = includeAdminAuth;
   }
 
-
-  public BaseAccountServiceSelector includeMccAccount(BaseAccountServiceIncludeMccAccount includeMccAccount) {
+  public BaseAccountServiceSelector includeMccAccount(@jakarta.annotation.Nullable BaseAccountServiceIncludeMccAccount includeMccAccount) {
     
     this.includeMccAccount = includeMccAccount;
     return this;
   }
 
-   /**
+  /**
    * Get includeMccAccount
    * @return includeMccAccount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INCLUDE_MCC_ACCOUNT)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_MCC_ACCOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BaseAccountServiceIncludeMccAccount getIncludeMccAccount() {
@@ -241,25 +247,24 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INCLUDE_MCC_ACCOUNT)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_MCC_ACCOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIncludeMccAccount(BaseAccountServiceIncludeMccAccount includeMccAccount) {
+  public void setIncludeMccAccount(@jakarta.annotation.Nullable BaseAccountServiceIncludeMccAccount includeMccAccount) {
     this.includeMccAccount = includeMccAccount;
   }
 
-
-  public BaseAccountServiceSelector includeTestAccount(BaseAccountServiceIncludeTestAccount includeTestAccount) {
+  public BaseAccountServiceSelector includeTestAccount(@jakarta.annotation.Nullable BaseAccountServiceIncludeTestAccount includeTestAccount) {
     
     this.includeTestAccount = includeTestAccount;
     return this;
   }
 
-   /**
+  /**
    * Get includeTestAccount
    * @return includeTestAccount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INCLUDE_TEST_ACCOUNT)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_TEST_ACCOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public BaseAccountServiceIncludeTestAccount getIncludeTestAccount() {
@@ -267,27 +272,26 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INCLUDE_TEST_ACCOUNT)
+  @JsonProperty(value = JSON_PROPERTY_INCLUDE_TEST_ACCOUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIncludeTestAccount(BaseAccountServiceIncludeTestAccount includeTestAccount) {
+  public void setIncludeTestAccount(@jakarta.annotation.Nullable BaseAccountServiceIncludeTestAccount includeTestAccount) {
     this.includeTestAccount = includeTestAccount;
   }
 
-
-  public BaseAccountServiceSelector numberResults(Integer numberResults) {
+  public BaseAccountServiceSelector numberResults(@jakarta.annotation.Nullable Integer numberResults) {
     
     this.numberResults = numberResults;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;開始位置から取得する結果の数。このフィールドは、1以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The number of results to retrieve starting from the initial position. This field must be greater than or equal to 1.&lt;/div&gt; 
    * minimum: 1
    * maximum: 200
    * @return numberResults
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getNumberResults() {
@@ -295,26 +299,25 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NUMBER_RESULTS)
+  @JsonProperty(value = JSON_PROPERTY_NUMBER_RESULTS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNumberResults(Integer numberResults) {
+  public void setNumberResults(@jakarta.annotation.Nullable Integer numberResults) {
     this.numberResults = numberResults;
   }
 
-
-  public BaseAccountServiceSelector startIndex(Integer startIndex) {
+  public BaseAccountServiceSelector startIndex(@jakarta.annotation.Nullable Integer startIndex) {
     
     this.startIndex = startIndex;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;取得を開始する結果セット内の位置。このフィールドは、0以上を指定する必要があります。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;The position within the result set where retrieval begins. This field must be greater than or equal to 0.&lt;/div&gt; 
    * minimum: 1
    * @return startIndex
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Integer getStartIndex() {
@@ -322,11 +325,12 @@ public class BaseAccountServiceSelector {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_START_INDEX)
+  @JsonProperty(value = JSON_PROPERTY_START_INDEX, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStartIndex(Integer startIndex) {
+  public void setStartIndex(@jakarta.annotation.Nullable Integer startIndex) {
     this.startIndex = startIndex;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -375,10 +379,7 @@ public class BaseAccountServiceSelector {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

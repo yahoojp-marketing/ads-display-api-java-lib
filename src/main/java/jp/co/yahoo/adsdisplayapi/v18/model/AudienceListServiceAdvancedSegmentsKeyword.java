@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.AudienceListServiceUnavailableKeyword;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 高度なセグメントに紐づくキーワードリストです。 ※ urlsが指定されている場合、ADDおよびSET時にこのフィールドは指定できません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Keyword list tied to Advanced segments. *If urls is specified, this field cannot be specified in ADD and SET operation. &lt;/div&gt; 
@@ -31,29 +32,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAdvancedSegmentsKeyword.JSON_PROPERTY_KEYWORD,
   AudienceListServiceAdvancedSegmentsKeyword.JSON_PROPERTY_UNAVAILABLE_KEYWORD
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceAdvancedSegmentsKeyword {
   public static final String JSON_PROPERTY_KEYWORD = "keyword";
+  @jakarta.annotation.Nullable
   private String keyword;
 
   public static final String JSON_PROPERTY_UNAVAILABLE_KEYWORD = "unavailableKeyword";
+  @jakarta.annotation.Nullable
   private AudienceListServiceUnavailableKeyword unavailableKeyword;
 
   public AudienceListServiceAdvancedSegmentsKeyword() {
   }
 
-  public AudienceListServiceAdvancedSegmentsKeyword keyword(String keyword) {
+  public AudienceListServiceAdvancedSegmentsKeyword keyword(@jakarta.annotation.Nullable String keyword) {
     
     this.keyword = keyword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; キーワードリストです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Keyword. &lt;/div&gt; 
    * @return keyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getKeyword() {
@@ -61,25 +64,24 @@ public class AudienceListServiceAdvancedSegmentsKeyword {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setKeyword(String keyword) {
+  public void setKeyword(@jakarta.annotation.Nullable String keyword) {
     this.keyword = keyword;
   }
 
-
-  public AudienceListServiceAdvancedSegmentsKeyword unavailableKeyword(AudienceListServiceUnavailableKeyword unavailableKeyword) {
+  public AudienceListServiceAdvancedSegmentsKeyword unavailableKeyword(@jakarta.annotation.Nullable AudienceListServiceUnavailableKeyword unavailableKeyword) {
     
     this.unavailableKeyword = unavailableKeyword;
     return this;
   }
 
-   /**
+  /**
    * Get unavailableKeyword
    * @return unavailableKeyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_UNAVAILABLE_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_UNAVAILABLE_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceUnavailableKeyword getUnavailableKeyword() {
@@ -87,11 +89,12 @@ public class AudienceListServiceAdvancedSegmentsKeyword {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_UNAVAILABLE_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_UNAVAILABLE_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUnavailableKeyword(AudienceListServiceUnavailableKeyword unavailableKeyword) {
+  public void setUnavailableKeyword(@jakarta.annotation.Nullable AudienceListServiceUnavailableKeyword unavailableKeyword) {
     this.unavailableKeyword = unavailableKeyword;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -126,10 +129,7 @@ public class AudienceListServiceAdvancedSegmentsKeyword {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

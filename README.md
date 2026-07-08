@@ -32,7 +32,7 @@ versionはこちらを参照してください。https://mvnrepository.com/artif
 String clientId = "INSERT_CLIENT_ID_HERE";
 String clientSecret = "INSERT_CLIENT_SECRET_HERE";
 String refreshToken = "INSERT_REFRESH_TOKEN_HERE";
-YahooJapanAdsApiClient yahooJapanAdsApiClient = new YahooJapanAdsApiClient(clientId, clientSecret, refreshToken);
+AdsApiClient adsApiClient = new AdsApiClient(clientId, clientSecret, refreshToken);
 ```
 それぞれの値はこちらを参照してください。https://ads-developers.yahoo.co.jp/ja/ads-api/startup-guide/api-call.html
 
@@ -40,7 +40,7 @@ YahooJapanAdsApiClient yahooJapanAdsApiClient = new YahooJapanAdsApiClient(clien
 
 ```Java
 // Get the AccountService.
-AccountServiceApi accountService = new AccountServiceApi(yahooJapanAdsApiClient);
+AccountServiceApi accountService = new AccountServiceApi(adsApiClient);
 
 // Create the AccountServiceSelector.
 AccountServiceSelector accountServiceSelector = new AccountServiceSelector();
@@ -53,7 +53,7 @@ AccountServiceGetResponse accountServiceGetResponse = accountService.accountServ
 
 ```java
 // Get the ReportDefinitionService.
-ReportDefinitionServiceApi reportDefinitionService = new ReportDefinitionServiceApi(yahooJapanAdsApiClient);
+ReportDefinitionServiceApi reportDefinitionService = new ReportDefinitionServiceApi(adsApiClient);
 
 // Create the ReportDefinitionServiceOperation.
 ReportDefinition reportDefinition = new ReportDefinition();
@@ -85,7 +85,7 @@ Resource report = reportDefinitionService.reportDefinitionServiceDownloadPost(re
 
 ```java
 // Get the VideoService.
-VideoServiceApi videoService = new VideoServiceApi(yahooJapanAdsApiClient);
+VideoServiceApi videoService = new VideoServiceApi(adsApiClient);
 
 // Create the Parameter of VideoService.
 Long accountId = INSERT_ACCOUNT_ID_HERE;
@@ -104,7 +104,7 @@ VideoServiceUploadResponse videoServiceUploadResponse = videoService.videoServic
 
 ```java
 // Get the AudienceListService.
-AudienceListServiceApi audienceListService = new AudienceListServiceApi(yahooJapanAdsApiClient);
+AudienceListServiceApi audienceListService = new AudienceListServiceApi(adsApiClient);
 
 // Create the Parameter of AudienceListService.
 Long accountId = INSERT_ACCOUNT_ID_HERE;

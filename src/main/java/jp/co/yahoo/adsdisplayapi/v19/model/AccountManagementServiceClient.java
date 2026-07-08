@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -26,6 +26,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.AccountManagementServicePrefectureCod
 import jp.co.yahoo.adsdisplayapi.v19.model.AccountManagementServiceUrlType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AccountManagementServiceClientオブジェクトは、広告主情報を表します。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AccountManagementServiceClient object describes the client information.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation. &lt;/div&gt; 
@@ -47,68 +48,83 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AccountManagementServiceClient.JSON_PROPERTY_URL_TYPE,
   AccountManagementServiceClient.JSON_PROPERTY_ZIP
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AccountManagementServiceClient {
   public static final String JSON_PROPERTY_BUILDING = "building";
+  @jakarta.annotation.Nullable
   private String building;
 
   public static final String JSON_PROPERTY_CITY = "city";
+  @jakarta.annotation.Nullable
   private String city;
 
   public static final String JSON_PROPERTY_CLIENT_PERSON_NAME = "clientPersonName";
+  @jakarta.annotation.Nullable
   private String clientPersonName;
 
   public static final String JSON_PROPERTY_COMPANY_NAME = "companyName";
+  @jakarta.annotation.Nullable
   private String companyName;
 
   public static final String JSON_PROPERTY_COMPANY_NAME_KANA = "companyNameKana";
+  @jakarta.annotation.Nullable
   private String companyNameKana;
 
   public static final String JSON_PROPERTY_CORPORATE_NUMBER = "corporateNumber";
+  @jakarta.annotation.Nullable
   private Long corporateNumber;
 
   public static final String JSON_PROPERTY_ENTERPRISE_TYPE = "enterpriseType";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceEnterpriseType enterpriseType;
 
   public static final String JSON_PROPERTY_ENTERPRISE_TYPE_POSITION = "enterpriseTypePosition";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceEnterpriseTypePosition enterpriseTypePosition;
 
   public static final String JSON_PROPERTY_PHONE_NUMBER = "phoneNumber";
+  @jakarta.annotation.Nullable
   private String phoneNumber;
 
   public static final String JSON_PROPERTY_PREFECTURE_CODE = "prefectureCode";
+  @jakarta.annotation.Nullable
   private AccountManagementServicePrefectureCode prefectureCode;
 
   public static final String JSON_PROPERTY_STREET1 = "street1";
+  @jakarta.annotation.Nullable
   private String street1;
 
   public static final String JSON_PROPERTY_STREET2 = "street2";
+  @jakarta.annotation.Nullable
   private String street2;
 
   public static final String JSON_PROPERTY_URL = "url";
+  @jakarta.annotation.Nullable
   private String url;
 
   public static final String JSON_PROPERTY_URL_TYPE = "urlType";
+  @jakarta.annotation.Nullable
   private AccountManagementServiceUrlType urlType;
 
   public static final String JSON_PROPERTY_ZIP = "zip";
+  @jakarta.annotation.Nullable
   private String zip;
 
   public AccountManagementServiceClient() {
   }
 
-  public AccountManagementServiceClient building(String building) {
+  public AccountManagementServiceClient building(@jakarta.annotation.Nullable String building) {
     
     this.building = building;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ビル名です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Building name.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return building
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BUILDING)
+  @JsonProperty(value = JSON_PROPERTY_BUILDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getBuilding() {
@@ -116,25 +132,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BUILDING)
+  @JsonProperty(value = JSON_PROPERTY_BUILDING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBuilding(String building) {
+  public void setBuilding(@jakarta.annotation.Nullable String building) {
     this.building = building;
   }
 
-
-  public AccountManagementServiceClient city(String city) {
+  public AccountManagementServiceClient city(@jakarta.annotation.Nullable String city) {
     
     this.city = city;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 市区町村名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; City name.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return city
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonProperty(value = JSON_PROPERTY_CITY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCity() {
@@ -142,25 +157,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CITY)
+  @JsonProperty(value = JSON_PROPERTY_CITY, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCity(String city) {
+  public void setCity(@jakarta.annotation.Nullable String city) {
     this.city = city;
   }
 
-
-  public AccountManagementServiceClient clientPersonName(String clientPersonName) {
+  public AccountManagementServiceClient clientPersonName(@jakarta.annotation.Nullable String clientPersonName) {
     
     this.clientPersonName = clientPersonName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告主の担当者氏名です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SET時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Client person name.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET operation. &lt;/div&gt; 
    * @return clientPersonName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CLIENT_PERSON_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CLIENT_PERSON_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getClientPersonName() {
@@ -168,25 +182,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CLIENT_PERSON_NAME)
+  @JsonProperty(value = JSON_PROPERTY_CLIENT_PERSON_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setClientPersonName(String clientPersonName) {
+  public void setClientPersonName(@jakarta.annotation.Nullable String clientPersonName) {
     this.clientPersonName = clientPersonName;
   }
 
-
-  public AccountManagementServiceClient companyName(String companyName) {
+  public AccountManagementServiceClient companyName(@jakarta.annotation.Nullable String companyName) {
     
     this.companyName = companyName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告主名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Company name.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;/div&gt; 
    * @return companyName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMPANY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_COMPANY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCompanyName() {
@@ -194,25 +207,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMPANY_NAME)
+  @JsonProperty(value = JSON_PROPERTY_COMPANY_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCompanyName(String companyName) {
+  public void setCompanyName(@jakarta.annotation.Nullable String companyName) {
     this.companyName = companyName;
   }
 
-
-  public AccountManagementServiceClient companyNameKana(String companyNameKana) {
+  public AccountManagementServiceClient companyNameKana(@jakarta.annotation.Nullable String companyNameKana) {
     
     this.companyNameKana = companyNameKana;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告主名カナです。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Kana characters of company name.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations. &lt;/div&gt; 
    * @return companyNameKana
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMPANY_NAME_KANA)
+  @JsonProperty(value = JSON_PROPERTY_COMPANY_NAME_KANA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCompanyNameKana() {
@@ -220,25 +232,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMPANY_NAME_KANA)
+  @JsonProperty(value = JSON_PROPERTY_COMPANY_NAME_KANA, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCompanyNameKana(String companyNameKana) {
+  public void setCompanyNameKana(@jakarta.annotation.Nullable String companyNameKana) {
     this.companyNameKana = companyNameKana;
   }
 
-
-  public AccountManagementServiceClient corporateNumber(Long corporateNumber) {
+  public AccountManagementServiceClient corporateNumber(@jakarta.annotation.Nullable Long corporateNumber) {
     
     this.corporateNumber = corporateNumber;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 法人番号です。&lt;br&gt; このフィールドは、ADD時に省略可能となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※enterpriseTypeがKOJINの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Corporate number.&lt;br&gt; This field is optional in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * When enterpriseType is \&quot;KOJIN\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return corporateNumber
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CORPORATE_NUMBER)
+  @JsonProperty(value = JSON_PROPERTY_CORPORATE_NUMBER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getCorporateNumber() {
@@ -246,25 +257,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CORPORATE_NUMBER)
+  @JsonProperty(value = JSON_PROPERTY_CORPORATE_NUMBER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCorporateNumber(Long corporateNumber) {
+  public void setCorporateNumber(@jakarta.annotation.Nullable Long corporateNumber) {
     this.corporateNumber = corporateNumber;
   }
 
-
-  public AccountManagementServiceClient enterpriseType(AccountManagementServiceEnterpriseType enterpriseType) {
+  public AccountManagementServiceClient enterpriseType(@jakarta.annotation.Nullable AccountManagementServiceEnterpriseType enterpriseType) {
     
     this.enterpriseType = enterpriseType;
     return this;
   }
 
-   /**
+  /**
    * Get enterpriseType
    * @return enterpriseType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENTERPRISE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ENTERPRISE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceEnterpriseType getEnterpriseType() {
@@ -272,25 +282,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENTERPRISE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_ENTERPRISE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEnterpriseType(AccountManagementServiceEnterpriseType enterpriseType) {
+  public void setEnterpriseType(@jakarta.annotation.Nullable AccountManagementServiceEnterpriseType enterpriseType) {
     this.enterpriseType = enterpriseType;
   }
 
-
-  public AccountManagementServiceClient enterpriseTypePosition(AccountManagementServiceEnterpriseTypePosition enterpriseTypePosition) {
+  public AccountManagementServiceClient enterpriseTypePosition(@jakarta.annotation.Nullable AccountManagementServiceEnterpriseTypePosition enterpriseTypePosition) {
     
     this.enterpriseTypePosition = enterpriseTypePosition;
     return this;
   }
 
-   /**
+  /**
    * Get enterpriseTypePosition
    * @return enterpriseTypePosition
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ENTERPRISE_TYPE_POSITION)
+  @JsonProperty(value = JSON_PROPERTY_ENTERPRISE_TYPE_POSITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceEnterpriseTypePosition getEnterpriseTypePosition() {
@@ -298,25 +307,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ENTERPRISE_TYPE_POSITION)
+  @JsonProperty(value = JSON_PROPERTY_ENTERPRISE_TYPE_POSITION, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setEnterpriseTypePosition(AccountManagementServiceEnterpriseTypePosition enterpriseTypePosition) {
+  public void setEnterpriseTypePosition(@jakarta.annotation.Nullable AccountManagementServiceEnterpriseTypePosition enterpriseTypePosition) {
     this.enterpriseTypePosition = enterpriseTypePosition;
   }
 
-
-  public AccountManagementServiceClient phoneNumber(String phoneNumber) {
+  public AccountManagementServiceClient phoneNumber(@jakarta.annotation.Nullable String phoneNumber) {
     
     this.phoneNumber = phoneNumber;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 電話番号です。&lt;br&gt; ※xxxxx-xxxxx-xxxxx形式です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Phone number.&lt;br&gt; * In xxxxx-xxxxx-xxxxx format.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return phoneNumber
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
+  @JsonProperty(value = JSON_PROPERTY_PHONE_NUMBER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPhoneNumber() {
@@ -324,25 +332,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PHONE_NUMBER)
+  @JsonProperty(value = JSON_PROPERTY_PHONE_NUMBER, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPhoneNumber(String phoneNumber) {
+  public void setPhoneNumber(@jakarta.annotation.Nullable String phoneNumber) {
     this.phoneNumber = phoneNumber;
   }
 
-
-  public AccountManagementServiceClient prefectureCode(AccountManagementServicePrefectureCode prefectureCode) {
+  public AccountManagementServiceClient prefectureCode(@jakarta.annotation.Nullable AccountManagementServicePrefectureCode prefectureCode) {
     
     this.prefectureCode = prefectureCode;
     return this;
   }
 
-   /**
+  /**
    * Get prefectureCode
    * @return prefectureCode
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PREFECTURE_CODE)
+  @JsonProperty(value = JSON_PROPERTY_PREFECTURE_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServicePrefectureCode getPrefectureCode() {
@@ -350,25 +357,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PREFECTURE_CODE)
+  @JsonProperty(value = JSON_PROPERTY_PREFECTURE_CODE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPrefectureCode(AccountManagementServicePrefectureCode prefectureCode) {
+  public void setPrefectureCode(@jakarta.annotation.Nullable AccountManagementServicePrefectureCode prefectureCode) {
     this.prefectureCode = prefectureCode;
   }
 
-
-  public AccountManagementServiceClient street1(String street1) {
+  public AccountManagementServiceClient street1(@jakarta.annotation.Nullable String street1) {
     
     this.street1 = street1;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 町・字名です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Street1.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return street1
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STREET1)
+  @JsonProperty(value = JSON_PROPERTY_STREET1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStreet1() {
@@ -376,25 +382,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STREET1)
+  @JsonProperty(value = JSON_PROPERTY_STREET1, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStreet1(String street1) {
+  public void setStreet1(@jakarta.annotation.Nullable String street1) {
     this.street1 = street1;
   }
 
-
-  public AccountManagementServiceClient street2(String street2) {
+  public AccountManagementServiceClient street2(@jakarta.annotation.Nullable String street2) {
     
     this.street2 = street2;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 丁目・番地・号です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Street2.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return street2
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_STREET2)
+  @JsonProperty(value = JSON_PROPERTY_STREET2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getStreet2() {
@@ -402,25 +407,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_STREET2)
+  @JsonProperty(value = JSON_PROPERTY_STREET2, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setStreet2(String street2) {
+  public void setStreet2(@jakarta.annotation.Nullable String street2) {
     this.street2 = street2;
   }
 
-
-  public AccountManagementServiceClient url(String url) {
+  public AccountManagementServiceClient url(@jakarta.annotation.Nullable String url) {
     
     this.url = url;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告掲載を希望するサイトのURLです。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Site URL for placing advertisement.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation. &lt;/div&gt; 
    * @return url
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonProperty(value = JSON_PROPERTY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getUrl() {
@@ -428,25 +432,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL)
+  @JsonProperty(value = JSON_PROPERTY_URL, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrl(String url) {
+  public void setUrl(@jakarta.annotation.Nullable String url) {
     this.url = url;
   }
 
-
-  public AccountManagementServiceClient urlType(AccountManagementServiceUrlType urlType) {
+  public AccountManagementServiceClient urlType(@jakarta.annotation.Nullable AccountManagementServiceUrlType urlType) {
     
     this.urlType = urlType;
     return this;
   }
 
-   /**
+  /**
    * Get urlType
    * @return urlType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_URL_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_URL_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AccountManagementServiceUrlType getUrlType() {
@@ -454,25 +457,24 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_URL_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_URL_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUrlType(AccountManagementServiceUrlType urlType) {
+  public void setUrlType(@jakarta.annotation.Nullable AccountManagementServiceUrlType urlType) {
     this.urlType = urlType;
   }
 
-
-  public AccountManagementServiceClient zip(String zip) {
+  public AccountManagementServiceClient zip(@jakarta.annotation.Nullable String zip) {
     
     this.zip = zip;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 郵便番号です。&lt;br&gt; ※xxx-xxxx形式です。&lt;br&gt; このフィールドは、ADD時に必須となり、SET時に無視されます。&lt;br&gt; ※clientTypeがSELFの場合は、ADD時、SET時ともに無視されます。&lt;br&gt; ※このフィールドは、レスポンスの際に返却されません。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Zip code.&lt;br&gt; * In xxx-xxxx format.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation.&lt;br&gt; * When clientType is \&quot;SELF\&quot;, this field will be ignored in ADD and SET operations.&lt;br&gt; * This field is not returned in the response. &lt;/div&gt; 
    * @return zip
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ZIP)
+  @JsonProperty(value = JSON_PROPERTY_ZIP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getZip() {
@@ -480,11 +482,12 @@ public class AccountManagementServiceClient {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ZIP)
+  @JsonProperty(value = JSON_PROPERTY_ZIP, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setZip(String zip) {
+  public void setZip(@jakarta.annotation.Nullable String zip) {
     this.zip = zip;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -545,10 +548,7 @@ public class AccountManagementServiceClient {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

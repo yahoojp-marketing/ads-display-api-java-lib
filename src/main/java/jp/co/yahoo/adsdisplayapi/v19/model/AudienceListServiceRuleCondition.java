@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceCompareOperator;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceRuleType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AudienceListServiceRuleConditionオブジェクトは、オーディエンスリストに設定可能な条件を表します。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceRuleCondition object displays the possible conditions to set for audience list.&lt;br&gt; This field is required in ADD and SET operation. &lt;/div&gt; 
@@ -33,32 +34,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceRuleCondition.JSON_PROPERTY_RULE_TYPE,
   AudienceListServiceRuleCondition.JSON_PROPERTY_VALUE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceRuleCondition {
   public static final String JSON_PROPERTY_COMPARE_OPERATOR = "compareOperator";
+  @jakarta.annotation.Nullable
   private AudienceListServiceCompareOperator compareOperator;
 
   public static final String JSON_PROPERTY_RULE_TYPE = "ruleType";
+  @jakarta.annotation.Nullable
   private AudienceListServiceRuleType ruleType;
 
   public static final String JSON_PROPERTY_VALUE = "value";
+  @jakarta.annotation.Nullable
   private String value;
 
   public AudienceListServiceRuleCondition() {
   }
 
-  public AudienceListServiceRuleCondition compareOperator(AudienceListServiceCompareOperator compareOperator) {
+  public AudienceListServiceRuleCondition compareOperator(@jakarta.annotation.Nullable AudienceListServiceCompareOperator compareOperator) {
     
     this.compareOperator = compareOperator;
     return this;
   }
 
-   /**
+  /**
    * Get compareOperator
    * @return compareOperator
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_COMPARE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_COMPARE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceCompareOperator getCompareOperator() {
@@ -66,25 +70,24 @@ public class AudienceListServiceRuleCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_COMPARE_OPERATOR)
+  @JsonProperty(value = JSON_PROPERTY_COMPARE_OPERATOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCompareOperator(AudienceListServiceCompareOperator compareOperator) {
+  public void setCompareOperator(@jakarta.annotation.Nullable AudienceListServiceCompareOperator compareOperator) {
     this.compareOperator = compareOperator;
   }
 
-
-  public AudienceListServiceRuleCondition ruleType(AudienceListServiceRuleType ruleType) {
+  public AudienceListServiceRuleCondition ruleType(@jakarta.annotation.Nullable AudienceListServiceRuleType ruleType) {
     
     this.ruleType = ruleType;
     return this;
   }
 
-   /**
+  /**
    * Get ruleType
    * @return ruleType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceRuleType getRuleType() {
@@ -92,25 +95,24 @@ public class AudienceListServiceRuleCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RULE_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_RULE_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRuleType(AudienceListServiceRuleType ruleType) {
+  public void setRuleType(@jakarta.annotation.Nullable AudienceListServiceRuleType ruleType) {
     this.ruleType = ruleType;
   }
 
-
-  public AudienceListServiceRuleCondition value(String value) {
+  public AudienceListServiceRuleCondition value(@jakarta.annotation.Nullable String value) {
     
     this.value = value;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ルールで評価する値です。&lt;br&gt; このフィールドは、ADDおよびSET時に必須となり、REMOVE時に無視されます。&lt;br&gt; ・websiteVisitorsAudienceList で使用できるイベント種別は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044558?language&#x3D;ja\&quot;&gt;こちら&lt;/a&gt;をご参照ください。&lt;br&gt; ・appUserAudienceList で使用できるイベント種別は&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044585?language&#x3D;ja#c02\&quot;&gt;こちら&lt;/a&gt;をご参照ください。&lt;br&gt;&lt;br&gt;  ※ruleTypeがEVENT_TYPEの場合、以下のイベント種別に記載の値のみ指定可能となります。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Matching Rules Value. &lt;br&gt; This field is required in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; - For event types available for websiteVisitorsAudienceList, please refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044558?language&#x3D;en_US\&quot;&gt;here&lt;/a&gt;.&lt;br&gt; - For event types available for appUserAudienceList, please refer to &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044585?language&#x3D;en_US#c02\&quot;&gt;here&lt;/a&gt;.&lt;br&gt;&lt;br&gt;  ∗If ruleType is EVENT_TYPE, only the values listed in the table below can be specified.&lt;br&gt; &lt;/div&gt; &lt;details&gt;   &lt;summary&gt;     &lt;div lang&#x3D;\&quot;ja\&quot;&gt;イベント種別&lt;/div&gt;     &lt;div lang&#x3D;\&quot;en\&quot;&gt;Event Type&lt;/div&gt;   &lt;/summary&gt;   &lt;table&gt;     &lt;thead&gt;       &lt;tr&gt;         &lt;th&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;イベント種別&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Event Type&lt;/div&gt;         &lt;/th&gt;         &lt;th&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;イベント種別名&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Name of event type&lt;/div&gt;         &lt;/th&gt;       &lt;/tr&gt;     &lt;/thead&gt;     &lt;tbody&gt;       &lt;tr&gt;         &lt;td&gt;app_install&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリをインストール&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;App install&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;app_launch&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ起動&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;App start&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;app_update&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリをアップデート&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;App update&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;view_listing&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品一覧画面の閲覧&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;View item list&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;view_product&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品詳細画面の閲覧&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;View item description&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;view_cart&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品カートを閲覧&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;View cart&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;add_wishlist&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;お気に入りに追加&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Add to wishlist&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;add_cart&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品カートに追加&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Add to cart&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;check_out&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品購入確認&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Confirm purchasing&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;purchase&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;商品購入&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Purchase&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;payment_info&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;お支払い明細を発行&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Payment details&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;sign_up&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;登録完了&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Registration complete&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;login&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ログイン&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Login&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;search&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Search&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;review&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツをレビュー&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Review contents&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;share&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツをシェア&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Share contents&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;invite&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリへ招待&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Invite to app&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;reservation&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;予約完了&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Reservation complete&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;tutorial&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;チュートリアルを完了&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tutorial complete&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;deeplink&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ディープリンクから流入&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Traffic from deep link&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;start_level&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ゲームイベントを開始&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Start game event&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;end_level&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ゲームイベントを完了&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;End game event&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;level_achieved&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ゲームのレベル到達&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Level achieved&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;unlock_achievement&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ゲームの目標達成&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Unlock achievement&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;app_purchase&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アプリ内購入&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;App purchasing&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;spent_credits&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;クレジットカードの利用&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Credit card&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;generate_lead&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;リード獲得&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Generate leads&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;custom1&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カスタムイベント1&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom event 1&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;custom2&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カスタムイベント2&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom event 2&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;       &lt;tr&gt;         &lt;td&gt;custom3&lt;/td&gt;         &lt;td&gt;           &lt;div lang&#x3D;\&quot;ja\&quot;&gt;カスタムイベント3&lt;/div&gt;           &lt;div lang&#x3D;\&quot;en\&quot;&gt;Custom event 3&lt;/div&gt;         &lt;/td&gt;       &lt;/tr&gt;     &lt;/tbody&gt;   &lt;/table&gt; &lt;/details&gt; 
    * @return value
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getValue() {
@@ -118,11 +120,12 @@ public class AudienceListServiceRuleCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VALUE)
+  @JsonProperty(value = JSON_PROPERTY_VALUE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setValue(String value) {
+  public void setValue(@jakarta.annotation.Nullable String value) {
     this.value = value;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -159,10 +162,7 @@ public class AudienceListServiceRuleCondition {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

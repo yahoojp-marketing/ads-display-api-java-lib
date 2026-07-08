@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v19.model.CampaignServiceBiddingScheme;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceBiddingStrategyConfigurationオブジェクトは、キャンペーン入札戦略です。&lt;br&gt; ADDおよびSET時、このフィールドは必須となります。&lt;br&gt; REMOVE時、このフィールドは無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceBiddingStrategyConfiguration object describes campaign bidding strategy.&lt;br&gt; In ADD and SET operation, this field is required.&lt;br&gt; This field will be ignored in REMOVE operation. &lt;/div&gt; 
@@ -32,32 +33,35 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   CampaignServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_ID,
   CampaignServiceBiddingStrategyConfiguration.JSON_PROPERTY_PORTFOLIO_BIDDING_NAME
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceBiddingStrategyConfiguration {
   public static final String JSON_PROPERTY_BIDDING_SCHEME = "biddingScheme";
+  @jakarta.annotation.Nullable
   private CampaignServiceBiddingScheme biddingScheme;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_ID = "portfolioBiddingId";
+  @jakarta.annotation.Nullable
   private Long portfolioBiddingId;
 
   public static final String JSON_PROPERTY_PORTFOLIO_BIDDING_NAME = "portfolioBiddingName";
+  @jakarta.annotation.Nullable
   private String portfolioBiddingName;
 
   public CampaignServiceBiddingStrategyConfiguration() {
   }
 
-  public CampaignServiceBiddingStrategyConfiguration biddingScheme(CampaignServiceBiddingScheme biddingScheme) {
+  public CampaignServiceBiddingStrategyConfiguration biddingScheme(@jakarta.annotation.Nullable CampaignServiceBiddingScheme biddingScheme) {
     
     this.biddingScheme = biddingScheme;
     return this;
   }
 
-   /**
+  /**
    * Get biddingScheme
    * @return biddingScheme
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceBiddingScheme getBiddingScheme() {
@@ -65,25 +69,24 @@ public class CampaignServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_BIDDING_SCHEME)
+  @JsonProperty(value = JSON_PROPERTY_BIDDING_SCHEME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setBiddingScheme(CampaignServiceBiddingScheme biddingScheme) {
+  public void setBiddingScheme(@jakarta.annotation.Nullable CampaignServiceBiddingScheme biddingScheme) {
     this.biddingScheme = biddingScheme;
   }
 
-
-  public CampaignServiceBiddingStrategyConfiguration portfolioBiddingId(Long portfolioBiddingId) {
+  public CampaignServiceBiddingStrategyConfiguration portfolioBiddingId(@jakarta.annotation.Nullable Long portfolioBiddingId) {
     
     this.portfolioBiddingId = portfolioBiddingId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札IDです。&lt;br&gt; ADDおよびSET時、キャンペーン個別入札設定の場合、このフィールドは設定不可となり、ポートフォリオ入札設定の場合、必須となります。また、biddingSchemeと同時に設定することはできません。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding ID.&lt;br&gt; This field cannot be specified when Campaign bidding is setting, and is required when Portfolio bidding is setting in ADD and SET operation. It cannot be specified at the same times as biddingScheme.&lt;/div&gt; 
    * @return portfolioBiddingId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getPortfolioBiddingId() {
@@ -91,25 +94,24 @@ public class CampaignServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_ID)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPortfolioBiddingId(Long portfolioBiddingId) {
+  public void setPortfolioBiddingId(@jakarta.annotation.Nullable Long portfolioBiddingId) {
     this.portfolioBiddingId = portfolioBiddingId;
   }
 
-
-  public CampaignServiceBiddingStrategyConfiguration portfolioBiddingName(String portfolioBiddingName) {
+  public CampaignServiceBiddingStrategyConfiguration portfolioBiddingName(@jakarta.annotation.Nullable String portfolioBiddingName) {
     
     this.portfolioBiddingName = portfolioBiddingName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ポートフォリオ入札名です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Portfolio bidding name.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input.&lt;/div&gt; 
    * @return portfolioBiddingName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getPortfolioBiddingName() {
@@ -117,11 +119,12 @@ public class CampaignServiceBiddingStrategyConfiguration {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PORTFOLIO_BIDDING_NAME)
+  @JsonProperty(value = JSON_PROPERTY_PORTFOLIO_BIDDING_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPortfolioBiddingName(String portfolioBiddingName) {
+  public void setPortfolioBiddingName(@jakarta.annotation.Nullable String portfolioBiddingName) {
     this.portfolioBiddingName = portfolioBiddingName;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -158,10 +161,7 @@ public class CampaignServiceBiddingStrategyConfiguration {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceLang;
 import jp.co.yahoo.adsdisplayapi.v18.model.ReportDefinitionServiceReportType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * ReportDefinitionServiceGetReportFields
@@ -32,29 +33,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceGetReportFields.JSON_PROPERTY_LANG,
   ReportDefinitionServiceGetReportFields.JSON_PROPERTY_REPORT_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceGetReportFields {
   public static final String JSON_PROPERTY_LANG = "lang";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceLang lang;
 
   public static final String JSON_PROPERTY_REPORT_TYPE = "reportType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceReportType reportType;
 
   public ReportDefinitionServiceGetReportFields() {
   }
 
-  public ReportDefinitionServiceGetReportFields lang(ReportDefinitionServiceLang lang) {
+  public ReportDefinitionServiceGetReportFields lang(@jakarta.annotation.Nullable ReportDefinitionServiceLang lang) {
     
     this.lang = lang;
     return this;
   }
 
-   /**
+  /**
    * Get lang
    * @return lang
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public ReportDefinitionServiceLang getLang() {
@@ -62,25 +65,24 @@ public class ReportDefinitionServiceGetReportFields {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LANG)
+  @JsonProperty(value = JSON_PROPERTY_LANG, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setLang(ReportDefinitionServiceLang lang) {
+  public void setLang(@jakarta.annotation.Nullable ReportDefinitionServiceLang lang) {
     this.lang = lang;
   }
 
-
-  public ReportDefinitionServiceGetReportFields reportType(ReportDefinitionServiceReportType reportType) {
+  public ReportDefinitionServiceGetReportFields reportType(@jakarta.annotation.Nullable ReportDefinitionServiceReportType reportType) {
     
     this.reportType = reportType;
     return this;
   }
 
-   /**
+  /**
    * Get reportType
    * @return reportType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
 
   public ReportDefinitionServiceReportType getReportType() {
@@ -88,11 +90,12 @@ public class ReportDefinitionServiceGetReportFields {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REPORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_REPORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.ALWAYS)
-  public void setReportType(ReportDefinitionServiceReportType reportType) {
+  public void setReportType(@jakarta.annotation.Nullable ReportDefinitionServiceReportType reportType) {
     this.reportType = reportType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -127,10 +130,7 @@ public class ReportDefinitionServiceGetReportFields {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

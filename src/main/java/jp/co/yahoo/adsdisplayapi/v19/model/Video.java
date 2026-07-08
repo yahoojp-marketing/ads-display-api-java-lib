@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.VideoServiceApprovalStatus;
 import jp.co.yahoo.adsdisplayapi.v19.model.VideoServiceProcessStatus;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.VideoServiceSetting;
 import jp.co.yahoo.adsdisplayapi.v19.model.VideoServiceUserStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;Videoオブジェクトは、動画情報を保持します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video object is a container for the information of videos.&lt;/div&gt; 
@@ -45,56 +47,67 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   Video.JSON_PROPERTY_VIDEO_TITLE,
   Video.JSON_PROPERTY_CREATED_DATE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class Video {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private VideoServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_REVIEW_APPLICATION_DATE = "reviewApplicationDate";
+  @jakarta.annotation.Nullable
   private String reviewApplicationDate;
 
   public static final String JSON_PROPERTY_DISAPPROVAL_REASON_CODES = "disapprovalReasonCodes";
+  @jakarta.annotation.Nullable
   private List<String> disapprovalReasonCodes;
 
   public static final String JSON_PROPERTY_MEDIA_ID = "mediaId";
+  @jakarta.annotation.Nullable
   private Long mediaId;
 
   public static final String JSON_PROPERTY_PROCESS_STATUS = "processStatus";
+  @jakarta.annotation.Nullable
   private VideoServiceProcessStatus processStatus;
 
   public static final String JSON_PROPERTY_USER_STATUS = "userStatus";
+  @jakarta.annotation.Nullable
   private VideoServiceUserStatus userStatus;
 
   public static final String JSON_PROPERTY_VIDEO_NAME = "videoName";
+  @jakarta.annotation.Nullable
   private String videoName;
 
   public static final String JSON_PROPERTY_VIDEO_SETTING = "videoSetting";
+  @jakarta.annotation.Nullable
   private VideoServiceSetting videoSetting;
 
   public static final String JSON_PROPERTY_VIDEO_TITLE = "videoTitle";
+  @jakarta.annotation.Nullable
   private String videoTitle;
 
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
+  @jakarta.annotation.Nullable
   private String createdDate;
 
   public Video() {
   }
 
-  public Video accountId(Long accountId) {
+  public Video accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アカウントIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Account ID.&lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -102,25 +115,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public Video approvalStatus(VideoServiceApprovalStatus approvalStatus) {
+  public Video approvalStatus(@jakarta.annotation.Nullable VideoServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceApprovalStatus getApprovalStatus() {
@@ -128,25 +140,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(VideoServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable VideoServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public Video reviewApplicationDate(String reviewApplicationDate) {
+  public Video reviewApplicationDate(@jakarta.annotation.Nullable String reviewApplicationDate) {
     
     this.reviewApplicationDate = reviewApplicationDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 動画の審査を申し込んだ日です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※フォーマット: yyyyMMddHHmmss &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The date when you submitted the video for the review appears.&lt;br&gt; Although this field will be returned in the response, it will be ignored on request.&lt;br&gt; *Format: yyyyMMddHHmmss &lt;/div&gt; 
    * @return reviewApplicationDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_REVIEW_APPLICATION_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_APPLICATION_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getReviewApplicationDate() {
@@ -154,14 +165,13 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_REVIEW_APPLICATION_DATE)
+  @JsonProperty(value = JSON_PROPERTY_REVIEW_APPLICATION_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setReviewApplicationDate(String reviewApplicationDate) {
+  public void setReviewApplicationDate(@jakarta.annotation.Nullable String reviewApplicationDate) {
     this.reviewApplicationDate = reviewApplicationDate;
   }
 
-
-  public Video disapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public Video disapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     
     this.disapprovalReasonCodes = disapprovalReasonCodes;
     return this;
@@ -175,12 +185,12 @@ public class Video {
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 動画の掲載拒否理由です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Disapproval reason of the video.&lt;br&gt; Although this field will be returned in the response, it will be ignored on request. &lt;/div&gt; 
    * @return disapprovalReasonCodes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<String> getDisapprovalReasonCodes() {
@@ -188,25 +198,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DISAPPROVAL_REASON_CODES)
+  @JsonProperty(value = JSON_PROPERTY_DISAPPROVAL_REASON_CODES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDisapprovalReasonCodes(List<String> disapprovalReasonCodes) {
+  public void setDisapprovalReasonCodes(@jakarta.annotation.Nullable List<String> disapprovalReasonCodes) {
     this.disapprovalReasonCodes = disapprovalReasonCodes;
   }
 
-
-  public Video mediaId(Long mediaId) {
+  public Video mediaId(@jakarta.annotation.Nullable Long mediaId) {
     
     this.mediaId = mediaId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; メディアIDです。&lt;br&gt; このフィールドは、SETおよびREMOVE時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Media ID.&lt;br&gt; This field is required in SET and REMOVE operation. &lt;/div&gt; 
    * @return mediaId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getMediaId() {
@@ -214,25 +223,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_ID)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaId(Long mediaId) {
+  public void setMediaId(@jakarta.annotation.Nullable Long mediaId) {
     this.mediaId = mediaId;
   }
 
-
-  public Video processStatus(VideoServiceProcessStatus processStatus) {
+  public Video processStatus(@jakarta.annotation.Nullable VideoServiceProcessStatus processStatus) {
     
     this.processStatus = processStatus;
     return this;
   }
 
-   /**
+  /**
    * Get processStatus
    * @return processStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PROCESS_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_PROCESS_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceProcessStatus getProcessStatus() {
@@ -240,25 +248,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PROCESS_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_PROCESS_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setProcessStatus(VideoServiceProcessStatus processStatus) {
+  public void setProcessStatus(@jakarta.annotation.Nullable VideoServiceProcessStatus processStatus) {
     this.processStatus = processStatus;
   }
 
-
-  public Video userStatus(VideoServiceUserStatus userStatus) {
+  public Video userStatus(@jakarta.annotation.Nullable VideoServiceUserStatus userStatus) {
     
     this.userStatus = userStatus;
     return this;
   }
 
-   /**
+  /**
    * Get userStatus
    * @return userStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceUserStatus getUserStatus() {
@@ -266,25 +273,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_USER_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_USER_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setUserStatus(VideoServiceUserStatus userStatus) {
+  public void setUserStatus(@jakarta.annotation.Nullable VideoServiceUserStatus userStatus) {
     this.userStatus = userStatus;
   }
 
-
-  public Video videoName(String videoName) {
+  public Video videoName(@jakarta.annotation.Nullable String videoName) {
     
     this.videoName = videoName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画のファイル名です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Video file name.&lt;/div&gt; 
    * @return videoName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVideoName() {
@@ -292,25 +298,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_NAME)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoName(String videoName) {
+  public void setVideoName(@jakarta.annotation.Nullable String videoName) {
     this.videoName = videoName;
   }
 
-
-  public Video videoSetting(VideoServiceSetting videoSetting) {
+  public Video videoSetting(@jakarta.annotation.Nullable VideoServiceSetting videoSetting) {
     
     this.videoSetting = videoSetting;
     return this;
   }
 
-   /**
+  /**
    * Get videoSetting
    * @return videoSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public VideoServiceSetting getVideoSetting() {
@@ -318,25 +323,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoSetting(VideoServiceSetting videoSetting) {
+  public void setVideoSetting(@jakarta.annotation.Nullable VideoServiceSetting videoSetting) {
     this.videoSetting = videoSetting;
   }
 
-
-  public Video videoTitle(String videoTitle) {
+  public Video videoTitle(@jakarta.annotation.Nullable String videoTitle) {
     
     this.videoTitle = videoTitle;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 動画名です。&lt;br&gt; このフィールドは、SET時に省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Video name.&lt;br&gt; This field is optional in SET operation. &lt;/div&gt; 
    * @return videoTitle
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VIDEO_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getVideoTitle() {
@@ -344,25 +348,24 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VIDEO_TITLE)
+  @JsonProperty(value = JSON_PROPERTY_VIDEO_TITLE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVideoTitle(String videoTitle) {
+  public void setVideoTitle(@jakarta.annotation.Nullable String videoTitle) {
     this.videoTitle = videoTitle;
   }
 
-
-  public Video createdDate(String createdDate) {
+  public Video createdDate(@jakarta.annotation.Nullable String createdDate) {
     
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;動画の作成日です。&lt;br&gt;※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Date when the video was made.&lt;br&gt;* Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCreatedDate() {
@@ -370,11 +373,12 @@ public class Video {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDate(String createdDate) {
+  public void setCreatedDate(@jakarta.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -427,10 +431,7 @@ public class Video {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

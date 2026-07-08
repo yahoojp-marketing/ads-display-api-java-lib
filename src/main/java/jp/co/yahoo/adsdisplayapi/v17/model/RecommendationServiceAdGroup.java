@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceAdGroupオブジェクトは、広告グループの詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceAdGroup object describes ad group information.&lt;/div&gt; 
@@ -32,35 +33,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RecommendationServiceAdGroup.JSON_PROPERTY_MEDIA_AD_FORMAT,
   RecommendationServiceAdGroup.JSON_PROPERTY_AD_COUNT
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceAdGroup {
   public static final String JSON_PROPERTY_AD_GROUP_ID = "adGroupId";
+  @jakarta.annotation.Nullable
   private Long adGroupId;
 
   public static final String JSON_PROPERTY_AD_GROUP_NAME = "adGroupName";
+  @jakarta.annotation.Nullable
   private String adGroupName;
 
   public static final String JSON_PROPERTY_MEDIA_AD_FORMAT = "mediaAdFormat";
+  @jakarta.annotation.Nullable
   private String mediaAdFormat;
 
   public static final String JSON_PROPERTY_AD_COUNT = "adCount";
+  @jakarta.annotation.Nullable
   private Long adCount;
 
   public RecommendationServiceAdGroup() {
   }
 
-  public RecommendationServiceAdGroup adGroupId(Long adGroupId) {
+  public RecommendationServiceAdGroup adGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     
     this.adGroupId = adGroupId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループIDです。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group ID. &lt;/div&gt; 
    * @return adGroupId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdGroupId() {
@@ -68,25 +73,24 @@ public class RecommendationServiceAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_ID)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupId(Long adGroupId) {
+  public void setAdGroupId(@jakarta.annotation.Nullable Long adGroupId) {
     this.adGroupId = adGroupId;
   }
 
-
-  public RecommendationServiceAdGroup adGroupName(String adGroupName) {
+  public RecommendationServiceAdGroup adGroupName(@jakarta.annotation.Nullable String adGroupName) {
     
     this.adGroupName = adGroupName;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告グループ名です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Ad group name. &lt;/div&gt; 
    * @return adGroupName
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdGroupName() {
@@ -94,25 +98,24 @@ public class RecommendationServiceAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUP_NAME)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUP_NAME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupName(String adGroupName) {
+  public void setAdGroupName(@jakarta.annotation.Nullable String adGroupName) {
     this.adGroupName = adGroupName;
   }
 
-
-  public RecommendationServiceAdGroup mediaAdFormat(String mediaAdFormat) {
+  public RecommendationServiceAdGroup mediaAdFormat(@jakarta.annotation.Nullable String mediaAdFormat) {
     
     this.mediaAdFormat = mediaAdFormat;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像フォーマットの種類です。&lt;br&gt; このフィールドは、 typeがNOT_OPTIMAL_AD_COUNT_PER_MEDIA_AD_FORMAT, ADGROUPS_FOR_ADDING_ADSの場合のみ返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The type of image format.&lt;br&gt; This field is returned when the type is NOT_OPTIMAL_AD_COUNT_PER_MEDIA_AD_FORMAT, ADGROUPS_FOR_ADDING_ADS. &lt;/div&gt; 
    * @return mediaAdFormat
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_MEDIA_AD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_AD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getMediaAdFormat() {
@@ -120,25 +123,24 @@ public class RecommendationServiceAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_MEDIA_AD_FORMAT)
+  @JsonProperty(value = JSON_PROPERTY_MEDIA_AD_FORMAT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setMediaAdFormat(String mediaAdFormat) {
+  public void setMediaAdFormat(@jakarta.annotation.Nullable String mediaAdFormat) {
     this.mediaAdFormat = mediaAdFormat;
   }
 
-
-  public RecommendationServiceAdGroup adCount(Long adCount) {
+  public RecommendationServiceAdGroup adCount(@jakarta.annotation.Nullable Long adCount) {
     
     this.adCount = adCount;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 対象メディアフォーマットを利用している広告数です。&lt;br&gt; このフィールドは、 typeがNOT_OPTIMAL_AD_COUNT_PER_MEDIA_AD_FORMATの場合のみ返却されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The number of ads that use this media format.&lt;br&gt; This field is returned when the type is NOT_OPTIMAL_AD_COUNT_PER_MEDIA_AD_FORMAT. &lt;/div&gt; 
    * @return adCount
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_AD_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAdCount() {
@@ -146,11 +148,12 @@ public class RecommendationServiceAdGroup {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_COUNT)
+  @JsonProperty(value = JSON_PROPERTY_AD_COUNT, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdCount(Long adCount) {
+  public void setAdCount(@jakarta.annotation.Nullable Long adCount) {
     this.adCount = adCount;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -189,10 +192,7 @@ public class RecommendationServiceAdGroup {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

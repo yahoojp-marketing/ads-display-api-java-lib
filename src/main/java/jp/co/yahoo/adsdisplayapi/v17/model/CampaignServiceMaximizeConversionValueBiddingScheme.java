@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceMaximizeConversionValueBiddingSchemeオブジェクトは、広告費用対効果の目標値の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがMAXIMIZE_CONVERSION_VALUEの場合、指定可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceMaximizeConversionValueBiddingScheme object displays bidding setting for Target ROAS.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSION_VALUE. &lt;/div&gt; 
@@ -29,26 +30,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   CampaignServiceMaximizeConversionValueBiddingScheme.JSON_PROPERTY_TARGET_ROAS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceMaximizeConversionValueBiddingScheme {
   public static final String JSON_PROPERTY_TARGET_ROAS = "targetRoas";
+  @jakarta.annotation.Nullable
   private Double targetRoas;
 
   public CampaignServiceMaximizeConversionValueBiddingScheme() {
   }
 
-  public CampaignServiceMaximizeConversionValueBiddingScheme targetRoas(Double targetRoas) {
+  public CampaignServiceMaximizeConversionValueBiddingScheme targetRoas(@jakarta.annotation.Nullable Double targetRoas) {
     
     this.targetRoas = targetRoas;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 広告費用対効果の目標値です。&lt;br&gt; ※Return On Advertising Spend(ROAS) ※0.01 〜1000.00（1%〜100000%）の範囲内のみ許容します。&lt;br&gt; ADDおよびSET時、このフィールドは任意で指定できます。&lt;br&gt; SET時、BiddingStrategyTypeにMAXIMIZE_CONVERSION_VALUEが指定されていて、targetRoasを指定しない場合、targetRoasの値がクリアされます。&lt;br&gt; &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ROAS.&lt;br&gt; * ROAS: Return On Average Spend.&lt;br&gt; * Setting limit: 0.01 〜1000.00（1%〜100000%）.&lt;br&gt; This field can be optionally specified in ADD and SET operation.&lt;br&gt; If BiddingStrategyType is MAXIMIZE_CONVERSION and targetCpa is not specified in SET operation, the value in this field will be cleared. &lt;/div&gt; 
    * @return targetRoas
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ROAS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Double getTargetRoas() {
@@ -56,11 +58,12 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ROAS)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ROAS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetRoas(Double targetRoas) {
+  public void setTargetRoas(@jakarta.annotation.Nullable Double targetRoas) {
     this.targetRoas = targetRoas;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -93,10 +96,7 @@ public class CampaignServiceMaximizeConversionValueBiddingScheme {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

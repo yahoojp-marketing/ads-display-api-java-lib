@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;ContentsKeywordIdeaオブジェクトは、コンテンツターゲティング対象キーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;ContentsKeywordIdea object is keyword for contents targeting.&lt;/div&gt; 
@@ -32,35 +33,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ContentsKeywordIdea.JSON_PROPERTY_CONTENTS_KEYWORD,
   ContentsKeywordIdea.JSON_PROPERTY_CONTENTS_KEYWORD_ID
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ContentsKeywordIdea {
   public static final String JSON_PROPERTY_VOLUME = "volume";
+  @jakarta.annotation.Nullable
   private Long volume;
 
   public static final String JSON_PROPERTY_CREATED_DATE = "createdDate";
+  @jakarta.annotation.Nullable
   private String createdDate;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD = "contentsKeyword";
+  @jakarta.annotation.Nullable
   private String contentsKeyword;
 
   public static final String JSON_PROPERTY_CONTENTS_KEYWORD_ID = "contentsKeywordId";
+  @jakarta.annotation.Nullable
   private Long contentsKeywordId;
 
   public ContentsKeywordIdea() {
   }
 
-  public ContentsKeywordIdea volume(Long volume) {
+  public ContentsKeywordIdea volume(@jakarta.annotation.Nullable Long volume) {
     
     this.volume = volume;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; インプレッション数です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Number of impressions. &lt;/div&gt; 
    * @return volume
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getVolume() {
@@ -68,25 +73,24 @@ public class ContentsKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_VOLUME)
+  @JsonProperty(value = JSON_PROPERTY_VOLUME, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setVolume(Long volume) {
+  public void setVolume(@jakarta.annotation.Nullable Long volume) {
     this.volume = volume;
   }
 
-
-  public ContentsKeywordIdea createdDate(String createdDate) {
+  public ContentsKeywordIdea createdDate(@jakarta.annotation.Nullable String createdDate) {
     
     this.createdDate = createdDate;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツキーワード作成日です。&lt;br&gt; ※フォーマット：yyyyMMdd&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Created date of keyword.&lt;br&gt; * Format: yyyyMMdd&lt;/div&gt; 
    * @return createdDate
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getCreatedDate() {
@@ -94,25 +98,24 @@ public class ContentsKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CREATED_DATE)
+  @JsonProperty(value = JSON_PROPERTY_CREATED_DATE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCreatedDate(String createdDate) {
+  public void setCreatedDate(@jakarta.annotation.Nullable String createdDate) {
     this.createdDate = createdDate;
   }
 
-
-  public ContentsKeywordIdea contentsKeyword(String contentsKeyword) {
+  public ContentsKeywordIdea contentsKeyword(@jakarta.annotation.Nullable String contentsKeyword) {
     
     this.contentsKeyword = contentsKeyword;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツキーワードです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contents keyword.&lt;/div&gt; 
    * @return contentsKeyword
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getContentsKeyword() {
@@ -120,25 +123,24 @@ public class ContentsKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeyword(String contentsKeyword) {
+  public void setContentsKeyword(@jakarta.annotation.Nullable String contentsKeyword) {
     this.contentsKeyword = contentsKeyword;
   }
 
-
-  public ContentsKeywordIdea contentsKeywordId(Long contentsKeywordId) {
+  public ContentsKeywordIdea contentsKeywordId(@jakarta.annotation.Nullable Long contentsKeywordId) {
     
     this.contentsKeywordId = contentsKeywordId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;コンテンツキーワードIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Contents keyword ID.&lt;/div&gt; 
    * @return contentsKeywordId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getContentsKeywordId() {
@@ -146,11 +148,12 @@ public class ContentsKeywordIdea {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_KEYWORD_ID)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_KEYWORD_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsKeywordId(Long contentsKeywordId) {
+  public void setContentsKeywordId(@jakarta.annotation.Nullable Long contentsKeywordId) {
     this.contentsKeywordId = contentsKeywordId;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -189,10 +192,7 @@ public class ContentsKeywordIdea {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

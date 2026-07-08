@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.RecommendationServiceAdGroupsForAddingAdsList;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceAdGroupForAddingAdsオブジェクトは、入稿を推奨する画像サイズがある広告グループに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceAdGroupForAddingAds object describes recommendation information about the ad group with recommended image sizes.&lt;/div&gt; 
@@ -32,15 +34,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RecommendationServiceAdGroupsForAddingAds.JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceAdGroupsForAddingAds {
   public static final String JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST = "adGroupsForAddingAdsList";
+  @jakarta.annotation.Nullable
   private List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList;
 
   public RecommendationServiceAdGroupsForAddingAds() {
   }
 
-  public RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAdsList(List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList) {
+  public RecommendationServiceAdGroupsForAddingAds adGroupsForAddingAdsList(@jakarta.annotation.Nullable List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList) {
     
     this.adGroupsForAddingAdsList = adGroupsForAddingAdsList;
     return this;
@@ -54,12 +57,12 @@ public class RecommendationServiceAdGroupsForAddingAds {
     return this;
   }
 
-   /**
+  /**
    * Get adGroupsForAddingAdsList
    * @return adGroupsForAddingAdsList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RecommendationServiceAdGroupsForAddingAdsList> getAdGroupsForAddingAdsList() {
@@ -67,11 +70,12 @@ public class RecommendationServiceAdGroupsForAddingAds {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST)
+  @JsonProperty(value = JSON_PROPERTY_AD_GROUPS_FOR_ADDING_ADS_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdGroupsForAddingAdsList(List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList) {
+  public void setAdGroupsForAddingAdsList(@jakarta.annotation.Nullable List<RecommendationServiceAdGroupsForAddingAdsList> adGroupsForAddingAdsList) {
     this.adGroupsForAddingAdsList = adGroupsForAddingAdsList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +108,7 @@ public class RecommendationServiceAdGroupsForAddingAds {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

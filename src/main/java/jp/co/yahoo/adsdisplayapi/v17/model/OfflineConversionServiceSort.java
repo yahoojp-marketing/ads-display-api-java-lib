@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.OfflineConversionServiceSortField;
 import jp.co.yahoo.adsdisplayapi.v17.model.OfflineConversionServiceSortType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;検索結果のソート指定です。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Specify sorting of search results.&lt;/div&gt; 
@@ -32,29 +33,31 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   OfflineConversionServiceSort.JSON_PROPERTY_SORT_TYPE,
   OfflineConversionServiceSort.JSON_PROPERTY_SORT_FIELD
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class OfflineConversionServiceSort {
   public static final String JSON_PROPERTY_SORT_TYPE = "sortType";
+  @jakarta.annotation.Nullable
   private OfflineConversionServiceSortType sortType;
 
   public static final String JSON_PROPERTY_SORT_FIELD = "sortField";
+  @jakarta.annotation.Nullable
   private OfflineConversionServiceSortField sortField;
 
   public OfflineConversionServiceSort() {
   }
 
-  public OfflineConversionServiceSort sortType(OfflineConversionServiceSortType sortType) {
+  public OfflineConversionServiceSort sortType(@jakarta.annotation.Nullable OfflineConversionServiceSortType sortType) {
     
     this.sortType = sortType;
     return this;
   }
 
-   /**
+  /**
    * Get sortType
    * @return sortType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public OfflineConversionServiceSortType getSortType() {
@@ -62,25 +65,24 @@ public class OfflineConversionServiceSort {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_SORT_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortType(OfflineConversionServiceSortType sortType) {
+  public void setSortType(@jakarta.annotation.Nullable OfflineConversionServiceSortType sortType) {
     this.sortType = sortType;
   }
 
-
-  public OfflineConversionServiceSort sortField(OfflineConversionServiceSortField sortField) {
+  public OfflineConversionServiceSort sortField(@jakarta.annotation.Nullable OfflineConversionServiceSortField sortField) {
     
     this.sortField = sortField;
     return this;
   }
 
-   /**
+  /**
    * Get sortField
    * @return sortField
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public OfflineConversionServiceSortField getSortField() {
@@ -88,11 +90,12 @@ public class OfflineConversionServiceSort {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SORT_FIELD)
+  @JsonProperty(value = JSON_PROPERTY_SORT_FIELD, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSortField(OfflineConversionServiceSortField sortField) {
+  public void setSortField(@jakarta.annotation.Nullable OfflineConversionServiceSortField sortField) {
     this.sortField = sortField;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -127,10 +130,7 @@ public class OfflineConversionServiceSort {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

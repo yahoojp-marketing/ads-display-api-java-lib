@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceContainDataConnectionStopped;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceContainUnavailableAdActionUserListFlg;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceSize;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceSizeReaches;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 類似ユーザーターゲットの情報を保持するオブジェクトです。&lt;br&gt; このフィールドは、ADDおよびSET時に省略可能となります。&lt;br&gt; ※audienceListTypeがSIMILARITYの場合は、ADDおよびSET時に必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AudienceListServiceSimilarityAudienceList object is a container for storing the information of Targeting information of users (similar).&lt;br&gt; This field is optional in ADD and SET operation. &lt;br&gt; *If audienceListType is SIMILARITY, this field is required in ADD and SET operation. &lt;/div&gt; 
@@ -39,38 +41,43 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceSimilarityAudienceList.JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG,
   AudienceListServiceSimilarityAudienceList.JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceSimilarityAudienceList {
   public static final String JSON_PROPERTY_AUDIENCE_LIST_ID = "audienceListId";
+  @jakarta.annotation.Nullable
   private Long audienceListId;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_SIZE = "audienceListSize";
+  @jakarta.annotation.Nullable
   private AudienceListServiceSize audienceListSize;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES = "audienceListSizeReaches";
+  @jakarta.annotation.Nullable
   private List<AudienceListServiceSizeReaches> audienceListSizeReaches;
 
   public static final String JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG = "containUnavailableAdActionUserListFlg";
+  @jakarta.annotation.Nullable
   private AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg;
 
   public static final String JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED = "containDataConnectionStopped";
+  @jakarta.annotation.Nullable
   private AudienceListServiceContainDataConnectionStopped containDataConnectionStopped;
 
   public AudienceListServiceSimilarityAudienceList() {
   }
 
-  public AudienceListServiceSimilarityAudienceList audienceListId(Long audienceListId) {
+  public AudienceListServiceSimilarityAudienceList audienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     
     this.audienceListId = audienceListId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; オーディエンスリスト（類似ユーザー）を作成する基となるオーディエンスリストIDです。&lt;br&gt; このフィールドは、ADD時に必須となり、SETおよびREMOVE時に無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Audience list ID that is the basis for creating the audience list (similar users).&lt;br&gt; This field is required in ADD operation, and will be ignored in SET and REMOVE operation. &lt;/div&gt; 
    * @return audienceListId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAudienceListId() {
@@ -78,25 +85,24 @@ public class AudienceListServiceSimilarityAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_ID)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListId(Long audienceListId) {
+  public void setAudienceListId(@jakarta.annotation.Nullable Long audienceListId) {
     this.audienceListId = audienceListId;
   }
 
-
-  public AudienceListServiceSimilarityAudienceList audienceListSize(AudienceListServiceSize audienceListSize) {
+  public AudienceListServiceSimilarityAudienceList audienceListSize(@jakarta.annotation.Nullable AudienceListServiceSize audienceListSize) {
     
     this.audienceListSize = audienceListSize;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListSize
    * @return audienceListSize
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceSize getAudienceListSize() {
@@ -104,14 +110,13 @@ public class AudienceListServiceSimilarityAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_SIZE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListSize(AudienceListServiceSize audienceListSize) {
+  public void setAudienceListSize(@jakarta.annotation.Nullable AudienceListServiceSize audienceListSize) {
     this.audienceListSize = audienceListSize;
   }
 
-
-  public AudienceListServiceSimilarityAudienceList audienceListSizeReaches(List<AudienceListServiceSizeReaches> audienceListSizeReaches) {
+  public AudienceListServiceSimilarityAudienceList audienceListSizeReaches(@jakarta.annotation.Nullable List<AudienceListServiceSizeReaches> audienceListSizeReaches) {
     
     this.audienceListSizeReaches = audienceListSizeReaches;
     return this;
@@ -125,12 +130,12 @@ public class AudienceListServiceSimilarityAudienceList {
     return this;
   }
 
-   /**
+  /**
    * Get audienceListSizeReaches
    * @return audienceListSizeReaches
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<AudienceListServiceSizeReaches> getAudienceListSizeReaches() {
@@ -138,25 +143,24 @@ public class AudienceListServiceSimilarityAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_SIZE_REACHES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListSizeReaches(List<AudienceListServiceSizeReaches> audienceListSizeReaches) {
+  public void setAudienceListSizeReaches(@jakarta.annotation.Nullable List<AudienceListServiceSizeReaches> audienceListSizeReaches) {
     this.audienceListSizeReaches = audienceListSizeReaches;
   }
 
-
-  public AudienceListServiceSimilarityAudienceList containUnavailableAdActionUserListFlg(AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
+  public AudienceListServiceSimilarityAudienceList containUnavailableAdActionUserListFlg(@jakarta.annotation.Nullable AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
     
     this.containUnavailableAdActionUserListFlg = containUnavailableAdActionUserListFlg;
     return this;
   }
 
-   /**
+  /**
    * Get containUnavailableAdActionUserListFlg
    * @return containUnavailableAdActionUserListFlg
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceContainUnavailableAdActionUserListFlg getContainUnavailableAdActionUserListFlg() {
@@ -164,25 +168,24 @@ public class AudienceListServiceSimilarityAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_UNAVAILABLE_AD_ACTION_USER_LIST_FLG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContainUnavailableAdActionUserListFlg(AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
+  public void setContainUnavailableAdActionUserListFlg(@jakarta.annotation.Nullable AudienceListServiceContainUnavailableAdActionUserListFlg containUnavailableAdActionUserListFlg) {
     this.containUnavailableAdActionUserListFlg = containUnavailableAdActionUserListFlg;
   }
 
-
-  public AudienceListServiceSimilarityAudienceList containDataConnectionStopped(AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
+  public AudienceListServiceSimilarityAudienceList containDataConnectionStopped(@jakarta.annotation.Nullable AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
     
     this.containDataConnectionStopped = containDataConnectionStopped;
     return this;
   }
 
-   /**
+  /**
    * Get containDataConnectionStopped
    * @return containDataConnectionStopped
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceContainDataConnectionStopped getContainDataConnectionStopped() {
@@ -190,11 +193,12 @@ public class AudienceListServiceSimilarityAudienceList {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED)
+  @JsonProperty(value = JSON_PROPERTY_CONTAIN_DATA_CONNECTION_STOPPED, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContainDataConnectionStopped(AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
+  public void setContainDataConnectionStopped(@jakarta.annotation.Nullable AudienceListServiceContainDataConnectionStopped containDataConnectionStopped) {
     this.containDataConnectionStopped = containDataConnectionStopped;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -235,10 +239,7 @@ public class AudienceListServiceSimilarityAudienceList {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.RetargetingTagServiceApprovalStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RetargetingTagオブジェクトは、サイトリターゲティングのタグ情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RetargetingTag object displays tag information for site retargeting.&lt;/div&gt; 
@@ -33,35 +34,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   RetargetingTag.JSON_PROPERTY_RETARGETING_TAG_ID,
   RetargetingTag.JSON_PROPERTY_ADVANCED_TAG
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RetargetingTag {
   public static final String JSON_PROPERTY_ACCOUNT_ID = "accountId";
+  @jakarta.annotation.Nullable
   private Long accountId;
 
   public static final String JSON_PROPERTY_APPROVAL_STATUS = "approvalStatus";
+  @jakarta.annotation.Nullable
   private RetargetingTagServiceApprovalStatus approvalStatus;
 
   public static final String JSON_PROPERTY_RETARGETING_TAG_ID = "retargetingTagId";
+  @jakarta.annotation.Nullable
   private String retargetingTagId;
 
   public static final String JSON_PROPERTY_ADVANCED_TAG = "advancedTag";
+  @jakarta.annotation.Nullable
   private String advancedTag;
 
   public RetargetingTag() {
   }
 
-  public RetargetingTag accountId(Long accountId) {
+  public RetargetingTag accountId(@jakarta.annotation.Nullable Long accountId) {
     
     this.accountId = accountId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アカウントIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Account ID.&lt;/div&gt; 
    * @return accountId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Long getAccountId() {
@@ -69,25 +74,24 @@ public class RetargetingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ACCOUNT_ID)
+  @JsonProperty(value = JSON_PROPERTY_ACCOUNT_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAccountId(Long accountId) {
+  public void setAccountId(@jakarta.annotation.Nullable Long accountId) {
     this.accountId = accountId;
   }
 
-
-  public RetargetingTag approvalStatus(RetargetingTagServiceApprovalStatus approvalStatus) {
+  public RetargetingTag approvalStatus(@jakarta.annotation.Nullable RetargetingTagServiceApprovalStatus approvalStatus) {
     
     this.approvalStatus = approvalStatus;
     return this;
   }
 
-   /**
+  /**
    * Get approvalStatus
    * @return approvalStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public RetargetingTagServiceApprovalStatus getApprovalStatus() {
@@ -95,25 +99,24 @@ public class RetargetingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APPROVAL_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_APPROVAL_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setApprovalStatus(RetargetingTagServiceApprovalStatus approvalStatus) {
+  public void setApprovalStatus(@jakarta.annotation.Nullable RetargetingTagServiceApprovalStatus approvalStatus) {
     this.approvalStatus = approvalStatus;
   }
 
-
-  public RetargetingTag retargetingTagId(String retargetingTagId) {
+  public RetargetingTag retargetingTagId(@jakarta.annotation.Nullable String retargetingTagId) {
     
     this.retargetingTagId = retargetingTagId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;サイトリターゲティングのタグIDです。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Tag ID for site retargeting.&lt;/div&gt; 
    * @return retargetingTagId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getRetargetingTagId() {
@@ -121,25 +124,24 @@ public class RetargetingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_RETARGETING_TAG_ID)
+  @JsonProperty(value = JSON_PROPERTY_RETARGETING_TAG_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setRetargetingTagId(String retargetingTagId) {
+  public void setRetargetingTagId(@jakarta.annotation.Nullable String retargetingTagId) {
     this.retargetingTagId = retargetingTagId;
   }
 
-
-  public RetargetingTag advancedTag(String advancedTag) {
+  public RetargetingTag advancedTag(@jakarta.annotation.Nullable String advancedTag) {
     
     this.advancedTag = advancedTag;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リニューアル版のサイトリターゲティングタグは、従来のタグよりもブラウザーなどの環境の影響を受けづらい新しいフォーマットです。&lt;br&gt; 詳細は、「&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044890?language&#x3D;ja\&quot;&gt;サイトリターゲティングタグの取得とサイトへの設置&lt;/a&gt;」を参照してください。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The new format of site retargeting tag avoids the impacts such as changes made to the browser. &lt;br&gt; More details are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044890?language&#x3D;en_US\&quot;&gt;Acquire Site Retargeting Tag and Tagging on Site&lt;/a&gt;.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return advancedTag
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_ADVANCED_TAG)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_TAG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAdvancedTag() {
@@ -147,11 +149,12 @@ public class RetargetingTag {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_ADVANCED_TAG)
+  @JsonProperty(value = JSON_PROPERTY_ADVANCED_TAG, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdvancedTag(String advancedTag) {
+  public void setAdvancedTag(@jakarta.annotation.Nullable String advancedTag) {
     this.advancedTag = advancedTag;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -190,10 +193,7 @@ public class RetargetingTag {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

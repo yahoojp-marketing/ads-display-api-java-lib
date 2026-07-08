@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeオブジェクトは、特定の広告タイプと画像サイズを組み合わせた広告が3～5つ以外の広告グループに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize object describes recommendation information about the ad group that have other than 3-5 ads that combine a specific ad type and image size.&lt;/div&gt; 
@@ -32,15 +34,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize.JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
   public static final String JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST = "notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList";
+  @jakarta.annotation.Nullable
   private List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList;
 
   public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize() {
   }
 
-  public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList(List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList) {
+  public RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList(@jakarta.annotation.Nullable List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList) {
     
     this.notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList = notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList;
     return this;
@@ -54,12 +57,12 @@ public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
     return this;
   }
 
-   /**
+  /**
    * Get notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList
    * @return notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST)
+  @JsonProperty(value = JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> getNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList() {
@@ -67,11 +70,12 @@ public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST)
+  @JsonProperty(value = JSON_PROPERTY_NOT_OPTIMAL_AD_COUNT_COMBINED_AD_TYPE_AND_IMAGE_SIZE_AD_GROUP_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList(List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList) {
+  public void setNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList(@jakarta.annotation.Nullable List<RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSizeAdGroup> notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList) {
     this.notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList = notOptimalAdCountCombinedAdTypeAndImageSizeAdGroupList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +108,7 @@ public class RecommendationServiceNotOptimalAdCountCombinedAdTypeAndImageSize {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

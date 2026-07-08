@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -21,6 +21,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceCrossCampaignBuying;
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceCrossCampaignGoal;
@@ -28,6 +29,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceCrossCampaignI
 import jp.co.yahoo.adsdisplayapi.v17.model.ReportDefinitionServiceCrossCampaignType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;   ReportDefinitionServiceCrossCampaignReachesReportConditionオブジェクトは、横断リーチレポートの作成条件を表します。&lt;br&gt;   このフィールドは、ADD時に省略可能となり、REMOVE時に無視されます。&lt;br&gt;   ※ADD時、reportTypeが&lt;code&gt;CROSS_CAMPAIGN_REACHES&lt;/code&gt;の場合は必須です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには少なくとも2件の要素が必要です。   ※crossCampaignIds、crossCampaignGoals、crossCampaignBuyingTypesには最大で3件の要素を指定できます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;   ReportDefinitionServiceCrossCampaignReachesReportCondition describes the condition to create Cross-campaign Reach Report. &lt;br&gt;   This field is optional in ADD operation, and will be ignored in REMOVE operation. &lt;br&gt;   *If reportType is &lt;code&gt;CROSS_CAMPAIGN_REACHES&lt;/code&gt;, this field is required in ADD operation.   * At least two elements are required for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes.   * Up to 3 elements can be specified for crossCampaignIds, crossCampaignGoals, and crossCampaignBuyingTypes. &lt;/div&gt; 
@@ -38,35 +40,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   ReportDefinitionServiceCrossCampaignReachesReportCondition.JSON_PROPERTY_CROSS_CAMPAIGN_GOALS,
   ReportDefinitionServiceCrossCampaignReachesReportCondition.JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_TYPE = "crossCampaignType";
+  @jakarta.annotation.Nullable
   private ReportDefinitionServiceCrossCampaignType crossCampaignType;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_IDS = "crossCampaignIds";
+  @jakarta.annotation.Nullable
   private List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_GOALS = "crossCampaignGoals";
+  @jakarta.annotation.Nullable
   private List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals;
 
   public static final String JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES = "crossCampaignBuyingTypes";
+  @jakarta.annotation.Nullable
   private List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes;
 
   public ReportDefinitionServiceCrossCampaignReachesReportCondition() {
   }
 
-  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignType(ReportDefinitionServiceCrossCampaignType crossCampaignType) {
+  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignType(@jakarta.annotation.Nullable ReportDefinitionServiceCrossCampaignType crossCampaignType) {
     
     this.crossCampaignType = crossCampaignType;
     return this;
   }
 
-   /**
+  /**
    * Get crossCampaignType
    * @return crossCampaignType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public ReportDefinitionServiceCrossCampaignType getCrossCampaignType() {
@@ -74,14 +80,13 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossCampaignType(ReportDefinitionServiceCrossCampaignType crossCampaignType) {
+  public void setCrossCampaignType(@jakarta.annotation.Nullable ReportDefinitionServiceCrossCampaignType crossCampaignType) {
     this.crossCampaignType = crossCampaignType;
   }
 
-
-  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignIds(List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds) {
+  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignIds(@jakarta.annotation.Nullable List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds) {
     
     this.crossCampaignIds = crossCampaignIds;
     return this;
@@ -95,12 +100,12 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
     return this;
   }
 
-   /**
+  /**
    * Get crossCampaignIds
    * @return crossCampaignIds
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ReportDefinitionServiceCrossCampaignId> getCrossCampaignIds() {
@@ -108,14 +113,13 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_IDS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_IDS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossCampaignIds(List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds) {
+  public void setCrossCampaignIds(@jakarta.annotation.Nullable List<ReportDefinitionServiceCrossCampaignId> crossCampaignIds) {
     this.crossCampaignIds = crossCampaignIds;
   }
 
-
-  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignGoals(List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals) {
+  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignGoals(@jakarta.annotation.Nullable List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals) {
     
     this.crossCampaignGoals = crossCampaignGoals;
     return this;
@@ -129,12 +133,12 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
     return this;
   }
 
-   /**
+  /**
    * Get crossCampaignGoals
    * @return crossCampaignGoals
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_GOALS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_GOALS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ReportDefinitionServiceCrossCampaignGoal> getCrossCampaignGoals() {
@@ -142,14 +146,13 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_GOALS)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_GOALS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossCampaignGoals(List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals) {
+  public void setCrossCampaignGoals(@jakarta.annotation.Nullable List<ReportDefinitionServiceCrossCampaignGoal> crossCampaignGoals) {
     this.crossCampaignGoals = crossCampaignGoals;
   }
 
-
-  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignBuyingTypes(List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
+  public ReportDefinitionServiceCrossCampaignReachesReportCondition crossCampaignBuyingTypes(@jakarta.annotation.Nullable List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
     
     this.crossCampaignBuyingTypes = crossCampaignBuyingTypes;
     return this;
@@ -163,12 +166,12 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
     return this;
   }
 
-   /**
+  /**
    * Get crossCampaignBuyingTypes
    * @return crossCampaignBuyingTypes
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<ReportDefinitionServiceCrossCampaignBuying> getCrossCampaignBuyingTypes() {
@@ -176,11 +179,12 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES)
+  @JsonProperty(value = JSON_PROPERTY_CROSS_CAMPAIGN_BUYING_TYPES, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setCrossCampaignBuyingTypes(List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
+  public void setCrossCampaignBuyingTypes(@jakarta.annotation.Nullable List<ReportDefinitionServiceCrossCampaignBuying> crossCampaignBuyingTypes) {
     this.crossCampaignBuyingTypes = crossCampaignBuyingTypes;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -219,10 +223,7 @@ public class ReportDefinitionServiceCrossCampaignReachesReportCondition {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

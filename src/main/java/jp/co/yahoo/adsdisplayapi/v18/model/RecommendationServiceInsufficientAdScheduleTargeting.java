@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -21,10 +21,12 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonValue;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import jp.co.yahoo.adsdisplayapi.v18.model.RecommendationServiceInsufficientAdScheduleTargetingCampaign;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;RecommendationServiceInsufficientAdScheduleTargetingオブジェクトは、配信可能時間が6時間未満の曜日があるキャンペーンに関する最適化提案の情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;RecommendationServiceInsufficientAdScheduleTargeting object describes recommendation information about the campaign that have days of the week with less than six hours available for ad delivery.&lt;/div&gt; 
@@ -32,15 +34,16 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   RecommendationServiceInsufficientAdScheduleTargeting.JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING_CAMPAIGN_LIST
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class RecommendationServiceInsufficientAdScheduleTargeting {
   public static final String JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING_CAMPAIGN_LIST = "insufficientAdScheduleTargetingCampaignList";
+  @jakarta.annotation.Nullable
   private List<RecommendationServiceInsufficientAdScheduleTargetingCampaign> insufficientAdScheduleTargetingCampaignList;
 
   public RecommendationServiceInsufficientAdScheduleTargeting() {
   }
 
-  public RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargetingCampaignList(List<RecommendationServiceInsufficientAdScheduleTargetingCampaign> insufficientAdScheduleTargetingCampaignList) {
+  public RecommendationServiceInsufficientAdScheduleTargeting insufficientAdScheduleTargetingCampaignList(@jakarta.annotation.Nullable List<RecommendationServiceInsufficientAdScheduleTargetingCampaign> insufficientAdScheduleTargetingCampaignList) {
     
     this.insufficientAdScheduleTargetingCampaignList = insufficientAdScheduleTargetingCampaignList;
     return this;
@@ -54,12 +57,12 @@ public class RecommendationServiceInsufficientAdScheduleTargeting {
     return this;
   }
 
-   /**
+  /**
    * Get insufficientAdScheduleTargetingCampaignList
    * @return insufficientAdScheduleTargetingCampaignList
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING_CAMPAIGN_LIST)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING_CAMPAIGN_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public List<RecommendationServiceInsufficientAdScheduleTargetingCampaign> getInsufficientAdScheduleTargetingCampaignList() {
@@ -67,11 +70,12 @@ public class RecommendationServiceInsufficientAdScheduleTargeting {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING_CAMPAIGN_LIST)
+  @JsonProperty(value = JSON_PROPERTY_INSUFFICIENT_AD_SCHEDULE_TARGETING_CAMPAIGN_LIST, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setInsufficientAdScheduleTargetingCampaignList(List<RecommendationServiceInsufficientAdScheduleTargetingCampaign> insufficientAdScheduleTargetingCampaignList) {
+  public void setInsufficientAdScheduleTargetingCampaignList(@jakarta.annotation.Nullable List<RecommendationServiceInsufficientAdScheduleTargetingCampaign> insufficientAdScheduleTargetingCampaignList) {
     this.insufficientAdScheduleTargetingCampaignList = insufficientAdScheduleTargetingCampaignList;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -104,10 +108,7 @@ public class RecommendationServiceInsufficientAdScheduleTargeting {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

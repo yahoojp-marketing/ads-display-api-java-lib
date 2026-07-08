@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v19/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v19
  * 
@@ -24,6 +24,7 @@ import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceAppPlatform;
 import jp.co.yahoo.adsdisplayapi.v19.model.AudienceListServiceAppVendor;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;AudienceListServiceAppLinkオブジェクトは、アプリリンクの詳細情報を表します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;AudienceListServiceAppLink object describes the detailed information of app link.&lt;/div&gt; 
@@ -34,35 +35,39 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AudienceListServiceAppLink.JSON_PROPERTY_LINK_ID,
   AudienceListServiceAppLink.JSON_PROPERTY_APP_PLATFORM
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AudienceListServiceAppLink {
   public static final String JSON_PROPERTY_APP_ID = "appId";
+  @jakarta.annotation.Nullable
   private String appId;
 
   public static final String JSON_PROPERTY_APP_VENDOR = "appVendor";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAppVendor appVendor;
 
   public static final String JSON_PROPERTY_LINK_ID = "linkId";
+  @jakarta.annotation.Nullable
   private String linkId;
 
   public static final String JSON_PROPERTY_APP_PLATFORM = "appPlatform";
+  @jakarta.annotation.Nullable
   private AudienceListServiceAppPlatform appPlatform;
 
   public AudienceListServiceAppLink() {
   }
 
-  public AudienceListServiceAppLink appId(String appId) {
+  public AudienceListServiceAppLink appId(@jakarta.annotation.Nullable String appId) {
     
     this.appId = appId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; アプリIDです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; App ID.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
    * @return appId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getAppId() {
@@ -70,25 +75,24 @@ public class AudienceListServiceAppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_ID)
+  @JsonProperty(value = JSON_PROPERTY_APP_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppId(String appId) {
+  public void setAppId(@jakarta.annotation.Nullable String appId) {
     this.appId = appId;
   }
 
-
-  public AudienceListServiceAppLink appVendor(AudienceListServiceAppVendor appVendor) {
+  public AudienceListServiceAppLink appVendor(@jakarta.annotation.Nullable AudienceListServiceAppVendor appVendor) {
     
     this.appVendor = appVendor;
     return this;
   }
 
-   /**
+  /**
    * Get appVendor
    * @return appVendor
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAppVendor getAppVendor() {
@@ -96,25 +100,24 @@ public class AudienceListServiceAppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_VENDOR)
+  @JsonProperty(value = JSON_PROPERTY_APP_VENDOR, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppVendor(AudienceListServiceAppVendor appVendor) {
+  public void setAppVendor(@jakarta.annotation.Nullable AudienceListServiceAppVendor appVendor) {
     this.appVendor = appVendor;
   }
 
-
-  public AudienceListServiceAppLink linkId(String linkId) {
+  public AudienceListServiceAppLink linkId(@jakarta.annotation.Nullable String linkId) {
     
     this.linkId = linkId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; リンクIDです。&lt;br&gt; このフィールドは、ADD時は必須となり、SET時は無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Link ID.&lt;br&gt; This field is required in ADD operation, and will be ignored in SET operation. &lt;/div&gt; 
    * @return linkId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_LINK_ID)
+  @JsonProperty(value = JSON_PROPERTY_LINK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getLinkId() {
@@ -122,25 +125,24 @@ public class AudienceListServiceAppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_LINK_ID)
+  @JsonProperty(value = JSON_PROPERTY_LINK_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setLinkId(String linkId) {
+  public void setLinkId(@jakarta.annotation.Nullable String linkId) {
     this.linkId = linkId;
   }
 
-
-  public AudienceListServiceAppLink appPlatform(AudienceListServiceAppPlatform appPlatform) {
+  public AudienceListServiceAppLink appPlatform(@jakarta.annotation.Nullable AudienceListServiceAppPlatform appPlatform) {
     
     this.appPlatform = appPlatform;
     return this;
   }
 
-   /**
+  /**
    * Get appPlatform
    * @return appPlatform
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AudienceListServiceAppPlatform getAppPlatform() {
@@ -148,11 +150,12 @@ public class AudienceListServiceAppLink {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_PLATFORM)
+  @JsonProperty(value = JSON_PROPERTY_APP_PLATFORM, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppPlatform(AudienceListServiceAppPlatform appPlatform) {
+  public void setAppPlatform(@jakarta.annotation.Nullable AudienceListServiceAppPlatform appPlatform) {
     this.appPlatform = appPlatform;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -191,10 +194,7 @@ public class AudienceListServiceAppLink {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

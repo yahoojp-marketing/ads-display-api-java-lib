@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v17/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v17
  * 
@@ -39,6 +39,7 @@ import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceTargetSetting;
 import jp.co.yahoo.adsdisplayapi.v17.model.AdGroupTargetServiceTargetType;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; AdGroupTargetServiceTargetオブジェクトは、ターゲティング設定情報を保持します。&lt;br&gt; このフィールドは、リクエストの場合は必須です。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupTargetServiceTarget object is a container for storing targeting settings.&lt;br&gt; This field is required in requests. &lt;/div&gt; 
@@ -64,80 +65,99 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
   AdGroupTargetServiceTarget.JSON_PROPERTY_TARGET_SETTING,
   AdGroupTargetServiceTarget.JSON_PROPERTY_TARGET_TYPE
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class AdGroupTargetServiceTarget {
   public static final String JSON_PROPERTY_AD_SCHEDULE_TARGET = "adScheduleTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceAdScheduleTarget adScheduleTarget;
 
   public static final String JSON_PROPERTY_AGE_TARGET = "ageTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceAgeTarget ageTarget;
 
   public static final String JSON_PROPERTY_APP_TARGET = "appTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceAppTarget appTarget;
 
   public static final String JSON_PROPERTY_DEVICE_TARGET = "deviceTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceDeviceTarget deviceTarget;
 
   public static final String JSON_PROPERTY_GENDER_TARGET = "genderTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceGenderTarget genderTarget;
 
   public static final String JSON_PROPERTY_GEO_TARGET = "geoTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceGeoTarget geoTarget;
 
   public static final String JSON_PROPERTY_IS_REMOVE = "isRemove";
+  @jakarta.annotation.Nullable
   private Boolean isRemove;
 
   public static final String JSON_PROPERTY_OS_TARGET = "osTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceOsTarget osTarget;
 
   public static final String JSON_PROPERTY_OS_VERSION_TARGET = "osVersionTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceOsVersionTarget osVersionTarget;
 
   public static final String JSON_PROPERTY_PLACEMENT_TARGET = "placementTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServicePlacementTarget placementTarget;
 
   public static final String JSON_PROPERTY_SEARCH_TARGET = "searchTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceSearchTarget searchTarget;
 
   public static final String JSON_PROPERTY_AUDIENCE_LIST_TARGET = "audienceListTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceAudienceListTarget audienceListTarget;
 
   public static final String JSON_PROPERTY_POSITION_TARGET = "positionTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServicePositionTarget positionTarget;
 
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_TARGET = "placementCategoryTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget;
 
   public static final String JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET = "placementCategoryDetailTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget;
 
   public static final String JSON_PROPERTY_CONTENTS_TARGET = "contentsTarget";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceContentsTarget contentsTarget;
 
   public static final String JSON_PROPERTY_TARGET_ID = "targetId";
+  @jakarta.annotation.Nullable
   private String targetId;
 
   public static final String JSON_PROPERTY_TARGET_SETTING = "targetSetting";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceTargetSetting targetSetting;
 
   public static final String JSON_PROPERTY_TARGET_TYPE = "targetType";
+  @jakarta.annotation.Nullable
   private AdGroupTargetServiceTargetType targetType;
 
   public AdGroupTargetServiceTarget() {
   }
 
-  public AdGroupTargetServiceTarget adScheduleTarget(AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
+  public AdGroupTargetServiceTarget adScheduleTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
     
     this.adScheduleTarget = adScheduleTarget;
     return this;
   }
 
-   /**
+  /**
    * Get adScheduleTarget
    * @return adScheduleTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AD_SCHEDULE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AD_SCHEDULE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceAdScheduleTarget getAdScheduleTarget() {
@@ -145,25 +165,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AD_SCHEDULE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AD_SCHEDULE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAdScheduleTarget(AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
+  public void setAdScheduleTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAdScheduleTarget adScheduleTarget) {
     this.adScheduleTarget = adScheduleTarget;
   }
 
-
-  public AdGroupTargetServiceTarget ageTarget(AdGroupTargetServiceAgeTarget ageTarget) {
+  public AdGroupTargetServiceTarget ageTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAgeTarget ageTarget) {
     
     this.ageTarget = ageTarget;
     return this;
   }
 
-   /**
+  /**
    * Get ageTarget
    * @return ageTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AGE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AGE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceAgeTarget getAgeTarget() {
@@ -171,25 +190,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AGE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AGE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAgeTarget(AdGroupTargetServiceAgeTarget ageTarget) {
+  public void setAgeTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAgeTarget ageTarget) {
     this.ageTarget = ageTarget;
   }
 
-
-  public AdGroupTargetServiceTarget appTarget(AdGroupTargetServiceAppTarget appTarget) {
+  public AdGroupTargetServiceTarget appTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAppTarget appTarget) {
     
     this.appTarget = appTarget;
     return this;
   }
 
-   /**
+  /**
    * Get appTarget
    * @return appTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_APP_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_APP_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceAppTarget getAppTarget() {
@@ -197,25 +215,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_APP_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_APP_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAppTarget(AdGroupTargetServiceAppTarget appTarget) {
+  public void setAppTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAppTarget appTarget) {
     this.appTarget = appTarget;
   }
 
-
-  public AdGroupTargetServiceTarget deviceTarget(AdGroupTargetServiceDeviceTarget deviceTarget) {
+  public AdGroupTargetServiceTarget deviceTarget(@jakarta.annotation.Nullable AdGroupTargetServiceDeviceTarget deviceTarget) {
     
     this.deviceTarget = deviceTarget;
     return this;
   }
 
-   /**
+  /**
    * Get deviceTarget
    * @return deviceTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_DEVICE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceDeviceTarget getDeviceTarget() {
@@ -223,25 +240,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_DEVICE_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_DEVICE_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setDeviceTarget(AdGroupTargetServiceDeviceTarget deviceTarget) {
+  public void setDeviceTarget(@jakarta.annotation.Nullable AdGroupTargetServiceDeviceTarget deviceTarget) {
     this.deviceTarget = deviceTarget;
   }
 
-
-  public AdGroupTargetServiceTarget genderTarget(AdGroupTargetServiceGenderTarget genderTarget) {
+  public AdGroupTargetServiceTarget genderTarget(@jakarta.annotation.Nullable AdGroupTargetServiceGenderTarget genderTarget) {
     
     this.genderTarget = genderTarget;
     return this;
   }
 
-   /**
+  /**
    * Get genderTarget
    * @return genderTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GENDER_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GENDER_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceGenderTarget getGenderTarget() {
@@ -249,25 +265,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GENDER_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GENDER_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGenderTarget(AdGroupTargetServiceGenderTarget genderTarget) {
+  public void setGenderTarget(@jakarta.annotation.Nullable AdGroupTargetServiceGenderTarget genderTarget) {
     this.genderTarget = genderTarget;
   }
 
-
-  public AdGroupTargetServiceTarget geoTarget(AdGroupTargetServiceGeoTarget geoTarget) {
+  public AdGroupTargetServiceTarget geoTarget(@jakarta.annotation.Nullable AdGroupTargetServiceGeoTarget geoTarget) {
     
     this.geoTarget = geoTarget;
     return this;
   }
 
-   /**
+  /**
    * Get geoTarget
    * @return geoTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_GEO_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GEO_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceGeoTarget getGeoTarget() {
@@ -275,25 +290,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_GEO_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_GEO_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setGeoTarget(AdGroupTargetServiceGeoTarget geoTarget) {
+  public void setGeoTarget(@jakarta.annotation.Nullable AdGroupTargetServiceGeoTarget geoTarget) {
     this.geoTarget = geoTarget;
   }
 
-
-  public AdGroupTargetServiceTarget isRemove(Boolean isRemove) {
+  public AdGroupTargetServiceTarget isRemove(@jakarta.annotation.Nullable Boolean isRemove) {
     
     this.isRemove = isRemove;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; trueの場合、ターゲティング種別をすべて削除します。&lt;br&gt; このフィールドは、ADD、SETおよびREMOVE時は無視され、REPLACE時は省略可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; If true, delete all targeting types.&lt;br&gt; This field will be ignored in ADD, SET and REMOVE operation, and will be optional in REPLACE operation. &lt;/div&gt; 
    * @return isRemove
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public Boolean getIsRemove() {
@@ -301,25 +315,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_IS_REMOVE)
+  @JsonProperty(value = JSON_PROPERTY_IS_REMOVE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setIsRemove(Boolean isRemove) {
+  public void setIsRemove(@jakarta.annotation.Nullable Boolean isRemove) {
     this.isRemove = isRemove;
   }
 
-
-  public AdGroupTargetServiceTarget osTarget(AdGroupTargetServiceOsTarget osTarget) {
+  public AdGroupTargetServiceTarget osTarget(@jakarta.annotation.Nullable AdGroupTargetServiceOsTarget osTarget) {
     
     this.osTarget = osTarget;
     return this;
   }
 
-   /**
+  /**
    * Get osTarget
    * @return osTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceOsTarget getOsTarget() {
@@ -327,25 +340,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOsTarget(AdGroupTargetServiceOsTarget osTarget) {
+  public void setOsTarget(@jakarta.annotation.Nullable AdGroupTargetServiceOsTarget osTarget) {
     this.osTarget = osTarget;
   }
 
-
-  public AdGroupTargetServiceTarget osVersionTarget(AdGroupTargetServiceOsVersionTarget osVersionTarget) {
+  public AdGroupTargetServiceTarget osVersionTarget(@jakarta.annotation.Nullable AdGroupTargetServiceOsVersionTarget osVersionTarget) {
     
     this.osVersionTarget = osVersionTarget;
     return this;
   }
 
-   /**
+  /**
    * Get osVersionTarget
    * @return osVersionTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OS_VERSION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_VERSION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceOsVersionTarget getOsVersionTarget() {
@@ -353,25 +365,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OS_VERSION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_OS_VERSION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOsVersionTarget(AdGroupTargetServiceOsVersionTarget osVersionTarget) {
+  public void setOsVersionTarget(@jakarta.annotation.Nullable AdGroupTargetServiceOsVersionTarget osVersionTarget) {
     this.osVersionTarget = osVersionTarget;
   }
 
-
-  public AdGroupTargetServiceTarget placementTarget(AdGroupTargetServicePlacementTarget placementTarget) {
+  public AdGroupTargetServiceTarget placementTarget(@jakarta.annotation.Nullable AdGroupTargetServicePlacementTarget placementTarget) {
     
     this.placementTarget = placementTarget;
     return this;
   }
 
-   /**
+  /**
    * Get placementTarget
    * @return placementTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServicePlacementTarget getPlacementTarget() {
@@ -379,25 +390,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementTarget(AdGroupTargetServicePlacementTarget placementTarget) {
+  public void setPlacementTarget(@jakarta.annotation.Nullable AdGroupTargetServicePlacementTarget placementTarget) {
     this.placementTarget = placementTarget;
   }
 
-
-  public AdGroupTargetServiceTarget searchTarget(AdGroupTargetServiceSearchTarget searchTarget) {
+  public AdGroupTargetServiceTarget searchTarget(@jakarta.annotation.Nullable AdGroupTargetServiceSearchTarget searchTarget) {
     
     this.searchTarget = searchTarget;
     return this;
   }
 
-   /**
+  /**
    * Get searchTarget
    * @return searchTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_SEARCH_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceSearchTarget getSearchTarget() {
@@ -405,25 +415,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_SEARCH_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_SEARCH_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setSearchTarget(AdGroupTargetServiceSearchTarget searchTarget) {
+  public void setSearchTarget(@jakarta.annotation.Nullable AdGroupTargetServiceSearchTarget searchTarget) {
     this.searchTarget = searchTarget;
   }
 
-
-  public AdGroupTargetServiceTarget audienceListTarget(AdGroupTargetServiceAudienceListTarget audienceListTarget) {
+  public AdGroupTargetServiceTarget audienceListTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAudienceListTarget audienceListTarget) {
     
     this.audienceListTarget = audienceListTarget;
     return this;
   }
 
-   /**
+  /**
    * Get audienceListTarget
    * @return audienceListTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceAudienceListTarget getAudienceListTarget() {
@@ -431,25 +440,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_AUDIENCE_LIST_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_AUDIENCE_LIST_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setAudienceListTarget(AdGroupTargetServiceAudienceListTarget audienceListTarget) {
+  public void setAudienceListTarget(@jakarta.annotation.Nullable AdGroupTargetServiceAudienceListTarget audienceListTarget) {
     this.audienceListTarget = audienceListTarget;
   }
 
-
-  public AdGroupTargetServiceTarget positionTarget(AdGroupTargetServicePositionTarget positionTarget) {
+  public AdGroupTargetServiceTarget positionTarget(@jakarta.annotation.Nullable AdGroupTargetServicePositionTarget positionTarget) {
     
     this.positionTarget = positionTarget;
     return this;
   }
 
-   /**
+  /**
    * Get positionTarget
    * @return positionTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_POSITION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_POSITION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServicePositionTarget getPositionTarget() {
@@ -457,25 +465,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_POSITION_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_POSITION_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPositionTarget(AdGroupTargetServicePositionTarget positionTarget) {
+  public void setPositionTarget(@jakarta.annotation.Nullable AdGroupTargetServicePositionTarget positionTarget) {
     this.positionTarget = positionTarget;
   }
 
-
-  public AdGroupTargetServiceTarget placementCategoryTarget(AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget) {
+  public AdGroupTargetServiceTarget placementCategoryTarget(@jakarta.annotation.Nullable AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget) {
     
     this.placementCategoryTarget = placementCategoryTarget;
     return this;
   }
 
-   /**
+  /**
    * Get placementCategoryTarget
    * @return placementCategoryTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServicePlacementCategoryTarget getPlacementCategoryTarget() {
@@ -483,25 +490,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementCategoryTarget(AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget) {
+  public void setPlacementCategoryTarget(@jakarta.annotation.Nullable AdGroupTargetServicePlacementCategoryTarget placementCategoryTarget) {
     this.placementCategoryTarget = placementCategoryTarget;
   }
 
-
-  public AdGroupTargetServiceTarget placementCategoryDetailTarget(AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
+  public AdGroupTargetServiceTarget placementCategoryDetailTarget(@jakarta.annotation.Nullable AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
     return this;
   }
 
-   /**
+  /**
    * Get placementCategoryDetailTarget
    * @return placementCategoryDetailTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServicePlacementCategoryDetailTarget getPlacementCategoryDetailTarget() {
@@ -509,25 +515,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_PLACEMENT_CATEGORY_DETAIL_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setPlacementCategoryDetailTarget(AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
+  public void setPlacementCategoryDetailTarget(@jakarta.annotation.Nullable AdGroupTargetServicePlacementCategoryDetailTarget placementCategoryDetailTarget) {
     this.placementCategoryDetailTarget = placementCategoryDetailTarget;
   }
 
-
-  public AdGroupTargetServiceTarget contentsTarget(AdGroupTargetServiceContentsTarget contentsTarget) {
+  public AdGroupTargetServiceTarget contentsTarget(@jakarta.annotation.Nullable AdGroupTargetServiceContentsTarget contentsTarget) {
     
     this.contentsTarget = contentsTarget;
     return this;
   }
 
-   /**
+  /**
    * Get contentsTarget
    * @return contentsTarget
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_CONTENTS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceContentsTarget getContentsTarget() {
@@ -535,25 +540,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_CONTENTS_TARGET)
+  @JsonProperty(value = JSON_PROPERTY_CONTENTS_TARGET, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setContentsTarget(AdGroupTargetServiceContentsTarget contentsTarget) {
+  public void setContentsTarget(@jakarta.annotation.Nullable AdGroupTargetServiceContentsTarget contentsTarget) {
     this.contentsTarget = contentsTarget;
   }
 
-
-  public AdGroupTargetServiceTarget targetId(String targetId) {
+  public AdGroupTargetServiceTarget targetId(@jakarta.annotation.Nullable String targetId) {
     
     this.targetId = targetId;
     return this;
   }
 
-   /**
+  /**
    * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; ターゲットIDです。&lt;br&gt; このフィールドは、ADDおよびREPLACE時は省略可能となり、SETおよびREMOVE時は必須となります。&lt;br&gt; ※ADD時、targetTypeが以下のいずれかの場合は必須です。&lt;br&gt; ‐AUDIENCE_LIST_TARGET&lt;br&gt; ‐PLACEMENT_TARGET&lt;br&gt; ‐SEARCH_TARGET&lt;br&gt; ‐GEO_TARGET(AdGroupTargetServiceGeoTarget.areaSearchTypeが&#x60;GEO&#x60;（地域指定）の場合)&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET&lt;br&gt; -CONTENTS_TARGET&lt;br&gt; ※REPLACE時、isRemoveがtrueの場合は設定不要です。&lt;br&gt; &lt;br&gt; ‐AUDIENCE_LIST_TARGET: audienceListId&lt;br&gt; ‐PLACEMENT_TARGET: placementUrlListId&lt;br&gt; ‐SEARCH_TARGET: searchKeywordListId&lt;br&gt; ‐GEO_TARGET: IM地域コード(geo)&lt;br&gt; *When AdGroupTargetServiceGeoTarget.areaSearchType is &#x60;GEO&#x60; (regional specification)&lt;br&gt; ‐OS_VERSION_TARGET: osVersion&lt;br&gt; ‐POSITION_TARGET: PositionTypeのコード値&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId&lt;br&gt; -CONTENTS_TARGET: contentsKeywordListId &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; Target ID.&lt;br&gt; This field is optional in ADD and REPLACE operation, and is required in SET and REMOVE operation.&lt;br&gt; *If targetType is any of the following, this field is required in ADD operation.&lt;br&gt; ‐AUDIENCE_LIST_TARGET&lt;br&gt; ‐PLACEMENT_TARGET&lt;br&gt; ‐SEARCH_TARGET&lt;br&gt; ‐GEO_TARGET&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET&lt;br&gt; -CONTENTS_TARGET&lt;br&gt; *If isRemove is true, this field does not need to be set in REPLACE operation.&lt;br&gt; &lt;br&gt; ‐AUDIENCE_LIST_TARGET: audienceListId&lt;br&gt; ‐PLACEMENT_TARGET: placementUrlListId&lt;br&gt; ‐SEARCH_TARGET: searchKeywordListId&lt;br&gt; ‐GEO_TARGET: IM area code(geo)&lt;br&gt; ‐OS_VERSION_TARGET: osVersion&lt;br&gt; ‐POSITION_TARGET: PositionType code.&lt;br&gt; ‐PLACEMENT_CATEGORY_TARGET: placementCategoryListId&lt;br&gt; -PLACEMENT_CATEGORY_DETAIL_TARGET: placementCategoryId&lt;br&gt; -CONTENTS_TARGET: contentsKeywordListId &lt;/div&gt; 
    * @return targetId
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public String getTargetId() {
@@ -561,25 +565,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_ID)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_ID, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetId(String targetId) {
+  public void setTargetId(@jakarta.annotation.Nullable String targetId) {
     this.targetId = targetId;
   }
 
-
-  public AdGroupTargetServiceTarget targetSetting(AdGroupTargetServiceTargetSetting targetSetting) {
+  public AdGroupTargetServiceTarget targetSetting(@jakarta.annotation.Nullable AdGroupTargetServiceTargetSetting targetSetting) {
     
     this.targetSetting = targetSetting;
     return this;
   }
 
-   /**
+  /**
    * Get targetSetting
    * @return targetSetting
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceTargetSetting getTargetSetting() {
@@ -587,25 +590,24 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_SETTING)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_SETTING, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetSetting(AdGroupTargetServiceTargetSetting targetSetting) {
+  public void setTargetSetting(@jakarta.annotation.Nullable AdGroupTargetServiceTargetSetting targetSetting) {
     this.targetSetting = targetSetting;
   }
 
-
-  public AdGroupTargetServiceTarget targetType(AdGroupTargetServiceTargetType targetType) {
+  public AdGroupTargetServiceTarget targetType(@jakarta.annotation.Nullable AdGroupTargetServiceTargetType targetType) {
     
     this.targetType = targetType;
     return this;
   }
 
-   /**
+  /**
    * Get targetType
    * @return targetType
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public AdGroupTargetServiceTargetType getTargetType() {
@@ -613,11 +615,12 @@ public class AdGroupTargetServiceTarget {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_TARGET_TYPE)
+  @JsonProperty(value = JSON_PROPERTY_TARGET_TYPE, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setTargetType(AdGroupTargetServiceTargetType targetType) {
+  public void setTargetType(@jakarta.annotation.Nullable AdGroupTargetServiceTargetType targetType) {
     this.targetType = targetType;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -686,10 +689,7 @@ public class AdGroupTargetServiceTarget {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }

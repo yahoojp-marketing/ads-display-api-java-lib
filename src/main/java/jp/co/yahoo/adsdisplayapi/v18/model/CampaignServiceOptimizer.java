@@ -1,6 +1,6 @@
 /*
- * Yahoo!広告 ディスプレイ広告 API リファレンス / Yahoo! JAPAN Ads Display Ads API Reference
- * <div lang=\"ja\">Yahoo!広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in Yahoo! JAPAN Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
+ * LINEヤフー広告 ディスプレイ広告 API リファレンス / LY Ads Display Ads API Reference
+ * <div lang=\"ja\">LINEヤフー広告 ディスプレイ広告 APIのWebサービスについて説明します。</div> <div lang=\"en\">Display Ads API Web Services supported in LY Ads API.</div> <div><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/design/v18/Route.yaml\">OpenAPI Specification</a></div> <div lang=\"ja\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/ja\">Best Practice</a></div> <div lang=\"en\"><a target=\"_blank\" href=\"https://github.com/yahoojp-marketing/ads-display-api-documents/blob/master/bestpractice/en\">Best Practice</a></div> 
  *
  * The version of the OpenAPI document: v18
  * 
@@ -23,6 +23,7 @@ import com.fasterxml.jackson.annotation.JsonValue;
 import jp.co.yahoo.adsdisplayapi.v18.model.CampaignServiceOptimizerTrainingStatus;
 import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
  * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceOptimizerは、最適化制御を保持するオブジェクトです。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceOptimizer retains optimization control.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;/div&gt; 
@@ -30,26 +31,27 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 @JsonPropertyOrder({
   CampaignServiceOptimizer.JSON_PROPERTY_OPTIMIZER_TRAINING_STATUS
 })
-@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
+@jakarta.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", comments = "Generator version: 7.22.0")
 public class CampaignServiceOptimizer {
   public static final String JSON_PROPERTY_OPTIMIZER_TRAINING_STATUS = "optimizerTrainingStatus";
+  @jakarta.annotation.Nullable
   private CampaignServiceOptimizerTrainingStatus optimizerTrainingStatus;
 
   public CampaignServiceOptimizer() {
   }
 
-  public CampaignServiceOptimizer optimizerTrainingStatus(CampaignServiceOptimizerTrainingStatus optimizerTrainingStatus) {
+  public CampaignServiceOptimizer optimizerTrainingStatus(@jakarta.annotation.Nullable CampaignServiceOptimizerTrainingStatus optimizerTrainingStatus) {
     
     this.optimizerTrainingStatus = optimizerTrainingStatus;
     return this;
   }
 
-   /**
+  /**
    * Get optimizerTrainingStatus
    * @return optimizerTrainingStatus
-  **/
+   */
   @jakarta.annotation.Nullable
-  @JsonProperty(JSON_PROPERTY_OPTIMIZER_TRAINING_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZER_TRAINING_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
 
   public CampaignServiceOptimizerTrainingStatus getOptimizerTrainingStatus() {
@@ -57,11 +59,12 @@ public class CampaignServiceOptimizer {
   }
 
 
-  @JsonProperty(JSON_PROPERTY_OPTIMIZER_TRAINING_STATUS)
+  @JsonProperty(value = JSON_PROPERTY_OPTIMIZER_TRAINING_STATUS, required = false)
   @JsonInclude(value = JsonInclude.Include.USE_DEFAULTS)
-  public void setOptimizerTrainingStatus(CampaignServiceOptimizerTrainingStatus optimizerTrainingStatus) {
+  public void setOptimizerTrainingStatus(@jakarta.annotation.Nullable CampaignServiceOptimizerTrainingStatus optimizerTrainingStatus) {
     this.optimizerTrainingStatus = optimizerTrainingStatus;
   }
+
 
   @Override
   public boolean equals(Object o) {
@@ -94,10 +97,7 @@ public class CampaignServiceOptimizer {
    * (except the first line).
    */
   private String toIndentedString(Object o) {
-    if (o == null) {
-      return "null";
-    }
-    return o.toString().replace("\n", "\n    ");
+    return o == null ? "null" : o.toString().replace("\n", "\n    ");
   }
 
 }
