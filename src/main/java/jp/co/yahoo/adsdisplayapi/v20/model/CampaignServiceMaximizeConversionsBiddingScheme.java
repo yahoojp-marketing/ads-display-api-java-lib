@@ -25,7 +25,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、キャンペーン目標単価(tCPA)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、指定可能となります。     &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpcBiddingScheme object holds configuration information of Target CPA (tCPA) of campaign.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSIONS. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceMaximizeConversionsBiddingSchemeオブジェクトは、キャンペーン目標単価(tCPA)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがMAXIMIZE_CONVERSIONSの場合、指定可能となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; AdGroupServiceCpcBiddingScheme object holds configuration information of Target CPA (tCPA) of campaign.&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *This field can only be specified (optional) when BiddingStrategyType is MAXIMIZE_CONVERSIONS. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignServiceMaximizeConversionsBiddingScheme.JSON_PROPERTY_TARGET_CPA,

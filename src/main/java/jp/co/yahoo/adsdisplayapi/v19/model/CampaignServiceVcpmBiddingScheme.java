@@ -24,7 +24,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceVcpmBiddingSchemeオブジェクトは、キャンペーン最大入札価格(vCPM)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがVCPMの場合、指定必須となります。     &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceVcpmBiddingScheme object holds configuration information of Max bid of campaign (vCPM).&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *If BiddingStrategyType is VCPM, this field is required. &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; CampaignServiceVcpmBiddingSchemeオブジェクトは、キャンペーン最大入札価格(vCPM)の設定情報を表します。&lt;br&gt; このフィールドは、ADD時およびSET時に省略可能となり、REMOVE時に無視されます。&lt;br&gt; ※BiddingStrategyTypeがVCPMの場合、指定必須となります。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; CampaignServiceVcpmBiddingScheme object holds configuration information of Max bid of campaign (vCPM).&lt;br&gt; This field is optional in ADD and SET operation, and will be ignored in REMOVE operation.&lt;br&gt; *If BiddingStrategyType is VCPM, this field is required. &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   CampaignServiceVcpmBiddingScheme.JSON_PROPERTY_VCPM

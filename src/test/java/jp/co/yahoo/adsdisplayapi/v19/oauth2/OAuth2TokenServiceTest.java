@@ -4,11 +4,16 @@ package jp.co.yahoo.adsdisplayapi.v19.oauth2;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentCaptor;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.MediaType;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.argThat;
 import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.times;
@@ -53,13 +58,13 @@ class OAuth2TokenServiceTest {
   void getAccessTokenNotFoundInCache() {
     // setup
     when(this.mockCache.get("testRefreshToken")).thenReturn(null);
-    String url = "https://biz-oauth.yahoo.co.jp/oauth/v1/token?grant_type=refresh_token&client_id=testClientId&client_secret=testClientSecret&refresh_token=testRefreshToken";
-    when(this.mockRestTemplate.getForObject(url, OAuth2AccessTokenResponse.class)).thenReturn(refreshedOAuth2AccessTokenResponse);
+    String url = "https://biz-oauth.yahoo.co.jp/oauth/v1/token";
+    when(this.mockRestTemplate.postForObject(eq(url), any(HttpEntity.class), eq(OAuth2AccessTokenResponse.class))).thenReturn(refreshedOAuth2AccessTokenResponse);
 
     assertEquals("refreshedAccessToken", target.getAccessToken());
 
     verify(this.mockCache, times(1)).get("testRefreshToken");
-    verify(this.mockRestTemplate, times(1)).getForObject(url, OAuth2AccessTokenResponse.class);
+    verifyTokenRequest(url, 1);
     verify(this.mockCache, times(1)).put(eq("testRefreshToken"), argThat(oAuth2AccessTokenResponse ->
           "refreshedAccessToken".equals(oAuth2AccessTokenResponse.getAccessToken())
           && 3600 == oAuth2AccessTokenResponse.getExpiresIn()
@@ -74,8 +79,8 @@ class OAuth2TokenServiceTest {
     // setup
     cachedOAuth2AccessTokenResponse.setIssuedAt((System.currentTimeMillis() / 1000L) - 1801); // Expired.
     when(this.mockCache.get("testRefreshToken")).thenReturn(cachedOAuth2AccessTokenResponse);
-    String url = "https://biz-oauth.yahoo.co.jp/oauth/v1/token?grant_type=refresh_token&client_id=testClientId&client_secret=testClientSecret&refresh_token=testRefreshToken";
-    when(this.mockRestTemplate.getForObject(url, OAuth2AccessTokenResponse.class))
+    String url = "https://biz-oauth.yahoo.co.jp/oauth/v1/token";
+    when(this.mockRestTemplate.postForObject(eq(url), any(HttpEntity.class), eq(OAuth2AccessTokenResponse.class)))
       .thenThrow(new RuntimeException())
       .thenThrow(new RuntimeException())
       .thenReturn(refreshedOAuth2AccessTokenResponse); // Retry 3 times with retryTemplate.
@@ -83,7 +88,7 @@ class OAuth2TokenServiceTest {
     assertEquals("refreshedAccessToken", target.getAccessToken());
 
     verify(this.mockCache, times(1)).get("testRefreshToken");
-    verify(this.mockRestTemplate, times(3)).getForObject(url, OAuth2AccessTokenResponse.class);
+    verifyTokenRequest(url, 3);
     verify(this.mockCache, times(1)).put(eq("testRefreshToken"), argThat(oAuth2AccessTokenResponse ->
           "refreshedAccessToken".equals(oAuth2AccessTokenResponse.getAccessToken())
           && 3600 == oAuth2AccessTokenResponse.getExpiresIn()
@@ -91,6 +96,25 @@ class OAuth2TokenServiceTest {
           && (System.currentTimeMillis() / 1000L) - 1 <= oAuth2AccessTokenResponse.getIssuedAt() // Ensure in case assertions are delayed.
           )
         );
+  }
+
+  private void verifyTokenRequest(String expectedUrl, int invocationCount) {
+    ArgumentCaptor<String> urlCaptor = ArgumentCaptor.forClass(String.class);
+    ArgumentCaptor<HttpEntity> requestCaptor = ArgumentCaptor.forClass(HttpEntity.class);
+    verify(this.mockRestTemplate, times(invocationCount)).postForObject(
+        urlCaptor.capture(), requestCaptor.capture(), eq(OAuth2AccessTokenResponse.class));
+
+    for (String url : urlCaptor.getAllValues()) {
+      assertEquals(expectedUrl, url);
+    }
+
+    HttpEntity request = requestCaptor.getValue();
+    assertEquals(MediaType.APPLICATION_FORM_URLENCODED, request.getHeaders().getContentType());
+    MultiValueMap<String, String> form = (MultiValueMap<String, String>) request.getBody();
+    assertEquals("refresh_token", form.getFirst("grant_type"));
+    assertEquals("testClientId", form.getFirst("client_id"));
+    assertEquals("testClientSecret", form.getFirst("client_secret"));
+    assertEquals("testRefreshToken", form.getFirst("refresh_token"));
   }
 
   @Test

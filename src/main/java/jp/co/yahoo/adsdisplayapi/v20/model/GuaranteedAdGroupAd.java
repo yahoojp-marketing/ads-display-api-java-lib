@@ -32,7 +32,7 @@ import com.fasterxml.jackson.annotation.JsonTypeName;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 /**
- * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdオブジェクトは、予約型の広告の情報を格納するコンテナです。&lt;br&gt; 各広告で設定可能な項目については、&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044147?language&#x3D;ja\&quot;&gt;予約型の広告の種類&lt;/a&gt;をご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The GuaranteedAdGroupAd object is a container for storing ad information of guaranteed campaign.&lt;br&gt; Available fields of each ad are described on &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044147?language&#x3D;ja\&quot;&gt;予約型の広告の種類&lt;/a&gt; (Japanese context only). &lt;/div&gt; 
+ * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; GuaranteedAdGroupAdオブジェクトは、予約型の広告の情報を格納するコンテナです。&lt;br&gt; 各広告で設定可能な項目については、&lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044147?language&#x3D;ja\&quot;&gt;予約型の広告の種類&lt;/a&gt;をご参照ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The GuaranteedAdGroupAd object is a container for storing ad information of guaranteed campaign.&lt;br&gt; Available fields of each ad are described in &lt;a href&#x3D;\&quot;https://ads-help.yahoo-net.jp/s/article/H000044147?language&#x3D;ja\&quot;&gt;Guaranteed ad types&lt;/a&gt; (Japanese only). &lt;/div&gt; 
  */
 @JsonPropertyOrder({
   GuaranteedAdGroupAd.JSON_PROPERTY_ACCOUNT_ID,
