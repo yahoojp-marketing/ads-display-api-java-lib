@@ -6,8 +6,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.retry.RetryPolicy;
 import org.springframework.core.retry.RetryTemplate;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.util.LinkedMultiValueMap;
+import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
-import org.springframework.web.util.UriComponentsBuilder;
 
 public class OAuth2TokenService {
 
@@ -141,13 +145,17 @@ public class OAuth2TokenService {
    * @return retrieved token
    */
   private OAuth2AccessTokenResponse getAccessTokenFromAPI() {
-    String url = UriComponentsBuilder.fromUriString(this.oAuthTokenUrl)
-      .queryParam("grant_type", "refresh_token")
-      .queryParam("client_id", this.clientId)
-      .queryParam("client_secret", this.clientSecret)
-      .queryParam("refresh_token", this.refreshToken)
-      .toUriString();
-    return retryTemplate.invoke(() -> restTemplate.getForObject(url, OAuth2AccessTokenResponse.class));
+    MultiValueMap<String, String> form = new LinkedMultiValueMap<>();
+    form.add("grant_type", "refresh_token");
+    form.add("client_id", this.clientId);
+    form.add("client_secret", this.clientSecret);
+    form.add("refresh_token", this.refreshToken);
+
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+    HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(form, headers);
+
+    return retryTemplate.invoke(() -> restTemplate.postForObject(this.oAuthTokenUrl, request, OAuth2AccessTokenResponse.class));
   }
 
 }

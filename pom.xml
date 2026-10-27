@@ -4,7 +4,7 @@
 
   <groupId>jp.co.yahoo.api-ads</groupId>
   <artifactId>ads-display-api-lib</artifactId>
-  <version>14.0.0</version>
+  <version>14.1.0</version>
 
   <name>ads-display-api-lib</name>
   <description>LY Ads Display Ads API library for Java</description>
@@ -31,28 +31,30 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
+    <jackson.version>3.2.3</jackson.version>
+    <spring.version>7.0.9</spring.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>tools.jackson.core</groupId>
       <artifactId>jackson-core</artifactId>
-      <version>3.2.0</version>
+      <version>${jackson.version}</version>
     </dependency>
     <dependency>
       <groupId>tools.jackson.core</groupId>
       <artifactId>jackson-databind</artifactId>
-      <version>3.2.0</version>
+      <version>${jackson.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-web</artifactId>
-      <version>7.0.8</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>7.0.8</version>
+      <version>${spring.version}</version>
     </dependency>
     <dependency>
       <groupId>org.slf4j</groupId>
