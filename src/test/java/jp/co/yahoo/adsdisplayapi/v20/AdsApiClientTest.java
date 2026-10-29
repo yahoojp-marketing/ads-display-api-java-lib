@@ -34,7 +34,7 @@ class AdsApiClientTest {
 
     AdsApiClient target = new AdsApiClient(oAuth2TokenService);
 
-    assertEquals(Try.success("Java/jp.co.yahoo.api-ads:ads-display-api-lib:14.1.0"),
+    assertEquals(Try.success("Java/jp.co.yahoo.api-ads:ads-display-api-lib:14.1.1"),
         tryToReadFieldValue(AdsApiClient.class, "USER_AGENT", target)
     );
     assertEquals(Try.success(oAuth2TokenService),
@@ -50,7 +50,7 @@ class AdsApiClientTest {
 
     AdsApiClient target = new AdsApiClient(oAuth2TokenService, restTemplate);
 
-    assertEquals(Try.success("Java/jp.co.yahoo.api-ads:ads-display-api-lib:14.1.0"),
+    assertEquals(Try.success("Java/jp.co.yahoo.api-ads:ads-display-api-lib:14.1.1"),
         tryToReadFieldValue(AdsApiClient.class, "USER_AGENT", target)
     );
     assertEquals(Try.success(oAuth2TokenService),

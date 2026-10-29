@@ -8,7 +8,7 @@ import org.springframework.web.client.RestTemplate;
 
 public class AdsApiClient extends ApiClient {
 
-  private static final String USER_AGENT = "Java/jp.co.yahoo.api-ads:ads-display-api-lib:14.1.0";
+  private static final String USER_AGENT = "Java/jp.co.yahoo.api-ads:ads-display-api-lib:14.1.1";
 
   private final OAuth2TokenService oAuth2TokenService;
 

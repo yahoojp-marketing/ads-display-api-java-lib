@@ -150,7 +150,7 @@ public class DictionaryServiceMediaAdFormat {
   }
 
   /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;アスペクト比対応かどうかを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;This field indicates whether the aspect ratio is supported.&lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt;基準サイズと異なる画像をアスペクト比で該当フォーマットと判定するかを示します。&lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt;Indicates whether images differing from the standard size are evaluated for the format based on aspect ratio.&lt;/div&gt; 
    * @return aspect
    */
   @jakarta.annotation.Nullable
