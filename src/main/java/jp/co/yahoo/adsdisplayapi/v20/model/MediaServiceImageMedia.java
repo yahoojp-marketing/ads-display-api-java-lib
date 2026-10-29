@@ -212,7 +212,7 @@ public class MediaServiceImageMedia {
   }
 
   /**
-   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像フォーマットの種類です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのadFormatフィールドをご確認ください。 &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The type of image format.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;br&gt; * Available values can be referred to adFormat field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. &lt;/div&gt; 
+   * &lt;div lang&#x3D;\&quot;ja\&quot;&gt; 画像フォーマットの種類です。&lt;br&gt; このフィールドは、レスポンスの際に返却されますが、リクエストの際には無視されます。&lt;br&gt; ※指定可能な値は、DictionaryServiceのgetMediaAdFormatで取得されるDictionaryServiceMediaAdFormatのadFormatフィールドをご確認ください。 &lt;br&gt;※YJ_955_500 は現在入稿できません &lt;/div&gt; &lt;div lang&#x3D;\&quot;en\&quot;&gt; The type of image format.&lt;br&gt; Although this field will be returned in the response, it will be ignored on input. &lt;br&gt; * Available values can be referred to adFormat field of DictionaryServiceMediaAdFormat object obtained by getMediaAdFormat operation of DictionaryService. &lt;br&gt;* YJ_955_500 is currently not available for submission. &lt;/div&gt; 
    * @return mediaAdFormat
    */
   @jakarta.annotation.Nullable
